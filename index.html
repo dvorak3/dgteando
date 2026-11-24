@@ -212,6 +212,23 @@
         font-size: 13px;
       }
     }
+    .barra-borrar {
+      margin-top: 16px;
+    }
+
+    .btn-borrar {
+      background-color: #efefef;
+      border: 1px solid #d5d5d5;
+      color: #555555;
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    .btn-borrar:hover {
+      background-color: #e2e2e2;
+    }
   </style>
 </head>
 <body>
@@ -257,6 +274,9 @@
 
     <!-- Contenedor de los 90 tests -->
     <div class="lista-filas" id="listaTests"></div>
+    <div class="barra-borrar">
+      <button type="button" class="btn-borrar" onclick="confirmarBorrado()">Borrar resultados</button>
+    </div>
   </div>
 
   <script src="js/storage.js"></script>
@@ -319,6 +339,13 @@
       document.querySelectorAll('.fila-test').forEach(a => {
         a.href = `tests/test_${a.dataset.num}.html?modo=${modo}`;
       });
+    }
+
+    function confirmarBorrado() {
+      if (confirm('¿Seguro que quieres borrar todos tus resultados guardados?')) {
+        borrarProgreso();
+        renderTabla();
+      }
     }
 
     document.getElementById('inputJson').addEventListener('change', (e) => {
