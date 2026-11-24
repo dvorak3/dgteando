@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test · dgt-eando</title>
   <link rel="stylesheet" href="css/test.css">
+  <link rel="stylesheet" href="css/repaso.css?v=1">
 </head>
 <body>
 
@@ -16,6 +17,9 @@
 
     <!-- Avisos (falta id, JSON no encontrado, etc.) -->
     <div id="avisoTest" role="alert" style="display:none;"></div>
+
+    <!-- Modo repaso Anki (test.html?modo=repaso): el motor pinta aquí las tarjetas -->
+    <div id="repasoContainer" class="repaso-app" style="display:none;"></div>
 
     <form id="formTest" onsubmit="return false;">
       <div id="preguntasContainer"></div>
@@ -33,7 +37,7 @@
   <noscript>Este test necesita JavaScript. <a href="index.html">Volver a la lista</a></noscript>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/storage.js?v=4"></script>
-  <script src="js/test_engine.js?v=2"></script>
+  <script src="js/storage.js?v=6"></script>
+  <script src="js/test_engine.js?v=3"></script>
 </body>
 </html>

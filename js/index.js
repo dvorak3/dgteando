@@ -80,10 +80,52 @@ function renderRachaEstudio() {
   }
 }
 
+/* ================= REPASO INTELIGENTE (ANKI) ================= */
+function renderAnki() {
+  if (typeof obtenerColaRepasoHoy !== 'function') return;
+
+  const estado = obtenerColaRepasoHoy();
+  const num = document.getElementById('ankiCuotaNum');
+  const etiqueta = document.getElementById('ankiCuotaEtiqueta');
+  const total = document.getElementById('ankiTotalSeguimiento');
+  const desglose = document.getElementById('ankiDesglose');
+  const btn = document.getElementById('btnRepasoAnki');
+  const badge = document.getElementById('ankiBadgeAlDia');
+  if (!num || !btn || !badge) return;
+
+  const n = estado.cuotaDiaria;
+  num.textContent = n;
+  etiqueta.textContent = n === 1 ? 'tarjeta para hoy' : 'tarjetas para hoy';
+  total.textContent = estado.totalMazo === 1
+    ? '1 pregunta en seguimiento'
+    : `${estado.totalMazo} preguntas en seguimiento`;
+  desglose.textContent = estado.totalMazo
+    ? `${estado.nuevas} nuevas · ${estado.aprendiendo} aprendiendo · ${estado.jovenes} jóvenes · ${estado.maduras} maduras`
+    : '';
+
+  btn.href = 'test.html?modo=repaso';
+
+  if (estado.totalMazo === 0 || necesitaInicializarMazo()) {
+    // Mazo sin crear: el primer repaso carga los tests de data/ y lo inicializa
+    btn.textContent = 'Iniciar mazo Anki (cargar tests)';
+    btn.style.display = '';
+    badge.style.display = 'none';
+  } else if (n > 0) {
+    btn.textContent = `Repasar ${n} ${n === 1 ? 'tarjeta' : 'tarjetas'} hoy`;
+    btn.style.display = '';
+    badge.style.display = 'none';
+  } else {
+    btn.style.display = 'none';
+    badge.textContent = '¡Al día! 0 tarjetas pendientes';
+    badge.style.display = 'inline-block';
+  }
+}
+
 function renderDashboard() {
   renderTabla();
   renderContadorExamen();
   renderRachaEstudio();
+  renderAnki();
 }
 
 /* ================= INTERACCIÓN EDITOR FECHA EXAMEN ================= */
