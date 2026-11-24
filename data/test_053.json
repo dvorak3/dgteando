@@ -1,0 +1,252 @@
+{
+  "test_id": 53,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "¿En que momento del dia hay mas accidentes?",
+      "opciones": [
+        "Al mediodia, a la hora de comer.",
+        "En las primeras horas de la noche.",
+        "Por la tarde, al finalizar la jornada laboral."
+      ]
+    },
+    {
+      "texto": "Aun es de dia, pero ya se ha puesto el sol. ¿Que luces debe encender?",
+      "opciones": [
+        "Esta prohibido encender las luces cuando es de dia.",
+        "Basta con las de posicion.",
+        "Las de corto alcance o de cruce."
+      ],
+      "imagen": "../img/test_053_p02.jpg"
+    },
+    {
+      "texto": "Circula por el carril derecho y el semaforo esta verde. ¿Que debe hacer?",
+      "opciones": [
+        "Girar a la derecha o girar a la izquierda.",
+        "Girar a la izquierda o continuar de frente.",
+        "Girar a la derecha o continuar de frente."
+      ],
+      "imagen": "../img/test_053_p03.jpg"
+    },
+    {
+      "texto": "Para ahorrar carburante, ¿ique debe hacer?",
+      "opciones": [
+        "Circular a 90 kilometros porhora, siempre.",
+        "Adaptar lasmarchas a las necesidades del vehiculo.",
+        "Circular conmarchas cortas."
+      ],
+      "imagen": "../img/test_053_p04.jpg"
+    },
+    {
+      "texto": "¿A que vehiculos prohibe pasar esta senal?",
+      "opciones": [
+        "A los vehiculos que tienen mas de 3,5 m. de anchura.",
+        "A los vehiculos que tienen mas de 3.500 kg.de peso.",
+        "A los vehiculos que tienen mas de 3,5 m. de altura."
+      ],
+      "imagen": "../img/test_053_p05.jpg"
+    },
+    {
+      "texto": "En esta situacion, ¿zes correcto el adelantamiento que esta realizando el turismo a la motocicleta?",
+      "opciones": [
+        "No,porque invade completamente el sentido contrario.",
+        "Si, porque no hay senal vertical que lo prohiba.",
+        "Si, porque deja la separacion adecuada y adelanta a un vehiculo de dos ruedas."
+      ],
+      "imagen": "../img/test_053_p06.jpg"
+    },
+    {
+      "texto": "¿Esta permitido cambiar el sentido de la marcha en un tinel?",
+      "opciones": [
+        "Si, salvo que no exista suficiente visibilidad.",
+        "Si, cuando no este expresamenteprohibido.",
+        "No."
+      ],
+      "imagen": "../img/test_053_p07.jpg"
+    },
+    {
+      "texto": "Cuando avise de un accidente, ¿ique informacion es util que aporte a los servicios de emergencia?",
+      "opciones": [
+        "Como ha ocurrido el accidentey los vehiculos accidentados.",
+        "El lugar del accidente, el numero de victimas y su identificacion.",
+        "El lugar del accidente y el numero de matricula de los vehiculos."
+      ]
+    },
+    {
+      "texto": "Si conduce una motocicleta, ¿zes obligatorio llevar un chaleco reflectante?",
+      "opciones": [
+        "Si, debe llevarlo puesto durante toda la conduccion.",
+        "Si, debe llevarlo en la motocicleta y utilizarlo cuando sea obligatorio.",
+        "No, no es obligatorio. O a) A80 km/h. O b) A100km/h. O c) A 90 km/h."
+      ],
+      "imagen": "../img/test_053_p09.jpg"
+    },
+    {
+      "texto": "Esta senal indica que los carriles sobre los que estan situadas las senales de velocidad minima...",
+      "opciones": [
+        "solo puede utilizarlos si circula a una velocidad inferior a la indicada.",
+        "son para vehiculos rapidos y el carril situadomas a la derecha es para vehiculos lentos.",
+        "solo puede utilizarlos si circula a una velocidad igual o superior a la indicada."
+      ],
+      "imagen": "../img/test_053_p11.jpg"
+    },
+    {
+      "texto": "Para advertir que va a realizar una maniobra, mantendra la senalizacion luminosa hasta...",
+      "opciones": [
+        "queterminelamaniobra.",
+        "que los demas usuarios hayan visto la senalizacion.",
+        "elmomento enqueempiecelamaniobra."
+      ],
+      "imagen": "../img/test_053_p12.jpg"
+    },
+    {
+      "texto": "¿Cual es la distancia ideal a la que debe colocarse con respecto al airbag?",
+      "opciones": [
+        "10 cm.",
+        "25 cm.",
+        "La distancia que lepermita conducir en una postura comoda."
+      ],
+      "imagen": "../img/test_053_p13.jpg"
+    },
+    {
+      "texto": "En caso de averia de su motocicleta en una calzada, ¿icomo debe senalizarlo si representa un obstaculopara la circulacion?",
+      "opciones": [
+        "Obligatoriamenteconlaslucesdeposicion.",
+        "Con el dispositivo de presenalizacionde peligro que esta obligado a llevarconsigo.",
+        "Con la luz de emergencia si la tiene instalada."
+      ],
+      "imagen": "../img/test_053_p14.jpg"
+    },
+    {
+      "texto": "¿Puede afectar la carga excesiva del vehiculo al correcto funcionamiento de los neumaticos?",
+      "opciones": [
+        "Si, cuando se excede de los limites de carga permitidos.",
+        "No, en ningun caso. b) No, en ningun caso.",
+        "No,si el vehiculo lleva amortiguadores nuevos."
+      ],
+      "imagen": "../img/test_053_p15.jpg"
+    },
+    {
+      "texto": "Cuando aumente la velocidad, debe...",
+      "opciones": [
+        "mirara lo lejos una distancia mayor.",
+        "mirarhacia atrasconmenorfrecuencia.",
+        "aumentar lavisionpor los laterales."
+      ]
+    },
+    {
+      "texto": "El conductor de una motocicleta que va a girar a la izquierda, ¿zcomo debe senalizar la maniobra?",
+      "opciones": [
+        "Con el brazo izquierdo hacia abajo y la palma de la mano hacia atras.",
+        "Con el brazo izquierdo doblado hacia arriba.",
+        "Conelbrazo izquierdo extendidohorizontalmentey la palmade la manohacia abajo."
+      ]
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Que la viava a tenerun unicosentido.",
+        "La proximidad de un carril de entrada a la autopista.",
+        "Que el carril de la derecha va a finalizar."
+      ],
+      "imagen": "../img/test_053_p18.jpg"
+    },
+    {
+      "texto": "¿Tomar chicles o caramelos reduce la tasa de alcoholemia?",
+      "opciones": [
+        "No.",
+        "Sololoscaramelosquetenganmuchoazucar.",
+        "Si."
+      ],
+      "imagen": "../img/test_053_p19.jpg"
+    },
+    {
+      "texto": "El semaforo esta verde y un agente le manda detenerse. ¿Que debe hacer?",
+      "opciones": [
+        "Detenerse, porque la senal del agente tiene prioridad.",
+        "Continuar circulando,porque lo permite el semaforo.",
+        "Continuar la marcha,pero debe ceder el paso a todos los vehiculos."
+      ],
+      "imagen": "../img/test_053_p20.jpg"
+    },
+    {
+      "texto": "En tramos con suficiente visibilidad y sin formar aglomeracion, ¿zpodran los ciclistas circular en columna de a dos,pegandose a la derecha?",
+      "opciones": [
+        "Sí.",
+        "No, siempre por el arcen.",
+        "No, siempre en fila de a uno."
+      ],
+      "imagen": "../img/test_053_p21.jpg"
+    },
+    {
+      "texto": "Esta detenido ante un semaforo. ¿Cuando esta permitido hablar por telefono movil?",
+      "opciones": [
+        "Solo cuando el semaforo esta en zona urbana.",
+        "Solo mientras el semaforo esta en rojo.",
+        "Solo cuando se utilice un dispositivo manos libres. O a) 110 km/h. O b) 90 km/h. O c) 120 km/h."
+      ],
+      "imagen": "../img/test_053_p22.jpg"
+    },
+    {
+      "texto": "El vehiculo rojo, ¿zesta obligado a ceder el paso en la interseccion?",
+      "opciones": [
+        "Si, a los vehiculos que se aproximen por la derecha.",
+        "Si,a todos los vehiculos.",
+        "No."
+      ],
+      "imagen": "../img/test_053_p24.jpg"
+    },
+    {
+      "texto": "Para incorporarse a la circulacion, ¿iesta permitido circular marcha atras mas de quince metros?",
+      "opciones": [
+        "Si, en cualquiercaso.",
+        "No.",
+        "Si, siempre que no se invada un cruce de vias."
+      ]
+    },
+    {
+      "texto": "¿Que debe hacer el conductor de un vehiculo de grandes dimensiones para facilitar ser adelantado?",
+      "opciones": [
+        "Disminuirla velocidad o apartarse al arcen si espracticable.",
+        "Nada, la responsabilidad en el adelantamiento la tiene siempre el que adelanta.",
+        "Detenerseen el arcenobligatoriamente."
+      ],
+      "imagen": "../img/test_053_p26.jpg"
+    },
+    {
+      "texto": "De dia es obligatorio encender el alumbrado que corresponda...",
+      "opciones": [
+        "solo cuando existan condiciones que disminuyan la visibilidad.",
+        "cuando se circulepor carrilespara VAO.",
+        "cuando se circulepor pasos inferiores o tramos de via afectados por la senal tunel."
+      ]
+    },
+    {
+      "texto": "A partir de esta senal, circular como minimo a 3o kilometros por hora...",
+      "opciones": [
+        "es obligatorio.",
+        "es recomendable.",
+        "esta prohibido."
+      ],
+      "imagen": "../img/test_053_p28.jpg"
+    },
+    {
+      "texto": "La distancia de seguridad con el vehiculo que circula delante depende de...",
+      "opciones": [
+        "el tipo de vehiculo que circula delante.",
+        "la velocidad y las condiciones de adherencia y de frenado.",
+        "la densidad del trafico. c) la densidad del trafico."
+      ],
+      "imagen": "../img/test_053_p29.jpg"
+    },
+    {
+      "texto": "¿Es necesario revisar el funcionamiento del sistema de alumbrado?",
+      "opciones": [
+        "Noes necesario.",
+        "Si, es parte del mantenimiento preventivo del vehiculo.",
+        "No,sitiene instaladas luces dexenon."
+      ],
+      "imagen": "../img/test_053_p30.jpg"
+    }
+  ]
+}

@@ -9,7 +9,7 @@
 
   const lblModo = document.getElementById('lblModo');
   if (lblModo) {
-    lblModo.textContent = MODO === 'estudio' ? 'Modo estudio' : MODO === 'repaso' ? 'Repaso Anki' : 'Modo examen';
+    lblModo.textContent = MODO === 'estudio' ? 'Modo estudio' : MODO === 'repaso' ? 'Repaso' : 'Modo examen';
   }
 
   const form = document.getElementById('formTest');
@@ -28,15 +28,15 @@
   /* ================= AVISOS ================= */
   function mostrarAviso(html) {
     form.style.display = 'none';
-    aviso.style.cssText = 'display:block;padding:18px 20px;margin:24px 0;border-radius:8px;' +
-      'background:#fff4e5;border:1px solid #f0b86e;color:#5f3b00;line-height:1.5;';
+    aviso.style.cssText = 'display:block;padding:18px 20px;margin:24px 0;border-radius:14px;' +
+      'background:#fef3c7;border:1px solid #fcd34d;color:#92400e;line-height:1.5;';
     aviso.innerHTML = html + '<p style="margin:12px 0 0;"><a href="index.html">← Volver a la lista de tests</a></p>';
   }
 
   function mostrarEstadoGuardado(tipo, texto) {
     const colores = {
       guardando: '#6b7280',
-      ok: '#2e7d32',
+      ok: '#15803d',
       aviso: '#b45309'
     };
     estadoGuardado.style.cssText = `margin-top:12px;font-size:14px;font-weight:600;color:${colores[tipo] || '#6b7280'};`;
@@ -171,7 +171,7 @@
     if (sinRespuestas) {
       mostrarEstadoGuardado('aviso',
         'Este test no tiene respuestas correctas en su JSON: no se ha guardado el resultado.');
-      if (btnVolver) btnVolver.style.display = 'inline-block';
+      if (btnVolver) btnVolver.style.display = 'inline-flex';
       return;
     }
 
@@ -205,11 +205,13 @@
         'exporta el .json desde la lista si quieres un respaldo.' + notaRepaso);
     }
 
-    if (btnVolver) btnVolver.style.display = 'inline-block';
+    if (btnVolver) btnVolver.style.display = 'inline-flex';
   };
 
   /* =====================================================================
    *  MODO REPASO (Anki): una tarjeta cada vez, controlado por teclado
+   *  Estructura: barra superior persistente (cerrar · progreso · racha)
+   *  + escenario (#repasoStage) donde se pinta cada tarjeta.
    * ===================================================================== */
   const TECLA_A_NIVEL = { '1': 'hard', '2': 'medium', '3': 'easy', '4': 'again' };
   const NIVELES = [
@@ -220,19 +222,23 @@
   ];
   const ETIQUETA_MADUREZ = { nueva: 'Nueva', aprendiendo: 'Aprendiendo', joven: 'Joven', madura: 'Madura' };
   const PUESTOS_REENCOLAR = 4; // "again": la tarjeta vuelve a salir unos puestos más adelante
+  const MS_SALIDA = 180;       // duración de la animación de salida de la tarjeta
+
+  const SVG_ATTRS = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
+  const ICONO_CHECK = `<svg ${SVG_ATTRS}><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>`;
+  const ICONO_ASPA = `<svg ${SVG_ATTRS}><path d="M6 6l12 12M18 6L6 18"/></svg>`;
 
   function iniciarRepaso() {
     const cont = document.getElementById('repasoContainer');
     if (!cont) return;
 
+    document.documentElement.classList.add('modo-repaso');
     form.style.display = 'none';
-    cont.style.display = 'block';
-    document.title = 'Repaso inteligente (Anki)';
-    const h1 = document.querySelector('.test-title');
-    if (h1) h1.innerHTML = 'repaso <span class="num">Anki</span>';
+    cont.style.display = 'flex';
+    document.title = 'Repaso · dgt-eando';
 
     const cacheTests = new Map();          // testId -> JSON del test
-    let sesion = null;                     // { pendientes, total, hechas, contadores }
+    let sesion = null;                     // { pendientes, total, hechas, contadores, racha, rachaMax, repetidas }
     let fase = 'carga';                    // carga | pregunta | confianza | guardando | final
     let claveActual = null;
     let pregActual = null;
@@ -240,7 +246,9 @@
     let bloqueoHasta = 0;
     let correctaVisual = -1;               // posición (0-based) de la correcta tal y como se ve en pantalla
 
+    const el = (id) => document.getElementById(id);
     const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const reducirMovimiento = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // Fisher–Yates (modifica y devuelve el array)
     function barajarArray(arr) {
@@ -258,7 +266,7 @@
 
     function pintarAviso(html) {
       fase = 'final';
-      cont.innerHTML = `<div class="repaso-final"><p>${html}</p><a class="repaso-btn-volver" href="index.html">Volver al panel</a></div>`;
+      cont.innerHTML = `<div class="repaso-final"><p class="repaso-final-sub">${html}</p><a class="repaso-btn-volver" href="index.html">Volver al panel</a></div>`;
     }
 
     function preguntaDeClave(clave) {
@@ -270,8 +278,54 @@
     }
 
     function etiquetaIntervalo(nivel, dias) {
-      if (nivel === 'again' || dias <= 0) return 'Hoy';
+      if (nivel === 'again' || !(dias > 0)) return 'Hoy';
       return dias === 1 ? '1 día' : `${dias} días`;
+    }
+
+    /* ---------- Barra superior (persistente entre tarjetas) ---------- */
+    function montarShell() {
+      cont.innerHTML = `
+        <header class="repaso-topbar">
+          <div class="repaso-topbar-inner">
+            <a href="index.html" class="repaso-cerrar" aria-label="Salir del repaso" title="Salir">✕</a>
+            <div class="repaso-progreso-wrap">
+              <div class="repaso-progreso" id="repasoProgreso" role="progressbar" aria-label="Progreso del repaso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="repaso-progreso-barra" id="repasoBarra"></div>
+              </div>
+              <div class="repaso-contador" id="repasoContador">0 / 0</div>
+            </div>
+            <div class="repaso-combo" id="repasoCombo" title="Racha de aciertos seguidos" aria-live="polite">
+              <span class="repaso-combo-fuego" aria-hidden="true">🔥</span>
+              <span id="repasoComboNum">0</span>
+            </div>
+          </div>
+        </header>
+        <main class="repaso-stage" id="repasoStage"></main>
+      `;
+    }
+
+    function actualizarProgreso() {
+      const pct = sesion.total ? Math.min(100, Math.round((sesion.hechas / sesion.total) * 100)) : 0;
+      const barra = el('repasoBarra');
+      if (barra) barra.style.width = `${pct}%`;
+      const pb = el('repasoProgreso');
+      if (pb) pb.setAttribute('aria-valuenow', String(pct));
+      const c = el('repasoContador');
+      if (c) c.textContent = `${Math.min(sesion.hechas + 1, sesion.total)} / ${sesion.total}`;
+    }
+
+    // anim: 'pop' (acierto seguido) | 'cae' (racha reiniciada) | null (solo pintar)
+    function pintarCombo(anim) {
+      const combo = el('repasoCombo');
+      const num = el('repasoComboNum');
+      if (!combo || !num) return;
+      num.textContent = String(sesion.racha);
+      combo.classList.toggle('activo', sesion.racha > 0);
+      if (anim) {
+        combo.classList.remove('pop', 'cae');
+        void combo.offsetWidth; // reinicia la animación aunque se repita seguida
+        combo.classList.add(anim);
+      }
     }
 
     /* ---------- Pantalla de tarjeta ---------- */
@@ -291,9 +345,16 @@
       numOpciones = pregActual.opciones.length;
       fase = 'pregunta';
 
+      if (!el('repasoStage')) montarShell();
+      const stage = el('repasoStage');
+      stage.classList.remove('saliendo');
+      actualizarProgreso();
+      pintarCombo(null);
+
       const imagenSrc = normalizarImagen(pregActual.imagen);
-      const porcentaje = sesion.total ? Math.round((sesion.hechas / sesion.total) * 100) : 0;
-      const repeticion = sesion.repetidas.has(claveActual) ? '<span class="repaso-repeticion">repetición</span>' : '';
+      const repeticion = sesion.repetidas.has(claveActual) ? '<span class="repaso-repeticion">Repetición</span>' : '';
+      const refTest = String(tarjeta.testId).padStart(3, '0');
+      const refPregunta = String((Number(tarjeta.preguntaIdx) || 0) + 1).padStart(2, '0');
 
       // Orden visual: posición en pantalla -> índice original en el JSON.
       // Si "barajarOpciones" está activo se mezcla en cada aparición; el rastreo de la correcta se mantiene
@@ -305,35 +366,37 @@
 
       const opcionesHTML = ordenVisual.map((idxOriginal, i) => `
         <button type="button" class="repaso-opcion" data-op="${i}">
-          <span class="repaso-tecla">${i + 1}</span>
+          <span class="repaso-tecla" aria-hidden="true">${i + 1}</span>
           <span class="repaso-opcion-texto"><span class="opcion-letra">${letras[i]})</span> ${pregActual.opciones[idxOriginal]}</span>
+          <span class="repaso-opcion-icono" aria-hidden="true"></span>
         </button>
       `).join('');
 
-      cont.innerHTML = `
-        <div class="repaso-top">
-          <a href="index.html" class="repaso-salir">← Salir</a>
-          <span class="repaso-contador">Tarjeta ${Math.min(sesion.hechas + 1, sesion.total)} de ${sesion.total} ${repeticion}</span>
-          <span class="repaso-badge madurez-${esc(tarjeta.madurez)}">${ETIQUETA_MADUREZ[tarjeta.madurez] || esc(tarjeta.madurez)}</span>
-        </div>
-        <div class="repaso-progreso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${porcentaje}">
-          <div class="repaso-progreso-barra" style="width:${porcentaje}%"></div>
-        </div>
-        <article class="repaso-tarjeta ${imagenSrc ? 'con-imagen' : ''}">
-          <div class="repaso-cuerpo">
-            <div class="repaso-enunciado">${pregActual.texto}</div>
-            <div class="repaso-opciones">${opcionesHTML}</div>
+      stage.innerHTML = `
+        <article class="repaso-tarjeta ${imagenSrc ? 'con-imagen' : ''}" id="repasoTarjeta">
+          <div class="repaso-contexto">
+            <span>Test ${esc(refTest)} · Pregunta ${esc(refPregunta)}</span>
+            <span class="repaso-contexto-der">
+              ${repeticion}
+              <span class="repaso-badge madurez-${esc(tarjeta.madurez)}">${ETIQUETA_MADUREZ[tarjeta.madurez] || esc(tarjeta.madurez)}</span>
+            </span>
           </div>
-          ${imagenSrc ? `<div class="repaso-media"><img src="${esc(imagenSrc)}" alt="Imagen de la pregunta"></div>` : ''}
+          <div class="repaso-cuerpo">
+            <h2 class="repaso-enunciado">${pregActual.texto}</h2>
+            ${imagenSrc ? `<div class="repaso-media"><img src="${esc(imagenSrc)}" alt="Imagen de la pregunta"></div>` : ''}
+            <div class="repaso-opciones" role="group" aria-label="Respuestas">${opcionesHTML}</div>
+          </div>
         </article>
-        <div class="repaso-confianza" id="repasoConfianza" hidden></div>
+        <section class="repaso-confianza" id="repasoConfianza" aria-label="Calibrar confianza" hidden></section>
         <p class="repaso-ayuda" id="repasoAyuda">Pulsa <kbd>1</kbd> <kbd>2</kbd>${numOpciones > 2 ? ' <kbd>3</kbd>' : ''} para responder</p>
         <p class="repaso-aviso-nube" id="repasoAvisoNube" hidden>⚠ No se pudo sincronizar con la nube; el avance está guardado en este dispositivo.</p>
       `;
 
-      cont.querySelectorAll('.repaso-opcion').forEach((btn) => {
+      stage.querySelectorAll('.repaso-opcion').forEach((btn) => {
         btn.addEventListener('click', () => seleccionarOpcion(Number(btn.dataset.op)));
       });
+
+      window.scrollTo(0, 0);
     }
 
     /* ---------- Fase 1: elegir respuesta ---------- */
@@ -343,25 +406,51 @@
       bloqueoHasta = Date.now() + 200;   // evita que una doble pulsación salte la fase de confianza
 
       const correcta = correctaVisual;   // índice visual de la correcta (ya contempla el barajado)
+      const acierto = i === correcta;
+
       cont.querySelectorAll('.repaso-opcion').forEach((btn, idx) => {
         btn.classList.add('bloqueada');
         btn.disabled = true;
-        if (idx === correcta) btn.classList.add('es-correcta');
-        else if (idx === i) btn.classList.add('es-fallo');
+        const icono = btn.querySelector('.repaso-opcion-icono');
+        if (idx === correcta) {
+          btn.classList.add('es-correcta');
+          if (!acierto) btn.classList.add('revelada');   // se ilumina un instante después del fallo
+          if (icono) icono.innerHTML = ICONO_CHECK;
+        } else if (idx === i) {
+          btn.classList.add('es-fallo');
+          if (icono) icono.innerHTML = ICONO_ASPA;
+        }
       });
 
+      // Combo de sesión: sube con cada acierto consecutivo y se reinicia al fallar
+      if (acierto) {
+        sesion.racha++;
+        sesion.rachaMax = Math.max(sesion.rachaMax, sesion.racha);
+        pintarCombo('pop');
+      } else {
+        const habiaRacha = sesion.racha > 0;
+        sesion.racha = 0;
+        pintarCombo(habiaRacha ? 'cae' : null);
+      }
+
       const intervalos = previsualizarIntervalosTarjeta(claveActual) || {};
-      const panel = document.getElementById('repasoConfianza');
-      const sugerido = i !== correcta ? 'again' : '';
+      const panel = el('repasoConfianza');
+      const sugerido = acierto ? '' : 'again';
+      const botonHTML = (n) => `
+        <button type="button" class="repaso-btn-confianza btn-${n.nivel} ${sugerido === n.nivel ? 'sugerido' : ''}" data-nivel="${n.nivel}">
+          <span class="repaso-btn-linea"><span class="repaso-tecla">${n.tecla}</span> ${n.etiqueta}</span>
+          <span class="repaso-btn-dias">${etiquetaIntervalo(n.nivel, intervalos[n.nivel])}</span>
+        </button>`;
+
       panel.innerHTML = `
-        <p class="repaso-confianza-titulo">${i === correcta ? '¡Correcto!' : 'Incorrecta.'} ¿Cuánta confianza tenías?</p>
+        <div class="repaso-confianza-cab">
+          <span class="repaso-confianza-titulo">Calibrar confianza</span>
+          <span class="repaso-resultado ${acierto ? 'ok' : 'ko'}">${acierto ? '¡Correcto!' : 'Incorrecta'}</span>
+        </div>
         <div class="repaso-confianza-botones">
-          ${NIVELES.map((n) => `
-            <button type="button" class="repaso-btn-confianza btn-${n.nivel} ${sugerido === n.nivel ? 'sugerido' : ''}" data-nivel="${n.nivel}">
-              <span class="repaso-btn-linea"><span class="repaso-tecla">${n.tecla}</span> ${n.etiqueta}</span>
-              <span class="repaso-btn-dias">${etiquetaIntervalo(n.nivel, intervalos[n.nivel])}</span>
-            </button>
-          `).join('')}
+          ${NIVELES.filter((n) => n.nivel !== 'again').map(botonHTML).join('')}
+          <span class="repaso-confianza-sep" aria-hidden="true"></span>
+          ${botonHTML(NIVELES.find((n) => n.nivel === 'again'))}
         </div>
       `;
       panel.hidden = false;
@@ -369,14 +458,21 @@
         btn.addEventListener('click', () => calificar(btn.dataset.nivel));
       });
 
-      const ayuda = document.getElementById('repasoAyuda');
+      const ayuda = el('repasoAyuda');
       if (ayuda) ayuda.innerHTML = 'Pulsa <kbd>1</kbd> Hard · <kbd>2</kbd> Medium · <kbd>3</kbd> Easy · <kbd>4</kbd> Again';
+
+      // En pantallas pequeñas asegura que el panel de confianza quede a la vista
+      requestAnimationFrame(() => {
+        panel.scrollIntoView({ behavior: reducirMovimiento() ? 'auto' : 'smooth', block: 'nearest' });
+      });
     }
 
     /* ---------- Fase 2: confianza ---------- */
     async function calificar(nivel) {
       if (fase !== 'confianza' || Date.now() < bloqueoHasta) return;
       fase = 'guardando';
+      const panel = el('repasoConfianza');
+      if (panel) panel.classList.add('guardando');
       cont.querySelectorAll('.repaso-btn-confianza').forEach((b) => { b.disabled = true; });
 
       try {
@@ -395,9 +491,17 @@
         sesion.hechas++;
       }
 
+      // La barra crece mientras la tarjeta actual sale de escena
+      actualizarProgreso();
+      const stage = el('repasoStage');
+      if (stage && !reducirMovimiento()) {
+        stage.classList.add('saliendo');
+        await new Promise((r) => setTimeout(r, MS_SALIDA));
+      }
+
       mostrarTarjeta();
       if (typeof ultimaSincronizacionOk !== 'undefined' && ultimaSincronizacionOk === false) {
-        const av = document.getElementById('repasoAvisoNube');
+        const av = el('repasoAvisoNube');
         if (av) av.hidden = false;
       }
     }
@@ -408,6 +512,7 @@
       const e = obtenerColaRepasoHoy();
       const c = sesion ? sesion.contadores : { hard: 0, medium: 0, easy: 0, again: 0 };
       const repasadas = sesion ? sesion.hechas : 0;
+      const rachaMax = sesion ? sesion.rachaMax : 0;
       const hayMas = e.colaHoy.length > 0;
 
       cont.innerHTML = `
@@ -417,6 +522,7 @@
           <p class="repaso-final-sub">${repasadas
             ? `Has repasado ${repasadas} ${repasadas === 1 ? 'tarjeta' : 'tarjetas'} (${c.again} ${c.again === 1 ? 'repetición' : 'repeticiones'} por «Again»).`
             : 'No tienes tarjetas pendientes para hoy.'}</p>
+          ${rachaMax > 0 ? `<div class="repaso-racha-final">🔥 Mejor racha: ${rachaMax}</div>` : ''}
           <div class="repaso-resumen">
             <div class="repaso-resumen-item madurez-nueva"><strong>${e.nuevas}</strong><span>Nuevas</span></div>
             <div class="repaso-resumen-item madurez-aprendiendo"><strong>${e.aprendiendo}</strong><span>Aprendiendo</span></div>
@@ -466,7 +572,12 @@
         return;
       }
 
-      sesion = { pendientes: [], total: 0, hechas: 0, contadores: { hard: 0, medium: 0, easy: 0, again: 0 }, repetidas: new Set() };
+      sesion = {
+        pendientes: [], total: 0, hechas: 0,
+        contadores: { hard: 0, medium: 0, easy: 0, again: 0 },
+        repetidas: new Set(),
+        racha: 0, rachaMax: 0
+      };
       if (!estado.colaHoy.length) { mostrarFinal(); return; }
 
       pintarCarga(`Cargando ${estado.colaHoy.length} tarjetas...`);

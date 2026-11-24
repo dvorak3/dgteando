@@ -1,0 +1,267 @@
+{
+  "test_id": 68,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Conducir cansado, ¿zes peligroso?",
+      "opciones": [
+        "Si,porque setarda mas enreaccionar.",
+        "No hay peligro, porque cansado se circula mas despacio.",
+        "No hay peligro, porque el cansancio relaja."
+      ]
+    },
+    {
+      "texto": "¿Puede adelantar a partir dela senal vertical?",
+      "opciones": [
+        "No,porqueestaprohibido.",
+        "Si,por la parte izquierda dela calzada.",
+        "Si, por el arcen derecho."
+      ],
+      "imagen": "../img/test_068_p02.jpg"
+    },
+    {
+      "texto": "Si conduce una motocicleta y hay niebla ligera, ¿ique alumbrado debe utilizar?",
+      "opciones": [
+        "El de posicion, el de cruce y el delantero de niebla si lo tiene instalado.",
+        "El de posicion, el de cruce y el delantero y trasero de niebla si los tiene instalados.",
+        "El de posicion y el de cruce, siendo optativo el de largo alcance."
+      ]
+    },
+    {
+      "texto": "Un turismo circula detras de una bicicleta en el mismo carril. ¿Que distancia minima debe mantener?",
+      "opciones": [
+        "1,5 metros.",
+        "3 metros.",
+        "5 metros."
+      ],
+      "imagen": "../img/test_068_p04.jpg"
+    },
+    {
+      "texto": "¿Que significa esta senal?",
+      "opciones": [
+        "Peligro por la proximidad de un paso a nivel sin barreras.",
+        "Peligro por la proximidad de un paso a nivel con barreras.",
+        "Peligro por la presencia inmediata de un paso a nivel sin barreras."
+      ],
+      "imagen": "../img/test_068_p05.jpg"
+    },
+    {
+      "texto": "¿Cuantos espejos retrovisores debe de llevar este cuatriciclo?",
+      "opciones": [
+        "Solo el exteriorderecho.",
+        "Dos, el interior y el exterior izquierdo.",
+        "Solo el exteriorizquierdo"
+      ],
+      "imagen": "../img/test_068_p06.jpg"
+    },
+    {
+      "texto": "Dadas las circunstancias, ¿ipodremos adelantar al vehiculo que nos precede?",
+      "opciones": [
+        "Si, puesto que aun no hemos llegado a la altura de la senal que lo prohibe.",
+        "No,porque finalizariamos el adelantamiento en zona que lo prohibe.",
+        "No, porque hay una linea continua que nos prohibe rebasarla."
+      ],
+      "imagen": "../img/test_068_p07.jpg"
+    },
+    {
+      "texto": "¿Que senal utilizara un agente en su vehiculo para senalizar que la calzada vuelve a estar abierta a la circulacion?",
+      "opciones": [
+        "Una bandera roja.",
+        "Una bandera verde.",
+        "Una luz roja."
+      ]
+    },
+    {
+      "texto": "¿Puede circular por una via interurbana con el alumbrado de largo alcance en caso de lluvia intensa o niebla densa?",
+      "opciones": [
+        "Si, pero no es recomendable porque el reflejo en la niebla o lalluvia le puede deslumbrar.",
+        "No, esta prohibido.",
+        "Si, porque en este caso la via esta insuficientemente iluminada."
+      ]
+    },
+    {
+      "texto": "Este panel, colocado bajo una senal de prohibicion, indica...",
+      "opciones": [
+        "la distancia en que se aplica la prohibicion a ambos lados de la calzada.",
+        "la distancia al comienzo delaprohibicion.",
+        "la distancia en que se aplica la prohibicion en el sentido de la flecha."
+      ],
+      "imagen": "../img/test_068_p10.jpg"
+    },
+    {
+      "texto": "Cuando el autobus, que circula por el carril bus, ¿circula mas rapido que el resto de los vehiculos,zse considera adelantamiento?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Si,porque en via urbana esta permitido adelantar por la derecha."
+      ],
+      "imagen": "../img/test_068_p11.jpg"
+    },
+    {
+      "texto": "Durante el dia, con tiempo claro y en condiciones de visibilidad normales, ¿icomo se senalizara la carga que sobresale por delante del vehiculo?",
+      "opciones": [
+        "Conunpanelde50por50cmreglamentario.",
+        "Noesnecesariosenalizarla.",
+        "Con un trapo de color vivo."
+      ],
+      "imagen": "../img/test_068_p12.jpg"
+    },
+    {
+      "texto": "En un cambio de carril, ¿zque vehiculo tiene preferencia de paso?",
+      "opciones": [
+        "El vehiculo que cambia de carril, en cualquier caso.",
+        "El vehiculo que ya circulaba por el carril.",
+        "El vehiculo que cambia de carril, si circula a gran velocidad."
+      ],
+      "imagen": "../img/test_068_p13.jpg"
+    },
+    {
+      "texto": "La probabilidad de que un accidente sea mortal es mayor cuando se circula a velocidad...",
+      "opciones": [
+        "inadecuada.",
+        "adecuada.",
+        "moderada."
+      ]
+    },
+    {
+      "texto": "Un rider circula con un vehiculo de movilidad personal durante su jornada laboral, ¿idebe llevar chaleco reflectante?",
+      "opciones": [
+        "Si, cuando circule en todo tipo de vias.",
+        "Solo si circula denocheo conbaja visibilidad. b) Solo si circula de noche o con baja visibilidad.",
+        "No, salvo que circule por una via interurbana."
+      ],
+      "imagen": "../img/test_068_p15.jpg"
+    },
+    {
+      "texto": "¿El nivel de capacidad del conductor vendra determinado en parte por su formacion?",
+      "opciones": [
+        "No,solodependera de su capacidadpsicofisica.",
+        "No, solo dependera de la velocidad.",
+        "si."
+      ]
+    },
+    {
+      "texto": "Como norma general y a la vista de la senal, ¿icircula correctamente un vehiculo por el carril de la izquierda si su velocidad es de 70 km/h?",
+      "opciones": [
+        "Sí.",
+        "No, tendria que ir por el carril de la derecha.",
+        "Si, puede circular por cualquiera de los dos carriles."
+      ],
+      "imagen": "../img/test_068_p17.jpg"
+    },
+    {
+      "texto": "La senal de limitacion de velocidad afecta a los vehiculos que circulen por...",
+      "opciones": [
+        "el ladode la via sobre el queesta situada.",
+        "toda la calzada.",
+        "el carril sobre el que esta situada."
+      ],
+      "imagen": "../img/test_068_p18.jpg"
+    },
+    {
+      "texto": "Comer y beber cuando se conduce, ¿ipuede provocar que el conductor se distraiga?",
+      "opciones": [
+        "Comer si, beber no.",
+        "Si.",
+        "No."
+      ],
+      "imagen": "../img/test_068_p19.jpg"
+    },
+    {
+      "texto": "En una situacion incierta, podra ganar unos metros vitales para evitar un accidente si coloca el pie...",
+      "opciones": [
+        "encima del pedal del freno, presionandolo levemente.",
+        "frente al pedal del freno sin llegar a presionar.",
+        "frente al pedal del embrague."
+      ],
+      "imagen": "../img/test_068_p20.jpg"
+    },
+    {
+      "texto": "La distancia de detencion es el espacio que recorre el vehiculo...",
+      "opciones": [
+        "desde que el conductor percibe un peligro hasta que el vehiculo se detiene.",
+        "desde que el conductor frena hasta que se detiene el vehiculo.",
+        "durante el tiempo que pasa desdeque el conductor reacciona hastaque pisa el pedal del freno"
+      ]
+    },
+    {
+      "texto": "Los ocupantes que viajen en su vehiculo, ¿icomo deben descender del mismo?",
+      "opciones": [
+        "Por cualquier lado, siempre que se haga con rapidez.",
+        "Por el lado mas proximo al borde de la via, si es posible, y siempre con el vehiculo inmovilizado",
+        "Con el vehiculo inmovilizado si es posible, y por cualquiera de los dos lados."
+      ]
+    },
+    {
+      "texto": "Fuera de poblado donde no exista zona peatonal, ¿ipor donde estan obligados a circular los peatones como norma general?",
+      "opciones": [
+        "Es indiferente.",
+        "Por su derecha.",
+        "Por su izquierda."
+      ],
+      "imagen": "../img/test_068_p23.jpg"
+    },
+    {
+      "texto": "Para advertir que va a realizar una maniobra, mantendra la senalizacion luminosa hasta...",
+      "opciones": [
+        "queterminelamaniobra.",
+        "que los demas usuarios hayan visto la senalizacion.",
+        "elmomentoenqueempiecelamaniobra."
+      ],
+      "imagen": "../img/test_068_p24.jpg"
+    },
+    {
+      "texto": "En un carril habilitado en un sentido contrario al habitual, ¿zque luces se deberan utilizar?",
+      "opciones": [
+        "Las de posicion y corto alcance circulando de noche.",
+        "Las deposicion,tanto de dia como de noche.",
+        "Las de cruce o corto alcance,tanto de dia como denoche."
+      ],
+      "imagen": "../img/test_068_p25.jpg"
+    },
+    {
+      "texto": "Circulando con un turismo por una carretera convencional, ¿icual sera la velocidad maxima para adelantar?",
+      "opciones": [
+        "90 km/h",
+        "100km/hmas20km/hpara adelantar.",
+        "120km/hmas20km/hparaadelantar."
+      ],
+      "imagen": "../img/test_068_p26.jpg"
+    },
+    {
+      "texto": "En caso de emitir un aviso y no recibir respuesta por parte del conductor, ¿ique acciones Ileva a cabo el sistema ADAs\"Mantenimiento de carril o LKs\"?",
+      "opciones": [
+        "Detiene el vehiculo y enciende las luces de emergencia para evitar un accidente.",
+        "Detiene el vehiculo ante la presencia de un obstaculo.",
+        "Realiza una correccion en la direccion o en el sistema de frenos para que el vehiculo retorne hacia el centro del carril."
+      ],
+      "imagen": "../img/test_068_p27.jpg"
+    },
+    {
+      "texto": "Cuando avise de un accidente, ¿ique informacion es util que aporte a los servicios de emergencia?",
+      "opciones": [
+        "Comoha ocurrido elaccidentey los vehiculosaccidentados.",
+        "El lugar del accidente, el numero de victimas y su identificacion.",
+        "El lugar del accidente y el numero de matricula de los vehiculos."
+      ]
+    },
+    {
+      "texto": "Encender el intermitente, ¿zda preferencia siempre para hacer maniobras?",
+      "opciones": [
+        "Si, pero debo hacer la maniobra rapidamente.",
+        "No.",
+        "Si, porque he avisado."
+      ],
+      "imagen": "../img/test_068_p29.jpg"
+    },
+    {
+      "texto": "Las materias que produzcan polvo o puedan caer, es obligatorio transportarlas ...",
+      "opciones": [
+        "cubriendolas total y eficazmente.",
+        "envehiculostotalmentecerrados.",
+        "en contenedores de pequeno tamano."
+      ],
+      "imagen": "../img/test_068_p30.jpg"
+    }
+  ]
+}

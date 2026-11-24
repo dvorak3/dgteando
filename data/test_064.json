@@ -1,0 +1,262 @@
+{
+  "test_id": 64,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "¿Siconduce unamotocicletaporuna autovia contreso mas carriles,zle esta permitido circular por el carril situado mas a la izquierda?",
+      "opciones": [
+        "Si, cuando las circunstancias del trafico o la via lo aconsejen.",
+        "Solo cuando la circulacion se encuentre saturada.",
+        "No, solo puede utilizar los carriles derecho y central."
+      ],
+      "imagen": "../img/test_064_p01.jpg"
+    },
+    {
+      "texto": "El conductor de un turismo se ve obligado a realizar el traslado de un enfermo en servicio de urgencia; ¿zque luces debe llevar encendidas?",
+      "opciones": [
+        "Las de emergencia.",
+        "Las largas.",
+        "Las de posicion."
+      ]
+    },
+    {
+      "texto": "En este cruce, ¿iqué se debe hacer?",
+      "opciones": [
+        "Detenerse solo si seaproximan vehiculos porla derecha.",
+        "Detenerse y ceder el paso a todos los vehiculos que se aproximen por ambos lados.",
+        "Detenerse solo si seaproximan vehiculos por la izquierda."
+      ],
+      "imagen": "../img/test_064_p03.jpg"
+    },
+    {
+      "texto": "El carril izquierdo esta abierto en sentido contrario al habitual; ¿za que velocidad maxima pueden circular los vehiculos que circulan por el carril derecho?",
+      "opciones": [
+        "Ala velocidad maxima dela via,120 km/h.",
+        "A 60 km/h.",
+        "A80 km/h."
+      ],
+      "imagen": "../img/test_064_p04.jpg"
+    },
+    {
+      "texto": "¿Esta permitido circular por una autovia por debajo del limite minimo de velocidad establecido para dicha via sin causa justificada?",
+      "opciones": [
+        "No, porque es una velocidad anormalmente reducida.",
+        "Si, aunque es obligatorio circular por el arcen.",
+        "Solo si no se entorpece la marcha normal de otros vehiculos."
+      ],
+      "imagen": "../img/test_064_p05.jpg"
+    },
+    {
+      "texto": "Entre los gastos sanitarios derivados de los accidentes de trafico con victimas se encuentran...",
+      "opciones": [
+        "los derivados porla perdida de produccion de personas empleadas.",
+        "los danos causados al medio ambiente.",
+        "los de rehabilitacion en centros de salud."
+      ],
+      "imagen": "../img/test_064_p06.jpg"
+    },
+    {
+      "texto": "Debido a una retencion de circulacion tiene que reducir, de modo considerable, la velocidad de su vehiculo. Debe advertir, siempre que sea posible, ¿a los vehiculos que circulan detras?",
+      "opciones": [
+        "Si, con el empleo de la luz de emergencia.",
+        "Si, con el empleo reiterado de las luces de frenado o moviendo el brazo alternativamente de arriba a abajo.",
+        "No, esta prohibido hacer advertencias, ya que pueden crear confusion."
+      ],
+      "imagen": "../img/test_064_p07.jpg"
+    },
+    {
+      "texto": "En vias urbanas de doble sentido de circulacion, ¿zen que lado de la calzada puede estacionar un turismo?",
+      "opciones": [
+        "A ambos lados cuando la linea de separacion de los sentidos sea discontinua.",
+        "En el lado izquierdo de la calzada en el sentido de la marcha.",
+        "En el lado derecho de la calzada en el sentido de la marcha."
+      ],
+      "imagen": "../img/test_064_p08.jpg"
+    },
+    {
+      "texto": "Si no esta implicado en un accidente, ¿zdebe prestar auxilio a los heridos?",
+      "opciones": [
+        "Solo si lo solicita algun herido.",
+        "No.",
+        "Si, salvo que la ayuda ya este organizada."
+      ],
+      "imagen": "../img/test_064_p09.jpg"
+    },
+    {
+      "texto": "En una autovia, el limite de velocidad para una motocicleta es de...",
+      "opciones": [
+        "120km/h,pudiendose superar en20km/hpara adelantar.",
+        "120 km/h.",
+        "100 km/h."
+      ],
+      "imagen": "../img/test_064_p10.jpg"
+    },
+    {
+      "texto": "¿Que usuarios deben obedecer el semaforo de la fotografia?",
+      "opciones": [
+        "Los conductores de todos los vehiculos de dos ruedas.",
+        "Los conductores de bicicletas yde ciclos.",
+        "Los peatones y los conductores de bicicletas."
+      ],
+      "imagen": "../img/test_064_p11.jpg"
+    },
+    {
+      "texto": "Una embarazada, ¿zdebe llevar puesto el cinturon de seguridad?",
+      "opciones": [
+        "Si,perosolo envias interurbanas.",
+        "Si, es obligatorio.",
+        "No, no es obligatorio."
+      ]
+    },
+    {
+      "texto": "De las siguientes, ¿zcual es una obligacion que corresponde al titular del vehiculo?",
+      "opciones": [
+        "Verificar que las placas de matricula del vehiculo no presentan obstaculos que impidan su lectura.",
+        "Identificar ante la Administracion al conductor del vehiculo en el momento de cometerse una infraccion.",
+        "Comprobar que todos los ocupantes del vehiculo hacen uso del cinturon de seguridad."
+      ]
+    },
+    {
+      "texto": "¿Esta permitido circular en ciclomotor por una via que tiene esta senal en la entrada?",
+      "opciones": [
+        "No,prohibe el paso de todos los vehiculos motorizados de dos ruedas.",
+        "Si.",
+        "No, las bicicletas y los ciclomotores estan prohibidos."
+      ],
+      "imagen": "../img/test_064_p14.jpg"
+    },
+    {
+      "texto": "El conductor de un turismo, ¿zque debe hacer para incorporarse a la circulacion?",
+      "opciones": [
+        "Solo senalizar la maniobra,porquelos demas tienen que ceder el paso.",
+        "Seguir siempre las indicaciones de otra persona.",
+        "Asegurarse de que puede hacerlo sin peligro para los demas usuarios."
+      ],
+      "imagen": "../img/test_064_p15.jpg"
+    },
+    {
+      "texto": "Siempre que exista espacio suficiente y adoptando las maximas precauciones, esta permitido adelantar por la derecha...",
+      "opciones": [
+        "en vias interurbanas, en las intersecciones y sus proximidades.",
+        "en autopistas yautoviasquediscurran exclusivamentedentrodepoblado.",
+        "en vias urbanas con dos omas carriles delimitados por lineas longitudinales."
+      ],
+      "imagen": "../img/test_064_p16.jpg"
+    },
+    {
+      "texto": "En caso de estar implicado en un accidente, ¿idebe detenerse para ayudar a restablecer la seguridad de la circulacion?",
+      "opciones": [
+        "No,esa tarea correspondea la policiade trafico.",
+        "Si, en la medida de lo posible.",
+        "Solo si hay fallecidos o heridos graves."
+      ],
+      "imagen": "../img/test_064_p17.jpg"
+    },
+    {
+      "texto": "¿Es recomendable tener especial cuidado al adelantar a un grupo de ciclistas en los ascensos prolongados?",
+      "opciones": [
+        "No; los adelantamientos a ciclistas no implican riesgo alguno.",
+        "Solo si algun ciclista va bebiendo algun liquido o tomando alimentos solidos.",
+        "Si,porque debido al esfuerzo y pedaleo pueden realizar cambiosbruscos de trayectoria."
+      ],
+      "imagen": "../img/test_064_p18.jpg"
+    },
+    {
+      "texto": "En general, bajo los efectos de la cocaina...",
+      "opciones": [
+        "aumenta la capacidadde concentraciondel conductor.",
+        "disminuye la capacidadde concentraciondel conductor.",
+        "se percibe mejor el entorno y se toman decisiones mas seguras."
+      ],
+      "imagen": "../img/test_064_p19.jpg"
+    },
+    {
+      "texto": "Cuando la carga sobresale de un vehiculo, ¿zes obligatorio senalizarla con el panel de la imagen?",
+      "opciones": [
+        "No,exceptopara los vehiculos destinados al transportede mercancias.",
+        "Solo es obligatorio si la carga sobresale porla parte trasera.",
+        "Si, para todo tipo de vehiculos,pero solo cuando la carga sea indivisible. conductor? O a) No. Ob) Solo si las emisoras deradio no estan guardadas en memoria. O c) Si, aumentando el riesgo de accidente."
+      ],
+      "imagen": "../img/test_064_p20.jpg"
+    },
+    {
+      "texto": "¿Que vehiculos podran disponer del distintivo medioambiental Eco?",
+      "opciones": [
+        "Electricos enchufables, conmenos de 40 km de autonomia, hibridos no enchufables, entre otros.",
+        "Electricos puros de bateria, tambien los de autonomia extendida, electricos hibridos enchufables con autonomia minima de 40 km, entre otros.",
+        "Motores de combustion interna fabricados a partir de2015."
+      ],
+      "imagen": "../img/test_064_p22.jpg"
+    },
+    {
+      "texto": "En una via urbana con un carril en cada sentido, debera circular...",
+      "opciones": [
+        "lomas cerca posible del borde derecho de la calzada.",
+        "por la zona que mejor convenga.",
+        "por el centro de la calzada, en tramos rectos."
+      ],
+      "imagen": "../img/test_064_p23.jpg"
+    },
+    {
+      "texto": "Un conductor circula por una calzada muy mojada; si para frenar necesita pisar a fondo el pedal de freno, za que puede ser debido, ¿principalmente?",
+      "opciones": [
+        "A un fallo del sistema de frenos.",
+        "A que el sistema ABS necesitauna revision.",
+        "Al enfriamientoexcesivodelosdiscosdefreno."
+      ],
+      "imagen": "../img/test_064_p24.jpg"
+    },
+    {
+      "texto": "Esta marca transversal continua, ¿iesta permitido franquearla sin detenerse antes?",
+      "opciones": [
+        "No, nunca.",
+        "Si, cuando haya peatones.",
+        "Si, cuando no sea obligatoria la detencion."
+      ],
+      "imagen": "../img/test_064_p25.jpg"
+    },
+    {
+      "texto": "Normalmente, ¿ique ocurre cuando un conductor sufre una distraccion al volante?",
+      "opciones": [
+        "Enciende las luces de emergencia o pisa el pedal de freno reiteradamente.",
+        "Pisa el pedal de freno en lugar del acelerador.",
+        "Tarda mas tiempo en reaccionar ante una situacion de riesgo."
+      ]
+    },
+    {
+      "texto": "En una via con un carril para cada sentido de la marcha, ¿iesta permitido que un conductor adelante a varios vehiculos a la vez?",
+      "opciones": [
+        "No, en ningun caso.",
+        "Solo si puede volver a la derecha sin causarpeligro en caso de encontrar vehiculosde frente.",
+        "Si, siempre que adelante a vehiculos de grandes dimensiones."
+      ],
+      "imagen": "../img/test_064_p27.jpg"
+    },
+    {
+      "texto": "Un peaton, ¿ipuede estar obligado a realizar una prueba de alcoholemia?",
+      "opciones": [
+        "Si, cuando este implicado directamente como posible responsable deun accidente.",
+        "Si, en un control preventivo de alcoholemia.",
+        "No, en ningun caso."
+      ],
+      "imagen": "../img/test_064_p28.jpg"
+    },
+    {
+      "texto": "Si un conductor se encuentra esta senal, debe saber que en la proxima interseccion...",
+      "opciones": [
+        "tiene prioridad sobre los vehiculos que se acerquen tanto por la derecha como por la izquierda.",
+        "se aplica la regla general de prioridad de paso.",
+        "debe ceder el paso a los vehiculos que se acerquen tanto por la derecha como por la izquierda."
+      ],
+      "imagen": "../img/test_064_p29.jpg"
+    },
+    {
+      "texto": "En un viaje largo es aconsejable descansar...",
+      "opciones": [
+        "siemprequeseencuentreunareadedescanso.",
+        "cada2horasaproximadamente.",
+        "cada5horasaproximadamente."
+      ]
+    }
+  ]
+}

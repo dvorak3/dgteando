@@ -1,0 +1,269 @@
+{
+  "test_id": 56,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "¿Existe algin dispositivo de seguridad del vehiculo que pueda sustituir al cinturon de seguridad?",
+      "opciones": [
+        "No,todos estandisenadosparafuncionardeforma complementaria.",
+        "Si, el airbag del conductor.",
+        "si, los asientos traseros."
+      ]
+    },
+    {
+      "texto": "Si no existe via o parte de ella que les este especialmente destinada, los ciclomotores...",
+      "opciones": [
+        "puedencircularporautovia.",
+        "pueden circular en columna de a dos utilizando la parte imprescindible de la calzada.",
+        "deben circular por el arcen de la carretera, si fuera transitable y suficiente."
+      ],
+      "imagen": "../img/test_056_p02.jpg"
+    },
+    {
+      "texto": "El vehiculo amarillo disminuye la velocidad porque el adelantamiento que esta haciendo el vehiculo rojo es peligroso, ¿ies correcto?",
+      "opciones": [
+        "No, el vehiculo amarillo no debe variar de velocidad.",
+        "No,porque el vehiculo que se aproxima en sentido contrario ya le advierte del peligro con las luces.",
+        "Si, con el fin de que el vehiculo rojo vuelva cuanto antes a la derecha."
+      ],
+      "imagen": "../img/test_056_p03.jpg"
+    },
+    {
+      "texto": "silleva a un pasajero en la motocicleta, tiene que tener en cuenta que...",
+      "opciones": [
+        "la distancia de frenado aumenta.",
+        "la conducciondebesermasrapida.",
+        "la distancia de frenado disminuye."
+      ],
+      "imagen": "../img/test_056_p04.jpg"
+    },
+    {
+      "texto": "El panel bajo la senal indica...",
+      "opciones": [
+        "la distancia al comienzo del peligro o prescripcion.",
+        "la longitud del tramo peligroso o sujeto a prescripcion.",
+        "la extension del peligro o prescripcion a ambos lados de la calzada."
+      ],
+      "imagen": "../img/test_056_p05.jpg"
+    },
+    {
+      "texto": "En un tramo de gran pendiente, ¿ique vehiculo pasara primero en un estrechamiento en el que no esta senalizada la prioridad?",
+      "opciones": [
+        "Elvehiculo conmayordificultad demaniobra.",
+        "Elquecirculaensentidoascendente.",
+        "El que circula en sentido descendente."
+      ],
+      "imagen": "../img/test_056_p06.jpg"
+    },
+    {
+      "texto": "La luz de carretera debe sustituirse por la de cruce...",
+      "opciones": [
+        "al circular por una autopista o una autovia.",
+        "cuando exista la posibilidadde deslumbrara otros usuarios.",
+        "cuando haya niebla."
+      ],
+      "imagen": "../img/test_056_p07.jpg"
+    },
+    {
+      "texto": "Los conos colocados en la calzada, ¿ique indican?",
+      "opciones": [
+        "El sentido de la circulacion.",
+        "Permiten atravesar la linea real o imaginaria que los une, pero con precaucion.",
+        "Prohiben atravesar la linea real o imaginaria que los une."
+      ],
+      "imagen": "../img/test_056_p08.jpg"
+    },
+    {
+      "texto": "Circulando por autovia, un vehiculo destinado al transporte de mercancias peligrosas sufre una averia, ¿ies correcto que un turismo lo remolque?",
+      "opciones": [
+        "Si,pero no esta permitido remolcar a un vehiculo mas de10okilometros.",
+        "No, esta prohibido.",
+        "Si, pero solamente hasta el taller mas cercano."
+      ],
+      "imagen": "../img/test_056_p09.jpg"
+    },
+    {
+      "texto": "Un semaforo con linea blanca sobre fondo negro, ¿za que vehiculos afecta?",
+      "opciones": [
+        "Atranviasyautobuses.",
+        "A bicicletas y ciclomotores.",
+        "Atodoslosvehiculos."
+      ],
+      "imagen": "../img/test_056_p10.jpg"
+    },
+    {
+      "texto": "El alumbrado, los neumaticos y los frenos pertenecen al sistema de...",
+      "opciones": [
+        "conduccion eficiente.",
+        "seguridad pasiva.",
+        "seguridad activa."
+      ]
+    },
+    {
+      "texto": "Por la izquierda de una linea continua, ¿ise puede circular?",
+      "opciones": [
+        "No, en ningun caso.",
+        "Si,para adelantar.",
+        "Si, sila via esdesentido unico."
+      ],
+      "imagen": "../img/test_056_p12.jpg"
+    },
+    {
+      "texto": "El efecto de la alcoholemia alcanza su maximo nivel...",
+      "opciones": [
+        "dos horasdespues detomarla ultima copa.",
+        "entre 30 y 90 minutos despues de haber ingerido el alcohol.",
+        "inmediatamente despuesdetomar la ultima copa."
+      ]
+    },
+    {
+      "texto": "¿Donde sufren los peatones mas accidentes?",
+      "opciones": [
+        "En las ciudades.",
+        "Enlasvias interurbanas.",
+        "Tanto enpoblado como fuera de poblado la cantidad de accidentes es igual."
+      ],
+      "imagen": "../img/test_056_p14.jpg"
+    },
+    {
+      "texto": "Al comprar un casco, ¿zque debe tener en cuenta?",
+      "opciones": [
+        "Que este homologado,ademas de su talla y el material con que este fabricado.",
+        "Unicamente que este homologado.",
+        "La marca."
+      ],
+      "imagen": "../img/test_056_p15.jpg"
+    },
+    {
+      "texto": "En esta situacion, ¿zque marcas viales debe seguir?",
+      "opciones": [
+        "Las de color amarillo,ya que se trata de una zona de obras.",
+        "Ninguna,ya que el trazado vienemarcadopor las senales debalizamiento,ylas marcas no son obligatorias.",
+        "Las de color blanco."
+      ],
+      "imagen": "../img/test_056_p16.jpg"
+    },
+    {
+      "texto": "Un semaforo cambia de rojo a verde. ¿Esta permitido emplear el claxon para advertir a otro conductor que ya se puede pasar?",
+      "opciones": [
+        "No, en ningun caso.",
+        "Si, cuando se trate de una via interurbana.",
+        "Si, cuando se trate de una via urbana."
+      ],
+      "imagen": "../img/test_056_p17.jpg"
+    },
+    {
+      "texto": "¿En que situaciones utilizara el alumbrado por el dia?",
+      "opciones": [
+        "Cuando conduzca una motocicleta en cualquier tipo de via y los vehiculos que circulen por carriles habilitados en sentido contrario.",
+        "Conduciendounamotocicleta oun ciclomotor solo cuando las condicionesmeteorologicas disminuyan la visibilidad.",
+        "Las motocicletas y los vehiculos que circulen por una via con un carril en sentido contrario."
+      ]
+    },
+    {
+      "texto": "Si estaciona un turismo con un remolque ligero en una pendiente sensible, debe...",
+      "opciones": [
+        "accionar el freno demano, unicamente.",
+        "colocar calzos o apoyar las ruedas directrices en el bordillo.",
+        "calzarelvehiculo con cualquier elementoquesirvapara ello."
+      ],
+      "imagen": "../img/test_056_p19.jpg"
+    },
+    {
+      "texto": "Si sobre el carril por el que circula hay un semaforo cuadrado con una flecha verde, ¿idebe obedecer una senal de stop o de ceda el paso?",
+      "opciones": [
+        "No,porque la flecha verde da prioridad de paso.",
+        "Si.",
+        "No,porque el semaforo tiene prioridad sobre las senales verticales."
+      ],
+      "imagen": "../img/test_056_p20.jpg"
+    },
+    {
+      "texto": "Un rebano, en una carretera convencional en la que no existe via pecuaria, ¿zpor donde debe circular?",
+      "opciones": [
+        "Por el arcen derecho.",
+        "Por el arcen derecho o izquierdo, indistintamente.",
+        "Por la parte transitable del arcen izquierdo. c) Por la parte transitable del arcen izquierdo."
+      ]
+    },
+    {
+      "texto": "En una autopista de tres carriles, el carril derecho esta libre, ¿ipor que carril debe circular?",
+      "opciones": [
+        "Por el izquierdo.",
+        "Por el central siempre si la autopista esta dentro de poblado.",
+        "Por el derecho como norma general."
+      ],
+      "imagen": "../img/test_056_p22.jpg"
+    },
+    {
+      "texto": "¿Que factores pueden hacer que aumente la distancia de reaccion?",
+      "opciones": [
+        "El mal estado de los amortiguadores.",
+        "El mal estado del conductor.",
+        "El mal estado de la calzada."
+      ]
+    },
+    {
+      "texto": "¿Cual es la velocidad maxima generica dentro de poblado en una via con tres carriles por sentido?",
+      "opciones": [
+        "50 km/h.",
+        "45 km/h.",
+        "80 km/h."
+      ],
+      "imagen": "../img/test_056_p24.jpg"
+    },
+    {
+      "texto": "¿Tienen todos los factores de riesgo la misma relevancia como causa de un accidente?",
+      "opciones": [
+        "No,la mayoria de los accidentes se deben al factor humano.",
+        "Si, ya que los factores conductor, via y vehiculo intervienen siempre en un accidente.",
+        "No, el factor humano apenas influye."
+      ]
+    },
+    {
+      "texto": "El panel indica...",
+      "opciones": [
+        "la distancia entre la senal y el comienzo del peligro.",
+        "la longitud del tramo con dos carriles en el mismo sentido.",
+        "la longitud del tramo de via afectado por el peligro."
+      ],
+      "imagen": "../img/test_056_p26.jpg"
+    },
+    {
+      "texto": "Esta senal ...",
+      "opciones": [
+        "indica el itinerario recomendado.",
+        "obliga a girar a la izquierda.",
+        "prohibe girar a la izquierda."
+      ],
+      "imagen": "../img/test_056_p27.jpg"
+    },
+    {
+      "texto": "El conductor de una motocicleta, antes de cambiar de carril, ¿ique debe tener en cuenta?",
+      "opciones": [
+        "Que a ciertas velocidades puede ser dificil que sea percibido porlos demas usuarios.",
+        "Que senalizar la maniobra siempre da prioridad.",
+        "Quelas motocicletas son siemprefaciles dever sillevan el alumbrado encendido."
+      ],
+      "imagen": "../img/test_056_p28.jpg"
+    },
+    {
+      "texto": "Un vehiculo va a incorporarse a la circulacion. ¿Cuando debe ceder el paso?",
+      "opciones": [
+        "Cuando entra en el carril de circulacion desde el lado izquierdo, solamente.",
+        "Cuando entra en el carril de circulacion desde el lado derecho, solamente.",
+        "Siempre."
+      ],
+      "imagen": "../img/test_056_p29.jpg"
+    },
+    {
+      "texto": "¿Que indica este agente?",
+      "opciones": [
+        "Obliga a detenerse a los vehiculos que se acerquen al agente por delante o por detras.",
+        "Da paso a los vehiculosque se acerquen de frente al agente.",
+        "Prohibeel paso a todos los usuarios de la via."
+      ],
+      "imagen": "../img/test_056_p30.jpg"
+    }
+  ]
+}

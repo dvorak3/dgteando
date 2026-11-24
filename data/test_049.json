@@ -1,0 +1,264 @@
+{
+  "test_id": 49,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Fumar mientras se conduce, ¿ipuede producir distracciones?",
+      "opciones": [
+        "Sí.",
+        "No, si se tiene cuidado.",
+        "No, en ningun caso."
+      ],
+      "imagen": "../img/test_049_p01.jpg"
+    },
+    {
+      "texto": "¿Puede circular con su vehiculo si emite un ruido que supera los limites autorizados?",
+      "opciones": [
+        "Si, ya que el ruido no supone ningun peligro.",
+        "Si, mientras que no se tratede una averia.",
+        "No,esta prohibido"
+      ]
+    },
+    {
+      "texto": "En caso de accidente, ¿iquien tiene mayor probabilidad de morir o de sufrir lesiones?",
+      "opciones": [
+        "Los conductores de vehiculospesados.",
+        "Los conductores demotocicletas,ciclomotores y bicicletas.",
+        "Los conductores de turismos."
+      ],
+      "imagen": "../img/test_049_p03.jpg"
+    },
+    {
+      "texto": "¿Puede circular por una via interurbana con el alumbrado de largo alcance en caso de lluvia intensa o niebla densa?",
+      "opciones": [
+        "Si, pero no es recomendable porque el reflejo en la niebla o lalluvia le puede deslumbrar.",
+        "No, esta prohibido.",
+        "Si,porque eneste caso la via esta insuficientemente iluminada."
+      ]
+    },
+    {
+      "texto": "A la vista de la senal, ¿ipuede circular un turismo a mas de 70 km/h por el carril de la derecha?",
+      "opciones": [
+        "No,porque el carril derecho es para circulacion lenta.",
+        "Si, porque debo circular por la derecha siempre que sea posible.",
+        "Si,porque los carriles de la izquierda son para los vehiculos que circulana menos de 70 km/h."
+      ],
+      "imagen": "../img/test_049_p05.jpg"
+    },
+    {
+      "texto": "Al estacionar un vehiculo provisto de caja de cambios manual en una pendiente descendente, ¿ique velocidad dejara colocada?",
+      "opciones": [
+        "Laprimeravelocidad.",
+        "Punto muerto.",
+        "La marcha atras."
+      ],
+      "imagen": "../img/test_049_p06.jpg"
+    },
+    {
+      "texto": "¿Puede usar el telefono movil mientras conduce con cualquier dispositivo de manos libres?",
+      "opciones": [
+        "No, nunca se puede utilizar el telefono movil conduciendo, ni siquiera con el dispositivo manos libres.",
+        "Si, mientras se pueda hacer sin emplear las manos, ni usar cascos o auriculares.",
+        "No,soloconaquellosqueestenhomologados."
+      ]
+    },
+    {
+      "texto": "¿Cuando termina la limitacion de velocidad que impone esta senal?",
+      "opciones": [
+        "Cuandosalgadelatravesia.",
+        "Cuando encuentre una senial de fin de prohibiciones.",
+        "Al rebasar el siguiente cruce."
+      ],
+      "imagen": "../img/test_049_p08.jpg"
+    },
+    {
+      "texto": "Un conductor que revisa periodicamente los neumaticos puede...",
+      "opciones": [
+        "evitar los fallos mecanicos del vehiculo.",
+        "pasar la ITV con total seguridad.",
+        "detectar a tiempo un deterioro y prevenir un reventon."
+      ],
+      "imagen": "../img/test_049_p09.jpg"
+    },
+    {
+      "texto": "Al elegir un casco para conducir una motocicleta, ¿ique debe tener en cuenta?",
+      "opciones": [
+        "Que se pueda sujetar sin tener quellevarlo abrochado.",
+        "Queproteja convenientementede los ruidos.",
+        "Quetengabuena ventilacionpara queno se empane."
+      ],
+      "imagen": "../img/test_049_p10.jpg"
+    },
+    {
+      "texto": "Este turismo, ¿ique espejos retrovisores debe llevar obligatoriamente?",
+      "opciones": [
+        "El espejo interior y el exterior derecho.",
+        "Los exteriores izquierdo y derecho, porque por el espejo interior no tiene suficiente visibilidad.",
+        "Solo el espejo interior y el exterior izquierdo."
+      ],
+      "imagen": "../img/test_049_p11.jpg"
+    },
+    {
+      "texto": "Bajo los efectos del sueno...",
+      "opciones": [
+        "se tarda mas tiempo en tomar decisiones y se cometen mas errores.",
+        "es mas dificil sufrir una distraccion.",
+        "losmovimientossonmasrapidos."
+      ]
+    },
+    {
+      "texto": "¿Esta permitido realizar un cambio de sentido en esta interseccion?",
+      "opciones": [
+        "Si, si no recorre mas de 15 metros.",
+        "No.",
+        "Si,con lasdebidasprecauciones."
+      ],
+      "imagen": "../img/test_049_p13.jpg"
+    },
+    {
+      "texto": "El consumo de éxtasis, ¿icomo afecta en el comportamiento del conductor?",
+      "opciones": [
+        "Disminuye su capacidad de concentracion.",
+        "Reduce su sensibilidadal deslumbramiento.",
+        "Provoca un agotamientofisicoymental mientrasqueestanpresenteslossintomas."
+      ]
+    },
+    {
+      "texto": "¿Es obligatorio llevar en un turismo un chaleco reflectante para el acompanante?",
+      "opciones": [
+        "No,el chaleco reflectante no es obligatorio para los turismos.",
+        "No. b) No.",
+        "Si, ya que debera ponerselo si sale del vehiculo y ocupa la calzada en una via interurbana."
+      ]
+    },
+    {
+      "texto": "¿Puede el conductor reducir la probabilidad de accidente debida al \"factor via\"?",
+      "opciones": [
+        "Si,adaptando su conduccionalas condiciones del medio.",
+        "Si, si su vehiculo cuenta con los ultimos avances de seguridad.",
+        "No,porque no puede actuar sobre la via ni sobre el entorno."
+      ]
+    },
+    {
+      "texto": "En una carretera convencional, ¿za que velocidad maxima puede adelantar un camion?",
+      "opciones": [
+        "A 80 km/h.",
+        "A 100 km/h.",
+        "A120 km/h."
+      ],
+      "imagen": "../img/test_049_p17.jpg"
+    },
+    {
+      "texto": "¿Puede conducir una motocicleta con el permiso de la clase B?",
+      "opciones": [
+        "Si, si es de una cilindrada menor de 250 centimetros cubicos.",
+        "Si, solo en Espana, con una cilindrada maxima de 125 centimetros cubicos, y con una antiguedad del permiso superior a tres anos.",
+        "Si, siemprequeno supere los25kw depotencia."
+      ]
+    },
+    {
+      "texto": "La depresion, ¿zinfluye en la somnolencia y la fatiga?",
+      "opciones": [
+        "No, no tiene ninguna influencia.",
+        "Enlasomnolenciasiperoenlafatigano",
+        "Si, siendo aconsejableno conducir de noche."
+      ]
+    },
+    {
+      "texto": "Si observa que un vehiculo quiere incorporarse por el carril de aceleracion, ¿ique debe hacer?",
+      "opciones": [
+        "Nada,porquetengo preferencia.",
+        "Facilitarla incorporacion cuando sea posible.",
+        "Cederle el paso."
+      ],
+      "imagen": "../img/test_049_p20.jpg"
+    },
+    {
+      "texto": "Esta senal ..",
+      "opciones": [
+        "prohibe a los camiones adelantar salvo a motocicletas de dos ruedas.",
+        "prohibea todoslos camiones adelantara cualquier vehiculo.",
+        "prohibe a los camiones de mas de 3.500 Kg de M.M.A adelantar a los vehiculos a motor que circulen por la calzada."
+      ],
+      "imagen": "../img/test_049_p21.jpg"
+    },
+    {
+      "texto": "Las tecnicas de conduccion eficiente...",
+      "opciones": [
+        "son complementariasa lastecnicasdeconduccionpreventiva.",
+        "sonmas eficacesquelastecnicasdeconduccionpreventiva.",
+        "son lomismo que lastecnicasdeconduccionpreventiva."
+      ]
+    },
+    {
+      "texto": "El cinturon de seguridad...",
+      "opciones": [
+        "se puede sustituir por algun sistema de seguridad, como el airbag.",
+        "no se puede sustituir por ningun sistema de seguridad.",
+        "es incompatiblecon el airbag."
+      ]
+    },
+    {
+      "texto": "¿Son evitables los accidentes de circulacion?",
+      "opciones": [
+        "Si, en general, son sucesos predecibles.",
+        "No,sedan al azar.",
+        "Solomejorandoel estadodelasvias."
+      ]
+    },
+    {
+      "texto": "En general, ¿za quienes afecta mas el alcohol?",
+      "opciones": [
+        "A los hombres.",
+        "Alas mujeres.",
+        "Los efectos del alcohol no dependen del sexo de la persona."
+      ],
+      "imagen": "../img/test_049_p25.jpg"
+    },
+    {
+      "texto": "Cuando el casco no tiene visera, ¿ies conveniente ponerse unas gafas de seguridad?",
+      "opciones": [
+        "No.",
+        "Si,porquees obligatorio.",
+        "Si,paraproteger los ojos."
+      ],
+      "imagen": "../img/test_049_p26.jpg"
+    },
+    {
+      "texto": "En una bajada, ¿ique hay que hacer para que no se calienten los frenos?",
+      "opciones": [
+        "Poner una velocidad mas larga.",
+        "Ponerunavelocidadmascorta.",
+        "Poner el freno de mano."
+      ],
+      "imagen": "../img/test_049_p27.jpg"
+    },
+    {
+      "texto": "En una autopista, ¿zesta permitido circular a una velocidad anormalmente reducida con niebla espesa?",
+      "opciones": [
+        "No,porque es una autopista yes una via de gran seguridad.",
+        "Si.",
+        "Si,sila circulacionesescasa,perono,si esdensa."
+      ],
+      "imagen": "../img/test_049_p28.jpg"
+    },
+    {
+      "texto": "Esta senal indica la proximidad de una interseccion...",
+      "opciones": [
+        "sin prioridad de paso.",
+        "con prioridad de paso.",
+        "con prioridad depaso a la derecha."
+      ],
+      "imagen": "../img/test_049_p29.jpg"
+    },
+    {
+      "texto": "Como norma general, las maniobras deben advertirse utilizando...",
+      "opciones": [
+        "preferentemente el brazo.",
+        "preferentemente la senalizacion luminosadel vehiculo.",
+        "indistintamente el brazo o las senales luminosas."
+      ],
+      "imagen": "../img/test_049_p30.jpg"
+    }
+  ]
+}

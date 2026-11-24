@@ -1,0 +1,261 @@
+{
+  "test_id": 31,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "En una via urbana, es obligatorio realizar las operaciones de carga y descarga...",
+      "opciones": [
+        "respetando las disposiciones que dicten las autoridades municipales",
+        "respetando unicamente las disposiciones sobre paradas y estacionamientos.",
+        "siempre por el lado mas proximo al borde de la calzada."
+      ]
+    },
+    {
+      "texto": "¿Cual es una de las infracciones que cometen los conductores con mayor riesgo para los peatones?",
+      "opciones": [
+        "Circular por una autovia en sentido contrario al establecido.",
+        "No mantener la distancia de seguridad con el vehiculo que circula delante.",
+        "Norespetar la prioridad en lospasosparapeatones."
+      ]
+    },
+    {
+      "texto": "El casco debe cambiarse cuando...",
+      "opciones": [
+        "los colores hayanpasadodemoda.",
+        "cambiedemotocicleta.",
+        "sufra algun golpe ya que puede haberse danado."
+      ],
+      "imagen": "../img/test_031_p03.jpg"
+    },
+    {
+      "texto": "Dentro de poblado, ¿ise pueden utilizar los alumbrados de corto o largo alcance alternativamente a intervalos muy cortos?",
+      "opciones": [
+        "No, esta prohibido.",
+        "Dentro de poblado en ningun caso, fuera si.",
+        "Si,para evitarun posibleaccidente."
+      ]
+    },
+    {
+      "texto": "En poblado, ¿icual es la velocidad maxima permitida para un turismo con remolque en una via con dos carriles por sentido?",
+      "opciones": [
+        "40kilometrospor hora.",
+        "60 kilometros por hora.",
+        "50kilometrosporhora."
+      ],
+      "imagen": "../img/test_031_p05.jpg"
+    },
+    {
+      "texto": "Este vehiculo esta inmovilizado por averia. ¿Debe advertirlo?",
+      "opciones": [
+        "En autopista yautovia si, en carretera convencional no.",
+        "Si,con el dispositivo depresenalizacion depeligro y las luces de emergencia.",
+        "No,porque el vehiculono es un camion."
+      ],
+      "imagen": "../img/test_031_p06.jpg"
+    },
+    {
+      "texto": "Si han cambiado sus condiciones fisicas y necesita adaptar su vehiculo, ¿ztiene que comunicarlo a la Jefatura de Trafico?",
+      "opciones": [
+        "No, mientras el permiso de conduccion este en vigor.",
+        "Si, debo comunicarlo para que hagan la anotacion que corresponda.",
+        "No,basta con que lleve un certificado medico en el que conste mi deficiencia fisica."
+      ]
+    },
+    {
+      "texto": "Circulando con lluvia intensa, ¿zes obligatorio utilizar la luz antiniebla trasera?",
+      "opciones": [
+        "Si, el trasero y el delantero.",
+        "Si.",
+        "No."
+      ]
+    },
+    {
+      "texto": "En esta situacion, ¿ztienen prioridad de paso los animales?",
+      "opciones": [
+        "Si, porque la senalizacion les da prioridad.",
+        "No, los animales en la calzada no tienen nunca prioridad de paso.",
+        "Si,porque el vehiculo esta cambiando de direccion."
+      ],
+      "imagen": "../img/test_031_p09.jpg"
+    },
+    {
+      "texto": "Entre la dotacion obligatoria que debe llevar un turismo, ¿ise encuentra un extintor?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Si,pero solamente cuando circule por vias fuera depoblado."
+      ],
+      "imagen": "../img/test_031_p10.jpg"
+    },
+    {
+      "texto": "¿Que peligro es el mas frecuente al usar el telefono movil durante la conduccion?",
+      "opciones": [
+        "El desvio de la trayectoria del vehiculo.",
+        "Saltarse una salida.",
+        "Equivocarse en el cambio de marchas."
+      ]
+    },
+    {
+      "texto": "A la vista de la senal, ¿ztienen preferencia de paso los animales domesticos cuando crucen la calzada?",
+      "opciones": [
+        "Si, cuando vayan en grupo.",
+        "Si,cuandovayan acompanadosporunconductordeganado.",
+        "No."
+      ],
+      "imagen": "../img/test_031_p12.jpg"
+    },
+    {
+      "texto": "EI freno de mano, ¿ipara que sirve?",
+      "opciones": [
+        "Para dejar inmovilizado el vehiculo cuando estaciono.",
+        "Para frenar el vehiculo en ciudad.",
+        "Para frenar el vehiculo cuando circulo cuesta abajo."
+      ],
+      "imagen": "../img/test_031_p13.jpg"
+    },
+    {
+      "texto": "Para repostar carburante, ¿icomo debe actuar?",
+      "opciones": [
+        "Solo parar el motor y poner la primera relacion demarchas.",
+        "Solo apagar las luces.",
+        "Parar el motor,apagar las luces, los equipos electricos y el movil."
+      ],
+      "imagen": "../img/test_031_p14.jpg"
+    },
+    {
+      "texto": "El sueno y la fatiga, ¿icomo influyen en la conduccion?",
+      "opciones": [
+        "Aumentan ladistanciadereaccion.",
+        "Disminuyen el tiempo de reaccion.",
+        "Aumentanlacapacidaddereaccion."
+      ]
+    },
+    {
+      "texto": "Un agente con una luz roja en movimiento indica...",
+      "opciones": [
+        "reducir la velocidad.",
+        "la zona por la que debe circular.",
+        "obligacion de detenerse."
+      ],
+      "imagen": "../img/test_031_p16.jpg"
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Obliga circular a bicicletas y ciclomotores.",
+        "Obliga circulara bicicletas solamente.",
+        "Obliga circularalos vehiculosdedosruedas."
+      ],
+      "imagen": "../img/test_031_p17.jpg"
+    },
+    {
+      "texto": "¿Que puede favorecer la aparicion de fatiga al volante?",
+      "opciones": [
+        "Descansarcada2horasocada200kilometrosaproximadamente.",
+        "Nodescansar el tiempo suficiente.",
+        "Circular por una via bien disenada."
+      ]
+    },
+    {
+      "texto": "Cuando se consume alcohol, ¿ise producen alteraciones en la vision?",
+      "opciones": [
+        "Si, puede aparecer la vision tunel.",
+        "No.",
+        "Solocontasasdealcoholporencimadelaspermitidas."
+      ]
+    },
+    {
+      "texto": "Bajo los efectos de la depresion...",
+      "opciones": [
+        "setienemasseguridad",
+        "se pierde informacion del entorno.",
+        "disminuyenlasdistracciones."
+      ]
+    },
+    {
+      "texto": "La obligacion de dejar espacio suficiente para permitir el adelantamiento no sera aplicable...",
+      "opciones": [
+        "enviasconununicocarrilparacadasentido.",
+        "donde este prohibido el adelantamiento.",
+        "en carreteras convencionales."
+      ],
+      "imagen": "../img/test_031_p21.jpg"
+    },
+    {
+      "texto": "Esta linea discontinua, ¿ique indica?",
+      "opciones": [
+        "Un carril especial.",
+        "La cercania a una linea longitudinal continua.",
+        "Un carril reversible."
+      ],
+      "imagen": "../img/test_031_p22.jpg"
+    },
+    {
+      "texto": "¿Que vehiculo tendra preferencia de paso en un estrechamiento cuando la prioridad no este expresamente senalizada?",
+      "opciones": [
+        "El vehiculo que tenga que dar marcha atras mayor distancia.",
+        "El vehiculo que haya entrado primero.",
+        "El vehiculo que haya llegado primero."
+      ],
+      "imagen": "../img/test_031_p23.jpg"
+    },
+    {
+      "texto": "Los accidentes debidos a distracciones suceden mas...",
+      "opciones": [
+        "durante la tarde.",
+        "en los meses de invierno.",
+        "durante el dia y los finesdesemana."
+      ]
+    },
+    {
+      "texto": "Cuando la calzada esta helada...",
+      "opciones": [
+        "la distancia defrenado semantiene igual que en condiciones normales.",
+        "la distancia de frenado aumenta.",
+        "la distancia de frenado disminuye."
+      ],
+      "imagen": "../img/test_031_p25.jpg"
+    },
+    {
+      "texto": "¿Pueden los agentes inmovilizar una motocicleta si su conductor o su pasajero no utilizan el casco cuando es obligatorio?",
+      "opciones": [
+        "Sí.",
+        "No, nunca.",
+        "Solo si ninguno de los dos lleva casco."
+      ]
+    },
+    {
+      "texto": "Si la luz del semaforo pasa a verde y el agente mantiene el brazo en alto, ¿ipuede pasar?",
+      "opciones": [
+        "Si, porque la luz verde me lo permite.",
+        "No,porque la senal del agente tieneprioridad respecto a las otras dos senales.",
+        "Si, siempre que antes de cruzar deje pasar a todos los vehiculos."
+      ],
+      "imagen": "../img/test_031_p27.jpg"
+    },
+    {
+      "texto": "Los dos primeros anos con permiso, ¿cual es la tasa maxima de alcohol?",
+      "opciones": [
+        "0,10 mg/l en aire espirado = 0,2 g/l en sangre.",
+        "0,15 mg/l en aire espirado = 0,3 g/l en sangre.",
+        "0,25 mg/l en aire espirado = 0,5 g/l en sangre."
+      ]
+    },
+    {
+      "texto": "Si por accidente u otra emergencia un vehiculo tiene que ser inmovilizado en una autovia o autopista...",
+      "opciones": [
+        "sus ocupantespuedentransitarpor la calzada,tomando lasdebidasprecauciones.",
+        "ninguno de los ocupantes del vehiculo puede transitar por la calzada.",
+        "los ocupantes del vehiculo pueden transitar por la calzada, excepto los menores de edad."
+      ]
+    },
+    {
+      "texto": "Los peatones, ¿idonde sufren mas accidentes?",
+      "opciones": [
+        "Enlasautopistasyautovias.",
+        "En las vias urbanas.",
+        "En las vias interurbanas."
+      ]
+    }
+  ]
+}

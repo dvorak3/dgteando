@@ -1,0 +1,265 @@
+{
+  "test_id": 43,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Todas las enfermedades, ¿ison igual de peligrosas para la conduccion?",
+      "opciones": [
+        "No,las enfermedades cronicas no sonpeligrosas.",
+        "Si,todas las enfermedades son igual de peligrosas.",
+        "No,algunostrastornosneurologicosyenfermedades mentales sonmaspeligrosas."
+      ]
+    },
+    {
+      "texto": "Un botiquin de primeros auxilios, ¿ise encuentra entre la dotacion obligatoria de los vehiculos de mas de nueveplazas?",
+      "opciones": [
+        "No,unbotiquines solamente recomendable.",
+        "Es obligatoriodependiendo del numerode pasajeros transportados.",
+        "Si, es obligatorio."
+      ],
+      "imagen": "../img/test_043_p02.jpg"
+    },
+    {
+      "texto": "¿En que caso puede el conductor de una motocicleta circular sin casco?",
+      "opciones": [
+        "Cuando la motocicleta tenga estructura de autoproteccion, cinturon de seguridad yasi conste en sutarjeta ITV.",
+        "En ningun caso ya que el casco siempre es obligatorio.",
+        "Cuando circule en vias urbanas a velocidad reducida."
+      ],
+      "imagen": "../img/test_043_p03.jpg"
+    },
+    {
+      "texto": "Conducir de forma temeraria...",
+      "opciones": [
+        "es una infraccion muy grave que conlleva perdida de puntos.",
+        "esuna infraccion muygrave aunque no conlleva perdida depuntos.",
+        "es recomendableen algunas situaciones de emergencia."
+      ],
+      "imagen": "../img/test_043_p04.jpg"
+    },
+    {
+      "texto": "¿Qué indica este agente?",
+      "opciones": [
+        "Detencion para todos los usuarios que se acerquen defrente.",
+        "Detencion para los vehiculos que se acerquen de frente al agente.",
+        "Detencion para todos los usuarios que se acerquen al agente."
+      ],
+      "imagen": "../img/test_043_p05.jpg"
+    },
+    {
+      "texto": "Al circular por una carretera con pavimento deslizante por lluvia, ¿idebe moderarse la velocidad?",
+      "opciones": [
+        "Si, siempre.",
+        "No,cuandohayapocotrafico",
+        "Solamente al cruzarse con otro vehiculo que circula de frente."
+      ]
+    },
+    {
+      "texto": "Conducir cansado, ¿zes peligroso?",
+      "opciones": [
+        "Si, porque se tarda mas en reaccionar.",
+        "No hay peligro,porque cansado se circula mas despacio.",
+        "No hay peligro, porque el cansancio relaja."
+      ]
+    },
+    {
+      "texto": "El permiso de circulacion es obligatorio para los remolques y semirremolques...",
+      "opciones": [
+        "que tengan una MMA no superior a 750 kg.",
+        "cualquiera que sea su MMA.",
+        "que tengan una MMA superior a 750 kg."
+      ],
+      "imagen": "../img/test_043_p08.jpg"
+    },
+    {
+      "texto": "La mayoria de los accidentes son...",
+      "opciones": [
+        "inevitables, aunque se prevengan los factores de riesgo.",
+        "evitables, si se previenen los factores de riesgo.",
+        "inevitables,porquesiempreestapresenteelfactorhumano."
+      ],
+      "imagen": "../img/test_043_p09.jpg"
+    },
+    {
+      "texto": "Circula a 70 km/h, ¿zpor que carril es obligatorio circular?",
+      "opciones": [
+        "Por el del centro.",
+        "Por el de la derecha.",
+        "Por el que mejor convenga a mi destino."
+      ],
+      "imagen": "../img/test_043_p10.jpg"
+    },
+    {
+      "texto": "Como norma general, ¿icuando es mayor el efecto del alcohol?",
+      "opciones": [
+        "Inmediatamentedespuesdetomarlo.",
+        "Una horadespuesdetomarlo.",
+        "Tres horas despues detomarlo."
+      ]
+    },
+    {
+      "texto": "¿Cuantos chalecos reflectantes debe llevar obligatoriamente en un turismo?",
+      "opciones": [
+        "Dos.",
+        "Uno,aunque esrecomendable llevar dos.",
+        "Ninguno, ya que no es obligatorio."
+      ],
+      "imagen": "../img/test_043_p12.jpg"
+    },
+    {
+      "texto": "¿En que caso el estacionamiento perturba gravemente la circulacion?",
+      "opciones": [
+        "Cuando la distancia entre el vehiculo y el borde opuesto de la calzada sea inferior a 5 metros.",
+        "Cuando se efectua en las medianas, separadores, isletas u otros elementos de canalizacion del trafico.",
+        "En una zona reservada a carga y descarga, fuera de las horas de utilizacion."
+      ]
+    },
+    {
+      "texto": "¿Cuando debe aumentarse la distancia de seguridad?",
+      "opciones": [
+        "Cuandoaumenta la velocidadde los vehiculos.",
+        "Cuando quiero adelantar.",
+        "Cuando disminuye la velocidad de los vehiculos."
+      ]
+    },
+    {
+      "texto": "En caso de padecer una enfermedad, ¿zhay que preguntar al medico sobre las precauciones que se deben tomar para conducir?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Solo cuando la enfermedad es cronica."
+      ]
+    },
+    {
+      "texto": "Si la via esta acondicionada con una raqueta u otro elemento similar, ¿idebe utilizar dicho elemento para realizar un giro?",
+      "opciones": [
+        "No, es indiferente.",
+        "Si, aunque no haya senal que lo indique.",
+        "Si, pero solo si lo indica una senal."
+      ],
+      "imagen": "../img/test_043_p16.jpg"
+    },
+    {
+      "texto": "¿Qué es el ABS?",
+      "opciones": [
+        "Sistema de control de seguridad.",
+        "Sistema de frenado antibloqueo.",
+        "Sistemadecierrecentralizado."
+      ]
+    },
+    {
+      "texto": "En una interseccion no senalizada, ¿ique vehiculos tendran prioridad sobre los demas usuarios?",
+      "opciones": [
+        "Losque circulansobre railes.",
+        "Los trenes,pero no los tranvias.",
+        "Los que tengan la izquierda libre."
+      ],
+      "imagen": "../img/test_043_p18.jpg"
+    },
+    {
+      "texto": "En un paso de peatones, ¿zhay que hacer senales a los peatones para que crucen la calzada?",
+      "opciones": [
+        "Si, pero solo si van a cruzar por el.",
+        "No,porquelosdemas conductorespuedennohabersedado cuentade supresencia."
+      ],
+      "imagen": "../img/test_043_p19.jpg"
+    },
+    {
+      "texto": "¿&Cual es la tasa maxima de alcohol permitida para un conductor de un vehiculo de transporte escolar?",
+      "opciones": [
+        "0,15 miligramos por litro de aire espirado.",
+        "0,25 miligramos por litro de aire espirado.",
+        "0,3 miligramos por litro de aire espirado."
+      ],
+      "imagen": "../img/test_043_p20.jpg"
+    },
+    {
+      "texto": "Estas marcas viales, ¿zque indican?",
+      "opciones": [
+        "Un paso para peatones y ciclistas.",
+        "Unpasoparaciclistas.",
+        "Unpasoobligatorioparavehiculosdedos ruedas."
+      ],
+      "imagen": "../img/test_043_p21.jpg"
+    },
+    {
+      "texto": "Cuando se circula con niebla, el conductor debe...",
+      "opciones": [
+        "acercarse todo lo posible al vehiculo que circula delante para poderverlo mejor.",
+        "adaptar la velocidad a las condiciones atmosfericas de visibilidad.",
+        "parar en la calzada,hasta quedesaparezca la niebla."
+      ],
+      "imagen": "../img/test_043_p22.jpg"
+    },
+    {
+      "texto": "Como norma general, ¿zesta permitido adelantar en los pasos para peatones?",
+      "opciones": [
+        "Si, si se hace a velocidad muy reducida.",
+        "Si, pero unicamente en vias urbanas.",
+        "No."
+      ]
+    },
+    {
+      "texto": "Los animales tienen preferencia de paso en el lugar indicado con...",
+      "opciones": [
+        "la senal A.",
+        "la senal C.",
+        "la senal B."
+      ],
+      "imagen": "../img/test_043_p24.jpg"
+    },
+    {
+      "texto": "La distancia de frenado es...",
+      "opciones": [
+        "el espacio recorrido desde que el conductor acciona el freno hasta que vehiculo se detiene.",
+        "el espacio recorrido desde que el conductor ve el obstaculo hasta que detiene el vehiculo.",
+        "el espacio recorrido desdeque el conductor ve el obstaculohastaque acciona el freno."
+      ]
+    },
+    {
+      "texto": "En un puesto de peaje, ¿ique se debe hacer?",
+      "opciones": [
+        "Pasar sin detenerseporque la flecha esta verde.",
+        "Pasar sin detenerse porque no hay barrera.",
+        "Detenerse en el puesto de control porque lo indica la senal."
+      ],
+      "imagen": "../img/test_043_p26.jpg"
+    },
+    {
+      "texto": "Al aproximarse a un puente movil, ¿ique estan obligados a hacer los conductores?",
+      "opciones": [
+        "Aumentar la velocidad para cruzar el pasoloantesposible.",
+        "Extremar la prudencia y reducir la velocidad por debajo de la maxima permitida.",
+        "Detenerse siempre antes de cruzarlo."
+      ],
+      "imagen": "../img/test_043_p27.jpg"
+    },
+    {
+      "texto": "¿Es recomendable parar y descansar durante los viajes?",
+      "opciones": [
+        "Si,2030minutos cada2horasdeconduccion o cada 200kilometros.",
+        "No, porque se alarga el tiempo de viaje y aumenta la fatiga.",
+        "No,si el viaje es por vias interurbanas."
+      ],
+      "imagen": "../img/test_043_p28.jpg"
+    },
+    {
+      "texto": "A la hora de determinar la distancia de seguridad con el vehiculo que circula delante...",
+      "opciones": [
+        "debe tener en cuenta la velocidad, la visibilidad y el estado de la calzada.",
+        "debe tener en cuenta las caracteristicas del vehiculo que circula delante.",
+        "debetener en cuenta la velocidad, exclusivamente. c) debe tener en cuenta la velocidad, exclusivamente."
+      ],
+      "imagen": "../img/test_043_p29.jpg"
+    },
+    {
+      "texto": "¿Quien es el responsable de las infracciones cometidas durante la conduccion?",
+      "opciones": [
+        "El titular del vehiculo.",
+        "Entodos los casosel conductor.",
+        "El conductor, excepto si esmenor de18anos,en cuyo casolo son suspadres o tutores."
+      ],
+      "imagen": "../img/test_043_p30.jpg"
+    }
+  ]
+}

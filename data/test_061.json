@@ -1,0 +1,267 @@
+{
+  "test_id": 61,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "En una interseccion que no tiene senal de preferencia. ¿Cuando debe ceder el paso a un vehiculo de traccion animal?",
+      "opciones": [
+        "Nunca,porque no es un vehiculo de motor.",
+        "Siempre,porque tienen preferencia.",
+        "Cuando entra pormi derecha."
+      ],
+      "imagen": "../img/test_061_p01.jpg"
+    },
+    {
+      "texto": "Cuando las indicaciones de un semaforo y una senal de balizamiento se contradicen prevalece...",
+      "opciones": [
+        "el semaforo.",
+        "la senal de balizamiento, por orden de prioridad.",
+        "lasenalmasrestrictiva."
+      ],
+      "imagen": "../img/test_061_p02.jpg"
+    },
+    {
+      "texto": "¿Quésenalalaflechadela senal?",
+      "opciones": [
+        "Recomienda el lado del refugio por el que los vehiculos pueden pasar.",
+        "El lado del refugio por el que los vehiculos han de pasar.",
+        "Sentidounico."
+      ],
+      "imagen": "../img/test_061_p03.jpg"
+    },
+    {
+      "texto": "En una retencion con los vehiculos detenidos, ¿iesta permitido usar el telefono movil?",
+      "opciones": [
+        "Unicamente si dispone de un dispositivo de manos libres que no precise auriculares.",
+        "Si, si la inmovilizacion dura mas de dos minutos.",
+        "Si,porqueel vehiculonoestaenmovimiento."
+      ],
+      "imagen": "../img/test_061_p04.jpg"
+    },
+    {
+      "texto": "Un turismo circula por una travesia insuficientemente iluminada, ¿zque alumbrado debe llevar?",
+      "opciones": [
+        "Solo el alumbrado de posicion.",
+        "El alumbrado de posicion y el de cruce.",
+        "Soloelalumbradodecarretera."
+      ]
+    },
+    {
+      "texto": "¿Que indican estas senales?",
+      "opciones": [
+        "Que esta prohibido circular a mas de 60 km/h en la interseccion.",
+        "Que esta prohibido circular a mas de 60 km/h en toda la via.",
+        "Que es obligatorio circular a 60 km/h."
+      ],
+      "imagen": "../img/test_061_p06.jpg"
+    },
+    {
+      "texto": "¿Estan obligados a usar cinturon de seguridad los pasajeros de un taxi?",
+      "opciones": [
+        "No.",
+        "Si, solocuandoviajen en lasplazas delanteras.",
+        "Si."
+      ],
+      "imagen": "../img/test_061_p07.jpg"
+    },
+    {
+      "texto": "¿Es correcto circular marcha atras para cambiar el sentido de la marcha?",
+      "opciones": [
+        "Si, si no se obstaculiza a otros conductores.",
+        "No.",
+        "Si, si no se recorren marcha atras mas de 15 metros."
+      ],
+      "imagen": "../img/test_061_p08.jpg"
+    },
+    {
+      "texto": "En una motocicleta de anchura inferior a un metro, ¿icuanto puede sobresalir longitudinalmente la carga transportada?",
+      "opciones": [
+        "Hasta 0,25 metros tanto por delante como por detras.",
+        "Nada por delante y hasta 0,25 metros por detras.",
+        "Nada,en las motocicletas la carga no puede sobresalir."
+      ]
+    },
+    {
+      "texto": "Un tractor que arrastra un remolque, ¿ique velocidad maxima no debe rebasar fuera de poblado?",
+      "opciones": [
+        "70kilometrosporhora.",
+        "25kilometros por hora.",
+        "40kilometrospor hora."
+      ],
+      "imagen": "../img/test_061_p10.jpg"
+    },
+    {
+      "texto": "El conductor de un vehiculo esta obligado a mostrar a los agentes de la autoridad que se Io soliciten...",
+      "opciones": [
+        "unicamenteelpermisodecirculacion",
+        "el permiso de conduccion, el permiso de circulacion y la tarjeta de inspeccion tecnica.",
+        "solamente la tarjeta de inspeccion tecnica."
+      ],
+      "imagen": "../img/test_061_p11.jpg"
+    },
+    {
+      "texto": "En poblado, ¿zesta permitido usar las advertencias acusticas?",
+      "opciones": [
+        "Si,exclusivamentepara evitarunaccidente.",
+        "No.",
+        "Si,para evitar un accidente o avisar a los demas usuarios de que se realiza un servicio de urgencia"
+      ]
+    },
+    {
+      "texto": "Entre los momentos de peligro en el uso del telefono movil se encuentran...",
+      "opciones": [
+        "recibir una llamada y detenerse en un lugar seguro para hablar.",
+        "colgar y guardar el movil.",
+        "no utilizarel telefono movil."
+      ]
+    },
+    {
+      "texto": "¿Cual es la funcion del alumbrado como elemento de seguridad activa?",
+      "opciones": [
+        "Deslumbrarconfacilidad.",
+        "Permitir ver y ser vistos.",
+        "Indicaruna situacionde emergencia."
+      ]
+    },
+    {
+      "texto": "¿Cuando se producen accidentes de trafico con mas frecuencia?",
+      "opciones": [
+        "Los lunes.",
+        "En los periodos devacaciones y los fines de semana.",
+        "En invierno."
+      ]
+    },
+    {
+      "texto": "¿Como debe conducir con nieve?",
+      "opciones": [
+        "Conlas lucesdeemergenciaencendidas.",
+        "Frenando y acelerando con suavidad.",
+        "Por el arcen."
+      ],
+      "imagen": "../img/test_061_p16.jpg"
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Obliga a circular a todo tipo de camiones y furgones, independientemente de su M.M.A.",
+        "Prohibe circular a los camiones de mas de 3500 Kg. de M.M.A.",
+        "Obliga a circular, unicamente, a los camiones y furgones de mas de 3500 Kg de M.M.A."
+      ],
+      "imagen": "../img/test_061_p17.jpg"
+    },
+    {
+      "texto": "En los vehiculos de anchura inferior a un metro, la carga no debe sobresalir por la parte posterior mas de...",
+      "opciones": [
+        "0,50metros.",
+        "0,25 metros.",
+        "0,40 metros."
+      ],
+      "imagen": "../img/test_061_p18.jpg"
+    },
+    {
+      "texto": "¿La velocidad zes un factor de riesgo que produce accidentes?",
+      "opciones": [
+        "No,porque solo agrava las consecuencias de unaccidentepero no los causa.",
+        "Si,ypor eso debe serla adecuada en cadamomento.",
+        "No, si el vehiculo dispone de los uiltimos sistemas de seguridad."
+      ]
+    },
+    {
+      "texto": "El consumo de drogas, ¿zafecta a la seguridad vial?",
+      "opciones": [
+        "No, en absoluto.",
+        "Si, demanera importante.",
+        "Si,perodemanerapocoimportante."
+      ],
+      "imagen": "../img/test_061_p20.jpg"
+    },
+    {
+      "texto": "En una calzada con los dos sentidos separados por una linea continua, ¿zesta permitido girar a la izquierda?",
+      "opciones": [
+        "Si, cuando no se comprometa la seguridad de ningun usuario de la via.",
+        "No.",
+        "Solo dentro de poblado."
+      ],
+      "imagen": "../img/test_061_p21.jpg"
+    },
+    {
+      "texto": "En una interseccion senalizada en la que se encuentra un agente regulando el trafico, ¿ique debe hacer?",
+      "opciones": [
+        "Aplicar las normas generales deprioridad de paso de los vehiculos que se acerquen por la derecha.",
+        "Obedecer las senales del agente.",
+        "Obedecer las senales de trafico que regulan la prioridad."
+      ],
+      "imagen": "../img/test_061_p22.jpg"
+    },
+    {
+      "texto": "¿Puede adelantar por la derecha al vehiculo gris?",
+      "opciones": [
+        "Si.",
+        "No."
+      ],
+      "imagen": "../img/test_061_p23.jpg"
+    },
+    {
+      "texto": "¿Qué indica esta senal?",
+      "opciones": [
+        "Entrada prohibida a vehiculos quetransporten mercancias explosivas o inflamables.",
+        "Entrada prohibida a vehiculos que transporten mercancias peligrosas.",
+        "Calzada obligatoria para vehiculos que transporten mercancias explosivas."
+      ],
+      "imagen": "../img/test_061_p24.jpg"
+    },
+    {
+      "texto": "En esta curva de visibilidad reducida, ¿zesta permitido parar?",
+      "opciones": [
+        "En la curva no,pero si en sus proximidades.",
+        "Si.",
+        "No, ni en la curva, ni en sus proximidades."
+      ],
+      "imagen": "../img/test_061_p25.jpg"
+    },
+    {
+      "texto": "En una zona de obras se encuentra un panel direccional provisional, ¿zque indica?",
+      "opciones": [
+        "La presencia de una curva y su direccion en una zona de obras.",
+        "Prohibe el paso e informa sobre el sentido de la circulacion.",
+        "Adviertedel peligroporobras."
+      ],
+      "imagen": "../img/test_061_p26.jpg"
+    },
+    {
+      "texto": "El estrés produce en el conductor...",
+      "opciones": [
+        "una mayoragresividadyun comportamiento imprudenteal volante.",
+        "unamayorrapidez en latoma dedecisiones.",
+        "una disminucion de la fatiga."
+      ],
+      "imagen": "../img/test_061_p27.jpg"
+    },
+    {
+      "texto": "Al acercarse a un peaton que quiere cruzar la calzada, ¿ique debe hacer?",
+      "opciones": [
+        "Moderar la velocidad y detenerse si es necesario.",
+        "Continuar circulando, ya que el vehiculo tiene prioridad.",
+        "Tocar el claxon y seguir la marcha a la misma velocidad."
+      ],
+      "imagen": "../img/test_061_p28.jpg"
+    },
+    {
+      "texto": "Esta senal significa intervalo...",
+      "opciones": [
+        "aconsejado de velocidades, aunque las condiciones sean desfavorables.",
+        "aconsejado de velocidades, siempreque las condiciones sean favorables.",
+        "obligatorio develocidades, siempreque las condiciones sean favorables."
+      ],
+      "imagen": "../img/test_061_p29.jpg"
+    },
+    {
+      "texto": "Cualquier conductor esta obligado a...",
+      "opciones": [
+        "circular siempre por debajo de la velocidad maxima de la via.",
+        "circular siempre a la velocidad maxima de la via.",
+        "comportarse de forma que no entorpezca indebidamente la circulacion."
+      ]
+    }
+  ]
+}

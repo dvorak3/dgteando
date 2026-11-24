@@ -1,0 +1,264 @@
+{
+  "test_id": 40,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "En una explanada de peaje de una autopista, ¿iesta permitido recoger a una persona que hace autostop?",
+      "opciones": [
+        "No.",
+        "Si, siempre que no se origine una situacion de peligro.",
+        "Si."
+      ],
+      "imagen": "../img/test_040_p01.jpg"
+    },
+    {
+      "texto": "Si en un estrechamiento sin senalizar han entrado a la vez un turismo y un vehiculo de traccion animal, ¿icual de los dos vehiculos tendra preferencia de paso?",
+      "opciones": [
+        "El vehiculo de traccion animal.",
+        "El que tenga que darmarcha atras una mayor distancia.",
+        "El turismo."
+      ]
+    },
+    {
+      "texto": "Ante una averia, ¿icomo debe colocar la luz de presenalizacion de peligro V-16?",
+      "opciones": [
+        "A 150 metros del vehiculo inmovilizado.",
+        "A 100 metros del vehiculo inmovilizado.",
+        "En la parte mas alta posible del vehiculo inmovilizado garantizando su maxima visibilidad."
+      ],
+      "imagen": "../img/test_040_p03.jpg"
+    },
+    {
+      "texto": "Para incorporarse a la circulacion dando marcha atras, ¿ise puede invadir un cruce de vias?",
+      "opciones": [
+        "Si,siemprequeno serecorranmas de15metros.",
+        "Si,cuando se sigan las indicacionesdeotrapersona.",
+        "No."
+      ]
+    },
+    {
+      "texto": "Para un conductor novel, durante el primer ano esta prohibido...",
+      "opciones": [
+        "obtener otro permiso.",
+        "circular por las autopistas.",
+        "circularsinllevarlaplacaL"
+      ],
+      "imagen": "../img/test_040_p05.jpg"
+    },
+    {
+      "texto": "¿Que indica la senal?",
+      "opciones": [
+        "Proximoaparcamientoenbateriaalaizquierda.",
+        "Proxima calzada sin salida a la izquierda.",
+        "Proxima estacion de servicio a la izquierda."
+      ],
+      "imagen": "../img/test_040_p06.jpg"
+    },
+    {
+      "texto": "¿Que esta indicando este conductor con el brazo?",
+      "opciones": [
+        "Que va a ir marcha atras.",
+        "Que va a empezar a circular.",
+        "Que va a girar a la izquierda."
+      ],
+      "imagen": "../img/test_040_p07.jpg"
+    },
+    {
+      "texto": "En un accidente, ¿icuando es obligatorio ayudar?",
+      "opciones": [
+        "Solamente cuando yo estoy implicado en el accidente.",
+        "Cuando vea que aun no han sido atendidos los heridos.",
+        "No es obligatorio en ningun caso."
+      ]
+    },
+    {
+      "texto": "Para evitar ruidos excesivos e innecesarios en la conduccion, se debe...",
+      "opciones": [
+        "cuidar de que el tubo de escape y el silenciador del vehiculo esten siempre en buen estado.",
+        "utilizar el claxonfrecuentemente pero sin producir ruidos estridentes o notas musicales.",
+        "circular con el tubo de escape libre."
+      ],
+      "imagen": "../img/test_040_p09.jpg"
+    },
+    {
+      "texto": "El campo visual de los ninos es limitado debido a...",
+      "opciones": [
+        "subajaestatura.",
+        "su falta de atencion.",
+        "el escaso desarrollo del sentido de la vista, principalmente."
+      ]
+    },
+    {
+      "texto": "Un vehiculo circula por el carril izquierdo, ¿zesta permitido adelantarle por la derecha?",
+      "opciones": [
+        "No, el adelantamiento siempre se realizara por la izquierda.",
+        "Si, siempre que haya varios carriles en el mismo sentido.",
+        "Si, cuando los carriles estan delimitados y la via esta dentro de poblado."
+      ],
+      "imagen": "../img/test_040_p11.jpg"
+    },
+    {
+      "texto": "Los efectos que provoca el LsD en el comportamiento del conductor...",
+      "opciones": [
+        "proporcionanun estadoderelajacion.",
+        "pueden llegar a prolongarsede10a12 horas desdesu consumo.",
+        "sonmuybreves,peropuedenreaparecerporsorpresaalguntiempodespues."
+      ]
+    },
+    {
+      "texto": "Si no lleva colocado correctamente el cinturon de seguridad, ¿puede influir en las consecuencias de un accidente?",
+      "opciones": [
+        "No, el cinturon es efectivo siempre.",
+        "No, cuando el vehiculo tenga ademas instalado airbag.",
+        "Si, ya que puede sufrir lesiones graves."
+      ]
+    },
+    {
+      "texto": "En general, el sueno aparece con mayor frecuencia...",
+      "opciones": [
+        "en las primeras horas de la manana y al final de la tarde.",
+        "durante la madrugada y en las primeras horas de la tarde.",
+        "durante las horas centralesde la manana y en las primeras horas de la tarde."
+      ]
+    },
+    {
+      "texto": "¿Pueden realizarle una prueba para detectar el consumo de drogas en un control de trafico?",
+      "opciones": [
+        "No,si no muestra signos dehaber consumido drogas.",
+        "No,porque no existen pruebas para detectar el consumo de drogas. b) No, porque no existen pruebas para detectar el consumo de drogas.",
+        "Si, en las mismas condiciones que en las pruebas de deteccion de la alcoholemia."
+      ]
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Subida defuerte pendiente.",
+        "Bajada de fuerte pendiente.",
+        "Pendiente deslizante."
+      ],
+      "imagen": "../img/test_040_p16.jpg"
+    },
+    {
+      "texto": "En una entrada de garaje, ¿zesta permitido estacionar el vehiculo?",
+      "opciones": [
+        "Sí.",
+        "Si., pero debo encender la luz de emergencia.",
+        "No."
+      ],
+      "imagen": "../img/test_040_p17.jpg"
+    },
+    {
+      "texto": "Comer y beber cuando se conduce, ¿ipuede provocar que el conductor se distraiga?",
+      "opciones": [
+        "Comer si, beber no.",
+        "Si.",
+        "No."
+      ],
+      "imagen": "../img/test_040_p18.jpg"
+    },
+    {
+      "texto": "El vehiculo azul quiere girar a la derecha, ¿za que le obliga la senal de SToP?",
+      "opciones": [
+        "A detenerse, cediendo el paso a los vehiculos que circulan por la via transversal.",
+        "No le obliga a nada.",
+        "Adetenersesiempre."
+      ],
+      "imagen": "../img/test_040_p19.jpg"
+    },
+    {
+      "texto": "Circulando con fuerte nevada, ¿zque luz antiniebla se debe utilizar?",
+      "opciones": [
+        "La luz antiniebla delantera",
+        "Obligatoriamente la antiniebla delantera y si se dispone de ella la trasera.",
+        "La luz antiniebla trasera y si se dispone de ella tambien la antiniebla delantera."
+      ],
+      "imagen": "../img/test_040_p20.jpg"
+    },
+    {
+      "texto": "Los accidentes de trafico son una de las principales causas de...",
+      "opciones": [
+        "mortalidad y lesiones.",
+        "mortalidad, unicamente.",
+        "lesiones,solamente."
+      ]
+    },
+    {
+      "texto": "Los accidentes demotocicletas...",
+      "opciones": [
+        "producen lesiones demenor gravedad para sus ocupantes quelos de otros vehiculos.",
+        "son siempre de menor importancia que los de otros vehiculos.",
+        "resultanfacilmentemortalespara sus ocupantes."
+      ],
+      "imagen": "../img/test_040_p22.jpg"
+    },
+    {
+      "texto": "En una autopista, a partir de esta senal...",
+      "opciones": [
+        "finalizan todas las prohibiciones anteriores, incluida la prohibicion de superar la velocidad de 7o kilometros por hora.",
+        "la velocidad maxima recomendada es de 70kilometros por hora.",
+        "finaliza la prohibicion de superar la velocidad de 70 kilometros por hora."
+      ],
+      "imagen": "../img/test_040_p23.jpg"
+    },
+    {
+      "texto": "¿Esta permitido circular en poblado con la luz de largo alcance?",
+      "opciones": [
+        "No.",
+        "Si, siempre que no se deslumbre a ningun usuario.",
+        "Si,cuando la via este insuficientemente iluminada."
+      ]
+    },
+    {
+      "texto": "¿Por que lado de la senal es obligatorio pasar?",
+      "opciones": [
+        "Por la derecha o por la izquierda.",
+        "Por la derecha.",
+        "Por la izquierda."
+      ],
+      "imagen": "../img/test_040_p25.jpg"
+    },
+    {
+      "texto": "En un cambio de rasante, ¿iesta prohibido parar y estacionar?",
+      "opciones": [
+        "No, salvo en los de visibilidad reducida.",
+        "Si.",
+        "Pararno,pero estacionar si."
+      ],
+      "imagen": "../img/test_040_p26.jpg"
+    },
+    {
+      "texto": "Los conductores de bicicletas, ¿ipueden circular por los arcenes de las autopistas?",
+      "opciones": [
+        "No, en ningun caso.",
+        "Si, cuando seanmayores de 14 anos.",
+        "Si, siempre."
+      ],
+      "imagen": "../img/test_040_p27.jpg"
+    },
+    {
+      "texto": "El exceso de velocidad, ¿zafecta a nuestra capacidad de anticipacion?",
+      "opciones": [
+        "No,soloafecta a nuestra capacidad de reaccion.",
+        "Si, disminuyendola.",
+        "Si, aumentandola."
+      ]
+    },
+    {
+      "texto": "El turismo blanco, ¿ztiene alguna obligacion?",
+      "opciones": [
+        "si, debera detenerse para que el vehiculo rojo pueda incorporarse.",
+        "Si, debera facilitar,en la medida de lo posible, la incorporacion del vehiculo rojo.",
+        "No tiene ninguna obligacion."
+      ],
+      "imagen": "../img/test_040_p29.jpg"
+    },
+    {
+      "texto": "Los agentes de la autoridad encargados de la vigilancia del trafico podran inmovilizar un vehiculo cuando ..",
+      "opciones": [
+        "el conductor nollevaba consigo el permiso de circulacion.",
+        "supere los niveles de gases, humos y ruidos permitidosreglamentariamente.",
+        "su conductor sea sancionadodosvecesen elmismo dia."
+      ]
+    }
+  ]
+}

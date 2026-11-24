@@ -1,0 +1,254 @@
+{
+  "test_id": 52,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Estas senales indican peligro por...",
+      "opciones": [
+        "aproximacion de un paso a nivel sin barreras",
+        "aproximacion de un paso a nivel con barreras.",
+        "situacion inmediata de un paso a nivel sin barreras."
+      ],
+      "imagen": "../img/test_052_p01.jpg"
+    },
+    {
+      "texto": "En esta situacion de la fotografia, el conductor del camion, ¿zesta obligado a apartarse al arcen para facilitar el adelantamiento a otros vehiculos?",
+      "opciones": [
+        "Como norma general, no.",
+        "Si,cuandoel camioncirculeamenosde70km/h.",
+        "Si, cuando el camion es un vehiculo pesado. Oa) No, en losturismosno es necesario. Ob)Si,unicamentede noche o en condicionesmeteorologicas adversas. O c) Si, con un panel colocado en el extremo de la carga."
+      ],
+      "imagen": "../img/test_052_p02.jpg"
+    },
+    {
+      "texto": "Esta prohibido realizar un cambio de direccion a la izquierda cuando no existe...",
+      "opciones": [
+        "una senalqueloautoriceexpresamente.",
+        "visibilidadsuficiente.",
+        "un lugaracondicionado expresamentepara realizarlo."
+      ]
+    },
+    {
+      "texto": "¿Es necesario comprobar si un herido en un accidente esta consciente o respira?",
+      "opciones": [
+        "No, eso es responsabilidad de los servicios de urgencia.",
+        "No es necesario, como norma general.",
+        "Si, para valorar la gravedad de su estado."
+      ]
+    },
+    {
+      "texto": "En esta interseccion y segun la senalizacion, ¿za que vehiculos debe ceder el paso?",
+      "opciones": [
+        "A todos los que se aproximan por la derecha.",
+        "A los que se incorporan a la via.",
+        "A ninguno."
+      ],
+      "imagen": "../img/test_052_p06.jpg"
+    },
+    {
+      "texto": "Cuando el conductor sufre una distraccion al volante...",
+      "opciones": [
+        "debe avisarlo con las luces de emergencia.",
+        "tarda mas tiempo en reaccionar.",
+        "aumenta la velocidad del vehiculo sin darse cuenta."
+      ]
+    },
+    {
+      "texto": "Una motocicleta, ¿ipuede llevar instaladas luces antiniebla?",
+      "opciones": [
+        "Si, deforma opcional,tanto en la partedelantera como trasera.",
+        "Si,pero unicamente en la parte trasera.",
+        "No, las motocicletas no pueden llevar luces antiniebla."
+      ],
+      "imagen": "../img/test_052_p08.jpg"
+    },
+    {
+      "texto": "¿Como se debe agarrar el volante?",
+      "opciones": [
+        "Con los brazos muy estirados.",
+        "Con losbrazosunpocodoblados.",
+        "Con los brazos muy doblados."
+      ],
+      "imagen": "../img/test_052_p09.jpg"
+    },
+    {
+      "texto": "¿Puedeestacionarenestazona?",
+      "opciones": [
+        "Si,siexiste espacio suficiente.",
+        "Si, siempre que sea por un tiempo inferior a 2 minutos.",
+        "No,excepto para la carga ydescarga dentro del horario."
+      ],
+      "imagen": "../img/test_052_p10.jpg"
+    },
+    {
+      "texto": "¿Alguna de estas senales indica que finaliza un carril destinado a la circulacion?",
+      "opciones": [
+        "Si, la senal A.",
+        "Si, la senal B.",
+        "No, ninguna de las dos."
+      ],
+      "imagen": "../img/test_052_p11.jpg"
+    },
+    {
+      "texto": "Se producen mas accidentes con victimas mortales...",
+      "opciones": [
+        "envias interurbanas.",
+        "enviasurbanasdondehayatascos.",
+        "en vias urbanas."
+      ]
+    },
+    {
+      "texto": "¿Puede mantener encendida la luz de largo alcance cuando efectuie una parada?",
+      "opciones": [
+        "No, esta prohibido.",
+        "Si, en vias interurbanas.",
+        "Si, cuandola via esta insuficientemente iluminada."
+      ]
+    },
+    {
+      "texto": "En esta situacion, si pretende seguir de frente, ¿za cual de los dos semaforos debe obedecer?",
+      "opciones": [
+        "Como la senalizacion es contradictoria,prevalecela mas restrictiva.",
+        "Al semaforo de la izquierda.",
+        "Alsemaforodeladerecha."
+      ],
+      "imagen": "../img/test_052_p14.jpg"
+    },
+    {
+      "texto": "El conductor de un vehiculo puede utilizar las senales acuisticas para advertir su presencia a otros usuarios...",
+      "opciones": [
+        "soloen viasurbanas.",
+        "unicamente en vias interurbanas.",
+        "tanto en vias urbanas como en vias interurbanas."
+      ]
+    },
+    {
+      "texto": "Los vehiculos prioritarios que circulen en servicio urgente advertiran su presencia...",
+      "opciones": [
+        "mediante la utilizacion simultanea de la senal luminosa y la senal acustica.",
+        "solamenteconlasenalacustica.",
+        "con la utilizacion simultanea de la senal de emergencia y la senal acustica."
+      ]
+    },
+    {
+      "texto": "El tractor de menos de 3.50o kg de M.M.A, ¿zcircula correctamente por el arcen?",
+      "opciones": [
+        "Sí.",
+        "Si,pero solamente en caso de averia.",
+        "No,porque debe circular por el carril derecho."
+      ],
+      "imagen": "../img/test_052_p17.jpg"
+    },
+    {
+      "texto": "Esta senal indica peligro por la proximidad de un tramo...",
+      "opciones": [
+        "pordondesolopuedencircularturismos.",
+        "conatascosoretenciones.",
+        "donde no es obligatorio guardar la distancia de seguridad."
+      ],
+      "imagen": "../img/test_052_p18.jpg"
+    },
+    {
+      "texto": "En un tunel, esta senal indica...",
+      "opciones": [
+        "la situacion de un telefono de emergencia.",
+        "la direccion y distancia a una salida de emergencia.",
+        "la situacion de una salida de emergencia."
+      ],
+      "imagen": "../img/test_052_p19.jpg"
+    },
+    {
+      "texto": "Los ciclistas, ¿ipueden quitarse el casco en vias interurbanas?",
+      "opciones": [
+        "Si,cuandocirculenporrampasascendentesprolongadas.",
+        "No,estan obligadosautilizarlo adecuadamenteabrochado.",
+        "Si,cuando las condicionesmeteorologicasseanmuy calurosas."
+      ],
+      "imagen": "../img/test_052_p20.jpg"
+    },
+    {
+      "texto": "Realizar por las vias publicas carreras y competiciones no autorizadas, ¿zpuede acarrear la perdida de puntos del permiso de conduccion?",
+      "opciones": [
+        "Si, ademas estan prohibidas.",
+        "No,solamente tendrian una sancion economica.",
+        "No, puesto que se trata de competiciones deportivas."
+      ]
+    },
+    {
+      "texto": "El consumo de medicamentos, ¿zpuede ser responsable de accidentes de trafico?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Si,pero solo enlaspersonas con enfermedades cronicas."
+      ]
+    },
+    {
+      "texto": "Como norma general, en una autopista, ¿zesta permitido circular a 50 km/h?",
+      "opciones": [
+        "No, como minimo hay que circular a 60 km/h.",
+        "Si,ya queesla velocidad minima permitida.",
+        "No, como minimo hay que circular a 100 km/h."
+      ],
+      "imagen": "../img/test_052_p23.jpg"
+    },
+    {
+      "texto": "¿Que elementos debe revisar periodicamente para mantener la seguridad del vehiculo?",
+      "opciones": [
+        "Lasluces,losretrovisoresylas llantas.",
+        "Los neumaticos,los amortiguadores y los frenos.",
+        "La bateria, el filtro del aire y la direccion."
+      ]
+    },
+    {
+      "texto": "Conduciendo una motocicleta, ¿icuando es especialmente peligroso el viento?",
+      "opciones": [
+        "Cuando sopla de frente, porque puede frenar la marcha.",
+        "Cuandosopladecostado.",
+        "Cuando sopla desde atras,porque aumenta la velocidad."
+      ]
+    },
+    {
+      "texto": "Para girar a la izquierda, es obligatorio aproximarse al borde izquierdo de la calzada en las vias..",
+      "opciones": [
+        "de un solo sentido de circulacion.",
+        "con mas de un carril para uno de los sentidos de circulacion.",
+        "dedoble sentido de circulacion."
+      ]
+    },
+    {
+      "texto": "Conduce el vehiculo gris, icomo debe actuar, ¿atendiendo a las marcas viales?",
+      "opciones": [
+        "Debe girar a la derecha obligatoriamente.",
+        "Debe seguir de frente o girar a la derecha.",
+        "Debe seguir de frente obligatoriamente."
+      ],
+      "imagen": "../img/test_052_p27.jpg"
+    },
+    {
+      "texto": "El estres, ¿ique efectos puede tener sobre el conductor?",
+      "opciones": [
+        "La toma de decisiones al volante puede ser mas lenta.",
+        "Comportamientos excesivamenteprudentes.",
+        "Disminucion de la fatiga y el sueno."
+      ]
+    },
+    {
+      "texto": "En un paso para ciclistas, ¿itienen éstos prioridad sobre otros vehiculos?",
+      "opciones": [
+        "No.",
+        "Si, siempre.",
+        "Si,pero solo si se aproximan por la derecha."
+      ],
+      "imagen": "../img/test_052_p29.jpg"
+    },
+    {
+      "texto": "En una interseccion donde no este senalizada la prioridad, ¿debe ceder el paso a un tranvia?",
+      "opciones": [
+        "Si, el tranvia tiene prioridad tanto si se aproxima por la derecha como por la izquierda.",
+        "No, ya que los tranvias no tienen prioridad de paso.",
+        "Solo debe ceder el paso al tranvia si se aproxima por la derecha."
+      ],
+      "imagen": "../img/test_052_p30.jpg"
+    }
+  ]
+}

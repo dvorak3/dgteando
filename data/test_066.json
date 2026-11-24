@@ -1,0 +1,270 @@
+{
+  "test_id": 66,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "En vias interurbanas, ¿zcual es la infraccion mas habitual que cometen los peatones victimas de atropello?",
+      "opciones": [
+        "Norespetarlos semaforos.",
+        "Estaromarcharporla calzada deforma antirreglamentaria.",
+        "No obedecer las seniales de los agentes."
+      ],
+      "imagen": "../img/test_066_p01.jpg"
+    },
+    {
+      "texto": "Al abandonar una autovia debera...",
+      "opciones": [
+        "Reducir la velocidad de 60km/h.",
+        "Continuarporsucarril hastala salida.",
+        "Circular por el carril de deceleracion lo antes posible."
+      ]
+    },
+    {
+      "texto": "En una autopista con tres carriles para el mismo sentido, normalmente, ¿icual debe utilizar?",
+      "opciones": [
+        "Cualquiera de ellos.",
+        "El central o el derecho, indistintamente.",
+        "El derecho."
+      ],
+      "imagen": "../img/test_066_p03.jpg"
+    },
+    {
+      "texto": "La lluvia, ¿zafecta al agarre de las ruedas del vehiculo a la calzada?",
+      "opciones": [
+        "No,el agarre es el mismo que cuando la calzada esta seca.",
+        "Si, seagarran mas a la calzada.",
+        "Si, se agarran menos."
+      ],
+      "imagen": "../img/test_066_p04.jpg"
+    },
+    {
+      "texto": "La senal que se observa en la fotografia indica que tienen prohibido adelantar...",
+      "opciones": [
+        "los turismos.",
+        "los turismos y los camiones de menos de 3.500 kg.",
+        "los camiones de mas de 3.500 kg."
+      ],
+      "imagen": "../img/test_066_p05.jpg"
+    },
+    {
+      "texto": "Las senales azules, ¿ique indican?",
+      "opciones": [
+        "Que la autopista se termina.",
+        "Quelaautopistaesdepeaje.",
+        "Los carriles para ir a otras carreteras opoblaciones."
+      ],
+      "imagen": "../img/test_066_p06.jpg"
+    },
+    {
+      "texto": "Que debe hacer un peaton si, cuando va a cruzar una via, ¿se encuentra de frente a un agente con el brazo levantado verticalmente?",
+      "opciones": [
+        "Detenerse.",
+        "Cruzar. Las senales de los agentes solo obligan a los conductores de vehiculos.",
+        "Detenerse, excepto si un semaforo le da preferencia de paso, en cuyo caso debe cruzar."
+      ],
+      "imagen": "../img/test_066_p07.jpg"
+    },
+    {
+      "texto": "El consumo de alcohol, aunque sea en pequenas cantidades...",
+      "opciones": [
+        "no deteriora la capacidad para conducir.",
+        "deteriora la capacidadpara conducir."
+      ],
+      "imagen": "../img/test_066_p08.jpg"
+    },
+    {
+      "texto": "En un accidente de trafico se produce el efecto submarino cuando...",
+      "opciones": [
+        "el cuerpo del ocupante del vehiculo se desliza por debajo del cinturon de seguridad.",
+        "el reposacabezas esta mal regulado y el cuello sufre un violento movimiento de vaiven.",
+        "el conductor recibe un impacto directo y fuerte del airbag en la cara."
+      ],
+      "imagen": "../img/test_066_p09.jpg"
+    },
+    {
+      "texto": "¿Es posible ahorrar combustible evitando cambios de marcha innecesarios?",
+      "opciones": [
+        "Si.",
+        "No, en ningun caso.",
+        "Depende de si el vehiculo tiene motor diesel o de gasolina."
+      ],
+      "imagen": "../img/test_066_p10.jpg"
+    },
+    {
+      "texto": "Una persona mayor de edad, ipuede transportar a un menor en una bicicleta que, por construccion, ¿no pueda ser ocupada por mas de una persona?",
+      "opciones": [
+        "Solo si el conductor pedalea levantado y el menor va sentado en el sillin.",
+        "Si, a un menor de hasta 22kg que pueda sentarse por si solo, en un asiento adicional que cumplalas especificaciones tecnicas establecidas.",
+        "No, esta prohibido."
+      ],
+      "imagen": "../img/test_066_p11.jpg"
+    },
+    {
+      "texto": "A falta de senalizacion, ¿icual es la velocidad maxima permitida para una furgoneta cuando circule por una autovia que discurra dentro de poblado?",
+      "opciones": [
+        "80 km/h.",
+        "100 km/h.",
+        "90 km/h."
+      ],
+      "imagen": "../img/test_066_p12.jpg"
+    },
+    {
+      "texto": "En condiciones meteorologicas especialmente desfavorables, como en caso de fuerte granizada, ique precauciones, entre otras, ¿debe tomar?",
+      "opciones": [
+        "Disminuir la velocidad, evitando pisar el freno, y aumentar la distancia de seguridad.",
+        "Acercarse al vehiculo de delante y encender el dispositivo de presenalizacion de peligro.",
+        "Circular con cambios frecuentes de direccion para evitar que se produzca\"aquaplaning\"."
+      ],
+      "imagen": "../img/test_066_p13.jpg"
+    },
+    {
+      "texto": "La tasa de alcoholemia en sangre mas segura para circular es ..",
+      "opciones": [
+        "0,0 gramos por litro.",
+        "0,5 gramos por litro.",
+        "0,3 gramos por litro."
+      ],
+      "imagen": "../img/test_066_p14.jpg"
+    },
+    {
+      "texto": "Sobrevalorar su capacidad de conduccion o una menor percepcion del riesgo son conductas que, en general, hacen que los conductores jovenes...",
+      "opciones": [
+        "tengan menos probabilidad de sufrir un accidente.",
+        "tengan mas probabilidad de sufrir un accidente.",
+        "sean mas prudentes al volante."
+      ],
+      "imagen": "../img/test_066_p15.jpg"
+    },
+    {
+      "texto": "Una vez termine de adelantar al camion, ¿zpuede seguir circulando por el carril izquierdo?",
+      "opciones": [
+        "No, debe circular por el carril derecho.",
+        "No, porque por el carril izquierdo solo se puede utilizar para adelantar.",
+        "Si, porque en autopista se puede circular por cualquier carril."
+      ],
+      "imagen": "../img/test_066_p16.jpg"
+    },
+    {
+      "texto": "De las siguientes situaciones, ¿icual favorece la aparicion de fatiga en el conductor?",
+      "opciones": [
+        "Conducir de noche con una iluminacion deficiente.",
+        "Circular por una via con la calzada en buen estado.",
+        "Mantenga el interior del vehiculo adecuadamente ventilado."
+      ]
+    },
+    {
+      "texto": "En general, un conductor que sufre un trastorno depresivo ...",
+      "opciones": [
+        "no tiene distracciones.",
+        "cometemenos errores a la hora de tomar decisiones.",
+        "esmas inseguroalvolante."
+      ],
+      "imagen": "../img/test_066_p18.jpg"
+    },
+    {
+      "texto": "Cuando son victimas deatropello, las lesionesmas graves en los ciclistas, quepueden incluso provocar la muerte, se localizan en...",
+      "opciones": [
+        "las piernas.",
+        "la cabeza.",
+        "las manos."
+      ],
+      "imagen": "../img/test_066_p19.jpg"
+    },
+    {
+      "texto": "En esta carretera convencional con arcen transitable, ¿zpor donde debe circular un ciclomotor?",
+      "opciones": [
+        "Por el centro de la calzada o por el arcen de la derecha.",
+        "Por la calzada, lo mas cerca posible del borde derecho.",
+        "Por el arcen de la derecha."
+      ],
+      "imagen": "../img/test_066_p20.jpg"
+    },
+    {
+      "texto": "¿Circula por una calzada en la que debido a la niebla el pavimento esta huimedo y resbaladizo.zcomo debe ser la conduccion?",
+      "opciones": [
+        "Dinamica y,a una velocidad alta para evitar que las ruedas patinen.",
+        "Suave,sinmovimientos bruscos,aumentando la distancia de seguridad, ademas de reducir la velocidad.",
+        "Igual que cuando la calzada esta seca, ya que los neumaticos no pierden adherencia."
+      ],
+      "imagen": "../img/test_066_p21.jpg"
+    },
+    {
+      "texto": "Un conductor se encuentra situado en el carril derecho de esta calzada, ¿ipuede seguir de frente?",
+      "opciones": [
+        "Si, puede girar a la derecha o continuar de frente.",
+        "Si, porque no existe una senal vertical que prohiba seguir de frente.",
+        "No,esta obligado agirar aladerecha."
+      ],
+      "imagen": "../img/test_066_p22.jpg"
+    },
+    {
+      "texto": "En el caso de condiciones climaticas que reduzcan significativamente la visibilidad, ¿icomo se debe senalizar la carga que sobresale de la parte delantera del vehiculo?",
+      "opciones": [
+        "Con una luz roja.",
+        "Con una luz blanca.",
+        "Conuna luz blanca y un dispositivoreflectante tambienblanco."
+      ]
+    },
+    {
+      "texto": "En un tunel insuficientemente iluminado, ¿ique iluminacion deberia llevar encendida en su vehiculo si circula a una velocidad de 80 km/h?",
+      "opciones": [
+        "Luz de posicion y luz de corto alcance, pero nunca se utilizara las luces de carretera.",
+        "Luz de carretera, siempre que no deslumbre a los demas usuarios.",
+        "Luz de posicion y luz de carretera, pero nunca se utilizara la luz de de corto alcance."
+      ],
+      "imagen": "../img/test_066_p24.jpg"
+    },
+    {
+      "texto": "En una via de doble sentido, no hay senales ni marcas viales que prohiban cambiar el sentido. ¿Cuando se permite cambiar de sentido?",
+      "opciones": [
+        "Nunca.",
+        "Cuando quieras, porque siempre esta permitido.",
+        "Cuando no pongan enpeligro a otros usuarios."
+      ]
+    },
+    {
+      "texto": "¿Esta permitido introducir manualmente la direccion de destino en el navegador mientras se conduce un vehiculo?",
+      "opciones": [
+        "Si, siemprey cuando puedas controlar el vehiculo.",
+        "No; constituye un delito contra la seguridad vial segun el Codigo Penal.",
+        "No; es una infraccion grave que supone la perdida de 3 puntos."
+      ],
+      "imagen": "../img/test_066_p26.jpg"
+    },
+    {
+      "texto": "En este paso de peatones si el semaforo no funciona, ¿es obligatorio detenerse y ceder el paso a los peatones que intentan cruzarlo?",
+      "opciones": [
+        "Solo si la persona que intenta cruzar es una filade escolares.",
+        "No, porque los vehiculos tienen prioridad.",
+        "Si, porque los peatones tienen prioridad."
+      ],
+      "imagen": "../img/test_066_p27.jpg"
+    },
+    {
+      "texto": "Con el permiso de la clase B, ¿ipuedes conducir un tractor agricola?",
+      "opciones": [
+        "Si, siemprey cuando no llevesremolque.",
+        "Si. b) Si.",
+        "No,porqueesun vehiculopesado."
+      ],
+      "imagen": "../img/test_066_p28.jpg"
+    },
+    {
+      "texto": "La maniobra de marcha atras, ¿idebe senalizarse?",
+      "opciones": [
+        "Si, utilizando la senal de emergencia o mediante el empleo reiterado de la luz de frenado.",
+        "No,no es obligatorio senalizar la maniobra de marcha atras.",
+        "Si, con la luz de marcha atras."
+      ]
+    },
+    {
+      "texto": "Esta senal, ¿zprohibe la entrada a camiones?",
+      "opciones": [
+        "Solo si la masa maxima delcamion no superalas2toneladas.",
+        "Si, en cualquier caso.",
+        "No."
+      ],
+      "imagen": "../img/test_066_p30.jpg"
+    }
+  ]
+}

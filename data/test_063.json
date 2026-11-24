@@ -1,0 +1,273 @@
+{
+  "test_id": 63,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Las marcas blancas y rojas de la calzada, ¿ique indican?",
+      "opciones": [
+        "Unazona reservada para la salida de competiciones decoches.",
+        "Una zona reservada para el estacionamiento de camiones.",
+        "Una zona reservada para frenado de emergencia, donde no se puede parar ni estacionar."
+      ],
+      "imagen": "../img/test_063_p01.jpg"
+    },
+    {
+      "texto": "Siempre que sea posible, ¿icomo debe inmovilizar un vehiculo que se ha visto implicado en un accidente?",
+      "opciones": [
+        "Con unos calzos o con cualquier elemento que sirva como tal.",
+        "Cortando el contacto y echando el freno de mano.",
+        "Desconectandolosbornesdelabateria."
+      ],
+      "imagen": "../img/test_063_p02.jpg"
+    },
+    {
+      "texto": "¿Existe relacion entre consumo de drogas de abuso o ilegales y accidentes de trafico?",
+      "opciones": [
+        "Si; las drogas alteran gravemente las capacidades necesarias para conducir.",
+        "Solo cuando el conductormezcla el consumo de drogas con el de alcohol.",
+        "No; la conduccion es mas segura cuando se consumen drogas de abuso."
+      ],
+      "imagen": "../img/test_063_p03.jpg"
+    },
+    {
+      "texto": "¿Que sistema puede detectar peatones o animales marcandolos en color rojo u otro en la pantalla de informacion del conductor?",
+      "opciones": [
+        "EI head up display.",
+        "EI Departure Warning and prevention.",
+        "Elasistentedevisionnocturna."
+      ]
+    },
+    {
+      "texto": "Basicamente, ¿ique puede observar el conductor mirando por los espejos retrovisores?",
+      "opciones": [
+        "Que sucede dentro y delante del vehiculo.",
+        "Que sucede detras del vehiculo.",
+        "Quesucedeenlospuntosciegos."
+      ],
+      "imagen": "../img/test_063_p05.jpg"
+    },
+    {
+      "texto": "En caso de accidente, ¿iexiste relacion entre la velocidad de circulacion y la gravedad de las lesiones de los ocupantes de un vehiculo?",
+      "opciones": [
+        "Si; a mayor velocidad menor es la probabilidad de sufrir lesiones graves.",
+        "Si; a mayor velocidad mayor es la probabilidad de sufrir lesiones graves.",
+        "No; la gravedad de las lesiones depende solo de los sistemas de seguridad pasiva."
+      ],
+      "imagen": "../img/test_063_p06.jpg"
+    },
+    {
+      "texto": "¿Cual de las siguientes opciones describemejor por que los avances tecnologicos no han podido eliminar por completo los accidentes?",
+      "opciones": [
+        "La tecnologiano esta lo suficientemente avanzada para abordartodoslos aspectos de seguridad vial.",
+        "Apesardelos avances,los comportamientos humanos imprudentes continuansiendo un factor principal en los accidentes.",
+        "Los avances tecnologicos han sido limitados en el ambito de la seguridad vial."
+      ],
+      "imagen": "../img/test_063_p07.jpg"
+    },
+    {
+      "texto": "¿Esta permitido efectuar un adelantamiento si al realizarlo entorpece la circulacion de ciclistas?",
+      "opciones": [
+        "Si,siemprey cuando se haga con precaucion yseadvierta a los ciclistas con anticipacion.",
+        "Si, siempre aunque se ponga en peligro a los ciclistas.",
+        "No, esta prohibido."
+      ],
+      "imagen": "../img/test_063_p08.jpg"
+    },
+    {
+      "texto": "¿Que caracteristicas tienen que cumplir los vehiculos provistos del distintivo medioambiental 0 emisiones?",
+      "opciones": [
+        "Ser electricos puros de bateria, incluidos con autonomia extendida o electricos hibridos enchufables con autonomia minima de 4okm o pila de combustible.",
+        "Ser electricos enchufables con menos de 40 km de autonomia,hibridos no enchufables gas natural y glp.",
+        "Tener motores de gasolina matriculado a partir del 2006 o diesel a partir de 2015."
+      ],
+      "imagen": "../img/test_063_p09.jpg"
+    },
+    {
+      "texto": "Si se ve implicado en un accidente de trafico con posibilidad de muertos o heridos graves, ique actuaciones, entre otras, ¿debellevar a cabo en la medida de lo posible?",
+      "opciones": [
+        "Seguir circulando, sin prestar ayuda a las victimas ni avisara la autoridad.",
+        "Detener el vehiculo sin crear peligro,avisar a la autoridad o sus agentes y auxiliar a los heridos.",
+        "Detenerse, borrar las huellas del accidente y cambiar de sitio a los heridos y vehiculos."
+      ],
+      "imagen": "../img/test_063_p10.jpg"
+    },
+    {
+      "texto": "Si conducimos de noche para evitar los atascos debemos tener en cuenta que...",
+      "opciones": [
+        "el sueno o la somnolencia al volante aparecen con mayor facilidad.",
+        "no es necesario descansar en trayectos largos, ya que durante la noche no aparece la fatiga.",
+        "la oscuridad impide la aparicion del sueno,pero favorece la aparicion de la fatiga."
+      ],
+      "imagen": "../img/test_063_p11.jpg"
+    },
+    {
+      "texto": "¿Por que es aconsejable circular en vias urbanas respetando en todo momento la velocidad establecida para cada tramo de via?",
+      "opciones": [
+        "Porque el motor del vehiculo consumemenos combustible si trabaja a altas revoluciones.",
+        "Porque lasmultaspor exceso develocidad en vias urbanas son mas caras queen vias interurbanas.",
+        "Porque la mayoria de los atropellos con muerte delpeaton seproducen en vias urbanas."
+      ],
+      "imagen": "../img/test_063_p12.jpg"
+    },
+    {
+      "texto": "¿Bajo que circunstancias se permite que un peaton transite por la derecha en una carretera convencional?",
+      "opciones": [
+        "En cualquier situacion,ya queno hay restricciones.",
+        "Solamente cuandohay trafico intenso por la izquierda.",
+        "Si es mas facil o seguro, debido a circunstancias especificas de la via o el trafico."
+      ],
+      "imagen": "../img/test_063_p13.jpg"
+    },
+    {
+      "texto": "Si arrastra o empuja su ciclomotor por una via interurbana, ¿ipor donde circulara?",
+      "opciones": [
+        "Por el arcen de la izquierda, si lo hay.",
+        "Por el arcen de la derecha, si lo hay."
+      ],
+      "imagen": "../img/test_063_p14.jpg"
+    },
+    {
+      "texto": "El alumbrado de su vehiculo, ¿iforma parte de algun sistema de seguridad?",
+      "opciones": [
+        "Sololas lucesde emergencia.",
+        "Si, es un sistema de seguridad pasiva.",
+        "Si, es un sistema de seguridad activa."
+      ],
+      "imagen": "../img/test_063_p15.jpg"
+    },
+    {
+      "texto": "Si es necesario avisar a un ciclista con senales acuisticas, ¿icomo debe hacerse?",
+      "opciones": [
+        "Estaprohibidohacersenalesacusticas.",
+        "Acierta distancia del ciclista,para evitar que se asuste.",
+        "Lomas cerca posibledel ciclista,para asegurarnos que las escucha."
+      ],
+      "imagen": "../img/test_063_p16.jpg"
+    },
+    {
+      "texto": "¿Puede un motorista circular llevando el telefono movil entre la cara y el casco?",
+      "opciones": [
+        "Si,seconsideraundispositivohomologado",
+        "Si, en detenciones y semaforos en rojo.",
+        "No."
+      ]
+    },
+    {
+      "texto": "¿Que indica la senal de balizamiento (luz roja fja) que se observa en la fotografia?",
+      "opciones": [
+        "Calzada totalmente cerrada al transito.",
+        "Prohibe el paso e informa, ademas sobre el sentido de la circulacion.",
+        "Prohibe el paso a traves de la linea imaginaria que las une."
+      ],
+      "imagen": "../img/test_063_p18.jpg"
+    },
+    {
+      "texto": "¿Que significa esta senal?",
+      "opciones": [
+        "Avisade quepuedehaberhieloen la calzada.",
+        "Que en caso de niebla no puede superar la velocidad indicada.",
+        "Que se aproxima a una zona con niebla."
+      ],
+      "imagen": "../img/test_063_p19.jpg"
+    },
+    {
+      "texto": "Una motocicleta, ¿ipuede circular sin tubo de escape?",
+      "opciones": [
+        "No, porque se rompe el motor.",
+        "Si,cuando lamotocicleta esdeportiva.",
+        "No, esta prohibido, excepto si la motocicleta es electrica."
+      ],
+      "imagen": "../img/test_063_p20.jpg"
+    },
+    {
+      "texto": "¿Que indica la senal de la imagen?",
+      "opciones": [
+        "Presencia de un tallermecanico cercano.",
+        "Vehiculo averiado en la carretera.",
+        "Senal identificativa de un vehiculo de servicio de auxilio en vias publicas."
+      ],
+      "imagen": "../img/test_063_p21.jpg"
+    },
+    {
+      "texto": "Esta senal indica que se acerca a un cruce...",
+      "opciones": [
+        "Sin preferencia depaso.",
+        "Conpreferencia depaso.",
+        "Con un via estrecha."
+      ],
+      "imagen": "../img/test_063_p22.jpg"
+    },
+    {
+      "texto": "¿zlnfluye la velocidad en el campo visual del conductor?",
+      "opciones": [
+        "Si; el campo visual disminuye al aumentar la velocidad.",
+        "No.",
+        "Si; el campo visual seamplia al aumentar la velocidad."
+      ],
+      "imagen": "../img/test_063_p23.jpg"
+    },
+    {
+      "texto": "A una via asi senalizada, ¿zque vehiculos no pueden acceder?",
+      "opciones": [
+        "Turismos.",
+        "Bicicletas.",
+        "Motocicletas"
+      ],
+      "imagen": "../img/test_063_p24.jpg"
+    },
+    {
+      "texto": "Tomar un cafe o un te, ¿zson estrategias eficaces para reducir la tasa de alcoholemia?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "No,pero masticar cafe en grano si reduce la tasa de alcoholemia."
+      ],
+      "imagen": "../img/test_063_p25.jpg"
+    },
+    {
+      "texto": "Si aun no ha salido el sol pero existe buena visibilidad, ¿ique alumbrado debe utilizar si circula por una via interurbana?",
+      "opciones": [
+        "El alumbrado de posicion y el de corto alcance.",
+        "Ninguno.",
+        "Elalumbradodeposicion,unicamente."
+      ],
+      "imagen": "../img/test_063_p26.jpg"
+    },
+    {
+      "texto": "En caso de existir niebla espesa, ademas de reducir la visibilidad, ¿zpuede disminuir la adherencia de los neumaticos sobre la calzada?",
+      "opciones": [
+        "Si,pero solamente en caso de frenarbruscamente.",
+        "No, la adherencia de los neumaticos solamente disminuye cuando llueve.",
+        "Si, debido a que la niebla humedece la calzada haciendolamas deslizante."
+      ],
+      "imagen": "../img/test_063_p27.jpg"
+    },
+    {
+      "texto": "¿Que debe hacer cuando vaya a adelantar a un ciclista que lleva un pasajero?",
+      "opciones": [
+        "Aumentar la precaucion ya que la bicicleta se puede desestabilizar con mayorfacilidad.",
+        "Aumentar la velocidad y circular lo mas cerca posible del borde derecho de la calzada.",
+        "Hacer senales acusticas al llegara su altura para advertir de nuestra presencia."
+      ],
+      "imagen": "../img/test_063_p28.jpg"
+    },
+    {
+      "texto": "Si un agente de trafico, desde su vehiculo, le ordena detenerse mediante el encendido de un dispositivo con una luz roja intermitente o destellante hacia delante, ¿idonde debera hacerlo?",
+      "opciones": [
+        "En el lado derecho de la calzada, detras del vehiculo policial.",
+        "Donde no generemayores riesgos ni molestias para el restode usuarios.",
+        "En el lado izquierdo de la calzada, delante del vehiculo policial."
+      ],
+      "imagen": "../img/test_063_p29.jpg"
+    },
+    {
+      "texto": "Si conduce con frecuencia y consume antihistaminicos para tratar una alergia respiratoria, es conveniente...",
+      "opciones": [
+        "Utilizarantihistaminicos no sedantes, queno producen somnolencia.",
+        "Tomaralguna bebida alcoholica para evitar la aparicion del sueno.",
+        "Viajar al atardecer o al amanecer, ya que hay menos polen en el aire."
+      ],
+      "imagen": "../img/test_063_p30.jpg"
+    }
+  ]
+}

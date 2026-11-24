@@ -1,0 +1,267 @@
+{
+  "test_id": 54,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "El lunes a las 9 de la manana, a partir del lugar donde se encuentra situada esta senal...",
+      "opciones": [
+        "solo sepuede estacionar para dejar unpaquete.",
+        "esta prohibidoparary estacionar.",
+        "sepuedepararperonoestacionar."
+      ],
+      "imagen": "../img/test_054_p01.jpg"
+    },
+    {
+      "texto": "Si queda detenido en el interior de un tuinel y se produce un incendio, ¿ique debe hacer?",
+      "opciones": [
+        "Apartar el vehiculo a la derecha, apagar el motor y dirigirse a la salida mas proxima.",
+        "Circular marcha atras hasta el inicio del tunel.",
+        "Esperar en el interior del vehiculo a los servicios de emergencia."
+      ],
+      "imagen": "../img/test_054_p02.jpg"
+    },
+    {
+      "texto": "Un tractor agricola de 300o kg. de MMA, una bicicleta y un ciclomotor circulan por el arcen. ¿Es correcto?",
+      "opciones": [
+        "No, solo debe circular por el arcen la bicicleta.",
+        "Si, todos deben circular por el arcen.",
+        "Si, salvo el tractor, que debe circular por la calzada."
+      ],
+      "imagen": "../img/test_054_p03.jpg"
+    },
+    {
+      "texto": "En zona urbana, ¿zes obligatorio facilitar a un autobuis la incorporacion desde una parada senalizada?",
+      "opciones": [
+        "No, no es obligatorio, pero si recomendable.",
+        "Si.",
+        "Si,yademasesobligatoriodetenerseencasonecesario"
+      ],
+      "imagen": "../img/test_054_p04.jpg"
+    },
+    {
+      "texto": "Usar el telefono movil mientras se conduce, ¿zpuede ser peligroso?",
+      "opciones": [
+        "No,cuandola conversaciondura poco tiempo.",
+        "No, cuando se utiliza un dispositivo de manos libres.",
+        "Si, porque disminuye la atencion necesaria para conducir."
+      ]
+    },
+    {
+      "texto": "¿Quien tiene prioridad si en el paso estrecho se encuentra con otro turismo?",
+      "opciones": [
+        "Su vehiculo.",
+        "El que tenga mayor dificultad demaniobra.",
+        "El otro turismo."
+      ],
+      "imagen": "../img/test_054_p06.jpg"
+    },
+    {
+      "texto": "Los accidentes de trafico generan costes...",
+      "opciones": [
+        "administrativos, materiales y sanitarios, pero no humanos",
+        "materiales, sanitarios,administrativos yhumanos.",
+        "materialesysanitarios solamente."
+      ],
+      "imagen": "../img/test_054_p07.jpg"
+    },
+    {
+      "texto": "¿Esta permitido conducir utilizando un dispositivo manos libres?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Si,empleandoporejemploauriculares."
+      ]
+    },
+    {
+      "texto": "La flecha verde esta iluminada. Si quiere girar a la derecha, ¿ztiene preferencia de paso?",
+      "opciones": [
+        "No,porque la flecha verde me permite pasar pero debo ceder el paso al vehiculo que se aproxima.",
+        "No, porque la luz roja me prohibe girar.",
+        "Si, porque la flecha verde me obliga a girar."
+      ],
+      "imagen": "../img/test_054_p09.jpg"
+    },
+    {
+      "texto": "En este cruce, ¿ipuede pasar cuando se enciende la luz verde?",
+      "opciones": [
+        "Si,perodeboesperarhastapoderpasar sinbloquearlo.",
+        "Si, pero debo ceder el paso a los vehiculos de la derecha.",
+        "Si, siempre,porquetengo preferencia."
+      ],
+      "imagen": "../img/test_054_p10.jpg"
+    },
+    {
+      "texto": "La Organizacion Mundial de la Salud (OMs) considera que la siniestralidad vial es un problema prioritario de salud publica...",
+      "opciones": [
+        "solo enlos paises mas desarrollados.",
+        "en todo el mundo.",
+        "en Europa,perono en Estados Unidos ni Japonporque esmuybaja."
+      ],
+      "imagen": "../img/test_054_p11.jpg"
+    },
+    {
+      "texto": "Un conductor que se incorpora a una via utilizando un carril de aceleracion, ¿zdebe cerciorarse previamente de que puede hacerlo sin peligro?",
+      "opciones": [
+        "No, porque tiene prioridad de paso.",
+        "Si,yno iniciarlamaniobrahasta estarseguro.",
+        "No,porque los demas conductores deben facilitarle la incorporacion."
+      ],
+      "imagen": "../img/test_054_p12.jpg"
+    },
+    {
+      "texto": "¿Si debido a un pinchazo usted se ve obligado a circular con una rueda de uso temporal ique debera tener en cuenta?",
+      "opciones": [
+        "Que no debe circular a mas de 80 kilometros por hora.",
+        "Que no se debe circular mas de 80kilometros con ella.",
+        "Que no se debe circular a mas de 50 kilometros por hora."
+      ],
+      "imagen": "../img/test_054_p13.jpg"
+    },
+    {
+      "texto": "¿Puede adelantar al vehiculo blanco por la derecha?",
+      "opciones": [
+        "No, porque esta prohibido.",
+        "Si, porque es una autovia.",
+        "Si,porque circula incorrectamente"
+      ],
+      "imagen": "../img/test_054_p14.jpg"
+    },
+    {
+      "texto": "¿Que produce mas distracciones en la conduccion?",
+      "opciones": [
+        "Usarel telefonomovil.",
+        "Observarlassenales.",
+        "Escuchar la radio."
+      ]
+    },
+    {
+      "texto": "¿Puede instalar laminas adhesivas en las ventanas traseras de su vehiculo?",
+      "opciones": [
+        "No.",
+        "Si,si lleva dos espejos retrovisores exteriores.",
+        "No, si no dispone de un espejo retrovisor interior."
+      ],
+      "imagen": "../img/test_054_p16.jpg"
+    },
+    {
+      "texto": "Esta senal indica el lugar en el que...",
+      "opciones": [
+        "termina la obligacion de circular, al menos, a 40 km/h.",
+        "finaliza la recomendacion de circular a velocidad superior a 40 km/h.",
+        "comienza la obligacion de circular a mas de 40 km/h."
+      ],
+      "imagen": "../img/test_054_p17.jpg"
+    },
+    {
+      "texto": "Si en un tramo de via muy estrecho sin senalizar la prioridad se encuentran un camion y un turismo, ¿zque vehiculo pasara primero?",
+      "opciones": [
+        "El turismo, porque sus dimensiones son menores.",
+        "El turismo, porque tiene menor dificultad para pasar.",
+        "El camion si existe duda de que vehiculo entro primero."
+      ],
+      "imagen": "../img/test_054_p18.jpg"
+    },
+    {
+      "texto": "Se considera conductor a la persona...",
+      "opciones": [
+        "que conduce a pie un ciclo o ciclomotor de dos ruedas.",
+        "que maneja el volante de un vehiculo cuando circula en practicas.",
+        "que maneja el mecanismo de direccion o va al mando de un vehiculo."
+      ]
+    },
+    {
+      "texto": "La tasa maxima de alcoholemia, permitida en sangre, para conductores noveles es...",
+      "opciones": [
+        "0,30 gramos por litro.",
+        "0,50 gramos por litro.",
+        "0,45 gramos por litro."
+      ]
+    },
+    {
+      "texto": "Cuando se estaciona el vehiculo en una pendiente ascendente es obligatorio dejar...",
+      "opciones": [
+        "el frenode estacionamiento accionado,unicamente.",
+        "accionado el frenode estacionamiento ycolocada la primera velocidad.",
+        "colocada lamarcha atras y el freno de estacionamiento accionado."
+      ],
+      "imagen": "../img/test_054_p21.jpg"
+    },
+    {
+      "texto": "¿En que situacion se puede encender solamente la luz de posicion entre la puesta y la salida del sol?",
+      "opciones": [
+        "Cuando circulepor una carretera suficientemente iluminada.",
+        "Cuando circulepor una calle suficientemente iluminada.",
+        "Para inmovilizar el vehiculo en un arcen fuera de poblado."
+      ]
+    },
+    {
+      "texto": "Esta prohibido arrojar a la via objetos...",
+      "opciones": [
+        "unicamente si pueden entorpecer la libre circulacion.",
+        "que puedan deteriorar la via o sus instalaciones.",
+        "solamente si pueden deteriorar la via."
+      ],
+      "imagen": "../img/test_054_p23.jpg"
+    },
+    {
+      "texto": "Los conductores de bicicletas mayores de 14 anos, ¿ipueden circular por los arcenes de las autovias?",
+      "opciones": [
+        "Si, tantopor los arcenes de las autovias como por los de las autopistas.",
+        "No, esta prohibido por razones de seguridad vial.",
+        "Si, salvo que por razones de seguridad vial se prohiba mediante senales."
+      ],
+      "imagen": "../img/test_054_p24.jpg"
+    },
+    {
+      "texto": "En un vehiculo de menos de 5 metros de longitud, destinado al transporte de mercancias, ¿icuanto puede sobresalir una carga de longitud indivisible por su parte delantera?",
+      "opciones": [
+        "No puede sobresalir nada.",
+        "Un tercio de la longitud del vehiculo.",
+        "Un 15 por 100 de la longitud del vehiculo."
+      ],
+      "imagen": "../img/test_054_p25.jpg"
+    },
+    {
+      "texto": "Los conos de la fotografia ..",
+      "opciones": [
+        "sirven solo para senalizar un nuevo carril.",
+        "tienen prioridad sobre el resto de senales.",
+        "tienen prioridad sobre el resto de senales, salvo las de los agentes de la autoridad."
+      ],
+      "imagen": "../img/test_054_p26.jpg"
+    },
+    {
+      "texto": "En caso de sufrir un reventon circulando por una via a velocidad elevada, ¿zes aconsejable pisar el pedal de freno con brusquedad?",
+      "opciones": [
+        "Si, para mantener con mayor facilidad la trayectoria del vehiculo.",
+        "No, el frenado debe ser suave y progresivo.",
+        "Solo si el reventon se produce en una de las ruedas delanteras."
+      ]
+    },
+    {
+      "texto": "Para evitar los atropellos, ¿ique deben hacer los conductores?",
+      "opciones": [
+        "Indicar a los peatones cuando deben cruzar.",
+        "Respetarlaprioridaddepasodelospeatones."
+      ],
+      "imagen": "../img/test_054_p28.jpg"
+    },
+    {
+      "texto": "¿Por que tipo de vias no pueden circular los ciclomotores?",
+      "opciones": [
+        "Por las autopistas yautovias.",
+        "Porlas autopistasunicamente.",
+        "Por las vias que no tengan arcen."
+      ]
+    },
+    {
+      "texto": "Los accidentes de trafico, ¿ison una de las principales causas de lesiones?",
+      "opciones": [
+        "No,pero son una delas principales causas de mortalidad.",
+        "No,y tampoco son una de las principales causas de mortalidad.",
+        "Si, y tambien son una de las principales causas de mortalidad."
+      ],
+      "imagen": "../img/test_054_p30.jpg"
+    }
+  ]
+}

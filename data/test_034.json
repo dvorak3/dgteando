@@ -1,0 +1,266 @@
+{
+  "test_id": 34,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "El conductorde un vehiculoque pretende incorporarsea la circulacion esta obligado a...",
+      "opciones": [
+        "cerciorarse previamente dequepuede hacerlo sin peligro.",
+        "seguir siempre las indicaciones de otra persona.",
+        "ponerel intermitente,inicamente."
+      ],
+      "imagen": "../img/test_034_p01.jpg"
+    },
+    {
+      "texto": "Un turismo con remolque, ¿ztiene permitido circular por un carril adicional?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Si, unicamente cuando el remolque sea ligero."
+      ],
+      "imagen": "../img/test_034_p02.jpg"
+    },
+    {
+      "texto": "A la vista de la senal que realiza el agente, ¿icuando podra reanudar la marcha?",
+      "opciones": [
+        "Cuando baje losbrazos.",
+        "Solo cuando lo indique con otra senal.",
+        "Solo cuando cambiedeposicion o efectue otra senal."
+      ],
+      "imagen": "../img/test_034_p03.jpg"
+    },
+    {
+      "texto": "En una via interurbana insuficientemente iluminada, un turismo circula a menos de 40 km/h. ¿Puede circular con la luz de corto alcance?",
+      "opciones": [
+        "Si, pero puede llevar la de largo alcance cuando no deslumbra.",
+        "No, debe llevar la luz de largo alcance obligatoriamente.",
+        "No."
+      ]
+    },
+    {
+      "texto": "¿Esta permitido adelantar en un tunel?",
+      "opciones": [
+        "Si, exceptoa los vehiculos degrandes dimensiones.",
+        "Si, cuando exista mas de un carril para cada sentido de circulacion.",
+        "No, independientementedel numero de carriles."
+      ],
+      "imagen": "../img/test_034_p05.jpg"
+    },
+    {
+      "texto": "A un motorista herido en accidente, ¿zdebe quitarle el casco?",
+      "opciones": [
+        "No, como norma general.",
+        "Si, para que respire mejor.",
+        "Hare loque eél mediga."
+      ],
+      "imagen": "../img/test_034_p06.jpg"
+    },
+    {
+      "texto": "¿Cual es la prueba mas frecuente en los controles de alcoholemia?",
+      "opciones": [
+        "Caminar sobre una linea recta.",
+        "Analisis de sangre.",
+        "Prueba del aire espirado mediante etilometro."
+      ],
+      "imagen": "../img/test_034_p07.jpg"
+    },
+    {
+      "texto": "¿Que factores intervienen en un accidente?",
+      "opciones": [
+        "Elfactorhumano,exclusivamente.",
+        "El factor humano, el factor via y entorno y el factor vehiculo.",
+        "El factor via yel factor humano exclusivamente."
+      ]
+    },
+    {
+      "texto": "Las distracciones pueden ocurrir cuando consigue desviar su atencion algo de...",
+      "opciones": [
+        "fuera del vehiculo, solamente.",
+        "dentro y fuera del vehiculo.",
+        "dentro del vehiculo, solamente."
+      ],
+      "imagen": "../img/test_034_p09.jpg"
+    },
+    {
+      "texto": "En una via interurbana de doble sentido y tres carriles separados por lineas discontinuas, ¿idonde se situara el conductor de un turismo para cambiar de direccion a la izquierda?",
+      "opciones": [
+        "En el carril central.",
+        "En el carril situado a la izquierda de la calzada.",
+        "En el carril de su derecha, como norma general."
+      ]
+    },
+    {
+      "texto": "Esta senal, ¿zque indica?",
+      "opciones": [
+        "Que se debeguardar, como minimo, una distancia de 70 metros con el vehiculo que circule delante.",
+        "Recuerda, de forma generica, que debe guardarse la distancia de seguridad reglamentaria entre vehiculos.",
+        "Que esta prohibido el adelantamiento."
+      ],
+      "imagen": "../img/test_034_p11.jpg"
+    },
+    {
+      "texto": "Tomar bebidas estimulantes, ¿ipuede prevenir el sueno?",
+      "opciones": [
+        "Si, cuando se toman habitualmente.",
+        "A cortoplazo si,perodespuespuedevolveraaparecer el sueno.",
+        "No,solopuedeprevenirse conbebidasgaseosas."
+      ],
+      "imagen": "../img/test_034_p12.jpg"
+    },
+    {
+      "texto": "Para ahorrar carburante, ¿ique se debe hacer?",
+      "opciones": [
+        "Circular con lasventanillasabiertas.",
+        "Circular siempre a mas de 100 km/h.",
+        "Circularcon las ventanillas cerradas."
+      ],
+      "imagen": "../img/test_034_p13.jpg"
+    },
+    {
+      "texto": "Para incorporarse a la circulacion, ¿ise puede dar marcha atras?",
+      "opciones": [
+        "Si, es una de las maniobras en las que esta permitido.",
+        "No, en ningun caso.",
+        "Si,perosoloenviasurbanas."
+      ]
+    },
+    {
+      "texto": "En esta via, ¿zpor donde debe circular un ciclomotor?",
+      "opciones": [
+        "Por la calzada o el arcen.",
+        "Por el arcen de la derecha. b) Por el arcen de la derecha",
+        "Por la calzada, lo mas cerca posible del borde derecho."
+      ],
+      "imagen": "../img/test_034_p15.jpg"
+    },
+    {
+      "texto": "Si estaciona su turismo, debera...",
+      "opciones": [
+        "dejarcolocada laprimera velocidad enpendientes descendentes.",
+        "dejarcolocada laprimera velocidad enpendientes ascendentes.",
+        "apoyar una de las ruedas directrices en el bordillo de la acera."
+      ]
+    },
+    {
+      "texto": "Para un uso eficaz del cinturon de seguridad ...",
+      "opciones": [
+        "no colocara nada en el asiento para impedir el efecto submarino.",
+        "si es necesario colocara un cojin sobre el asiento para que el cinturon este a la altura adecuada.",
+        "desconectara el airbag porque el cinturon de seguridad no es obligatorio cuando el vehiculo tiene airbag."
+      ]
+    },
+    {
+      "texto": "En los accidentes de circulacion con motocicletas y ciclomotores implicados, una de las principales causas de mortalidad es...",
+      "opciones": [
+        "elpesodelvehiculo.",
+        "la friccion con el asfalto.",
+        "no llevarcasco."
+      ],
+      "imagen": "../img/test_034_p18.jpg"
+    },
+    {
+      "texto": "La flecha verde del semaforo de carril, ¿zque indica?",
+      "opciones": [
+        "Que el carril esta abierto,pero se deben obedecer las senales y normas de preferencia.",
+        "Queel carril esta abiertoy otorga preferencia sobrelos demas vehiculos.",
+        "Queel carril esta abierto,exceptoparavehiculos pesados."
+      ],
+      "imagen": "../img/test_034_p19.jpg"
+    },
+    {
+      "texto": "En esta linea longitudinal discontinua, ¿ique indica una separacion mas corta de los trazos?",
+      "opciones": [
+        "Que esta proximo un carril especial.",
+        "Que esta prohibido cambiar de carril.",
+        "Que estaproximo un tramo, con un peligro especial."
+      ],
+      "imagen": "../img/test_034_p20.jpg"
+    },
+    {
+      "texto": "En un vehiculo de mas de 5 metros, destinado al transporte de mercancias, una carga de longitud indivisible puede sobresalir...",
+      "opciones": [
+        "el 15% de la longitud del vehiculo por delante y por detras.",
+        "3metros por la parte anterior y2 por la posterior.",
+        "2metros por laparte anterior y 3por la posterior."
+      ],
+      "imagen": "../img/test_034_p21.jpg"
+    },
+    {
+      "texto": "Conducir bajo los efectos de las drogas, ¿zpuede llevar aparejada la perdida de puntos del permiso de conducir?",
+      "opciones": [
+        "Si, en todo caso.",
+        "Solo cuando se circule en vias fuera de poblado.",
+        "No, puesto que no es una infraccion grave."
+      ]
+    },
+    {
+      "texto": "Un resfriado comun, ¿ipuede afectar a la capacidad para conducir?",
+      "opciones": [
+        "Si, porque puedeproducir somnolencia.",
+        "No.",
+        "Unicamenteenpersonasmayores."
+      ]
+    },
+    {
+      "texto": "Como norma general las senales se aplican...",
+      "opciones": [
+        "a toda la via.",
+        "solo al carril derecho.",
+        "atodala anchura delacalzada."
+      ],
+      "imagen": "../img/test_034_p24.jpg"
+    },
+    {
+      "texto": "En una interseccion sin senalizacion expresa, la norma general de preferencia de paso es...",
+      "opciones": [
+        "ceder el paso a los vehiculos que circulen por la izquierda.",
+        "ceder el paso alos vehiculosmas rapidos,ciclistas ypeatones.",
+        "ceder el paso a los vehiculos que se aproximen por la derecha."
+      ],
+      "imagen": "../img/test_034_p25.jpg"
+    },
+    {
+      "texto": "A medida que se aumenta la velocidad...",
+      "opciones": [
+        "esmenospeligrosocircular.",
+        "es mas facil controlar el vehiculo.",
+        "esmas dificil controlar el vehiculo."
+      ]
+    },
+    {
+      "texto": "¿Qué indica esta senal?",
+      "opciones": [
+        "Bifurcacion hacia la izquierda en calzada de tres carriles.",
+        "Inicio de un nuevo carril hacia la izquierda en una calzada de dos carriles.",
+        "Obligacion de seguir de frente porque el carril izquierdo desaparece."
+      ],
+      "imagen": "../img/test_034_p27.jpg"
+    },
+    {
+      "texto": "Las motocicletas sin sidecar, ¿zcuantas luces de corto alcance deben llevar instaladas?",
+      "opciones": [
+        "Una o dos delante.",
+        "Solo una delante.",
+        "Dos,obligatoriamente,unadelantey otra detras."
+      ],
+      "imagen": "../img/test_034_p28.jpg"
+    },
+    {
+      "texto": "La varilla del aceite del motor, ¿ipara que sirve?",
+      "opciones": [
+        "Para comprobar la temperatura del aceite.",
+        "Para comprobar lapresion del aceite.",
+        "Para comprobar el nivel del aceite."
+      ],
+      "imagen": "../img/test_034_p29.jpg"
+    },
+    {
+      "texto": "Negarse a realizar la prueba de alcoholemia...",
+      "opciones": [
+        "es un delito castigado por el codigo penal.",
+        "solamente suponeuna multadehasta 300euros.",
+        "no tiene importancia cuando no se ha producido un accidente."
+      ]
+    }
+  ]
+}

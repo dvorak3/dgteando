@@ -1,0 +1,265 @@
+{
+  "test_id": 47,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Si circula por un tunel suficientemente iluminado, ¿ique alumbrado debe utilizar?",
+      "opciones": [
+        "El alumbrado de posicion y el de corto alcance.",
+        "Solamente el alumbrado de posicion.",
+        "El alumbradode largo alcance."
+      ],
+      "imagen": "../img/test_047_p01.jpg"
+    },
+    {
+      "texto": "Cuando prevea que va a quedar detenido dentro del tinel mas de dos minutos, ¿ique debe hacer?",
+      "opciones": [
+        "Dar media vuelta con cuidado.",
+        "Apagar el motor.",
+        "Apagarlas luces."
+      ]
+    },
+    {
+      "texto": "Los ocupantes que viajen en su vehiculo, ¿icomo deben descender del mismo?",
+      "opciones": [
+        "Por cualquier lado, siempreque se haga con rapidez.",
+        "Por el lado mas proximo al borde de la via, si es posible, y siempre con el vehiculo inmovilizado.",
+        "Con el vehiculo inmovilizado si es posible, y por cualquiera de los dos lados."
+      ]
+    },
+    {
+      "texto": "Antes de cambiar de carril, ¿zcomo debe avisar?",
+      "opciones": [
+        "Con los indicadores de direccion.",
+        "Con el claxon.",
+        "Conlaslucesdefrenado"
+      ],
+      "imagen": "../img/test_047_p04.jpg"
+    },
+    {
+      "texto": "Cuando tomo medicinas que afectan al sistema nervioso, ¿ique debo hacer para conducir?",
+      "opciones": [
+        "Nodebo conducir hasta dos horas despuesde tomarlas.",
+        "Consultar al medico y obedecer sus indicaciones.",
+        "Nada, porque mejoran mis capacidades."
+      ]
+    },
+    {
+      "texto": "Este ciclista...",
+      "opciones": [
+        "deberia circular lo mas cerca posible del eje central de la calzada.",
+        "no deberia circular por esa via, pues no tiene arcen.",
+        "circula correctamente."
+      ],
+      "imagen": "../img/test_047_p06.jpg"
+    },
+    {
+      "texto": "Los ciclomotores, ¿ipueden circular por el arcen en columna de a dos?",
+      "opciones": [
+        "No.",
+        "Si,de forma excepcional cuando el arcen sea transitable y suficiente.",
+        "Si, siempre."
+      ]
+    },
+    {
+      "texto": "La Organizacion Mundial de la Salud (oMs) considera que la siniestralidad vial...",
+      "opciones": [
+        "no es un problema de salud publica sino de educacion, unicamente.",
+        "es un problema secundario de salud publica.",
+        "es un problema prioritario de salud publica en todo el mundo."
+      ]
+    },
+    {
+      "texto": "La tasa de alcoholemia realmente segura para conducir es...",
+      "opciones": [
+        "o,o gramos de alcohol por litro de sangre.",
+        "0,10 gramos de alcohol por litro de sangre.",
+        "0,15 gramos de alcohol por litro de sangre."
+      ]
+    },
+    {
+      "texto": "La senal prohibe circular a mas de 40 km/h. ¿Hasta donde esta prohibido?",
+      "opciones": [
+        "Hasta que encuentre una senal de fin de prohibido adelantar.",
+        "Hasta que finalice el tramo de curvas.",
+        "Hasta quefinalice la linea longitudinal continua."
+      ],
+      "imagen": "../img/test_047_p10.jpg"
+    },
+    {
+      "texto": "Esta senal indica...",
+      "opciones": [
+        "peligro por la proximidad de una interseccion con prioridad sobre la via a la izquierda.",
+        "prohibido girar a la izquierda, debiendo continuar de frente.",
+        "la existencia a la izquierda de una via sin salida."
+      ],
+      "imagen": "../img/test_047_p11.jpg"
+    },
+    {
+      "texto": "En los pasos para peatones no regulados por semaforo o agente, ¿ztienen preferencia los peatones?",
+      "opciones": [
+        "No,aunquepor cortesia selespuedecederel paso.",
+        "Si,encualquiercaso.",
+        "Si,solamenteenviasurbanas."
+      ],
+      "imagen": "../img/test_047_p12.jpg"
+    },
+    {
+      "texto": "¿Qué indica este agente?",
+      "opciones": [
+        "Indica que a partir de su paso, la calzada queda de nuevo abierta al trafico.",
+        "Indica al resto de los conductores yusuarios la necesidad de extremar la precaucion.",
+        "Indica que la calzada por la que circula queda temporalmente cerrada al trafico."
+      ],
+      "imagen": "../img/test_047_p13.jpg"
+    },
+    {
+      "texto": "¿Como debe colocar el navegador GPS portatil en el vehiculo?",
+      "opciones": [
+        "Donde no entorpezca ni la vision ni el despliegue del airbag.",
+        "Debajo del volante, tan cerca del suelo como sea posible.",
+        "Justo detras del volante, a la altura de los ojos del conductor."
+      ],
+      "imagen": "../img/test_047_p14.jpg"
+    },
+    {
+      "texto": "Los cinturones de seguridad, ¿ison eficaces para prevenir lesiones?",
+      "opciones": [
+        "Si.",
+        "No.",
+        "Si,pero solo cuando seconduce a pocavelocidad."
+      ],
+      "imagen": "../img/test_047_p15.jpg"
+    },
+    {
+      "texto": "En un tuinel, si circula sin intencion de adelantar, debe mantener con el vehiculo que circula delante una distancia...",
+      "opciones": [
+        "que permita al que circule detras adelantar con seguridad.",
+        "de,almenos,100metros.",
+        "suficientepara no colisionar con el en casode frenado brusco."
+      ],
+      "imagen": "../img/test_047_p16.jpg"
+    },
+    {
+      "texto": "Cuando se estropea el tubo de escape, ¿ique sucede?",
+      "opciones": [
+        "Elvehiculohacemasruido.",
+        "Disminuye el ruido.",
+        "El vehiculo consumemas combustible."
+      ],
+      "imagen": "../img/test_047_p17.jpg"
+    },
+    {
+      "texto": "Cuando para realizar un cambio de sentido obstaculiza la marcha de los vehiculos que circulan detras, debera...",
+      "opciones": [
+        "abstenerse de realizarlo y continuar su marcha.",
+        "salir dela calzada porla derecha,y esperarhastaquelas condiciones permitan hacerla maniobra.",
+        "hacersenales con la luz de freno para advertir sumaniobra."
+      ],
+      "imagen": "../img/test_047_p18.jpg"
+    },
+    {
+      "texto": "¿Pueden algunas motocicletas llevar sistemas de estabilidad de frenado o airbag?",
+      "opciones": [
+        "No,estos sistemas solo estan disponibles para los turismos.",
+        "No, esta prohibido.",
+        "Si,para evitaraccidentesoreducir la gravedad delas lesiones."
+      ]
+    },
+    {
+      "texto": "Esta senal indica la velocidad...",
+      "opciones": [
+        "maximapermitida.",
+        "maximaaconsejada.",
+        "minima obligatoria."
+      ],
+      "imagen": "../img/test_047_p20.jpg"
+    },
+    {
+      "texto": "El turismo blanco sale de una gasolinera para incorporarse a la circulacion, en caso necesario, ¿zcuando tiene que ceder el paso?",
+      "opciones": [
+        "Cuando se incorporapor la derecha.",
+        "Cuando se incorpora por la izquierda.",
+        "Cuando se incorpore por la derecha o por la izquierda."
+      ],
+      "imagen": "../img/test_047_p21.jpg"
+    },
+    {
+      "texto": "En esta via con tres calzadas separadas, ¿ipor que calzada debe circular?",
+      "opciones": [
+        "Solo por la calzada de la derecha.",
+        "Por la calzada de la derecha y por la central cuando haya senales que asime lo permitan.",
+        "Soloporlacalzadacentral."
+      ],
+      "imagen": "../img/test_047_p22.jpg"
+    },
+    {
+      "texto": "En via urbana, las personas que empujen un ciclomotor por la calzada o el arcen estan obligadas a circular...",
+      "opciones": [
+        "por el lado derecho.",
+        "indistintamente, por cualquiera de los dos lados.",
+        "por el lado izquierdo."
+      ]
+    },
+    {
+      "texto": "Esta senal indica...",
+      "opciones": [
+        "la proximidad de un cambio de sentido.",
+        "quelaproximasalidaestaa300metros.",
+        "laproximidad de una salida en carretera convencional."
+      ],
+      "imagen": "../img/test_047_p24.jpg"
+    },
+    {
+      "texto": "Cuando el titular de un permiso de conducir pierda parte de su asignacion total de puntos, ¿ipuede recuperarlos?",
+      "opciones": [
+        "No, una vez perdidos no es posible recuperarlos.",
+        "Si, obteniendo de nuevo el permiso de conduccion.",
+        "Si, realizando un curso de sensibilizacion y reeducacion vial."
+      ]
+    },
+    {
+      "texto": "La velocidad del vehiculo se puede reducir...",
+      "opciones": [
+        "solo con el motor.",
+        "con los frenosy con el motor.",
+        "solo con los frenos."
+      ]
+    },
+    {
+      "texto": "Los medicamentos naturales, ¿ipueden tener efectos negativos para la conduccion?",
+      "opciones": [
+        "Si, todos.",
+        "Si, en algunos casos.",
+        "No,son siempre inofensivos."
+      ],
+      "imagen": "../img/test_047_p27.jpg"
+    },
+    {
+      "texto": "Un vehiculo especial que carece de senalizacion de frenado no debe rebasar la velocidad maxima de...",
+      "opciones": [
+        "70 km/h.",
+        "40 km/h.",
+        "25 km/h."
+      ],
+      "imagen": "../img/test_047_p28.jpg"
+    },
+    {
+      "texto": "Si estaciona en una travesia insuficientemente iluminada, ¿ique luces debe dejar encendidas?",
+      "opciones": [
+        "Las deposicion y las de corto alcance.",
+        "Ninguna.",
+        "Las de posicion,pudiendo sustituirlas por las deestacionamiento si el vehiculo esta estacionado en linea."
+      ]
+    },
+    {
+      "texto": "Una linea discontinua con trazos muy juntos, ¿ique indica?",
+      "opciones": [
+        "La proximidad de un carril para trafico lento.",
+        "La proximidad de un tramo peligroso.",
+        "Un carril especial."
+      ],
+      "imagen": "../img/test_047_p30.jpg"
+    }
+  ]
+}

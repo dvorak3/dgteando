@@ -1,0 +1,262 @@
+{
+  "test_id": 67,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "La incorporacion desde un inmueble a la via publica, debe realizarse...",
+      "opciones": [
+        "a una velocidadquepermita la detencion en el acto,y cediendo el paso a peatones y vehiculos.",
+        "advirtiendo con la senal acustica y la senal de emergencia.",
+        "rapidamentepara no entorpecera peatones yvehiculos."
+      ],
+      "imagen": "../img/test_067_p01.jpg"
+    },
+    {
+      "texto": "Esta senal indica que...",
+      "opciones": [
+        "hay una salida a traves de la cual podra hacerse un cambio de sentido a distinto nivel.",
+        "existe un tunel.",
+        "proximamente existe una entrada a una autopista."
+      ],
+      "imagen": "../img/test_067_p02.jpg"
+    },
+    {
+      "texto": "Cuando llueve, ¿zhay que prestar especial atencion a alguna zona de la via en particular?",
+      "opciones": [
+        "Si,a los badenes yalas zonas en las que sepueden producir charcos.",
+        "No,puesto que circular con lluvia es muy peligroso en todas partes.",
+        "No, unicamente hay que prestar atencion cuando hay ninos en las proximidades."
+      ]
+    },
+    {
+      "texto": "En esta interseccion y segun la senalizacion, ¿za que vehiculos debe ceder el paso?",
+      "opciones": [
+        "Atodoslos que se aproximanpor la derecha.",
+        "A los que se incorporan a la via.",
+        "A ninguno."
+      ],
+      "imagen": "../img/test_067_p04.jpg"
+    },
+    {
+      "texto": "¿Que haremos al encontrar un semaforo rojo en la entrada de un tunel?",
+      "opciones": [
+        "Pasarconprecaucion.",
+        "Esperar hasta que cambieaverde.",
+        "Esperarhasta que se apague la luz roja."
+      ],
+      "imagen": "../img/test_067_p05.jpg"
+    },
+    {
+      "texto": "Para evitar los atropellos, ¿ique deben hacer los conductores?",
+      "opciones": [
+        "Indicaralos peatones cuando deben cruzar.",
+        "Respetarlaprioridaddepasodelospeatones."
+      ],
+      "imagen": "../img/test_067_p06.jpg"
+    },
+    {
+      "texto": "¿Que efectos tiene en la conduccion una conversacion por el movil que supera el minuto y medio?",
+      "opciones": [
+        "El conductor deja de percibir una parte importante de las senales, incluso con el dispositivo demanos libres.",
+        "La velocidad media aumenta, incluso con el dispositivo de manos libres.",
+        "El conductor no deja de percibir las senales si usa el dispositivo demanos libres."
+      ]
+    },
+    {
+      "texto": "En vias interurbanas y en calzadas con mas de un carril para el mismo sentido de marcha, ¿ipor donde circulara normalmente un automovil?",
+      "opciones": [
+        "Por el carril central.",
+        "Por el carril derecho.",
+        "Por el que mas convenga a su destino."
+      ],
+      "imagen": "../img/test_067_p08.jpg"
+    },
+    {
+      "texto": "Las motocicletas estan obligadas a llevar encendida la luz de cruce...",
+      "opciones": [
+        "solo entre la puesta y la salida del sol.",
+        "durante todo el dia por cualquier via.",
+        "durante el dia por vias interurbanas y solo entre la puesta y la salida del sol por vias urbanas."
+      ]
+    },
+    {
+      "texto": "Esta senal indica...",
+      "opciones": [
+        "unazonadefrenado.",
+        "un area de descanso.",
+        "el acceso a un lago en una ciudad."
+      ],
+      "imagen": "../img/test_067_p10.jpg"
+    },
+    {
+      "texto": "¿Cual es el factor que influye mas en los accidentes de trafico?",
+      "opciones": [
+        "El factor humano.",
+        "EI factor via y entorno.",
+        "El factor vehiculo."
+      ]
+    },
+    {
+      "texto": "Estas senales significan...",
+      "opciones": [
+        "presenalizacion en autopista o autovia hacia cualquiercarreteraydireccion propia",
+        "salida inmediata hacia carretera convencional ydireccion propia en autopista o autovia.",
+        "presenalizacion encarretera convencionalhaciaautopistaoautovia."
+      ],
+      "imagen": "../img/test_067_p12.jpg"
+    },
+    {
+      "texto": "En este ciclomotor, ¿zes obligatorio utilizar casco?",
+      "opciones": [
+        "Si, siempre.",
+        "Solamente envias interurbanas.",
+        "No, solo cuando el conductor lo considere necesario."
+      ],
+      "imagen": "../img/test_067_p13.jpg"
+    },
+    {
+      "texto": "Al mezclar las drogas con alcohol...",
+      "opciones": [
+        "las reaccionespuedenserprevisiblesy,portanto,controlables.",
+        "lasreacciones pueden ser imprevisibles y,portanto,peligrosas.",
+        "no seproducen reaccionesporque las drogas anulan la accion del alcohol."
+      ]
+    },
+    {
+      "texto": "¿Tienen todos los factores de riesgo la misma relevancia como causa de un accidente?",
+      "opciones": [
+        "No, la mayoria de los accidentes se deben al factor humano.",
+        "Si, ya que los factores conductor, via y vehiculo intervienen siempre en un accidente.",
+        "No, el factor humano apenas influye."
+      ]
+    },
+    {
+      "texto": "La ingestion de alcohol produce...",
+      "opciones": [
+        "Aumento de la distancia de frenado.",
+        "Disminuciondelcampovisual.",
+        "Disminucionde la distancia defrenado."
+      ]
+    },
+    {
+      "texto": "Si tiene su permiso B desde hace mas de un ano, y ahora obtiene el de la clase A, ¿iesta obligado a llevar la placa L en su motocicleta?",
+      "opciones": [
+        "Si, durante un ano, en la parte trasera.",
+        "No.",
+        "Si, en la parte delantera, durante un ano."
+      ],
+      "imagen": "../img/test_067_p17.jpg"
+    },
+    {
+      "texto": "Un vehiculo que circule por un carril asf senalizado...",
+      "opciones": [
+        "Podra pagar con el sistema detelepeaje o con tarjeta, pero no enmetalico.",
+        "Solo podra efectuar el pago del peaje mediante el sistema de telepeaje.",
+        "Podra efectuar el pago en metalico, con el telepeaje o con tarjeta."
+      ],
+      "imagen": "../img/test_067_p18.jpg"
+    },
+    {
+      "texto": "En el borde izquierdo de una calzada, ¿ise puede parar con caracter general?",
+      "opciones": [
+        "Si, siemprequeno obstaculicela circulacion.",
+        "No, en ningun caso.",
+        "Si, en vias urbanas de sentido unico."
+      ],
+      "imagen": "../img/test_067_p19.jpg"
+    },
+    {
+      "texto": "A la vista de la senal, ¿zpodremos realizar un cambio de sentido de la marcha?",
+      "opciones": [
+        "Si.",
+        "No."
+      ],
+      "imagen": "../img/test_067_p20.jpg"
+    },
+    {
+      "texto": "La tasa maxima de alcohol para un conductor de autobus es de...",
+      "opciones": [
+        "0,25 miligramos por litro de aire espirado.",
+        "0,15 miligramos por litro de aire espirado.",
+        "0,40 miligramos por litro deaire espirado."
+      ]
+    },
+    {
+      "texto": "Esta senal indica la entrada a una via reservada para...",
+      "opciones": [
+        "ciclomotores.",
+        "ciclos.",
+        "ciclosy ciclomotores."
+      ],
+      "imagen": "../img/test_067_p22.jpg"
+    },
+    {
+      "texto": "En esta via, ¿zesta permitido superar la velocidad maxima generica de la via para adelantar?",
+      "opciones": [
+        "Si, hasta los 140 km/h.",
+        "Si, en 20 km/h.",
+        "No."
+      ],
+      "imagen": "../img/test_067_p23.jpg"
+    },
+    {
+      "texto": "Si estamos en una calle sin salida y no existe ninguna otra posibilidad, ¿zcuantos metros podemos circular marcha atras?",
+      "opciones": [
+        "Menos de 15metros.",
+        "Justo hasta la primera interseccion sin invadirla.",
+        "Los suficientes para salir de la calle aun invadiendo un cruce de vias."
+      ],
+      "imagen": "../img/test_067_p24.jpg"
+    },
+    {
+      "texto": "Un dispositivo de retencion infantil, ¿icomo se debe elegir?",
+      "opciones": [
+        "El demayortamano,paraquepueda usarsedurante mastiempo.",
+        "En funcion de la estatura del menor y de los limites establecidos por el fabricante.",
+        "En funcion de la edad."
+      ],
+      "imagen": "../img/test_067_p25.jpg"
+    },
+    {
+      "texto": "En un tramo recto, de noche, sin condiciones atmosfericas adversas, ¿ies correcto el alumbrado que lleva encendido este vehiculo?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Unicamente cuando circule por una calzada estrecha."
+      ],
+      "imagen": "../img/test_067_p26.jpg"
+    },
+    {
+      "texto": "Si nos quedamos detenidos en un tunel por congestion del trafico, ¿ique debemos hacer?",
+      "opciones": [
+        "Dejar puestas lasluces deemergencia temporalmenteymantener encendidas las luces deposicion.",
+        "Dejar puestas las luces de cruce yapagar el motor.",
+        "Apagarelmotory lasluces,puesnosquedaremos sinbateria."
+      ]
+    },
+    {
+      "texto": "Un vehiculo circula a velocidad anormalmente reducida cuando...",
+      "opciones": [
+        "circula a velocidad inferior a la minima permitida en esa via.",
+        "circula a velocidad inferior a la del resto de los conductores.",
+        "no seadaptaa las circunstancias de la via."
+      ]
+    },
+    {
+      "texto": "¿Esta senal prohibe efectuar un cambio de direccion a la izquierda?",
+      "opciones": [
+        "Sí.",
+        "No."
+      ],
+      "imagen": "../img/test_067_p29.jpg"
+    },
+    {
+      "texto": "¿Es correcto circular con una furgoneta con las puertas traseras entreabiertas y sobresaliendo la carga un 10% de la longitud del vehiculo?",
+      "opciones": [
+        "Si, siempreque la carga este bien sujeta y senalizada.",
+        "No."
+      ],
+      "imagen": "../img/test_067_p30.jpg"
+    }
+  ]
+}

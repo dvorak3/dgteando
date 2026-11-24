@@ -1,0 +1,264 @@
+{
+  "test_id": 62,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "¿Es aconsejable conducir un turismo calzado con unas chanclas?",
+      "opciones": [
+        "No,porque podrian caerse y dificultar el manejo de los pedales.",
+        "Si, porque al no sujetar el pie, es mas facil ejercer la presion correcta sobre los pedales.",
+        "Si, porque permiten un manejo mas rapido y seguro de los pedales."
+      ],
+      "imagen": "../img/test_062_p01.jpg"
+    },
+    {
+      "texto": "¿Cual es la sancion por no tener el seguro obligatorio del vehiculo?",
+      "opciones": [
+        "Una multa, pero sin inmovilizacion del vehiculo.",
+        "Una multa, y ademas se podra inmovilizar el vehiculo.",
+        "La inmovilizacion del vehiculo,pero no supone sancion economica."
+      ],
+      "imagen": "../img/test_062_p02.jpg"
+    },
+    {
+      "texto": "¿Al aumentar la velocidad incrementa la probabilidad de muerte en caso de atropello a un peaton?",
+      "opciones": [
+        "No, la velocidad del vehiculo no tiene impacto significativo en la probabilidad de muerte deunpeaton atropellado.",
+        "Si, al aumentar la velocidad de un vehiculo se incrementa la probabilidad de fatalidad en caso de atropello a un peaton.",
+        "La probabilidad es la misma, dependera exclusivamente del estado de salud del peaton."
+      ],
+      "imagen": "../img/test_062_p03.jpg"
+    },
+    {
+      "texto": "Si los paneles de mensaje variable indican que los turismos con distintivo ambiental B pueden circular por un carril VAo, ¿Que ocupacion minima debe tener el vehiculo?",
+      "opciones": [
+        "Dos ocupantes, incluido el conductor.",
+        "Unocupante.",
+        "Dos ocupantes, sin incluir al conductor."
+      ],
+      "imagen": "../img/test_062_p04.jpg"
+    },
+    {
+      "texto": "El efecto submarino, que en un accidente de trafico puede provocar graves lesiones al conductor, esta relacionado con...",
+      "opciones": [
+        "Una incorrectapresiondelosneumaticos.",
+        "Un mal uso del cinturon de seguridad.",
+        "Un consumo excesivo de alcohol, medicamentos o drogas de abuso."
+      ],
+      "imagen": "../img/test_062_p05.jpg"
+    },
+    {
+      "texto": "Si queda detenido en un atasco, ¿ique distancia es aconsejable mantener con el vehiculo de delante?",
+      "opciones": [
+        "Unmetro como maximo.",
+        "Unespaciominimopara ocuparmenos espacio.",
+        "Dos o tres metros para no golpear al vehiculo de delante en caso de alcance trasero."
+      ],
+      "imagen": "../img/test_062_p06.jpg"
+    },
+    {
+      "texto": "Si un agente le solicita su permiso de conduccion, ¿en que medio puede mostrarlo?",
+      "opciones": [
+        "Tanto en documento fisico como en formato digital a traves de la App miDGT.",
+        "Solo en documento fisico.",
+        "Solo en documento digital."
+      ],
+      "imagen": "../img/test_062_p07.jpg"
+    },
+    {
+      "texto": "Debido al deterioro psicofisico consecuencia del envejecimiento, ¿zque situaciones de trafico ofrecen mas dificultades a las personas mayores?",
+      "opciones": [
+        "Los giros a la izquierda, especialmente en vias urbanas.",
+        "Los estacionamientos, sobretodo cuando serealizan a la derecha de la calzada.",
+        "Las situaciones complejas, como incorporarse a una via en la que se circula a alta c) Las situaciones complejas, como incorporarse a una via en la que se circula a alta velocidad."
+      ],
+      "imagen": "../img/test_062_p08.jpg"
+    },
+    {
+      "texto": "Como mantenimiento preventivo, ¿zes conveniente realizar una revision periodica del sistema dealumbrado del vehiculo?",
+      "opciones": [
+        "Si, para comprobar su correcto reglado y funcionamiento.",
+        "No, salvo en los vehiculos quedisponen de un sistema regulador automatico.",
+        "No, solamente, cuando lleve sobrecarga porquepodrian producirse cambios de inclinacion del alcanceluminoso. abiertas? O a) Si, para llevar bien ventilado el interior del vehiculo. Ob)Solo enprimavera. O c) No."
+      ],
+      "imagen": "../img/test_062_p09.jpg"
+    },
+    {
+      "texto": "¿Circula con su turismo por una via que se cruza con un carril-bici;zdebe ceder el paso a los ciclistas?",
+      "opciones": [
+        "No.Los ciclistas no tienen prioridad de paso frente a los vehiculos de motor.",
+        "Si, siempre.",
+        "Solo cuandolos ciclistas se aproximen porsuderecha."
+      ],
+      "imagen": "../img/test_062_p11.jpg"
+    },
+    {
+      "texto": "Si se observa un incremento en el consumo de carburante de un vehiculo, ¿ique se debe revisar?",
+      "opciones": [
+        "El circuito de refrigeracion y el de lubricacion.",
+        "El circuito de escape.",
+        "El circuito de encendido y el de alimentacion."
+      ],
+      "imagen": "../img/test_062_p12.jpg"
+    },
+    {
+      "texto": "¿Cuantos puntos del permiso de conducir puede perder un conductor si no hace uso del cinturon de seguridad?",
+      "opciones": [
+        "2 puntos.",
+        "3 puntos.",
+        "4 puntos."
+      ],
+      "imagen": "../img/test_062_p13.jpg"
+    },
+    {
+      "texto": "Una persona provista de un certificado medico que le exima de utilizar los sistemas de retencion del vehiculo, ¿zesta exenta de llevar abrochado el cinturon de seguridad?",
+      "opciones": [
+        "Sí.",
+        "No.",
+        "Unicamente fuera de poblado."
+      ],
+      "imagen": "../img/test_062_p14.jpg"
+    },
+    {
+      "texto": "Si tras un accidente de trafico, un herido no responde y aparentemente ha perdido la conciencia, ¿zque es lo primero que debemos hacer?",
+      "opciones": [
+        "Buscar hemorragias externas o internas, para evitar que se desangre.",
+        "Abrir la via aerea yretirar cuerpos extranos de la boca,mediantemaniobrasqueno manipulen la columna.",
+        "Tumbarle en la denominada posicion lateral de seguridad, para que respire con mayor facilidad."
+      ],
+      "imagen": "../img/test_062_p15.jpg"
+    },
+    {
+      "texto": "&Cual de las siguientes conductas es comun observar en un conductor que mientras conduce habla por el telefono movil, ¿aumentando el riesgo de sufrir un accidente?",
+      "opciones": [
+        "Llevar las ventanas traseras abiertas para mejorar la cobertura.",
+        "Desviacion de trayectoria, incluidos cambios de carril.",
+        "Conducir sinmarcha engranada, especialmente enpendientes ascendentes."
+      ],
+      "imagen": "../img/test_062_p16.jpg"
+    },
+    {
+      "texto": "De que advierte la senal luminosa de color amarillo auto, visible desde todas las direcciones, ¿que lleva el tractor agricola en su parte superior?",
+      "opciones": [
+        "De su presencia en la via o en sus inmediaciones.",
+        "De que no puede circular a una velocidad superior a 30 km/h.",
+        "De que circular en servicio urgente."
+      ],
+      "imagen": "../img/test_062_p17.jpg"
+    },
+    {
+      "texto": "A partir de la senal que se muestra en la imagen, ¿ique limitaciones existen para los turismos?",
+      "opciones": [
+        "Nopueden circular, el puerto esta cerrado",
+        "Deben utilizar cadenas para nieve u otro dispositivo equivalente.",
+        "Noexisterestriccionalgunaparalosturismos"
+      ],
+      "imagen": "../img/test_062_p18.jpg"
+    },
+    {
+      "texto": "Conducir bajo los efectos del alcohol o de las drogas, ¿iesta considerado como delito en el Codigo Penal?",
+      "opciones": [
+        "No, las sanciones son exclusivamente economicas.",
+        "Si.",
+        "Solo cuando el conductor sea responsable de un accidente con victimas mortales."
+      ],
+      "imagen": "../img/test_062_p19.jpg"
+    },
+    {
+      "texto": "Tras la exposicion prolongada de un vehiculo a altas temperaturas y al calor, ¿ies conveniente revisar si sus faros y pilotos han sufrido algun deterioro?",
+      "opciones": [
+        "Si, para comprobar deforma visual su estado y capacidad de iluminacion.",
+        "No, ya que el acabado de los faros esta hecho de un material que soporta todo tipo de factores sin deteriorarse.",
+        "Si, salvoen los vehiculosdepocaantiguedad."
+      ],
+      "imagen": "../img/test_062_p20.jpg"
+    },
+    {
+      "texto": "Situado en un vehiculo, ¿zque identifica la senal V-25 Distintivo ambiental?",
+      "opciones": [
+        "Suclasificacion ambiental en funcion de sunivel de emisiones y combustible empleado.",
+        "El tipo de combustible empleado y su nivel de radiacion atmosferica. b) El tipo de combustible empleado y su nivel de radiacion atmosferica.",
+        "Su clasificacion ambiental enfuncion de sunivel de contaminacion acustica."
+      ],
+      "imagen": "../img/test_062_p21.jpg"
+    },
+    {
+      "texto": "¿Cual es la accion correcta que debe tomar un conductor si ya ha ingresado en una interseccion y un agente levanta el brazo verticalmente?",
+      "opciones": [
+        "Detenerse de inmediato, independientemente de su ubicacion en la interseccion.",
+        "Continuar sutrayectoria a traves de la interseccion sin detenerse.",
+        "Detenerse solo si puede hacerlo de manera segura sin obstruir el trafico."
+      ],
+      "imagen": "../img/test_062_p22.jpg"
+    },
+    {
+      "texto": "En general, un conductor con estres...",
+      "opciones": [
+        "se distrae con mayor facilidad.",
+        "tomadecisiones mas rapidas y comete menos errores.",
+        "prestamayoratencion al entornoytarda mas en tomardecisiones."
+      ],
+      "imagen": "../img/test_062_p23.jpg"
+    },
+    {
+      "texto": "La velocidad, ¿ies un factor de riesgo que produce accidentes?",
+      "opciones": [
+        "No, si el vehiculo dispone de los ultimos sistemas de seguridad.",
+        "No; solo agrava las consecuencias del accidente pero no es un factor de riesgo.",
+        "Si,ypor eso debe ser la adecuada en cada momento."
+      ],
+      "imagen": "../img/test_062_p24.jpg"
+    },
+    {
+      "texto": "De los siguientes, ¿icual es un sintoma caracteristico de la aparicion de la fatiga durante la conduccion?",
+      "opciones": [
+        "Sedistingue mejor la informacion relevante de la irrelevante.",
+        "La disminucion en el numero de correcciones de la direccion.",
+        "El incremento de la agudeza visual."
+      ]
+    },
+    {
+      "texto": "¿Que alumbrado debera mantener encendido un vehiculo estacionado durante la noche en el arcen de una travesia insuficientemente iluminada?",
+      "opciones": [
+        "Ninguno,ya que es un estacionamiento dentro de poblado.",
+        "Las luces de largo alcance ylas luces de emergencia.",
+        "Las luces de posicion,que podra sustituirpor las de estacionamiento."
+      ]
+    },
+    {
+      "texto": "¿Cuales son los cuatro niveles de clasificacion ambiental utilizados para identificar el nivel de contaminacion de los vehiculos en funcion de sus emisiones?",
+      "opciones": [
+        "O emisiones, Eco, C y D.",
+        "Sin emisiones, Eco, A y B.",
+        "O emisiones, Eco, C y B."
+      ]
+    },
+    {
+      "texto": "¿Para qué sirve el carril de deceleracion?",
+      "opciones": [
+        "Paraque circulen losvehiculoslentos.",
+        "Para adelantar por la derecha.",
+        "Para reducir la velocidad al salir de una autopista."
+      ],
+      "imagen": "../img/test_062_p28.jpg"
+    },
+    {
+      "texto": "Conduce un turismo con un remolque de un solo eje. ¿Le afecta esta senal?",
+      "opciones": [
+        "No.",
+        "Si, porque lleva un remolque de un eje.",
+        "No, salvo que la M.M.A. del remolque supere la cifra indicada en la senal."
+      ],
+      "imagen": "../img/test_062_p29.jpg"
+    },
+    {
+      "texto": "¿La mayoria de los vehiculos disponen de un filtro en el habitaculo o filtro antipolen.zDebe sustituirse?",
+      "opciones": [
+        "Si, sobre todo al inicio de la primavera, ya que su capacidad de retencion es limitada.",
+        "Si, cada seis mesesporque es un elemento sujetoa inspeccion tecnicaperiodica.",
+        "No,ya que es un filtro que se limpia automaticamente."
+      ],
+      "imagen": "../img/test_062_p30.jpg"
+    }
+  ]
+}

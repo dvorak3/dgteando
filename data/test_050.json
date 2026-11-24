@@ -1,0 +1,266 @@
+{
+  "test_id": 50,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Desde un vehiculo policial un agente hace senales al vehiculo que circula delante para que se detenga, ¿ique debe hacer su conductor?",
+      "opciones": [
+        "Inmovilizar su vehiculo inmediatamente.",
+        "Senalizar la inmovilizacion con las luces de emergencia y detener el vehiculo inmediatamente.",
+        "Detenerse y permanecer en el interior del vehiculo."
+      ],
+      "imagen": "../img/test_050_p01.jpg"
+    },
+    {
+      "texto": "Cuando se circula marcha atras para estacionar...",
+      "opciones": [
+        "debe conectar la senal de emergencia.",
+        "no esta permitido recorrer mas de 15 metros ni invadir un cruce de vias.",
+        "la maniobra no puededurarmas de15 segundos."
+      ]
+    },
+    {
+      "texto": "Cual es la tasa maxima de alcohol permitida para poder conducir cualquier vehiculo, ¿con caracter general?",
+      "opciones": [
+        "0,10 miligramos de alcohol por litro de aire espirado.",
+        "0,50 miligramos de alcohol por litro de aire espirado.",
+        "0,25 miligramos de alcohol por litro de aire espirado."
+      ]
+    },
+    {
+      "texto": "Cuando llueve, ¿zhay que prestar especial atencion a alguna zona de la via en particular?",
+      "opciones": [
+        "Si, a los badenes yalas zonas en las que sepueden producir charcos.",
+        "No,puestoque circular con lluvia es muypeligroso en todas partes.",
+        "No,unicamente hay queprestar atencion cuandohayninos en las proximidades."
+      ]
+    },
+    {
+      "texto": "Con el permiso B, ¿zesta permitido conducir un taxi?",
+      "opciones": [
+        "En vias urbanas si, en vias interurbanas no.",
+        "Si, en todo tipo de vias.",
+        "No,es necesario el permiso dela clase C1."
+      ],
+      "imagen": "../img/test_050_p05.jpg"
+    },
+    {
+      "texto": "¿Que circunstancias favorecen la aparicion de la fatiga?",
+      "opciones": [
+        "Que el recorrido sea por una via muy conocida.",
+        "Conducir con pocotrafico,porqueexigemayor concentracion.",
+        "Mantener en el interior del vehiculo una temperatura elevada,porque puede afectar al estado psicofisico."
+      ]
+    },
+    {
+      "texto": "¿Que debe hacer si durante la marcha su vehiculo no puede alcanzar la velocidad minima exigida y existe peligro de alcance?",
+      "opciones": [
+        "Utilizar la senal de emergencia.",
+        "Pisar de forma intermitente el freno para advertir con las luces de frenado que va a reducir la marcha.",
+        "Realizar destellos con las luces de largo alcance."
+      ],
+      "imagen": "../img/test_050_p07.jpg"
+    },
+    {
+      "texto": "En un carril bus, ¿iesta permitido realizar una parada?",
+      "opciones": [
+        "No.",
+        "Si, si no entorpezco el paso deautobuses ytaxis.",
+        "Si, en todo caso."
+      ],
+      "imagen": "../img/test_050_p08.jpg"
+    },
+    {
+      "texto": "¿Que debe hacer si esta en estado de estres?",
+      "opciones": [
+        "Tomarunansioliticoantesdeconducir.",
+        "Tomarunestimulante.",
+        "Evitar conducir."
+      ],
+      "imagen": "../img/test_050_p09.jpg"
+    },
+    {
+      "texto": "La senal, ¿zque indica?",
+      "opciones": [
+        "Peligro por hielo o nieve.",
+        "Peligro por hielo unicamente.",
+        "Peligro por nieve unicamente."
+      ],
+      "imagen": "../img/test_050_p10.jpg"
+    },
+    {
+      "texto": "Los accidentes debidos al sueno, ¿isuceden tambien durante el dia?",
+      "opciones": [
+        "Si.",
+        "No,solosucedenpor lasnoches.",
+        "Si,pero unicamente a las primeras horasde la tarde."
+      ],
+      "imagen": "../img/test_050_p11.jpg"
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Una salida en autopista o autovia.",
+        "Una zona defrenado de emergencia.",
+        "Unazonapararealizaracampadas."
+      ],
+      "imagen": "../img/test_050_p12.jpg"
+    },
+    {
+      "texto": "Acompanara las victimas de un accidente, ¿ies importante?",
+      "opciones": [
+        "No, si su estado no reviste gravedad.",
+        "No, es preferible dejarlas solas.",
+        "Si,para transmitirles tranquilidad"
+      ],
+      "imagen": "../img/test_050_p13.jpg"
+    },
+    {
+      "texto": "En un tunel con un carril para cada sentido de circulacion, ¿zesta permitido adelantar?",
+      "opciones": [
+        "Si, cuando no haya senales quelo prohiban.",
+        "No.",
+        "Si, si hay suficiente visibilidad."
+      ],
+      "imagen": "../img/test_050_p14.jpg"
+    },
+    {
+      "texto": "Un vehiculo de dos ruedas provisto de un motor de combustion interna podra ser catalogado como motocicleta siempre que ...",
+      "opciones": [
+        "disponga de al menos dos plazas, incluida la del conductor.",
+        "pueda alcanzaruna velocidad maxima superiora 40km/h.",
+        "su cilindrada sea superior a 50 centimetros cubicos."
+      ]
+    },
+    {
+      "texto": "La senal prohibe...",
+      "opciones": [
+        "girar a la derecha.",
+        "cambiar el sentidodela marcha.",
+        "girar a la izquierda."
+      ],
+      "imagen": "../img/test_050_p16.jpg"
+    },
+    {
+      "texto": "En un vehiculo con motor diesel, una vez arrancado el motor es conveniente...",
+      "opciones": [
+        "acelerar enpunto muertopara que el motor se caliente.",
+        "esperar unos segundos antes de iniciar la marcha.",
+        "iniciar lamarcha inmediatamente."
+      ]
+    },
+    {
+      "texto": "La tasa maxima de alcoholemia permitida en aire espirado en los conductores durante el segundo ano de su primer permiso es de...",
+      "opciones": [
+        "0,25miligramosporlitro.",
+        "0,20 miligramos por litro.",
+        "0,15 miligramos por litro."
+      ]
+    },
+    {
+      "texto": "El riesgo de accidente cuando se usa el telefono movil es...",
+      "opciones": [
+        "igual que si no se utiliza.",
+        "casi inexistente cuando seusa manos libres porque no hayperdidade concentracion.",
+        "mayor que si no se utiliza."
+      ],
+      "imagen": "../img/test_050_p19.jpg"
+    },
+    {
+      "texto": "Las personas mayores suelen tener mas accidentes...",
+      "opciones": [
+        "cuando van acompanando a ninos.",
+        "cuandovan solas.",
+        "cuandovanacompanadasporotrosadultos."
+      ],
+      "imagen": "../img/test_050_p20.jpg"
+    },
+    {
+      "texto": "Si circula de noche por una via urbana, ¿ique alumbrado debe utilizar?",
+      "opciones": [
+        "El de largo alcance.",
+        "Solo el de posicion.",
+        "El de corto alcance."
+      ],
+      "imagen": "../img/test_050_p21.jpg"
+    },
+    {
+      "texto": "El lavaparabrisas del vehiculo...",
+      "opciones": [
+        "necesita que se vigile el nivel de agua de su propio deposito.",
+        "necesita que se vigile el nivel del circuito de refrigeracion de donde toma el agua.",
+        "nonecesita ningunmantenimiento."
+      ],
+      "imagen": "../img/test_050_p22.jpg"
+    },
+    {
+      "texto": "Esta prohibido parar...",
+      "opciones": [
+        "donde se ocasione riesgo u obstaculo a la circulacion.",
+        "enlas proximidades delos pasos para peatones.",
+        "enlas proximidades delas intersecciones."
+      ],
+      "imagen": "../img/test_050_p23.jpg"
+    },
+    {
+      "texto": "Si padece una enfermedad cronica, ¿idebe adoptar alguna precaucion?",
+      "opciones": [
+        "Si, no debe conducir.",
+        "No,cuandotomalamedicacionadecuada.",
+        "Si, preguntar al medico si tiene efectos sobre la conduccion y seguir su consejo."
+      ]
+    },
+    {
+      "texto": "Las lesiones mas graves en los ciclistas, cuando son victimas de un atropello, se localizan en...",
+      "opciones": [
+        "todo el cuerpo.",
+        "la cabeza.",
+        "las extremidades."
+      ],
+      "imagen": "../img/test_050_p25.jpg"
+    },
+    {
+      "texto": "Las tecnicas de conduccion eficiente, ¿iaumentan la seguridad vial?",
+      "opciones": [
+        "No, unicamentereducen la contaminacion ambiental.",
+        "No, solo mejoran el confort de la conduccion."
+      ]
+    },
+    {
+      "texto": "Encender el intermitente, ¿zda preferencia siempre para hacer maniobras?",
+      "opciones": [
+        "Si,perodebohacer la maniobra rapidamente.",
+        "No.",
+        "Si, porque he avisado."
+      ],
+      "imagen": "../img/test_050_p27.jpg"
+    },
+    {
+      "texto": "En una zona senalizada para carga y descarga, ¿iesta permitido estacionar como norma general?",
+      "opciones": [
+        "Si,encualquiercaso.",
+        "Si, siempre que permanezca dentro vehiculo.",
+        "No."
+      ],
+      "imagen": "../img/test_050_p28.jpg"
+    },
+    {
+      "texto": "Si existen semaforos con indicaciones distintas a la derecha y a la izquierda, ¿ia cual obedeceran los que pretendan seguirde frente?",
+      "opciones": [
+        "Al situado inmediatamente a su izquierda.",
+        "Al situado a su derecha.",
+        "Al que se encuentre mas cerca del vehiculo."
+      ],
+      "imagen": "../img/test_050_p29.jpg"
+    },
+    {
+      "texto": "Fuera de poblado donde no exista zona peatonal, ¿zpor donde estan obligados a circular los peatones como norma general?",
+      "opciones": [
+        "Es indiferente.",
+        "Por su derecha.",
+        "Por su izquierda."
+      ],
+      "imagen": "../img/test_050_p30.jpg"
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "test_id": 42,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Como norma general, el pedal de cambio de velocidades de una motocicleta, ¿icon que pie se acciona?",
+      "opciones": [
+        "Con el pie izquierdo.",
+        "Con el pie derecho.",
+        "El cambio de velocidades de una motocicleta no se acciona con el pie."
+      ],
+      "imagen": "../img/test_042_p01.jpg"
+    },
+    {
+      "texto": "El sueno afecta a la conduccion porque...",
+      "opciones": [
+        "aumentaeltiempo dereaccion.",
+        "reducelas distracciones.",
+        "aumenta la capacidad dereaccion."
+      ]
+    },
+    {
+      "texto": "Muchos atropellos a peatones se producen cuando los vehiculos...",
+      "opciones": [
+        "circulan marcha atras porque el conductorno ha visto al peaton.",
+        "se disponen a entrar en un garaje.",
+        "estacionanenlaacera."
+      ]
+    },
+    {
+      "texto": "Un desplazamiento lateral, ¿icomo debe senalizarse?",
+      "opciones": [
+        "Con las luces indicadoras de direccion o, en su defecto, con el brazo.",
+        "Con las luces indicadoras de direccion solamente.",
+        "Conelbrazo,preferentemente."
+      ],
+      "imagen": "../img/test_042_p04.jpg"
+    },
+    {
+      "texto": "¿Es importante colocar adecuadamente el reposacabezas?",
+      "opciones": [
+        "No,ya que cumple su cometido en cualquier posicion.",
+        "Si,para quepuedacumplirsufuncion correctamente.",
+        "No,porque es mas un elemento de comodidad quede seguridad."
+      ],
+      "imagen": "../img/test_042_p05.jpg"
+    },
+    {
+      "texto": "Como norma general, ¿zen que vias esta prohibido circular marcha atras?",
+      "opciones": [
+        "Soloen lasviasurbanas.",
+        "Soloenlasautopistasyautovias.",
+        "Entodaslasvias,salvocomocomplementoadeterminadasmaniobras."
+      ]
+    },
+    {
+      "texto": "Un conductor que acaba de obtener su primer permiso de conduccion no podra superar la tasa de alcohol de..",
+      "opciones": [
+        "0,30 miligramos de alcohol por litro de aire espirado.",
+        "0,25 miligramos de alcohol por litro de aire espirado.",
+        "0,15 miligramos de alcohol por litro de aire espirado."
+      ]
+    },
+    {
+      "texto": "En esta via de doble sentido, el vehiculo rojo, ¿iadelanta correctamente?",
+      "opciones": [
+        "No,porque la calzada no tiene prioridad en la interseccion.",
+        "Si,porque tiene preferencia respecto a los vehiculos que se aproximan por la derecha.",
+        "Si, cuando no seaproximanvehiculos porla via transversal."
+      ],
+      "imagen": "../img/test_042_p08.jpg"
+    },
+    {
+      "texto": "Llevar encendido el telefono movil en el vehiculo, ¿zpuede resultar peligroso?",
+      "opciones": [
+        "No, si no se va a utilizar.",
+        "No, porque no es un ruido que pueda distraer al conductor.",
+        "Si, el sonido del telefono, al igual que otro ruido, puede sorprender al conductor."
+      ]
+    },
+    {
+      "texto": "Por obras en la calzada se ha abierto un carril en sentido contrario al normal. ¿Puede circular por el un turismo con remolque?",
+      "opciones": [
+        "Si, cuando el remolquees ligero",
+        "Si, cuando no lo prohiban otras senales.",
+        "No, solo pueden hacerlo turismosy motocicletas."
+      ],
+      "imagen": "../img/test_042_p10.jpg"
+    },
+    {
+      "texto": "La velocidad a la que circula un vehiculo, ¿zinfluye en la distancia de reaccion del conductor?",
+      "opciones": [
+        "No.",
+        "Si, porque durante el tiempo de reaccion el vehiculo recorrera mas distancia.",
+        "No,solo afecta a la distancia de detencion."
+      ]
+    },
+    {
+      "texto": "Todos los turismos estan obligados a llevar dos espejos como minimo. ¿Que espejo es siempre obligatorio?",
+      "opciones": [
+        "El derecho.",
+        "El izquierdo.",
+        "El central."
+      ]
+    },
+    {
+      "texto": "La direccion del vehiculo es un sistema de seguridad...",
+      "opciones": [
+        "activa y pasiva a la vez.",
+        "activa.",
+        "pasiva."
+      ],
+      "imagen": "../img/test_042_p13.jpg"
+    },
+    {
+      "texto": "¿Que le indica la senal en esta via de sentido unico?",
+      "opciones": [
+        "Que esta prohibida la parada y el estacionamiento en el ladoderecho.",
+        "Que esta prohibida la parada y el estacionamientoen ambos ladosde la calzada.",
+        "Que esta prohibida la parada en el lado derecho de la calzada."
+      ],
+      "imagen": "../img/test_042_p14.jpg"
+    },
+    {
+      "texto": "Se debe desactivar el airbag frontal cuando en el asiento correspondiente al copiloto ..",
+      "opciones": [
+        "se instale un dispositivo de retencion infantil orientado hacia delante.",
+        "viajeuna mujerembarazada.",
+        "se instale un dispositivo de retencion infantil orientado hacia atras."
+      ],
+      "imagen": "../img/test_042_p15.jpg"
+    },
+    {
+      "texto": "Tomar alimentos o beber agua, ¿zreduce la tasa de alcoholemia?",
+      "opciones": [
+        "Si, durante el consumo de alcohol.",
+        "Si,despuesdetomaralcohol.",
+        "No,soloretrasalaabsorciondel alcohol."
+      ]
+    },
+    {
+      "texto": "El freno de pie, ¿isobre que ruedas actua?",
+      "opciones": [
+        "Lasruedasmotrices.",
+        "Las cuatro ruedas.",
+        "Las ruedasdelanteras."
+      ],
+      "imagen": "../img/test_042_p17.jpg"
+    },
+    {
+      "texto": "Un traje adecuado para conducir una motocicleta, debe...",
+      "opciones": [
+        "ser resistente a los golpes ya la abrasion en caso decaida.",
+        "tenercolores oscuros."
+      ],
+      "imagen": "../img/test_042_p18.jpg"
+    },
+    {
+      "texto": "Las indicaciones de este semaforo en rojo estan dirigidas a...",
+      "opciones": [
+        "todos los usuarios de la via.",
+        "peatones y ciclistas.",
+        "peatones exclusivamente."
+      ],
+      "imagen": "../img/test_042_p19.jpg"
+    },
+    {
+      "texto": "En esta curva, ¿zcomo debe circular?",
+      "opciones": [
+        "Entro en la curva y despues reduzco la velocidad.",
+        "Aumento la velocidadantes deentrar en la curva.",
+        "Adapto la velocidad antes deentrar en la curva."
+      ],
+      "imagen": "../img/test_042_p20.jpg"
+    },
+    {
+      "texto": "La distancia de detencion, ¿ide que depende?",
+      "opciones": [
+        "De la velocidad, solamente.",
+        "De la velocidad, del tiempo de reaccion y del tiempo de frenado",
+        "Del tipo de vehiculo solamente"
+      ]
+    },
+    {
+      "texto": "¿Que comportamiento como conductor puede poner en riesgo alos peatones?",
+      "opciones": [
+        "Extremarlaatencionalaproximarse a un autobus.",
+        "Estacionarsobrelaacera.",
+        "No hacer senales para que crucen la calzada."
+      ]
+    },
+    {
+      "texto": "A la vista de esta senalizacion, ¿zesta permitido circular por el carril derecho a 90 kilometros por hora?",
+      "opciones": [
+        "No, lo prohibe la senal.",
+        "Si.",
+        "No, porque no hay senal que lo indique."
+      ],
+      "imagen": "../img/test_042_p23.jpg"
+    },
+    {
+      "texto": "Siempre que el recorrido hacia atras no supere los 15 metros ni invada un cruce de vias, podra circular marcha atras ...",
+      "opciones": [
+        "en autovias yautopistas que discurran porpoblado.",
+        "Como maniobra complementariade la parada.",
+        "cuando no sea posible cambiar de direccion o sentido de la marcha."
+      ]
+    },
+    {
+      "texto": "¿Qué indica esta senal?",
+      "opciones": [
+        "Via con circulacion reservada a autobuses.",
+        "Parada de autobuses.",
+        "Carril reservadoa autobuses."
+      ],
+      "imagen": "../img/test_042_p25.jpg"
+    },
+    {
+      "texto": "El vehiculo que circula dentro de una glorieta. ¿Debe ceder el paso a un vehiculo que quiere entrar por la derecha?",
+      "opciones": [
+        "Si, cuando no hay senales de prioridad.",
+        "Si, porque el que entra tiene prioridad.",
+        "No,porquetienepreferenciadepaso."
+      ],
+      "imagen": "../img/test_042_p26.jpg"
+    },
+    {
+      "texto": "Al entrar en una glorieta que no dispone de senalizacion que regule la preferencia de paso, debe...",
+      "opciones": [
+        "ceder el paso a los vehiculos que circulan dentro de la glorieta.",
+        "incorporarse antes que los vehiculos que se aproximen por su izquierda.",
+        "pasar con normalidad porque tienepreferencia."
+      ],
+      "imagen": "../img/test_042_p27.jpg"
+    },
+    {
+      "texto": "El ciclista de la fotografia, ¿icircula correctamente?",
+      "opciones": [
+        "Si, pues solo cuando le adelanta un vehiculo debe circular junto al borde derecho de la calzada.",
+        "Si, pues lo hace junto al borde derecho de la calzada.",
+        "No,pues lo deberia de hacer por el arcen, aunque este no sea transitable."
+      ],
+      "imagen": "../img/test_042_p28.jpg"
+    },
+    {
+      "texto": "En los vehiculos no destinados al transporte de mercancias, ¿ipodra sobresalir la carga por la parte delantera?",
+      "opciones": [
+        "Si, hasta un 10 por ciento si la carga es divisible.",
+        "No.",
+        "Si, hasta un 15 por ciento si la carga es indivisible."
+      ],
+      "imagen": "../img/test_042_p29.jpg"
+    },
+    {
+      "texto": "Durante el dia, con niebla densa o lluvia intensa, ¿ise puede circular con la luz de largo alcance encendida?",
+      "opciones": [
+        "No, la luz de largo alcance solo puede encenderse de noche.",
+        "Si,pero es aconsejable encenderlaluz decruce.",
+        "No, solo puede encenderse la luz de corto alcance."
+      ],
+      "imagen": "../img/test_042_p30.jpg"
+    }
+  ]
+}

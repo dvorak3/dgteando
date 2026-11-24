@@ -1,0 +1,255 @@
+{
+  "test_id": 38,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "¿En que caso se considera que un vehiculo estacionado obstruye gravemente la circulacion?",
+      "opciones": [
+        "Cuando este estacionado en una zona reservada a carga y descarga, fuera de las horas de utilizacion",
+        "Cuando este estacionado fuera del arcen transitable en via interurbana.",
+        "Cuandoeste estacionado en doblefila sin conductor."
+      ]
+    },
+    {
+      "texto": "En una travesia sin limitacion especifica, ¿icual es la velocidad maxima permitida para adelantar?",
+      "opciones": [
+        "90 km/h.",
+        "70 km/h.",
+        "50 km/h."
+      ],
+      "imagen": "../img/test_038_p02.jpg"
+    },
+    {
+      "texto": "Al inmovilizar un turismo por emergencia, ¿zse debe colocar el dispositivo de presenalizacion de peligro?",
+      "opciones": [
+        "No,basta con encender la senal de emergencia.",
+        "Si, en la partemas alta posible del vehiculo inmovilizado garantizando su maxima visibilidad, si utiliza la senal luminosa.",
+        "Si, siempre por delante del vehiculo inmovilizado."
+      ],
+      "imagen": "../img/test_038_p03.jpg"
+    },
+    {
+      "texto": "Los vehiculos para personas con movilidad reducida, si no existe via o parte de ella que les este especialmente destinada..",
+      "opciones": [
+        "pueden circularporautopista",
+        "pueden circular porautovia.",
+        "deben circular por el arcen, siempre que sea transitable y suficiente."
+      ],
+      "imagen": "../img/test_038_p04.jpg"
+    },
+    {
+      "texto": "En caso de congestion del trafico, ¿ise considera adelantamiento si los vehiculos de un carril circulan mas rapido que los del otro?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Si, si losvehiculos cambian de carril."
+      ],
+      "imagen": "../img/test_038_p05.jpg"
+    },
+    {
+      "texto": "Un agente de trafico que circula delante muestra una bandera de color amarillo, ¿ique esta indicando?",
+      "opciones": [
+        "La necesidad de extremar la atencion o la proximidad de un peligro.",
+        "Quela calzada queda abierta al trafico.",
+        "Que la calzadaqueda temporalmentecerrada al trafico."
+      ],
+      "imagen": "../img/test_038_p06.jpg"
+    },
+    {
+      "texto": "Después de un accidente, ¿zdebe revisar los cinturones de seguridad?",
+      "opciones": [
+        "No es necesario.",
+        "No, mientras siga funcionando el cierre.",
+        "Si, y cambiarlos por unos nuevos si han sufrido danos."
+      ]
+    },
+    {
+      "texto": "La influencia del factor de riesgo via, ¿icomo se puede disminuir?",
+      "opciones": [
+        "Circulando de noche porque hay menos trafico.",
+        "Adecuando la velocidad y aumentando la distancia de seguridad.",
+        "Circulandoa50km/hentodas lasvias."
+      ]
+    },
+    {
+      "texto": "¿Que esta indicando este conductor?",
+      "opciones": [
+        "Que va a girar a la derecha.",
+        "Que va a girar a la izquierda.",
+        "Que va a seguir de frente."
+      ],
+      "imagen": "../img/test_038_p09.jpg"
+    },
+    {
+      "texto": "Con un vehiculo que emita niveles de ruido superiores a los permitidos...",
+      "opciones": [
+        "unicamente estapermitido circularpor carretera.",
+        "estapermitidocircularporcarreterasperonoportravesias.",
+        "no estapermitido circular."
+      ]
+    },
+    {
+      "texto": "Esta senal indica...",
+      "opciones": [
+        "que se permite la circulacion en paralelo.",
+        "una calzada de sentido unico y dos carriles.",
+        "la entrada a una autopista o autovia de dos carriles."
+      ],
+      "imagen": "../img/test_038_p11.jpg"
+    },
+    {
+      "texto": "Un peaton, ¿ztiene permitido circular por la derecha en una via fuera de poblado?",
+      "opciones": [
+        "Si, siempre.",
+        "No.",
+        "Si, cuando lo hace por razones de seguridad."
+      ],
+      "imagen": "../img/test_038_p12.jpg"
+    },
+    {
+      "texto": "En una zona de obras en la que se ha producido un estrechamiento de la calzada, ¿ique vehiculo tendra preferencia si no hay senal que la regule?",
+      "opciones": [
+        "El que haya entrado primero.",
+        "El que se encuentre el estrechamiento a su derecha.",
+        "El que no tenga que cambiar de carril para entrar en el estrechamiento."
+      ],
+      "imagen": "../img/test_038_p13.jpg"
+    },
+    {
+      "texto": "Una correcta suspension del vehiculo sirve para:",
+      "opciones": [
+        "Mantener el vehiculo siempreen contactocon el suelo. a) Mantener el vehiculo siempre en contacto con el suelo.",
+        "Mantener inmovilizado el vehiculo.",
+        "Transmitir el giro del motor a las ruedas."
+      ]
+    },
+    {
+      "texto": "Durante un viaje largo, ¿zque se puede hacer para evitar la fatiga?",
+      "opciones": [
+        "Realizardescansos suficientemente largos.",
+        "Beber cafe en lugar de hacer pausas en la conduccion.",
+        "Poner muy alto el volumen de la radio."
+      ]
+    },
+    {
+      "texto": "Este panel se coloca debajo de una senal de peligro para indicar...",
+      "opciones": [
+        "la longitud del tramo peligroso.",
+        "la distanciaa laque comienza el peligro.",
+        "la distancia a la que termina el peligro."
+      ],
+      "imagen": "../img/test_038_p16.jpg"
+    },
+    {
+      "texto": "Un factor que favorece la distraccion del conductor es...",
+      "opciones": [
+        "una situacion de trafico excesivamente sencilla.",
+        "la alta luminosidad del ambiente.",
+        "la baja luminosidad del ambiente."
+      ]
+    },
+    {
+      "texto": "Para abandonar una autovia por un carril de deceleracion, debe situarse con la suficiente antelacion en el carril...",
+      "opciones": [
+        "de la izquierda.",
+        "de la derecha.",
+        "masproximoalasalida."
+      ],
+      "imagen": "../img/test_038_p18.jpg"
+    },
+    {
+      "texto": "La conduccion preventiva permite...",
+      "opciones": [
+        "reaccionarcon tiempo suficientepara evitar riesgos.",
+        "evitar totalmente los atropellos.",
+        "ahorrarcombustible."
+      ]
+    },
+    {
+      "texto": "Hace 6 meses que tiene el permiso de conduccion. ¿A que velocidad maxima puede conducir por una autovia?",
+      "opciones": [
+        "A120 km/h.",
+        "A 80km/h y a 100km/h para adelantar.",
+        "A 80 km/h."
+      ],
+      "imagen": "../img/test_038_p20.jpg"
+    },
+    {
+      "texto": "El alcohol, ¿zpuede disminuir el campo de vision del conductor?",
+      "opciones": [
+        "Si.",
+        "No.",
+        "Solo cuando se circula de noche."
+      ]
+    },
+    {
+      "texto": "Una cuadricula de marcas amarillas pintada en el suelo indica...",
+      "opciones": [
+        "queelestacionamientoestaprohibido.",
+        "que no se puede franquear la interseccion.",
+        "que no se debe entrar en la interseccion si se puede quedar detenido en ella, obstaculizando la circulacion."
+      ],
+      "imagen": "../img/test_038_p22.jpg"
+    },
+    {
+      "texto": "En una interseccion sin linea de detencion. ¿Donde hay que detenerse?",
+      "opciones": [
+        "Auna distancia minima de 5metros antes de la interseccion.",
+        "Dentro de la interseccion.",
+        "Antes de entrar en la interseccion."
+      ],
+      "imagen": "../img/test_038_p23.jpg"
+    },
+    {
+      "texto": "Circula con un turismo por autopista, ¿zque velocidad se considera anormalmente reducida?",
+      "opciones": [
+        "La menor de 50 km/h.",
+        "La menor de 60 km/h.",
+        "Lamenorde70km/h."
+      ]
+    },
+    {
+      "texto": "Circular por debajo de la velocidad minima permitida, ¿zpodria ser un factor de riesgo?",
+      "opciones": [
+        "No,ya que siempre se considera una velocidad adecuada.",
+        "No, nunca.",
+        "Si, una velocidad anormalmente reducida puede causar accidentes. carril izquierdo? O a) No. O b) Si."
+      ],
+      "imagen": "../img/test_038_p25.jpg"
+    },
+    {
+      "texto": "Cuando se padece una enfermedad, ¿ique hay que hacer para reducir el riesgo de sufrir un accidente?",
+      "opciones": [
+        "Evitar conducir durante una crisis o en la fase aguda de la enfermedad.",
+        "Aumentar las dosis de los medicamentos.",
+        "Abandonar el tratamiento sin consultar al medico."
+      ]
+    },
+    {
+      "texto": "La probabilidad de sufrir un accidente de trafico..",
+      "opciones": [
+        "solo depende de la capacidad del conductor.",
+        "puede reducirse evitando los factores de riesgo",
+        "es siempre independiente del conductor."
+      ]
+    },
+    {
+      "texto": "Si conduce una motocicleta en zona urbana, ¿ique separacion lateral debe mantener con el resto de vehiculos?",
+      "opciones": [
+        "La separacion lateral no importa en zona urbana.",
+        "Una separacion proporcional a la velocidad, a la anchura y a las caracteristicas dela calzada.",
+        "Un espacio no inferior a 1,5 metros."
+      ],
+      "imagen": "../img/test_038_p29.jpg"
+    },
+    {
+      "texto": "¿Que precaucion debe adoptar si instala un dispositivo de retencion orientado hacia atras en el asiento delantero de su vehiculo?",
+      "opciones": [
+        "Desactivar el airbag frontal de forma automatica o manual.",
+        "Que el dispositivo de retencion este fuera del alcance del airbag.",
+        "No se puede instalar el dispositivo si el vehiculo esta equipado con airbag frontal."
+      ],
+      "imagen": "../img/test_038_p30.jpg"
+    }
+  ]
+}

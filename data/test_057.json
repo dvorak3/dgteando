@@ -1,0 +1,265 @@
+{
+  "test_id": 57,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Las normas del cinturon de seguridad, ¿za que obligan?",
+      "opciones": [
+        "A llevarlopuesto y abrochado siempre.",
+        "A llevarlo en el vehiculo yabrocharmelo solo en carretera.",
+        "A llevarlo puesto sin abrochar."
+      ],
+      "imagen": "../img/test_057_p01.jpg"
+    },
+    {
+      "texto": "¿Que es el angulo muerto?",
+      "opciones": [
+        "Es una zona alrededor del vehiculo que no se ve con los retrovisores.",
+        "Es una parte de los coches que puede producir accidentes.",
+        "Es la zona sin visibilidad que tiene el conductor al tomar una curva."
+      ]
+    },
+    {
+      "texto": "No esta permitido utilizar la luz de largo alcance cuando...",
+      "opciones": [
+        "estaencendidalaluzdecortoalcance",
+        "puedadeslumbrara otros usuarios.",
+        "estaencendida laluzdeposicion."
+      ]
+    },
+    {
+      "texto": "Los sistemas de seguridad pasiva incluyen...",
+      "opciones": [
+        "cinturones de seguridad, airbags,apoyacabezas y casco.",
+        "alumbrado,neumaticos,frenos y suspension.",
+        "frenos, neumaticos, airbags y cinturones de seguridad."
+      ],
+      "imagen": "../img/test_057_p04.jpg"
+    },
+    {
+      "texto": "En un cruce no hay senales de preferencia. ¿Debe ceder el paso a un tranvia?",
+      "opciones": [
+        "No.",
+        "Si."
+      ],
+      "imagen": "../img/test_057_p05.jpg"
+    },
+    {
+      "texto": "¿Esta permitido realizar competiciones de velocidad en las vias publicas?",
+      "opciones": [
+        "No, como norma general.",
+        "Si, pero todas las pruebas autorizadas iran precedidas por un agente de la autoridad con una bandera de color verde.",
+        "Si, siempre."
+      ],
+      "imagen": "../img/test_057_p06.jpg"
+    },
+    {
+      "texto": "En un carril VAo, ¿ipuede circular un turismo que arrastra un remolque de menos de 750 kg de M.M.A.?",
+      "opciones": [
+        "No.",
+        "Si, pero solo de dia",
+        "Si, siempre."
+      ]
+    },
+    {
+      "texto": "¿Que medidas debe adoptar si se produce un accidente?",
+      "opciones": [
+        "Auxiliar a los heridos lo antes posibley avisar a las autoridades.",
+        "Detener el trafico, auxiliar a los heridos y despues avisar a las autoridades.",
+        "Detener su vehiculo sin crear peligro, avisar a la autoridad o sus agentes y auxiliar a los heridos."
+      ],
+      "imagen": "../img/test_057_p08.jpg"
+    },
+    {
+      "texto": "La senal prohibe...",
+      "opciones": [
+        "la parada de vehiculos, pero permite estacionar.",
+        "la parada yel estacionamiento de vehiculos.",
+        "elestacionamientodevehiculosendiaspares."
+      ],
+      "imagen": "../img/test_057_p09.jpg"
+    },
+    {
+      "texto": "Si va a realizar un nuevo adelantamiento, ¿zesta permitido seguir circulando por el carril izquierdo?",
+      "opciones": [
+        "Si, cuando no obstaculiza a los vehiculos que circulenmas rapido por detras.",
+        "Si, si circula a la maxima velocidad permitida en la via.",
+        "No,tiene que volver obligatoriamentea la derecha."
+      ],
+      "imagen": "../img/test_057_p10.jpg"
+    },
+    {
+      "texto": "Si circulando le sorprende el sueno debe:",
+      "opciones": [
+        "Aumentar la velocidad para tratar de llegar cuanto antes a su destino.",
+        "Estacionar el vehiculo en lugar permitido y dormir.",
+        "Reducir la velocidad y circular por el arcen."
+      ],
+      "imagen": "../img/test_057_p11.jpg"
+    },
+    {
+      "texto": "Un turismo de nueva matriculacion de uso privado, ¿zcuando debera pasar la proxima inspeccion tecnica del vehiculo?",
+      "opciones": [
+        "Alos 5anos.",
+        "A los 4 anos desde la fecha de matriculacion.",
+        "A los 3anos desdela fecha de expedicion de la Tarjeta de Inspeccion Tecnica."
+      ],
+      "imagen": "../img/test_057_p12.jpg"
+    },
+    {
+      "texto": "Como norma general, esta prohibido conducir turismos con una tasa de alcohol superior a...",
+      "opciones": [
+        "0,8 gramos por litro de sangre.",
+        "0,5 gramos por litro de sangre.",
+        "0,3 gramos por litro de sangre."
+      ]
+    },
+    {
+      "texto": "Al adelantar a un ciclomotor en via urbana, ¿icomo debe hacerlo?",
+      "opciones": [
+        "Ocupando siempreparte del carril contrario.",
+        "Dejando una distancia lateral de seguridad suficiente, proporcional a la velocidad, anchura y caracteristicas de la via.",
+        "Dejando una distancia lateral minima de 1,50 metros."
+      ]
+    },
+    {
+      "texto": "El ciclomotor, ¿zpodria adelantar al tractor?",
+      "opciones": [
+        "Si, pero sin salirse del arcen.",
+        "No, en ningun caso.",
+        "Si, siempre que la duracion de la marcha de los vehiculos colocadosparalelamente no exceda de 15 segundos, o el recorrido efectuado en dicha forma no supere los 200 metros."
+      ],
+      "imagen": "../img/test_057_p15.jpg"
+    },
+    {
+      "texto": "Los airbags, entre otras funciones, protegen de...",
+      "opciones": [
+        "el efecto submarino.",
+        "lesiones oculares.",
+        "lesiones cervicales y de impactos contra elementos del interior del vehiculo."
+      ],
+      "imagen": "../img/test_057_p16.jpg"
+    },
+    {
+      "texto": "¿Puede girar en una interseccion a la izquierda si no tiene visibilidad?",
+      "opciones": [
+        "Si,conprecaucion.",
+        "No,aunque este permitido por la senalizacion.",
+        "Si, siempre."
+      ],
+      "imagen": "../img/test_057_p17.jpg"
+    },
+    {
+      "texto": "En vias urbanas, si no pretende adelantar, ¿ique distancia de seguridad se debe mantener con el turismo que circula delante?",
+      "opciones": [
+        "Aquella que permita que una motocicleta adelante con seguridad.",
+        "La que permita detenerse sin colisionar con el vehiculo que va delante en caso de que frene bruscamente.",
+        "Siempre 50metros."
+      ],
+      "imagen": "../img/test_057_p18.jpg"
+    },
+    {
+      "texto": "La depresion produce...",
+      "opciones": [
+        "mas irritabilidad yansiedad.",
+        "una disminucion de la ansiedad.",
+        "una disminucion de la irritabilidad y aumento de la ansiedad."
+      ],
+      "imagen": "../img/test_057_p19.jpg"
+    },
+    {
+      "texto": "Ante sintomas de fatiga o somnolencia, el conductor debe...",
+      "opciones": [
+        "estacionarel vehiculoydescansarel tiempoquenecesite.",
+        "conducir mas deprisa parallegar antes a su destino.",
+        "tomaralgun estimulante."
+      ]
+    },
+    {
+      "texto": "La luz de posicion de los vehiculos, ¿ique indica?",
+      "opciones": [
+        "El lugar que ocupa en la calzada y la anchura del vehiculo.",
+        "Queel vehiculoestaparado.",
+        "Queelvehiculoestacirculando"
+      ]
+    },
+    {
+      "texto": "¿A que obliga esta senal?",
+      "opciones": [
+        "Adetenerse.",
+        "A ceder el paso a todos los vehiculos que circulen por la via preferente.",
+        "A ceder el paso a los vehiculos que se acerquen por la derecha."
+      ],
+      "imagen": "../img/test_057_p22.jpg"
+    },
+    {
+      "texto": "En una motocicleta de anchura inferior a 1 metro, la carga no debe sobresali...",
+      "opciones": [
+        "mas de 0,25 metros por cada lado del eje longitudinal.",
+        "mas de0,20metrospor lapartetrasera.",
+        "mas de 0,50 metros por cada lado del eje longitudinal."
+      ],
+      "imagen": "../img/test_057_p23.jpg"
+    },
+    {
+      "texto": "Si tiene que reducir considerablemente la velocidad del vehiculo que conduce, ¿icomo debe avisar a los vehiculos que circulan detras?",
+      "opciones": [
+        "Encendiendo las luces de posicion.",
+        "Solo con el intermitentederecho.",
+        "Mediante el empleo reiterado de las luces de frenado."
+      ]
+    },
+    {
+      "texto": "Esta senal...",
+      "opciones": [
+        "obligaa seguirunade las direcciones y sentidosque senalanlasflechas.",
+        "prohibe continuarde frente o realizar un cambiode direccion a la derecha.",
+        "aconseja seguir unade las direcciones y sentidosque senialan lasflechas."
+      ],
+      "imagen": "../img/test_057_p25.jpg"
+    },
+    {
+      "texto": "¿Es aconsejable fumar mientras se conduce?",
+      "opciones": [
+        "Si, para las personas que fuman habitualmente, porque relaja.",
+        "No, puede provocar distracciones en el conductor.",
+        "Si, siempre."
+      ]
+    },
+    {
+      "texto": "Beber mucha agua o fumar, ¿zreduce la tasa de alcoholemia?",
+      "opciones": [
+        "No.",
+        "Solo beber mucha agua.",
+        "Si."
+      ]
+    },
+    {
+      "texto": "Cuando se producen mas accidentes de ciclistas, ¿en verano o en invierno?",
+      "opciones": [
+        "Es indiferente.",
+        "En invierno, debido a las condiciones meteorologicas adversas.",
+        "En verano, puesto que con la llegada del buen tiempo hay mas ciclistas en las carreteras."
+      ],
+      "imagen": "../img/test_057_p28.jpg"
+    },
+    {
+      "texto": "Al aproximarse a un paso a nivel debe...",
+      "opciones": [
+        "pasar con la mayor velocidad, si la barrera esta levantada.",
+        "reducir siempre la velocidad por debajo de la maxima permitida.",
+        "detenerse siempre antes de cruzarlo."
+      ],
+      "imagen": "../img/test_057_p29.jpg"
+    },
+    {
+      "texto": "Un vehiculo obstruye gravemente la circulacion cuando realiza una parada o estacionamiento en...",
+      "opciones": [
+        "una via de atencion preferente.",
+        "los separadores u otros elementos utilizados para canalizar el trafico.",
+        "zonas de carga y descarga fuera de las horas de utilizacion."
+      ],
+      "imagen": "../img/test_057_p30.jpg"
+    }
+  ]
+}

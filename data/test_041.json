@@ -1,0 +1,264 @@
+{
+  "test_id": 41,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Un herido tiene quemaduras. ¿Que debe hacer?",
+      "opciones": [
+        "Limpiar la herida.",
+        "Tapar la quemadura con gasas humedas.",
+        "Quitarle la ropa pegada a la quemadura."
+      ]
+    },
+    {
+      "texto": "Para facilitar el adelantamiento, ¿ique debe hacer el vehiculo adelantado?",
+      "opciones": [
+        "Apartarseal arcen.",
+        "Cenirse al borde derecho de la calzada.",
+        "Circular por el centro de su carril."
+      ]
+    },
+    {
+      "texto": "¿Qué tipo de lesiones puede reducir un buen uso del reposacabezas?",
+      "opciones": [
+        "Ninguna, es un elemento de confort.",
+        "Lesionescervicales.",
+        "Ninguna, es un elemento decorativo."
+      ],
+      "imagen": "../img/test_041_p03.jpg"
+    },
+    {
+      "texto": "Si esta siguiendo un tratamiento con medicamentos, ¿zque precauciones debe adoptar?",
+      "opciones": [
+        "Notomarlosdurante la conduccion.",
+        "Reducir la dosis antes de conducir.",
+        "Consultaral medicoofarmaceutico los efectospara laconduccion."
+      ]
+    },
+    {
+      "texto": "Generalmente, en las motocicletas, la maneta del freno delantero se acciona con...",
+      "opciones": [
+        "la mano izquierda.",
+        "lasdosmanos.",
+        "la mano derecha."
+      ]
+    },
+    {
+      "texto": "¿Esta permitido remolcar con un turismo a un vehiculo averiado por una autopista?",
+      "opciones": [
+        "Si,hastaeltallermasproximo",
+        "No, debe hacerlo una grua.",
+        "Si, cuando la grua tarde mas de media hora."
+      ],
+      "imagen": "../img/test_041_p06.jpg"
+    },
+    {
+      "texto": "¿Todas las drogas son iguales?",
+      "opciones": [
+        "No,aunque todas son peligrosas para la seguridad vial.",
+        "Si.",
+        "No, unas son peligrosas y otras no."
+      ],
+      "imagen": "../img/test_041_p07.jpg"
+    },
+    {
+      "texto": "Esta senal de peligro, ¿ique indica?",
+      "opciones": [
+        "Paso a nivel con barreras conmas deuna via ferrea.",
+        "Paso a nivel sin barreras con mas de una via ferrea.",
+        "Paso a nivel con barreras deuna via ferrea."
+      ],
+      "imagen": "../img/test_041_p08.jpg"
+    },
+    {
+      "texto": "Si extravia el permiso de conducir, ¿ique debe hacer?",
+      "opciones": [
+        "Nada,sidispongodeunafotocopiadelmismo. a) Nada, si dispongo de una fotocopia del mismo.",
+        "Solicitar un duplicado a la Jefatura Provincial o Local de Trafico.",
+        "Realizarlaspruebas de aptitud y superar los examenes teoricos ypracticos."
+      ]
+    },
+    {
+      "texto": "¿Que debe hacer un conductor para que los demas usuarios puedan anticiparse a sus intenciones?",
+      "opciones": [
+        "Senalizar siempre lasmaniobrasconantelacion.",
+        "Permanecer en el angulomuerto de los retrovisores de otro vehiculo.",
+        "No debe hacer nada, el resto de usuarios debe estar atento a su velocidad y trayectoria."
+      ],
+      "imagen": "../img/test_041_p10.jpg"
+    },
+    {
+      "texto": "¿Que puede hacer para evitar el atropello a ciclistas?",
+      "opciones": [
+        "Avisarles de las maniobras con senales acuisticas.",
+        "Evitarlas senales luminosas paranodeslumbrarles.",
+        "Evitarlas senales acusticas cerca de ellos."
+      ],
+      "imagen": "../img/test_041_p11.jpg"
+    },
+    {
+      "texto": "Durante las operaciones de carga y descarga, ¿zesta permitido depositar las mercancias en la calzada?",
+      "opciones": [
+        "Enla calzada no,pero en los arcenesy en las zonas peatonales si.",
+        "No, como norma general.",
+        "Si."
+      ]
+    },
+    {
+      "texto": "En un paso a nivel, ¿iesta permitido realizar un cambio de sentido?",
+      "opciones": [
+        "No.",
+        "Si,cuando las barreras no esten enmovimiento.",
+        "Si,enlospasosanivelsinbarrera."
+      ],
+      "imagen": "../img/test_041_p13.jpg"
+    },
+    {
+      "texto": "¿Cual de estas acciones puede distraer al conductor?",
+      "opciones": [
+        "Consultar el GPS.",
+        "Mirar por el espejo retrovisor.",
+        "Conectarel limpiaparabrisas."
+      ]
+    },
+    {
+      "texto": "Los ciclistas, ¿zestan obligados a llevar casco cuando circulen por vias interurbanas?",
+      "opciones": [
+        "No,estan exentos cuando circulen porpendientes descendentes.",
+        "No, estan exentos en condiciones extremas de calor.",
+        "Si, deben utilizarlo adecuadamente abrochado."
+      ],
+      "imagen": "../img/test_041_p15.jpg"
+    },
+    {
+      "texto": "En las glorietas, ¿ique vehiculos tienen prioridad?",
+      "opciones": [
+        "Los vehiculos que se aproximan por la izquierda.",
+        "Los vehiculos que se aproximen a la glorieta por la derecha.",
+        "Los vehiculos que se encuentran circulando dentro de la glorieta."
+      ],
+      "imagen": "../img/test_041_p16.jpg"
+    },
+    {
+      "texto": "Si se queda detenido en el interior de un tunel por un tiempo superior a dos minutos, ¿ique debe hacer?",
+      "opciones": [
+        "Apagar el motor y las luces de posicion.",
+        "Apagar el motor.",
+        "Encender, solamente, la senal de emergencia."
+      ]
+    },
+    {
+      "texto": "Las flechas de seleccion de carril...",
+      "opciones": [
+        "obligan a seguir las direcciones indicadas por las flechas,prohibiendo siempre el cambio de carril.",
+        "aconsejan seguir las direcciones indicadas porlas flechas.",
+        "obligan a seguir la direccion o las direcciones indicadas,pero si la senalizacion lo permite autorizan el cambio de carril."
+      ],
+      "imagen": "../img/test_041_p18.jpg"
+    },
+    {
+      "texto": "¿Debe el conductor del turismo de color blanco respetar la senal de stop cuando llegue al cruce?",
+      "opciones": [
+        "No, porque la senal horizontal solo es para los que giren a la izquierda.",
+        "Si,debe respetar las marcasviales existentes.",
+        "Si, pero solo si sigue de frente."
+      ],
+      "imagen": "../img/test_041_p19.jpg"
+    },
+    {
+      "texto": "Es obligatorio utilizar la luz antiniebla trasera...",
+      "opciones": [
+        "cuandolas condiciones meteorologicas oambientales sean especialmentedesfavorables.",
+        "en caso de lluvia, nevada o nubes de polvo o de humo.",
+        "cuando existan condiciones meteorologicas o ambientales que disminuyan la visibilidad."
+      ]
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Peligro por visibilidad reducida.",
+        "Peligro por obras.",
+        "Peligro por proyeccion de gravilla."
+      ],
+      "imagen": "../img/test_041_p21.jpg"
+    },
+    {
+      "texto": "¿Esta permitido que la carga de un turismo sobresalga por los laterales?",
+      "opciones": [
+        "Si, senalizada con un panel de franjas rojas y blancas.",
+        "No.",
+        "Si, cuando no comprometa la estabilidad del vehiculo."
+      ]
+    },
+    {
+      "texto": "Con hielo o nieve, es aconsejable circular...",
+      "opciones": [
+        "utilizando la relacion demarchas mas baja posible.",
+        "frenando a fondo en las curvas.",
+        "utilizando la relacion de marchas mas alta posible."
+      ],
+      "imagen": "../img/test_041_p23.jpg"
+    },
+    {
+      "texto": "¿Puede inmovilizar el vehiculo en esta zona para bajar a recoger una mercancia abandonando el vehiculo?",
+      "opciones": [
+        "Si, mientras que la duracion sea inferior a dos minutos.",
+        "No,ya que se considera estacionamiento y esta prohibido.",
+        "Si, ya que es una zona donde se permite la parada."
+      ],
+      "imagen": "../img/test_041_p24.jpg"
+    },
+    {
+      "texto": "Cuando se padece una alergia respiratoria y se tiene una crisis de estornudos...",
+      "opciones": [
+        "el conductormantienelamisma concentracion enel trafico.",
+        "la capacidad de concentracion del conductor aumenta.",
+        "la capacidaddel conductor para mantener la concentracion en el trafico disminuye."
+      ],
+      "imagen": "../img/test_041_p25.jpg"
+    },
+    {
+      "texto": "Los conductores deben ceder el paso a los animales...",
+      "opciones": [
+        "unicamente en las canadas debidamente senalizadas.",
+        "siempre que se crucen sustrayectorias.",
+        "cuando vayan a girar con su vehiculo para entrar en otra via y haya animales cruzandola, aunque no exista paso para éstos."
+      ],
+      "imagen": "../img/test_041_p26.jpg"
+    },
+    {
+      "texto": "¿A que velocidad maxima puede circular una motocicleta por esta carretera convencional?",
+      "opciones": [
+        "100 km/h.",
+        "80 km/h.",
+        "90 km/h."
+      ],
+      "imagen": "../img/test_041_p27.jpg"
+    },
+    {
+      "texto": "¿Cuando termina la prohibicion de adelantar?",
+      "opciones": [
+        "Cuando llegueal estrechamiento.",
+        "Cuandosalgadelestrechamiento.",
+        "Cuando rebase la vertical de la senal de 'fin de la prohibicion de adelantamiento'."
+      ],
+      "imagen": "../img/test_041_p28.jpg"
+    },
+    {
+      "texto": "Los costes por los danos materiales que se producen en los accidentes afectan...",
+      "opciones": [
+        "al vehiculo y su carga, a la via y al medio ambiente.",
+        "a la via,solamente,porqueson losmas altos.",
+        "al vehiculo, solamente."
+      ]
+    },
+    {
+      "texto": "Durante el primer ano de conduccion, ¿ique limitaciones hay?",
+      "opciones": [
+        "No puede circular a mas de80 Km/h",
+        "Tendra que llevar la placa L",
+        "Nopuede circular losdomingos porautovias."
+      ]
+    }
+  ]
+}

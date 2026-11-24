@@ -1,0 +1,268 @@
+{
+  "test_id": 48,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "En los accidentes de motocicletas, ¿ique tipo es el mas frecuente?",
+      "opciones": [
+        "Salida de la via.",
+        "Colision con otro vehiculo.",
+        "Atropello."
+      ],
+      "imagen": "../img/test_048_p01.jpg"
+    },
+    {
+      "texto": "Es obligatorio que las obras que dificulten la circulacion esten senalizadas...",
+      "opciones": [
+        "tanto dedia como de noche.",
+        "solo de noche.",
+        "solo de dia."
+      ],
+      "imagen": "../img/test_048_p02.jpg"
+    },
+    {
+      "texto": "Circular por una via con mucho trafico...",
+      "opciones": [
+        "favorece la aparicion dela fatiga.",
+        "retrasa la aparicion de la fatiga.",
+        "no es una circunstancia que afecte a la fatiga."
+      ],
+      "imagen": "../img/test_048_p03.jpg"
+    },
+    {
+      "texto": "¿Debe moversea los heridos?",
+      "opciones": [
+        "No, salvo que sea imprescindiblepor su seguridad.",
+        "No, en ningun caso.",
+        "Si,cuandosus lesiones no songraves."
+      ]
+    },
+    {
+      "texto": "¿Esta permitido advertir con el brazo que va a efectuar una maniobra?",
+      "opciones": [
+        "No, porque no se deben sacar los brazos fuera del turismo.",
+        "No, debe advertirlo tambien con los intermitentes.",
+        "Si, cuando la senal sea perceptible para los demas usuarios."
+      ],
+      "imagen": "../img/test_048_p05.jpg"
+    },
+    {
+      "texto": "Cuando un conductor circula a velocidad adecuada...",
+      "opciones": [
+        "hace que la circulacion sea lenta y peligrosa.",
+        "estorbaaotrosconductoresypuedecausarunaccidente.",
+        "puede detectar las intenciones de otros usuarios y reaccionar a tiempo para evitarun accidente."
+      ]
+    },
+    {
+      "texto": "Este panel, debajo de una senal vertical...",
+      "opciones": [
+        "adviertede lapresencia deuna senalizacion.",
+        "es complementario de la senal vertical e indica niebla.",
+        "advierte al conductor de condiciones adversas como nieve, niebla olluvia."
+      ],
+      "imagen": "../img/test_048_p07.jpg"
+    },
+    {
+      "texto": "Los paneles direccionales, ¿ique indican?",
+      "opciones": [
+        "Prohiben el paso e informan del sentido de la circulacion.",
+        "Queesuncarrilreversible.",
+        "Que la calzada esta cerrada permanentemente."
+      ],
+      "imagen": "../img/test_048_p08.jpg"
+    },
+    {
+      "texto": "Si se encuentra un motorista accidentado, ¿zdebe quitarle el casco?",
+      "opciones": [
+        "Si, se ledebe quitar lo antes posible para evitar que se asfixie.",
+        "Si, siempre que el herido este consciente.",
+        "No."
+      ],
+      "imagen": "../img/test_048_p09.jpg"
+    },
+    {
+      "texto": "Si circulando se le pincha una rueda debe...",
+      "opciones": [
+        "abandonar inmediatamente el vehiculo,cualquiera que sea el lugar en que se encuentre.",
+        "inmovilizar rapidamente el vehiculo fuera de la calzada, o en lugar seguro.",
+        "continuar el viajehasta el tallermasproximo."
+      ],
+      "imagen": "../img/test_048_p10.jpg"
+    },
+    {
+      "texto": "¿Podra ser utilizado normalmente un carril VAo por un ciclomotor ocupado por dos personas?",
+      "opciones": [
+        "No.",
+        "Si,porquevandospersonas.",
+        "Si, si circula por el arcen."
+      ]
+    },
+    {
+      "texto": "En esta via de doble sentido, ¿zdonde se colocara con su turismo para cambiar de direccion a la izquierda?",
+      "opciones": [
+        "Cerca del bordederecho de la calzada.",
+        "Junto al borde izquierdo dela calzada.",
+        "Junto a la marca longitudinal que separa los sentidos."
+      ],
+      "imagen": "../img/test_048_p12.jpg"
+    },
+    {
+      "texto": "En un tunel, el conductor de una motocicleta, ¿zque distancia debe dejar con el vehiculo de delante en caso de que no pretenda adelantarlo?",
+      "opciones": [
+        "150 metros.",
+        "50 metros.",
+        "100 metros."
+      ],
+      "imagen": "../img/test_048_p13.jpg"
+    },
+    {
+      "texto": "¿Puede encender la luz de largo alcance cuando hay niebla de noche?",
+      "opciones": [
+        "Si, en sustitucion de la luz antiniebla.",
+        "No, esta prohibido.",
+        "Si, aunque no es recomendableporque puede deslumbrar."
+      ]
+    },
+    {
+      "texto": "Un turismo en esta via, ¿ia que velocidad maxima puede adelantar?",
+      "opciones": [
+        "A 90 km/h",
+        "A 110 km/h.",
+        "A 120 km/h."
+      ],
+      "imagen": "../img/test_048_p15.jpg"
+    },
+    {
+      "texto": "Para auxiliar a un herido en accidente de circulacion. ¿Que debe hacer?",
+      "opciones": [
+        "Pedir ayuda y controlar su respiracion.",
+        "Pedir ayuda cuando sea necesaria y sentar al herido.",
+        "Pedir ayuda y dar al herido una bebida para animarle."
+      ],
+      "imagen": "../img/test_048_p16.jpg"
+    },
+    {
+      "texto": "Estaciona su vehiculo en pendiente descendente (en bajada). ¿Que velocidad debe dejar puesta?",
+      "opciones": [
+        "Ninguna, el freno de mano solamente.",
+        "La marcha atras.",
+        "La primera velocidad."
+      ],
+      "imagen": "../img/test_048_p17.jpg"
+    },
+    {
+      "texto": "En esta via urbana, ¿donde hay dos carriles para el mismo sentido icual sera la velocidad maxima a la que podemos circular?",
+      "opciones": [
+        "A 30 km/h.",
+        "A 50 km/h.",
+        "A 20 km/h."
+      ],
+      "imagen": "../img/test_048_p18.jpg"
+    },
+    {
+      "texto": "Un conductor novel, ¿zque tasa maxima de alcoholemia tiene permitida en aire espirado para circular?",
+      "opciones": [
+        "0,50 miligramos por litro.",
+        "0,25 miligramos por litro.",
+        "0,15 miligramos por litro."
+      ]
+    },
+    {
+      "texto": "Un vehiculo no prioritario que circule en servicio de urgencia, ¿ztiene permitido utilizar las senales acusticas?",
+      "opciones": [
+        "Si,perounicamenteenpoblado",
+        "Si,para avisar de su presencia a los demas usuarios.",
+        "No, solo puede utilizar la senalizacion optica."
+      ],
+      "imagen": "../img/test_048_p20.jpg"
+    },
+    {
+      "texto": "El enorme impacto economico de los accidentes de trafico..",
+      "opciones": [
+        "nos afecta a todos.",
+        "afecta solo a los conductores.",
+        "afecta solo a los propietarios de vehiculos."
+      ],
+      "imagen": "../img/test_048_p21.jpg"
+    },
+    {
+      "texto": "Si el equipaje disminuye la visibilidad por el espejo interior, ¿za que esta obligado?",
+      "opciones": [
+        "En ningun caso la carga puede disminuir la visibilidad.",
+        "A tener instalados el espejo retrovisor interior y el exterior izquierdo.",
+        "A tener instalados dos espejos retrovisores exteriores, uno a cada lado del vehiculo."
+      ]
+    },
+    {
+      "texto": "Cuando en el interior de un tunel se produce una detencion motivada por una emergencia, es obligatorio...",
+      "opciones": [
+        "dejar el motor encendido y la llave puesta.",
+        "que todos los ocupantes permanezcan siempre en el vehiculo.",
+        "apagar el motor, conectar la senal de emergencia y mantener encendidas las luces de posicion."
+      ],
+      "imagen": "../img/test_048_p23.jpg"
+    },
+    {
+      "texto": "¿Es correcto que el conductor de un turismo utilice un cojin en su asiento?",
+      "opciones": [
+        "Si, porque la altura mejora el campo de vision del conductor.",
+        "No, porque puede limitar la eficacia del cinturon de seguridad.",
+        "Si,porqueelconductorvamascomodo."
+      ],
+      "imagen": "../img/test_048_p24.jpg"
+    },
+    {
+      "texto": "En un paso para peatones, ¿esta permitido cambiar el sentido de la marcha?",
+      "opciones": [
+        "No, ni siquiera en sus proximidades.",
+        "Si.",
+        "No,perosiensusproximidades."
+      ],
+      "imagen": "../img/test_048_p25.jpg"
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Que el carril de la derecha se desvia hacia ese mismo lado.",
+        "Una bifurcacion hacia la derecha para vehiculos especiales.",
+        "El inicio de un carril reservado para vehiculos lentos."
+      ],
+      "imagen": "../img/test_048_p26.jpg"
+    },
+    {
+      "texto": "La senal de la derecha indica...",
+      "opciones": [
+        "peligro por la proximidad de una via en obras.",
+        "la proximidad de un peligro distinto de los advertidos por otras senales.",
+        "peligro por la proximidad de un estrechamiento de la calzada."
+      ],
+      "imagen": "../img/test_048_p27.jpg"
+    },
+    {
+      "texto": "Un vehiculo debe llevar la luz de galibo si mide..",
+      "opciones": [
+        "masde2,10metrosdeancho",
+        "mas de 4 metros de alto.",
+        "2 o masmetros de ancho y 6 o mas metros de largo."
+      ]
+    },
+    {
+      "texto": "Este agente con los brazos extendidos obliga a detenerse...",
+      "opciones": [
+        "unicamentea los conductores de vehiculosque se acerquen por detras.",
+        "a todos los usuarios que se acerquen al agente desde cualquier direccion que corte la indicadaporlos brazos.",
+        "solo a los conductores que se aproximen de frente."
+      ],
+      "imagen": "../img/test_048_p29.jpg"
+    },
+    {
+      "texto": "Un turismo, ¿ique documentos debe llevar?",
+      "opciones": [
+        "El permiso de conduccion y la licencia de conduccion.",
+        "El permiso de circulacion, la tarjeta de inspeccion tecnica y el permiso de conduccion.",
+        "El recibo del impuesto de circulacion y certificado de garantia."
+      ]
+    }
+  ]
+}

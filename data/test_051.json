@@ -1,0 +1,268 @@
+{
+  "test_id": 51,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Por una via asi senalizada, ¿ique vehiculos no pueden circular?",
+      "opciones": [
+        "Turismos.",
+        "Motocicletas.",
+        "Bicicletas."
+      ],
+      "imagen": "../img/test_051_p01.jpg"
+    },
+    {
+      "texto": "Un turismo, ¿icuando puede superar la velocidad maxima generica en 20 km/h?",
+      "opciones": [
+        "Cuando lopermitan las condiciones de la via, enautopistasyautovias.",
+        "Para adelantar en las autopistas y autovias.",
+        "No, en ningun caso."
+      ],
+      "imagen": "../img/test_051_p02.jpg"
+    },
+    {
+      "texto": "En esta via, como norma general, ¿iesta permitido mantenerse en el carril de la izquierda?",
+      "opciones": [
+        "Si, porque la via no esta saturada.",
+        "No, debe cambiarse al carril de la derecha.",
+        "Si, si no entorpece lamarcha de otros vehiculos."
+      ],
+      "imagen": "../img/test_051_p03.jpg"
+    },
+    {
+      "texto": "Desde el punto de vista de la seguridad vial, el chasis y la carroceria tienen como funcion...",
+      "opciones": [
+        "mejorar la aerodinamica favoreciendouna conduccioneconomica.",
+        "absorber la maxima cantidad de la energia producida en un accidente.",
+        "protegera lospeatonesanteposibles atropellos."
+      ]
+    },
+    {
+      "texto": "¿Cuando debe pasar un turismo la primera inspeccion tecnica?",
+      "opciones": [
+        "A los 3 anos, a partir de la fecha de la primera matriculacion.",
+        "A los 4 anos, a partir de la fecha de fabricacion o importacion.",
+        "A los 4 anos, a partir de la fecha de la primera matriculacion."
+      ]
+    },
+    {
+      "texto": "Para evitar o retrasar la aparicion de la fatiga, los conductores deben...",
+      "opciones": [
+        "mantener el interior del vehiculo a una temperatura elevada, siempre por encima de los 25 grados.",
+        "mantener bien ventilado el interiordel vehiculo.",
+        "cerrartotalmentelasventanillas."
+      ]
+    },
+    {
+      "texto": "¿Para que sirve el carril de aceleracion?",
+      "opciones": [
+        "Para incorporarse a la via a una velocidad adecuada a las circunstancias de la circulacion.",
+        "Para incorporarse lentamente a la via.",
+        "Para alcanzar120Km/hantes de incorporarseala via."
+      ],
+      "imagen": "../img/test_051_p07.jpg"
+    },
+    {
+      "texto": "El conductor, ¿zesta obligado a hacer que los pasajeros mantengan la posicion adecuada?",
+      "opciones": [
+        "Si.",
+        "No.",
+        "No,solo esta obligado a cuidar la colocacion de los objetos."
+      ],
+      "imagen": "../img/test_051_p08.jpg"
+    },
+    {
+      "texto": "Hablar por el telefono movil cuando se conduce, ¿zimpide manejar el volante de forma adecuada?",
+      "opciones": [
+        "Si, pero solo al circular a alta velocidad.",
+        "No, cuando se sujeta con el hombro.",
+        "Si,tanto si se sujetacon lamanocomosi sehacecon el hombro."
+      ],
+      "imagen": "../img/test_051_p09.jpg"
+    },
+    {
+      "texto": "En un tramo con gran pendiente se encuentran dos vehiculos en una zona estrecha donde no pueden cruzarse, tiene preferencia el vehiculo que circula...",
+      "opciones": [
+        "con mayor M.M.A.",
+        "en sentido descendente.",
+        "en sentido ascendente."
+      ],
+      "imagen": "../img/test_051_p10.jpg"
+    },
+    {
+      "texto": "Cuando una bateria necesita liquido, ¿zque liquido se debe poner?",
+      "opciones": [
+        "Agua y anticongelante.",
+        "Agua y aceite.",
+        "Agua destilada."
+      ],
+      "imagen": "../img/test_051_p11.jpg"
+    },
+    {
+      "texto": "En caso de un accidente donde la ayuda ya esta organizada, ¿idebe detenerse a prestar auxilio?",
+      "opciones": [
+        "Si, en vias interurbanas o donde no exista poste sos.",
+        "No,si no esta implicado debe continuar la marcha.",
+        "Si,debedetenerseycolaborar siempre."
+      ],
+      "imagen": "../img/test_051_p12.jpg"
+    },
+    {
+      "texto": "Cuando tenga que bajar del vehiculo para descargar el equipaje, ¿zdebe apagar el motor?",
+      "opciones": [
+        "No, no es necesario si se trata de una parada breve.",
+        "No, solo debe dejar accionado el freno de mano.",
+        "Si,y ademas debe desconectar el sistemade arranque o contacto."
+      ]
+    },
+    {
+      "texto": "Los conos en la calzada, le indican...",
+      "opciones": [
+        "la prohibicion de rebasar la linea imaginaria que los une.",
+        "reforzamiento de las lineas discontinuas del carril.",
+        "nada,porqueno son senalesdecirculacion."
+      ],
+      "imagen": "../img/test_051_p14.jpg"
+    },
+    {
+      "texto": "Esta senal indica la entrada a una via reservada para...",
+      "opciones": [
+        "ciclomotores.",
+        "ciclos.",
+        "ciclos y ciclomotores."
+      ],
+      "imagen": "../img/test_051_p15.jpg"
+    },
+    {
+      "texto": "¿Es obligatorio llevar un extintor de incendios en un turismo destinado al servicio privado?",
+      "opciones": [
+        "Si.",
+        "No.",
+        "Si, cuando transporte a mas de 5 personas incluido el conductor."
+      ],
+      "imagen": "../img/test_051_p16.jpg"
+    },
+    {
+      "texto": "La incorporacion desde un inmueble a la via publica, debe realizarse...",
+      "opciones": [
+        "a una velocidad que permita la detencion en el acto,y cediendo el paso a peatones y vehiculos.",
+        "advirtiendo con la senal acustica y la senal de emergencia.",
+        "rapidamenteparano entorpecera peatones yvehiculos."
+      ],
+      "imagen": "../img/test_051_p17.jpg"
+    },
+    {
+      "texto": "¿Que indicaesta senal?",
+      "opciones": [
+        "Que en el carril central y en el izquierdo se debera circular a 70 km/h como minimo.",
+        "Que en el carril central y en el izquierdo esta prohibido circular a mas de 70 km/h.",
+        "Que en el carril de la derecha no se debe sobrepasar la velocidad de 70 km/h."
+      ],
+      "imagen": "../img/test_051_p18.jpg"
+    },
+    {
+      "texto": "¿Como debe colocar el navegador GPS portatil en el vehiculo?",
+      "opciones": [
+        "Auna distancia de entre 10y 25centimetros.",
+        "Donde no entorpezca la vision y nunca cerca deun airbag.",
+        "Delante del volante."
+      ],
+      "imagen": "../img/test_051_p19.jpg"
+    },
+    {
+      "texto": "La mayoria de los accidentes se deben...",
+      "opciones": [
+        "al estadode lavia.",
+        "al factor humano.",
+        "al estado del vehiculo."
+      ]
+    },
+    {
+      "texto": "La senal triangular indica que se debe...",
+      "opciones": [
+        "detener el vehiculo y ceder el paso.",
+        "ceder el paso cuando seanecesario.",
+        "acelerarpara aumentar la velocidad."
+      ],
+      "imagen": "../img/test_051_p21.jpg"
+    },
+    {
+      "texto": "Un conductor novel, ¿za que esta obligado?",
+      "opciones": [
+        "A llevar visible en la parte posterior izquierda la placa L.",
+        "A no circular a mas de 80 km/h.",
+        "Ano circular amas de100 Km/h en autopista oautovia."
+      ]
+    },
+    {
+      "texto": "Cuando llueve, las ruedas del vehiculo, ¿icomo se agarran a la calzada?",
+      "opciones": [
+        "Se agarran mas a la calzada.",
+        "Se agarran igual que cuando no llueve.",
+        "Seagarran menos a la calzada."
+      ],
+      "imagen": "../img/test_051_p23.jpg"
+    },
+    {
+      "texto": "La luz de estacionamiento debe utilizarse...",
+      "opciones": [
+        "al estacionar en travesias insuficientemente iluminadas.",
+        "en las paradas en doble fila.",
+        "en las detenciones envias urbanas suficienteo insuficientemente iluminadas."
+      ]
+    },
+    {
+      "texto": "La maxima velocidad segura que puede mantenerse sobre una seccion de carretera en condiciones favorables es la velocidad...",
+      "opciones": [
+        "de fluidez de una via.",
+        "adecuada de una via.",
+        "de diseno de una via."
+      ],
+      "imagen": "../img/test_051_p25.jpg"
+    },
+    {
+      "texto": "Por el carril para vehiculos de alta ocupacion (VAo), ¿ipuede circular un turismo con remolque?",
+      "opciones": [
+        "Si, cuando el remolque sea ligero.",
+        "No.",
+        "Si, cuando lo ocupan el numero de personas exigido."
+      ],
+      "imagen": "../img/test_051_p26.jpg"
+    },
+    {
+      "texto": "La linea de borde de la calzada, ¿zse puede atravesar?",
+      "opciones": [
+        "Si, cuando la linea es discontinua; no, cuando es continua.",
+        "Si,cuando sea necesarioy las circunstancias lopermitan.",
+        "No, esta prohibido."
+      ],
+      "imagen": "../img/test_051_p27.jpg"
+    },
+    {
+      "texto": "Al adelantar en carreteras convencionales, ¿ique vehiculos podran rebasar la velocidad maxima generica en 20 km/h?",
+      "opciones": [
+        "Turismos.",
+        "Ninguno",
+        "Turismos,motocicletas yautocaravanas con MMA inferiora 3500kg."
+      ],
+      "imagen": "../img/test_051_p28.jpg"
+    },
+    {
+      "texto": "¿Que factores pueden provocar fatiga en un conductor?",
+      "opciones": [
+        "La ventilacion adecuada y la falta de confort.",
+        "Solamente factores externos, como la via,la circulacion densa o las condiciones meteorologicas.",
+        "El estres, laspreocupaciones olos tiempos excesivos deconduccion."
+      ]
+    },
+    {
+      "texto": "El consumo de anfetaminas en la conduccion, ¿iesta prohibido?",
+      "opciones": [
+        "Sí.",
+        "No,porqueno afectaalaconduccion.",
+        "No, si forma partede un tratamiento medico."
+      ],
+      "imagen": "../img/test_051_p30.jpg"
+    }
+  ]
+}

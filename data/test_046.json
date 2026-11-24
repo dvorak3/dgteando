@@ -1,0 +1,269 @@
+{
+  "test_id": 46,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Si se coloca la cinta abdominal del cinturon de seguridad sobre el abdomen...",
+      "opciones": [
+        "el cinturon de seguridad funciona con eficacia.",
+        "puede provocar graves lesiones internas durante un accidente.",
+        "la conduccionesmas comodaysegura."
+      ],
+      "imagen": "../img/test_046_p01.jpg"
+    },
+    {
+      "texto": "Se considera que una via esta insuficientemente iluminada cuando...",
+      "opciones": [
+        "no pueda distinguir la placa de matricula de otro vehiculo a 50 metros.",
+        "la via no permita ver con claridad.",
+        "con vista normal no se puede leer una placa de matricula a 10 metros o distinguir un vehiculo pintado de oscuro a 50 metros."
+      ],
+      "imagen": "../img/test_046_p02.jpg"
+    },
+    {
+      "texto": "¿Esta prohibido parar o estacionar en la parte transitable del arcen de una via interurbana?",
+      "opciones": [
+        "Solamenteparar.",
+        "Tantopararcomo estacionar.",
+        "Solamenteestacionar."
+      ],
+      "imagen": "../img/test_046_p03.jpg"
+    },
+    {
+      "texto": "En autopista, ¿icomo debe circular?",
+      "opciones": [
+        "Avelocidad adaptada a la circulacion ysin rebasar los 120Km/h.",
+        "Siemprealavelocidadmaximapermitida.",
+        "A110Km/hy amas velocidad para adelantar."
+      ],
+      "imagen": "../img/test_046_p04.jpg"
+    },
+    {
+      "texto": "Ante una frenada de emergencia, ¿zcomo debe actuar?",
+      "opciones": [
+        "De igual manera si mi vehiculo tiene frenos convencionales o dispone de ABs.",
+        "No pisando el embrague en ningun momento de la frenada, en cualquier caso.",
+        "De diferente manera si mi vehiculo tiene frenos convencionales o dispone de ABs."
+      ]
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Una via cortada al trafico.",
+        "Pasoanivel sinbarreras.",
+        "Pasoanivelconbarreras."
+      ],
+      "imagen": "../img/test_046_p06.jpg"
+    },
+    {
+      "texto": "¿Cual de los siguientes factores hace que aumente la fatiga cuando se conduce?",
+      "opciones": [
+        "Las congestiones y retenciones de trafico.",
+        "Los asientos demasiadoblandos.",
+        "La luz solar."
+      ],
+      "imagen": "../img/test_046_p07.jpg"
+    },
+    {
+      "texto": "Para evitar atropellos a los ciclistas es conveniente...",
+      "opciones": [
+        "aumentar la velocidad para adelantarlos cuanto antes.",
+        "al adelantarlos dejar en todo momento una separacion lateral suficiente.",
+        "hacerles senales acusticas para que se aparten."
+      ],
+      "imagen": "../img/test_046_p08.jpg"
+    },
+    {
+      "texto": "¿Que usuarios han de someterse a las pruebas de alcoholemia?",
+      "opciones": [
+        "Cualquier usuario de la via aunque no este implicado en un accidente.",
+        "Solo los conductoresde automoviles ymotocicletas.",
+        "Los conductores de vehiculosque sean requeridos en controles preventivos."
+      ],
+      "imagen": "../img/test_046_p09.jpg"
+    },
+    {
+      "texto": "A la vista de la senalizacion, ¿iquien tiene preferencia de paso?",
+      "opciones": [
+        "Los automoviles.",
+        "Los vehiculos de dos ruedas.",
+        "Los peatones."
+      ],
+      "imagen": "../img/test_046_p10.jpg"
+    },
+    {
+      "texto": "Mirarse en el espejo retrovisor mientras se conduce, ¿zpuede aumentar el riesgo de accidente?",
+      "opciones": [
+        "Si,porque el tiempo que semira al espejo no sepresta atencion a la conduccion.",
+        "Si, pero solamente de noche.",
+        "No,porque es posiblemirarse al espejo y conducir a la vez."
+      ],
+      "imagen": "../img/test_046_p11.jpg"
+    },
+    {
+      "texto": "A 100 km/h por una via asi senalizada, ¿icircula a una velocidad adecuada?",
+      "opciones": [
+        "No,porqueloaconsejadoes circulara120km/h.",
+        "Si, siempre que lo permitan las circunstancias del trafico y la via.",
+        "Si,siemprequeno entorpezca la circulacion."
+      ],
+      "imagen": "../img/test_046_p12.jpg"
+    },
+    {
+      "texto": "En un paso estrecho, esta senal, ¿ique indica?",
+      "opciones": [
+        "Que tienen preferencia los vehiculos que vienen en sentido contrario.",
+        "Que tienepreferencia el vehiculoque se encuentre mas proximo a la senial.",
+        "Quetengo preferencia depaso."
+      ],
+      "imagen": "../img/test_046_p13.jpg"
+    },
+    {
+      "texto": "Para ahorrar carburante, ¿icomo se debe ventilar el vehiculo?",
+      "opciones": [
+        "Con las entradas de aire que hay en el salpicadero.",
+        "Abriendo todas lasventanillas.",
+        "Abriendosolamentelasventanillastraseras."
+      ]
+    },
+    {
+      "texto": "¿Esta permitido utilizar en poblado las advertencias acusticas?",
+      "opciones": [
+        "Si,siel sonido noes estridente",
+        "No,enpoblado estan prohibidas.",
+        "Si, para evitar un posible accidente."
+      ],
+      "imagen": "../img/test_046_p15.jpg"
+    },
+    {
+      "texto": "El cinturon de seguridad en los asientos traseros...",
+      "opciones": [
+        "es importante,pero solo en vias interurbanas.",
+        "es responsabilidadunica de susocupantes,ya que enun accidente serian los unicos perjudicados.",
+        "puede salvar la vida de sus ocupantes y evitaque éstosprovoquen graves lesiones en los demas."
+      ],
+      "imagen": "../img/test_046_p16.jpg"
+    },
+    {
+      "texto": "La circulacion de peatones esta prohibida...",
+      "opciones": [
+        "en autopistas,pero no en autovias.",
+        "enautovias,peronoenautopistas.",
+        "enautopistasyenautovias."
+      ],
+      "imagen": "../img/test_046_p17.jpg"
+    },
+    {
+      "texto": "Tomar un analgesico para el dolor de cabeza, ¿ipuede afectar a la conduccion?",
+      "opciones": [
+        "Solosisemezclaconalcohol.",
+        "No,los analgesicos son inofensivos.",
+        "Si."
+      ]
+    },
+    {
+      "texto": "En una via urbana de sentido unico, esta permitido estacionar en el lado...",
+      "opciones": [
+        "derecho o izquierdo, fuera de la calzada o el arcen.",
+        "derecho.",
+        "derecho o izquierdo."
+      ],
+      "imagen": "../img/test_046_p19.jpg"
+    },
+    {
+      "texto": "En una autopista con tres carriles para cada sentido, ¿ique distancia de seguridad debe dejar un turismo con el vehiculo que circula delante?",
+      "opciones": [
+        "50metros.",
+        "Laquepermita detener el vehiculo en casodefrenadobruscoypermitaquelos demas adelanten con seguridad.",
+        "La que permita detener el vehiculo en caso de frenado brusco del que va delante sin colisionar con el."
+      ],
+      "imagen": "../img/test_046_p20.jpg"
+    },
+    {
+      "texto": "El estado de los neumaticos, ¿zinfluye en el frenado?",
+      "opciones": [
+        "Si influye, porque los neumaticos en buen estado se agarran mejor al suelo y frena mejor.",
+        "No, solamente depende del estado de la calzada.",
+        "No influye, solamente depende del estado de los frenos."
+      ]
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Que un carril se desvia hacia la calzada contraria por obras.",
+        "Que la via pasa de uno a dos carriles de circulacionpor obras.",
+        "Que dos carriles se desvian hacia la calzada contraria por obras."
+      ],
+      "imagen": "../img/test_046_p22.jpg"
+    },
+    {
+      "texto": "En carretera, los animales deben circular...",
+      "opciones": [
+        "por el borde izquierdo de la calzada, como norma general.",
+        "por la derecha o por la izquierda de la calzada, es indiferente.",
+        "lo mas cerca posible del borde derecho de la via."
+      ],
+      "imagen": "../img/test_046_p23.jpg"
+    },
+    {
+      "texto": "Para un ajuste optimo, la altura de la parte superior del reposacabezas debe colocarse...",
+      "opciones": [
+        "porencimadelanuca.",
+        "por debajo de la nuca.",
+        "ala misma altura que la parte superior de la cabeza."
+      ],
+      "imagen": "../img/test_046_p24.jpg"
+    },
+    {
+      "texto": "En una carretera convencional, ¿ia que velocidad maxima puede circular un cuatriciclo pesado?",
+      "opciones": [
+        "A 70 km/h.",
+        "A 80 km/h.",
+        "A90 km/h."
+      ],
+      "imagen": "../img/test_046_p25.jpg"
+    },
+    {
+      "texto": "Estan obligados a someterse a las pruebas de alcoholemia...",
+      "opciones": [
+        "los conductores de vehiculosque sean requeridos en controles preventivos.",
+        "solamentelos conductores deautomoviles yciclomotores.",
+        "solamente los usuarios de la via que esten implicados en un accidente de circulacion."
+      ]
+    },
+    {
+      "texto": "Queda prohibido parar en...",
+      "opciones": [
+        "curvasycambios derasante.",
+        "tramosdevias afectadosporla senaltunel.",
+        "todas las vias interurbanas."
+      ]
+    },
+    {
+      "texto": "En el conductor, el sueno provoca que...",
+      "opciones": [
+        "disminuya el tiempo de reaccion.",
+        "se comporte de una forma mas peligrosa.",
+        "perciba mejor el entorno del trafico."
+      ]
+    },
+    {
+      "texto": "¿Como debe incorporarse a la via el vehiculo que sale del camino sin pavimentar?",
+      "opciones": [
+        "Cediendo el paso y auna velocidad quepermita detenerse en el acto.",
+        "Acelerando para alcanzar la velocidad maxima dela via.",
+        "Cediendo el paso a los vehiculos de la derecha."
+      ],
+      "imagen": "../img/test_046_p29.jpg"
+    },
+    {
+      "texto": "¿Esta permitido colocar cortinillas en los cristales traseros del vehiculo?",
+      "opciones": [
+        "No,estaprohibido.",
+        "Si, si el vehiculo dispone de un espejo retrovisor exterior a cada lado.",
+        "Si, si se trata de un accesorio homologado."
+      ],
+      "imagen": "../img/test_046_p30.jpg"
+    }
+  ]
+}

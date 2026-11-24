@@ -1,0 +1,252 @@
+{
+  "test_id": 60,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "¿Que condiciones tienen que tener los neumaticos de una motocicleta?",
+      "opciones": [
+        "Las dos ruedas tienen que ser del mismotamanoycaracteristicas.",
+        "No tienen que presentar cortes, roces, deformaciones, etc.",
+        "Las ranuras de la banda de rodadura tienen que tener una profundidad minima de 1,6 milimetros."
+      ],
+      "imagen": "../img/test_060_p01.jpg"
+    },
+    {
+      "texto": "Invadir marcha atras una interseccion para incorporarse a la circulacion, ¿zesta permitido?",
+      "opciones": [
+        "Si, si no obstaculiza la circulacion a otros vehiculos.",
+        "No, porque esta prohibido invadir un cruce de vias.",
+        "Si, sinorecorremarcha atrasmasde15metros."
+      ]
+    },
+    {
+      "texto": "¿Es de dia, hay niebla y no lleva luces antiniebla delanteras. Que luces debe encender?",
+      "opciones": [
+        "Las luces largas.",
+        "Las lucesdeposicion solamente.",
+        "Las luces cortas."
+      ],
+      "imagen": "../img/test_060_p03.jpg"
+    },
+    {
+      "texto": "En un estacionamiento con limitacion horaria, ¿iesta permitido estacionar sin colocar el ticket correspondiente?",
+      "opciones": [
+        "No,yinicamentepuedeser sancionado.",
+        "No, y ademas de la sancion, los agentes pueden inmovilizar el vehiculo.",
+        "Si, si es por un corto espacio de tiempo."
+      ],
+      "imagen": "../img/test_060_p04.jpg"
+    },
+    {
+      "texto": "Esta senal indica...",
+      "opciones": [
+        "el principio de una autovia.",
+        "el final de una autovia.",
+        "que se circula por un carril que conduce a una autovia. vehiculo puede sobresalir, como maximo, por detras? O a) El 20% de la longitud del vehiculo. b) El 15% de la longitud del vehiculo. Oc)1/3delalongituddelvehiculo."
+      ],
+      "imagen": "../img/test_060_p05.jpg"
+    },
+    {
+      "texto": "¿Quien es el responsable de que el vehiculo se encuentre al corriente de las inspecciones tecnicas?",
+      "opciones": [
+        "El tomador del seguro.",
+        "El conductor habitual.",
+        "El titular del vehiculo. c) El titular del vehiculo."
+      ]
+    },
+    {
+      "texto": "Esta senal indica entrada prohibida a...",
+      "opciones": [
+        "vehiculosautomoviles.",
+        "vehiculos de motor, excepto motocicletas de dos ruedas sin sidecar.",
+        "turismos."
+      ],
+      "imagen": "../img/test_060_p08.jpg"
+    },
+    {
+      "texto": "El sistema antibloqueo de frenos ABS...",
+      "opciones": [
+        "permite mantener el control sobre la direccion.",
+        "reduce la distancia de frenado en todos los casos.",
+        "hace que el vehiculo mantenga su trayectoria."
+      ]
+    },
+    {
+      "texto": "Esta senal advierte del peligro por la proximidad de una zona donde...",
+      "opciones": [
+        "vuelan frecuentemente aeronaves abaja altura sobre la via.",
+        "normalmente sopla viento fuerte en cualquier direccion.",
+        "sopla frecuentemente vientofuerte en direccion transversal."
+      ],
+      "imagen": "../img/test_060_p10.jpg"
+    },
+    {
+      "texto": "Si tiene su permiso B desde hace mas de un ano, y ahora obtiene el de la clase A, ¿iesta obligado a llevar la placa Len su motocicleta?",
+      "opciones": [
+        "Si, durante un ano,en la parte trasera.",
+        "No.",
+        "Si, en la parte delantera, durante un ano."
+      ],
+      "imagen": "../img/test_060_p11.jpg"
+    },
+    {
+      "texto": "¿Que le permiten los espejos retrovisores?",
+      "opciones": [
+        "Observar unicamente lo que esta detras del vehiculo.",
+        "Evitar los angulos muertos.",
+        "Observar entodomomento loquerodea al vehiculo."
+      ],
+      "imagen": "../img/test_060_p12.jpg"
+    },
+    {
+      "texto": "El efecto tunel producido por la velocidad hace que el conductor...",
+      "opciones": [
+        "seamas sensiblea losdeslumbramientos.",
+        "solo sea capaz de percibir con nitidez la parte lateral de la via.",
+        "solo sea capaz depercibir con nitidez el centro de la via."
+      ],
+      "imagen": "../img/test_060_p13.jpg"
+    },
+    {
+      "texto": "Estas senales de balizamiento, ¿ique indican?",
+      "opciones": [
+        "Que esta prohibido circular por el carril izquierdo.",
+        "Quehay un carril de salida a la derecha.",
+        "Quelaproxima curva es especialmentepeligrosa."
+      ],
+      "imagen": "../img/test_060_p14.jpg"
+    },
+    {
+      "texto": "Conduciendo una motocicleta, ¿zesta permitido llevar el casco desabrochado?",
+      "opciones": [
+        "No, en ningun caso.",
+        "Unicamente en vias urbanas, si la velocidad es inferior a 40 km/h.",
+        "Si, cuando sea un casco integral."
+      ],
+      "imagen": "../img/test_060_p15.jpg"
+    },
+    {
+      "texto": "Ante un paso a nivel esta obligado a...",
+      "opciones": [
+        "pasaraunque lasbarreras estenenmovimiento.",
+        "asegurarse antes de atravesarlo de que no existe ningun peligro.",
+        "atravesarlorapidamente."
+      ],
+      "imagen": "../img/test_060_p16.jpg"
+    },
+    {
+      "texto": "En un cambio de carril, ¿zque vehiculo tiene preferencia de paso?",
+      "opciones": [
+        "El vehiculo que cambia de carril, en cualquier caso.",
+        "El vehiculo que ya circulaba por el carril.",
+        "El vehiculo que cambia de carril, si circula a gran velocidad."
+      ],
+      "imagen": "../img/test_060_p17.jpg"
+    },
+    {
+      "texto": "¿Cuando puede estacionar a la vista de esta senal?",
+      "opciones": [
+        "Nunca,yaqueestasenal prohibeel estacionamientopermanentemente.",
+        "A partir de las 9 horas del dia 16 y hasta las 9 horas del dia 1.",
+        "A partir de las 9 horas del dia 1 y hasta las 9 horas del dia 16."
+      ],
+      "imagen": "../img/test_060_p18.jpg"
+    },
+    {
+      "texto": "¿Donde esta permitido parar en una via interurbana?",
+      "opciones": [
+        "En el lado derecho, fuera de la calzada y de la parte transitable del arcen.",
+        "En cualquier lado, siempre fuera de la calzada y de la parte transitable del arcen.",
+        "Si es pornecesidades del trafico,en el arcen si es transitable."
+      ],
+      "imagen": "../img/test_060_p19.jpg"
+    },
+    {
+      "texto": "En un tunel con un carril para cada sentido, ¿ique distancia de seguridad minima es obligatoria para turismos?",
+      "opciones": [
+        "50metros.",
+        "100metros.",
+        "200metros."
+      ],
+      "imagen": "../img/test_060_p20.jpg"
+    },
+    {
+      "texto": "Esta calle tiene tres carriles en cada sentido. ¿Por donde se debe circular?",
+      "opciones": [
+        "Depende de la velocidad demi vehiculo.",
+        "Por el carril mas adecuado para ir a mi destino.",
+        "Por el carril derecho y por los otros solo para adelantar."
+      ],
+      "imagen": "../img/test_060_p21.jpg"
+    },
+    {
+      "texto": "Al mezclar las drogas con alcohol...",
+      "opciones": [
+        "las reaccionespueden serprevisiblesy,portanto,controlables.",
+        "las reacciones pueden ser imprevisibles y, por tanto, peligrosas.",
+        "no seproducen reaccionesporque las drogas anulan la accion del alcohol."
+      ]
+    },
+    {
+      "texto": "El conductor de este vehiculo, ¿zesta obligado a mantener la adecuada colocacion de los animales que transporta?",
+      "opciones": [
+        "Si, los animales deben ircolocados correctamente en todo momento.",
+        "No, no esta obligado.",
+        "Si, aunque no esta obligado una vez iniciada la marcha."
+      ],
+      "imagen": "../img/test_060_p23.jpg"
+    },
+    {
+      "texto": "¿Esta permitido adelantar en el interior de un tunel?",
+      "opciones": [
+        "No.",
+        "Si, si hay mas de un carril en el mismo sentido de la marcha.",
+        "Si, cuando los sentidos estan separados."
+      ],
+      "imagen": "../img/test_060_p24.jpg"
+    },
+    {
+      "texto": "¿Por donde debe pasar la cinta toracica del cinturon de seguridad?",
+      "opciones": [
+        "Porel hombro.",
+        "Por la pelvis.",
+        "Sobrela clavicula y por el centro del pecho."
+      ],
+      "imagen": "../img/test_060_p25.jpg"
+    },
+    {
+      "texto": "El panel colocado debajo de la senal vertical...",
+      "opciones": [
+        "es complementario de la senial vertical, e indica niebla.",
+        "adviertede la presencia deuna senalizacion.",
+        "advierte al conductor de condiciones adversas como nieve, niebla o lluvia."
+      ],
+      "imagen": "../img/test_060_p26.jpg"
+    },
+    {
+      "texto": "La velocidad inadecuada, el alcohol y las enfermedades, ¿zse consideran factores de riesgo?",
+      "opciones": [
+        "La velocidad inadecuada y el alcohol si, pero las enfermedades no.",
+        "No.",
+        "Si."
+      ]
+    },
+    {
+      "texto": "De noche, es obligatorio senalizar una carga que sobresale lateralmente mas de 0,40 metros del borde exterior de la luz delantera o posterior de posicion del vehiculo...",
+      "opciones": [
+        "con una luz blanca y un dispositivo reflectante de color blanco por delante y con una luz roja y un dispositivo reflectante de color rojo por detras.",
+        "con un panel reflectante por detras solamente.",
+        "con una luz roja yun dispositivo reflectante rojo por detras,solamente."
+      ]
+    },
+    {
+      "texto": "¿Hay nieve en la calzada. Como debe circular?",
+      "opciones": [
+        "Lentamente,pero con la velocidad mas largaposible.",
+        "Rapidamente para que no patine el vehiculo.",
+        "En la primera relacion de marchas y acelerando a fondo. 3o. Si conduce y se encuentra en tratamiento medico con medicamentos, debe saber... O a) que hay medicamentos que influyen negativamente en la atencion y el tiempo de"
+      ],
+      "imagen": "../img/test_060_p29.jpg"
+    }
+  ]
+}
