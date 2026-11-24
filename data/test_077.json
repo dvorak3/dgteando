@@ -1,5 +1,6 @@
 {
   "test_id": 77,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
       "texto": "¿La mayoria de los vehiculos disponen de un filtro en el habitaculo o filtro antipolen.iDebe sustituirse?",
