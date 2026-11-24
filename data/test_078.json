@@ -1,0 +1,291 @@
+{
+  "test_id": 78,
+  "preguntas": [
+    {
+      "texto": "Estas senales indican peligro por...",
+      "opciones": [
+        "aproximacion de un paso a nivel sin barreras.",
+        "aproximacion de un paso a nivel con barreras.",
+        "situacion inmediata de un paso a nivel sin barreras."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "zEsta permitido estacionar en doble fila?",
+      "opciones": [
+        "Si, cuando no hayespacio libre cerca.",
+        "No, en ningun caso.",
+        "Si, cuando el conductorno abandoneelvehiculo."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "La senal indica el paso de dos a tres carriles de circulacion y ademas...",
+      "opciones": [
+        "La velocidad maxima en cada uno de ellos.",
+        "La velocidad minima en cada uno de ellos.",
+        "La velocidad maxima aconsejada en cada uno de ellos."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "En esta via, como norma general, zesta permitido mantenerse en el carril de la izquierda?",
+      "opciones": [
+        "Si,porque la via no esta saturada.",
+        "No, debe cambiarse al carril de la derecha",
+        "Si, sino entorpecelamarcha deotros vehiculos."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p04.jpg"
+    },
+    {
+      "texto": "Esta senal de advertencia de peligro indica la proximidad de...",
+      "opciones": [
+        "un resalto o baden en la via.",
+        "una zona de la via en la que se estrecha la calzada.",
+        "una obstruccion en la calzada."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "En una curva de visibilidad reducida, esta permitido cambiar el sentido de la marcha?",
+      "opciones": [
+        "Si,moderando la velocidad.",
+        "No,porque esta prohibido.",
+        "Si, siempre que se advierta convenientemente la maniobra."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p06.jpg"
+    },
+    {
+      "texto": "Si su vehiculo circula muy cargado...",
+      "opciones": [
+        "Afectarasoloal consumo.",
+        "Afectara al consumo y a la distancia de frenado.",
+        "Afectara al consumo,a la distancia de frenado y a la estabilidad."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p07.jpg"
+    },
+    {
+      "texto": "En una zona de obras en la que se ha producido un estrechamiento de la calzada, ique vehiculo tendra preferencia si no hay senal que la regule?",
+      "opciones": [
+        "El quehayaentradoprimero.",
+        "El que se encuentre el estrechamiento a su derecha.",
+        "El que no tenga que cambiar de carril para entrar en el estrechamiento."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p08.jpg"
+    },
+    {
+      "texto": "El vehiculo de la imagen esta circulando con la luz antiniebla posterior, zes correcto?",
+      "opciones": [
+        "Si, porque hay niebla.",
+        "No,porque la niebla no es densa.",
+        "Si, se podra usar opcionalmente cuando exista un poco de niebla."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p09.jpg"
+    },
+    {
+      "texto": "Si padece una enfermedad cronica, &debe adoptar alguna precaucion?",
+      "opciones": [
+        "Si, no debe conducir.",
+        "No,cuandotomalamedicacionadecuada"
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "Los vehiculos prioritarios, ztienen prioridad de paso sobre el resto de los usuarios de la via?",
+      "opciones": [
+        "Sí.",
+        "No.",
+        "Solo cuando circulen en servicio de urgencia."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "Si tiene su permiso B desde hace mas de un ano, y ahora obtiene el de la clase A, iesta obligado a llevar la placa Len su motocicleta?",
+      "opciones": [
+        "Si, durante un ano, en la parte trasera.",
+        "No.",
+        "Si, en la parte delantera, durante un ano."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "En esta situacion de la fotografia, el conductor del camion, iesta obligado a apartarse al arcen para facilitar el adelantamiento a otros vehiculos?",
+      "opciones": [
+        "Como norma general, no.",
+        "Si, cuando el camion circule a menos de 70 km/h.",
+        "Si, cuando el camion es un vehiculopesado."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p13.jpg"
+    },
+    {
+      "texto": "El campo visual de los ninos es limitado debido a...",
+      "opciones": [
+        "su baja estatura.",
+        "sufalta de atencion.",
+        "el escaso desarrollo del sentido de la vista, principalmente."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "zQueindicanestassenales?",
+      "opciones": [
+        "Paso anivel con barreras a la derecha.",
+        "Proximidad de paso a nivel sin barreras a la derecha.",
+        "Proximidad de paso a nivel sin barreras a la izquierda."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "zQue significan unas luces rojas intermitentes?",
+      "opciones": [
+        "Paso a nivel cerrado.",
+        "Prohibicion temporal depaso.",
+        "Pasarconprecaucion."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p16.jpg"
+    },
+    {
+      "texto": "Al circular a mayor velocidad...",
+      "opciones": [
+        "sepercibenpeorlas senalesdetrafico.",
+        "se perciben mejor las senales de trafico.",
+        "se puede ver y analizar mejor lo que ocurre alrededor."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "Durante el dia,un conductor que ocupe la calzada, esta obligado a ponerse el chaleco reflectante? El conductor de un turismo que, por una averia, sale del vehiculo y ocupa la calzada o el arcen, idebeusar un chaleco reflectante?",
+      "opciones": [
+        "Si,envias interurbanas.",
+        "No, cuandolavisibilidad es buena.",
+        "Si,entodaclasedevias."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p18.jpg"
+    },
+    {
+      "texto": "Los animales pueden circular...",
+      "opciones": [
+        "unicamentepor vias interurbanas.",
+        "portodas lasvias,exceptoporautopistasyautovias.",
+        "portodaslas vias sin excepcion."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p19.jpg"
+    },
+    {
+      "texto": "Para adelantar a este vehiculo...",
+      "opciones": [
+        "es obligatorio esperara untramo seco decalzada.",
+        "debe tenerse especial cuidado,pues las salpicaduras pueden impedir la visibilidad.",
+        "nodebentomarseprecaucionesespeciales."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p20.jpg"
+    },
+    {
+      "texto": "iA qué altura debe quedar el centro del apoyacabezas?",
+      "opciones": [
+        "A la altura del cuello.",
+        "A la altura de los ojos.",
+        "La altura del apoyacabezas es indiferente. Indiferente."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p21.jpg"
+    },
+    {
+      "texto": "zTiene correctamente situadas las manos en el volante este conductor?",
+      "opciones": [
+        "Si, si esta efectuandouna curva hacia laderecha.",
+        "Si, si esta efectuando una curva hacia la izquierda.",
+        "No."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p22.jpg"
+    },
+    {
+      "texto": "Si circulamos por una via donde hay una linea longitudinal continua adosada a otra discontinua...",
+      "opciones": [
+        "debemos tener en cuenta solamente la linea mas cercana al carril porel que circulamos.",
+        "nos indica que es un carril reversible.",
+        "no se puede atravesar en ningun caso."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p23.jpg"
+    },
+    {
+      "texto": "Por causa de averia y durante el dia, zque debera hacer en caso de una inmovilizacion del vehiculo en una autopista?",
+      "opciones": [
+        "Colocar 2 triangulos de presenalizacion de peligro a 50 metros y visibles a 100 metros.",
+        "Colocar el dispositivo de presenalizacion de peligro en la partemas alta posible del vehiculo inmovilizado garantizado su maxima visibilidad,y encender el alumbrado de emergencia.",
+        "Avisar lo antes posiblemediante unpostede sos."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "La senal ...",
+      "opciones": [
+        "reitera la informacion dada por otra senal de peligro anterior.",
+        "indica la proximidad de un peligro distinto de los advertidos por otras senales.",
+        "indica la proximidad de un tramo con trafico denso."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "En este tramo de via de visibilidad reducida, esta permitido realizar un cambio de sentido?",
+      "opciones": [
+        "Si, cuando no hay circulacion en sentido contrario.",
+        "Si,senalizandolamaniobra convenientemente.",
+        "No,estaprohibido"
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p26.jpg"
+    },
+    {
+      "texto": "Las lesiones mas graves en los ciclistas, cuando son victimas de un atropello, se localizan en...",
+      "opciones": [
+        "todo el cuerpo.",
+        "la cabeza.",
+        "las extremidades."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p27.jpg"
+    },
+    {
+      "texto": "zDonde es preferible llevar la carga?",
+      "opciones": [
+        "En el maletero del vehiculo.",
+        "En la baca.",
+        "Dentro del habitaculo del vehiculo."
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p28.jpg"
+    },
+    {
+      "texto": "Bajo condiciones de luminosidad desfavorables, el alumbrado...",
+      "opciones": [
+        "permitepercibir posibles peligros unicamente cuando se circula con la luz de carretera.",
+        "permite percibir posibles peligros con tiempo suficiente para reaccionar.",
+        "no es de mucha utilidad."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "Una de las tecnicas de vision en la conduccion preventiva consiste en...",
+      "opciones": [
+        "mirar a lo lejos, a los lados y por los retrovisores.",
+        "instalar espejos panoramicos.",
+        "acostumbrarsea losdeslumbramientos. Corregir el test"
+      ],
+      "correcta": 0,
+      "imagen": "../img/test_078_p30.jpg"
+    }
+  ]
+}

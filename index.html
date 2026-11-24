@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestros test en Youtube</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+      background-color: #ffffff;
+      color: #4a4a4a;
+      padding: 20px 15px;
+    }
+
+    .contenedor-lista {
+      max-width: 660px;
+      margin: 0 auto;
+    }
+
+    /* Barra discreta para exportar/importar JSON sin servidor */
+    .barra-json {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .btn-json {
+      background: #f3f4f6;
+      border: 1px solid #d1d5db;
+      color: #4b5563;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .btn-json:hover {
+      background: #e5e7eb;
+    }
+
+    /* Cabecera superior: "Nuestros test en Youtube" + "Test modo: estudio / examen (?)" */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .titulo {
+      font-size: 16px;
+      font-weight: 400;
+      color: #333333;
+    }
+
+    .modo-selector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #555555;
+    }
+
+    .radio-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .radio-custom {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 1px solid #b5b5b5;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+
+    .radio-label input {
+      display: none;
+    }
+
+    .radio-label input:checked + .radio-custom {
+      border-color: #e67e22;
+    }
+
+    .radio-label input:checked + .radio-custom::after {
+      content: "";
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background-color: #e67e22;
+    }
+
+    .ayuda-link {
+      color: #e67e22;
+      font-size: 13px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Cabecera azul de la tabla */
+    .tabla-header {
+      display: grid;
+      grid-template-columns: 185px 38px 1fr 1fr 1.2fr 36px;
+      background-color: #367cb8;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 400;
+      height: 36px;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Filas de cada test */
+    .lista-filas {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fila-test {
+      display: grid;
+      grid-template-columns: 185px 38px 1fr 1fr 1.2fr 36px;
+      height: 36px;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      color: #555555;
+      font-size: 14px;
+      border-bottom: 1px solid #e6e6e6;
+      background-color: #ffffff;
+      transition: background-color 0.12s;
+    }
+
+    .fila-test:hover {
+      background-color: #f7f9fc;
+    }
+
+    .fila-test:hover .celda-num {
+      background-color: #7a7a7a;
+    }
+
+    /* Caja gris oscura del número de test (001 - 090) */
+    .celda-num {
+      background-color: #666666;
+      color: #ffffff;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    /* Cuadrado de estado (verde <= 3 fallos, rojo > 3 fallos, neutro si no realizado) */
+    .celda-estado {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cuadro-estado {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+    }
+
+    .estado-aprobado {
+      background-color: #c6e56e;
+    }
+
+    .estado-suspenso {
+      background-color: #f66e6e;
+    }
+
+    .estado-pendiente {
+      background-color: #e5e7eb;
+    }
+
+    /* Flecha derecha ">" */
+    .celda-flecha {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2c4a6e;
+    }
+
+    .celda-flecha svg {
+      width: 14px;
+      height: 14px;
+      stroke: #2c4a6e;
+      stroke-width: 1.8;
+      fill: none;
+    }
+
+    @media (max-width: 540px) {
+      .tabla-header,
+      .fila-test {
+        grid-template-columns: 95px 34px 1fr 1fr 1.1fr 28px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor-lista">
+    <!-- Botones de respaldo JSON (sin servidor) -->
+    <div class="barra-json">
+      <button type="button" class="btn-json" onclick="exportarJSON()">Guardar progreso (.json)</button>
+      <label class="btn-json">
+        Cargar progreso (.json)
+        <input type="file" id="inputJson" accept=".json" hidden>
+      </label>
+    </div>
+
+    <!-- Cabecera exacta -->
+    <div class="top-bar">
+      <span class="titulo">Nuestros test en Youtube</span>
+      <div class="modo-selector">
+        <span>Test modo:</span>
+        <label class="radio-label">
+          <input type="radio" name="modo" value="estudio" onchange="actualizarEnlaces()">
+          <span class="radio-custom"></span>
+          <span>estudio</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="modo" value="examen" checked onchange="actualizarEnlaces()">
+          <span class="radio-custom"></span>
+          <span>examen</span>
+        </label>
+        <span class="ayuda-link" title="Modo estudio: corrige al instante. Modo examen: corrige al finalizar.">(?)</span>
+      </div>
+    </div>
+
+    <!-- Encabezado azul -->
+    <div class="tabla-header">
+      <div>Test</div>
+      <div></div>
+      <div>Fallos</div>
+      <div>Realizado</div>
+      <div>Último</div>
+      <div></div>
+    </div>
+
+    <!-- Contenedor de los 90 tests -->
+    <div class="lista-filas" id="listaTests"></div>
+  </div>
+
+  <script src="storage.js"></script>
+  <script>
+    const TOTAL_TESTS = 90;
+
+    function formatearVeces(n) {
+      if (!n || n <= 0) return '-';
+      return n === 1 ? '1 vez' : `${n} veces`;
+    }
+
+    function obtenerModoSeleccionado() {
+      const sel = document.querySelector('input[name="modo"]:checked');
+      return sel ? sel.value : 'examen';
+    }
+
+    function renderTabla() {
+      const progreso = obtenerProgreso();
+      const modo = obtenerModoSeleccionado();
+      const contenedor = document.getElementById('listaTests');
+      contenedor.innerHTML = '';
+
+      for (let i = 1; i <= TOTAL_TESTS; i++) {
+        const numStr = String(i).padStart(3, '0'); // 001 .. 090
+        const clave = `test_${numStr}`;
+        const datos = progreso[clave];
+
+        const realizado = datos ? datos.intentos : 0;
+        const fallos = realizado > 0 ? datos.fallos : '-';
+        const ultimo = realizado > 0 ? datos.ultimo : '-';
+
+        let claseEstado = 'estado-pendiente';
+        if (realizado > 0) {
+          // En tests de conducir (30 preguntas): <= 3 fallos verde, > 3 rojo
+          claseEstado = datos.fallos <= 3 ? 'estado-aprobado' : 'estado-suspenso';
+        }
+
+        const enlace = document.createElement('a');
+        enlace.className = 'fila-test';
+        enlace.dataset.num = numStr;
+        enlace.href = `tests/test_${numStr}.html?modo=${modo}`;
+
+        enlace.innerHTML = `
+          <div class="celda-num">${numStr}</div>
+          <div class="celda-estado"><span class="cuadro-estado ${claseEstado}"></span></div>
+          <div>${fallos}</div>
+          <div>${formatearVeces(realizado)}</div>
+          <div>${ultimo}</div>
+          <div class="celda-flecha">
+            <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+          </div>
+        `;
+
+        contenedor.appendChild(enlace);
+      }
+    }
+
+    function actualizarEnlaces() {
+      const modo = obtenerModoSeleccionado();
+      document.querySelectorAll('.fila-test').forEach(a => {
+        a.href = `tests/test_${a.dataset.num}.html?modo=${modo}`;
+      });
+    }
+
+    document.getElementById('inputJson').addEventListener('change', (e) => {
+      if (e.target.files[0]) {
+        importarJSON(e.target.files[0], renderTabla);
+      }
+    });
+
+    renderTabla();
+  </script>
+</body>
+</html>

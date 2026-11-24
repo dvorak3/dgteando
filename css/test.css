@@ -1,0 +1,482 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;
+  color: #4a4a4a;
+  font-size: 14px;
+  line-height: 1.45;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ==================== HEADER SUPERIOR ==================== */
+.site-header {
+  background: #ffffff;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 12px;
+  text-decoration: none !important;
+}
+
+.brand-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #94c11f;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: #ffffff;
+  stroke-width: 3.2;
+  fill: none;
+}
+
+.brand-text {
+  font-size: 27px;
+  font-weight: 700;
+  color: #5a5a5a;
+  letter-spacing: -0.6px;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.tab-noticias {
+  background-color: #f08232;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 4px 26px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  text-decoration: none !important;
+}
+
+.tab-noticias:hover {
+  background-color: #df7222;
+}
+
+.user-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: #f08232;
+}
+
+.user-links a {
+  color: #f08232;
+}
+
+.user-links .sep {
+  color: #cccccc;
+}
+
+.lang-badge {
+  color: #777777;
+  font-weight: 500;
+}
+
+/* ==================== NAVBAR VERDE LIMA ==================== */
+.main-nav {
+  background-color: #94c11f;
+  width: 100%;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-list li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #ffffff;
+  font-size: 13.5px;
+  padding: 10px 14px;
+  text-decoration: none !important;
+  transition: background-color 0.15s;
+}
+
+.nav-list li a:hover {
+  background-color: #84ad1a;
+}
+
+.chevron-down {
+  width: 10px;
+  height: 10px;
+  stroke: #ffffff;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* ==================== CONTENIDO PRINCIPAL DEL TEST ==================== */
+.main-content {
+  flex: 1;
+  padding-top: 18px;
+  padding-bottom: 45px;
+}
+
+.test-column {
+  width: 100%;
+  max-width: 730px; /* Ancho exacto de la columna del test en pantalla */
+  margin: 0 auto;
+  align-self: center;
+  padding: 24px 16px 45px;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: #777777;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  color: #337ab7;
+}
+
+.breadcrumb span.sep {
+  margin: 0 4px;
+  color: #999999;
+}
+
+.test-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.test-title {
+  font-size: 28px;
+  font-weight: 300;
+  color: #555555;
+}
+
+.test-title .num {
+  color: #337ab7;
+}
+
+.modo-badge {
+  font-size: 12px;
+  color: #777;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+/* ==================== BLOQUES DE PREGUNTA ==================== */
+.pregunta-item {
+  border-top: 1px solid #e6e6e6;
+  padding: 18px 0;
+  display: grid;
+  grid-template-columns: 1fr 165px;
+  gap: 16px;
+  align-items: start;
+}
+
+.pregunta-item.sin-imagen {
+  grid-template-columns: 1fr;
+}
+
+.pregunta-enunciado {
+  font-size: 14px;
+  font-weight: 700;
+  color: #337ab7;
+  margin-bottom: 12px;
+}
+
+.pregunta-enunciado .p-num {
+  color: #e67e22;
+  margin-right: 4px;
+}
+
+.opciones-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-left: 16px;
+}
+
+.opcion-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13.5px;
+  color: #444444;
+  padding: 3px 6px;
+  border-radius: 3px;
+  transition: background-color 0.12s;
+}
+
+.opcion-label:hover {
+  background-color: #f9f9f9;
+}
+
+.opcion-label input[type="radio"] {
+  margin-top: 3px;
+  accent-color: #337ab7;
+  cursor: pointer;
+}
+
+.opcion-letra {
+  font-weight: 700;
+  color: #333333;
+}
+
+/* Estados visuales tras corregir (o en modo estudio) */
+.opcion-label.es-correcta {
+  background-color: #e6f4d7;
+  color: #2e5e0f;
+}
+
+.opcion-label.es-fallo {
+  background-color: #fde2e2;
+  color: #a32020;
+}
+
+/* Imagen a la derecha de la pregunta */
+.pregunta-media {
+  width: 165px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pregunta-media img {
+  width: 160px;
+  height: 105px;
+  object-fit: contain;
+  border: 1px solid #dcdcdc;
+  background-color: #ffffff;
+}
+
+/* ==================== CAJA INFERIOR Y BOTÓN CORREGIR ==================== */
+
+.corregir-box {
+  margin-top: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #e2e2e2;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-corregir {
+  background-color: #f08232;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  padding: 9px 48px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.btn-corregir:hover {
+  background-color: #de7122;
+}
+
+.btn-volver {
+  background-color: #666666;
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 9px 20px;
+  font-size: 13.5px;
+  text-decoration: none !important;
+  display: none;
+}
+
+.btn-volver:hover {
+  background-color: #525252;
+}
+
+/* Banner de resultado tras corregir */
+.resultado-panel {
+  display: none;
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: 3px;
+  font-size: 15px;
+  border: 1px solid transparent;
+}
+
+.resultado-panel.apto {
+  background-color: #eef7db;
+  border-color: #c6e56e;
+  color: #3d6b14;
+}
+
+.resultado-panel.no-apto {
+  background-color: #fde8e8;
+  border-color: #f66e6e;
+  color: #9e2222;
+}
+
+/* ==================== FOOTER OSCURO ==================== */
+.site-footer {
+  background-color: #555555;
+  color: #e0e0e0;
+  padding: 28px 0 36px;
+  font-size: 12.5px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.3fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-logo .brand-icon {
+  background-color: #ffffff;
+  width: 26px;
+  height: 26px;
+}
+
+.footer-logo .brand-icon svg {
+  stroke: #555555;
+  width: 15px;
+  height: 15px;
+}
+
+.footer-logo .brand-text {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-links li::before {
+  content: "•";
+  color: #f08232;
+  margin-right: 8px;
+}
+
+.footer-links a {
+  color: #e6e6e6;
+}
+
+.footer-app {
+  text-align: center;
+}
+
+.footer-app h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.footer-app .sub-orange {
+  color: #f08232;
+  font-size: 11.5px;
+  margin-bottom: 12px;
+}
+
+.footer-app .descarga-txt {
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.store-badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.store-badge {
+  background: #000000;
+  border: 1px solid #888888;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 5px 12px;
+  font-size: 11px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+}
+
+.store-badge strong {
+  font-size: 13px;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 720px) {
+  .pregunta-item {
+    grid-template-columns: 1fr;
+  }
+  .pregunta-media {
+    justify-content: flex-start;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-links {
+    align-items: center;
+  }
+}
