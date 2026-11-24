@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test nº {{NUM_INT}}</title>
+  <link rel="stylesheet" href="../css/test.css">
+</head>
+<body>
+
+  <main class="test-column">
+    <div class="test-title-row">
+      <h1 class="test-title">test <span class="num">nº {{NUM_INT}}</span></h1>
+      <span class="modo-badge" id="lblModo">Modo examen</span>
+    </div>
+
+    <form id="formTest">
+      <div id="preguntasContainer"></div>
+
+      <div class="corregir-box">
+        <button type="button" class="btn-corregir" onclick="corregirTest()">Corregir el test</button>
+        <a href="../index.html" class="btn-volver" id="btnVolver">Volver a la lista</a>
+      </div>
+
+      <div class="resultado-panel" id="resultadoPanel"></div>
+    </form>
+  </main>
+
+  <script>
+    const TEST_ID = {{NUM_INT}};
+    const PREGUNTAS = {{PREGUNTAS_JSON}};
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/storage.js?v=3"></script>
+  <script src="../js/test_engine.js"></script>
+</body>
+</html>

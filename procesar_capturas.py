@@ -12,48 +12,34 @@ CARPETA_CAPTURAS_DEFAULT = os.path.join(BASE_DIR, "capturas_largas", "capturas")
 CARPETA_IMG = os.path.join(BASE_DIR, "img")
 CARPETA_DATA = os.path.join(BASE_DIR, "data")
 CARPETA_TESTS = os.path.join(BASE_DIR, "tests")
-
-PLANTILLA_HTML = """<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test nº {num_int}</title>
-  <link rel="stylesheet" href="../css/test.css">
-</head>
-<body>
-
-  <main class="test-column">
-    <div class="test-title-row">
-      <h1 class="test-title">test <span class="num">nº {num_int}</span></h1>
-      <span class="modo-badge" id="lblModo">Modo examen</span>
-    </div>
-
-    <form id="formTest">
-      <div id="preguntasContainer"></div>
-
-      <div class="corregir-box">
-        <button type="button" class="btn-corregir" onclick="corregirTest()">Corregir el test</button>
-        <a href="../index.html" class="btn-volver" id="btnVolver">Volver a la lista</a>
-      </div>
-
-      <div class="resultado-panel" id="resultadoPanel"></div>
-    </form>
-  </main>
-
-  <script>
-    const TEST_ID = {num_int};
-    const PREGUNTAS = {preguntas_json};
-  </script>
-  <script src="../js/storage.js"></script>
-  <script src="../js/test_engine.js"></script>
-</body>
-</html>
-"""
+CARPETA_TEMPLATES = os.path.join(BASE_DIR, "templates")
+RUTA_PLANTILLA_HTML = os.path.join(CARPETA_TEMPLATES, "test.html")
 
 PATRON_OPCION = re.compile(r"^(?:[Oo0Q\(\)\[\]•·]\s*)?([abcABC])[\)\.]\s*(.*)")
 PATRON_OPCION_SOLA = re.compile(r"^(?:[Oo0Q\(\)\[\]•·]\s*)?([abcABC])[\)\.]?$")
 PATRON_UI_CORTE = re.compile(r"^(?:ayuda|explicaci[oó]n:?)$", re.IGNORECASE)
+
+
+def cargar_plantilla_html(ruta_plantilla=RUTA_PLANTILLA_HTML):
+    """Asegura la existencia de templates/ y carga la plantilla HTML externa."""
+    os.makedirs(os.path.dirname(ruta_plantilla), exist_ok=True)
+    if not os.path.isfile(ruta_plantilla):
+        raise FileNotFoundError(
+            f"[ERROR] No se encontró la plantilla HTML en '{ruta_plantilla}'. "
+            "Por favor, crea el archivo 'templates/test.html' antes de ejecutar el script."
+        )
+    with open(ruta_plantilla, "r", encoding="utf-8") as f:
+        return f.read()
+
+
+def generar_html_test(num_int, preguntas, plantilla_str):
+    """Sustituye los marcadores seguros en la plantilla HTML sin conflictos con llaves CSS/JS."""
+    preguntas_json = json.dumps(preguntas, ensure_ascii=False, indent=2)
+    return (
+        plantilla_str
+        .replace("{{NUM_INT}}", str(num_int))
+        .replace("{{PREGUNTAS_JSON}}", preguntas_json)
+    )
 
 
 def escanear_ocr_completo(img_bgr, ocr_engine):
@@ -393,7 +379,7 @@ def reescanear_bloque_individual(bloque_bgr, x_offset, y_offset, x_fin_texto_abs
     return construir_pregunta_desde_cajas(bloque_bgr, cajas_local, x_offset, y_offset, x_fin_texto_abs)
 
 
-def procesar_imagen_test(ruta_img, ocr_engine, debug=False):
+def procesar_imagen_test(ruta_img, ocr_engine, plantilla_str, debug=False):
     nombre_base = os.path.splitext(os.path.basename(ruta_img))[0]
     m_num = re.search(r"(\d+)", nombre_base)
     if not m_num:
@@ -467,17 +453,14 @@ def procesar_imagen_test(ruta_img, ocr_engine, debug=False):
         json.dump({"test_id": num_int, "preguntas": preguntas}, f, ensure_ascii=False, indent=2)
 
     ruta_html = os.path.join(CARPETA_TESTS, f"test_{num_str}.html")
-    html_final = PLANTILLA_HTML.format(
-        num_int=num_int,
-        preguntas_json=json.dumps(preguntas, ensure_ascii=False, indent=2)
-    )
+    html_final = generar_html_test(num_int, preguntas, plantilla_str)
     with open(ruta_html, "w", encoding="utf-8") as f:
         f.write(html_final)
 
     print(f"  -> OK: {len(preguntas)} preguntas extraídas -> tests/test_{num_str}.html")
 
 
-def recompilar_desde_json():
+def recompilar_desde_json(plantilla_str):
     os.makedirs(CARPETA_TESTS, exist_ok=True)
     archivos_json = sorted(glob.glob(os.path.join(CARPETA_DATA, "test_*.json")))
     if not archivos_json:
@@ -490,10 +473,7 @@ def recompilar_desde_json():
         num_int = data["test_id"]
         num_str = f"{num_int:03d}"
         ruta_html = os.path.join(CARPETA_TESTS, f"test_{num_str}.html")
-        html_final = PLANTILLA_HTML.format(
-            num_int=num_int,
-            preguntas_json=json.dumps(data["preguntas"], ensure_ascii=False, indent=2)
-        )
+        html_final = generar_html_test(num_int, data["preguntas"], plantilla_str)
         with open(ruta_html, "w", encoding="utf-8") as f:
             f.write(html_final)
     print(f"Recompilados {len(archivos_json)} archivos HTML en tests/.")
@@ -522,8 +502,14 @@ def parsear_argumentos():
 if __name__ == "__main__":
     args = parsear_argumentos()
 
+    try:
+        plantilla_html = cargar_plantilla_html()
+    except FileNotFoundError as e:
+        print(e)
+        raise SystemExit(1)
+
     if args.recompilar:
-        recompilar_desde_json()
+        recompilar_desde_json(plantilla_html)
     else:
         os.makedirs(CARPETA_IMG, exist_ok=True)
         os.makedirs(CARPETA_DATA, exist_ok=True)
@@ -535,7 +521,7 @@ if __name__ == "__main__":
             if not os.path.isfile(args.imagen):
                 print(f"[ERROR] No existe el archivo: {args.imagen}")
             else:
-                procesar_imagen_test(args.imagen, ocr, debug=args.debug)
+                procesar_imagen_test(args.imagen, ocr, plantilla_html, debug=args.debug)
         else:
             if not os.path.isdir(args.carpeta):
                 print(f"[ERROR] No existe la carpeta '{args.carpeta}'.")
@@ -546,4 +532,4 @@ if __name__ == "__main__":
                     print(f"No se encontraron imágenes en '{args.carpeta}'.")
                 else:
                     for archivo in imagenes:
-                        procesar_imagen_test(archivo, ocr, debug=args.debug)
+                        procesar_imagen_test(archivo, ocr, plantilla_html, debug=args.debug)
