@@ -1,252 +1,281 @@
 {
   "test_id": 5,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "De los siguientes, ¿icual es un sintoma caracteristico de la aparicion de la fatiga durante la conduccion?",
+      "texto": "De los siguientes, ¿cuál es un síntoma característico de la aparición de la fatiga durante la conducción?",
       "opciones": [
-        "Se distingue mejor la informacion relevante de la irrelevante.",
-        "La disminucion en el numero de correcciones de la direccion.",
-        "El incrementode la agudeza visual."
-      ]
+        "Se distingue mejor la información relevante de la irrelevante.",
+        "La disminución en el número de correcciones de la dirección.",
+        "El incremento de la agudeza visual."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Que funcion tienen las guias sonoras situadas en el borde derecho de la calzada, ¿ubicadas normalmente en el arcen coincidiendo con la marca vial que delimita el carril derecho?",
+      "texto": "¿Qué función tienen las guías sonoras situadas en el borde derecho de la calzada, ubicadas normalmente en el arcén coincidiendo con la marca vial que delimita el carril derecho?",
       "opciones": [
-        "Alertar al conductor en caso de que se desvie de la trayectoria de su carril.",
+        "Alertar al conductor en caso de que se desvíe de la trayectoria de su carril.",
         "Balizar el borde de la calzada, especialmente en condiciones de baja visibilidad.",
-        "Indicar la existencia de un carril especial o reservado a determinados vehiculos."
+        "Indicar la existencia de un carril especial o reservado a determinados vehículos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_005_p02.jpg"
     },
     {
-      "texto": "¿Es correcto el adelantamiento que efectua el turismo a la bicicleta?",
+      "texto": "¿Es correcto el adelantamiento que efectúa el turismo a la bicicleta?",
       "opciones": [
-        "No,porque al dejar demasiada separacion tiene que ocupar el carril de sentido contrario.",
-        "Si,porque deja la separacion adecuada y ocupa el carril contiguo.",
-        "No,porque esta prohibido rebasarla linea continuapara adelantar."
+        "No, porque al dejar demasiada separación tiene que ocupar el carril de sentido contrario.",
+        "Sí, porque deja la separación adecuada y ocupa el carril contiguo.",
+        "No, porque está prohibido rebasar la línea continua para adelantar."
       ],
+      "correcta": 1,
       "imagen": "../img/test_005_p03.jpg"
     },
     {
       "texto": "¿Puede sobrepasar la marca longitudinal continua central?",
       "opciones": [
-        "Si, para realizar un cambio de direccion.",
+        "Sí, para realizar un cambio de dirección.",
         "No.",
-        "Si, si se trata deuna calzada de un solosentido."
+        "Sí, si se trata de una calzada de un solo sentido."
       ],
+      "correcta": 1,
       "imagen": "../img/test_005_p04.jpg"
     },
     {
-      "texto": "Si durante la conduccion conecta el sistema de aire acondicionado, el consumo de carburante..",
+      "texto": "Si durante la conducción conecta el sistema de aire acondicionado, el consumo de carburante...",
       "opciones": [
-        "no varia.",
+        "no varía.",
         "disminuye si las temperaturas son bajas.",
         "aumenta."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Que alumbrado debera mantener encendido un vehiculo estacionado durante la noche en el arcen de una travesia insuficientemente iluminada?",
+      "texto": "¿Qué alumbrado deberá mantener encendido un vehículo estacionado durante la noche en el arcén de una travesía insuficientemente iluminada?",
       "opciones": [
-        "Ninguno,ya quees un estacionamiento dentro depoblado.",
-        "Las luces de largo alcancey las luces de emergencia.",
-        "Las luces deposicion,quepodra sustituirporlas de estacionamiento."
-      ]
+        "Ninguno, ya que es un estacionamiento dentro de poblado.",
+        "Las luces de largo alcance y las luces de emergencia.",
+        "Las luces de posición, que podrá sustituir por las de estacionamiento."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Cuales son los cuatro niveles de clasificacion ambiental utilizados para identificar el nivel de contaminacion de los vehiculos en funcion de sus emisiones?",
+      "texto": "¿Cuáles son los cuatro niveles de clasificación ambiental utilizados para identificar el nivel de contaminación de los vehículos en función de sus emisiones?",
       "opciones": [
-        "0emisiones,Eco,CyD",
+        "0 emisiones, Eco, C y D.",
         "Sin emisiones, Eco, A y B.",
         "0 emisiones, Eco, C y B."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Que indica la senal de la imagen?",
+      "texto": "¿Qué indica la señal de la imagen?",
       "opciones": [
-        "Presenciadeuntallermecanico cercano.",
-        "Senal identificativa de un vehiculo de servicio de auxilio en vias publicas.",
-        "Vehiculo averiado en la carretera."
+        "Presencia de un taller mecánico cercano.",
+        "Señal identificativa de un vehículo de servicio de auxilio en vías públicas.",
+        "Vehículo averiado en la carretera."
       ],
+      "correcta": 1,
       "imagen": "../img/test_005_p08.jpg"
     },
     {
       "texto": "¿Algunos medicamentos pueden afectar negativamente el comportamiento del conductor?",
       "opciones": [
-        "Si.",
-        "Si,perosolamentelostranquilizantes.",
+        "Sí.",
+        "Sí, pero solamente los tranquilizantes.",
         "No, porque siempre mejoran el estado del conductor."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El conductor de un turismo que, por una averia, ¿sale del vehiculo y ocupa la calzada o el arcen,zdebe usar un chaleco reflectante?",
+      "texto": "El conductor de un turismo que, por una avería, sale del vehículo y ocupa la calzada o el arcén, ¿debe usar un chaleco reflectante?",
       "opciones": [
-        "Si, en vias interurbanas.",
+        "Sí, en vías interurbanas.",
         "No, cuando la visibilidad es buena.",
-        "Si, en toda clase de vias. Oa)Calzado cerradoquecubra completamente elpie. O b) Cualquier calzado, siempre que no sea de tacon. Oc)Solobotas altasdemotociclista."
+        "Sí, en toda clase de vías."
       ],
+      "correcta": 0,
       "imagen": "../img/test_005_p10.jpg"
     },
     {
-      "texto": "En un accidente de circulacion, ¿ies obligatorio avisar a la Autoridad si no hay heridos yla seguridad de la circulacion esta restablecida?",
+      "texto": "En un accidente de circulación, ¿es obligatorio avisar a la Autoridad si no hay heridos y la seguridad de la circulación está restablecida?",
       "opciones": [
         "No.",
-        "Si.",
-        "Si, cuando alguna de las personas implicadas en el accidente lo solicita."
+        "Sí.",
+        "Sí, cuando alguna de las personas implicadas en el accidente lo solicita."
       ],
+      "correcta": 0,
       "imagen": "../img/test_005_p12.jpg"
     },
     {
-      "texto": "Por una autovia esta prohibida la circulacion de..",
+      "texto": "Por una autovía está prohibida la circulación de...",
       "opciones": [
         "ciclomotores.",
-        "vehiculos especiales.",
+        "vehículos especiales.",
         "turismos con remolque."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Para que sirve el carril de deceleracion?",
+      "texto": "¿Para qué sirve el carril de deceleración?",
       "opciones": [
-        "Paraquecirculenlosvehiculoslentos.",
-        "Paraadelantarporladerecha.",
+        "Para que circulen los vehículos lentos.",
+        "Para adelantar por la derecha.",
         "Para reducir la velocidad al salir de una autopista."
       ],
+      "correcta": 2,
       "imagen": "../img/test_005_p14.jpg"
     },
     {
-      "texto": "Los sistemas ADAs (sistemas avanzados de ayuda a la conduccion) instalados en el vehiculo, ¿zpueden ser desconectados en algun momento?",
+      "texto": "Los sistemas ADAS (sistemas avanzados de ayuda a la conducción) instalados en el vehículo, ¿pueden ser desconectados en algún momento?",
       "opciones": [
-        "Pueden desconectarsede forma permanentepero nunca deforma temporal.",
-        "Si,deformapermanenteotemporal.",
-        "Nopuedendesconectarseenninguncaso."
+        "Pueden desconectarse de forma permanente pero nunca de forma temporal.",
+        "Sí, de forma permanente o temporal.",
+        "No pueden desconectarse en ningún caso."
       ],
+      "correcta": 1,
       "imagen": "../img/test_005_p15.jpg"
     },
     {
-      "texto": "Cualquier conductor esta obligado a...",
+      "texto": "Cualquier conductor está obligado a...",
       "opciones": [
         "no adelantar.",
-        "circular en todo momento a la velocidad maxima de la via.",
-        "nocausarpeligroso entorpeceromolestaraotrosusuarios."
-      ]
+        "circular en todo momento a la velocidad máxima de la vía.",
+        "no causar peligros o entorpecer o molestar a otros usuarios."
+      ],
+      "correcta": 2
     },
     {
       "texto": "Cuando conduce una motocicleta, debe tener en cuenta que...",
       "opciones": [
         "cuanto mayor es la velocidad, hay mayor dificultad para mantener el equilibrio.",
-        "es menos estable ymas fragil que el resto de los vehiculos.",
-        "es mas visibleque otros automoviles."
-      ]
+        "es menos estable y más frágil que el resto de los vehículos.",
+        "es más visible que otros automóviles."
+      ],
+      "correcta": 1
     },
     {
       "texto": "Un cambio de rasante es:",
       "opciones": [
-        "Un tramo de via donde hay un cambio de direccion.",
-        "Un lugar en el que se encuentran dos tramos de via de distinta inclinacion.",
-        "Un tramo de via donde no se ve el ancho total de la calzada."
-      ]
+        "Un tramo de vía donde hay un cambio de dirección.",
+        "Un lugar en el que se encuentran dos tramos de vía de distinta inclinación.",
+        "Un tramo de vía donde no se ve el ancho total de la calzada."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Las lamparas del automovil deben sustituirse...",
+      "texto": "Las lámparas del automóvil deben sustituirse...",
       "opciones": [
-        "solamenteencasoderotura.",
-        "antes de pasar la inspeccion tecnica del vehiculo.",
+        "solamente en caso de rotura.",
+        "antes de pasar la inspección técnica del vehículo.",
         "en cuanto disminuya su intensidad luminosa."
       ],
+      "correcta": 2,
       "imagen": "../img/test_005_p19.jpg"
     },
     {
-      "texto": "En caso de incendio en el interior de un tunel o paso inferior, el conductor de un vehiculo...",
+      "texto": "En caso de incendio en el interior de un túnel o paso inferior, el conductor de un vehículo...",
       "opciones": [
-        "dejara el motor encendido y las puertas abiertas.",
-        "dejara las puertas abiertas yla llavepuesta.",
-        "dejara el motor apagado ylas puertas cerradas."
-      ]
+        "dejará el motor encendido y las puertas abiertas.",
+        "dejará las puertas abiertas y la llave puesta.",
+        "dejará el motor apagado y las puertas cerradas."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Conduce un turismo con un remolque de un solo eje. ¿Le afecta esta senal?",
+      "texto": "Conduce un turismo con un remolque de un solo eje. ¿Le afecta esta señal?",
       "opciones": [
         "No.",
-        "Si, porque lleva un remolque de un eje.",
-        "No, salvo que la M.M.A. del remolque supere la cifra indicada en la senal."
+        "Sí, porque lleva un remolque de un eje.",
+        "No, salvo que la M.M.A. del remolque supere la cifra indicada en la señal."
       ],
+      "correcta": 2,
       "imagen": "../img/test_005_p21.jpg"
     },
     {
-      "texto": "A partir de la senal, ¿zcual es la velocidad maxima en una via con tres carriles por sentido?",
+      "texto": "A partir de la señal, ¿cuál es la velocidad máxima en una vía con tres carriles por sentido?",
       "opciones": [
-        "50 kilometros por hora.",
-        "10okilometros por hora.",
-        "60kilometrosporhora."
+        "50 kilómetros por hora.",
+        "100 kilómetros por hora.",
+        "60 kilómetros por hora."
       ],
+      "correcta": 0,
       "imagen": "../img/test_005_p22.jpg"
     },
     {
-      "texto": "Para hacer la respiracion boca-boca a un herido, ¿ique debe hacer primero?",
+      "texto": "Para hacer la respiración boca-boca a un herido, ¿qué debe hacer primero?",
       "opciones": [
         "Taparle la nariz.",
-        "Limpiar y abrir las vias respiratorias.",
-        "Colocar al herido en posicion de defensa."
+        "Limpiar y abrir las vías respiratorias.",
+        "Colocar al herido en posición de defensa."
       ],
+      "correcta": 1,
       "imagen": "../img/test_005_p23.jpg"
     },
     {
-      "texto": "¿Que enfermedades tienen mayor riesgo de accidente?",
+      "texto": "¿Qué enfermedades tienen mayor riesgo de accidente?",
       "opciones": [
-        "Los trastornos neurologicos ylas enfermedades mentales.",
-        "Las dermatologicas.",
+        "Los trastornos neurológicos y las enfermedades mentales.",
+        "Las dermatológicas.",
         "Las respiratorias."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En una curva de visibilidad reducida, ¿esta permitido cambiar el sentido de la marcha?",
+      "texto": "En una curva de visibilidad reducida, ¿está permitido cambiar el sentido de la marcha?",
       "opciones": [
-        "Si, moderando la velocidad.",
-        "No, porque esta prohibido.",
-        "Si,siempreque se advierta convenientemente lamaniobra."
+        "Sí, moderando la velocidad.",
+        "No, porque está prohibido.",
+        "Sí, siempre que se advierta convenientemente la maniobra."
       ],
+      "correcta": 1,
       "imagen": "../img/test_005_p25.jpg"
     },
     {
-      "texto": "La edad minima para viajar como acompanante en una motocicleta o ciclomotor sera de...",
+      "texto": "La edad mínima para viajar como acompañante en una motocicleta o ciclomotor será de...",
       "opciones": [
-        "tres anos,pero siempre con asientoadicional.",
-        "siempre12anos.",
-        "12 anos y,excepcionalmente,sieteanos si la motocicleta o ciclomotor vanconducidospor el padre,madre o tutor."
-      ]
+        "tres años, pero siempre con asiento adicional.",
+        "siempre 12 años.",
+        "12 años y, excepcionalmente, siete años si la motocicleta o ciclomotor van conducidos por el padre, madre o tutor."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Al circular, durante el dia, por el carril contiguo a uno habilitado en sentido contrario al habitual, ¿zdebe llevar encendida alguna luz?",
+      "texto": "Al circular, durante el día, por el carril contiguo a uno habilitado en sentido contrario al habitual, ¿debe llevar encendida alguna luz?",
       "opciones": [
-        "Si, la de corto alcance,al menos.",
-        "Si, la de posicion.",
+        "Sí, la de corto alcance, al menos.",
+        "Sí, la de posición.",
         "No."
       ],
+      "correcta": 0,
       "imagen": "../img/test_005_p27.jpg"
     },
     {
-      "texto": "Un agente de circulacion ordena reanudar la marcha con ayuda de un silbato, ¿icomo seran los toques?",
+      "texto": "Un agente de circulación ordena reanudar la marcha con ayuda de un silbato, ¿cómo serán los toques?",
       "opciones": [
-        "No se utiliza el silbato para este tipo de ordenes.",
-        "Cortosyfrecuentes.",
+        "No se utiliza el silbato para este tipo de órdenes.",
+        "Cortos y frecuentes.",
         "Largos."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Los ninos, ¿icuando pueden empezar a utilizar los cinturones de seguridad normales?",
+      "texto": "Los niños, ¿cuándo pueden empezar a utilizar los cinturones de seguridad normales?",
       "opciones": [
-        "Apartir de una estatura superior a 1,35 m.",
+        "A partir de una estatura superior a 1,35 m.",
         "A partir de 1,50 m de estatura.",
-        "A partir de 12 anos, aunque midan menos de 1,35 m de estatura."
-      ]
+        "A partir de 12 años, aunque midan menos de 1,35 m de estatura."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El adelantamiento se efectuara por la derecha y adoptando las maximas precauciones...",
+      "texto": "El adelantamiento se efectuará por la derecha y adoptando las máximas precauciones...",
       "opciones": [
-        "en vias con mas de un carril en el mismo sentido.",
-        "cuando el conductor del vehiculo al que se pretende adelantar esta indicando claramente su proposito de girar a la izquierda.",
-        "siempre que se adelante a un vehiculo articulado."
-      ]
+        "en vías con más de un carril en el mismo sentido.",
+        "cuando el conductor del vehículo al que se pretende adelantar está indicando claramente su propósito de girar a la izquierda.",
+        "siempre que se adelante a un vehículo articulado."
+      ],
+      "correcta": 1
     }
   ]
 }

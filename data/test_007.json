@@ -1,261 +1,291 @@
 {
   "test_id": 7,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "¿Que sistema puede detectar peatones o animales marcandolos en color rojo u otro en la pantalla de informacion del conductor?",
+      "texto": "¿Qué sistema puede detectar peatones o animales marcándolos en color rojo u otro en la pantalla de información del conductor?",
       "opciones": [
-        "El head up display.",
-        "EI Departure Warning and prevention.",
-        "El asistente de vision nocturna."
-      ]
+        "El head-up display.",
+        "El Departure Warning and Prevention.",
+        "El asistente de visión nocturna."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En una via interurbana, ¿zpuede adelantar un ciclomotor a un tractor agricola que circula por el arcen?",
+      "texto": "En una vía interurbana, ¿puede adelantar un ciclomotor a un tractor agrícola que circula por el arcén?",
       "opciones": [
-        "Si, siempre que el recorrido en paralelo no supere los 200 metros o los 15 segundos.",
-        "Si, pero solo de dia.",
-        "No, los vehiculos que circulan por el arcen no se pueden adelantar."
+        "Sí, siempre que el recorrido en paralelo no supere los 200 metros o los 15 segundos.",
+        "Sí, pero solo de día.",
+        "No, los vehículos que circulan por el arcén no se pueden adelantar."
       ],
+      "correcta": 0,
       "imagen": "../img/test_007_p02.jpg"
     },
     {
-      "texto": "¿Qué indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Arcenconresalto.",
+        "Arcén con resalto.",
         "Calzada con pavimento irregular.",
         "Calzada con obras."
       ],
+      "correcta": 1,
       "imagen": "../img/test_007_p03.jpg"
     },
     {
-      "texto": "El tractor agricola de la fotografia, de MMA inferior a 350o kg., ¿icircula correctamente?",
+      "texto": "El tractor agrícola de la fotografía, de MMA inferior a 3.500 kg, ¿circula correctamente?",
       "opciones": [
         "No, pues debe utilizar el carril derecho.",
-        "Si.",
-        "No,puespuede utilizarcualquierpartede lavia."
+        "Sí.",
+        "No, pues puede utilizar cualquier parte de la vía."
       ],
+      "correcta": 1,
       "imagen": "../img/test_007_p04.jpg"
     },
     {
-      "texto": "Una vez iniciado el adelantamiento se producen circunstancias que pueden hacer dificil su finalizacion sin provocar riesgos, ¿ique esta obligado a hacer el conductor?",
+      "texto": "Una vez iniciado el adelantamiento se producen circunstancias que pueden hacer difícil su finalización sin provocar riesgos, ¿qué está obligado a hacer el conductor?",
       "opciones": [
-        "Desistir del adelantamiento, reduciendo rapidamente la marcha y regresando a su carril sin obstaculizar.",
-        "Terminareladelantamientoaumentandorapidamentelavelocidad.",
-        "Frenarbruscamentepara volvera suderecha cuantoantes."
+        "Desistir del adelantamiento, reduciendo rápidamente la marcha y regresando a su carril sin obstaculizar.",
+        "Terminar el adelantamiento aumentando rápidamente la velocidad.",
+        "Frenar bruscamente para volver a su derecha cuanto antes."
       ],
+      "correcta": 0,
       "imagen": "../img/test_007_p05.jpg"
     },
     {
-      "texto": "Un turismo por una autovia, ¿ia que velocidad maxima puede circular?",
+      "texto": "Un turismo por una autovía, ¿a qué velocidad máxima puede circular?",
       "opciones": [
         "A 100 km/h.",
         "A 110 km/h.",
-        "A120km/h."
-      ]
+        "A 120 km/h."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "La distancia de frenado de un vehiculo cargado es...",
+      "texto": "La distancia de frenado de un vehículo cargado es...",
       "opciones": [
         "igual que cuando circula sin carga.",
-        "menorquecuandocircula sin carga.",
-        "mayorque cuando circula sin carga."
-      ]
+        "menor que cuando circula sin carga.",
+        "mayor que cuando circula sin carga."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Qué indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Estacionamientoprohibidoenvado.",
-        "Zonadeestacionamiento limitado.",
-        "Estacionamientoprohibido."
+        "Estacionamiento prohibido en vado.",
+        "Zona de estacionamiento limitado.",
+        "Estacionamiento prohibido."
       ],
+      "correcta": 2,
       "imagen": "../img/test_007_p08.jpg"
     },
     {
-      "texto": "Los peatones que transiten de noche por una via fuera de poblado deberan llevar un...",
+      "texto": "Los peatones que transiten de noche por una vía fuera de poblado deberán llevar un...",
       "opciones": [
-        "catadioptrico de color rojo,que pueda verse a una distancia de al menos 50metros.",
-        "elemento luminoso o reflectante quepueda verse a una distancia de al menos 150 metros.",
-        "telefono movil."
-      ]
+        "catadióptrico de color rojo que pueda verse a una distancia de al menos 50 metros.",
+        "elemento luminoso o reflectante que pueda verse a una distancia de al menos 150 metros.",
+        "teléfono móvil."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En esta via urbana con dos carriles para cada sentido que no tiene lineas de separacion de carriles, ¿ipor que carril se debe circular?",
+      "texto": "En esta vía urbana con dos carriles para cada sentido que no tiene líneas de separación de carriles, ¿por qué carril se debe circular?",
       "opciones": [
         "Por el carril de la derecha y no puedo cambiar al segundo.",
         "Por el de la derecha, y puedo circular por el segundo carril para adelantar.",
-        "Por el carril que mas convenga para mi destino."
+        "Por el carril que más convenga para mi destino."
       ],
+      "correcta": 1,
       "imagen": "../img/test_007_p10.jpg"
     },
     {
-      "texto": "En una retencion en una autopista, los vehiculos circulan a paso de peaton. ¿Que deben hacer los conductores?",
+      "texto": "En una retención en una autopista, los vehículos circulan a paso de peatón. ¿Qué deben hacer los conductores?",
       "opciones": [
         "Desplazarse hacia un lado para dejar libre un carril de emergencia.",
-        "Permanecer en el centro de sucarril para evitar invasiones laterales.",
-        "Circular por el arcen para dejar libres los carriles centrales."
-      ]
+        "Permanecer en el centro de su carril para evitar invasiones laterales.",
+        "Circular por el arcén para dejar libres los carriles centrales."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Un amortiguador en malas condiciones, ¿zque consecuencias puede tener?",
+      "texto": "Un amortiguador en malas condiciones, ¿qué consecuencias puede tener?",
       "opciones": [
-        "Que el vehiculo gane estabilidad.",
-        "Quedisminuyaladistanciadefrenado.",
-        "Quelas luces oscilen durante la marchaypuedan deslumbrar."
-      ]
+        "Que el vehículo gane estabilidad.",
+        "Que disminuya la distancia de frenado.",
+        "Que las luces oscilen durante la marcha y puedan deslumbrar."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Si un vehiculo dispone de sistema de alumbrado automatico, ¿zen que momento se activa?",
+      "texto": "Si un vehículo dispone de sistema de alumbrado automático, ¿en qué momento se activa?",
       "opciones": [
         "A partir de una hora determinada.",
-        "Cuando un sensor detecta una disminucion de visibilidad.",
-        "Cuando un sensor detecta que el conductor esta fatigado."
-      ]
+        "Cuando un sensor detecta una disminución de visibilidad.",
+        "Cuando un sensor detecta que el conductor está fatigado."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En una interseccion sin senalizar, ¿zesta obligado un turismo a ceder el paso a un tranvia?",
+      "texto": "En una intersección sin señalizar, ¿está obligado un turismo a ceder el paso a un tranvía?",
       "opciones": [
         "No.",
         "Solo si se aproxima por mi derecha.",
-        "Si."
+        "Sí."
       ],
+      "correcta": 2,
       "imagen": "../img/test_007_p14.jpg"
     },
     {
-      "texto": "¿Esta permitido conducir un camion con el permiso de la clase B?",
+      "texto": "¿Está permitido conducir un camión con el permiso de la clase B?",
       "opciones": [
-        "Si, cualquiera que sea la M.M.A del camion.",
-        "Si, cuando su M.M.A no sea superior a 3.500 kg.",
-        "No, en ningun caso."
+        "Sí, cualquiera que sea la M.M.A. del camión.",
+        "Sí, cuando su M.M.A. no sea superior a 3.500 kg.",
+        "No, en ningún caso."
       ],
+      "correcta": 1,
       "imagen": "../img/test_007_p15.jpg"
     },
     {
-      "texto": "Leer un periodico o mirar un mapa mientras se circula, ¿zes un riesgo para la conduccion?",
+      "texto": "Leer un periódico o mirar un mapa mientras se circula, ¿es un riesgo para la conducción?",
       "opciones": [
-        "Si.",
-        "Leer un periodico si, pero mirar un mapa no.",
-        "Unicamente si se aparta la mirada de la carretera mas de dos segundos."
-      ]
+        "Sí.",
+        "Leer un periódico sí, pero mirar un mapa no.",
+        "Únicamente si se aparta la mirada de la carretera más de dos segundos."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El personal de obras de la fotografia le esta ordenando que se detenga. ¿Esta obligado a obedecerle?",
+      "texto": "El personal de obras de la fotografía le está ordenando que se detenga. ¿Está obligado a obedecerle?",
       "opciones": [
-        "Si, porque esta autorizado a regular el paso de vehiculos en el tramo de obras.",
-        "Solamente si circulan vehiculos en sentido contrario.",
-        "No, porque no es un agente de circulacion."
+        "Sí, porque está autorizado a regular el paso de vehículos en el tramo de obras.",
+        "Solamente si circulan vehículos en sentido contrario.",
+        "No, porque no es un agente de circulación."
       ],
+      "correcta": 0,
       "imagen": "../img/test_007_p17.jpg"
     },
     {
-      "texto": "¿Que parte del cuerpo resulta mas afectada en los accidentes de motocicleta?",
+      "texto": "¿Qué parte del cuerpo resulta más afectada en los accidentes de motocicleta?",
       "opciones": [
-        "Laspiernas.",
-        "Losbrazos.",
+        "Las piernas.",
+        "Los brazos.",
         "La cabeza y la cara."
-      ]
-    },
-    {
-      "texto": "Las motocicletas estan obligadas a llevar encendida la luz de cruce...",
-      "opciones": [
-        "soloentre lapuestayla salidadel sol.",
-        "durante todo el dia por cualquier via.",
-        "durante el dia por vias interurbanas y solo entre la puesta yla salida del sol por vias urbanas."
-      ]
-    },
-    {
-      "texto": "El medio ambiente, ¿ise ve afectado por los accidentes de trafico?",
-      "opciones": [
-        "Unicamente en via interurbana.",
-        "Si.",
-        "No."
-      ]
-    },
-    {
-      "texto": "Es obligatorio encender el alumbrado de posicion...",
-      "opciones": [
-        "al estacionar en la calzada deuna travesia suficientemente iluminada.",
-        "siempreque este estacionado en el arcen de una via urbana suficientemente iluminada.",
-        "siempre que deba utilizar cualquier otro alumbrado en circulacion."
-      ]
-    },
-    {
-      "texto": "Basicamente, ¿ique puede observar el conductor mirando por los espejos retrovisores?",
-      "opciones": [
-        "Que sucede dentro y delante del vehiculo.",
-        "Quesucededetrasdelvehiculo",
-        "Que sucedeen lospuntosciegos."
       ],
+      "correcta": 2
+    },
+    {
+      "texto": "Las motocicletas están obligadas a llevar encendida la luz de cruce...",
+      "opciones": [
+        "solo entre la puesta y la salida del sol.",
+        "durante todo el día por cualquier vía.",
+        "durante el día por vías interurbanas y solo entre la puesta y la salida del sol por vías urbanas."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "El medio ambiente, ¿se ve afectado por los accidentes de tráfico?",
+      "opciones": [
+        "Únicamente en vía interurbana.",
+        "Sí.",
+        "No."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Es obligatorio encender el alumbrado de posición...",
+      "opciones": [
+        "al estacionar en la calzada de una travesía suficientemente iluminada.",
+        "siempre que esté estacionado en el arcén de una vía urbana suficientemente iluminada.",
+        "siempre que deba utilizar cualquier otro alumbrado en circulación."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "Básicamente, ¿qué puede observar el conductor mirando por los espejos retrovisores?",
+      "opciones": [
+        "Qué sucede dentro y delante del vehículo.",
+        "Qué sucede detrás del vehículo.",
+        "Qué sucede en los puntos ciegos."
+      ],
+      "correcta": 1,
       "imagen": "../img/test_007_p22.jpg"
     },
     {
-      "texto": "¿Qué indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Que esta prohibida la entradaa todos los varones.",
-        "Prohibida la entrada a menores de 18 anos.",
-        "Que esta prohibida la entrada a los peatones."
+        "Que está prohibida la entrada a todos los varones.",
+        "Prohibida la entrada a menores de 18 años.",
+        "Que está prohibida la entrada a los peatones."
       ],
+      "correcta": 2,
       "imagen": "../img/test_007_p23.jpg"
     },
     {
-      "texto": "Un turismo con remolque, ¿ies obligatorio que lleve una rueda de repuesto del remolque?",
+      "texto": "Un turismo con remolque, ¿es obligatorio que lleve una rueda de repuesto del remolque?",
       "opciones": [
-        "Si, cuando el remolque no es ligero.",
-        "Si.",
+        "Sí, cuando el remolque no es ligero.",
+        "Sí.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_007_p24.jpg"
     },
     {
-      "texto": "En caso de accidente, ¿zexiste relacion entre la velocidad de circulacion y la gravedad de las lesiones delos ocupantes de unvehiculo?",
+      "texto": "En caso de accidente, ¿existe relación entre la velocidad de circulación y la gravedad de las lesiones de los ocupantes de un vehículo?",
       "opciones": [
-        "Si; a mayor velocidad menor es la probabilidad de sufrir lesiones graves.",
-        "Si; a mayor velocidad mayor es la probabilidad de sufrir lesiones graves.",
-        "No; la gravedad delas lesiones depende solo de los sistemas de seguridad pasiva."
+        "Sí; a mayor velocidad menor es la probabilidad de sufrir lesiones graves.",
+        "Sí; a mayor velocidad mayor es la probabilidad de sufrir lesiones graves.",
+        "No; la gravedad de las lesiones depende solo de los sistemas de seguridad pasiva."
       ],
+      "correcta": 1,
       "imagen": "../img/test_007_p25.jpg"
     },
     {
-      "texto": "¿Esta permitido parar o estacionar en un paso para peatones y en sus proximidades?",
+      "texto": "¿Está permitido parar o estacionar en un paso para peatones y en sus proximidades?",
       "opciones": [
-        "Si, siempre.",
+        "Sí, siempre.",
         "En el paso para peatones se puede parar y, en sus proximidades, se puede parar y estacionar.",
-        "En el paso para peatones,no; pero en sus proximidades, si."
+        "En el paso para peatones, no; pero en sus proximidades, sí."
       ],
+      "correcta": 2,
       "imagen": "../img/test_007_p26.jpg"
     },
     {
-      "texto": "¿Cuando tiene que mirar los retrovisores?",
+      "texto": "¿Cuándo tiene que mirar los retrovisores?",
       "opciones": [
-        "Cuando vaya a realizaruna maniobra, unicamente.",
-        "Solocuandoseanecesario.",
+        "Cuando vaya a realizar una maniobra, únicamente.",
+        "Solo cuando sea necesario.",
         "Regularmente, aunque no vaya a realizar ninguna maniobra."
       ],
+      "correcta": 2,
       "imagen": "../img/test_007_p27.jpg"
     },
     {
-      "texto": "Los efectos del alcohol, ¿zson mayores en los conductores con poca experiencia al volante?",
+      "texto": "Los efectos del alcohol, ¿son mayores en los conductores con poca experiencia al volante?",
       "opciones": [
         "No, solo dependen de la tasa de alcoholemia.",
-        "Si,por eso la tasa dealcoholemia permitida esmenor.",
-        "No,el alcohol afecta igual a todas las personas."
-      ]
+        "Sí, por eso la tasa de alcoholemia permitida es menor.",
+        "No, el alcohol afecta igual a todas las personas."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Un turismo circula en llano. ¿Cuando necesita mas distancia (espacio) para frenar?",
+      "texto": "Un turismo circula en llano. ¿Cuándo necesita más distancia (espacio) para frenar?",
       "opciones": [
-        "Cuando el vehiculollevapocopeso.",
-        "Cuando el vehiculo lleva mucho peso.",
-        "Frena siempre igual, porquelos frenos se adaptan al peso."
-      ]
+        "Cuando el vehículo lleva poco peso.",
+        "Cuando el vehículo lleva mucho peso.",
+        "Frena siempre igual, porque los frenos se adaptan al peso."
+      ],
+      "correcta": 1
     },
     {
       "texto": "Los peatones de edad avanzada...",
       "opciones": [
-        "distinguen perfectamente los colores de los semaforos.",
-        "nunca tienen problemas deorientacion.",
-        "a veces encuentran dificil apreciar la velocidad a la que se acercan los vehiculos."
+        "distinguen perfectamente los colores de los semáforos.",
+        "nunca tienen problemas de orientación.",
+        "a veces encuentran difícil apreciar la velocidad a la que se acercan los vehículos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_007_p30.jpg"
     }
   ]

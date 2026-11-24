@@ -1,140 +1,156 @@
 {
   "test_id": 9,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En ciudad, ¿ies importante no circular a mas de 5o kilometros por hora?",
+      "texto": "En ciudad, ¿es importante no circular a más de 50 kilómetros por hora?",
       "opciones": [
-        "No,sobretodo en las calles yavenidas anchas.",
-        "Si, pero solo para no ser sancionado por exceso de velocidad.",
-        "Si, para que, en caso de atropello, el peaton tenga mas posibilidades de sobrevivir."
-      ]
+        "No, sobre todo en las calles y avenidas anchas.",
+        "Sí, pero solo para no ser sancionado por exceso de velocidad.",
+        "Sí, para que, en caso de atropello, el peatón tenga más posibilidades de sobrevivir."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Para contaminarlo menos posible es recomendable...",
+      "texto": "Para contaminar lo menos posible es recomendable...",
       "opciones": [
-        "mantenersiemprelamismavelocidad.",
-        "mantenerla velocidad lo mas uniforme posible evitando acelerones yfrenazos innecesarios.",
-        "utilizar lomenosposibleel transportepublico."
-      ]
+        "mantener siempre la misma velocidad.",
+        "mantener la velocidad lo más uniforme posible evitando acelerones y frenazos innecesarios.",
+        "utilizar lo menos posible el transporte público."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Un cuadriciclo ligero, ¿za que velocidad maxima puede circular fuera de poblado?",
+      "texto": "Un cuadriciclo ligero, ¿a qué velocidad máxima puede circular fuera de poblado?",
       "opciones": [
         "A 70 km/h.",
         "A 45 km/h.",
         "A 50 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_009_p03.jpg"
     },
     {
-      "texto": "En un control preventivo, ¿ipueden los agentes someter a un conductor a una prueba de deteccion de estupefacientes?",
+      "texto": "En un control preventivo, ¿pueden los agentes someter a un conductor a una prueba de detección de estupefacientes?",
       "opciones": [
-        "Si.",
-        "No, este tipo de pruebas solo se pueden realizar en un centro medico.",
-        "No,solamente si esta implicado en un accidente."
+        "Sí.",
+        "No, este tipo de pruebas solo se pueden realizar en un centro médico.",
+        "No, solamente si está implicado en un accidente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_009_p04.jpg"
     },
     {
-      "texto": "Ante un tratamiento farmacologico, ¿ireaccionan todas las personas de igual forma?",
+      "texto": "Ante un tratamiento farmacológico, ¿reaccionan todas las personas de igual forma?",
       "opciones": [
-        "Si,yaquelosmedicamentos siempreproducen losmismos efectos.",
-        "No, depende unicamente del estado fisico.",
-        "No,ya que circunstancias individuales como la fatiga o estar en ayunas pueden variar los efectos"
-      ]
+        "Sí, ya que los medicamentos siempre producen los mismos efectos.",
+        "No, depende únicamente del estado físico.",
+        "No, ya que circunstancias individuales como la fatiga o estar en ayunas pueden variar los efectos."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Cuando un agente realiza un toque largo de silbato esta ordenando...",
+      "texto": "Cuando un agente realiza un toque largo de silbato está ordenando...",
       "opciones": [
-        "ladisminucionde lavelocidad",
-        "la reanudacion de la marcha.",
-        "ladetenciondelosvehiculos."
-      ]
+        "la disminución de la velocidad.",
+        "la reanudación de la marcha.",
+        "la detención de los vehículos."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Cual es la velocidad maxima a la que le esta permitido circular por una autovia con una autocaravana de MMA inferiora 3500kg?",
+      "texto": "¿Cuál es la velocidad máxima a la que le está permitido circular por una autovía con una autocaravana de MMA inferior a 3.500 kg?",
       "opciones": [
         "100 km/h.",
         "120 km/h.",
         "90 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_009_p07.jpg"
     },
     {
-      "texto": "Si se ve implicado en un accidente de trafico con posibilidad de muertos o heridos graves, ique actuaciones, entre otras, ¿debe llevar a cabo en la medida de lo posible?",
+      "texto": "Si se ve implicado en un accidente de tráfico con posibilidad de muertos o heridos graves, ¿qué actuaciones, entre otras, debe llevar a cabo en la medida de lo posible?",
       "opciones": [
-        "Seguir circulando, sin prestar ayuda a las victimas ni avisara la autoridad.",
-        "Detener el vehiculo sin crear peligro, avisar a la autoridad o sus agentes y auxiliar a los heridos.",
-        "Detenerse, borrar las huellas del accidente y cambiar de sitio a los heridos y vehiculos."
+        "Seguir circulando, sin prestar ayuda a las víctimas ni avisar a la autoridad.",
+        "Detener el vehículo sin crear peligro, avisar a la autoridad o sus agentes y auxiliar a los heridos.",
+        "Detenerse, borrar las huellas del accidente y cambiar de sitio a los heridos y vehículos."
       ],
+      "correcta": 1,
       "imagen": "../img/test_009_p08.jpg"
     },
     {
-      "texto": "¿Esta permitido que los vehiculos prioritarios en servicio de urgencia utilicen unicamente la senal luminosa?",
+      "texto": "¿Está permitido que los vehículos prioritarios en servicio de urgencia utilicen únicamente la señal luminosa?",
       "opciones": [
-        "Si, cuandono suponga un peligro para los demas usuarios.",
-        "No,tienen que utilizar simultaneamente la senal luminosa y acustica.",
-        "Si, cuando circulen por via urbana."
-      ]
+        "Sí, cuando no suponga un peligro para los demás usuarios.",
+        "No, tienen que utilizar simultáneamente la señal luminosa y acústica.",
+        "Sí, cuando circulen por vía urbana."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Bajo los efectos del alcohol, la distancia de detencion...",
+      "texto": "Bajo los efectos del alcohol, la distancia de detención...",
       "opciones": [
         "no se ve afectada.",
         "disminuye.",
         "aumenta."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Un nino con una estatura de 136 centimetros, ¿ique asientos puede ocupar en un turismo?",
+      "texto": "Un niño con una estatura de 136 centímetros, ¿qué asientos puede ocupar en un turismo?",
       "opciones": [
-        "Solo los asientos traseros, utilizando siempre un dispositivo deretencion homologado en funcion de su talla y peso.",
-        "Tanto el delantero como los traseros, utilizando el cinturon de seguridad para adultos."
-      ]
+        "Solo los asientos traseros, utilizando siempre un dispositivo de retención homologado en función de su talla y peso.",
+        "Tanto el delantero como los traseros, utilizando el cinturón de seguridad para adultos."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Que indica la senal?",
+      "texto": "¿Qué indica la señal?",
       "opciones": [
         "Peligro, paso frecuentado por animales en libertad.",
         "Peligro, coto de caza.",
-        "Parquenacional."
+        "Parque nacional."
       ],
+      "correcta": 0,
       "imagen": "../img/test_009_p12.jpg"
     },
     {
-      "texto": "Si el turismo quiere girar a la izquierda debera...",
+      "texto": "Si el turismo quiere girar a la izquierda deberá...",
       "opciones": [
-        "situarse fuerade la calzaday realizarlo desde alli.",
-        "cenirse al borde izquierdo de la calzada.",
-        "cenirse al eje de la calzada sin invadir el sentido contrario."
+        "situarse fuera de la calzada y realizarlo desde allí.",
+        "ceñirse al borde izquierdo de la calzada.",
+        "ceñirse al eje de la calzada sin invadir el sentido contrario."
       ],
+      "correcta": 1,
       "imagen": "../img/test_009_p13.jpg"
     },
     {
-      "texto": "En esta via interurbana es obligatorio utilizar la luz corta...",
+      "texto": "En esta vía interurbana es obligatorio utilizar la luz corta...",
       "opciones": [
         "cuando exista posibilidad de deslumbrar a otros usuarios.",
         "solo cuando no se disponga de luz larga.",
         "siempre."
       ],
+      "correcta": 2,
       "imagen": "../img/test_009_p14.jpg"
     },
     {
-      "texto": "¿Puede emplear en su vehiculo luces adaptativas?",
+      "texto": "¿Puede emplear en su vehículo luces adaptativas?",
       "opciones": [
-        "Si.",
-        "No, estan prohibidas.",
-        "Si, son obligatorias."
-      ]
+        "Sí.",
+        "No, están prohibidas.",
+        "Sí, son obligatorias."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Esta senal...",
+      "texto": "Esta señal...",
       "opciones": [
-        "prohibe el paso a los vehiculos con mas anchura de la indicada, incluida la carga.",
-        "obliga a mantenerla separacion minima que indica entre vehiculos.",
-        "restringe el paso a los vehiculos con mas altura de la indicada."
+        "prohíbe el paso a los vehículos con más anchura de la indicada, incluida la carga.",
+        "obliga a mantener la separación mínima que indica entre vehículos.",
+        "restringe el paso a los vehículos con más altura de la indicada."
       ],
+      "correcta": 0,
       "imagen": "../img/test_009_p16.jpg"
     },
     {
@@ -144,118 +160,132 @@
         "no supera los 750 kg.",
         "supera los 750 kg."
       ],
+      "correcta": 1,
       "imagen": "../img/test_009_p17.jpg"
     },
     {
-      "texto": "El viento por la derecha en los adelantamientos a vehiculos grandes, ¿ipor que es peligroso?",
+      "texto": "El viento por la derecha en los adelantamientos a vehículos grandes, ¿por qué es peligroso?",
       "opciones": [
-        "Porque puedo perder el control del vehiculo y salirme de la calzada.",
-        "Porque nome deja ver la calzada.",
-        "Porque frena mi vehiculo y no me deja adelantar."
+        "Porque puedo perder el control del vehículo y salirme de la calzada.",
+        "Porque no me deja ver la calzada.",
+        "Porque frena mi vehículo y no me deja adelantar."
       ],
+      "correcta": 0,
       "imagen": "../img/test_009_p18.jpg"
     },
     {
-      "texto": "El conductor del vehiculo que utiliza el carril adicional...",
+      "texto": "El conductor del vehículo que utiliza el carril adicional...",
       "opciones": [
-        "circulara, como maximo, a 90 km/h.",
-        "debera abandonarla via en cuantolesea posible.",
-        "llevara encendida, al menos, la luz de cruce."
+        "circulará, como máximo, a 90 km/h.",
+        "deberá abandonar la vía en cuanto le sea posible.",
+        "llevará encendida, al menos, la luz de cruce."
       ],
+      "correcta": 2,
       "imagen": "../img/test_009_p19.jpg"
     },
     {
-      "texto": "Los limites de velocidad establecidos en las vias tienen como objetivo...",
+      "texto": "Los límites de velocidad establecidos en las vías tienen como objetivo...",
       "opciones": [
-        "garantizar la seguridad unicamente.",
+        "garantizar la seguridad únicamente.",
         "garantizar la seguridad y la fluidez.",
-        "adaptar la conduccion alas nuevas tecnologiasde los vehiculos yel medio ambiente."
-      ]
+        "adaptar la conducción a las nuevas tecnologías de los vehículos y el medio ambiente."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Los accidentes de trafico...",
+      "texto": "Los accidentes de tráfico...",
       "opciones": [
-        "notienen una gran importancia.",
+        "no tienen una gran importancia.",
         "son la causa principal de muerte a nivel mundial.",
-        "son una de las principales causas de mortalidad en nuestro pais."
-      ]
+        "son una de las principales causas de mortalidad en nuestro país."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Es peligroso no abrocharse el cinturon de seguridad?",
+      "texto": "¿Es peligroso no abrocharse el cinturón de seguridad?",
       "opciones": [
-        "Solo es peligroso no abrocharse el cinturon enlos asientos delanteros.",
-        "En trafico urbano no, debido a las bajas velocidades a las que se circula.",
-        "Si, porque incluso en un choque a baja velocidad no siempre es posible mantenerse sujeto al asiento."
-      ]
+        "Solo es peligroso no abrocharse el cinturón en los asientos delanteros.",
+        "En tráfico urbano no, debido a las bajas velocidades a las que se circula.",
+        "Sí, porque incluso en un choque a baja velocidad no siempre es posible mantenerse sujeto al asiento."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Que precauciones debe tomar conduciendo una motocicleta si empieza a llover intensamente?",
+      "texto": "¿Qué precauciones debe tomar conduciendo una motocicleta si empieza a llover intensamente?",
       "opciones": [
-        "Reducir la velocidad, deteniendose si fuera necesario.",
-        "Aumentar la velocidad para llegar cuanto antes a sudestino.",
-        "Mantenerse muy cerca de los vehiculos de grandes dimensiones para que le protejan de la lluvia."
-      ]
+        "Reducir la velocidad, deteniéndose si fuera necesario.",
+        "Aumentar la velocidad para llegar cuanto antes a su destino.",
+        "Mantenerse muy cerca de los vehículos de grandes dimensiones para que le protejan de la lluvia."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Podremos realizar un adelantamiento en una curva sin visibilidad si los sentidos estan claramente delimitados y no invadimos el sentido contrario?",
+      "texto": "¿Podremos realizar un adelantamiento en una curva sin visibilidad si los sentidos están claramente delimitados y no invadimos el sentido contrario?",
       "opciones": [
         "Sí.",
         "No, ya que no disponemos de visibilidad.",
-        "Solosiadelantamosaunvehiculodedosruedas."
+        "Solo si adelantamos a un vehículo de dos ruedas."
       ],
+      "correcta": 0,
       "imagen": "../img/test_009_p24.jpg"
     },
     {
-      "texto": "Esta senal indica el lugar a partir del cual...",
+      "texto": "Esta señal indica el lugar a partir del cual...",
       "opciones": [
-        "finalizantodas las prohibicionesdelas senales anteriorespara vehiculos en movimiento.",
-        "comienza la prohibicion indicada anteriormente.",
-        "se inician las prohibiciones indicadas por anteriores senales de prohibicion."
+        "finalizan todas las prohibiciones de las señales anteriores para vehículos en movimiento.",
+        "comienza la prohibición indicada anteriormente.",
+        "se inician las prohibiciones indicadas por anteriores señales de prohibición."
       ],
+      "correcta": 0,
       "imagen": "../img/test_009_p25.jpg"
     },
     {
-      "texto": "Estas senales, sobre una carretera convencional, indican salida inmediata hacia...",
+      "texto": "Estas señales, sobre una carretera convencional, indican salida inmediata hacia...",
       "opciones": [
         "otra carretera convencional.",
-        "unaautovia.",
+        "una autovía.",
         "una autopista."
       ],
+      "correcta": 2,
       "imagen": "../img/test_009_p26.jpg"
     },
     {
-      "texto": "Arrojar un cigarro por la ventanilla de un turismo, ¿zpuede suponer una infraccion?",
+      "texto": "Arrojar un cigarro por la ventanilla de un turismo, ¿puede suponer una infracción?",
       "opciones": [
-        "Si, y ademas conlleva perdida de puntos.",
-        "Si,pero no conlleva perdida de puntos.",
+        "Sí, y además conlleva pérdida de puntos.",
+        "Sí, pero no conlleva pérdida de puntos.",
         "No, pero no se debe hacer."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En un vehiculo con motor diesel, una vez arrancado el motor es conveniente...",
+      "texto": "En un vehículo con motor diésel, una vez arrancado el motor es conveniente...",
       "opciones": [
-        "acelerarenpuntomuertoparaque el motor secaliente.",
+        "acelerar en punto muerto para que el motor se caliente.",
         "esperar unos segundos antes de iniciar la marcha.",
-        "iniciar lamarcha inmediatamente."
+        "iniciar la marcha inmediatamente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_009_p28.jpg"
     },
     {
-      "texto": "¿Hay hielo en la calzada. Que debe hacer?",
+      "texto": "Hay hielo en la calzada. ¿Qué debe hacer?",
       "opciones": [
-        "Circular con la primera marcha,que es la mas corta.",
-        "Acelerar para salir rapidamente.",
+        "Circular con la primera marcha, que es la más corta.",
+        "Acelerar para salir rápidamente.",
         "Conducir con cuidado, frenar y acelerar con cuidado solo cuando sea necesario."
       ],
+      "correcta": 2,
       "imagen": "../img/test_009_p29.jpg"
     },
     {
-      "texto": "Esta senal indica...",
+      "texto": "Esta señal indica...",
       "opciones": [
-        "la existenciadeuna via para peatones, ciclos y,en su caso,VMP, segregada del trafico motorizado.",
-        "la interseccion con una via ciclista.",
-        "queelaccesoestaprohibidoaciclos."
+        "la existencia de una vía para peatones, ciclos y, en su caso, VMP, segregada del tráfico motorizado.",
+        "la intersección con una vía ciclista.",
+        "que el acceso está prohibido a ciclos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_009_p30.jpg"
     }
   ]

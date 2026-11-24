@@ -1,267 +1,297 @@
 {
   "test_id": 8,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En una motocicleta, ¿iquienes deberan utilizar guantes de proteccion en vias interurbanas?",
+      "texto": "En una motocicleta, ¿quiénes deberán utilizar guantes de protección en vías interurbanas?",
       "opciones": [
         "Solo el conductor.",
         "Solo el pasajero si no dispone de asidero.",
-        "El conductoryel pasajero."
+        "El conductor y el pasajero."
       ],
+      "correcta": 2,
       "imagen": "../img/test_008_p01.jpg"
     },
     {
-      "texto": "Los vehiculos no podran circular por las vias emitiendo...",
+      "texto": "Los vehículos no podrán circular por las vías emitiendo...",
       "opciones": [
-        "ruidos,de cualquierclase.",
-        "niveles de ruido superiores a los limites establecidos.",
-        "gasesporeltubodeescape,porquecontamina."
-      ]
+        "ruidos, de cualquier clase.",
+        "niveles de ruido superiores a los límites establecidos.",
+        "gases por el tubo de escape, porque contamina."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Qué significa esta senal?",
+      "texto": "¿Qué significa esta señal?",
       "opciones": [
         "Avisa de que puede haber hielo en la calzada.",
         "Que en caso de nieve no puede superar la velocidad indicada.",
-        "Que seaproxima auna zona connieve en la calzada."
+        "Que se aproxima a una zona con nieve en la calzada."
       ],
+      "correcta": 0,
       "imagen": "../img/test_008_p03.jpg"
     },
     {
-      "texto": "A la vista de esta senal, ¿zdebe facilitar la incorporacion de los vehiculos que se incorporen por la derecha?",
+      "texto": "A la vista de esta señal, ¿debe facilitar la incorporación de los vehículos que se incorporen por la derecha?",
       "opciones": [
         "No, nunca, ya que le otorga la prioridad.",
-        "Si,enlamedidadeloposible.",
-        "solo si se trata de vehiculos de transporte colectivo de viajeros."
+        "Sí, en la medida de lo posible.",
+        "Solo si se trata de vehículos de transporte colectivo de viajeros."
       ],
+      "correcta": 1,
       "imagen": "../img/test_008_p04.jpg"
     },
     {
-      "texto": "Los accidentes de trafico, ¿ison una de las principales causas de mortalidad juvenil en Espana?",
+      "texto": "Los accidentes de tráfico, ¿son una de las principales causas de mortalidad juvenil en España?",
       "opciones": [
-        "Si, son una de las principales causas de mortalidad y lesiones de los jovenes.",
-        "No,pero si es la principal causa de lesiones.",
-        "No,pero si en otrospaises."
-      ]
+        "Sí, son una de las principales causas de mortalidad y lesiones de los jóvenes.",
+        "No, pero sí es la principal causa de lesiones.",
+        "No, pero sí en otros países."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Cual de las siguientes situaciones favorece la distraccion al conducir?",
+      "texto": "¿Cuál de las siguientes situaciones favorece la distracción al conducir?",
       "opciones": [
         "Una carretera muy conocida.",
-        "Una situacionde traficono compleja.",
-        "Conducirdedia."
-      ]
+        "Una situación de tráfico no compleja.",
+        "Conducir de día."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Un conductor que es requerido por los agentes para una prueba de alcoholemia, ¿iesta obligado a someterse a ella?",
+      "texto": "Un conductor que es requerido por los agentes para una prueba de alcoholemia, ¿está obligado a someterse a ella?",
       "opciones": [
-        "Solo si esta implicado en un accidente.",
-        "Solo si esta implicado en un accidenteo ha cometido alguna infraccion.",
-        "Si."
+        "Solo si está implicado en un accidente.",
+        "Solo si está implicado en un accidente o ha cometido alguna infracción.",
+        "Sí."
       ],
+      "correcta": 2,
       "imagen": "../img/test_008_p07.jpg"
     },
     {
-      "texto": "La velocidad maxima a la que puede circular un automovil derivado de turismo en una carretera convencional es de...",
+      "texto": "La velocidad máxima a la que puede circular un automóvil derivado de turismo en una carretera convencional es de...",
       "opciones": [
         "80 km/h.",
         "90 km/h.",
         "100 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_008_p08.jpg"
     },
     {
-      "texto": "En esta calzada de sentido unico y tres carriles, ¿iesta bien situado el vehiculo para realizar un cambio de direccion a la izquierda?",
+      "texto": "En esta calzada de sentido único y tres carriles, ¿está bien situado el vehículo para realizar un cambio de dirección a la izquierda?",
       "opciones": [
-        "Si,sinocirculanotrosvehiculos.",
+        "Sí, si no circulan otros vehículos.",
         "No, porque debe colocarse en el carril izquierdo.",
-        "Si, porque no hay flechas en el pavimento."
+        "Sí, porque no hay flechas en el pavimento."
       ],
+      "correcta": 1,
       "imagen": "../img/test_008_p09.jpg"
     },
     {
-      "texto": "Una de las funciones del sistema \"Advertencia de Colision Frontal o Fcw\" instalado en el vehiculo es:",
+      "texto": "Una de las funciones del sistema «Advertencia de Colisión Frontal o FCW» instalado en el vehículo es:",
       "opciones": [
-        "Advertir al conductor con una senal optica y/o acustica cuando no guarda una distancia de seguridad adecuada con el vehiculo que circula delante.",
-        "Activar lospretensores de los cinturones paraminimizar el dano a los ocupantes en caso de accidente.",
-        "Emitirun avisoacusticoa lospeatonespara evitaratropellos."
-      ]
+        "Advertir al conductor con una señal óptica y/o acústica cuando no guarda una distancia de seguridad adecuada con el vehículo que circula delante.",
+        "Activar los pretensores de los cinturones para minimizar el daño a los ocupantes en caso de accidente.",
+        "Emitir un aviso acústico a los peatones para evitar atropellos."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Cual de las siguientes opciones describe mejor por que los avances tecnologicos no han podido eliminar por completo los accidentes?",
+      "texto": "¿Cuál de las siguientes opciones describe mejor por qué los avances tecnológicos no han podido eliminar por completo los accidentes?",
       "opciones": [
-        "La tecnologia no esta lo suficientemente avanzada para abordar todos los aspectos de seguridad vial.",
-        "Apesarde los avances, los comportamientos humanos imprudentes continuan siendo unfactorprincipal enlos accidentes.",
-        "Los avances tecnologicos han sido limitados en el ambito de la seguridad vial."
+        "La tecnología no está lo suficientemente avanzada para abordar todos los aspectos de seguridad vial.",
+        "A pesar de los avances, los comportamientos humanos imprudentes continúan siendo un factor principal en los accidentes.",
+        "Los avances tecnológicos han sido limitados en el ámbito de la seguridad vial."
       ],
+      "correcta": 1,
       "imagen": "../img/test_008_p11.jpg"
     },
     {
-      "texto": "El uso adecuado del casco implica que la correa de sujecion...",
+      "texto": "El uso adecuado del casco implica que la correa de sujeción...",
       "opciones": [
-        "nodebeabrocharse.",
-        "debellevarsecorrectamenteabrochadapara queel cascocumpla eficazmentesufuncion.",
-        "puede llevarsedesabrochada enviaurbana."
-      ]
+        "no debe abrocharse.",
+        "debe llevarse correctamente abrochada para que el casco cumpla eficazmente su función.",
+        "puede llevarse desabrochada en vía urbana."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Ha quedado detenido en una interseccion regulada por semaforos y obstaculiza la circulacion, ¿ique debe hacer?",
+      "texto": "Ha quedado detenido en una intersección regulada por semáforos y obstaculiza la circulación, ¿qué debe hacer?",
       "opciones": [
-        "Esperaraqueel semaforo seponga verde.",
-        "Salir del cruce lo antes posible, en condiciones de seguridad, sin esperar a que el semaforo seponga verde",
-        "Dar marcha atras para dejar libre la interseccion."
+        "Esperar a que el semáforo se ponga verde.",
+        "Salir del cruce lo antes posible, en condiciones de seguridad, sin esperar a que el semáforo se ponga verde.",
+        "Dar marcha atrás para dejar libre la intersección."
       ],
+      "correcta": 1,
       "imagen": "../img/test_008_p13.jpg"
     },
     {
-      "texto": "¿Esta permitido efectuar un adelantamiento si al realizarlo entorpece la circulacion de ciclistas?",
+      "texto": "¿Está permitido efectuar un adelantamiento si al realizarlo entorpece la circulación de ciclistas?",
       "opciones": [
-        "Si, siemprey cuando se haga conprecauciony seadviertaa los ciclistas con anticipacion.",
-        "Si, siempre aunque se ponga en peligro a los ciclistas.",
-        "No,estaprohibido."
+        "Sí, siempre y cuando se haga con precaución y se advierta a los ciclistas con anticipación.",
+        "Sí, siempre aunque se ponga en peligro a los ciclistas.",
+        "No, está prohibido."
       ],
+      "correcta": 2,
       "imagen": "../img/test_008_p14.jpg"
     },
     {
-      "texto": "Si a la entrada de un tunel hay un semaforo en rojo, ¿zque debe hacer?",
+      "texto": "Si a la entrada de un túnel hay un semáforo en rojo, ¿qué debe hacer?",
       "opciones": [
-        "Continuar la marcha con precaucion.",
-        "No entrar en el tunel.",
-        "Pasar circulando a 50 kilometros por hora como maximo."
+        "Continuar la marcha con precaución.",
+        "No entrar en el túnel.",
+        "Pasar circulando a 50 kilómetros por hora como máximo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_008_p15.jpg"
     },
     {
-      "texto": "Al rebasar un vehiculo inmovilizado por una averia que ocupa parte de la calzada, ¿zdebe reducirse la velocidad?",
+      "texto": "Al rebasar un vehículo inmovilizado por una avería que ocupa parte de la calzada, ¿debe reducirse la velocidad?",
       "opciones": [
         "No, si se mantiene la trayectoria.",
-        "Solo si hay una senal que lo indique.",
-        "Si,al menos 20km/h respectoal limite existenteen la via."
+        "Solo si hay una señal que lo indique.",
+        "Sí, al menos 20 km/h respecto al límite existente en la vía."
       ],
+      "correcta": 0,
       "imagen": "../img/test_008_p16.jpg"
     },
     {
-      "texto": "En las autovias, se permite circular...",
+      "texto": "En las autovías, se permite circular...",
       "opciones": [
-        "apeatones.",
-        "a vehiculos de traccion animal.",
-        "por los arcenes,a conductores de bicicletas mayores de14 anos, salvo que seprohiba por senal."
-      ]
+        "a peatones.",
+        "a vehículos de tracción animal.",
+        "por los arcenes, a conductores de bicicletas mayores de 14 años, salvo que se prohíba por señal."
+      ],
+      "correcta": 2
     },
     {
       "texto": "Estas marcas viales indican que...",
       "opciones": [
-        "es una via de servicio.",
-        "es una viadeatencionpreferente.",
-        "esunazonaqueestaenobras."
+        "es una vía de servicio.",
+        "es una vía de atención preferente.",
+        "es una zona que está en obras."
       ],
+      "correcta": 2,
       "imagen": "../img/test_008_p18.jpg"
     },
     {
-      "texto": "Esta senal indica fin de...",
+      "texto": "Esta señal indica fin de...",
       "opciones": [
-        "todas las prohibiciones indicadasporanteriores senales.",
-        "la limitaciondevelocidad.",
-        "la prohibicion de adelantar."
+        "todas las prohibiciones indicadas por anteriores señales.",
+        "la limitación de velocidad.",
+        "la prohibición de adelantar."
       ],
+      "correcta": 0,
       "imagen": "../img/test_008_p19.jpg"
     },
     {
-      "texto": "Un vehiculo de motor que circula de noche por una travesia suficientemente iluminada...",
+      "texto": "Un vehículo de motor que circula de noche por una travesía suficientemente iluminada...",
       "opciones": [
-        "unicamente debe utilizar el alumbrado de posicion.",
-        "no es necesario que utilice ningun alumbrado.",
-        "debe utilizar el alumbrado de corto alcance y el de posicion."
-      ]
+        "únicamente debe utilizar el alumbrado de posición.",
+        "no es necesario que utilice ningún alumbrado.",
+        "debe utilizar el alumbrado de corto alcance y el de posición."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Los turismos que arrastren un remolque ligero, ¿zestan obligados a llevar entre sus accesorios un equipo homologado de extincion de incendios?",
+      "texto": "Los turismos que arrastren un remolque ligero, ¿están obligados a llevar entre sus accesorios un equipo homologado de extinción de incendios?",
       "opciones": [
         "No.",
-        "Si.",
-        "Solo cuando circulenpor vias interurbanas."
+        "Sí.",
+        "Solo cuando circulen por vías interurbanas."
       ],
+      "correcta": 0,
       "imagen": "../img/test_008_p21.jpg"
     },
     {
       "texto": "Si lleva a un pasajero en la motocicleta, al frenar...",
       "opciones": [
-        "aumentael desequilibrio.",
-        "es mas dificil que se bloquee la rueda trasera.",
-        "el peso sedesplaza hacia laparte trasera."
+        "aumenta el desequilibrio.",
+        "es más difícil que se bloquee la rueda trasera.",
+        "el peso se desplaza hacia la parte trasera."
       ],
+      "correcta": 1,
       "imagen": "../img/test_008_p22.jpg"
     },
     {
-      "texto": "El semaforo cuadrado tiene la flecha verde encendida y el semaforo circular esta rojo. ¿Qué debe hacer?",
+      "texto": "El semáforo cuadrado tiene la flecha verde encendida y el semáforo circular está rojo. ¿Qué debe hacer?",
       "opciones": [
         "Circular sin detenerme.",
-        "Detener el vehiculo antes del semaforo circular en rojo.",
-        "Detener el vehiculo antes del semaforo cuadrado conflecha verde."
+        "Detener el vehículo antes del semáforo circular en rojo.",
+        "Detener el vehículo antes del semáforo cuadrado con flecha verde."
       ],
+      "correcta": 0,
       "imagen": "../img/test_008_p23.jpg"
     },
     {
-      "texto": "La cinta abdominal del cinturon de seguridad debe colocarse...",
+      "texto": "La cinta abdominal del cinturón de seguridad debe colocarse...",
       "opciones": [
         "sobre los huesos de la cadera o sobre el abdomen.",
-        "sobreel abdomen,unicamente.",
-        "sobrelos huesos de la cadera, siempre por debajo del abdomen."
+        "sobre el abdomen, únicamente.",
+        "sobre los huesos de la cadera, siempre por debajo del abdomen."
       ],
+      "correcta": 2,
       "imagen": "../img/test_008_p24.jpg"
     },
     {
-      "texto": "Si el resultado de las pruebas de alcoholemia es positivo el agente podra inmovilizar el vehiculo, a no ser...",
+      "texto": "Si el resultado de las pruebas de alcoholemia es positivo, el agente podrá inmovilizar el vehículo, a no ser...",
       "opciones": [
-        "que elconductorhaga efectiva en el actola sancion economica impuesta.",
-        "que en el vehiculo viajen ninos o ancianos.",
-        "que pueda hacerse cargo de su conduccion otra persona debidamente habilitada."
+        "que el conductor haga efectiva en el acto la sanción económica impuesta.",
+        "que en el vehículo viajen niños o ancianos.",
+        "que pueda hacerse cargo de su conducción otra persona debidamente habilitada."
       ],
+      "correcta": 2,
       "imagen": "../img/test_008_p25.jpg"
     },
     {
-      "texto": "De noche, ¿icomo se debe senalizar la carga que sobresale por delante y por detras?",
+      "texto": "De noche, ¿cómo se debe señalizar la carga que sobresale por delante y por detrás?",
       "opciones": [
-        "Solamente con el panel de franjas oblicuas rojas yblancas",
-        "Con una luz blanca por delante, una luz roja por detras y el panel de franjas oblicuas rojas yblancas.",
-        "Con un catadioptrico blanco por delante yuno rojo pordetras."
-      ]
+        "Solamente con el panel de franjas oblicuas rojas y blancas.",
+        "Con una luz blanca por delante, una luz roja por detrás y el panel de franjas oblicuas rojas y blancas.",
+        "Con un catadióptrico blanco por delante y uno rojo por detrás."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Como norma general, ¿zesta permitido adelantar en los pasos a nivel?",
+      "texto": "Como norma general, ¿está permitido adelantar en los pasos a nivel?",
       "opciones": [
         "No.",
-        "Si, cuando se haga a una velocidad que permita detener el vehiculo a tiempo.",
-        "Si."
+        "Sí, cuando se haga a una velocidad que permita detener el vehículo a tiempo.",
+        "Sí."
       ],
+      "correcta": 0,
       "imagen": "../img/test_008_p27.jpg"
     },
     {
-      "texto": "¿Esta carretera tiene mas de 6 m de ancho.zEs correcto circular por encima de las lineas que separan los carriles?",
+      "texto": "Esta carretera tiene más de 6 m de ancho. ¿Es correcto circular por encima de las líneas que separan los carriles?",
       "opciones": [
         "No, porque debo circular dentro de mi carril.",
-        "Si, porque hay dos carriles.",
-        "Si, cuando no vienen vehiculos en sentido contrario."
+        "Sí, porque hay dos carriles.",
+        "Sí, cuando no vienen vehículos en sentido contrario."
       ],
+      "correcta": 0,
       "imagen": "../img/test_008_p28.jpg"
     },
     {
-      "texto": "¿Que caracteristicas tienen que cumplir los vehiculos provistos del distintivo medioambiental 0 emisiones?",
+      "texto": "¿Qué características tienen que cumplir los vehículos provistos del distintivo medioambiental 0 emisiones?",
       "opciones": [
-        "Ser electricos puros de bateria, incluidos con autonomia extendida o electricos hibridos enchufables con autonomia minima de 40km o pila de combustible.",
-        "Ser electricos enchufables con menos de 4o km de autonomia, hibridos no enchufables, gas natural y glp.",
-        "Tener motores de gasolina matriculado a partir del 2006 o diesel a partir de 2015."
+        "Ser eléctricos puros de batería, incluidos con autonomía extendida, o eléctricos híbridos enchufables con autonomía mínima de 40 km o pila de combustible.",
+        "Ser eléctricos enchufables con menos de 40 km de autonomía, híbridos no enchufables, gas natural y GLP.",
+        "Tener motores de gasolina matriculados a partir del 2006 o diésel a partir de 2015."
       ],
+      "correcta": 0,
       "imagen": "../img/test_008_p29.jpg"
     },
     {
-      "texto": "Esta senal ...",
+      "texto": "Esta señal...",
       "opciones": [
-        "prohibe el estacionamiento en el lado de la calzada en que este situada la senal.",
-        "prohibeelestacionamientolosdiaspares.",
-        "prohibe la parada yel estacionamiento."
+        "prohíbe el estacionamiento en el lado de la calzada en que esté situada la señal.",
+        "prohíbe el estacionamiento los días pares.",
+        "prohíbe la parada y el estacionamiento."
       ],
+      "correcta": 0,
       "imagen": "../img/test_008_p30.jpg"
     }
   ]

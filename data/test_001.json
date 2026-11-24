@@ -1,268 +1,298 @@
 {
   "test_id": 1,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
       "texto": "¿Es aconsejable conducir un turismo calzado con unas chanclas?",
       "opciones": [
-        "No,porque podrian caerse y dificultar el manejo de los pedales.",
-        "Si, porque al no sujetar el pie, es mas facil ejercer la presion correcta sobre los pedales.",
-        "Si, porque permiten un manejo mas rapido y seguro de los pedales."
+        "No, porque podrían caerse y dificultar el manejo de los pedales.",
+        "Sí, porque al no sujetar el pie, es más fácil ejercer la presión correcta sobre los pedales.",
+        "Sí, porque permiten un manejo más rápido y seguro de los pedales."
       ],
+      "correcta": 0,
       "imagen": "../img/test_001_p01.jpg"
     },
     {
-      "texto": "¿Puede realizar un cambio de sentido en un lugar donde este prohibido adelantar?",
+      "texto": "¿Puede realizar un cambio de sentido en un lugar donde esté prohibido adelantar?",
       "opciones": [
-        "Si, excepto entre la puesta y la salida de sol, porque disminuye la visibilidad.",
-        "No, salvo que el cambio de sentido este expresamente autorizado.",
-        "Si, cuando la circulacion en sentido contrariolo permita."
+        "Sí, excepto entre la puesta y la salida de sol, porque disminuye la visibilidad.",
+        "No, salvo que el cambio de sentido esté expresamente autorizado.",
+        "Sí, cuando la circulación en sentido contrario lo permita."
       ],
+      "correcta": 1,
       "imagen": "../img/test_001_p02.jpg"
     },
     {
-      "texto": "En un vehiculo de autoescuela realizando clases practicas, ¿iquien es considerado el conductor?",
+      "texto": "En un vehículo de autoescuela realizando clases prácticas, ¿quién es considerado el conductor?",
       "opciones": [
-        "Tantoalalumnocomoalprofesor.",
-        "El alumno,ya quemaneja el volante.",
+        "Tanto al alumno como al profesor.",
+        "El alumno, ya que maneja el volante.",
         "El profesor, por ser responsable de los mandos adicionales."
       ],
+      "correcta": 2,
       "imagen": "../img/test_001_p03.jpg"
     },
     {
-      "texto": "¿Donde estapermitido que viaje un ninoque no alcance los 135 centimetros de estatura?",
+      "texto": "¿Dónde está permitido que viaje un niño que no alcance los 135 centímetros de estatura?",
       "opciones": [
-        "En cualquiera de los asientos traseros utilizando el cinturon para adultos.",
-        "En un asiento delantero o trasero, utilizando siempre el cinturon de seguridad para adultos.",
-        "En el asiento trasero, utilizando siempre un dispositivo de retencion homologado en funcion de su talla y peso"
-      ]
+        "En cualquiera de los asientos traseros utilizando el cinturón para adultos.",
+        "En un asiento delantero o trasero, utilizando siempre el cinturón de seguridad para adultos.",
+        "En el asiento trasero, utilizando siempre un dispositivo de retención homologado en función de su talla y peso."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Con esta senalizacion, ¿za que velocidad debe circular?",
+      "texto": "Con esta señalización, ¿a qué velocidad debe circular?",
       "opciones": [
-        "Obligatoriamentea30km/h.",
+        "Obligatoriamente a 30 km/h.",
         "Al menos a 30 km/h.",
-        "A3okm/h,comorecomendacion,durante el tramo que subsista el peligro."
+        "A 30 km/h, como recomendación, durante el tramo que subsista el peligro."
       ],
+      "correcta": 2,
       "imagen": "../img/test_001_p05.jpg"
     },
     {
-      "texto": "Una linea blanca continua sobre la calzada, sensiblemente mas ancha que en el caso general...",
+      "texto": "Una línea blanca continua sobre la calzada, sensiblemente más ancha que en el caso general...",
       "opciones": [
         "indica la existencia de un carril especial.",
-        "sirvepara delimitar, unicamente, los carriles bus.",
+        "sirve para delimitar, únicamente, los carriles bus.",
         "indica el borde de la calzada."
       ],
+      "correcta": 0,
       "imagen": "../img/test_001_p06.jpg"
     },
     {
-      "texto": "¿Cual es la sancion por no tener el seguro obligatorio del vehiculo?",
+      "texto": "¿Cuál es la sanción por no tener el seguro obligatorio del vehículo?",
       "opciones": [
-        "Una multa, pero sin inmovilizacion del vehiculo.",
-        "Una multa, y ademas se podra inmovilizar el vehiculo.",
-        "La inmovilizacion del vehiculo,pero no supone sancion economica."
+        "Una multa, pero sin inmovilización del vehículo.",
+        "Una multa, y además se podrá inmovilizar el vehículo.",
+        "La inmovilización del vehículo, pero no supone sanción económica."
       ],
+      "correcta": 1,
       "imagen": "../img/test_001_p07.jpg"
     },
     {
-      "texto": "¿Al aumentar la velocidad incrementa la probabilidad de muerte en caso de atropello a un peaton?",
+      "texto": "Al aumentar la velocidad, ¿incrementa la probabilidad de muerte en caso de atropello a un peatón?",
       "opciones": [
-        "No,la velocidad del vehiculo no tiene impacto significativo en la probabilidad de muerte de un peaton atropellado",
-        "Si, al aumentar la velocidad de un vehiculo se incrementa la probabilidad de fatalidad en caso de atropello aunpeaton.",
-        "La probabilidad es la misma, dependera exclusivamente del estado de salud del peaton."
+        "No, la velocidad del vehículo no tiene impacto significativo en la probabilidad de muerte de un peatón atropellado.",
+        "Sí, al aumentar la velocidad de un vehículo se incrementa la probabilidad de fatalidad en caso de atropello a un peatón.",
+        "La probabilidad es la misma, dependerá exclusivamente del estado de salud del peatón."
       ],
+      "correcta": 1,
       "imagen": "../img/test_001_p08.jpg"
     },
     {
-      "texto": "¿Cuantos espejos retrovisores tienen que llevar instalados las motocicletas?",
+      "texto": "¿Cuántos espejos retrovisores tienen que llevar instalados las motocicletas?",
       "opciones": [
         "Obligatoriamente uno en el lado derecho, pero pueden llevar dos.",
         "Siempre deben llevar dos espejos, uno en cada lado.",
-        "Un espejo exterior izquierdo si no superan los 10o km/h y dos, uno en cada lado, si la velocidad es mayor."
+        "Un espejo exterior izquierdo si no superan los 100 km/h y dos, uno en cada lado, si la velocidad es mayor."
       ],
+      "correcta": 2,
       "imagen": "../img/test_001_p09.jpg"
     },
     {
-      "texto": "¿Esta permitida la circulacion de animales por una carretera convencional?",
+      "texto": "¿Está permitida la circulación de animales por una carretera convencional?",
       "opciones": [
-        "Si,unicamentecuandono exista viapecuaria.",
+        "Sí, únicamente cuando no exista vía pecuaria.",
         "No.",
-        "Si,exceptocuandocirculenenrebano."
-      ]
+        "Sí, excepto cuando circulen en rebaño."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Que aportan a la seguridad vial los sistemas avanzados de ayuda a la conduccion tambiénconocidos comoADAs?",
+      "texto": "¿Qué aportan a la seguridad vial los sistemas avanzados de ayuda a la conducción, también conocidos como ADAS?",
       "opciones": [
-        "Disminuyen el tiempo dereaccion del conductor.",
+        "Disminuyen el tiempo de reacción del conductor.",
         "Permiten al conductor reducir su nivel de alerta.",
-        "Mejoran notablemente la seguridad activa del vehiculo."
+        "Mejoran notablemente la seguridad activa del vehículo."
       ],
+      "correcta": 2,
       "imagen": "../img/test_001_p11.jpg"
     },
     {
-      "texto": "¿Cual es la tasa de alcohol maxima permitida a un conductor novel?",
+      "texto": "¿Cuál es la tasa de alcohol máxima permitida a un conductor novel?",
       "opciones": [
-        "0,25miligramos de alcohol por litro de aire espirado.",
+        "0,25 miligramos de alcohol por litro de aire espirado.",
         "0,3 miligramos de alcohol por litro de aire espirado.",
         "0,15 miligramos de alcohol por litro de aire espirado."
       ],
+      "correcta": 2,
       "imagen": "../img/test_001_p12.jpg"
     },
     {
-      "texto": "Cuando un vehiculo accidentado comienza a arder, ¿ique se debe hacer primero?",
+      "texto": "Cuando un vehículo accidentado comienza a arder, ¿qué se debe hacer primero?",
       "opciones": [
         "Apagar el fuego.",
-        "Sacarrapidamentea los heridos.",
+        "Sacar rápidamente a los heridos.",
         "Ir a buscar ayuda."
       ],
+      "correcta": 1,
       "imagen": "../img/test_001_p13.jpg"
     },
     {
-      "texto": "En esta situacion, ¿zque debe hacer si va a girar a la izquierda?",
+      "texto": "En esta situación, ¿qué debe hacer si va a girar a la izquierda?",
       "opciones": [
-        "Continuar, obedeciendo al semaforo de la derecha.",
-        "Detenerse, obedeciendo al semaforo situado a la izquierda.",
-        "Solo detenerse si haypeatones cruzando."
+        "Continuar, obedeciendo al semáforo de la derecha.",
+        "Detenerse, obedeciendo al semáforo situado a la izquierda.",
+        "Solo detenerse si hay peatones cruzando."
       ],
+      "correcta": 1,
       "imagen": "../img/test_001_p14.jpg"
     },
     {
-      "texto": "Esta permitido colocar la senal luminosa de presenalizacion de peligro, V-16, ¿alejada del vehiculo averiado?",
+      "texto": "¿Está permitido colocar la señal luminosa de preseñalización de peligro, V-16, alejada del vehículo averiado?",
       "opciones": [
-        "Si, alejado se podra apreciar mejor.",
-        "Si, debe estar al menos a 100metros.",
-        "No, se debe colocar en la parte mas alta posible del vehiculo inmovilizado."
+        "Sí, alejada se podrá apreciar mejor.",
+        "Sí, debe estar al menos a 100 metros.",
+        "No, se debe colocar en la parte más alta posible del vehículo inmovilizado."
       ],
+      "correcta": 2,
       "imagen": "../img/test_001_p15.jpg"
     },
     {
-      "texto": "Para entrar en una autopista, ¿ia que velocidad debe circular?",
+      "texto": "Para entrar en una autopista, ¿a qué velocidad debe circular?",
       "opciones": [
-        "Alamaximavelocidadpermitida enlaautopista.",
+        "A la máxima velocidad permitida en la autopista.",
         "Siempre muy despacio para entrar con seguridad.",
-        "A la velocidadadecuadaquepermita incorporarsecon seguridad."
+        "A la velocidad adecuada que permita incorporarse con seguridad."
       ],
+      "correcta": 2,
       "imagen": "../img/test_001_p16.jpg"
     },
     {
-      "texto": "¿Que es una detencion?",
+      "texto": "¿Qué es una detención?",
       "opciones": [
-        "La inmovilizacion del vehiculo por necesidades de la circulacion.",
+        "La inmovilización del vehículo por necesidades de la circulación.",
         "Una parada por cualquier causa.",
-        "Un estacionamiento sin bajarse del vehiculo."
-      ]
+        "Un estacionamiento sin bajarse del vehículo."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Esta senal indica peligro por la proximidad de...",
+      "texto": "Esta señal indica peligro por la proximidad de...",
       "opciones": [
-        "una via enmal estado.",
-        "unbadenen la via.",
-        "un resalto en la via."
+        "una vía en mal estado.",
+        "un badén en la vía.",
+        "un resalto en la vía."
       ],
+      "correcta": 2,
       "imagen": "../img/test_001_p18.jpg"
     },
     {
-      "texto": "En condiciones normales, la velocidad adecuada esta siempre...",
+      "texto": "En condiciones normales, la velocidad adecuada está siempre...",
       "opciones": [
-        "por debajo de la velocidad minima.",
-        "por encima de la velocidad maxima y por debajo de la minima.",
-        "por encima de la velocidad minimay pordebajo de la maxima."
-      ]
+        "por debajo de la velocidad mínima.",
+        "por encima de la velocidad máxima y por debajo de la mínima.",
+        "por encima de la velocidad mínima y por debajo de la máxima."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Al adelantar a un ciclista en una via urbana, ¿zdebe dejarse una separacion lateral minima de 1,5 metros?",
+      "texto": "Al adelantar a un ciclista en una vía urbana, ¿debe dejarse una separación lateral mínima de 1,5 metros?",
       "opciones": [
         "No, solo es obligatorio fuera de poblado.",
-        "Solo si la via tiene arcen.",
-        "Si, debe respetarse en cualquier tipo de via."
+        "Solo si la vía tiene arcén.",
+        "Sí, debe respetarse en cualquier tipo de vía."
       ],
+      "correcta": 2,
       "imagen": "../img/test_001_p20.jpg"
     },
     {
-      "texto": "Que distancia de separacion respecto al vehiculo que le precede debera mantener un vehiculo de mas de 3.500 kg.de MMA, ¿circulando por una autovia?",
+      "texto": "¿Qué distancia de separación respecto al vehículo que le precede deberá mantener un vehículo de más de 3.500 kg de MMA circulando por una autovía?",
       "opciones": [
-        "50metros comominimo.",
-        "50metros si nopretendeadelantar.",
-        "La que le permita detenerse sin colisionar con el."
-      ]
+        "50 metros como mínimo.",
+        "50 metros si no pretende adelantar.",
+        "La que le permita detenerse sin colisionar con él."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Un repartidor que trabaja en bicicleta por una via urbana, ¿idebe utilizar casco?",
+      "texto": "Un repartidor que trabaja en bicicleta por una vía urbana, ¿debe utilizar casco?",
       "opciones": [
-        "No, porque en ciudad el casco solo es obligatorio para menores de 16 anos.",
-        "Si, durante su jornada de trabajo.",
-        "Solo si circula por unavia interurbana."
+        "No, porque en ciudad el casco solo es obligatorio para menores de 16 años.",
+        "Sí, durante su jornada de trabajo.",
+        "Solo si circula por una vía interurbana."
       ],
+      "correcta": 1,
       "imagen": "../img/test_001_p22.jpg"
     },
     {
-      "texto": "¿Cual debe ser su comportamiento al ceder el paso?",
+      "texto": "¿Cuál debe ser su comportamiento al ceder el paso?",
       "opciones": [
-        "Detenerse en las intersecciones si se acerca otro vehiculo.",
-        "Parar y comprobar si otro usuario de la via tiene prioridad.",
-        "No obligar al vehiculo que tiene prioridad a modificar bruscamente su trayectoria o velocidad."
-      ]
+        "Detenerse en las intersecciones si se acerca otro vehículo.",
+        "Parar y comprobar si otro usuario de la vía tiene prioridad.",
+        "No obligar al vehículo que tiene prioridad a modificar bruscamente su trayectoria o velocidad."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En esta via de poblado, ¿ia que velocidad como maximo podremos circular en ausencia de senalizacionespecifica?",
+      "texto": "En esta vía de poblado, ¿a qué velocidad como máximo podremos circular en ausencia de señalización específica?",
       "opciones": [
-        "A30 km/h.",
+        "A 30 km/h.",
         "A 20 km/h.",
         "A 50 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_001_p24.jpg"
     },
     {
-      "texto": "La fatiga, ¿zprovoca lentitud y falta de precision en los movimientos?",
+      "texto": "La fatiga, ¿provoca lentitud y falta de precisión en los movimientos?",
       "opciones": [
-        "No,la fatiga solo produce calambres.",
+        "No, la fatiga solo produce calambres.",
         "No.",
-        "Si,por locual la conduccion sehacemaspeligrosa."
-      ]
+        "Sí, por lo cual la conducción se hace más peligrosa."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Si los paneles de mensaje variable indican que los turismos con distintivo ambiental B pueden circular por un carril VAo, ¿Que ocupacion minima debe tener el vehiculo?",
+      "texto": "Si los paneles de mensaje variable indican que los turismos con distintivo ambiental B pueden circular por un carril VAO, ¿qué ocupación mínima debe tener el vehículo?",
       "opciones": [
         "Dos ocupantes, incluido el conductor.",
         "Un ocupante.",
         "Dos ocupantes, sin incluir al conductor."
       ],
+      "correcta": 0,
       "imagen": "../img/test_001_p26.jpg"
     },
     {
-      "texto": "Los accidentes de trafico generan...",
+      "texto": "Los accidentes de tráfico generan...",
       "opciones": [
-        "un enorme impacto economico, solamente.",
-        "danos materiales y costes sanitarios, administrativos y humanos.",
-        "danosmateriales y costes humanos, unicamente."
+        "un enorme impacto económico, solamente.",
+        "daños materiales y costes sanitarios, administrativos y humanos.",
+        "daños materiales y costes humanos, únicamente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_001_p27.jpg"
     },
     {
-      "texto": "El efecto submarino, que en un accidente de trafico puede provocar graves lesiones al conductor, esta relacionado con...",
+      "texto": "El efecto submarino, que en un accidente de tráfico puede provocar graves lesiones al conductor, está relacionado con...",
       "opciones": [
-        "Una incorrectapresiondelosneumaticos.",
-        "Un mal uso del cinturon de seguridad.",
-        "Un consumo excesivo dealcohol,medicamentos odrogas deabuso."
+        "Una incorrecta presión de los neumáticos.",
+        "Un mal uso del cinturón de seguridad.",
+        "Un consumo excesivo de alcohol, medicamentos o drogas de abuso."
       ],
+      "correcta": 1,
       "imagen": "../img/test_001_p28.jpg"
     },
     {
-      "texto": "Si queda detenido en un atasco, ¿zque distancia es aconsejable mantener con el vehiculo de delante?",
+      "texto": "Si queda detenido en un atasco, ¿qué distancia es aconsejable mantener con el vehículo de delante?",
       "opciones": [
-        "Un metro como maximo.",
-        "Unespaciominimopara ocuparmenos espacio.",
-        "Dos o tres metros para no golpear al vehiculo de delante en caso de alcance trasero."
+        "Un metro como máximo.",
+        "Un espacio mínimo para ocupar menos espacio.",
+        "Dos o tres metros para no golpear al vehículo de delante en caso de alcance trasero."
       ],
+      "correcta": 2,
       "imagen": "../img/test_001_p29.jpg"
     },
     {
-      "texto": "Fuera de poblado, ¿ique separacion lateral debe dejar una motocicleta al adelantar un camion?",
+      "texto": "Fuera de poblado, ¿qué separación lateral debe dejar una motocicleta al adelantar un camión?",
       "opciones": [
         "Una distancia proporcional a la velocidad a la que circule.",
         "Un espacio no inferior a 1,50 metros.",
-        "Una separacion que considere segura en funcion de las circunstancias del momento."
+        "Una separación que considere segura en función de las circunstancias del momento."
       ],
+      "correcta": 1,
       "imagen": "../img/test_001_p30.jpg"
     }
   ]

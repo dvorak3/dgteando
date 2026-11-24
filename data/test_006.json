@@ -1,257 +1,286 @@
 {
   "test_id": 6,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Al salir de un garaje, ¿ique debe hacer?",
+      "texto": "Al salir de un garaje, ¿qué debe hacer?",
       "opciones": [
         "Moderar la velocidad por si hay peatones cruzando porque tienen prioridad.",
         "Aumentar la velocidad para salir lo antes posible.",
-        "Detenerse siemprea la salida."
-      ]
+        "Detenerse siempre a la salida."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿La mayoria de los vehiculos disponen de un filtro en el habitaculo o filtro antipolen.zDebe sustituirse?",
+      "texto": "La mayoría de los vehículos disponen de un filtro en el habitáculo o filtro antipolen. ¿Debe sustituirse?",
       "opciones": [
-        "No,ya que es unfiltro que se limpia automaticamente.",
-        "Si,cada seismeses porque esun elemento sujeto a inspeccion tecnica periodica.",
-        "Si, sobre todo al inicio de la primavera, ya que su capacidad de retencion es limitada."
+        "No, ya que es un filtro que se limpia automáticamente.",
+        "Sí, cada seis meses porque es un elemento sujeto a inspección técnica periódica.",
+        "Sí, sobre todo al inicio de la primavera, ya que su capacidad de retención es limitada."
       ],
+      "correcta": 2,
       "imagen": "../img/test_006_p02.jpg"
     },
     {
-      "texto": "Los ciclistas, ¿ipueden quitarse el casco en vias interurbanas?",
+      "texto": "Los ciclistas, ¿pueden quitarse el casco en vías interurbanas?",
       "opciones": [
-        "No,estan obligados autilizarlo adecuadamenteabrochado.",
-        "Si,cuando circulen porrampas ascendentes prolongadas.",
-        "Si, cuando las condiciones meteorologicas sean muy calurosas."
-      ]
-    },
-    {
-      "texto": "Un conductor que bebe con frecuencia, ¿zes probable que con el tiempo acabe sufriendo un accidente?",
-      "opciones": [
-        "No,si tieneexperiencia en la conduccion.",
-        "Si.",
-        "Unicamentesibebemucho."
-      ]
-    },
-    {
-      "texto": "Dos vehiculos del mismo tipo se encuentran en un estrechamiento y no se sabe cual tiene preferencia, ¿icual de ellos tiene prioridad?",
-      "opciones": [
-        "El vehiculo que tenga que dar marcha atras mayor distancia.",
-        "El vehiculo quetenga que dar marcha atras una menordistancia.",
-        "El vehiculo que tenga mayor anchura o longitud."
+        "No, están obligados a utilizarlo adecuadamente abrochado.",
+        "Sí, cuando circulen por rampas ascendentes prolongadas.",
+        "Sí, cuando las condiciones meteorológicas sean muy calurosas."
       ],
+      "correcta": 1
+    },
+    {
+      "texto": "Un conductor que bebe con frecuencia, ¿es probable que con el tiempo acabe sufriendo un accidente?",
+      "opciones": [
+        "No, si tiene experiencia en la conducción.",
+        "Sí.",
+        "Únicamente si bebe mucho."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Dos vehículos del mismo tipo se encuentran en un estrechamiento y no se sabe cuál tiene preferencia, ¿cuál de ellos tiene prioridad?",
+      "opciones": [
+        "El vehículo que tenga que dar marcha atrás mayor distancia.",
+        "El vehículo que tenga que dar marcha atrás una menor distancia.",
+        "El vehículo que tenga mayor anchura o longitud."
+      ],
+      "correcta": 0,
       "imagen": "../img/test_006_p05.jpg"
     },
     {
-      "texto": "Entre los siguientes, ¿ique conjunto de sistemas ADAS esta permitido utilizar durante las pruebas de control de aptitudes y comportamiento para obtener el permiso de conduccion?",
+      "texto": "Entre los siguientes, ¿qué conjunto de sistemas ADAS está permitido utilizar durante las pruebas de control de aptitudes y comportamiento para obtener el permiso de conducción?",
       "opciones": [
-        "El asistente demantenimiento de carril (LKA)y el asistente de estacionamiento automatico.",
-        "El asistente inteligente de velocidad (IsA), con la funcion de control automatico de velocidad (ScF)activada.",
+        "El asistente de mantenimiento de carril (LKA) y el asistente de estacionamiento automático.",
+        "El asistente inteligente de velocidad (ISA), con la función de control automático de velocidad (SCF) activada.",
         "El aviso de frenada de emergencia (EBD) y el sistema de ayuda de salida en pendiente (Hill Holder)."
       ],
+      "correcta": 2,
       "imagen": "../img/test_006_p06.jpg"
     },
     {
       "texto": "A medida que aumenta la velocidad...",
       "opciones": [
-        "disminuye el campo visual y se retrasa la aparicion de la fatiga.",
-        "disminuye el campo visual y se acelera la aparicion de la fatiga.",
-        "aumenta el campo visual y se acelera la aparicion de la fatiga."
-      ]
+        "disminuye el campo visual y se retrasa la aparición de la fatiga.",
+        "disminuye el campo visual y se acelera la aparición de la fatiga.",
+        "aumenta el campo visual y se acelera la aparición de la fatiga."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En esta zona destinada a carga y descarga, ¿iesta permitido parar y estacionar?",
+      "texto": "En esta zona destinada a carga y descarga, ¿está permitido parar y estacionar?",
       "opciones": [
-        "Unicamente pueden parar y estacionar los camiones.",
-        "No,ni parar ni estacionar.",
-        "Unicamenteestapermitidoparar."
+        "Únicamente pueden parar y estacionar los camiones.",
+        "No, ni parar ni estacionar.",
+        "Únicamente está permitido parar."
       ],
+      "correcta": 2,
       "imagen": "../img/test_006_p08.jpg"
     },
     {
-      "texto": "¿Qué significa esta senal?",
+      "texto": "¿Qué significa esta señal?",
       "opciones": [
-        "Calzada obligatoria para automoviles, excepto motocicletas sin sidecar.",
-        "Via reservadaparaautomoviles.",
-        "Calzada obligatoria paraautomoviles. Oa)Si, en cualquiercaso. Ob)Solo si lamasa maxima autorizada del conjuntono supera los 3.50okilogramos. O c) No, en ningun caso."
+        "Calzada obligatoria para automóviles, excepto motocicletas sin sidecar.",
+        "Vía reservada para automóviles.",
+        "Calzada obligatoria para automóviles."
       ],
+      "correcta": 0,
       "imagen": "../img/test_006_p09.jpg"
     },
     {
-      "texto": "¿Puede el conductor reducir la probabilidad de accidente debida al \"factor vehiculo\"?",
+      "texto": "¿Puede el conductor reducir la probabilidad de accidente debida al «factor vehículo»?",
       "opciones": [
-        "No,losfallosmecanicossonimpredecibles.",
-        "Si,mediante un mantenimiento adecuado del vehiculo.",
-        "No, si el vehiculo no lleva los modernos sistemas de seguridad."
-      ]
+        "No, los fallos mecánicos son impredecibles.",
+        "Sí, mediante un mantenimiento adecuado del vehículo.",
+        "No, si el vehículo no lleva los modernos sistemas de seguridad."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Podemos emplear la luz de presenalizacion de peligro V-16 para advertir la presencia de un turismo averiado en la calzada?",
+      "texto": "¿Podemos emplear la luz de preseñalización de peligro V-16 para advertir la presencia de un turismo averiado en la calzada?",
       "opciones": [
         "No.",
-        "Si.",
+        "Sí.",
         "Solo si la visibilidad es insuficiente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_006_p12.jpg"
     },
     {
-      "texto": "¿Cuando esta permitido utilizar las senales acuisticas?",
+      "texto": "¿Cuándo está permitido utilizar las señales acústicas?",
       "opciones": [
-        "Cuandocirculopor vias urbanas solamente.",
-        "Cuando circulo por cualquier via.",
+        "Cuando circulo por vías urbanas solamente.",
+        "Cuando circulo por cualquier vía.",
         "Cuando quiero adelantar fuera de poblado."
       ],
+      "correcta": 2,
       "imagen": "../img/test_006_p13.jpg"
     },
     {
-      "texto": "Las marcas blancas y rojas de la calzada, ¿ique indican?",
+      "texto": "Las marcas blancas y rojas de la calzada, ¿qué indican?",
       "opciones": [
-        "Unazona reservada para la salida de competiciones decoches. a) Una zona reservada para la salida de competiciones de coches.",
+        "Una zona reservada para la salida de competiciones de coches.",
         "Una zona reservada para el estacionamiento de camiones.",
-        "Una zona reservada para frenadode emergencia, donde no se puede parar ni estacionar."
+        "Una zona reservada para frenado de emergencia, donde no se puede parar ni estacionar."
       ],
+      "correcta": 2,
       "imagen": "../img/test_006_p14.jpg"
     },
     {
-      "texto": "Circula por el carril izquierdo y se enciende el aspa roja. ¿Que debe hacer?",
+      "texto": "Circula por el carril izquierdo y se enciende el aspa roja. ¿Qué debe hacer?",
       "opciones": [
-        "Cambiarde carril rapidamente.",
-        "Detenerme en el proximo cruce. b) Detenerme en el proximo cruce.",
-        "Detenermedebajo del aspa roja."
+        "Cambiar de carril rápidamente.",
+        "Detenerme en el próximo cruce.",
+        "Detenerme debajo del aspa roja."
       ],
+      "correcta": 0,
       "imagen": "../img/test_006_p15.jpg"
     },
     {
-      "texto": "En un paso a nivel, ¿ique debe hacer si la barrera esta subiendo?",
+      "texto": "En un paso a nivel, ¿qué debe hacer si la barrera está subiendo?",
       "opciones": [
-        "Pasar cuando lo hagan el resto de vehiculos, se mueva o no la barrera.",
-        "Pasar cuando,por la altura, la barrera lo permita.",
-        "Detenerse detras de los demas vehiculos,hasta que la barrera suba totalmente y permita el paso."
+        "Pasar cuando lo hagan el resto de vehículos, se mueva o no la barrera.",
+        "Pasar cuando, por la altura, la barrera lo permita.",
+        "Detenerse detrás de los demás vehículos, hasta que la barrera suba totalmente y permita el paso."
       ],
+      "correcta": 2,
       "imagen": "../img/test_006_p16.jpg"
     },
     {
-      "texto": "Siempre que sea posible, ¿icomo debe inmovilizarun vehiculo que se ha visto implicado en un accidente?",
+      "texto": "Siempre que sea posible, ¿cómo debe inmovilizar un vehículo que se ha visto implicado en un accidente?",
       "opciones": [
         "Con unos calzos o con cualquier elemento que sirva como tal.",
         "Cortando el contacto y echando el freno de mano.",
-        "Desconectando losbornesde la bateria."
+        "Desconectando los bornes de la batería."
       ],
+      "correcta": 1,
       "imagen": "../img/test_006_p17.jpg"
     },
     {
-      "texto": "Ademas de la senalizacion luminosa correspondiente, la marcha hacia atras esta permitido senalizarla con el brazo...",
+      "texto": "Además de la señalización luminosa correspondiente, la marcha hacia atrás está permitido señalizarla con el brazo...",
       "opciones": [
-        "moviendolo de arriba abajo.",
-        "extendidohorizontalmente conlapalma dela manohaciaatras.",
+        "moviéndolo de arriba abajo.",
+        "extendido horizontalmente con la palma de la mano hacia atrás.",
         "doblado hacia arriba, con la mano extendida."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Los vehiculos especiales que circulan por una via de uso publico deben utilizar la luz rotativa amarillo auto cuando circulen a una velocidad...",
+      "texto": "Los vehículos especiales que circulan por una vía de uso público deben utilizar la luz rotativa amarillo auto cuando circulen a una velocidad...",
       "opciones": [
         "no superior a 40 km/h.",
         "no superior a 40 km/h, solamente de noche.",
         "superior a 40 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_006_p19.jpg"
     },
     {
-      "texto": "En un turismo, ¿donde debe colocar la placa \"L\" un conductor novel?",
+      "texto": "En un turismo, ¿dónde debe colocar la placa «L» un conductor novel?",
       "opciones": [
-        "Enun lugarvisibleen la parteposteriorderecha.",
+        "En un lugar visible en la parte posterior derecha.",
         "En un lugar visible en la parte posterior izquierda.",
         "En cualquier lugar visible de la parte posterior."
       ],
+      "correcta": 1,
       "imagen": "../img/test_006_p20.jpg"
     },
     {
-      "texto": "¿Existe relacion entre consumo de drogas de abuso o ilegales y accidentes de trafico?",
+      "texto": "¿Existe relación entre consumo de drogas de abuso o ilegales y accidentes de tráfico?",
       "opciones": [
-        "Si; as drogas alteran gravemente las capacidades necesarias para conducir.",
+        "Sí; las drogas alteran gravemente las capacidades necesarias para conducir.",
         "Solo cuando el conductor mezcla el consumo de drogas con el de alcohol.",
-        "No; la conduccion es mas segura cuando se consumen drogas de abuso."
+        "No; la conducción es más segura cuando se consumen drogas de abuso."
       ],
+      "correcta": 0,
       "imagen": "../img/test_006_p21.jpg"
     },
     {
-      "texto": "En caso de atropello a peatones, ¿ien que tipo de vias se producen los accidentes mas graves?",
+      "texto": "En caso de atropello a peatones, ¿en qué tipo de vías se producen los accidentes más graves?",
       "opciones": [
         "En poblado.",
-        "Entravesias.",
-        "Encarreterasconvencionales."
+        "En travesías.",
+        "En carreteras convencionales."
       ],
+      "correcta": 2,
       "imagen": "../img/test_006_p22.jpg"
     },
     {
-      "texto": "En un paso estrecho y llano, no hay senales de preferencia y no caben dos vehiculos al mismo tiempo, ¿zquien pasara primero?",
+      "texto": "En un paso estrecho y llano, no hay señales de preferencia y no caben dos vehículos al mismo tiempo, ¿quién pasará primero?",
       "opciones": [
-        "El vehiculo que ha entrado el primero.",
-        "Siempre el vehiculo con mas masa maxima autorizada (M.M.A.).",
-        "Siempre el vehiculo conmas dificultades demaniobra."
-      ]
+        "El vehículo que ha entrado el primero.",
+        "Siempre el vehículo con más masa máxima autorizada (M.M.A.).",
+        "Siempre el vehículo con más dificultades de maniobra."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Con caracter general, ¿iesta permitido estacionar una motocicleta en la acera?",
+      "texto": "Con carácter general, ¿está permitido estacionar una motocicleta en la acera?",
       "opciones": [
-        "No,porqueesta prohibido estacionar en la acera.",
-        "Si,losdiaslaborables.",
-        "Si, solo los dias festivos."
+        "No, porque está prohibido estacionar en la acera.",
+        "Sí, los días laborables.",
+        "Sí, solo los días festivos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_006_p24.jpg"
     },
     {
-      "texto": "En un tramo de via en el que esta prohibido adelantar, circula delante de usted un vehiculo especial agricola a velocidad reducida. ¿Puede adelantarlo si no existe riesgo para la circulacion?",
+      "texto": "En un tramo de vía en el que está prohibido adelantar, circula delante de usted un vehículo especial agrícola a velocidad reducida. ¿Puede adelantarlo si no existe riesgo para la circulación?",
       "opciones": [
-        "No,porquela prohibicion de adelantartambien se aplica a estos vehiculos.",
-        "Si, unicamente cuando el vehiculo agricola este inmovilizado por una averia.",
-        "Si, siempre que pueda realizar la maniobra sin riesgo para el vehiculo adelantado ni para la circulacion en general."
+        "No, porque la prohibición de adelantar también se aplica a estos vehículos.",
+        "Sí, únicamente cuando el vehículo agrícola esté inmovilizado por una avería.",
+        "Sí, siempre que pueda realizar la maniobra sin riesgo para el vehículo adelantado ni para la circulación en general."
       ],
+      "correcta": 2,
       "imagen": "../img/test_006_p25.jpg"
     },
     {
       "texto": "Cuando se padece una alergia respiratoria es conveniente...",
       "opciones": [
-        "viajaral amanecer.",
-        "seguir el tratamiento y consejo de su medico.",
-        "conducircon lasventanillas abiertas."
-      ]
-    },
-    {
-      "texto": "Un conductor necesita hacer una llamada urgente por el movil, ¿ique debe hacer?",
-      "opciones": [
-        "Buscar un lugar seguro donde detener el vehiculo para hacer la llamada.",
-        "Disminuir la velocidad para poder hablar sin peligro.",
-        "Detener el vehiculo en cualquier lugar para hacerla llamada."
-      ]
-    },
-    {
-      "texto": "Un agente se dirige hacia su vehiculo balanceando una luz roja. ¿Que debe hacer?",
-      "opciones": [
-        "Detener el vehiculo.",
-        "Circular con precaucionporque haypeligro.",
-        "Cambiar de direccion."
+        "viajar al amanecer.",
+        "seguir el tratamiento y consejo de su médico.",
+        "conducir con las ventanillas abiertas."
       ],
+      "correcta": 1
+    },
+    {
+      "texto": "Un conductor necesita hacer una llamada urgente por el móvil, ¿qué debe hacer?",
+      "opciones": [
+        "Buscar un lugar seguro donde detener el vehículo para hacer la llamada.",
+        "Disminuir la velocidad para poder hablar sin peligro.",
+        "Detener el vehículo en cualquier lugar para hacer la llamada."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "Un agente se dirige hacia su vehículo balanceando una luz roja. ¿Qué debe hacer?",
+      "opciones": [
+        "Detener el vehículo.",
+        "Circular con precaución porque hay peligro.",
+        "Cambiar de dirección."
+      ],
+      "correcta": 0,
       "imagen": "../img/test_006_p28.jpg"
     },
     {
-      "texto": "¿Cuando debe desactivar el airbag frontal de un asiento?",
+      "texto": "¿Cuándo debe desactivar el airbag frontal de un asiento?",
       "opciones": [
-        "En ningun caso.",
+        "En ningún caso.",
         "Cuando en ese asiento viaje una mujer embarazada.",
-        "Cuando en ese asiento instale un dispositivo de retencion para ninos orientado hacia atras."
+        "Cuando en ese asiento instale un dispositivo de retención para niños orientado hacia atrás."
       ],
+      "correcta": 2,
       "imagen": "../img/test_006_p29.jpg"
     },
     {
-      "texto": "En un tramo recto, de noche, sin condiciones atmosfericas adversas, ¿ies correcto el alumbrado que lleva encendido este vehiculo?",
+      "texto": "En un tramo recto, de noche, sin condiciones atmosféricas adversas, ¿es correcto el alumbrado que lleva encendido este vehículo?",
       "opciones": [
         "No.",
-        "Si.",
-        "Unicamente cuando circule poruna calzada estrecha."
+        "Sí.",
+        "Únicamente cuando circule por una calzada estrecha."
       ],
+      "correcta": 0,
       "imagen": "../img/test_006_p30.jpg"
     }
   ]
