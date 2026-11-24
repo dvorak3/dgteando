@@ -3,259 +3,289 @@
   "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "A partir de esta senal esta obligado a llevar encendido, al menos, el alumbrado de...",
+      "texto": "A partir de esta señal está obligado a llevar encendido, al menos, el alumbrado de...",
       "opciones": [
         "largo alcance.",
         "corto alcance.",
-        "posicion."
+        "posición."
       ],
+      "correcta": 1,
       "imagen": "../img/test_070_p01.jpg"
     },
     {
-      "texto": "Esta prohibido conducir un camion de menos de 3.5oo kg de MMA con una tasa de alcohol en aire espirado superior",
+      "texto": "Está prohibido conducir un camión de menos de 3.500 kg de MMA con una tasa de alcohol en aire espirado superior a...",
       "opciones": [
-        ".. O a) 0,25 miligramos por litro.",
+        "0,25 miligramos por litro.",
         "0,15 miligramos por litro.",
         "0,30 miligramos por litro."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Un ciclomotor y un turismo llegan al mismo tiempo a un estrechamiento sin senalizar la prioridad, ¿iquien tiene prioridad?",
+      "texto": "Un ciclomotor y un turismo llegan al mismo tiempo a un estrechamiento sin señalizar la prioridad, ¿quién tiene prioridad?",
       "opciones": [
         "El turismo.",
         "El ciclomotor.",
         "El que pueda circular con menos seguridad."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El panel obligatorio para indicar la carga que sobresale por la parte posterior, ¿ipodra sustituirse en algun caso?",
+      "texto": "El panel obligatorio para indicar la carga que sobresale por la parte posterior, ¿podrá sustituirse en algún caso?",
       "opciones": [
-        "Si, si no se dispone del panel se podra poner un trapo de color rojo vivo.",
-        "Si, se podra sustituir por una luz blanca delante y una luz roja detras.",
+        "Sí, si no se dispone del panel se podrá poner un trapo de color rojo vivo.",
+        "Sí, se podrá sustituir por una luz blanca delante y una luz roja detrás.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_070_p04.jpg"
     },
     {
-      "texto": "Las cargas que sobresalen por detras del vehiculo, ¿ise senalizaran con este panel?",
+      "texto": "Las cargas que sobresalen por detrás del vehículo, ¿se señalizarán con este panel?",
       "opciones": [
-        "Si, y ademas con una luz de color rojo tanto de dia como de noche.",
-        "Si, y ademas con un trapo de color rojo vivo.",
-        "Si,y ademas si es de noche con una luz de color rojo."
+        "Sí, y además con una luz de color rojo tanto de día como de noche.",
+        "Sí, y además con un trapo de color rojo vivo.",
+        "Sí, y además si es de noche con una luz de color rojo."
       ],
+      "correcta": 2,
       "imagen": "../img/test_070_p05.jpg"
     },
     {
-      "texto": "¿Que es la velocidad inadecuada?",
+      "texto": "¿Qué es la velocidad inadecuada?",
       "opciones": [
-        "La velocidad que no se adapta a las condiciones del trafico, de la via o del conductor.",
-        "La velocidad permitida en la via.",
-        "La que no rebasa el limitemaximo develocidad para la via."
-      ]
+        "La velocidad que no se adapta a las condiciones del tráfico, de la vía o del conductor.",
+        "La velocidad permitida en la vía.",
+        "La que no rebasa el límite máximo de velocidad para la vía."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El nivel de alcohol en sangre sera mayor...",
+      "texto": "El nivel de alcohol en sangre será mayor...",
       "opciones": [
-        "Una hora despues de habertomado la uiltima copa.",
-        "Cuatro horas despues dehaber tomado la ultima copa.",
-        "Inmediatamente despues de haber tomado la ultima copa."
+        "Una hora después de haber tomado la última copa.",
+        "Cuatro horas después de haber tomado la última copa.",
+        "Inmediatamente después de haber tomado la última copa."
       ],
+      "correcta": 0,
       "imagen": "../img/test_070_p07.jpg"
     },
     {
-      "texto": "Para estacionar, ¿iesta permitido circular marcha atras atravesando una interseccion?",
+      "texto": "Para estacionar, ¿está permitido circular marcha atrás atravesando una intersección?",
       "opciones": [
         "Sí.",
         "No."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Podra circular desde el ocaso a la salida del sol, ¿solo con el alumbrado de posicion encendido?",
+      "texto": "¿Podrá circular desde el ocaso a la salida del sol solo con el alumbrado de posición encendido?",
       "opciones": [
-        "Si, en via dentro de poblado suficientemente iluminado.",
+        "Sí, en vía dentro de poblado suficientemente iluminado.",
         "No.",
-        "Si, en travesia suficientemente iluminada."
+        "Sí, en travesía suficientemente iluminada."
       ],
+      "correcta": 1,
       "imagen": "../img/test_070_p09.jpg"
     },
     {
-      "texto": "En caso de congestion del trafico en una autopista, ¿ise podra circular por el arcen?",
+      "texto": "En caso de congestión del tráfico en una autopista, ¿se podrá circular por el arcén?",
       "opciones": [
         "Sí.",
-        "Si, abandonandola por la primera salida.",
+        "Sí, abandonándola por la primera salida.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_070_p10.jpg"
     },
     {
-      "texto": "El permiso de conduccion de la clase A1, ¿zautoriza a conducir motocicletas con sidecar?",
+      "texto": "El permiso de conducción de la clase A1, ¿autoriza a conducir motocicletas con sidecar?",
       "opciones": [
-        "Si, si tiene una antigiuedad de 2 anos.",
+        "Sí, si tiene una antigüedad de 2 años.",
         "No.",
-        "Si."
+        "Sí."
       ],
+      "correcta": 2,
       "imagen": "../img/test_070_p11.jpg"
     },
     {
-      "texto": "Entre las conductas de riesgo mas comunes que cometen los peatones esta...",
+      "texto": "Entre las conductas de riesgo más comunes que cometen los peatones está...",
       "opciones": [
-        "respetarlossemaforosperonolospasosparapeatones.",
+        "respetar los semáforos pero no los pasos para peatones.",
         "no situarse en las calzadas o en los arcenes correctamente.",
-        "cruzar la via demanera reglamentaria."
+        "cruzar la vía de manera reglamentaria."
       ],
+      "correcta": 1,
       "imagen": "../img/test_070_p12.jpg"
     },
     {
-      "texto": "Las motocicletas estan obligadas a llevar encendida la luz de cruce...",
+      "texto": "Las motocicletas están obligadas a llevar encendida la luz de cruce...",
       "opciones": [
         "solo entre la puesta y la salida del sol.",
-        "durante todo el dia por cualquier via.",
-        "durante el dia por vias interurbanas y solo entre la puesta y la salida del sol por vias urbanas."
-      ]
+        "durante todo el día por cualquier vía.",
+        "durante el día por vías interurbanas y solo entre la puesta y la salida del sol por vías urbanas."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Si no hay niebla espesa, ¿zen que otra circunstancia puede emplear la luz antiniebla delantera?",
+      "texto": "Si no hay niebla espesa, ¿en qué otra circunstancia puede emplear la luz antiniebla delantera?",
       "opciones": [
-        "En tramosde via estrechos, con una sucesion de curvas peligrosas senalizada.",
+        "En tramos de vía estrechos, con una sucesión de curvas peligrosas señalizada.",
         "En cualquier circunstancia en que disminuya la visibilidad.",
-        "Solopuede encender la luz antiniebla delantera con niebla espesa."
+        "Solo puede encender la luz antiniebla delantera con niebla espesa."
       ],
+      "correcta": 0,
       "imagen": "../img/test_070_p14.jpg"
     },
     {
-      "texto": "En una bajada, ¿zque hay que hacer para que no se calienten los frenos?",
+      "texto": "En una bajada, ¿qué hay que hacer para que no se calienten los frenos?",
       "opciones": [
-        "Poner una velocidad mas larga.",
-        "Poner una velocidadmas corta.",
+        "Poner una velocidad más larga.",
+        "Poner una velocidad más corta.",
         "Poner el freno de mano."
       ],
+      "correcta": 1,
       "imagen": "../img/test_070_p15.jpg"
     },
     {
-      "texto": "En una calle sin salida en la que no puede realizarse un cambio de sentido, ¿icomo saldremos de ella?",
+      "texto": "En una calle sin salida en la que no puede realizarse un cambio de sentido, ¿cómo saldremos de ella?",
       "opciones": [
-        "Recorriendo el minimo indispensable para poder salir.",
-        "No recorriendo mas de 15 metros y sin invadir un cruce de vias.",
-        "Recorriendo el minimo indispensable y sin invadir un cruce de vias."
+        "Recorriendo el mínimo indispensable para poder salir.",
+        "No recorriendo más de 15 metros y sin invadir un cruce de vías.",
+        "Recorriendo el mínimo indispensable y sin invadir un cruce de vías."
       ],
+      "correcta": 0,
       "imagen": "../img/test_070_p16.jpg"
     },
     {
-      "texto": "¿Que debe hacer un conductor que esta tomando medicamentos?",
+      "texto": "¿Qué debe hacer un conductor que está tomando medicamentos?",
       "opciones": [
         "Conducir con total normalidad.",
         "Renunciar a conducir en cualquier caso.",
-        "Consultar a su medico sobre los posibles efectos negativos para la conduccion."
-      ]
-    },
-    {
-      "texto": "¿Que elementos del vehiculo requieren una mayor supervision por parte del conductor?",
-      "opciones": [
-        "La amortiguacion.",
-        "Los neumaticos.",
-        "Los frenos."
-      ]
-    },
-    {
-      "texto": "Todas las enfermedades, ¿ison igual de peligrosas para la conduccion?",
-      "opciones": [
-        "No,las enfermedades cronicasno sonpeligrosas.",
-        "Si, todas las enfermedades son igual de peligrosas.",
-        "No,algunos trastornosneurologicos yenfermedades mentales son mas peligrosas."
-      ]
-    },
-    {
-      "texto": "Circula por una via interurbana y observa que nieva de forma ligera, ¿zpuede emplear el alumbrado antiniebla?",
-      "opciones": [
-        "Si, debe usar obligatoriamente las luces antiniebla traseras.",
-        "Si, pero solo las luces antiniebla delanteras, ya que las traseras estan prohibidas en este caso.",
-        "No, esta prohibido usar las luces antiniebla cuando la nevada es ligera."
+        "Consultar a su médico sobre los posibles efectos negativos para la conducción."
       ],
+      "correcta": 2
+    },
+    {
+      "texto": "¿Qué elementos del vehículo requieren una mayor supervisión por parte del conductor?",
+      "opciones": [
+        "La amortiguación.",
+        "Los neumáticos.",
+        "Los frenos."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Todas las enfermedades, ¿son igual de peligrosas para la conducción?",
+      "opciones": [
+        "No, las enfermedades crónicas no son peligrosas.",
+        "Sí, todas las enfermedades son igual de peligrosas.",
+        "No, algunos trastornos neurológicos y enfermedades mentales son más peligrosas."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "Circula por una vía interurbana y observa que nieva de forma ligera, ¿puede emplear el alumbrado antiniebla?",
+      "opciones": [
+        "Sí, debe usar obligatoriamente las luces antiniebla traseras.",
+        "Sí, pero solo las luces antiniebla delanteras, ya que las traseras están prohibidas en este caso.",
+        "No, está prohibido usar las luces antiniebla cuando la nevada es ligera."
+      ],
+      "correcta": 1,
       "imagen": "../img/test_070_p20.jpg"
     },
     {
-      "texto": "¿Quien se considera titular de un vehiculo?",
+      "texto": "¿Quién se considera titular de un vehículo?",
       "opciones": [
-        "Aquella persona que es la propietaria de dicho vehiculo.",
-        "Aquella persona a cuyo nombre figura inscrito el vehiculo en el registro correspondiente.",
+        "Aquella persona que es la propietaria de dicho vehículo.",
+        "Aquella persona a cuyo nombre figura inscrito el vehículo en el registro correspondiente.",
         "Aquella persona que tiene el seguro a su nombre."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Las condiciones psicofisicas del conductor, ¿zpueden influir en la capacidad de reaccion?",
+      "texto": "Las condiciones psicofísicas del conductor, ¿pueden influir en la capacidad de reacción?",
       "opciones": [
         "No.",
-        "Depende de la situacion.",
-        "Si."
-      ]
+        "Depende de la situación.",
+        "Sí."
+      ],
+      "correcta": 2
     },
     {
       "texto": "Si nos sentamos muy cerca del volante...",
       "opciones": [
-        "Sera la posicion mas comoda para conducir.",
-        "No tendremos movilidad y la conduccion sera mas cansada."
+        "Será la posición más cómoda para conducir.",
+        "No tendremos movilidad y la conducción será más cansada."
       ],
+      "correcta": 1,
       "imagen": "../img/test_070_p23.jpg"
     },
     {
-      "texto": "Hace 6 meses que tiene el permiso de conduccion. ¿A que velocidad maxima puede conducir por una autovia?",
+      "texto": "Hace 6 meses que tiene el permiso de conducción. ¿A qué velocidad máxima puede conducir por una autovía?",
       "opciones": [
         "A 120 km/h.",
         "A 80 km/h y a 100 km/h para adelantar.",
         "A 80 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_070_p24.jpg"
     },
     {
-      "texto": "A un herido en accidente, ¿zes conveniente darle algun alimento o bebida?",
+      "texto": "A un herido en accidente, ¿es conveniente darle algún alimento o bebida?",
       "opciones": [
-        "Si, es conveniente.",
+        "Sí, es conveniente.",
         "No, aunque lo pida.",
-        "Si,para mantener la temperatura del cuerpo."
-      ]
+        "Sí, para mantener la temperatura del cuerpo."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Donde esta permitido parar en una via interurbana?",
+      "texto": "¿Dónde está permitido parar en una vía interurbana?",
       "opciones": [
-        "En el lado derecho, fuera de la calzada y de la parte transitable del arcen.",
-        "En cualquier lado, siempre fuera de la calzada y de la parte transitable del arcen.",
-        "Si es por necesidades del trafico, en el arcen si es transitable."
+        "En el lado derecho, fuera de la calzada y de la parte transitable del arcén.",
+        "En cualquier lado, siempre fuera de la calzada y de la parte transitable del arcén.",
+        "Si es por necesidades del tráfico, en el arcén si es transitable."
       ],
+      "correcta": 0,
       "imagen": "../img/test_070_p26.jpg"
     },
     {
-      "texto": "¿Que mantenimiento debemos realizar en un freno de disco?",
+      "texto": "¿Qué mantenimiento debemos realizar en un freno de disco?",
       "opciones": [
-        "Anadir semanalmente liquido en la bomba de frenado.",
-        "Comprobarel desgaste delas pastillas defreno."
+        "Añadir semanalmente líquido en la bomba de frenado.",
+        "Comprobar el desgaste de las pastillas de freno."
       ],
+      "correcta": 1,
       "imagen": "../img/test_070_p27.jpg"
     },
     {
-      "texto": "La senal prohibe circular a mas de 40 km/h. ¿Hasta donde esta prohibido?",
+      "texto": "La señal prohíbe circular a más de 40 km/h. ¿Hasta dónde está prohibido?",
       "opciones": [
-        "Hasta que encuentre una senal de fin de prohibido adelantar.",
+        "Hasta que encuentre una señal de fin de prohibido adelantar.",
         "Hasta que finalice el tramo de curvas.",
-        "Hasta quefinalice la linea longitudinal continua."
+        "Hasta que finalice la línea longitudinal continua."
       ],
+      "correcta": 1,
       "imagen": "../img/test_070_p28.jpg"
     },
     {
-      "texto": "¿Cuando esta permitido utilizar las senales acusticas?",
+      "texto": "¿Cuándo está permitido utilizar las señales acústicas?",
       "opciones": [
-        "Cuando circulopor vias urbanas solamente.",
-        "Cuando circulo por cualquier via.",
+        "Cuando circulo por vías urbanas solamente.",
+        "Cuando circulo por cualquier vía.",
         "Cuando quiero adelantar fuera de poblado."
       ],
+      "correcta": 2,
       "imagen": "../img/test_070_p29.jpg"
     },
     {
-      "texto": "Con un vehiculo que emita niveles de ruido superiores a los permitidos...",
+      "texto": "Con un vehículo que emita niveles de ruido superiores a los permitidos...",
       "opciones": [
-        "unicamente esta permitido circularpor carretera.",
-        "estapermitido circularpor carreteras pero nopor travesias.",
-        "no esta permitido circular."
-      ]
+        "únicamente está permitido circular por carretera.",
+        "está permitido circular por carreteras pero no por travesías.",
+        "no está permitido circular."
+      ],
+      "correcta": 2
     }
   ]
 }
