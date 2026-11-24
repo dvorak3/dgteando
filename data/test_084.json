@@ -1,0 +1,267 @@
+{
+  "test_id": 84,
+  "preguntas": [
+    {
+      "texto": "¿Debe moverse a los heridos?",
+      "opciones": [
+        "No, salvo que sea imprescindible por su seguridad.",
+        "No, en ningun caso.",
+        "Si,cuando sus lesiones no songraves."
+      ]
+    },
+    {
+      "texto": "Los agentes de la Autoridad de Trafico, ¿icuando podran proceder a la inmovilizacion de una motocicleta?",
+      "opciones": [
+        "Cuandosu conductorno llevepuesto el casco.",
+        "Cuando el pasajero dela misma circule sin el casco.",
+        "En ningun caso."
+      ]
+    },
+    {
+      "texto": "¿Esta permitido adelantar en un tuinel?",
+      "opciones": [
+        "Si, excepto a los vehiculos de grandes dimensiones.",
+        "Si, cuando exista mas de un carril para cada sentido de circulacion.",
+        "No, independientemente del numero de carriles."
+      ],
+      "imagen": "../img/test_084_p03.jpg"
+    },
+    {
+      "texto": "Esta senal indica...",
+      "opciones": [
+        "el final de una autopista.",
+        "el principio de una autovia.",
+        "el principio de una autopista."
+      ],
+      "imagen": "../img/test_084_p04.jpg"
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Subida de fuerte pendiente.",
+        "Bajada de fuerte pendiente.",
+        "Pendiente deslizante."
+      ],
+      "imagen": "../img/test_084_p05.jpg"
+    },
+    {
+      "texto": "En un tramo de via que tiene viviendas con acceso inmediato a la calzada, ¿ise debe tomar alguna precaucion?",
+      "opciones": [
+        "No.",
+        "Si, moderar la velocidad.",
+        "Si, realizar senales acusticas para advertirde la presencia del vehiculo."
+      ],
+      "imagen": "../img/test_084_p06.jpg"
+    },
+    {
+      "texto": "Una enfermedad respiratoria sin el debido tratamiento, ¿ique puede causar en el conductor?",
+      "opciones": [
+        "Perdida de atencion y de concentracion.",
+        "Aumento de la concentracion.",
+        "Aumento de la atencion."
+      ]
+    },
+    {
+      "texto": "Si al llegar a una interseccion se acerca un grupo de ciclistas por su lado izquierdo, ¿iquien tendra prioridad de paso?",
+      "opciones": [
+        "Yo en aplicacion de la norma general.",
+        "El grupo de ciclistas.",
+        "El que llegue primero a la interseccion."
+      ],
+      "imagen": "../img/test_084_p08.jpg"
+    },
+    {
+      "texto": "Esta senal de peligro, ¿ique indica?",
+      "opciones": [
+        "Paso a nivel con barreras conmas de una via ferrea.",
+        "Paso a nivel sin barreras con mas de una via ferrea.",
+        "Paso a nivel con barreras de una via ferrea."
+      ],
+      "imagen": "../img/test_084_p09.jpg"
+    },
+    {
+      "texto": "La distancia de seguridad con el vehiculo que circula delante depende de...",
+      "opciones": [
+        "el tipo de vehiculo que circula delante.",
+        "la velocidad y las condiciones de adherencia y de frenado.",
+        "la densidad del trafico."
+      ],
+      "imagen": "../img/test_084_p10.jpg"
+    },
+    {
+      "texto": "Los efectos que provoca el LsD en el comportamiento del conductor...",
+      "opciones": [
+        "proporcionan un estado de relajacion.",
+        "pueden llegar a prolongarse de10 a 12 horas desde suconsumo.",
+        "sonmuybreves,peropueden reaparecerporsorpresa algun tiempodespues."
+      ]
+    },
+    {
+      "texto": "¿En cuanto tiempo se alcanzara el grado maximo de alcoholemia en sangre?",
+      "opciones": [
+        "Dos horas despues de habertomado la ultima copa.",
+        "Entre 30y 90 minutos despues de habertomado la ultima copa.",
+        "Media hora despues de haber tomadola ultima copa."
+      ],
+      "imagen": "../img/test_084_p12.jpg"
+    },
+    {
+      "texto": "En los vehiculos de anchura inferior a un metro, la carga no debe sobresalir por la parte posterior mas de...",
+      "opciones": [
+        "0,50 metros.",
+        "0,25metros.",
+        "0,40 metros."
+      ],
+      "imagen": "../img/test_084_p13.jpg"
+    },
+    {
+      "texto": "En esta interseccion, los conductores estan obligados a detenerse...",
+      "opciones": [
+        "ante la linea transversal, sin rebasarla.",
+        "junto a la senal de stop.",
+        "inmediatamente despues de la linea transversal."
+      ],
+      "imagen": "../img/test_084_p14.jpg"
+    },
+    {
+      "texto": "En esta via con tres calzadas separadas, ¿ipor que calzada debe circular?",
+      "opciones": [
+        "Solopor la calzadade la derecha.",
+        "Por la calzada de la derecha y por la central cuando haya senales que asi me lo permiten.",
+        "Soloporla calzada central."
+      ],
+      "imagen": "../img/test_084_p15.jpg"
+    },
+    {
+      "texto": "Si circulamos con el filtro del aire sucio...",
+      "opciones": [
+        "Elmotorproducira mas emisiones contaminantesal aire.",
+        "El motor consumira menos combustible y funcionara mejor.",
+        "La mezcla de aire/gasolina sera pobre."
+      ],
+      "imagen": "../img/test_084_p16.jpg"
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Estacionamiento prohibido hacia el lado derecho.",
+        "Estacionamiento prohibido hacia ambos lados de la senal.",
+        "Estacionamiento prohibido hacia el lado izquierdo."
+      ],
+      "imagen": "../img/test_084_p17.jpg"
+    },
+    {
+      "texto": "Si circulamos a velocidad anormalmente reducida por una autopista, ¿ique debemos hacer?",
+      "opciones": [
+        "Salir por la proxima salida.",
+        "Llegarhasta nuestro destino con precaucion.",
+        "Seguir circulando sin cambiarnos de carril."
+      ],
+      "imagen": "../img/test_084_p18.jpg"
+    },
+    {
+      "texto": "El triangulo blanco pintado en la calzada, ¿ique significa?",
+      "opciones": [
+        "Quelos conductores tienen preferencia de paso al cambiar de carril.",
+        "Que es obligatorio ceder el paso a los vehiculos que se aproximen por el carril derecho cuando cambie de carril.",
+        "Queel conductorestaobligadoa detenerel vehiculoentodocaso."
+      ],
+      "imagen": "../img/test_084_p19.jpg"
+    },
+    {
+      "texto": "A la vista del grafico, ¿zes obligatorio adelantar al tranvia por la derecha?",
+      "opciones": [
+        "Si,entodocaso.",
+        "No, se le puede adelantar por la derecha o por la izquierda.",
+        "No,se ledebe adelantarpor la izquierda."
+      ],
+      "imagen": "../img/test_084_p20.jpg"
+    },
+    {
+      "texto": "Si debido a un pinchazo usted se ve obligado a circular con una rueda de uso temporal, ¿ique debera tener en cuenta?",
+      "opciones": [
+        "Que no debe circular a mas de 80 kilometros por hora.",
+        "Que no se debe circular mas de 80 kilometros con ella.",
+        "Que no se debe circular amas de 50 kilometros por hora."
+      ],
+      "imagen": "../img/test_084_p21.jpg"
+    },
+    {
+      "texto": "Para girar a la izquierda, es obligatorio aproximarse al borde izquierdo de la calzada en las vias...",
+      "opciones": [
+        "de un solo sentido de circulacion.",
+        "con mas de un carril para uno de los sentidos de circulacion.",
+        "de doble sentido de circulacion."
+      ]
+    },
+    {
+      "texto": "Esta senalizacion recomienda circular a 70 kilometros por hora...",
+      "opciones": [
+        "en cualquier caso.",
+        "solo cuando esta lloviendo.",
+        "solo cuando las condiciones meteorologicas y ambientales sean favorables."
+      ],
+      "imagen": "../img/test_084_p23.jpg"
+    },
+    {
+      "texto": "En caso de accidente, el seguro obligatorio de un vehiculo, ¿icubre los danos producidos a la parte contraria?",
+      "opciones": [
+        "Si, siempre, pues asi se contempla en la poliza del seguro obligatorio.",
+        "Si, cuando su conductor resulta civilmente responsable del accidente.",
+        "Si, en todo caso, si los gastos no superan los limites establecidos enlapoliza."
+      ]
+    },
+    {
+      "texto": "Antes de cambiar de carril, ¿icomo debe avisar?",
+      "opciones": [
+        "Con los indicadores de direccion.",
+        "Con el claxon.",
+        "Con las luces de frenado."
+      ],
+      "imagen": "../img/test_084_p25.jpg"
+    },
+    {
+      "texto": "¿Que indica la senal?",
+      "opciones": [
+        "Que yo tengo preferencia sobre los que circulan en sentido contrario.",
+        "Que tienen preferencia los vehiculos que circulan en sentido contrario.",
+        "Aconsejacederelpaso"
+      ],
+      "imagen": "../img/test_084_p26.jpg"
+    },
+    {
+      "texto": "¿Qué debe hacer un conductor que tiene sueno?",
+      "opciones": [
+        "Tomar alguna bebida refrescante.",
+        "Descansar lo antes posible en un lugar adecuado.",
+        "Continuar la marcha y descansar cuando pasen 2 horas o 200 kilometros."
+      ]
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Que el itinerario que sigue el ramal de la derecha tiene prioridad.",
+        "Que el itinerario que sigue el ramal de la izquierda tiene prioridad.",
+        "Que el itinerario que sigue de frente tiene prioridad."
+      ],
+      "imagen": "../img/test_084_p28.jpg"
+    },
+    {
+      "texto": "¿Que indica esta flecha?",
+      "opciones": [
+        "Retorno.",
+        "Fin de carril."
+      ],
+      "imagen": "../img/test_084_p29.jpg"
+    },
+    {
+      "texto": "Para evitar los atropellos, ¿ique deben hacer los conductores?",
+      "opciones": [
+        "Indicar a los peatones cuando deben cruzar.",
+        "Usar el claxon cuando se acerquen a un paso para peatones.",
+        "Respetarla prioridaddepasode lospeatones."
+      ],
+      "imagen": "../img/test_084_p30.jpg"
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "test_id": 88,
+  "preguntas": [
+    {
+      "texto": "Esta senal...",
+      "opciones": [
+        "obliga a seguir una de las direcciones y sentidos que senalan las flechas.",
+        "prohibe continuar de frente o realizar un cambio de direccion a la derecha.",
+        "aconseja seguir una de las direcciones y sentidos que senalan las flechas."
+      ],
+      "imagen": "../img/test_088_p01.jpg"
+    },
+    {
+      "texto": "¿Se podra efectuar un cambio de sentido antes de la curva?",
+      "opciones": [
+        "Si, si tengo suficiente visibilidad.",
+        "No, por ser una curva sin visibilidad.",
+        "No,al existir la senal queprohibeadelantar."
+      ],
+      "imagen": "../img/test_088_p02.jpg"
+    },
+    {
+      "texto": "El conductor de un turismo, ¿zdebe llevar el cinturon de seguridad si el trayecto es corto?",
+      "opciones": [
+        "Si, siempre.",
+        "No, si circula en vias urbanas.",
+        "No, si realiza operaciones de carga y descarga a corta distancia."
+      ]
+    },
+    {
+      "texto": "¿Circula con su turismo por el arcen detras del tractor para facilitar el adelantamiento a un camion.Es correcto?",
+      "opciones": [
+        "Si, si el arcen fuera mas ancho.",
+        "No."
+      ],
+      "imagen": "../img/test_088_p04.jpg"
+    },
+    {
+      "texto": "¿Que separacion lateral deberemos dejar al adelantar a un peaton por una carretera convencional?",
+      "opciones": [
+        "1,5 metros como minimo.",
+        "La proporcional a la anchura y caracteristicas de la calzada.",
+        "1metro como maximo."
+      ],
+      "imagen": "../img/test_088_p05.jpg"
+    },
+    {
+      "texto": "Los ciclomotores, ¿zpueden circular por el arcen en columna de a dos?",
+      "opciones": [
+        "No.",
+        "Si,de forma excepcional cuando el arcen sea transitable y suficiente.",
+        "Si, siempre."
+      ]
+    },
+    {
+      "texto": "Esta senal prohibe...",
+      "opciones": [
+        "estacionar,peropermiteparar.",
+        "parar y estacionar.",
+        "parar,peropermiteestacionar."
+      ],
+      "imagen": "../img/test_088_p07.jpg"
+    },
+    {
+      "texto": "Si va a efectuar un giro en una interseccion, ¿icomo debe avisar a los demas conductores?",
+      "opciones": [
+        "Unicamente con los indicadores de direccion.",
+        "Con los indicadores de direccion o con el brazo.",
+        "Con el brazo o con el claxon."
+      ]
+    },
+    {
+      "texto": "¿Pueden realizarle una prueba para detectar el consumo de drogas en un control de trafico?",
+      "opciones": [
+        "No,si nomuestra signos dehaber consumido drogas.",
+        "No,porque no existenpruebas para detectar el consumo de drogas.",
+        "Si, en las mismas condiciones que en las pruebas de deteccion dela alcoholemia."
+      ]
+    },
+    {
+      "texto": "¿Que le indica esta senal?",
+      "opciones": [
+        "Congestion.",
+        "Visibilidad reducida.",
+        "Pavimento deslizante por hielo o nieve."
+      ],
+      "imagen": "../img/test_088_p10.jpg"
+    },
+    {
+      "texto": "Las cargas que sobresalen por detras del vehiculo, ¿ise senalizaran con este panel?",
+      "opciones": [
+        "Si, y ademas con una luz de color rojo tanto de dia como de noche.",
+        "Si, y ademas con un trapo de color rojo vivo.",
+        "Si, y ademas si es de noche con una luz de color rojo."
+      ],
+      "imagen": "../img/test_088_p11.jpg"
+    },
+    {
+      "texto": "De los siguientes sistemas avanzados de ayuda a la conduccion o ADAS, ¿icual es conocido con el nombre de \"Alerta de trafico cruzado\"?",
+      "opciones": [
+        "EI\"ACT\".",
+        "EI \"LDW\".",
+        "EI\"RCTA\"."
+      ],
+      "imagen": "../img/test_088_p12.jpg"
+    },
+    {
+      "texto": "La carga de un turismo, ¿icuanto puede sobresalir por detras?",
+      "opciones": [
+        "El 20% de la longitud del vehiculo.",
+        "El 15% de la longitud del vehiculo.",
+        "1/3 de la longitud del vehiculo."
+      ],
+      "imagen": "../img/test_088_p13.jpg"
+    },
+    {
+      "texto": "Cuando se incorporen a la circulacion, es obligatorio facilitar la maniobra a...",
+      "opciones": [
+        "los taxis,pero unicamente en poblado.",
+        "todos los vehiculos.",
+        "los vehiculos de transporte publico de viajeros, unicamente."
+      ],
+      "imagen": "../img/test_088_p14.jpg"
+    },
+    {
+      "texto": "¿Puede circular cualquier vehiculo por esta calzada?",
+      "opciones": [
+        "Si.",
+        "No,porque es una via exclusiva para automoviles.",
+        "Si, excepto motocicletas dedos ruedas sin sidecar."
+      ],
+      "imagen": "../img/test_088_p15.jpg"
+    },
+    {
+      "texto": "Las personas mayores suelen tener mas accidentes...",
+      "opciones": [
+        "cuando van acompanando aninos.",
+        "cuando van solas.",
+        "cuando van acompanadas por otros adultos."
+      ],
+      "imagen": "../img/test_088_p16.jpg"
+    },
+    {
+      "texto": "Esta senal indica peligro por...",
+      "opciones": [
+        "pavimentodeslizantepornieve.",
+        "la proximidad de un tramo de la via con visibilidad reducida por niebla, luvia o nieve.",
+        "la proximidad de un tramo de la via con desprendimientos frecuentes y la presencia de obstaculosenlacalzada."
+      ],
+      "imagen": "../img/test_088_p17.jpg"
+    },
+    {
+      "texto": "A la vista de la senal y teniendo en cuenta que circulamos a 90o km/h, ¿ipodremos utilizar el carril derecho?",
+      "opciones": [
+        "No,porque estareservadoparavehiculos lentos.",
+        "Si, como norma general usaremos el derecho.",
+        "Usaremos cualquier carril indistintamente."
+      ],
+      "imagen": "../img/test_088_p18.jpg"
+    },
+    {
+      "texto": "Despues de la senal vertical, ¿iesta permitido adelantar al vehiculo blanco?",
+      "opciones": [
+        "No, porque la senial prohibe adelantar.",
+        "Si, porque la senal es de <fin de prohibido adelantar>.",
+        "No,porque la linea continua me lo prohibe. 2o. La probabilidad de que un accidente sea mortal es mayor cuando se circula a velocidad.. O a) inadecuada. O b) adecuada. O c) moderada."
+      ],
+      "imagen": "../img/test_088_p19.jpg"
+    },
+    {
+      "texto": "A partir de esta senal...",
+      "opciones": [
+        "Seaconseja no sobrepasar los 2okm/hy tendran prioridad los peatones.",
+        "Esta prohibido sobrepasar los 10 km/h ytendran prioridad los peatones.",
+        "Al tratarse de una calle residencial la velocidadmaxima sera de 30km/h."
+      ],
+      "imagen": "../img/test_088_p21.jpg"
+    },
+    {
+      "texto": "¿Que indica esta cuadricula de marcas amarillas?",
+      "opciones": [
+        "Prohibeparar yestacionar encima de estasmarcas viales.",
+        "Recuerda que no se tiene que penetrar en la interseccion si previsiblemente podemos quedar detenidos y obstruir la circulacion transversal.",
+        "Indican el lugar donde empieza una zona de frenado de emergencia."
+      ],
+      "imagen": "../img/test_088_p22.jpg"
+    },
+    {
+      "texto": "Bajo los efectos del alcohol, la distancia de detencion...",
+      "opciones": [
+        "no se ve afectada.",
+        "disminuye.",
+        "aumenta."
+      ]
+    },
+    {
+      "texto": "Las luces adaptativas...",
+      "opciones": [
+        "adaptan su luminosidad a la visibilidad existente.",
+        "mejoran la visibilidad en determinadas situaciones, como una curva o una interseccion.",
+        "emitenmas luz quelas luces convencionales."
+      ]
+    },
+    {
+      "texto": "¿En algun caso se podra circular con una luz antiniebla delantera junto con la de posicion y sin utilizar el alumbrado de corto alcance o cruce?",
+      "opciones": [
+        "No, para circular siempre se tendra que llevar el alumbrado de posicion junto con el de cruce.",
+        "Si, al circular durante el dia con niebla, no es necesario utilizar el alumbrado de corto alcance conjuntamente con el de posicion y el antiniebla.",
+        "Si, tanto de dia como de noche."
+      ],
+      "imagen": "../img/test_088_p25.jpg"
+    },
+    {
+      "texto": "Antes de abrir las puertas para bajar de un vehiculo, debe cerciorarse...",
+      "opciones": [
+        "de que no se ocasiona peligro a otros usuarios.",
+        "unicamente de que no se acercan peatones.",
+        "solodequeno seacercanvehiculos."
+      ],
+      "imagen": "../img/test_088_p26.jpg"
+    },
+    {
+      "texto": "Esta senal indica...",
+      "opciones": [
+        "una prohibicion.",
+        "un peligro.",
+        "una obligacion."
+      ],
+      "imagen": "../img/test_088_p27.jpg"
+    },
+    {
+      "texto": "¿Qué es la velocidad inadecuada?",
+      "opciones": [
+        "La velocidad que no se adapta a las condiciones del trafico, de la via o del conductor.",
+        "La velocidad permitida en la via.",
+        "La que no rebasa el limitemaximo develocidad para la via."
+      ]
+    },
+    {
+      "texto": "Si aumentamos la velocidad de 55 km/h a 110 km/h, ¿zhabremos aumentado tambien la distancia de frenado?",
+      "opciones": [
+        "Si, en igual proporcion.",
+        "Si, en mayor proporcion.",
+        "No, la distancia de frenado no depende de la velocidad."
+      ],
+      "imagen": "../img/test_088_p29.jpg"
+    },
+    {
+      "texto": "Al circular marcha atras debe tener en cuenta que...",
+      "opciones": [
+        "debe hacerlo con toda precaucion, ya que pueden pasar personas por detras del vehiculo.",
+        "tiene prioridad sobre los peatones.",
+        "nodeberecorrermas de10metros."
+      ]
+    }
+  ]
+}

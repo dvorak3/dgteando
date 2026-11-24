@@ -1,0 +1,262 @@
+{
+  "test_id": 81,
+  "preguntas": [
+    {
+      "texto": "¿En un tuinel podremos realizar un cambio de sentido?",
+      "opciones": [
+        "No, porque esta prohibido.",
+        "Si, si no tengo quemaniobrar.",
+        "Si,teniendo suficiente visibilidad."
+      ],
+      "imagen": "../img/test_081_p01.jpg"
+    },
+    {
+      "texto": "¿Qué indica esta senal?",
+      "opciones": [
+        "Peligro por la proximidad de un tramo de via en el que la circulacion se encuentra detenida o dificultada por congestion de trafico.",
+        "Peligro por la proximidad de un lugar en el que hay un vehiculo que obstruye la calzada debido a una averia, accidente u otras causas."
+      ],
+      "imagen": "../img/test_081_p02.jpg"
+    },
+    {
+      "texto": "¿La velocidad zes un factor de riesgo que produce accidentes?",
+      "opciones": [
+        "No,porque solo agrava las consecuenciasde unaccidentepero no los causa.",
+        "Si,ypor esodebeser la adecuada en cada momento.",
+        "No, si el vehiculo dispone de los ultimos sistemas de seguridad."
+      ]
+    },
+    {
+      "texto": "Para evitar atropellos a los ciclistas es conveniente...",
+      "opciones": [
+        "aumentar la velocidad para adelantarlos cuanto antes.",
+        "al adelantarlos dejar en todomomentouna separacion lateral suficiente.",
+        "hacerles senales acusticaspara que se aparten."
+      ],
+      "imagen": "../img/test_081_p04.jpg"
+    },
+    {
+      "texto": "¿Cual sera la velocidad maxima en esta via?",
+      "opciones": [
+        "100km/h.",
+        "90 km/h.",
+        "120 km/h."
+      ],
+      "imagen": "../img/test_081_p05.jpg"
+    },
+    {
+      "texto": "El consumo de drogas, ¿zafecta a la capacidad de reaccion?",
+      "opciones": [
+        "Si, aumentandola.",
+        "No.",
+        "Si, disminuyendola."
+      ]
+    },
+    {
+      "texto": "La senal de la derecha, ¿ique indica?",
+      "opciones": [
+        "Obliga a detenerme antes de la senal.",
+        "Avisa de un peligro.",
+        "Obliga a ceder el paso a todos los vehiculos."
+      ],
+      "imagen": "../img/test_081_p07.jpg"
+    },
+    {
+      "texto": "A la vista de esta imagen, ¿ique debe hacer el conductor del vehiculo?",
+      "opciones": [
+        "Respetarla senal delagente.",
+        "Pasar porque el semaforo le permite el paso con prioridad.",
+        "Respetar la senal destop."
+      ],
+      "imagen": "../img/test_081_p08.jpg"
+    },
+    {
+      "texto": "¿Cual de los siguientes vehiculos es un ciclo?",
+      "opciones": [
+        "El ciclomotor.",
+        "La bicicleta. b) La bicicleta."
+      ],
+      "imagen": "../img/test_081_p09.jpg"
+    },
+    {
+      "texto": "Si circula con un vehiculo para personas de movilidad reducida, ¿zle afecta esta senal?",
+      "opciones": [
+        "No,prohibe solo laentradaamotocicletas.",
+        "No,prohibe solo la entrada a ciclomotores.",
+        "Si."
+      ],
+      "imagen": "../img/test_081_p10.jpg"
+    },
+    {
+      "texto": "Circulando en un tunel, ¿ique distancia de seguridad debemos mantener con el vehiculo que nos precede?",
+      "opciones": [
+        "150 metros comominimo.",
+        "100metroscomominimo.",
+        "50metroscomominimo."
+      ],
+      "imagen": "../img/test_081_p11.jpg"
+    },
+    {
+      "texto": "¿En que caso se considera que un vehiculo estacionado obstruye gravemente la circulacion?",
+      "opciones": [
+        "Cuando este estacionado en una zona reservada a carga y descarga,fuera de las horas de utilizacion.",
+        "Cuando este estacionadofuera del arcen transitable en via interurbana.",
+        "Cuandoeste estacionado en doblefila sin conductor."
+      ]
+    },
+    {
+      "texto": "Si el equipaje disminuye la visibilidad por el espejo interior, ¿za que esta obligado?",
+      "opciones": [
+        "En ningun caso la carga puede disminuir la visibilidad.",
+        "A tener instalados el espejo retrovisor interior y el exterior izquierdo."
+      ]
+    },
+    {
+      "texto": "¿Que debemos hacera la vista de la senal?",
+      "opciones": [
+        "Apagarlaslucesdecortoalcance.",
+        "Usar obligatoriamente las luces de corto o largo alcance.",
+        "Mantener encendido el alumbrado de cruce si las circunstancias de visibilidad asi lo imponen."
+      ],
+      "imagen": "../img/test_081_p14.jpg"
+    },
+    {
+      "texto": "Esta senal indica...",
+      "opciones": [
+        "viapublicacalificadadeatencionpreferente",
+        "prioridad de paso de los vehiculos que se acerquen por la derecha.",
+        "calzada conprioridad depaso en las intersecciones."
+      ],
+      "imagen": "../img/test_081_p15.jpg"
+    },
+    {
+      "texto": "En esta situacion, ¿cual es la distancia de seguridad entre vehiculos?",
+      "opciones": [
+        "60 metros.",
+        "Aquella que me permita detenerme, sin colisionar con el.",
+        "90 metros."
+      ],
+      "imagen": "../img/test_081_p16.jpg"
+    },
+    {
+      "texto": "¿Cual es la tasa maxima de alcohol permitida para un conductor de un vehiculo de transporte escolar?",
+      "opciones": [
+        "0,15 miligramos por litro de aire espirado.",
+        "0,25 miligramos por litro de aire espirado.",
+        "0,3 miligramos por litro de aire espirado."
+      ],
+      "imagen": "../img/test_081_p17.jpg"
+    },
+    {
+      "texto": "Circula con un turismo por una autovia con trafico muy denso, ¿iesta permitido circular por el arcen para tomar la siguiente salida?",
+      "opciones": [
+        "Si,con las luces deemergencia.",
+        "Si, para facilitar la fluidez.",
+        "No."
+      ]
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "La situacion de un apartadero.",
+        "Una parada deautobuses.",
+        "Unazonadefrenadodeemergencia."
+      ],
+      "imagen": "../img/test_081_p19.jpg"
+    },
+    {
+      "texto": "¿Cuando debe apagarse el intermitente al senalizar un adelantamiento?",
+      "opciones": [
+        "Una vez rebasado al vehiculo que estamos adelantando.",
+        "Antes de llegar a la altura del vehiculo que estamos adelantando.",
+        "Una vez finalizado el desplazamientolateral."
+      ],
+      "imagen": "../img/test_081_p20.jpg"
+    },
+    {
+      "texto": "Un turismo con remolque, ¿itiene permitido circular por un carril adicional?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Si,unicamentecuandoel remolquesealigero."
+      ],
+      "imagen": "../img/test_081_p21.jpg"
+    },
+    {
+      "texto": "La tasa maxima de alcoholemia permitida en aire espirado en los conductores durante el segundo ano de su primer permiso es de...",
+      "opciones": [
+        "0,25miligramos por litro.",
+        "0,20 miligramos por litro.",
+        "0,15 miligramos por litro."
+      ]
+    },
+    {
+      "texto": "¿Qué distancia lateral mantendremos al adelantar a un turismo fuera de poblado?",
+      "opciones": [
+        "1,5metroscomominimo.",
+        "La proporcional a la velocidad, ancho de la via y caracteristicas de la misma.",
+        "1,5metroscomomaximo."
+      ]
+    },
+    {
+      "texto": "Entre los momentos de peligro en el uso del telefono movil se encuentran...",
+      "opciones": [
+        "recibir una llamada y detenerse en un lugar seguro para hablar.",
+        "colgar y guardar el movil.",
+        "no utilizar el telefono movil."
+      ]
+    },
+    {
+      "texto": "La distancia de reaccion, ¿ies igual a la distancia de frenado?",
+      "opciones": [
+        "Si.",
+        "No.",
+        "Si,silascondicionessondesfavorables."
+      ]
+    },
+    {
+      "texto": "¿Que indica la flecha pintada en la calzada?",
+      "opciones": [
+        "Que el carril en el que esta situada terminaproximamente.",
+        "La direccion del ramal de la proxima salida.",
+        "La proximidad de una linea continua."
+      ],
+      "imagen": "../img/test_081_p26.jpg"
+    },
+    {
+      "texto": "¿Que alumbrado debera utilizar para estacionar en una via dentro de poblado suficientemente iluminada?",
+      "opciones": [
+        "Posicion.",
+        "Estacionamiento.",
+        "No usare ningun alumbrado."
+      ],
+      "imagen": "../img/test_081_p27.jpg"
+    },
+    {
+      "texto": "En este tramo de autovia, ¿ise puede circular a mas de 100 km/h para adelantar?",
+      "opciones": [
+        "No.",
+        "Si, hasta 120 km/h."
+      ],
+      "imagen": "../img/test_081_p28.jpg"
+    },
+    {
+      "texto": "Un tractor que arrastra un remolque, ¿ique velocidad maxima no debe rebasar fuera de poblado?",
+      "opciones": [
+        "70 kilometros por hora.",
+        "25kilometrosporhora.",
+        "40 kilometros porhora."
+      ],
+      "imagen": "../img/test_081_p29.jpg"
+    },
+    {
+      "texto": "¿Que significa esta senal?",
+      "opciones": [
+        "Prohibido estacionarpor vado.",
+        "Estacionamiento limitado en tiempo. b) Estacionamiento limitado en tiempo.",
+        "Estacionamientoprohibido."
+      ],
+      "imagen": "../img/test_081_p30.jpg"
+    }
+  ]
+}

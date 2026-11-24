@@ -2,32 +2,30 @@
   "test_id": 79,
   "preguntas": [
     {
-      "texto": "zQué significa esta senal?",
+      "texto": "¿Qué significa esta senal?",
       "opciones": [
         "Prohibido estacionarporvado.",
         "Estacionamiento limitado en tiempo.",
         "Estacionamientoprohibido."
       ],
-      "correcta": 2
+      "imagen": "../img/test_079_p01.jpg"
     },
     {
-      "texto": "zQue indica la senalAvanzamoto o bici>?",
+      "texto": "¿Que indica la senalAvanzamoto o bici>?",
       "opciones": [
         "Una zona en la que las motocicletas y las bicicletas tienen prioridad de paso sobre el resto de los vehiculos.",
         "Un carril reservado exclusivamentepara motocicletas ybicicletas,por elquepueden circular para adelantar a los vehiculos detenidos.",
         "Una zona de espera previa a la linea de detencion de un semaforo, reservada a los vehiculos indicados en la senal."
       ],
-      "correcta": 2,
       "imagen": "../img/test_079_p02.jpg"
     },
     {
-      "texto": "En esta curva de visibilidad reducida, zesta permitido cambiar de sentido?",
+      "texto": "En esta curva de visibilidad reducida, ¿zesta permitido cambiar de sentido?",
       "opciones": [
         "Si, siempre que no se obstaculice a los vehiculos que circulen detras.",
         "No, en ningun caso.",
         "Si, porque no hay senial que lo prohiba."
       ],
-      "correcta": 1,
       "imagen": "../img/test_079_p03.jpg"
     },
     {
@@ -37,17 +35,15 @@
         "el arcen.",
         "el carril derecho."
       ],
-      "correcta": 1,
       "imagen": "../img/test_079_p04.jpg"
     },
     {
-      "texto": "En una calzada con un sentido de circulacion, en el centro hay una isleta. zPor donde se puede circular?",
+      "texto": "En una calzada con un sentido de circulacion, en el centro hay una isleta. ¿Por donde se puede circular?",
       "opciones": [
         "Por la derecha o por la izquierda, indistintamente.",
         "Solamente por la parte derecha del refugio.",
         "Solamente por la parte izquierda del refugio"
-      ],
-      "correcta": 0
+      ]
     },
     {
       "texto": "En las personas que toman drogas de abuso y conducen, la probabilidad de sufrir un accidente es..",
@@ -55,54 +51,50 @@
         "mayor.",
         "menor.",
         "la misma."
-      ],
-      "correcta": 0
+      ]
     },
     {
-      "texto": "zQue indica esta senal?",
+      "texto": "¿Que indica esta senal?",
       "opciones": [
-        "Una salida enautopista o autovia.",
+        "Una salida en autopista o autovia.",
         "Una zona de frenado de emergencia.",
         "Una zona para realizar acampadas."
       ],
-      "correcta": 1
+      "imagen": "../img/test_079_p07.jpg"
     },
     {
-      "texto": "zQué significa esta senal?",
+      "texto": "¿Qué significa esta senal?",
       "opciones": [
         "Desprendimiento.",
         "Proyeccion de gravilla.",
         "Escalon lateral."
       ],
-      "correcta": 0
+      "imagen": "../img/test_079_p08.jpg"
     },
     {
-      "texto": "El filtro de aceite, zCuando hay que cambiarlo?",
+      "texto": "El filtro de aceite, ¿Cuando hay que cambiarlo?",
       "opciones": [
         "Cada mil kilometros.",
         "Cuando cambio el aceite.",
         "Cuando lo indique el manual del vehiculo."
-      ],
-      "correcta": 2
+      ]
     },
     {
-      "texto": "Dos luces rojas intermitentes antes de un paso a nivel, ique indican?",
+      "texto": "Dos luces rojas intermitentes antes de un paso a nivel, ¿ique indican?",
       "opciones": [
         "Que tengo que pasar rapidamente.",
         "Prohibicion temporal de paso.",
         "Puedopasarperoextremandolaprecaucion."
       ],
-      "correcta": 1,
       "imagen": "../img/test_079_p10.jpg"
     },
     {
-      "texto": "Es de dia, hay niebla y no lleva luces antiniebla delanteras. zQue luces debe encender?",
+      "texto": "¿Es de dia, hay niebla y no lleva luces antiniebla delanteras. Que luces debe encender?",
       "opciones": [
         "Las luces largas.",
         "Las luces de posicion solamente.",
         "Las lucescortas."
       ],
-      "correcta": 2,
       "imagen": "../img/test_079_p11.jpg"
     },
     {
@@ -112,63 +104,58 @@
         "esta prohibido parar y estacionar.",
         "sepuedepararperono estacionar."
       ],
-      "correcta": 2
+      "imagen": "../img/test_079_p12.jpg"
     },
     {
-      "texto": "En un tramo de via con la senal\"tunel\", iesta permitido hacer un cambio de sentido?",
+      "texto": "En un tramo de via con la senal\"tunel\", ¿iesta permitido hacer un cambio de sentido?",
       "opciones": [
         "No.",
         "Si."
       ],
-      "correcta": 0
+      "imagen": "../img/test_079_p13.jpg"
     },
     {
-      "texto": "Un vehiculo tiene airbag. zEs obligatorio ponerse el cinturon de seguridad?",
+      "texto": "Un vehiculo tiene airbag. ¿Es obligatorio ponerse el cinturon de seguridad?",
       "opciones": [
         "No, porque el airbag sustituye al cinturon.",
         "Es aconsejable, pero no es obligatorio.",
         "Si, porque mejora la eficacia del airbag."
       ],
-      "correcta": 2,
       "imagen": "../img/test_079_p14.jpg"
     },
     {
-      "texto": "Durante la noche, zcon que otro alumbrado utilizaremos la luz delantera antiniebla?",
+      "texto": "Durante la noche, ¿zcon que otro alumbrado utilizaremos la luz delantera antiniebla?",
       "opciones": [
         "Con el de posicion.",
         "Con el de cruce como minimo.",
-        "Conel delargo alcance unicamente."
+        "Con el delargo alcance unicamente."
       ],
-      "correcta": 1,
       "imagen": "../img/test_079_p15.jpg"
     },
     {
-      "texto": "zQue efectos tiene en la conduccion una conversacion por el movil que supera el minuto y medio?",
+      "texto": "¿Que efectos tiene en la conduccion una conversacion por el movil que supera el minuto y medio?",
       "opciones": [
-        "El conductor deja depercibir una parte importante de las senales, incluso con el dispositivo demanos libres.",
+        "El conductor deja de percibir una parte importante de las senales, incluso con el dispositivo de manos libres.",
         "La velocidad media aumenta, incluso con el dispositivo de manos libres.",
         "El conductor no deja de percibir las senales si usa el dispositivo de manos libres."
-      ],
-      "correcta": 0
+      ]
     },
     {
-      "texto": "zPodra un turismo circular por el carril bus?",
+      "texto": "¿Podra un turismo circular por el carril bus?",
       "opciones": [
         "No, en ningun caso, es exclusivopara el BUs.",
         "Si, siempre que la marca blanca longitudinal sea discontinua y para realizar cualquier maniobra.",
         "En los tramos enque lamarca blanca longitudinal sea discontinua,para cambiar de direccion y dando prioridad a los autobuses."
       ],
-      "correcta": 2,
       "imagen": "../img/test_079_p17.jpg"
     },
     {
-      "texto": "zEs recomendable parar y descansar durante los viajes?",
+      "texto": "¿Es recomendable parar y descansar durante los viajes?",
       "opciones": [
         "Si,2030 minutos cada 2horas de conduccion o cada 200kilometros.",
         "No, porque se alarga el tiempo de viaje y aumenta la fatiga.",
         "No, si el viaje es por vias interurbanas."
       ],
-      "correcta": 0,
       "imagen": "../img/test_079_p18.jpg"
     },
     {
@@ -177,8 +164,7 @@
         "cada3horasocada 400kilometros.",
         "cuando el conductor compruebe que ha perdido totalmente la capacidadde reaccionar.",
         "cada2horasocada200kilometros."
-      ],
-      "correcta": 2
+      ]
     },
     {
       "texto": "Esta senal prohibe...",
@@ -187,52 +173,49 @@
         "el paso a los vehiculos de mas de 4,5metros de ancho, incluida la carga.",
         "el paso a todos los vehiculos cuando su carga sobresale por los lados."
       ],
-      "correcta": 1
+      "imagen": "../img/test_079_p20.jpg"
     },
     {
-      "texto": "iQué indica este agente?",
+      "texto": "¿Qué indica este agente?",
       "opciones": [
         "Indica que a partir de su paso, la calzada queda de nuevo abierta al trafico.",
         "Indica al resto de los conductores y usuarios la necesidad de extremar la precaucion.",
         "Indica que la calzada porla que circula queda temporalmente cerrada al trafico."
       ],
-      "correcta": 0
+      "imagen": "../img/test_079_p21.jpg"
     },
     {
-      "texto": "iQue indica esta senal?",
+      "texto": "¿Que indica esta senal?",
       "opciones": [
         "Que esta prohibida la entrada a todos los varones.",
         "Prohibida la entrada a menores de 18 anos.",
         "Que esta prohibida la entrada a los peatones."
       ],
-      "correcta": 2
+      "imagen": "../img/test_079_p22.jpg"
     },
     {
-      "texto": "zQué finalidad tiene el sistema ADAs \"Deteccion de fatiga\"?",
+      "texto": "¿Qué finalidad tiene el sistema ADAs \"Deteccion de fatiga\"?",
       "opciones": [
         "Tomar el control de la direccion del vehiculo en caso de somnolencia del conductor.",
         "Evitar un posible accidente por fatiga o sueno.",
         "Realizar una detencion de emergencia cuando detecta que el conductor no se encuentra en condiciones optimas de continuar la marcha."
-      ],
-      "correcta": 1
+      ]
     },
     {
-      "texto": "Cuando no utiliza la baca del vehiculo, ies aconsejable quitarla?",
+      "texto": "Cuando no utiliza la baca del vehiculo, ¿ies aconsejable quitarla?",
       "opciones": [
         "No, porque la baca aumenta la estabilidad del vehiculo.",
         "Si, porque sin baca ahorro carburante.",
         "Es igual, porque la baca no influye en el consumo."
       ],
-      "correcta": 1,
       "imagen": "../img/test_079_p24.jpg"
     },
     {
-      "texto": "Al llegar a la interseccion de la imagen, zpodremos cambiar de direccion hacia la izquierda?",
+      "texto": "Al llegar a la interseccion de la imagen, ¿zpodremos cambiar de direccion hacia la izquierda?",
       "opciones": [
         "Sí.",
         "No."
       ],
-      "correcta": 1,
       "imagen": "../img/test_079_p25.jpg"
     },
     {
@@ -241,8 +224,7 @@
         "acelerarenpuntomuertoparaque elmotor se caliente.",
         "esperarunos segundos antes de iniciar lamarcha.",
         "iniciar la marcha inmediatamente."
-      ],
-      "correcta": 1
+      ]
     },
     {
       "texto": "Los ciclistas tienen prioridad depaso respectoa los vehiculos demotor...",
@@ -250,34 +232,32 @@
         "cuando circulen por un carril bici debidamente senalizado.",
         "unicamente en los pasos para ciclistas.",
         "siempre que circulen en grupo."
-      ],
-      "correcta": 0
+      ]
     },
     {
-      "texto": "Esta senal, zque indica?",
+      "texto": "Esta senal, ¿zque indica?",
       "opciones": [
         "Carrilreservadoparaautobuses.",
         "Paradadeautobuses."
       ],
-      "correcta": 1
+      "imagen": "../img/test_079_p28.jpg"
     },
     {
-      "texto": "Si circulamos a 7okm/h por el carril central yno hay mas trafico en la calzada, ilo hacemos correctamente?",
+      "texto": "Si circulamos a 7okm/h por el carril central yno hay mas trafico en la calzada, ¿ilo hacemos correctamente?",
       "opciones": [
         "Si, porque circulo a velocidad inferior a la maxima indicada.",
         "Si, porque puedo circular por el carril que mas conviene a mi destino.",
         "No, tendre que circular por el carril de la derecha."
       ],
-      "correcta": 2
+      "imagen": "../img/test_079_p29.jpg"
     },
     {
-      "texto": "zSe puede estacionar en doble fila?",
+      "texto": "¿Se puede estacionar en doble fila?",
       "opciones": [
         "No.",
         "Si, siempre y cuando lo hagamos por un tiempo inferior a dos minutos.",
-        "Si. Corregir el test"
+        "Si."
       ],
-      "correcta": 0,
       "imagen": "../img/test_079_p30.jpg"
     }
   ]

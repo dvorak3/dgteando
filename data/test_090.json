@@ -1,0 +1,265 @@
+{
+  "test_id": 90,
+  "preguntas": [
+    {
+      "texto": "En un paso de peatones, ¿zhay que hacer senales a los peatones para que crucen la calzada?",
+      "opciones": [
+        "Si, pero solo si van a cruzar por él.",
+        "No,porque los demas conductores pueden no haberse dado cuenta de supresencia."
+      ],
+      "imagen": "../img/test_090_p01.jpg"
+    },
+    {
+      "texto": "¿zcomo subiremos una pendiente ascendente que este nevada?",
+      "opciones": [
+        "De la forma mas rapida posible,porque si el vehiculo se cala patinara hacia atras.",
+        "Conla marcha mas cortaposibleacelerando almaximo.",
+        "Con suavidad y conuna velocidad sostenida."
+      ],
+      "imagen": "../img/test_090_p02.jpg"
+    },
+    {
+      "texto": "En un tramo de gran pendiente en el que sea muy dificil o imposible el paso simultaneo de dos vehiculos que circulen en sentido contrario, ¿ique vehiculo tendra preferencia de paso?",
+      "opciones": [
+        "El vehiculo que circula en sentido ascendente.",
+        "El vehiculo que circula en sentido descendente.",
+        "El que tenga mayor dificultad de paso."
+      ],
+      "imagen": "../img/test_090_p03.jpg"
+    },
+    {
+      "texto": "Estas senales indican peligro por...",
+      "opciones": [
+        "aproximaciondeunpasoanivelsinbarreras.",
+        "aproximaciondeunpaso anivel conbarreras.",
+        "situacion inmediata de un paso a nivel sin barreras."
+      ],
+      "imagen": "../img/test_090_p04.jpg"
+    },
+    {
+      "texto": "En una via sin pavimentar, ¿za que velocidad maxima puede circular un turismo?",
+      "opciones": [
+        "A 90 km/h.",
+        "A 50 km/h.",
+        "A 30 km/h."
+      ],
+      "imagen": "../img/test_090_p05.jpg"
+    },
+    {
+      "texto": "De noche, ¿zcomo se debe senalizar la carga que sobresale por delante y por detras?",
+      "opciones": [
+        "Solamente con el panel de franjas oblicuas rojas yblancas",
+        "Con una luz blanca por delante, una luz roja por detras y el panel de franjas oblicuas rojas y blancas.",
+        "Con un catadioptrico blanco por delante y uno rojo por detras."
+      ]
+    },
+    {
+      "texto": "A la hora de determinar la distancia de seguridad con el vehiculo que circula delante..",
+      "opciones": [
+        "debe tener en cuenta la velocidad, la visibilidad y el estado de la calzada.",
+        "debe tener en cuenta las caracteristicas del vehiculo que circula delante.",
+        "debetener en cuenta la velocidad, exclusivamente."
+      ],
+      "imagen": "../img/test_090_p07.jpg"
+    },
+    {
+      "texto": "La senal de la derecha, ¿zque indica?",
+      "opciones": [
+        "Obliga a detenermeantes de la senal.",
+        "Avisa de un peligro.",
+        "Obliga a ceder el paso a todos los vehiculos."
+      ],
+      "imagen": "../img/test_090_p08.jpg"
+    },
+    {
+      "texto": "Se considera conductor a la persona...",
+      "opciones": [
+        "que conduce a pie un ciclo o ciclomotor de dos ruedas.",
+        "que maneja el volante de un vehiculo cuando circula en practicas.",
+        "que maneja el mecanismo de direccion o va al mando de un vehiculo."
+      ]
+    },
+    {
+      "texto": "Se considera que un estacionamiento obstaculiza gravemente la circulacion cuando se realiza en..",
+      "opciones": [
+        "una zona senalizadapara uso exclusivo de minusvalidos.",
+        "doble fila.",
+        "medio de la calzada."
+      ]
+    },
+    {
+      "texto": "Para evitar ruidos excesivos e innecesarios en la conduccion, se debe...",
+      "opciones": [
+        "cuidar de que el tubo de escape y el silenciador del vehiculo esten siempre en buen estado.",
+        "utilizar el claxon frecuentemente pero sin producir ruidos estridentes o notas musicales.",
+        "circular con el tubo de escape libre."
+      ],
+      "imagen": "../img/test_090_p11.jpg"
+    },
+    {
+      "texto": "La senal triangular indica que se debe...",
+      "opciones": [
+        "detenerel vehiculoycederelpaso.",
+        "ceder el paso cuando sea necesario.",
+        "acelerarpara aumentar la velocidad."
+      ],
+      "imagen": "../img/test_090_p12.jpg"
+    },
+    {
+      "texto": "¿Que haremos ante un fallo de los frenos?",
+      "opciones": [
+        "Tirar de la palanca del freno de estacionamientobruscamente.",
+        "Chocar gradualmente contra cualquier objeto rigido de la via para detenerse cuanto antes.",
+        "Bombear el pedal de freno, por si alguno de los circuitos conserva capacidad de frenada."
+      ],
+      "imagen": "../img/test_090_p13.jpg"
+    },
+    {
+      "texto": "La furgoneta esta en doble fila, ¿zpuede hacer una parada para descargar?",
+      "opciones": [
+        "No, porque esta prohibido.",
+        "Si, cuando no hay un lugar de descarga cerca.",
+        "Si, el tiempo que quiera."
+      ],
+      "imagen": "../img/test_090_p14.jpg"
+    },
+    {
+      "texto": "En la proxima interseccion nos encontramos con la senal de la imagen y con un coche que se nos aproxima por la derecha, ¿iquien tendra prioridad de paso?",
+      "opciones": [
+        "El vehiculo que se aproxima por la derecha.",
+        "El que encuentra la senal.",
+        "Se aplicara la norma general de prioridad."
+      ],
+      "imagen": "../img/test_090_p15.jpg"
+    },
+    {
+      "texto": "¿Que significa esta senal?",
+      "opciones": [
+        "Prohibicion de entrar en el paso estrecho si al hacerlo obligo al que se acerca de frente a detenerse.",
+        "Via de dos sentidos.",
+        "Quetengo prioridad depaso en este estrechamiento."
+      ],
+      "imagen": "../img/test_090_p16.jpg"
+    },
+    {
+      "texto": "¿Que situaciones de trafico favorecen la aparicion de la somnolencia?",
+      "opciones": [
+        "Las monotonas.",
+        "Las que tienen cambios en el entorno con mucha frecuencia.",
+        "La conduccion en zona urbana con bastante trafico."
+      ]
+    },
+    {
+      "texto": "¿Podemos estacionarendoblefila?",
+      "opciones": [
+        "Si, si no existe sitio en las inmediaciones.",
+        "No,esta prohibido.",
+        "Solo por tiempo inferior a 2 minutos y senalizandolo con la luz de emergencia."
+      ]
+    },
+    {
+      "texto": "Si tiene problemas de sueno, debe tener en cuenta que...",
+      "opciones": [
+        "debe dormir mas horas para conducir.",
+        "no seencuentra enperfectas condicionespara conducir.",
+        "es recomendable tomar sustancias estimulantes en abundancia para mantenerse despierto."
+      ]
+    },
+    {
+      "texto": "Los psicofarmacos, ¿zpueden alterar las capacidades para conducir con seguridad?",
+      "opciones": [
+        "No,excepto que ademas se ingiera alcohol.",
+        "Si, gravemente.",
+        "No, porque no tienen influencia sobre la conduccion."
+      ]
+    },
+    {
+      "texto": "¿En cuanto tiempo se alcanzara el grado maximo de alcoholemia en sangre?",
+      "opciones": [
+        "Dos horas despues de haber tomado la ultima copa.",
+        "Entre30 y90minutos despues dehabertomadolaultima copa.",
+        "Mediahora despuesde habertomado la uiltima copa."
+      ],
+      "imagen": "../img/test_090_p21.jpg"
+    },
+    {
+      "texto": "Leer un periodico o mirar un mapa mientras se circula, ¿ies un riesgo para la conduccion?",
+      "opciones": [
+        "Sí.",
+        "Leer un periodico si, pero mirar un mapa no.",
+        "Unicamente si se aparta la mirada de la carretera mas de dos segundos."
+      ]
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Salida en autopista, autovia o via para automoviles a 300 metros y a la derecha.",
+        "Salida a 300 metros a la izquierda.",
+        "Pasoa nivela300metros."
+      ],
+      "imagen": "../img/test_090_p23.jpg"
+    },
+    {
+      "texto": "El vehiculo rojo, ¿zdonde se detendra para realizar el SToP?",
+      "opciones": [
+        "Justo antes de llegara la interseccion.",
+        "Antes de la interseccion sinpisar la marca vial deSTOP.",
+        "Antela lineadedetencion."
+      ],
+      "imagen": "../img/test_090_p24.jpg"
+    },
+    {
+      "texto": "En caso de ser obligatorio el uso de cadenas, ¿ien que ruedas deberan instalarse?",
+      "opciones": [
+        "En las ruedas delanteras siempre.",
+        "En las ruedas directrices.",
+        "En las ruedas motrices."
+      ],
+      "imagen": "../img/test_090_p25.jpg"
+    },
+    {
+      "texto": "Si esta siguiendo un tratamiento con medicamentos, ¿ique precauciones debe adoptar?",
+      "opciones": [
+        "No tomarlos durante la conduccion.",
+        "Reducir la dosis antes de conducir.",
+        "Consultaralmedicoofarmaceutico los efectospara la conduccion."
+      ]
+    },
+    {
+      "texto": "Esta linea discontinua, ¿ique indica?",
+      "opciones": [
+        "Un carril especial.",
+        "La cercania a una linea longitudinal continua.",
+        "Un carril reversible."
+      ],
+      "imagen": "../img/test_090_p27.jpg"
+    },
+    {
+      "texto": "¿Podremos estacionar en un carril reservado para autobuses?",
+      "opciones": [
+        "No.",
+        "Si,podremospararpero no estacionar.",
+        "Podremospararperomenosde2minutos."
+      ],
+      "imagen": "../img/test_090_p28.jpg"
+    },
+    {
+      "texto": "Cuando encuentre estas senales, ¿ique debe hacer?",
+      "opciones": [
+        "Circular por el lado que indica la flecha, pudiendo pasar por el lado izquierdo si observa que no se aproxima ningun vehiculo en sentido contrario.",
+        "Obedecer la senial mas restrictiva.",
+        "Pasar obligatoriamente por el lado que indica la flecha, porque hacia el lado izquierdo la entrada esta prohibida."
+      ],
+      "imagen": "../img/test_090_p29.jpg"
+    },
+    {
+      "texto": "Cuando se adelante a vehiculos de traccion animal, la separacion lateral...",
+      "opciones": [
+        "no debe ser inferior a 1,5 metros, al adelantar tanto dentro como fuera de poblado.",
+        "debe ser, al menos, de 1,5 metros al adelantar solamente fuera de poblado.",
+        "debe ser siempre proporcional a la anchura y caracteristicas de la via."
+      ],
+      "imagen": "../img/test_090_p30.jpg"
+    }
+  ]
+}

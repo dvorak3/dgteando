@@ -2,13 +2,13 @@
   "test_id": 77,
   "preguntas": [
     {
-      "texto": "La mayoria de los vehiculos disponen de un filtro en el habitaculo o filtro antipolen.iDebe sustituirse?",
+      "texto": "¿La mayoria de los vehiculos disponen de un filtro en el habitaculo o filtro antipolen.iDebe sustituirse?",
       "opciones": [
         "No,ya que es un filtro que se limpia automaticamente.",
         "Si, cada seis meses porque es un elemento sujeto a inspeccion tecnica periodica.",
         "Si, sobre todo al inicio de la primavera, ya que su capacidad de retencion es limitada."
       ],
-      "correcta": 2
+      "imagen": "../img/test_077_p01.jpg"
     },
     {
       "texto": "Uno de los factores que propician la accidentalidad de los jovenes conductores es...",
@@ -16,73 +16,66 @@
         "la mayor capacidad para controlar el vehiculo.",
         "la percepcion delaconduccion como algopeligroso.",
         "la menor percepcion del riesgo."
-      ],
-      "correcta": 2
+      ]
     },
     {
-      "texto": "Si los amortiguadores de su turismo estan en mal estado, ique puede ocurrir?",
+      "texto": "Si los amortiguadores de su turismo estan en mal estado, ¿ique puede ocurrir?",
       "opciones": [
         "Quela direccion se vuelva dura en suaccionamiento.",
         "Que la distancia de frenado disminuye en un 40%.",
         "La distancia de frenado aumentara peligrosamente."
       ],
-      "correcta": 2,
       "imagen": "../img/test_077_p03.jpg"
     },
     {
-      "texto": "Aunque no se superen los limites maximos de velocidad, zpuede Ilegar a circular a una velocidad inadecuada?",
+      "texto": "Aunque no se superen los limites maximos de velocidad, ¿zpuede Ilegar a circular a una velocidad inadecuada?",
       "opciones": [
         "No, en ningun caso.",
         "Si, en tanto que la velocidad debe adecuarse a las circunstancias de la via, como por ejemplo, la lluvia, nieve o hielo.",
         "Si, siempre que vaya a mas de 100 km/h."
-      ],
-      "correcta": 1
+      ]
     },
     {
-      "texto": "Llevar encendido el telefono movil en el vehiculo, zpuede resultar peligroso?",
+      "texto": "Llevar encendido el telefono movil en el vehiculo, ¿zpuede resultar peligroso?",
       "opciones": [
         "No, si no se va a utilizar.",
         "No, porque no es un ruido que pueda distraer al conductor.",
         "Si, el sonido del telefono, al igual que otro ruido, puede sorprender al conductor."
-      ],
-      "correcta": 2
+      ]
     },
     {
-      "texto": "zQue debe hacer un conductor para que los demas usuarios puedan anticiparse a sus intenciones?",
+      "texto": "¿Que debe hacer un conductor para que los demas usuarios puedan anticiparse a sus intenciones?",
       "opciones": [
         "Senalizar siempre lasmaniobras con antelacion.",
         "Permanecer en el angulo muerto de los retrovisores de otro vehiculo.",
         "Nodebe hacernada, el resto de usuarios debe estar atento a suvelocidad y trayectoria."
       ],
-      "correcta": 0,
       "imagen": "../img/test_077_p06.jpg"
     },
     {
-      "texto": "Realizar por las vias publicas carreras y competiciones no autorizadas, ipuede acarrear la perdida de puntos del permiso de conduccion?",
+      "texto": "Realizar por las vias publicas carreras y competiciones no autorizadas, ¿ipuede acarrear la perdida de puntos del permiso de conduccion?",
       "opciones": [
         "Si, ademas estan prohibidas.",
         "No, solamente tendrian una sancion economica.",
         "No, puesto que se trata de competiciones deportivas."
-      ],
-      "correcta": 0
+      ]
     },
     {
-      "texto": "zPuedeestacionaren estazona?",
+      "texto": "¿Puede estacionar en esta zona?",
       "opciones": [
-        "Si,si existe espacio suficiente.",
+        "Si, si existe espacio suficiente.",
         "Si, siempre que sea por un tiempo inferior a 2 minutos.",
         "No, excepto para la carga ydescarga dentro del horario."
       ],
-      "correcta": 2
+      "imagen": "../img/test_077_p08.jpg"
     },
     {
-      "texto": "zQue vehiculo tendra preferencia de paso en un estrechamiento cuando la prioridad no este expresamente senalizada?",
+      "texto": "¿Que vehiculo tendra preferencia de paso en un estrechamiento cuando la prioridad no este expresamente senalizada?",
       "opciones": [
         "El vehiculo que tenga que dar marcha atras mayor distancia.",
         "El vehiculo que haya entrado primero.",
         "El vehiculo que haya llegado primero."
       ],
-      "correcta": 1,
       "imagen": "../img/test_077_p09.jpg"
     },
     {
@@ -91,56 +84,51 @@
         "Ponernos cualquierprenda reflectante.",
         "Ponernosun chaleco reflectante certificado.",
         "Ponernos el chaleco homologado, una vez estemos fuera del vehiculo."
-      ],
-      "correcta": 1
+      ]
     },
     {
-      "texto": "Que haremos ante un fallo de los frenos?",
+      "texto": "¿Que haremos ante un fallo de los frenos?",
       "opciones": [
         "Tirar de la palanca del freno de estacionamientobruscamente.",
         "Chocar gradualmente contra cualquier objeto rigido de la via para detenerse cuanto antes.",
         "Bombear el pedal de freno, por si alguno de los circuitos conserva capacidad de frenada."
       ],
-      "correcta": 2,
       "imagen": "../img/test_077_p11.jpg"
     },
     {
-      "texto": "Los accidentes de trafico, ison una de las principales causas de lesiones?",
+      "texto": "Los accidentes de trafico, ¿ison una de las principales causas de lesiones?",
       "opciones": [
         "No,pero son una de las principales causas de mortalidad",
         "No,y tampoco son una de las principales causas demortalidad.",
         "Si,ytambien son una de las principales causas de mortalidad."
       ],
-      "correcta": 2,
       "imagen": "../img/test_077_p12.jpg"
     },
     {
-      "texto": "Podemos circular con un vehiculo con escape libre?",
+      "texto": "¿Podemos circular con un vehiculo con escape libre?",
       "opciones": [
         "Si, pero no podemos hacerlo en vias urbanas ya que causariamos molestias a los vecinos.",
         "No, pues esta prohibida la circulacion con el escape libre tanto en vias urbanas como interurbanas.",
         "No,si la conduccion es vias interurbanas."
       ],
-      "correcta": 1,
       "imagen": "../img/test_077_p13.jpg"
     },
     {
-      "texto": "La luz de posicion de los vehiculos, ique indica?",
+      "texto": "La luz de posicion de los vehiculos, ¿ique indica?",
       "opciones": [
         "El lugar que ocupa en la calzada y la anchura del vehiculo.",
-        "Que el vehiculoesta parado.",
+        "Que el vehiculo esta parado.",
         "Que el vehiculo esta circulando."
-      ],
-      "correcta": 0
+      ]
     },
     {
-      "texto": "En un tunel, el conductor de una motocicleta, ique distancia debe dejar con el vehiculo de delante en caso de queno pretenda adelantarlo?",
+      "texto": "En un tunel, el conductor de una motocicleta, ¿ique distancia debe dejar con el vehiculo de delante en caso de que no pretenda adelantarlo?",
       "opciones": [
         "150 metros.",
         "50 metros.",
         "100 metros."
       ],
-      "correcta": 2
+      "imagen": "../img/test_077_p15.jpg"
     },
     {
       "texto": "Las marcas viales que senalizan un tramo de obras...",
@@ -149,17 +137,15 @@
         "solamentealertan sobrelanecesidad de extremarlaprecaucion.",
         "solamentehay que respetarlas cuandohay personas trabajando."
       ],
-      "correcta": 0,
       "imagen": "../img/test_077_p16.jpg"
     },
     {
-      "texto": "La carga que sobresalga por detras en un turismo, idebera ser senalizada?",
+      "texto": "La carga que sobresalga por detras en un turismo, ¿idebera ser senalizada?",
       "opciones": [
         "Si, y cuando sea necesario tambien la senalizaremos con una luz roja.",
         "No, en los turismos no hace falta senalizar la carga.",
         "No debera senalizarse si la carga sobresale menos de un 10%."
       ],
-      "correcta": 0,
       "imagen": "../img/test_077_p17.jpg"
     },
     {
@@ -169,17 +155,16 @@
         "0,30 miligramos por litro.",
         "0,50 gramos por litro."
       ],
-      "correcta": 0,
       "imagen": "../img/test_077_p18.jpg"
     },
     {
-      "texto": "Si estamos en posesion del permiso de la clase A, con mas de un ano de antiguedad, y obtenemos el de la clase B, zdeberemos llevar la placa L en nuestro vehiculo?",
+      "texto": "Si estamos en posesion del permiso de la clase A, con mas de un ano de antiguedad, y obtenemos el de la clase B, ¿zdeberemos llevar la placa L en nuestro vehiculo?",
       "opciones": [
         "Si, pues se trata de permisos distintos.",
         "Si, durante 2 anos.",
         "No."
       ],
-      "correcta": 2
+      "imagen": "../img/test_077_p19.jpg"
     },
     {
       "texto": "Debe saber que a partir de la senal hay peligro por la proximidad de...",
@@ -188,66 +173,61 @@
         "una zonacondesprendimientosfrecuentes.",
         "un tramo de via donde existe el riesgo de que se proyecte la gravilla al pasar los vehiculos."
       ],
-      "correcta": 2
+      "imagen": "../img/test_077_p20.jpg"
     },
     {
-      "texto": "zQué significa esta senal?",
+      "texto": "¿Qué significa esta senal?",
       "opciones": [
         "Calzada de 2 carriles con bifurcacion hacia la izquierda.",
         "Calzada de 3 carriles con bifurcacion hacia la izquierda.",
-        "Calzada de3carriles con bifurcacion hacia la derecha."
+        "Calzada de 3 carriles con bifurcacion hacia la derecha."
       ],
-      "correcta": 1,
       "imagen": "../img/test_077_p21.jpg"
     },
     {
-      "texto": "zEsta permitido estacionar en doble fila?",
+      "texto": "¿Esta permitido estacionar en doble fila?",
       "opciones": [
         "Si, menos de 2 minutos.",
         "No.",
         "Si, si no hay sitio en las proximidades para dejar el vehiculo al borde de la calzada."
       ],
-      "correcta": 1,
       "imagen": "../img/test_077_p22.jpg"
     },
     {
-      "texto": "Un turismo transporta una carga que sobresale por detras, zesta obligado a senalizarla?",
+      "texto": "Un turismo transporta una carga que sobresale por detras, ¿zesta obligado a senalizarla?",
       "opciones": [
-        "Si.conuntraporojo",
+        "Si, con un trapo rojo.",
         "No, solo es obligatorio para los camiones.",
         "Si, con un panel reglamentario."
       ],
-      "correcta": 2,
       "imagen": "../img/test_077_p23.jpg"
     },
     {
-      "texto": "zEn que vias utilizaremos las luces de corto alcance entre el ocaso y la salida del sol?",
+      "texto": "¿En que vias utilizaremos las luces de corto alcance entre el ocaso y la salida del sol?",
       "opciones": [
         "Solo enlas viasurbanas suficientementeiluminadas.",
         "Tanto en viasurbanas como interurbanas suficientemente iluminadas.",
         "Soloen las vias interurbanas insuficientemente iluminadas."
       ],
-      "correcta": 1,
       "imagen": "../img/test_077_p24.jpg"
     },
     {
-      "texto": "zCual es la principal causa de los accidentes por alcance?",
+      "texto": "¿Cual es la principal causa de los accidentes por alcance?",
       "opciones": [
         "Las velocidades anormalmente reducidas.",
         "No guardar la distancia de seguridad con el vehiculo que circula delante.",
         "Las velocidades superiores a 100 km por hora."
       ],
-      "correcta": 1,
       "imagen": "../img/test_077_p25.jpg"
     },
     {
-      "texto": "zQue indican estas senales?",
+      "texto": "¿Que indican estas senales?",
       "opciones": [
         "Que estaprohibido circular a mas de 60km/h en la interseccion.",
         "Que esta prohibido circular a mas de 60 km/h en toda la via.",
         "Que es obligatorio circular a 60 km/h."
       ],
-      "correcta": 0
+      "imagen": "../img/test_077_p26.jpg"
     },
     {
       "texto": "La distancia de frenado de un vehiculo cargado es...",
@@ -255,17 +235,15 @@
         "igual que cuando circula sin carga.",
         "menor que cuando circula sin carga.",
         "mayor que cuando circula sin carga."
-      ],
-      "correcta": 2
+      ]
     },
     {
-      "texto": "Al llegar a este punto de peaje, ipor que carriles podremos pasar?",
+      "texto": "Al llegar a este punto de peaje, ¿ipor que carriles podremos pasar?",
       "opciones": [
         "Por cualquiera de los tres carriles.",
         "Solo por el central.",
         "Por el de la derecha."
       ],
-      "correcta": 1,
       "imagen": "../img/test_077_p28.jpg"
     },
     {
@@ -275,17 +253,15 @@
         "solo gastos en atencion y tratamiento de los heridos.",
         "danos a la via y el entorno."
       ],
-      "correcta": 2,
       "imagen": "../img/test_077_p29.jpg"
     },
     {
-      "texto": "zSe puede circular pisando las lineas discontinuas del centro de la calzada en algun caso?",
+      "texto": "¿Se puede circular pisando las lineas discontinuas del centro de la calzada en algun caso?",
       "opciones": [
-        "Si,si es un tramorecto con visibilidad y siempre que no vengan vehiculos circulando en sentido contrario.",
+        "Si, si es un tramo recto con visibilidad y siempre que no vengan vehiculos circulando en sentido contrario.",
         "Si, en calzadas con carriles estrechos.",
-        "Si, siempre que no moleste. Corregir el test"
+        "Si, siempre que no moleste."
       ],
-      "correcta": 1,
       "imagen": "../img/test_077_p30.jpg"
     }
   ]

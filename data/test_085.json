@@ -1,0 +1,263 @@
+{
+  "test_id": 85,
+  "preguntas": [
+    {
+      "texto": "En un tramo de gran pendiente, ¿ique vehiculo pasara primero en un estrechamiento en el que no esta senalizada la prioridad?",
+      "opciones": [
+        "El vehiculo con mayor dificultad de maniobra.",
+        "El que circula en sentido ascendente.",
+        "El que circula en sentido descendente."
+      ],
+      "imagen": "../img/test_085_p01.jpg"
+    },
+    {
+      "texto": "Un peaton que empuja un carrito, ¿ipor donde puede circular?",
+      "opciones": [
+        "Solopor la zona peatonal.",
+        "Porla zona peatonal, opor el arcen o la calzada si pudiera obstaculizar el paso.",
+        "Soloporlacalzada"
+      ],
+      "imagen": "../img/test_085_p02.jpg"
+    },
+    {
+      "texto": "Los principales factores que intervienen en un accidente son...",
+      "opciones": [
+        "la via y su entorno.",
+        "la via y su entorno, el vehiculo y el factor humano.",
+        "el vehiculo y su carga."
+      ]
+    },
+    {
+      "texto": "Si quiero incorporarme a la circulacion efectuando marcha atras, ¿ique precauciones debo tomar?",
+      "opciones": [
+        "No recorrer una distancia mayor de 15metros.",
+        "Incorporarme aunque invada un cruce de vias.",
+        "No recorrer mas de 40 metros."
+      ],
+      "imagen": "../img/test_085_p04.jpg"
+    },
+    {
+      "texto": "Un agente con el brazo levantado verticalmente obliga a los vehiculos que se aproximan de frente a ...",
+      "opciones": [
+        "detenerse.",
+        "reducir la velocidad.",
+        "continuar la marcha."
+      ],
+      "imagen": "../img/test_085_p05.jpg"
+    },
+    {
+      "texto": "¿De noche y con lluvia muy intensa zes obligatorio llevar las luces antiniebla traseras?",
+      "opciones": [
+        "Sí.",
+        "Si, y ademas las delanteras antiniebla.",
+        "Si,y ademas las de corto alcance o de cruce."
+      ],
+      "imagen": "../img/test_085_p06.jpg"
+    },
+    {
+      "texto": "El vehiculo amarillo disminuye la velocidad porque el adelantamiento que esta haciendo el vehiculo rojo es peligroso, ¿zes correcto?",
+      "opciones": [
+        "No, el vehiculo amarillo no debe variar de velocidad. con las luces.",
+        "Si, con el fin de que el vehiculo rojo vuelva cuanto antes a la derecha."
+      ],
+      "imagen": "../img/test_085_p07.jpg"
+    },
+    {
+      "texto": "En una via interurbana insuficientemente iluminada, un turismo circula a menos de 4o km/h. ¿Puede circular con la luz de corto alcance?",
+      "opciones": [
+        "Si, pero puede llevar la de largo alcance cuando no deslumbra.",
+        "No,debellevar la luz delargo alcance obligatoriamente",
+        "No."
+      ]
+    },
+    {
+      "texto": "¿A nombre de quien debe estar inscrito el vehiculo en el registro oficial correspondiente?",
+      "opciones": [
+        "Anombre del conductor habitual.",
+        "A nombre del titular del vehiculo.",
+        "Es indiferente."
+      ],
+      "imagen": "../img/test_085_p09.jpg"
+    },
+    {
+      "texto": "¿Puede parar en una zona de parada y estacionamiento de uso exclusivo para transporte publico urbano?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Pararsi,pero no estacionar."
+      ],
+      "imagen": "../img/test_085_p10.jpg"
+    },
+    {
+      "texto": "¿Podremos utilizar una glorieta para efectuar un cambio de sentido de la marcha?",
+      "opciones": [
+        "No, las glorietas no las podemos usar para efectuar cambios de sentido.",
+        "Si, las glorietas son un lugar adecuado."
+      ],
+      "imagen": "../img/test_085_p11.jpg"
+    },
+    {
+      "texto": "Siobtenemos hoy nuestro primerpermiso de conducir sabremos quela tasa maxima de alcoholemia en aire espirado sera de...",
+      "opciones": [
+        "0,30 mg de alcohol por cada litro de aire.",
+        "0,15 mg de alcohol por cada litro de aire.",
+        "0,26 mg de alcohol por cada litro de aire."
+      ],
+      "imagen": "../img/test_085_p12.jpg"
+    },
+    {
+      "texto": "¿Cual es la velocidad maxima a la que le estapermitido circular poruna autovia conuna autocaravana de MMA inferior a 3500kg?",
+      "opciones": [
+        "100 km/h.",
+        "120 km/h.",
+        "90 km/h."
+      ],
+      "imagen": "../img/test_085_p13.jpg"
+    },
+    {
+      "texto": "La funcion de los sistemas de seguridad pasiva de un vehiculo consiste en...",
+      "opciones": [
+        "la misma que la de los elementos de seguridad activa.",
+        "evitar o disminuir los danos que se produzcan en caso de accidente.",
+        "evitar que se produzca un accidente."
+      ],
+      "imagen": "../img/test_085_p14.jpg"
+    },
+    {
+      "texto": "¿Esta senal prohibe efectuar un cambio de direccion a la izquierda?",
+      "opciones": [
+        "Sí.",
+        "No."
+      ],
+      "imagen": "../img/test_085_p15.jpg"
+    },
+    {
+      "texto": "¿Que le indica la senal en esta via de sentido uinico?",
+      "opciones": [
+        "Queestaprohibida la parada yel estacionamientoen el ladoderecho.",
+        "Que esta prohibida la parada y el estacionamiento en ambosladosde la calzada.",
+        "Que esta prohibida laparada en el ladoderecho de la calzada."
+      ],
+      "imagen": "../img/test_085_p16.jpg"
+    },
+    {
+      "texto": "Si el conductor ha ingerido bebidas alcoholicas el tiempo de reaccion...",
+      "opciones": [
+        "Aumenta.",
+        "Disminuye.",
+        "Si no se sobrepasan los O,30 gramosde alcohol por litro de sangre, no tendra ninguna consecuencia."
+      ],
+      "imagen": "../img/test_085_p17.jpg"
+    },
+    {
+      "texto": "En esta motocicleta, ¿idebe llevar casco?",
+      "opciones": [
+        "No, no es obligatorio; pero debe llevar abrochado el cinturon de seguridad.",
+        "Si, el casco es obligatorio pero no el cinturon de seguridad.",
+        "Si, y ademas es obligatorio llevar abrochado el cinturon de seguridad."
+      ],
+      "imagen": "../img/test_085_p18.jpg"
+    },
+    {
+      "texto": "¿En que situacion se puede encender solamente la luz de posicion entre la puesta y la salida del sol?",
+      "opciones": [
+        "Cuando circule por una carretera suficientemente iluminada.",
+        "Cuando circule poruna calle suficientemente iluminada.",
+        "Para inmovilizar el vehiculo en un arcen fuera de poblado."
+      ]
+    },
+    {
+      "texto": "¿Es obligatorio llevar un botiquin de primeros auxilios?",
+      "opciones": [
+        "Sí.",
+        "No."
+      ],
+      "imagen": "../img/test_085_p20.jpg"
+    },
+    {
+      "texto": "¿Que luces antiniebla es obligatorio llevar con niebla densa durante el dia?",
+      "opciones": [
+        "Luz antiniebla trasera.",
+        "Luz antiniebla delantera.",
+        "Luz antiniebla delantera y trasera."
+      ],
+      "imagen": "../img/test_085_p21.jpg"
+    },
+    {
+      "texto": "¿Que circunstancias del conductor favorecen la aparicion de la fatiga?",
+      "opciones": [
+        "Manteneruna velocidad adecuada durante mucho tiempo, ya que requiere mucha concentracion.",
+        "Conducir durante largos periodos sin parar o haciendo descansos inadecuados.",
+        "Conducir manteniendo los habitos normales de conduccion."
+      ]
+    },
+    {
+      "texto": "Si llevamos un retrovisor interior panoramico, ¿ipodremos sustituir el retrovisor exterior derecho cuando sea obligatorio suuso?",
+      "opciones": [
+        "Sí.",
+        "No."
+      ],
+      "imagen": "../img/test_085_p23.jpg"
+    },
+    {
+      "texto": "Dentro de poblado, en una via de tres carriles para el mismo sentido y delimitados por marcas viales, ¿icircular por el carril de la izquierda es correcto?",
+      "opciones": [
+        "No,deberemos circularporla derecha.",
+        "Si, si es el que mejor conviene a nuestro destino.",
+        "Deberemos circular solo por el derecho o por el central."
+      ],
+      "imagen": "../img/test_085_p24.jpg"
+    },
+    {
+      "texto": "¿Es peligroso mandar un mensaje con el telefono movil mientras se conduce?",
+      "opciones": [
+        "Si, porque puede provocar la distraccion del conductor.",
+        "No, porque el conductor estara mas atento a la conduccion.",
+        "No,sisecirculadespacio."
+      ],
+      "imagen": "../img/test_085_p25.jpg"
+    },
+    {
+      "texto": "En una calzada con dos sentidos hay un refugio en el centro. ¿Por que lado esta permitido circular?",
+      "opciones": [
+        "Por el lado derecho del refugio.",
+        "Porcualquieradeellos,indistintamente.",
+        "Por el lado izquierdo del refugio."
+      ],
+      "imagen": "../img/test_085_p26.jpg"
+    },
+    {
+      "texto": "El vehiculo rojo, ¿zdonde se detendra para realizar el SToP?",
+      "opciones": [
+        "Justo antesdellegara la interseccion.",
+        "Antes de la interseccion sin pisar la marca vial de STOP.",
+        "Ante la linea de detencion."
+      ],
+      "imagen": "../img/test_085_p27.jpg"
+    },
+    {
+      "texto": "Son remolques o semirremolques pesados aquellos que tienen una masa maxima autorizada .",
+      "opciones": [
+        "igual a 750 kg.",
+        "que supera los 750 kg.",
+        "que no supera los 750 kg."
+      ]
+    },
+    {
+      "texto": "Cuando conduce una motocicleta, debe tener en cuenta que...",
+      "opciones": [
+        "cuanto mayor es la velocidad, hay mayor dificultad para mantener el equilibrio.",
+        "es menos estable y mas fragil que el resto de los vehiculos.",
+        "es mas visible que otros automoviles."
+      ]
+    },
+    {
+      "texto": "¿Si el vehiculo de la imagen circula a 80 km/h,zlo hara correctamente a partir dela senal?",
+      "opciones": [
+        "Sí.",
+        "No."
+      ],
+      "imagen": "../img/test_085_p30.jpg"
+    }
+  ]
+}

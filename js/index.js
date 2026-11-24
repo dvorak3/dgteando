@@ -152,7 +152,7 @@ function renderTabla() {
     const enlace = document.createElement('a');
     enlace.className = 'fila-test';
     enlace.dataset.num = numStr;
-    enlace.href = `tests/test_${numStr}.html?modo=${modo}`;
+    enlace.href = `test.html?id=${numStr}&modo=${modo}`;
 
     const celdaFallosHTML = realizado > 0
       ? `<div class="celda-fallos clickable" title="Ver evolución de fallos">
@@ -193,7 +193,7 @@ function renderTabla() {
 function actualizarEnlaces() {
   const modo = obtenerModoSeleccionado();
   document.querySelectorAll('.fila-test').forEach(a => {
-    a.href = `tests/test_${a.dataset.num}.html?modo=${modo}`;
+    a.href = `test.html?id=${a.dataset.num}&modo=${modo}`;
   });
 }
 

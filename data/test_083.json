@@ -1,0 +1,264 @@
+{
+  "test_id": 83,
+  "preguntas": [
+    {
+      "texto": "¿Que condiciones tienen que tener los neumaticos de una motocicleta?",
+      "opciones": [
+        "Las dos ruedas tienen que ser del mismo tamano y caracteristicas.",
+        "No tienen que presentar cortes, roces, deformaciones, etc.",
+        "Las ranuras de la banda de rodadura tienen que tener una profundidad minima de 1,6 milimetros."
+      ],
+      "imagen": "../img/test_083_p01.jpg"
+    },
+    {
+      "texto": "El vehiculo del arcen, ¿zesta bien estacionado?",
+      "opciones": [
+        "Si, porque no molesta.",
+        "No, porque en el arcen no se puede estacionar.",
+        "No,porquenoesta senalizado."
+      ],
+      "imagen": "../img/test_083_p02.jpg"
+    },
+    {
+      "texto": "En una carretera, para bajar del vehiculo a causa de una emergencia deberemos...",
+      "opciones": [
+        "Ponernos cualquier prenda reflectante.",
+        "Ponernosun chaleco reflectante certificado.",
+        "Ponernos el chaleco homologado, una vez estemos fuera del vehiculo."
+      ]
+    },
+    {
+      "texto": "Si al accionar los frenos aparecen chirridos o ruidos metalicos sera debido aque...",
+      "opciones": [
+        "El nivel de liquido de frenos esta por debajo del minimo.",
+        "Ha entrado aire en el circuito de frenado.",
+        "Laspastillas de freno se han gastadoy requieren su sustitucion."
+      ],
+      "imagen": "../img/test_083_p04.jpg"
+    },
+    {
+      "texto": "En caso de averia de su motocicleta en una calzada, ¿icomo debe senalizarlo si representa un obstaculopara la circulacion?",
+      "opciones": [
+        "Obligatoriamente con las luces de posicion.",
+        "Con el dispositivo de presenalizacion de peligro que esta obligado a llevar consigo.",
+        "Con la luz de emergencia si la tiene instalada."
+      ],
+      "imagen": "../img/test_083_p05.jpg"
+    },
+    {
+      "texto": "Debe abstenerse de realizar un cambio de direccion cuando..",
+      "opciones": [
+        "no tenga prioridad.",
+        "la velocidad y distancia de los vehiculos del sentido contrario no permitan efectuar la maniobra con seguridad.",
+        "la via seade sentido unico."
+      ]
+    },
+    {
+      "texto": "Un conductor novel, ¿za que esta obligado?",
+      "opciones": [
+        "A llevar visible en la parte posterior izquierda la placa L.",
+        "A no circular a mas de 80 km/h.",
+        "A no circular a mas de100 Km/h en autopista o autovia."
+      ]
+    },
+    {
+      "texto": "Los conductores de bicicletas, ¿ipueden circular por los arcenes de las autopistas?",
+      "opciones": [
+        "No, en ningun caso.",
+        "Si, cuando sean mayores de 14 anos.",
+        "Si, siempre."
+      ],
+      "imagen": "../img/test_083_p08.jpg"
+    },
+    {
+      "texto": "El alcohol, la fatiga y la velocidad excesiva, ¿ide que factor de riesgo forman parte?",
+      "opciones": [
+        "Delfactor humano.",
+        "Del factor via y entorno.",
+        "Del factor vehiculo"
+      ]
+    },
+    {
+      "texto": "Si los amortiguadores de nuestro vehiculo estan en mal estado, afectaran entre otros...",
+      "opciones": [
+        "A la distancia defrenado,que sera mayor.",
+        "A la distancia de frenado, que sera menor.",
+        "A la distancia dereaccion."
+      ],
+      "imagen": "../img/test_083_p10.jpg"
+    },
+    {
+      "texto": "La senal horizontal de limitacion de velocidad situada en un carril, afecta ..",
+      "opciones": [
+        "unicamentea vehiculospesados.",
+        "solamente a los vehiculos que circulen por el carril en el que esta situada la senal.",
+        "atodos ycada uno de los carriles quetengala calzada."
+      ],
+      "imagen": "../img/test_083_p11.jpg"
+    },
+    {
+      "texto": "¿Si nos encontramos un nino que esta cruzando la calzada por un lugar prohibido,ique debemos hacer?",
+      "opciones": [
+        "Anticiparnos a las posibles reacciones del ninomoderando lavelocidad, llegando incluso a detenernos.",
+        "Continuaremos, actuando sobre la marcha segun la reaccion del nino.",
+        "Continuaremos nuestra marcha pitandole para que se de cuenta de su error."
+      ],
+      "imagen": "../img/test_083_p12.jpg"
+    },
+    {
+      "texto": "¿Esta permitido adelantar en una curva o cambio de rasante de visibilidad reducida?",
+      "opciones": [
+        "Si, moderando la velocidad.",
+        "Si, si no hay senal que lo prohiba.",
+        "No, salvo si los dos sentidos estan claramente delimitados y la maniobra puede efectuarse sin invadir el sentido contrario."
+      ]
+    },
+    {
+      "texto": "¿Por que tipo de vias no pueden circular los ciclomotores?",
+      "opciones": [
+        "Por las autopistas yautovias.",
+        "Porlasautopistasunicamente.",
+        "Por las vias que no tengan arcen."
+      ]
+    },
+    {
+      "texto": "Esta senal indica...",
+      "opciones": [
+        "la existencia de una via para peatones, ciclos y,en sucaso, VMP, segregada del trafico motorizado.",
+        "la interseccion con una via ciclista.",
+        "que el acceso esta prohibido a ciclos."
+      ],
+      "imagen": "../img/test_083_p15.jpg"
+    },
+    {
+      "texto": "La prohibicion de estacionar, ¿zterminara cuando finalice el peligro indicado por la senal superior?",
+      "opciones": [
+        "Sí.",
+        "No."
+      ],
+      "imagen": "../img/test_083_p16.jpg"
+    },
+    {
+      "texto": "A la vista de esta senal, ¿zpodra usted efectuar un cambio de sentido?",
+      "opciones": [
+        "Sí.",
+        "No.",
+        "Si, tanto por el lado derecho como por el izquierdo."
+      ],
+      "imagen": "../img/test_083_p17.jpg"
+    },
+    {
+      "texto": "Una de las principales causas de accidente en personas jovenes es...",
+      "opciones": [
+        "la falta deconfianza en sucapacidadde conduccion.",
+        "la falta de reflejos.",
+        "el exceso de velocidad."
+      ]
+    },
+    {
+      "texto": "¿Esta permitido parar o estacionar en un paso para peatones y en sus proximidades?",
+      "opciones": [
+        "Si, siempre.",
+        "En el paso para peatones se puede parar y,en sus proximidades, se puede parar y estacionar.",
+        "En elpaso parapeatones,no; pero en sus proximidades, si."
+      ],
+      "imagen": "../img/test_083_p19.jpg"
+    },
+    {
+      "texto": "¿Que haremos al encontrar un semaforo rojo en la entrada de un tunel?",
+      "opciones": [
+        "Pasarconprecaucion.",
+        "Esperar hasta quecambiea verde.",
+        "Esperar hasta que se apague la luz roja."
+      ],
+      "imagen": "../img/test_083_p20.jpg"
+    },
+    {
+      "texto": "¿Se puede circular marcha atras en una autopista?",
+      "opciones": [
+        "No.",
+        "Si, para salir de la autopista.",
+        "Si, cuando sea necesariopararealizaralguna maniobra."
+      ]
+    },
+    {
+      "texto": "Una motocicleta que alcanza una velocidad superior a 10o kilometros por hora, debe Ilevar obligatoriamente..",
+      "opciones": [
+        "un espejo retrovisor en el lado derecho, solamente.",
+        "un espejo retrovisor en el lado izquierdo, solamente.",
+        "dos espejos retrovisores, uno a cada lado."
+      ]
+    },
+    {
+      "texto": "La tasa maxima de alcohol para los conductores de vehiculos que transportan mercancias peligrosas...",
+      "opciones": [
+        "es de 0,3 miligramos por litro en aire espirado.",
+        "es de 0,15 miligramos por litro en aire espirado.",
+        "depende de la masa maxima autorizada del vehiculo con el que se realice el transporte."
+      ],
+      "imagen": "../img/test_083_p23.jpg"
+    },
+    {
+      "texto": "Si dos vehiculos se cruzan en una curva llevando encendido el alumbrado de largo alcance, ¿icual de los dos cambiara antes a corto alcance?",
+      "opciones": [
+        "El que circula por la parte exterior de la curva.",
+        "El que circula por la parte interior de la curva.",
+        "Ninguno de los dos."
+      ],
+      "imagen": "../img/test_083_p24.jpg"
+    },
+    {
+      "texto": "¿Que significa esta senal?",
+      "opciones": [
+        "Prohibido estacionarpor vado.",
+        "Estacionamiento limitadoentiempo.",
+        "Estacionamientoprohibido."
+      ],
+      "imagen": "../img/test_083_p25.jpg"
+    },
+    {
+      "texto": "Como debe realizar la operacion de carga y descarga, ¿ya sea de personas o de mercancias?",
+      "opciones": [
+        "Rapidamente,pero solo enlas zonas donde estepermitido.",
+        "Sin ocasionar peligros y, si es posible, por el lado del vehiculo mas proximo al borde de la calzada.",
+        "Senalizando correctamente, pudiendo realizarla por cualquier lado del vehiculo."
+      ],
+      "imagen": "../img/test_083_p26.jpg"
+    },
+    {
+      "texto": "Fumar durante la conduccion...",
+      "opciones": [
+        "proporcionatranquilidad.",
+        "esta prohibido.",
+        "puede disminuir el nivel de atencion."
+      ],
+      "imagen": "../img/test_083_p27.jpg"
+    },
+    {
+      "texto": "En tramos con suficiente visibilidad y sin formar aglomeracion, ipodran los ciclistas circular en columna de a dos, ¿pegandose a la derecha?",
+      "opciones": [
+        "Sí.",
+        "No, siempre por el arcen.",
+        "No, siempre en fila de a uno."
+      ],
+      "imagen": "../img/test_083_p28.jpg"
+    },
+    {
+      "texto": "Tomar un analgésico para el dolor de cabeza, ¿zpuede afectar a la conduccion?",
+      "opciones": [
+        "Solosisemezcla con alcohol.",
+        "No,los analgesicos son inofensivos.",
+        "Si."
+      ]
+    },
+    {
+      "texto": "Si nos encontramos un peaton atravesando la calzada por un paso que no esta senalizado, ¿ique haremos?",
+      "opciones": [
+        "Detenernos y cederle el paso.",
+        "Moderar la velocidad, hasta incluso llegar a detenernos,para no suponer un riesgo para el.",
+        "Pitaremosparaavisarleyqueseaparte."
+      ],
+      "imagen": "../img/test_083_p30.jpg"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test · dgt-eando</title>
+  <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+
+  <main class="test-column">
+    <div class="test-title-row">
+      <h1 class="test-title">test <span class="num" id="testNum">nº …</span></h1>
+      <span class="modo-badge" id="lblModo">Modo examen</span>
+    </div>
+
+    <!-- Avisos (falta id, JSON no encontrado, etc.) -->
+    <div id="avisoTest" role="alert" style="display:none;"></div>
+
+    <form id="formTest" onsubmit="return false;">
+      <div id="preguntasContainer"></div>
+
+      <div class="corregir-box">
+        <button type="button" class="btn-corregir" id="btnCorregir" onclick="corregirTest()">Corregir el test</button>
+        <a href="index.html" class="btn-volver" id="btnVolver">Volver a la lista</a>
+      </div>
+
+      <div class="resultado-panel" id="resultadoPanel"></div>
+      <div id="estadoGuardado" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <noscript>Este test necesita JavaScript. <a href="index.html">Volver a la lista</a></noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/storage.js?v=4"></script>
+  <script src="js/test_engine.js?v=2"></script>
+</body>
+</html>

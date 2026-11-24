@@ -1,0 +1,269 @@
+{
+  "test_id": 86,
+  "preguntas": [
+    {
+      "texto": "Si desea cambiar de direccion a la derecha, ¿zle afecta el semaforo?",
+      "opciones": [
+        "No,el semaforo solo me afecta si quiero seguir de frente.",
+        "Si, tendre que esperar a que cambie a verde."
+      ],
+      "imagen": "../img/test_086_p01.jpg"
+    },
+    {
+      "texto": "Esta senal indica que los carriles sobre los que estan situadas las senales de velocidad minima...",
+      "opciones": [
+        "solo puede utilizarlos si circula a una velocidad inferior a la indicada.",
+        "son para vehiculos rapidos y el carril situado mas a la derecha es para vehiculos lentos.",
+        "solo puede utilizarlos si circula a una velocidad igual o superior a la indicada."
+      ],
+      "imagen": "../img/test_086_p02.jpg"
+    },
+    {
+      "texto": "El conductor de un vehiculo que observa que va a ser adelantado, debe...",
+      "opciones": [
+        "acercarse al bordederecho dela calzada,para facilitar la maniobra.",
+        "aumentarla velocidad.",
+        "encender el indicador de direccion derecho para mostrar que va a permitir la maniobra."
+      ],
+      "imagen": "../img/test_086_p03.jpg"
+    },
+    {
+      "texto": "Un turismo en esta via, ¿za que velocidad maxima puede adelantar?",
+      "opciones": [
+        "A 90 km/h",
+        "A 110 km/h.",
+        "A120 km/h."
+      ],
+      "imagen": "../img/test_086_p04.jpg"
+    },
+    {
+      "texto": "El turismo, ¿zesta bien situado para girar a la izquierda?",
+      "opciones": [
+        "Si.",
+        "Si,porque circula dentro de poblado",
+        "No."
+      ],
+      "imagen": "../img/test_086_p05.jpg"
+    },
+    {
+      "texto": "¿Es correcto que el conductor de un turismo utilice un cojin en su asiento?",
+      "opciones": [
+        "Si, porque la altura mejora el campo de vision del conductor.",
+        "No,porque puede limitar la eficacia del cinturon de seguridad.",
+        "Si,porque el conductor va mas comodo."
+      ],
+      "imagen": "../img/test_086_p06.jpg"
+    },
+    {
+      "texto": "¿Esta prohibido parar o estacionar en la parte transitable del arcen de una via interurbana?",
+      "opciones": [
+        "Solamenteparar.",
+        "Tantoparar como estacionar. b)Tantoparar como estacionar.",
+        "Solamenteestacionar."
+      ],
+      "imagen": "../img/test_086_p07.jpg"
+    },
+    {
+      "texto": "Las personas que circulan en una silla de ruedas con motor, ¿ison peatones?",
+      "opciones": [
+        "No,porquepueden circular por la calzada.",
+        "Si."
+      ],
+      "imagen": "../img/test_086_p08.jpg"
+    },
+    {
+      "texto": "Esta prohibido conducir...",
+      "opciones": [
+        "mas de una hora seguida sin descansar, pero solo en via urbana.",
+        "mas de una hora seguida sin descansar.",
+        "utilizando cascos o auriculares conectados a aparatos receptores o reproductores de sonido."
+      ]
+    },
+    {
+      "texto": "Cuando conduciendo su turismo adelante a un peaton por una via fuera de poblado, ¿ique separacion lateral de seguridad debera dejar?",
+      "opciones": [
+        "1,50metros comomaximo.",
+        "Un margen de seguridad proporcional a la anchura y caracteristicas de la via.",
+        "1,5 metros como minimo, ocupando de forma parcial o total el carril contiguo y siempre que existan las condiciones precisas."
+      ],
+      "imagen": "../img/test_086_p10.jpg"
+    },
+    {
+      "texto": "En un cruce no hay senales de preferencia. ¿Debe ceder el paso a un tranvia?",
+      "opciones": [
+        "No.",
+        "Si."
+      ],
+      "imagen": "../img/test_086_p11.jpg"
+    },
+    {
+      "texto": "En esta autopista dentro de poblado, ¿za que velocidad puede circular como maximo si no existe senalizacion?",
+      "opciones": [
+        "A70 km/h.",
+        "A120km/h.",
+        "A 80 km/h."
+      ],
+      "imagen": "../img/test_086_p12.jpg"
+    },
+    {
+      "texto": "Esta senal prohibe...",
+      "opciones": [
+        "estacionar,peropermiteparar.",
+        "pararyestacionar.",
+        "parar,peropermite estacionar."
+      ],
+      "imagen": "../img/test_086_p13.jpg"
+    },
+    {
+      "texto": "En esta calzada con un carril adicional, ¿zque vehiculos circulan correctamente?",
+      "opciones": [
+        "Solo el vehiculo que circula por el carril central.",
+        "Todos, los tres vehiculos que usan la calzada circulan correctamente.",
+        "Los dos vehiculos que circulan en el mismo sentido."
+      ],
+      "imagen": "../img/test_086_p14.jpg"
+    },
+    {
+      "texto": "A partir de esta senal...",
+      "opciones": [
+        "Seaconseja no sobrepasar los20km/hy tendranprioridad los peatones.",
+        "Esta prohibido sobrepasar los 10 km/h y tendran prioridad los peatones.",
+        "Al tratarse de una calle residencial la velocidad maxima sera de 30 km/h."
+      ],
+      "imagen": "../img/test_086_p15.jpg"
+    },
+    {
+      "texto": "Cuando al estacionar su vehiculo el conductor tenga que dejar su puesto, debera...",
+      "opciones": [
+        "Adoptar las precaucionesnecesarias para impedir el uso del vehiculo sin su autorizacion.",
+        "Dejarlo debidamente calzado.",
+        "Dejar el cambio de marchas en posicion de estacionamiento."
+      ],
+      "imagen": "../img/test_086_p16.jpg"
+    },
+    {
+      "texto": "¿Hay muchos vehiculos circulando y preve que va a quedar detenido en el paso para peatones. Debe entrar en el paso?",
+      "opciones": [
+        "Sí.",
+        "Si,cuandoel semaforoestaverde.",
+        "No,porquecortoelpasoalospeatones."
+      ],
+      "imagen": "../img/test_086_p17.jpg"
+    },
+    {
+      "texto": "Al entrar en una glorieta que no dispone de senalizacion que regule la preferencia de paso, debe...",
+      "opciones": [
+        "ceder el paso a los vehiculos que circulan dentro de la glorieta.",
+        "incorporarse antes que losvehiculos que seaproximen porsuizquierda.",
+        "pasar con normalidad porque tiene preferencia."
+      ],
+      "imagen": "../img/test_086_p18.jpg"
+    },
+    {
+      "texto": "En una interseccion sin senalizar, tienen prioridad de paso los vehiculos que circulen por...",
+      "opciones": [
+        "una glorieta sobre los que pretenden entrar en ella.",
+        "un carril de uso exclusivo para determinados vehiculos.",
+        "la via sin pavimentar."
+      ],
+      "imagen": "../img/test_086_p19.jpg"
+    },
+    {
+      "texto": "¿Tiene permitido circular una motocicleta por un carril habilitado en sentido contrario al habitual?",
+      "opciones": [
+        "Sí.",
+        "No.",
+        "Si, pero solo si se trata de una motocicleta de dos ruedas sin sidecar."
+      ],
+      "imagen": "../img/test_086_p20.jpg"
+    },
+    {
+      "texto": "Cuando llueve, ¿zhay que prestar especial atencion a alguna zona de la via en particular?",
+      "opciones": [
+        "Si, a losbadenes ya las zonas en lasque se pueden producir charcos.",
+        "No, puesto que circular con lluvia es muy peligroso en todas partes.",
+        "No, unicamentehay que prestar atencion cuando hay ninos en las proximidades."
+      ]
+    },
+    {
+      "texto": "Si un cuatriciclo ligero tiene estructura de autoproteccion y cinturones de seguridad, ¿zes obligatorio ponerse el casco?",
+      "opciones": [
+        "Si, pero unicamente en vias urbanas.",
+        "Si,pero unicamente fuera de poblado.",
+        "No, si asi consta en la tarjeta de inspeccion tecnica."
+      ],
+      "imagen": "../img/test_086_p22.jpg"
+    },
+    {
+      "texto": "Un turismo, ¿ique documentos debe llevar?",
+      "opciones": [
+        "El permiso de conduccion y la licencia de conduccion.",
+        "El permiso de circulacion, la tarjeta de inspeccion tecnica y el permiso de conduccion.",
+        "El recibo del impuesto de circulacion y certificado de garantia."
+      ]
+    },
+    {
+      "texto": "¿Que relacion existe entre la velocidad y el campo de vision del conductor?",
+      "opciones": [
+        "A mayor velocidad, mayor campo visual.",
+        "A mayor velocidad, menor campo visual.",
+        "Amenor velocidad,menor campo visual."
+      ],
+      "imagen": "../img/test_086_p24.jpg"
+    },
+    {
+      "texto": "¿Un turismo podra circular por el carril situado mas a la derecha?",
+      "opciones": [
+        "Si, los turismos podran circular opcionalmente mientras que las bicicletas deberan usarloobligatoriamente.",
+        "No.",
+        "Si, si no hay ningun ciclo usando dicho carril."
+      ],
+      "imagen": "../img/test_086_p25.jpg"
+    },
+    {
+      "texto": "Nada mas producirse un accidente, antes de atender a las victimas hay que...",
+      "opciones": [
+        "proteger y senializar la zona del accidente.",
+        "organizar a los servicios de urgencia.",
+        "avisara lapolicia."
+      ],
+      "imagen": "../img/test_086_p26.jpg"
+    },
+    {
+      "texto": "Este panel, colocado bajo una senal de prohibicion, indica...",
+      "opciones": [
+        "la distancia en que se aplica la prohibicion a ambos lados de la calzada.",
+        "la distancia al comienzo delaprohibicion.",
+        "la distancia en que se aplica la prohibicion en el sentido de la flecha."
+      ],
+      "imagen": "../img/test_086_p27.jpg"
+    },
+    {
+      "texto": "¿A qué vehiculos prohibe la circulacion esta senal?",
+      "opciones": [
+        "A los vehiculos de motor.",
+        "Alas motocicletasyturismos.",
+        "A toda clase de vehiculos."
+      ],
+      "imagen": "../img/test_086_p28.jpg"
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Via con circulacionreservadaaautobuses.",
+        "Parada de autobuses.",
+        "Carril reservado a autobuses."
+      ],
+      "imagen": "../img/test_086_p29.jpg"
+    },
+    {
+      "texto": "La senal indica que...",
+      "opciones": [
+        "nopuededesplazarse lateralmente ni a laderecha ni a la izquierda.",
+        "debe circular en el sentido indicado por la flecha, ya que es una calzada de sentido unico.",
+        "estaprohibidoel cambiodedireccion. c) esta prohibido el cambio de direccion."
+      ],
+      "imagen": "../img/test_086_p30.jpg"
+    }
+  ]
+}

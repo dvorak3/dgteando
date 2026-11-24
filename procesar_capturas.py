@@ -11,90 +11,208 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CARPETA_CAPTURAS_DEFAULT = os.path.join(BASE_DIR, "capturas_largas", "capturas")
 CARPETA_IMG = os.path.join(BASE_DIR, "img")
 CARPETA_DATA = os.path.join(BASE_DIR, "data")
-CARPETA_TESTS = os.path.join(BASE_DIR, "tests")
-CARPETA_TEMPLATES = os.path.join(BASE_DIR, "templates")
-RUTA_PLANTILLA_HTML = os.path.join(CARPETA_TEMPLATES, "test.html")
 
-PATRON_OPCION = re.compile(r"^(?:[Oo0Q\(\)\[\]•·]\s*)?([abcABC])[\)\.]\s*(.*)")
-PATRON_OPCION_SOLA = re.compile(r"^(?:[Oo0Q\(\)\[\]•·]\s*)?([abcABC])[\)\.]?$")
-PATRON_UI_CORTE = re.compile(r"^(?:ayuda|explicaci[oó]n:?)$", re.IGNORECASE)
+MAX_PREGUNTAS = 30
+ANCHO_REF = 1233          # ancho de las capturas con las que se calibraron los tamaños
+UMBRAL_VERDE = 25         # píxeles verdes mínimos para dar una opción por correcta
+
+_RADIO = r"[Oo0Q\(\)\[\]•·©@®◎○●¢]"   # lo que el OCR suele devolver para el círculo del radio-button
+PATRON_OPCION = re.compile(rf"^(?:{_RADIO}\s*)?([abcABC])[\)\.]\s*(.*)")
+PATRON_OPCION_SOLA = re.compile(rf"^(?:{_RADIO}\s*)?([abcABC])[\)\.]?$")
+
+# Textos de la interfaz que NO forman parte de la pregunta. Se comparan por prefijo, así que
+# "Explicación básica", "Explicación premium...", "Ver esquemas", "Corregir el test"... también cortan.
+PATRON_UI_CORTE = re.compile(
+    r"^(?:ayuda|explicaci.{1,2}n|ocultar|ver\s+esquemas|corregir\s+el\s+test|repetir\s+test|m[aá]s\s+dudas)(?!\w)",
+    re.IGNORECASE,
+)
+
+# Número de pregunta: "12." / "12)" / "12 ¿Qué..." / "12" suelto.
+# Exige puntuación (o mayúscula/¿ detrás) para NO confundir "4 fallos" del banner con la pregunta 4,
+# y rechaza "3.500 kg" (punto seguido de dígito).
+PATRON_NUM_CON_PUNTO = re.compile(r"^(\d{1,2})\s*[\.\)\-:](?!\d)\s*(.*)$")
+PATRON_NUM_CON_ESPACIO = re.compile(r"^(\d{1,2})\s+([¿¡A-ZÁÉÍÓÚÑ].*)$")
+PATRON_NUM_SOLO = re.compile(r"^(\d{1,2})\s*[\.\)]?$")
 
 
-def cargar_plantilla_html(ruta_plantilla=RUTA_PLANTILLA_HTML):
-    """Asegura la existencia de templates/ y carga la plantilla HTML externa."""
-    os.makedirs(os.path.dirname(ruta_plantilla), exist_ok=True)
-    if not os.path.isfile(ruta_plantilla):
-        raise FileNotFoundError(
-            f"[ERROR] No se encontró la plantilla HTML en '{ruta_plantilla}'. "
-            "Por favor, crea el archivo 'templates/test.html' antes de ejecutar el script."
-        )
-    with open(ruta_plantilla, "r", encoding="utf-8") as f:
-        return f.read()
+def detectar_numero_pregunta(txt):
+    """Devuelve el nº de pregunta (1..MAX_PREGUNTAS) si el texto empieza como '12.' o '12 ¿Qué', si no None."""
+    t = txt.strip()
+    for patron in (PATRON_NUM_CON_PUNTO, PATRON_NUM_CON_ESPACIO, PATRON_NUM_SOLO):
+        m = patron.match(t)
+        if m:
+            val = int(m.group(1))
+            if 1 <= val <= MAX_PREGUNTAS:
+                return val
+            return None
+    return None
 
 
-def generar_html_test(num_int, preguntas, plantilla_str):
-    """Sustituye los marcadores seguros en la plantilla HTML sin conflictos con llaves CSS/JS."""
-    preguntas_json = json.dumps(preguntas, ensure_ascii=False, indent=2)
-    return (
-        plantilla_str
-        .replace("{{NUM_INT}}", str(num_int))
-        .replace("{{PREGUNTAS_JSON}}", preguntas_json)
-    )
+# ------------------------------------------------------------------ signo "¿"
+# El modelo de RapidOCR por defecto (chino/inglés) no tiene "¿" en su diccionario, así que NUNCA lo
+# devuelve. Lo reconstruimos a partir del "?" final y de la estructura típica de las preguntas DGT.
+_INTERROG = (
+    r"(?:(?:en|a|de|con|para|por|sobre|hasta|desde)\s+)?"
+    r"(?:qué|cuál(?:es)?|cuándo|dónde|cómo|quién(?:es)?|cuánt[oa]s?)(?!\w)"
+)
+_RE_INTERROG_ACENTUADA = re.compile(_INTERROG, re.IGNORECASE)
+# primera palabra típica de una pregunta de sí/no: "¿Podrá circular...?", "¿Se podrá...?", "¿Es...?"
+_VERBOS_INICIO = {
+    "es", "son", "está", "están", "puede", "pueden", "podrá", "podrán", "podría", "podemos",
+    "debe", "deben", "hay", "se", "existe", "afecta", "influye", "tiene", "tienen", "estará",
+    "será", "serán", "autoriza", "permite", "obliga", "implica", "supone",
+}
+
+
+def _limpiar_basura_apertura(t):
+    """Quita caracteres basura que el OCR suele poner donde iría el '¿' (al inicio y tras , . ; :)."""
+    t = re.sub(r"^[\{\(\[¢£¡!?]+\s*", "", t)                        # basura delante del enunciado
+    t = re.sub(r"^[a-zñáéíóú](?=[A-ZÁÉÍÓÚÑ](?:[a-záéíóúñ]|\s))", "", t)   # 'gEn' -> 'En', 'éA qué' -> 'A qué'
+    t = re.sub(r"([,.;:]\s+)[\{\(\[¢£¡!?]+\s*(?=\w)", r"\1", t)      # ', {qué' -> ', qué'
+    t = re.sub(r"([,.;:]\s+)[a-zñáéíóú](?=[A-ZÁÉÍÓÚÑ](?:[a-záéíóúñ]|\s))", r"\1", t)
+    return t
+
+
+def restaurar_signos_interrogacion(txt):
+    """Inserta '¿' en un enunciado que termina en '?' pero no lo trae.
+
+    Reglas (en orden):
+      1. si una cláusula (inicio de texto o tras ', ' / '. ') empieza por 'qué/cuál/cómo/dónde...' -> ahí
+         va el '¿' (se usa la última que cumpla);
+      2. si el texto empieza por un verbo típico de pregunta sí/no (Podrá, Se, Es...) -> al principio;
+      3. si hay una oración introductoria ('Para estacionar, ...?') -> tras la última coma/punto;
+      4. si no hay nada de eso -> al principio.
+    No toca textos que ya traen '¿' o que no contienen '?'.
+    """
+    t = _limpiar_basura_apertura(txt.strip())
+    if t.count("?") != 1 or "¿" in t:
+        return t.replace("¡", "¿") if "?" in t else t
+
+    fin = t.rfind("?")
+    candidatas = [0] + [m.end() for m in re.finditer(r"[,.;:]\s+", t[:fin])]
+
+    for pos in reversed(candidatas):
+        if _RE_INTERROG_ACENTUADA.match(t[pos:]):
+            return t[:pos] + "¿" + t[pos:]
+
+    primera = re.match(r"[^\W\d_]+", t)
+    if primera and primera.group(0).lower() in _VERBOS_INICIO:
+        return "¿" + t
+
+    pos = candidatas[-1]
+    return t[:pos] + "¿" + t[pos:]
+
+
+def ordenar_en_lineas(cajas):
+    """Ordena cajas OCR por líneas (agrupando por centro vertical) y dentro de cada línea por x.
+
+    Sustituye al antiguo `round(y/10)`, que partía una misma línea en dos cuando su y caía en la frontera
+    entre dos 'cubos' de 10 px y desordenaba la letra de la opción respecto a su texto.
+    """
+    ordenadas = sorted(cajas, key=lambda c: (c["y1"] + c["y2"]) / 2)
+    lineas = []
+    for c in ordenadas:
+        cy = (c["y1"] + c["y2"]) / 2
+        alto = max(8, c["y2"] - c["y1"])
+        if lineas and abs(cy - lineas[-1]["cy"]) <= alto * 0.6:
+            lineas[-1]["items"].append(c)
+            n = len(lineas[-1]["items"])
+            lineas[-1]["cy"] = (lineas[-1]["cy"] * (n - 1) + cy) / n
+        else:
+            lineas.append({"cy": cy, "items": [c]})
+    resultado = []
+    for linea in lineas:
+        resultado.extend(sorted(linea["items"], key=lambda c: c["x1"]))
+    return resultado
 
 
 def escanear_ocr_completo(img_bgr, ocr_engine):
-    """Escanea la imagen por ventanas proporcionales al ancho y devuelve todas las cajas OCR."""
+    """Escanea la imagen por ventanas proporcionales al ancho y devuelve todas las cajas OCR.
+
+    Las ventanas se solapan un 25 %. Las líneas que quedan CORTADAS por el borde de una ventana se
+    descartan (aparecerán completas en la ventana vecina gracias al solape): antes se conservaban
+    truncadas y, al ser "duplicadas" de la versión completa, ésta se rechazaba.
+    """
     h, w, _ = img_bgr.shape
     alto_ventana = max(900, int(w * 1.6))
     solape = int(alto_ventana * 0.25)
     paso = max(450, alto_ventana - solape)
+    borde = 6
 
     cajas_globales = []
-    patron_num = re.compile(r"^(\d{1,2})[\.\-\)\s]+")
 
     for y_ini in range(0, h, paso):
         y_fin = min(h, y_ini + alto_ventana)
         trozo = img_bgr[y_ini:y_fin, :]
+        alto_trozo = y_fin - y_ini
         res, _ = ocr_engine(trozo)
         if not res:
             continue
+
+        n_previas = len(cajas_globales)   # sólo se deduplica contra ventanas ANTERIORES
 
         for bbox, txt, conf in res:
             txt_clean = txt.strip()
             if not txt_clean:
                 continue
 
+            y1_loc = min(pt[1] for pt in bbox)
+            y2_loc = max(pt[1] for pt in bbox)
+            if y_ini > 0 and y1_loc < borde:
+                continue                      # cortada por arriba
+            if y_fin < h and y2_loc > alto_trozo - borde:
+                continue                      # cortada por abajo
+
             x1 = min(pt[0] for pt in bbox)
-            y1 = y_ini + min(pt[1] for pt in bbox)
+            y1 = y_ini + y1_loc
             x2 = max(pt[0] for pt in bbox)
-            y2 = y_ini + max(pt[1] for pt in bbox)
+            y2 = y_ini + y2_loc
 
             duplicada = False
-            for prev in cajas_globales:
+            for prev in cajas_globales[:n_previas]:
                 if abs(prev["y1"] - y1) < 12 and abs(prev["x1"] - x1) < 18:
                     duplicada = True
+                    if len(txt_clean) > len(prev["txt"]):
+                        prev.update(x1=x1, y1=y1, x2=x2, y2=y2, txt=txt_clean,
+                                    num=detectar_numero_pregunta(txt_clean))
                     break
             if duplicada:
                 continue
 
-            num_detectado = None
-            m_num = patron_num.match(txt_clean)
-            if m_num:
-                val = int(m_num.group(1))
-                if 1 <= val <= 30:
-                    num_detectado = val
-            elif re.match(r"^\d{1,2}[\.\-\)]?$", txt_clean):
-                val = int(re.sub(r"\D", "", txt_clean))
-                if 1 <= val <= 30:
-                    num_detectado = val
-
             cajas_globales.append({
                 "x1": x1, "y1": y1, "x2": x2, "y2": y2,
                 "txt": txt_clean,
-                "num": num_detectado
+                "num": detectar_numero_pregunta(txt_clean),
             })
 
     return cajas_globales
+
+
+def _cadena_creciente(candidatas):
+    """Subsecuencia más larga de candidatas (ordenadas por y) con nº de pregunta estrictamente creciente.
+
+    Es más robusta que el antiguo "tomo la primera y sólo acepto números mayores": una falsa detección
+    temprana (p. ej. "4 fallos" del banner) ya no se come las preguntas 1-3, y un número mal leído por el
+    OCR se descarta en lugar de arrastrar a todas las preguntas siguientes.
+    """
+    n = len(candidatas)
+    if n == 0:
+        return []
+    mejor = [1] * n
+    previo = [-1] * n
+    for i in range(n):
+        for j in range(i):
+            if (candidatas[j]["num"] < candidatas[i]["num"]
+                    and candidatas[i]["y1"] - candidatas[j]["y1"] > 20
+                    and mejor[j] + 1 > mejor[i]):
+                mejor[i] = mejor[j] + 1
+                previo[i] = j
+    i = max(range(n), key=lambda k: mejor[k])
+    cadena = []
+    while i != -1:
+        cadena.append(candidatas[i])
+        i = previo[i]
+    return cadena[::-1]
 
 
 def localizar_anclas_y_columnas(cajas, img_w, img_h):
@@ -105,19 +223,12 @@ def localizar_anclas_y_columnas(cajas, img_w, img_h):
 
     xs = sorted(c["x1"] for c in candidatas)
     x_margen = xs[len(xs) // 2]
-    tol_x = max(30, img_w * 0.04)
+    tol_x = max(15, img_w * 0.012)   # los números de pregunta están perfectamente alineados
 
     anclas_raw = [c for c in candidatas if abs(c["x1"] - x_margen) <= tol_x]
     anclas_raw.sort(key=lambda c: c["y1"])
 
-    anclas = []
-    ultimo_num = 0
-    ultimo_y = -1
-    for c in anclas_raw:
-        if c["num"] > ultimo_num and c["y1"] > ultimo_y + 20:
-            anclas.append((c["num"], int(c["y1"])))
-            ultimo_num = c["num"]
-            ultimo_y = c["y1"]
+    anclas = [(c["num"], int(c["y1"])) for c in _cadena_creciente(anclas_raw)]
 
     if not anclas:
         return 0, img_w, img_w, []
@@ -151,8 +262,8 @@ def limpiar_caja_explicacion_y_ayuda(bloque_bgr, cajas_bloque, y_offset):
 
     for c in cajas_bloque:
         y_rel = int(c["y1"] - y_offset)
-        if y_rel > int(h * 0.35) and PATRON_UI_CORTE.match(c["txt"].strip()):
-            corte_y = min(corte_y, max(int(h * 0.35), y_rel - 8))
+        if y_rel > 45 and PATRON_UI_CORTE.match(c["txt"].strip()):
+            corte_y = min(corte_y, max(45, y_rel - 8))
 
     hsv = cv2.cvtColor(bloque_bgr[:corte_y, :], cv2.COLOR_BGR2HSV)
     h_act = hsv.shape[0]
@@ -179,53 +290,57 @@ def limpiar_caja_explicacion_y_ayuda(bloque_bgr, cajas_bloque, y_offset):
     return bloque_bgr[:corte_y, :]
 
 
-def extraer_imagen_derecha(bloque_bgr, x_inicio_img_rel, nombre_archivo):
-    """Recorta la miniatura completa a la derecha del texto con margen blanco de seguridad."""
-    h, w, _ = bloque_bgr.shape
-    x_ini = max(0, min(w - 10, int(x_inicio_img_rel)))
-    zona_der = bloque_bgr[:, x_ini:]
-    if zona_der.shape[1] < 40:
-        return None
+def detectar_miniaturas(img_bgr, x_min_frac=0.45):
+    """Localiza TODAS las miniaturas de la página por su contorno (no por cuánto blanco tengan).
 
-    gray = cv2.cvtColor(zona_der, cv2.COLOR_BGR2GRAY)
-    mask = gray < 245
+    Las miniaturas de Todotest tienen un tamaño casi fijo (~179x137 px en capturas de 1233 px de ancho) y
+    un marco gris de 1 px, así que se detectan como contornos externos de ese tamaño en la mitad derecha.
+    Las barras verdes de respuesta (muy anchas y bajas) y los textos (glifos pequeños) quedan fuera por tamaño.
+    Antes se descartaba cualquier recorte con >72 % de píxeles blancos, lo que eliminaba señales y
+    esquemas con fondo blanco (p. ej. P1, P5, P27, P28 de test70 y P2, P8 de test81).
+    """
+    h, w = img_bgr.shape[:2]
+    esc = w / ANCHO_REF
+    x0 = int(w * x_min_frac)
+    gris = cv2.cvtColor(img_bgr[:, x0:], cv2.COLOR_BGR2GRAY)
+    mascara = (gris < 243).astype(np.uint8) * 255
+    mascara = cv2.dilate(mascara, np.ones((3, 3), np.uint8))
+    contornos, _ = cv2.findContours(mascara, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    cols_con_contenido = np.where(mask.sum(axis=0) > max(4, int(h * 0.03)))[0]
-    if len(cols_con_contenido) == 0:
-        return None
+    minis = []
+    for c in contornos:
+        x, y, bw, bh = cv2.boundingRect(c)
+        if (90 * esc <= bw <= 330 * esc and 60 * esc <= bh <= 330 * esc
+                and 0.6 <= bw / bh <= 2.6):
+            minis.append((x + x0, y, bw, bh))
+    return sorted(minis, key=lambda b: b[1])
 
-    pad = 12
-    x1 = max(0, int(cols_con_contenido[0]) - pad)
-    x2_col = int(cols_con_contenido[0])
-    for col in cols_con_contenido[1:]:
-        if col - x2_col > 45:
-            break
-        x2_col = int(col)
-    x2 = min(zona_der.shape[1], x2_col + pad)
 
-    sub_mask = mask[:, x1:x2]
-    area_minima = max(500, int((zona_der.shape[0] * (x2 - x1)) * 0.03))
-    if sub_mask.sum() < area_minima:
-        return None
+def asignar_miniaturas(anclas, minis):
+    """Asocia cada miniatura a la pregunta cuya ancla queda justo por encima (con 40 px de margen)."""
+    asignadas = {}
+    for (x, y, bw, bh) in minis:
+        idx_elegido = None
+        for idx, (_num, y_ancla) in enumerate(anclas):
+            if y_ancla - 40 <= y:
+                idx_elegido = idx
+            else:
+                break
+        if idx_elegido is None:
+            continue
+        if y - anclas[idx_elegido][1] > 90:
+            continue   # demasiado lejos: su pregunta no se localizó (no se la damos a la anterior)
+        asignadas.setdefault(idx_elegido, (x, y, bw, bh))
+    return asignadas
 
-    ys = np.where(sub_mask.sum(axis=1) > 3)[0]
-    if len(ys) == 0:
-        return None
-    y1 = max(0, int(ys.min()) - pad)
-    y2 = min(h, int(ys.max()) + pad)
 
-    if (x2 - x1) < 55 or (y2 - y1) < 40:
-        return None
-
-    miniatura = zona_der[y1:y2, x1:x2]
-
-    hsv_min = cv2.cvtColor(miniatura, cv2.COLOR_BGR2HSV)
-    gris_plano = (hsv_min[:, :, 1] < 18) & (hsv_min[:, :, 2] > 200)
-    if (gris_plano.sum() / gris_plano.size) > 0.72:
-        return None
-
+def guardar_miniatura(img_bgr, caja, nombre_archivo):
+    x, y, bw, bh = caja
+    h, w = img_bgr.shape[:2]
+    pad = 2
+    recorte = img_bgr[max(0, y - pad):min(h, y + bh + pad), max(0, x - pad):min(w, x + bw + pad)]
     ruta_salida = os.path.join(CARPETA_IMG, nombre_archivo)
-    cv2.imwrite(ruta_salida, miniatura, [cv2.IMWRITE_JPEG_QUALITY, 92])
+    cv2.imwrite(ruta_salida, recorte, [cv2.IMWRITE_JPEG_QUALITY, 92])
     return f"../img/{nombre_archivo}"
 
 
@@ -255,7 +370,7 @@ def construir_pregunta_desde_cajas(bloque_bgr, cajas_bloque, x_offset, y_offset,
     """Reconstruye enunciado y estrictamente 2 o 3 opciones (nunca 4)."""
     limite_x = x_fin_texto_abs + 8
     cajas_txt = [c for c in cajas_bloque if c["x1"] < limite_x]
-    cajas_txt.sort(key=lambda c: (round((c["y1"] - y_offset) / 10), c["x1"]))
+    cajas_txt = ordenar_en_lineas(cajas_txt)
 
     enunciado_partes = []
     opciones = []
@@ -263,8 +378,6 @@ def construir_pregunta_desde_cajas(bloque_bgr, cajas_bloque, x_offset, y_offset,
     opcion_actual = None
     score_actual = 0
     ultima_letra = ""
-
-    patron_num = re.compile(r"^(\d{1,2})[\.\-\)\s]+(.*)")
 
     def total_opciones_iniciadas():
         return len(opciones) + (1 if opcion_actual is not None else 0)
@@ -275,10 +388,10 @@ def construir_pregunta_desde_cajas(bloque_bgr, cajas_bloque, x_offset, y_offset,
             continue
 
         if not enunciado_partes and opcion_actual is None:
-            if re.match(r"^\d{1,2}[\.\-\)]?$", txt):
+            if PATRON_NUM_SOLO.match(txt):
                 continue
-            m_num = patron_num.match(txt)
-            if m_num:
+            m_num = PATRON_NUM_CON_PUNTO.match(txt) or PATRON_NUM_CON_ESPACIO.match(txt)
+            if m_num and 1 <= int(m_num.group(1)) <= MAX_PREGUNTAS:
                 txt = m_num.group(2).strip()
                 if not txt:
                     continue
@@ -337,21 +450,23 @@ def construir_pregunta_desde_cajas(bloque_bgr, cajas_bloque, x_offset, y_offset,
         opciones.append(opcion_actual.strip())
         scores_verde.append(score_actual)
 
-    enunciado = " ".join(enunciado_partes).strip()
+    enunciado = restaurar_signos_interrogacion(" ".join(enunciado_partes).strip())
     if not enunciado or len(opciones) < 2:
         return None
 
     opciones = opciones[:3]
     scores_verde = scores_verde[:3]
 
-    correcta_idx = 0
-    if scores_verde and max(scores_verde) > 4:
-        correcta_idx = int(np.argmax(scores_verde))
+    # Si no se ve ninguna marca verde (p. ej. captura SIN corregir) NO es que la correcta sea la "a":
+    # se conserva correcta=0 para no romper la plantilla, pero se avisa con correcta_detectada=False.
+    correcta_detectada = bool(scores_verde) and max(scores_verde) > UMBRAL_VERDE
+    correcta_idx = int(np.argmax(scores_verde)) if correcta_detectada else 0
 
     return {
         "texto": enunciado,
         "opciones": opciones,
-        "correcta": correcta_idx
+        "correcta": correcta_idx,
+        "correcta_detectada": correcta_detectada,
     }
 
 
@@ -379,7 +494,54 @@ def reescanear_bloque_individual(bloque_bgr, x_offset, y_offset, x_fin_texto_abs
     return construir_pregunta_desde_cajas(bloque_bgr, cajas_local, x_offset, y_offset, x_fin_texto_abs)
 
 
-def procesar_imagen_test(ruta_img, ocr_engine, plantilla_str, debug=False):
+def rutas_json_test(num_int):
+    """Rutas posibles del JSON de un test: 'test_070.json' y, por si acaso, 'test_70.json'."""
+    return [os.path.join(CARPETA_DATA, f"test_{nombre}.json")
+            for nombre in dict.fromkeys((f"{num_int:03d}", str(num_int)))]
+
+
+def json_verificado(num_int):
+    """True si algún JSON existente del test trae "respuestas_verificadas": true (revisado/rellenado a mano o por IA)."""
+    for ruta in rutas_json_test(num_int):
+        try:
+            with open(ruta, "r", encoding="utf-8") as f:
+                if json.load(f).get("respuestas_verificadas") is True:
+                    return True
+        except (OSError, ValueError, AttributeError):
+            continue
+    return False
+
+
+def marcar_verificados(seleccion):
+    """Pone "respuestas_verificadas": true en los JSON indicados (lista de nº de test, o ['todos'])."""
+    if [x.lower() for x in seleccion] == ["todos"]:
+        rutas = sorted(glob.glob(os.path.join(CARPETA_DATA, "test_*.json")))
+    else:
+        rutas = []
+        for x in seleccion:
+            if not x.isdigit():
+                print(f"[AVISO] '{x}' no es un número de test ni 'todos'.")
+                continue
+            existentes = [r for r in rutas_json_test(int(x)) if os.path.isfile(r)]
+            if existentes:
+                rutas.append(existentes[0])
+            else:
+                print(f"[AVISO] No existe JSON para el test {x}.")
+
+    for ruta in rutas:
+        with open(ruta, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        sin_correcta = [i + 1 for i, p in enumerate(data.get("preguntas", [])) if not isinstance(p.get("correcta"), int)]
+        if sin_correcta:
+            print(f"  [AVISO] {os.path.basename(ruta)}: preguntas sin 'correcta' {sin_correcta}; no se marca.")
+            continue
+        data["respuestas_verificadas"] = True
+        with open(ruta, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        print(f"  -> {os.path.basename(ruta)} marcado como verificado.")
+
+
+def procesar_imagen_test(ruta_img, ocr_engine, debug=False, forzar=False):
     nombre_base = os.path.splitext(os.path.basename(ruta_img))[0]
     m_num = re.search(r"(\d+)", nombre_base)
     if not m_num:
@@ -388,6 +550,11 @@ def procesar_imagen_test(ruta_img, ocr_engine, plantilla_str, debug=False):
 
     num_int = int(m_num.group(1))
     num_str = f"{num_int:03d}"
+
+    if not forzar and json_verificado(num_int):
+        print(f"Test {num_str}: respuestas verificadas en data/; se omite para no sobrescribirlas (--forzar para regenerar).")
+        return
+
     print(f"Procesando Test {num_str} ({os.path.basename(ruta_img)})...")
 
     img = cv2.imread(ruta_img)
@@ -407,11 +574,23 @@ def procesar_imagen_test(ruta_img, ocr_engine, plantilla_str, debug=False):
         print(f"  [ERROR] No se detectaron preguntas numeradas en {ruta_img}")
         return
 
+    nums_detectados = {n for n, _ in anclas}
+    faltan = [n for n in range(1, max(nums_detectados) + 1) if n not in nums_detectados]
+    if faltan or max(nums_detectados) < MAX_PREGUNTAS:
+        faltan += list(range(max(nums_detectados) + 1, MAX_PREGUNTAS + 1))
+        print(f"  [AVISO] No se localizó el número de las preguntas: {faltan} (se perderán; usa --debug)")
+
+    minis = detectar_miniaturas(img)
+    minis_por_pregunta = asignar_miniaturas(anclas, minis)
+    if debug:
+        print(f"  [DEBUG] Miniaturas detectadas: {len(minis)} -> preguntas "
+              f"{sorted(anclas[i][0] for i in minis_por_pregunta)}")
+
     preguntas = []
-    altura_estimada = (
-        int((anclas[-1][1] - anclas[0][1]) / max(1, len(anclas) - 1))
-        if len(anclas) > 1 else int(w * 0.25)
-    )
+    descartadas = []
+    sin_marca = []
+    huecos = [b[1] - a[1] for a, b in zip(anclas, anclas[1:])]
+    altura_estimada = int(sorted(huecos)[len(huecos) // 2]) if huecos else int(w * 0.25)
 
     for idx, (num_preg, y_start) in enumerate(anclas):
         y1 = max(0, y_start - 18)
@@ -436,47 +615,64 @@ def procesar_imagen_test(ruta_img, ocr_engine, plantilla_str, debug=False):
             datos_preg = reescanear_bloque_individual(bloque, x_izq, y1, x_fin_texto, ocr_engine)
 
         if not datos_preg:
+            descartadas.append(num_preg)
             if debug:
                 print(f"  [DEBUG] Pregunta {num_preg} descartada. Cajas: {[c['txt'] for c in cajas_bloque]}")
             continue
 
-        nombre_miniatura = f"test_{num_str}_p{num_preg:02d}.jpg"
-        x_ini_img_rel = max(0, (x_fin_texto - x_izq) + 4)
-        img_rel = extraer_imagen_derecha(bloque, x_ini_img_rel, nombre_miniatura)
-        if img_rel:
-            datos_preg["imagen"] = img_rel
+        if not datos_preg.get("correcta_detectada", True):
+            sin_marca.append(num_preg)
+
+        if idx in minis_por_pregunta:
+            nombre_miniatura = f"test_{num_str}_p{num_preg:02d}.jpg"
+            datos_preg["imagen"] = guardar_miniatura(img, minis_por_pregunta[idx], nombre_miniatura)
 
         preguntas.append(datos_preg)
 
+    if descartadas:
+        print(f"  [AVISO] Preguntas descartadas por no leerse bien: {descartadas}")
+    if preguntas and len(sin_marca) == len(preguntas):
+        # Captura SIN corregir: no hay ninguna marca verde. Se quita "correcta" para que nadie (ni una IA
+        # que lea el JSON después) tome el 0 por una respuesta real.
+        for p in preguntas:
+            p.pop("correcta", None)
+            p.pop("correcta_detectada", None)
+        print("  [INFO] Captura sin corregir: se omite 'correcta' en el JSON (no hay respuestas que leer).")
+    elif sin_marca:
+        print(f"  [AVISO] Sin marca verde en preguntas {sin_marca} -> 'correcta' no fiable ahí")
+
+    # "respuestas_verificadas": false -> el script puede regenerar el JSON. Cuando alguien (o una IA) revise/rellene
+    # las "correcta", debe ponerlo a true: el script dejará de sobrescribir ese test.
     ruta_json = os.path.join(CARPETA_DATA, f"test_{num_str}.json")
     with open(ruta_json, "w", encoding="utf-8") as f:
-        json.dump({"test_id": num_int, "preguntas": preguntas}, f, ensure_ascii=False, indent=2)
+        json.dump({"test_id": num_int, "respuestas_verificadas": False, "preguntas": preguntas},
+                  f, ensure_ascii=False, indent=2)
 
-    ruta_html = os.path.join(CARPETA_TESTS, f"test_{num_str}.html")
-    html_final = generar_html_test(num_int, preguntas, plantilla_str)
-    with open(ruta_html, "w", encoding="utf-8") as f:
-        f.write(html_final)
-
-    print(f"  -> OK: {len(preguntas)} preguntas extraídas -> tests/test_{num_str}.html")
+    n_img = sum(1 for p in preguntas if "imagen" in p)
+    print(f"  -> OK: {len(preguntas)} preguntas extraídas ({n_img} con imagen) -> data/test_{num_str}.json")
 
 
-def recompilar_desde_json(plantilla_str):
-    os.makedirs(CARPETA_TESTS, exist_ok=True)
-    archivos_json = sorted(glob.glob(os.path.join(CARPETA_DATA, "test_*.json")))
-    if not archivos_json:
-        print(f"No se encontraron archivos JSON en '{CARPETA_DATA}'.")
-        return
+def seleccionar_imagenes(imagenes):
+    """Evita que 'test70.png' y 'test70_corregido.png' se pisen (ambas generan test_070.*).
 
-    for ruta_json in archivos_json:
-        with open(ruta_json, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        num_int = data["test_id"]
-        num_str = f"{num_int:03d}"
-        ruta_html = os.path.join(CARPETA_TESTS, f"test_{num_str}.html")
-        html_final = generar_html_test(num_int, data["preguntas"], plantilla_str)
-        with open(ruta_html, "w", encoding="utf-8") as f:
-            f.write(html_final)
-    print(f"Recompilados {len(archivos_json)} archivos HTML en tests/.")
+    Si existe la versión corregida (la que trae las respuestas marcadas) se usa ésa y se omite la otra.
+    """
+    por_test = {}
+    for ruta in imagenes:
+        m = re.search(r"(\d+)", os.path.splitext(os.path.basename(ruta))[0])
+        clave = int(m.group(1)) if m else ruta
+        por_test.setdefault(clave, []).append(ruta)
+
+    elegidas = []
+    for clave, rutas in por_test.items():
+        corregidas = [r for r in rutas if "corregid" in os.path.basename(r).lower()]
+        if corregidas and len(rutas) > len(corregidas):
+            omitidas = [os.path.basename(r) for r in rutas if r not in corregidas]
+            print(f"[INFO] Test {clave}: se usa la versión corregida; se omite {omitidas}")
+            elegidas.extend(corregidas)
+        else:
+            elegidas.extend(rutas)
+    return sorted(elegidas)
 
 
 def parsear_argumentos():
@@ -488,13 +684,20 @@ def parsear_argumentos():
             "  python procesar_capturas.py                                    Procesa capturas_largas/capturas/\n"
             "  python procesar_capturas.py -i capturas_largas/capturas/test70.png\n"
             "  python procesar_capturas.py -i capturas_largas/capturas/test70.png --debug\n"
-            "  python procesar_capturas.py --recompilar                      Regenera los .html desde data/*.json"
+            "  python procesar_capturas.py --marcar-verificados 70 81        Protege esos JSON (no se sobrescriben)\n"
+            "  python procesar_capturas.py --marcar-verificados todos\n"
+            "  python procesar_capturas.py -i capturas_largas/capturas/test70.png --forzar   Regenera aunque esté verificado\n"
+            "\n"
+            "Genera data/test_XXX.json e img/test_XXX_pYY.jpg, que test.html consume directamente."
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument("-i", "--imagen", metavar="RUTA", help="Procesa una única imagen.")
     parser.add_argument("-c", "--carpeta", metavar="DIR", default=CARPETA_CAPTURAS_DEFAULT, help="Carpeta de capturas.")
-    parser.add_argument("-r", "--recompilar", action="store_true", help="Regenera los .html desde data/*.json sin OCR.")
+    parser.add_argument("-f", "--forzar", action="store_true",
+                        help='Regenera el JSON aunque tenga "respuestas_verificadas": true.')
+    parser.add_argument("--marcar-verificados", nargs="+", metavar="N",
+                        help='Pone "respuestas_verificadas": true en los tests indicados (nº de test o "todos") y sale.')
     parser.add_argument("-d", "--debug", action="store_true", help="Muestra trazas de diagnóstico del OCR y coordenadas.")
     return parser.parse_args()
 
@@ -502,34 +705,28 @@ def parsear_argumentos():
 if __name__ == "__main__":
     args = parsear_argumentos()
 
-    try:
-        plantilla_html = cargar_plantilla_html()
-    except FileNotFoundError as e:
-        print(e)
-        raise SystemExit(1)
+    if args.marcar_verificados:
+        marcar_verificados(args.marcar_verificados)
+        raise SystemExit(0)
 
-    if args.recompilar:
-        recompilar_desde_json(plantilla_html)
-    else:
-        os.makedirs(CARPETA_IMG, exist_ok=True)
-        os.makedirs(CARPETA_DATA, exist_ok=True)
-        os.makedirs(CARPETA_TESTS, exist_ok=True)
+    os.makedirs(CARPETA_IMG, exist_ok=True)
+    os.makedirs(CARPETA_DATA, exist_ok=True)
 
-        ocr = RapidOCR()
+    ocr = RapidOCR()
 
-        if args.imagen:
-            if not os.path.isfile(args.imagen):
-                print(f"[ERROR] No existe el archivo: {args.imagen}")
-            else:
-                procesar_imagen_test(args.imagen, ocr, plantilla_html, debug=args.debug)
+    if args.imagen:
+        if not os.path.isfile(args.imagen):
+            print(f"[ERROR] No existe el archivo: {args.imagen}")
         else:
-            if not os.path.isdir(args.carpeta):
-                print(f"[ERROR] No existe la carpeta '{args.carpeta}'.")
+            procesar_imagen_test(args.imagen, ocr, debug=args.debug, forzar=args.forzar)
+    else:
+        if not os.path.isdir(args.carpeta):
+            print(f"[ERROR] No existe la carpeta '{args.carpeta}'.")
+        else:
+            archivos = sorted(glob.glob(os.path.join(args.carpeta, "*.*")))
+            imagenes = [f for f in archivos if f.lower().endswith((".png", ".jpg", ".jpeg", ".webp"))]
+            if not imagenes:
+                print(f"No se encontraron imágenes en '{args.carpeta}'.")
             else:
-                archivos = sorted(glob.glob(os.path.join(args.carpeta, "*.*")))
-                imagenes = [f for f in archivos if f.lower().endswith((".png", ".jpg", ".jpeg", ".webp"))]
-                if not imagenes:
-                    print(f"No se encontraron imágenes en '{args.carpeta}'.")
-                else:
-                    for archivo in imagenes:
-                        procesar_imagen_test(archivo, ocr, plantilla_html, debug=args.debug)
+                for archivo in seleccionar_imagenes(imagenes):
+                    procesar_imagen_test(archivo, ocr, debug=args.debug, forzar=args.forzar)
