@@ -1,0 +1,260 @@
+{
+  "test_id": 10,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Esta senal prohibe el acceso a vehiculos destinados al transporte de mercancias, entendiendo como tales...",
+      "opciones": [
+        "loscamiones,exclusivamente.",
+        "los camiones y furgones dependiendo de su masa.",
+        "los camiones y furgones independientemente de su masa."
+      ],
+      "imagen": "../img/test_010_p01.jpg"
+    },
+    {
+      "texto": "Cuando no se puede colocar el vehiculo paralelo al borde de la calzada, ¿zesta permitido parar o estacionar?",
+      "opciones": [
+        "No, en ningun caso.",
+        "Solo si el estacionamiento esta marcado en bateria.",
+        "Si, si las caracteristicas de la via uotras circunstancias lopermiten."
+      ],
+      "imagen": "../img/test_010_p02.jpg"
+    },
+    {
+      "texto": "¿Que separacion lateral estan obligadas a dejar las motocicletas al cruzarse con otros vehiculos que circulen en sentido contrario?",
+      "opciones": [
+        "1,5metroscomomaximo.",
+        "1,5metros comominimoen cualquier caso.",
+        "Una separacion lateral suficiente para que el cruce pueda realizarse con seguridad y sin peligro."
+      ],
+      "imagen": "../img/test_010_p03.jpg"
+    },
+    {
+      "texto": "Los pasajeros deben subir o bajar de un vehiculo...",
+      "opciones": [
+        "porel ladode la calzada.",
+        "por el lado mas proximo al borde de la via.",
+        "siempre por el lado derecho."
+      ]
+    },
+    {
+      "texto": "¿Esta permitido que un turismo utilice un tramo de carril reservado para autobuses delimitado por una linea discontinua?",
+      "opciones": [
+        "Si,para realizar cualquiermaniobra que no sea parar,estacionar, cambiarde sentido o adelantar.",
+        "No,siempre esta prohibido.",
+        "Si,pero solo para cambiar de direccion a la derecha."
+      ],
+      "imagen": "../img/test_010_p05.jpg"
+    },
+    {
+      "texto": "Circular con niebla, ¿zinfluye en la perdida de adherencia?",
+      "opciones": [
+        "Si,puestoquelanieblahumedeceelasfalto",
+        "No, nunca.",
+        "No, la niebla afecta solo a la falta de visibilidad."
+      ]
+    },
+    {
+      "texto": "Los vehiculos prioritarios, ¿ztienen prioridad de paso sobre el resto de los usuarios de la via?",
+      "opciones": [
+        "Si.",
+        "No. b) No.",
+        "Solo cuando circulen en servicio de urgencia."
+      ]
+    },
+    {
+      "texto": "El turismo, ¿iesta bien situado para girar a la izquierda?",
+      "opciones": [
+        "Sí.",
+        "Si,porque circula dentro depoblado.",
+        "No."
+      ],
+      "imagen": "../img/test_010_p08.jpg"
+    },
+    {
+      "texto": "No debe entrar en una interseccion, aunque el semaforo este en verde, si...",
+      "opciones": [
+        "seaproximanvehiculosporladerecha.",
+        "un agente le ordena detenerse.",
+        "hay una senal de stop o de ceda el paso."
+      ],
+      "imagen": "../img/test_010_p09.jpg"
+    },
+    {
+      "texto": "Uno de los efectos que pueden producir los ansioliticos es...",
+      "opciones": [
+        "elaumento dela agudeza visual.",
+        "la disminucion de la sensibilidad al deslumbramiento.",
+        "laapariciondeperiodos de somnolencia."
+      ]
+    },
+    {
+      "texto": "En esta via de doble sentido de circulacion, ¿ipor donde adelantara al tranvia que circula por el centro de la calzada?",
+      "opciones": [
+        "Por la derecha.",
+        "Por la izquierda",
+        "Tanto porla derecha como porla izquierda."
+      ],
+      "imagen": "../img/test_010_p11.jpg"
+    },
+    {
+      "texto": "En condiciones de niebla espesa, debera...",
+      "opciones": [
+        "reducir la velocidad.",
+        "circular solo con la luz antiniebla delantera encendida.",
+        "circular por el arcen."
+      ],
+      "imagen": "../img/test_010_p12.jpg"
+    },
+    {
+      "texto": "¿Cual es una de las funciones del sistema ISA (Asistencia Inteligente de Velocidad)?",
+      "opciones": [
+        "Detectar las senales de limite de velocidad y advertir o adaptar la velocidad del vehiculo ala senal.",
+        "Solamentemantener la velocidad establecidapor el conductor.",
+        "Aumentarautomaticamentelavelocidadsi elconductorcircula lentamente."
+      ],
+      "imagen": "../img/test_010_p13.jpg"
+    },
+    {
+      "texto": "El apoyacabezas, ¿zes necesario regularlo?",
+      "opciones": [
+        "No,ya viene regulado de fabrica.",
+        "Si,tanto en los asientos delanteros como en los traseros.",
+        "No,porque es un elementofijo."
+      ],
+      "imagen": "../img/test_010_p14.jpg"
+    },
+    {
+      "texto": "A un herido en accidente, ¿zdebe darle algun tranquilizante?",
+      "opciones": [
+        "Cuando el herido me lo pida, si.",
+        "No.",
+        "Si, porque asi sufre menos y se tranquiliza."
+      ]
+    },
+    {
+      "texto": "Un vehiculo lleva mas carga que la masa maxima autorizada (MMA). ¿Esta permitido circular asi?",
+      "opciones": [
+        "Si,pero solamentecuando transporta equipajey personas dentro depoblado.",
+        "Si, cuando es un vehiculo de transporte demercancias",
+        "No,porqueespeligroso."
+      ]
+    },
+    {
+      "texto": "¿Cual de los siguientes accesorios esta obligado a Ilevar el conductor de un turismo?",
+      "opciones": [
+        "Un dispositivode presenalizacion de peligro.",
+        "Un extintor.",
+        "Una lata de aceite."
+      ]
+    },
+    {
+      "texto": "¿Que documento acredita que un vehiculo reuine las condiciones tecnicas necesarias para circular?",
+      "opciones": [
+        "El certificado del seguro y el ultimo recibo del pago de la prima.",
+        "El recibo del impuesto de vehiculos de traccion mecanica.",
+        "La tarjeta ITV."
+      ]
+    },
+    {
+      "texto": "¿Quéefectoproducelafatiga?",
+      "opciones": [
+        "Resultamasfacilmantenerlaconcentracion.",
+        "La sensibilidad auditiva puede disminuir.",
+        "Aumentaelcampovisual."
+      ]
+    },
+    {
+      "texto": "Esta senal indica la situacion de...",
+      "opciones": [
+        "un extintor de incendios y un telefono de emergencia en un apartadero.",
+        "una salidade emergencia.",
+        "unpuestodesocorro."
+      ],
+      "imagen": "../img/test_010_p20.jpg"
+    },
+    {
+      "texto": "¿Que edad minima se exige para conducir un vehiculo de movilidad personal?",
+      "opciones": [
+        "12 anos.",
+        "14 anios.",
+        "15 anos."
+      ],
+      "imagen": "../img/test_010_p21.jpg"
+    },
+    {
+      "texto": "Con esta senal, ¿ztiene prioridad de paso en el estrechamiento?",
+      "opciones": [
+        "No, la prioridad la tiene el vehiculo que circula en sentido contrario.",
+        "Si.",
+        "No, la senal concede prioridad al sentido contrario."
+      ],
+      "imagen": "../img/test_010_p22.jpg"
+    },
+    {
+      "texto": "En este tramo de autovia, ¿ise puede circular a mas de 100 km/h para adelantar?",
+      "opciones": [
+        "No.",
+        "Si,hasta120km/h"
+      ],
+      "imagen": "../img/test_010_p23.jpg"
+    },
+    {
+      "texto": "¿Cuando se circula a velocidad anormalmente reducida?",
+      "opciones": [
+        "Cuando se circula a velocidad inferior a la minima permitida.",
+        "Cuando se circula a velocidad inferior a la maxima permitida.",
+        "Cuando se circula a velocidad superior a la minima permitida."
+      ]
+    },
+    {
+      "texto": "A un herido en accidente, ¿zes conveniente darle algun alimento o bebida?",
+      "opciones": [
+        "Si, es conveniente.",
+        "No, aunque lo pida.",
+        "Si,para mantener la temperatura del cuerpo."
+      ]
+    },
+    {
+      "texto": "En un turismo con cinco plazas autorizadas, ¿ipuede transportar a seis personas?",
+      "opciones": [
+        "No, no estapermitido.",
+        "Si, siempreque no supere la masa maxima autorizada."
+      ],
+      "imagen": "../img/test_010_p26.jpg"
+    },
+    {
+      "texto": "En las curvas el vehiculo tiende a salirse de la calzada (por la fuerza centrifuga). ¿Como se puede evitar?",
+      "opciones": [
+        "Reduciendo la velocidad antes dela curva y acelerando suavemente al salir.",
+        "Frenandoenlacurva.",
+        "Acelerandoantes deentraren la curva."
+      ]
+    },
+    {
+      "texto": "¿Cuantospuntossepuedenperder enun dia?",
+      "opciones": [
+        "Un maximo de 8puntos, salvo en determinados casosde infracciones muy graves.",
+        "Un maximo de10 puntos.",
+        "No existe limite."
+      ]
+    },
+    {
+      "texto": "En caso de lluvia se debe circular con precaucion porque...",
+      "opciones": [
+        "aumenta la adherencia de los neumaticos.",
+        "se reduce la distancia de frenado.",
+        "se reduce la visibilidad."
+      ]
+    },
+    {
+      "texto": "En el arcen de esta autovia, ¿zque esta permitido?",
+      "opciones": [
+        "Inmovilizar el vehiculo por emergencia o averia.",
+        "Hacer parada.",
+        "Estacionar. c) Estacionar."
+      ],
+      "imagen": "../img/test_010_p30.jpg"
+    }
+  ]
+}

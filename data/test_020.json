@@ -1,0 +1,262 @@
+{
+  "test_id": 20,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "¿Que debe hacer un conductor que ha sido deslumbrado?",
+      "opciones": [
+        "Desviarse siempre a la derecha para detenerse en el arcen.",
+        "Reducir la velocidad, incluso hasta llegar a detenerse totalmente, si fuera necesario.",
+        "Encenderelalumbradodelargo alcance."
+      ]
+    },
+    {
+      "texto": "Cuando senaliza un cambio de carril, ¿ztiene preferencia sobre los vehiculos que ya circulan por ese carril?",
+      "opciones": [
+        "Si.",
+        "No."
+      ]
+    },
+    {
+      "texto": "Una vez abrochado el cinturon de seguridad, debe...",
+      "opciones": [
+        "comprobar que esta bien colocado y ajustado al cuerpo.",
+        "aflojar la zona abdominal para mayor comodidad.",
+        "colocar una pinza para ajustarlo."
+      ]
+    },
+    {
+      "texto": "¿Estapermitido adelantar por la derecha si existe espacio suficiente?",
+      "opciones": [
+        "No, en ningun caso.",
+        "Si, en vias urbanas, con dos o mas carriles delimitados por marcas viales.",
+        "Unicamentea los tranvias."
+      ],
+      "imagen": "../img/test_020_p04.jpg"
+    },
+    {
+      "texto": "La persona que conduce bajo los efectos de las drogas...",
+      "opciones": [
+        "pone a todos losque lerodean en un grave riesgo de accidente.",
+        "asumemenosriesgos.",
+        "solo pone en riesgo su propia vida."
+      ]
+    },
+    {
+      "texto": "Algunos sintomas que pueden anunciarle la fatiga son...",
+      "opciones": [
+        "ansiedadydepresion.",
+        "fuertes picores.",
+        "bostezos,acomodos en el asientoymolestias en la nuca."
+      ]
+    },
+    {
+      "texto": "En una travesia sin senales de velocidad, ¿icual es la velocidad maxima permitida?",
+      "opciones": [
+        "40 km/h.",
+        "50 km/h.",
+        "60 km/h."
+      ],
+      "imagen": "../img/test_020_p07.jpg"
+    },
+    {
+      "texto": "¿Cual es la funcion del sistema antibloqueo de frenos ABs?",
+      "opciones": [
+        "Evita el bloqueo de las ruedas solo en calzadas secas.",
+        "Hacequelos neumaticos sedesgasten menos.",
+        "Impide el bloqueo de las ruedas durante el frenado."
+      ]
+    },
+    {
+      "texto": "El alcohol, ¿zinfluye en la distancia de reaccion?",
+      "opciones": [
+        "No, el estado del conductor no influye en la distancia de reaccion, solo depende del estado del vehiculo.",
+        "No, pero si influye en la distancia de frenado.",
+        "Si, porque afecta al tiempo de reaccion."
+      ]
+    },
+    {
+      "texto": "¿En que momento entra en funcionamiento el sistema de frenado automatico de emergencia\"AEBS\"?",
+      "opciones": [
+        "Cuando existaun peligro, en todo caso.",
+        "En caso de despiste del conductor y riesgo de colision por alcance.",
+        "Unicamente en caso de una colision inevitable."
+      ],
+      "imagen": "../img/test_020_p10.jpg"
+    },
+    {
+      "texto": "La carga de un turismo, ¿ipuede sobresalir por los bordes laterales?",
+      "opciones": [
+        "Si,siempreque el ancho del vehiculo cargado no sea superior a 2,55metros.",
+        "Si, hasta 0,40 metros por cada lateral.",
+        "No."
+      ]
+    },
+    {
+      "texto": "¿Que le indica la senal?",
+      "opciones": [
+        "Me indica un peligro y me informa del sentido de la circulacion.",
+        "Prohibe el paso y me informa del sentido de la circulacion pudiendo atravesar la linea que forman los conos si quiero adelantar.",
+        "Prohibe el paso yme informa del sentido de la circulacion, no pudiendo atravesar la lineaqueforman los conos."
+      ],
+      "imagen": "../img/test_020_p12.jpg"
+    },
+    {
+      "texto": "Las senales acusticas, ¿zse pueden utilizar para evitar un posible accidente?",
+      "opciones": [
+        "Si,pero solo enviasestrechasconmuchas curvas.",
+        "Si, en cualquier tipo de via.",
+        "No."
+      ]
+    },
+    {
+      "texto": "Si conduce con lluvia...",
+      "opciones": [
+        "debe aumentarla distancia de seguridad con el vehiculo que circula delante.",
+        "la distancia de frenado disminuye.",
+        "la distancia de reaccion aumenta."
+      ],
+      "imagen": "../img/test_020_p14.jpg"
+    },
+    {
+      "texto": "Esta senal de advertencia de peligro indica la proximidad de...",
+      "opciones": [
+        "unresaltoobadenenlavia.",
+        "una zona de la via en la que se estrecha la calzada.",
+        "una obstruccion en la calzada."
+      ],
+      "imagen": "../img/test_020_p15.jpg"
+    },
+    {
+      "texto": "¿Que indica este panel bajo la senal de ceda el paso?",
+      "opciones": [
+        "El lugar en el que hay que detenerse en la proxima interseccion.",
+        "El sitio exacto donde hay que ceder el paso en la proxima interseccion.",
+        "La distancia a la que se encuentra la senal de stop en la proxima interseccion."
+      ],
+      "imagen": "../img/test_020_p16.jpg"
+    },
+    {
+      "texto": "Esta senal situada sobre un carril de un puesto de peaje indica que en el...",
+      "opciones": [
+        "solo se puede abonar el peaje mediantetarjeta.",
+        "es obligatorio el pago del peaje mediante el sistema de peaje dinamico o telepeaje.",
+        "se puede pagarmediante el sistema depeaje dinamico o telepeaje."
+      ],
+      "imagen": "../img/test_020_p17.jpg"
+    },
+    {
+      "texto": "En una travesia de dos carriles para cada sentido, ¿ipuede circular por el segundo carril para girar a la izquierda?",
+      "opciones": [
+        "Si, porque en la travesia debo circular igual que en las vias urbanas.",
+        "No,porquela travesia es unavia interurbana.",
+        "No,porque en la travesia siempre debo circular por la derecha."
+      ],
+      "imagen": "../img/test_020_p18.jpg"
+    },
+    {
+      "texto": "Al averiarse el vehiculo que conduce dentro de un tuinel debe...",
+      "opciones": [
+        "esperar dentro del tunel yno abandonar el vehiculo en ningun caso.",
+        "solicitar el auxilio de otros conductores llegando a ordenarsudetencion si es preciso.",
+        "abandonar el vehiculo dentro del tunel y dirigirse al refugio o salida mas proximos"
+      ],
+      "imagen": "../img/test_020_p19.jpg"
+    },
+    {
+      "texto": "Un mantenimiento adecuado del vehiculo...",
+      "opciones": [
+        "elimina la probabilidad de sufrir un accidente.",
+        "puede reducir la probabilidad de sufrir un accidente.",
+        "no reduce nunca la probabilidad de sufrir un accidente."
+      ]
+    },
+    {
+      "texto": "Entre los siguientes tipos de senales, ¿zcual es el orden de prioridad?",
+      "opciones": [
+        "Semaforos,agentesy senales verticales.",
+        "Agentes, semaforosysenalesverticales.",
+        "Senales verticales,agentes y semaforos."
+      ],
+      "imagen": "../img/test_020_p21.jpg"
+    },
+    {
+      "texto": "Esta senal...",
+      "opciones": [
+        "indica como debeaparcarun camion.",
+        "prohibe el paso a vehiculos o conjuntos de vehiculos con longitud maxima, incluida la b) prohibe el paso a vehiculos o conjuntos de vehiculos con longitud maxima, incluida la carga, superior a 10 metros.",
+        "prohibe aparcar si el camion mide mas de 10 metros."
+      ],
+      "imagen": "../img/test_020_p22.jpg"
+    },
+    {
+      "texto": "En las personas que toman drogas de abuso y conducen, la probabilidad de sufrir un accidente es...",
+      "opciones": [
+        "mayor.",
+        "menor.",
+        "la misma."
+      ]
+    },
+    {
+      "texto": "Cuando no utiliza la baca del vehiculo, ¿zes aconsejable quitarla?",
+      "opciones": [
+        "No,porque la baca aumenta la estabilidad del vehiculo.",
+        "Si,porque sin baca ahorro carburante.",
+        "Es igual, porque la baca no influye en el consumo."
+      ],
+      "imagen": "../img/test_020_p24.jpg"
+    },
+    {
+      "texto": "Para un uso adecuado del alumbrado, ¿ique debe revisar?",
+      "opciones": [
+        "Solo la regulacion,pero con una ciertafrecuencia.",
+        "La regulacion, el funcionamiento y el estado del sistema.",
+        "Nada, porque el alumbrado lo tienen que revisar en un taller."
+      ]
+    },
+    {
+      "texto": "En esta via, ¿zesta permitido superar la velocidad maxima generica de la via para adelantar?",
+      "opciones": [
+        "Si, hasta los 140 km/h.",
+        "Si,en20km/h.",
+        "No."
+      ],
+      "imagen": "../img/test_020_p26.jpg"
+    },
+    {
+      "texto": "Si el resultado de la inspeccion realizada a su vehiculo en una estacion ITV es desfavorable, ¿podra circular por las vias publicas?",
+      "opciones": [
+        "Si, si el defecto observado no impide la marcha del vehiculo.",
+        "No,salvo para su traslado al tallery la vuelta a la ITV para nueva inspeccion.",
+        "No, en absoluto, porque el vehiculo causara baja definitiva."
+      ]
+    },
+    {
+      "texto": "En un control, los agentes le piden que haga la prueba de alcohol. ¿Es obligatorio hacer la prueba?",
+      "opciones": [
+        "Si, pero cuando tengo un accidente.",
+        "Si, pero cuando he cometido una infraccion.",
+        "Si, siempre."
+      ],
+      "imagen": "../img/test_020_p28.jpg"
+    },
+    {
+      "texto": "¿Tiene que ceder el paso a este autobuis que quiere incorporarse a la circulacion?",
+      "opciones": [
+        "Si, en la medida de lo posible,llegando incluso a detener el vehiculo.",
+        "No, porque se trata de una via urbana.",
+        "No,porque los turismos tienenpreferencia."
+      ],
+      "imagen": "../img/test_020_p29.jpg"
+    },
+    {
+      "texto": "Para que el airbag cumpla adecuadamente su funcion de proteccion, debe utilizarse ..",
+      "opciones": [
+        "juntoconel apoyacabezas.",
+        "el del conductor y el del acompanante.",
+        "junto con el cinturon de seguridad."
+      ],
+      "imagen": "../img/test_020_p30.jpg"
+    }
+  ]
+}

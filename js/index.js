@@ -388,6 +388,237 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+/* ================= MODAL CONFIGURACIÓN ANKI ================= */
+const modalAnki = document.getElementById('modalAnki');
+const btnConfigAnki = document.getElementById('btnConfigAnki');
+const ankiRadiosModo = document.querySelectorAll('input[name="ankiModoLimite"]');
+const ankiCampoPersonalizado = document.getElementById('ankiCampoPersonalizado');
+const ankiInputLimiteDiario = document.getElementById('ankiLimiteDiario');
+const ankiChkEstricto = document.getElementById('ankiLimiteEstricto');
+const ankiInputNuevas = document.getElementById('ankiLimiteNuevas');
+const ankiChkSinLimiteNuevas = document.getElementById('ankiNuevasSinLimite');
+const ankiSelectOrden = document.getElementById('ankiOrden');
+const ankiChkBarajar = document.getElementById('ankiBarajar');
+const ankiAyudaModo = document.getElementById('ankiAyudaModo');
+const ankiMantMsg = document.getElementById('ankiMantMsg');
+const ankiEstadoGuardado = document.getElementById('ankiEstadoGuardado');
+const btnAnkiGuardar = document.getElementById('btnAnkiGuardar');
+const btnAnkiCancelar = document.getElementById('btnAnkiCancelar');
+const btnAnkiSync = document.getElementById('btnAnkiSync');
+const btnAnkiReset = document.getElementById('btnAnkiReset');
+
+const AYUDA_MODO_ANKI = {
+  auto: 'Reparte el mazo para llegar al examen con todo repasado.',
+  personalizado: 'Fijas tú cuántas tarjetas quieres cada día.',
+  ilimitado: 'Hoy entran todas las tarjetas vencidas y todas las nuevas (salvo el tope de nuevas).'
+};
+
+let ankiOcupado = false; // evita cerrar/lanzar acciones solapadas mientras se guarda o se mantiene el mazo
+
+function modoAnkiSeleccionado() {
+  const sel = document.querySelector('input[name="ankiModoLimite"]:checked');
+  return sel ? sel.value : 'auto';
+}
+
+function actualizarCamposAnki() {
+  const modo = modoAnkiSeleccionado();
+  ankiCampoPersonalizado.hidden = modo !== 'personalizado';
+  ankiAyudaModo.textContent = AYUDA_MODO_ANKI[modo] || '';
+  ankiInputNuevas.disabled = ankiChkSinLimiteNuevas.checked;
+}
+
+function mostrarMensajeMant(texto, tipo) {
+  ankiMantMsg.textContent = texto || '';
+  ankiMantMsg.className = 'anki-mant-msg' + (tipo ? ` ${tipo}` : '');
+}
+
+function rellenarFormularioAnki() {
+  const cfg = obtenerConfigAnki();
+  ankiRadiosModo.forEach(r => { r.checked = r.value === cfg.modoLimite; });
+  ankiInputLimiteDiario.value = cfg.limiteDiario;
+  ankiChkEstricto.checked = cfg.limiteEstricto;
+  ankiChkSinLimiteNuevas.checked = cfg.limiteNuevas === 0;
+  ankiInputNuevas.value = cfg.limiteNuevas > 0 ? cfg.limiteNuevas : 10;
+  ankiSelectOrden.value = cfg.orden;
+  ankiChkBarajar.checked = cfg.barajarOpciones;
+  ankiInputLimiteDiario.classList.remove('invalido');
+  ankiInputNuevas.classList.remove('invalido');
+  ankiEstadoGuardado.textContent = '';
+  mostrarMensajeMant('');
+  actualizarCamposAnki();
+}
+
+function abrirModalAnki() {
+  rellenarFormularioAnki();
+  modalAnki.classList.add('activo');
+  setTimeout(() => {
+    const marcado = document.querySelector('input[name="ankiModoLimite"]:checked');
+    if (marcado) marcado.focus();
+  }, 30);
+}
+
+function cerrarModalAnki() {
+  if (ankiOcupado) return;
+  modalAnki.classList.remove('activo');
+}
+
+function enteroPositivo(valor) {
+  const n = Number(valor);
+  return Number.isInteger(n) && n >= 1 && n <= 999 ? n : null;
+}
+
+async function guardarCambiosAnki() {
+  if (ankiOcupado) return;
+  const previa = obtenerConfigAnki();
+  const modo = modoAnkiSeleccionado();
+  ankiInputLimiteDiario.classList.remove('invalido');
+  ankiInputNuevas.classList.remove('invalido');
+  ankiEstadoGuardado.textContent = '';
+
+  let limiteDiario = previa.limiteDiario;
+  if (modo === 'personalizado') {
+    const n = enteroPositivo(ankiInputLimiteDiario.value);
+    if (n === null) {
+      ankiInputLimiteDiario.classList.add('invalido');
+      ankiEstadoGuardado.textContent = 'Introduce un límite diario entre 1 y 999.';
+      ankiInputLimiteDiario.focus();
+      return;
+    }
+    limiteDiario = n;
+  } else {
+    limiteDiario = enteroPositivo(ankiInputLimiteDiario.value) || previa.limiteDiario;
+  }
+
+  let limiteNuevas = 0;
+  if (!ankiChkSinLimiteNuevas.checked) {
+    const n = enteroPositivo(ankiInputNuevas.value);
+    if (n === null) {
+      ankiInputNuevas.classList.add('invalido');
+      ankiEstadoGuardado.textContent = 'El máximo de nuevas debe estar entre 1 y 999 (o marca «Sin límite»).';
+      ankiInputNuevas.focus();
+      return;
+    }
+    limiteNuevas = n;
+  }
+
+  const nuevaConfig = {
+    modoLimite: modo,
+    limiteDiario,
+    limiteNuevas,
+    orden: ankiSelectOrden.value,
+    barajarOpciones: ankiChkBarajar.checked,
+    limiteEstricto: ankiChkEstricto.checked
+  };
+
+  ankiOcupado = true;
+  btnAnkiGuardar.disabled = true;
+  btnAnkiGuardar.textContent = 'Guardando…';
+  let sincronizado = true;
+  try {
+    sincronizado = await guardarConfigAnki(nuevaConfig);
+  } catch (err) {
+    console.error('Error guardando la configuración de Anki:', err);
+    sincronizado = false;
+  }
+  ankiOcupado = false;
+  btnAnkiGuardar.disabled = false;
+  btnAnkiGuardar.textContent = 'Guardar cambios';
+
+  renderAnki(); // el contador "Repasar X tarjetas hoy" se actualiza al instante
+
+  if (sincronizado === false) {
+    ankiEstadoGuardado.textContent = 'Guardado en este dispositivo, pero no se pudo sincronizar con la nube. Pulsa «Guardar cambios» para reintentar.';
+    return;
+  }
+  cerrarModalAnki();
+}
+
+async function buscarNuevosTestsAnki() {
+  if (ankiOcupado) return;
+  ankiOcupado = true;
+  btnAnkiSync.disabled = true;
+  btnAnkiReset.disabled = true;
+  const textoOriginal = btnAnkiSync.textContent;
+  btnAnkiSync.textContent = 'Buscando…';
+  mostrarMensajeMant('');
+  try {
+    const r = await sincronizarNuevosTestsAlMazo();
+    if (r.anadidas > 0) {
+      const t = r.testsNuevos === 1 ? '1 test nuevo' : `${r.testsNuevos} tests nuevos`;
+      mostrarMensajeMant(
+        `Se añadieron ${r.anadidas} ${r.anadidas === 1 ? 'tarjeta nueva' : 'tarjetas nuevas'} (${t}). Mazo: ${r.totalMazo} tarjetas.` +
+        (r.sincronizado === false ? ' Guardado solo en este dispositivo (sin conexión con la nube).' : ''),
+        r.sincronizado === false ? 'error' : 'ok'
+      );
+    } else {
+      mostrarMensajeMant('No hay tests nuevos en data/: el mazo ya está al día (0 tarjetas añadidas).');
+    }
+    renderAnki();
+  } catch (err) {
+    console.error('Error buscando nuevos tests:', err);
+    mostrarMensajeMant('No se pudo leer data/. Comprueba tu conexión e inténtalo de nuevo.', 'error');
+  }
+  btnAnkiSync.textContent = textoOriginal;
+  btnAnkiSync.disabled = false;
+  btnAnkiReset.disabled = false;
+  ankiOcupado = false;
+}
+
+async function reiniciarAnki() {
+  if (ankiOcupado) return;
+  if (!confirm('¿Seguro que quieres reiniciar TODO el progreso de Anki?\n\nSe borrará el estado de las tarjetas (fallos, intervalos y madurez) y el mazo volverá a empezar con todas las preguntas como nuevas. Tus resultados de tests y tu configuración no se tocan.')) {
+    return;
+  }
+  ankiOcupado = true;
+  btnAnkiSync.disabled = true;
+  btnAnkiReset.disabled = true;
+  const textoOriginal = btnAnkiReset.textContent;
+  btnAnkiReset.textContent = 'Reiniciando…';
+  mostrarMensajeMant('');
+  try {
+    const r = await reiniciarProgresoAnki();
+    mostrarMensajeMant(`Progreso reiniciado: mazo recreado con ${r.totalMazo} tarjetas nuevas.`, 'ok');
+    renderAnki();
+  } catch (err) {
+    console.error('Error reiniciando Anki:', err);
+    mostrarMensajeMant('No se pudo reiniciar el mazo. Inténtalo de nuevo.', 'error');
+    renderAnki();
+  }
+  btnAnkiReset.textContent = textoOriginal;
+  btnAnkiSync.disabled = false;
+  btnAnkiReset.disabled = false;
+  ankiOcupado = false;
+}
+
+btnConfigAnki.addEventListener('click', (e) => {
+  e.stopPropagation();
+  abrirModalAnki();
+});
+document.getElementById('btnCerrarModalAnki').addEventListener('click', cerrarModalAnki);
+btnAnkiCancelar.addEventListener('click', cerrarModalAnki);
+btnAnkiGuardar.addEventListener('click', guardarCambiosAnki);
+btnAnkiSync.addEventListener('click', buscarNuevosTestsAnki);
+btnAnkiReset.addEventListener('click', reiniciarAnki);
+ankiRadiosModo.forEach(r => r.addEventListener('change', actualizarCamposAnki));
+ankiChkSinLimiteNuevas.addEventListener('change', () => {
+  actualizarCamposAnki();
+  if (!ankiChkSinLimiteNuevas.checked) ankiInputNuevas.focus();
+});
+modalAnki.addEventListener('click', (e) => {
+  if (e.target.id === 'modalAnki') cerrarModalAnki();
+});
+modalAnki.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && e.target.matches('input[type="number"]')) {
+    e.preventDefault();
+    guardarCambiosAnki();
+  }
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalAnki.classList.contains('activo')) {
+    cerrarModalAnki();
+  }
+});
+
 async function confirmarBorrado() {
   if (confirm('¿Seguro que quieres borrar todos tus resultados guardados?')) {
     await borrarProgreso();

@@ -1,0 +1,269 @@
+{
+  "test_id": 24,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "En las motocicletas, ¿ique es obligatorio tener en cuenta con el equipaje transportado?",
+      "opciones": [
+        "Queno sobresalgaporlaparte trasera.",
+        "Que no sobresalga lateralmente.",
+        "Que vaya colocado y sujeto deforma que no afecte la estabilidad de la motocicleta."
+      ],
+      "imagen": "../img/test_024_p01.jpg"
+    },
+    {
+      "texto": "Si el intermitente del vehiculo no funciona, ¿icomo indicara que va a girar a la izquierda?",
+      "opciones": [
+        "Con el brazo izquierdo enposicion horizontal y la palma de la mano extendida hacia abajo.",
+        "Extendiendo el brazo izquierdo horizontalmente, con la palma de la mano hacia atras.",
+        "Doblando el brazo izquierdo hacia arriba, con la palma dela mano extendida."
+      ]
+    },
+    {
+      "texto": "El vehiculo de la fotografia, ¿ipuede continuar la marcha?",
+      "opciones": [
+        "No,porquedebe ceder el paso.",
+        "Si,pero solo cuando no hayvehiculos cerca.",
+        "Si,porque el semaforo esta verde."
+      ],
+      "imagen": "../img/test_024_p03.jpg"
+    },
+    {
+      "texto": "Si a causa de una averia no puede alcanzar la velocidad minima en una autovia y existe peligro de alcance por otros vehiculos, debe...",
+      "opciones": [
+        "circular solo hasta la proxima salida, siempre por el arcen.",
+        "circularconlaluz de emergenciaencendida.",
+        "detener obligatoriamente el vehiculo en el arcen."
+      ]
+    },
+    {
+      "texto": "A la vista de la senal, ¿ique separacion debe dejar con el vehiculo que circula delante?",
+      "opciones": [
+        "Unadistanciaminimade70metros.",
+        "La distancia obligatoria de seguridad.",
+        "Una distancia maxima de70metros."
+      ],
+      "imagen": "../img/test_024_p05.jpg"
+    },
+    {
+      "texto": "Circula a 60 km/h. ¿Por que carril debe circular?",
+      "opciones": [
+        "Por el de la izquierda.",
+        "Por el de la derecha.",
+        "Poreldelcentro."
+      ],
+      "imagen": "../img/test_024_p06.jpg"
+    },
+    {
+      "texto": "¿Que indica la senal?",
+      "opciones": [
+        "Un pasoa nivel conbarreras.",
+        "Un cruce donde tienen preferencia los que entran por la derecha.",
+        "Unainterseccionconcuatroomasvias."
+      ],
+      "imagen": "../img/test_024_p07.jpg"
+    },
+    {
+      "texto": "Un vehiculo estacionado, ¿icuando obstruye gravemente la circulacion?",
+      "opciones": [
+        "Cuando esta en las proximidades deun paso parapeatones.",
+        "Cuandoestaendoblefila sinconductor.",
+        "Cuando esta en zona reservada a carga y descarga, fuera de las horas de utilizacion."
+      ]
+    },
+    {
+      "texto": "Circula por una via interurbana y observa que nieva de forma ligera, ¿ipuede emplear el alumbrado antiniebla?",
+      "opciones": [
+        "Si, debe usar obligatoriamente las luces antiniebla traseras.",
+        "Si, pero solo las luces antiniebla delanteras, ya que las traseras estan prohibidas en este caso.",
+        "No,esta prohibidousar las luces antiniebla cuando la nevada es ligera."
+      ],
+      "imagen": "../img/test_024_p09.jpg"
+    },
+    {
+      "texto": "En un autobus cuyos asientos disponen de cinturon de seguridad es obligatorio que lo utilicen...",
+      "opciones": [
+        "solo los pasajeros mayores de tres anos de edad, ademas del conductor.",
+        "todos lospasajeros.",
+        "solo el conductor."
+      ],
+      "imagen": "../img/test_024_p10.jpg"
+    },
+    {
+      "texto": "La furgoneta esta en doble fila, ¿ipuede hacer una parada para descargar?",
+      "opciones": [
+        "No,porque esta prohibido.",
+        "Si, cuando no hay un lugar de descarga cerca.",
+        "Si, el tiempo que quiera."
+      ],
+      "imagen": "../img/test_024_p11.jpg"
+    },
+    {
+      "texto": "Si en una primera prueba de alcoholemia no supera los limites maximos permitidos, los agentes...",
+      "opciones": [
+        "le pueden imponer una sancion, si presenta sintomas de haber consumido alcohol.",
+        "no lepueden impedir continuar sumarcha, enningun caso.",
+        "realizaran una segunda prueba, si presenta sintomas de estar bajo la influencia de bebidas alcoholicas."
+      ],
+      "imagen": "../img/test_024_p12.jpg"
+    },
+    {
+      "texto": "En una carretera convencional, el conductor de una motocicleta, ¿ipuede rebasar la velocidad maxima generica en alguna circunstancia?",
+      "opciones": [
+        "No,sololapuedenrebasar losturismospara adelantar.",
+        "No, en ningun caso.",
+        "Si, para adelantar, en 20 km/h"
+      ],
+      "imagen": "../img/test_024_p13.jpg"
+    },
+    {
+      "texto": "Los conductores de vehiculos especiales que estan obligados a utilizar la senal V-2, ¿icuando la utilizaran?",
+      "opciones": [
+        "Tanto de dia como de noche.",
+        "Solo de dia.",
+        "Solo de noche."
+      ],
+      "imagen": "../img/test_024_p14.jpg"
+    },
+    {
+      "texto": "Como norma general, ¿zesta prohibido adelantar en los pasos a nivel o en sus proximidades?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Enlos pasos a nivel si,perono en sus proximidades."
+      ],
+      "imagen": "../img/test_024_p15.jpg"
+    },
+    {
+      "texto": "Para incorporarse a una via por un carril de aceleracion, ¿zdonde debe cerciorarse de que puede realizar la maniobra sin peligro?",
+      "opciones": [
+        "El lugar es indiferente.",
+        "Al final del carril de aceleracion",
+        "Al principio del carril de aceleracion."
+      ],
+      "imagen": "../img/test_024_p16.jpg"
+    },
+    {
+      "texto": "Si circulamos por una via donde hay una linea longitudinal continua adosada a otra discontinua...",
+      "opciones": [
+        "debemos tener en cuenta solamente la lineamas cercana al carril por elquecirculamos.",
+        "nos indica que es un carril reversible.",
+        "no sepuedeatravesar en ningun caso."
+      ],
+      "imagen": "../img/test_024_p17.jpg"
+    },
+    {
+      "texto": "¿Qué indica esta senal?",
+      "opciones": [
+        "Lasituaciondeunapartadero.",
+        "Una parada de autobuses.",
+        "Una zonade frenado deemergencia."
+      ],
+      "imagen": "../img/test_024_p18.jpg"
+    },
+    {
+      "texto": "¿Que recursos utiliza el sistema de reconocimiento de senales de trafico del vehiculo para leer las senales verticales?",
+      "opciones": [
+        "Una camara o sensor colocado en la parte trasera del retrovisor interior.",
+        "Utiliza siempre los datos de navegacion para mostrar la informacion.",
+        "Estesistema solomuestra informacion sobremarcas viales."
+      ]
+    },
+    {
+      "texto": "¿Es importante no superar la velocidad maxima generica de 50 km/h en via urbana?",
+      "opciones": [
+        "Si, a partir de 50 km/h la probabilidad de que un atropello sea mortal aumenta en un 50%.",
+        "No,a partir de esa velocidad el consumo de combustible es bajo.",
+        "No, una mayor velocidad aumenta la fluidez del trafico sin mayor riesgo de accidentes."
+      ]
+    },
+    {
+      "texto": "Un vehiculo tiene airbag. ¿Es obligatorio ponerse el cinturon de seguridad?",
+      "opciones": [
+        "No, porque el airbag sustituye al cinturon.",
+        "Es aconsejable, pero no es obligatorio.",
+        "Si, porque mejora la eficacia del airbag."
+      ],
+      "imagen": "../img/test_024_p21.jpg"
+    },
+    {
+      "texto": "Entre otros efectos, el alcohol produce...",
+      "opciones": [
+        "un aumento del campo visual.",
+        "una reduccion del campo visual.",
+        "un efecto positivo sobre la conduccion."
+      ]
+    },
+    {
+      "texto": "¿Puede incorporarse a la circulacion dando marcha atras invadiendo una interseccion?",
+      "opciones": [
+        "Si, cuando el recorrido no sea superior a 15metros.",
+        "Si, pero a una velocidad reducida que permita detenerse si existe algun peligro.",
+        "No,marcha atras no puede invadir una interseccion."
+      ]
+    },
+    {
+      "texto": "Este vehiculo esta averiado y circula muy despacio con la luz de emergencia encendida. ¿Es correcto?",
+      "opciones": [
+        "No,porque las luces de emergencia se encienden unicamentecuando el vehiculo esta parado.",
+        "No, porque esta prohibido utilizarla en vias urbanas.",
+        "Si,porque estaaveriado."
+      ],
+      "imagen": "../img/test_024_p24.jpg"
+    },
+    {
+      "texto": "Al estacionar un vehiculo en una via urbana suficientemente iluminada, ¿ique alumbrado dejara encendido?",
+      "opciones": [
+        "Ninguno.",
+        "El alumbrado deposicion o el de estacionamiento, si se trata de una travesia.",
+        "El alumbrado de posicion."
+      ],
+      "imagen": "../img/test_024_p25.jpg"
+    },
+    {
+      "texto": "En esta autopista dentro de poblado, ¿za que velocidad puede circular como maximo si no existe senalizacion?",
+      "opciones": [
+        "A70 km/h.",
+        "A120km/h.",
+        "A 80 km/h."
+      ],
+      "imagen": "../img/test_024_p26.jpg"
+    },
+    {
+      "texto": "La senal triangular indica...",
+      "opciones": [
+        "que el pavimentode la calzada puede estarmuy deslizante.",
+        "que hay un escalon lateral en la calzada.",
+        "que hay un tramo de curvas peligrosas."
+      ],
+      "imagen": "../img/test_024_p27.jpg"
+    },
+    {
+      "texto": "El vehiculo negro al que pretende adelantar senaliza su proposito de desplazarse para adelantar, ¿zpuede adelantarle?",
+      "opciones": [
+        "Si,si loadvierteconsenalesopticasoacusticas.",
+        "No, en ningun caso. b) No, en ningun caso.",
+        "No,porque al senalizar tiene preferencia."
+      ],
+      "imagen": "../img/test_024_p28.jpg"
+    },
+    {
+      "texto": "¿Es peligroso fumar mientras se conduce?",
+      "opciones": [
+        "No.",
+        "No, porque relaja.",
+        "Si, porque se pierde capacidad para maniobrar."
+      ],
+      "imagen": "../img/test_024_p29.jpg"
+    },
+    {
+      "texto": "¿Como se debe regular adecuadamente la altura del apoyacabezas?",
+      "opciones": [
+        "El borde debe quedar situado entre el limite superior de la cabeza y la altura de los ojos.",
+        "En funcion de la comodidad del conductor.",
+        "El borde debe quedar situado entre el limite inferior de la cabeza y la altura de los ojos."
+      ],
+      "imagen": "../img/test_024_p30.jpg"
+    }
+  ]
+}

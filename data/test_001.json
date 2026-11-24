@@ -1,0 +1,269 @@
+{
+  "test_id": 1,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "¿Es aconsejable conducir un turismo calzado con unas chanclas?",
+      "opciones": [
+        "No,porque podrian caerse y dificultar el manejo de los pedales.",
+        "Si, porque al no sujetar el pie, es mas facil ejercer la presion correcta sobre los pedales.",
+        "Si, porque permiten un manejo mas rapido y seguro de los pedales."
+      ],
+      "imagen": "../img/test_001_p01.jpg"
+    },
+    {
+      "texto": "¿Puede realizar un cambio de sentido en un lugar donde este prohibido adelantar?",
+      "opciones": [
+        "Si, excepto entre la puesta y la salida de sol, porque disminuye la visibilidad.",
+        "No, salvo que el cambio de sentido este expresamente autorizado.",
+        "Si, cuando la circulacion en sentido contrariolo permita."
+      ],
+      "imagen": "../img/test_001_p02.jpg"
+    },
+    {
+      "texto": "En un vehiculo de autoescuela realizando clases practicas, ¿iquien es considerado el conductor?",
+      "opciones": [
+        "Tantoalalumnocomoalprofesor.",
+        "El alumno,ya quemaneja el volante.",
+        "El profesor, por ser responsable de los mandos adicionales."
+      ],
+      "imagen": "../img/test_001_p03.jpg"
+    },
+    {
+      "texto": "¿Donde estapermitido que viaje un ninoque no alcance los 135 centimetros de estatura?",
+      "opciones": [
+        "En cualquiera de los asientos traseros utilizando el cinturon para adultos.",
+        "En un asiento delantero o trasero, utilizando siempre el cinturon de seguridad para adultos.",
+        "En el asiento trasero, utilizando siempre un dispositivo de retencion homologado en funcion de su talla y peso"
+      ]
+    },
+    {
+      "texto": "Con esta senalizacion, ¿za que velocidad debe circular?",
+      "opciones": [
+        "Obligatoriamentea30km/h.",
+        "Al menos a 30 km/h.",
+        "A3okm/h,comorecomendacion,durante el tramo que subsista el peligro."
+      ],
+      "imagen": "../img/test_001_p05.jpg"
+    },
+    {
+      "texto": "Una linea blanca continua sobre la calzada, sensiblemente mas ancha que en el caso general...",
+      "opciones": [
+        "indica la existencia de un carril especial.",
+        "sirvepara delimitar, unicamente, los carriles bus.",
+        "indica el borde de la calzada."
+      ],
+      "imagen": "../img/test_001_p06.jpg"
+    },
+    {
+      "texto": "¿Cual es la sancion por no tener el seguro obligatorio del vehiculo?",
+      "opciones": [
+        "Una multa, pero sin inmovilizacion del vehiculo.",
+        "Una multa, y ademas se podra inmovilizar el vehiculo.",
+        "La inmovilizacion del vehiculo,pero no supone sancion economica."
+      ],
+      "imagen": "../img/test_001_p07.jpg"
+    },
+    {
+      "texto": "¿Al aumentar la velocidad incrementa la probabilidad de muerte en caso de atropello a un peaton?",
+      "opciones": [
+        "No,la velocidad del vehiculo no tiene impacto significativo en la probabilidad de muerte de un peaton atropellado",
+        "Si, al aumentar la velocidad de un vehiculo se incrementa la probabilidad de fatalidad en caso de atropello aunpeaton.",
+        "La probabilidad es la misma, dependera exclusivamente del estado de salud del peaton."
+      ],
+      "imagen": "../img/test_001_p08.jpg"
+    },
+    {
+      "texto": "¿Cuantos espejos retrovisores tienen que llevar instalados las motocicletas?",
+      "opciones": [
+        "Obligatoriamente uno en el lado derecho, pero pueden llevar dos.",
+        "Siempre deben llevar dos espejos, uno en cada lado.",
+        "Un espejo exterior izquierdo si no superan los 10o km/h y dos, uno en cada lado, si la velocidad es mayor."
+      ],
+      "imagen": "../img/test_001_p09.jpg"
+    },
+    {
+      "texto": "¿Esta permitida la circulacion de animales por una carretera convencional?",
+      "opciones": [
+        "Si,unicamentecuandono exista viapecuaria.",
+        "No.",
+        "Si,exceptocuandocirculenenrebano."
+      ]
+    },
+    {
+      "texto": "¿Que aportan a la seguridad vial los sistemas avanzados de ayuda a la conduccion tambiénconocidos comoADAs?",
+      "opciones": [
+        "Disminuyen el tiempo dereaccion del conductor.",
+        "Permiten al conductor reducir su nivel de alerta.",
+        "Mejoran notablemente la seguridad activa del vehiculo."
+      ],
+      "imagen": "../img/test_001_p11.jpg"
+    },
+    {
+      "texto": "¿Cual es la tasa de alcohol maxima permitida a un conductor novel?",
+      "opciones": [
+        "0,25miligramos de alcohol por litro de aire espirado.",
+        "0,3 miligramos de alcohol por litro de aire espirado.",
+        "0,15 miligramos de alcohol por litro de aire espirado."
+      ],
+      "imagen": "../img/test_001_p12.jpg"
+    },
+    {
+      "texto": "Cuando un vehiculo accidentado comienza a arder, ¿ique se debe hacer primero?",
+      "opciones": [
+        "Apagar el fuego.",
+        "Sacarrapidamentea los heridos.",
+        "Ir a buscar ayuda."
+      ],
+      "imagen": "../img/test_001_p13.jpg"
+    },
+    {
+      "texto": "En esta situacion, ¿zque debe hacer si va a girar a la izquierda?",
+      "opciones": [
+        "Continuar, obedeciendo al semaforo de la derecha.",
+        "Detenerse, obedeciendo al semaforo situado a la izquierda.",
+        "Solo detenerse si haypeatones cruzando."
+      ],
+      "imagen": "../img/test_001_p14.jpg"
+    },
+    {
+      "texto": "Esta permitido colocar la senal luminosa de presenalizacion de peligro, V-16, ¿alejada del vehiculo averiado?",
+      "opciones": [
+        "Si, alejado se podra apreciar mejor.",
+        "Si, debe estar al menos a 100metros.",
+        "No, se debe colocar en la parte mas alta posible del vehiculo inmovilizado."
+      ],
+      "imagen": "../img/test_001_p15.jpg"
+    },
+    {
+      "texto": "Para entrar en una autopista, ¿ia que velocidad debe circular?",
+      "opciones": [
+        "Alamaximavelocidadpermitida enlaautopista.",
+        "Siempre muy despacio para entrar con seguridad.",
+        "A la velocidadadecuadaquepermita incorporarsecon seguridad."
+      ],
+      "imagen": "../img/test_001_p16.jpg"
+    },
+    {
+      "texto": "¿Que es una detencion?",
+      "opciones": [
+        "La inmovilizacion del vehiculo por necesidades de la circulacion.",
+        "Una parada por cualquier causa.",
+        "Un estacionamiento sin bajarse del vehiculo."
+      ]
+    },
+    {
+      "texto": "Esta senal indica peligro por la proximidad de...",
+      "opciones": [
+        "una via enmal estado.",
+        "unbadenen la via.",
+        "un resalto en la via."
+      ],
+      "imagen": "../img/test_001_p18.jpg"
+    },
+    {
+      "texto": "En condiciones normales, la velocidad adecuada esta siempre...",
+      "opciones": [
+        "por debajo de la velocidad minima.",
+        "por encima de la velocidad maxima y por debajo de la minima.",
+        "por encima de la velocidad minimay pordebajo de la maxima."
+      ]
+    },
+    {
+      "texto": "Al adelantar a un ciclista en una via urbana, ¿zdebe dejarse una separacion lateral minima de 1,5 metros?",
+      "opciones": [
+        "No, solo es obligatorio fuera de poblado.",
+        "Solo si la via tiene arcen.",
+        "Si, debe respetarse en cualquier tipo de via."
+      ],
+      "imagen": "../img/test_001_p20.jpg"
+    },
+    {
+      "texto": "Que distancia de separacion respecto al vehiculo que le precede debera mantener un vehiculo de mas de 3.500 kg.de MMA, ¿circulando por una autovia?",
+      "opciones": [
+        "50metros comominimo.",
+        "50metros si nopretendeadelantar.",
+        "La que le permita detenerse sin colisionar con el."
+      ]
+    },
+    {
+      "texto": "Un repartidor que trabaja en bicicleta por una via urbana, ¿idebe utilizar casco?",
+      "opciones": [
+        "No, porque en ciudad el casco solo es obligatorio para menores de 16 anos.",
+        "Si, durante su jornada de trabajo.",
+        "Solo si circula por unavia interurbana."
+      ],
+      "imagen": "../img/test_001_p22.jpg"
+    },
+    {
+      "texto": "¿Cual debe ser su comportamiento al ceder el paso?",
+      "opciones": [
+        "Detenerse en las intersecciones si se acerca otro vehiculo.",
+        "Parar y comprobar si otro usuario de la via tiene prioridad.",
+        "No obligar al vehiculo que tiene prioridad a modificar bruscamente su trayectoria o velocidad."
+      ]
+    },
+    {
+      "texto": "En esta via de poblado, ¿ia que velocidad como maximo podremos circular en ausencia de senalizacionespecifica?",
+      "opciones": [
+        "A30 km/h.",
+        "A 20 km/h.",
+        "A 50 km/h."
+      ],
+      "imagen": "../img/test_001_p24.jpg"
+    },
+    {
+      "texto": "La fatiga, ¿zprovoca lentitud y falta de precision en los movimientos?",
+      "opciones": [
+        "No,la fatiga solo produce calambres.",
+        "No.",
+        "Si,por locual la conduccion sehacemaspeligrosa."
+      ]
+    },
+    {
+      "texto": "Si los paneles de mensaje variable indican que los turismos con distintivo ambiental B pueden circular por un carril VAo, ¿Que ocupacion minima debe tener el vehiculo?",
+      "opciones": [
+        "Dos ocupantes, incluido el conductor.",
+        "Un ocupante.",
+        "Dos ocupantes, sin incluir al conductor."
+      ],
+      "imagen": "../img/test_001_p26.jpg"
+    },
+    {
+      "texto": "Los accidentes de trafico generan...",
+      "opciones": [
+        "un enorme impacto economico, solamente.",
+        "danos materiales y costes sanitarios, administrativos y humanos.",
+        "danosmateriales y costes humanos, unicamente."
+      ],
+      "imagen": "../img/test_001_p27.jpg"
+    },
+    {
+      "texto": "El efecto submarino, que en un accidente de trafico puede provocar graves lesiones al conductor, esta relacionado con...",
+      "opciones": [
+        "Una incorrectapresiondelosneumaticos.",
+        "Un mal uso del cinturon de seguridad.",
+        "Un consumo excesivo dealcohol,medicamentos odrogas deabuso."
+      ],
+      "imagen": "../img/test_001_p28.jpg"
+    },
+    {
+      "texto": "Si queda detenido en un atasco, ¿zque distancia es aconsejable mantener con el vehiculo de delante?",
+      "opciones": [
+        "Un metro como maximo.",
+        "Unespaciominimopara ocuparmenos espacio.",
+        "Dos o tres metros para no golpear al vehiculo de delante en caso de alcance trasero."
+      ],
+      "imagen": "../img/test_001_p29.jpg"
+    },
+    {
+      "texto": "Fuera de poblado, ¿ique separacion lateral debe dejar una motocicleta al adelantar un camion?",
+      "opciones": [
+        "Una distancia proporcional a la velocidad a la que circule.",
+        "Un espacio no inferior a 1,50 metros.",
+        "Una separacion que considere segura en funcion de las circunstancias del momento."
+      ],
+      "imagen": "../img/test_001_p30.jpg"
+    }
+  ]
+}

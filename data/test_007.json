@@ -1,0 +1,262 @@
+{
+  "test_id": 7,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "¿Que sistema puede detectar peatones o animales marcandolos en color rojo u otro en la pantalla de informacion del conductor?",
+      "opciones": [
+        "El head up display.",
+        "EI Departure Warning and prevention.",
+        "El asistente de vision nocturna."
+      ]
+    },
+    {
+      "texto": "En una via interurbana, ¿zpuede adelantar un ciclomotor a un tractor agricola que circula por el arcen?",
+      "opciones": [
+        "Si, siempre que el recorrido en paralelo no supere los 200 metros o los 15 segundos.",
+        "Si, pero solo de dia.",
+        "No, los vehiculos que circulan por el arcen no se pueden adelantar."
+      ],
+      "imagen": "../img/test_007_p02.jpg"
+    },
+    {
+      "texto": "¿Qué indica esta senal?",
+      "opciones": [
+        "Arcenconresalto.",
+        "Calzada con pavimento irregular.",
+        "Calzada con obras."
+      ],
+      "imagen": "../img/test_007_p03.jpg"
+    },
+    {
+      "texto": "El tractor agricola de la fotografia, de MMA inferior a 350o kg., ¿icircula correctamente?",
+      "opciones": [
+        "No, pues debe utilizar el carril derecho.",
+        "Si.",
+        "No,puespuede utilizarcualquierpartede lavia."
+      ],
+      "imagen": "../img/test_007_p04.jpg"
+    },
+    {
+      "texto": "Una vez iniciado el adelantamiento se producen circunstancias que pueden hacer dificil su finalizacion sin provocar riesgos, ¿ique esta obligado a hacer el conductor?",
+      "opciones": [
+        "Desistir del adelantamiento, reduciendo rapidamente la marcha y regresando a su carril sin obstaculizar.",
+        "Terminareladelantamientoaumentandorapidamentelavelocidad.",
+        "Frenarbruscamentepara volvera suderecha cuantoantes."
+      ],
+      "imagen": "../img/test_007_p05.jpg"
+    },
+    {
+      "texto": "Un turismo por una autovia, ¿ia que velocidad maxima puede circular?",
+      "opciones": [
+        "A 100 km/h.",
+        "A 110 km/h.",
+        "A120km/h."
+      ]
+    },
+    {
+      "texto": "La distancia de frenado de un vehiculo cargado es...",
+      "opciones": [
+        "igual que cuando circula sin carga.",
+        "menorquecuandocircula sin carga.",
+        "mayorque cuando circula sin carga."
+      ]
+    },
+    {
+      "texto": "¿Qué indica esta senal?",
+      "opciones": [
+        "Estacionamientoprohibidoenvado.",
+        "Zonadeestacionamiento limitado.",
+        "Estacionamientoprohibido."
+      ],
+      "imagen": "../img/test_007_p08.jpg"
+    },
+    {
+      "texto": "Los peatones que transiten de noche por una via fuera de poblado deberan llevar un...",
+      "opciones": [
+        "catadioptrico de color rojo,que pueda verse a una distancia de al menos 50metros.",
+        "elemento luminoso o reflectante quepueda verse a una distancia de al menos 150 metros.",
+        "telefono movil."
+      ]
+    },
+    {
+      "texto": "En esta via urbana con dos carriles para cada sentido que no tiene lineas de separacion de carriles, ¿ipor que carril se debe circular?",
+      "opciones": [
+        "Por el carril de la derecha y no puedo cambiar al segundo.",
+        "Por el de la derecha, y puedo circular por el segundo carril para adelantar.",
+        "Por el carril que mas convenga para mi destino."
+      ],
+      "imagen": "../img/test_007_p10.jpg"
+    },
+    {
+      "texto": "En una retencion en una autopista, los vehiculos circulan a paso de peaton. ¿Que deben hacer los conductores?",
+      "opciones": [
+        "Desplazarse hacia un lado para dejar libre un carril de emergencia.",
+        "Permanecer en el centro de sucarril para evitar invasiones laterales.",
+        "Circular por el arcen para dejar libres los carriles centrales."
+      ]
+    },
+    {
+      "texto": "Un amortiguador en malas condiciones, ¿zque consecuencias puede tener?",
+      "opciones": [
+        "Que el vehiculo gane estabilidad.",
+        "Quedisminuyaladistanciadefrenado.",
+        "Quelas luces oscilen durante la marchaypuedan deslumbrar."
+      ]
+    },
+    {
+      "texto": "Si un vehiculo dispone de sistema de alumbrado automatico, ¿zen que momento se activa?",
+      "opciones": [
+        "A partir de una hora determinada.",
+        "Cuando un sensor detecta una disminucion de visibilidad.",
+        "Cuando un sensor detecta que el conductor esta fatigado."
+      ]
+    },
+    {
+      "texto": "En una interseccion sin senalizar, ¿zesta obligado un turismo a ceder el paso a un tranvia?",
+      "opciones": [
+        "No.",
+        "Solo si se aproxima por mi derecha.",
+        "Si."
+      ],
+      "imagen": "../img/test_007_p14.jpg"
+    },
+    {
+      "texto": "¿Esta permitido conducir un camion con el permiso de la clase B?",
+      "opciones": [
+        "Si, cualquiera que sea la M.M.A del camion.",
+        "Si, cuando su M.M.A no sea superior a 3.500 kg.",
+        "No, en ningun caso."
+      ],
+      "imagen": "../img/test_007_p15.jpg"
+    },
+    {
+      "texto": "Leer un periodico o mirar un mapa mientras se circula, ¿zes un riesgo para la conduccion?",
+      "opciones": [
+        "Si.",
+        "Leer un periodico si, pero mirar un mapa no.",
+        "Unicamente si se aparta la mirada de la carretera mas de dos segundos."
+      ]
+    },
+    {
+      "texto": "El personal de obras de la fotografia le esta ordenando que se detenga. ¿Esta obligado a obedecerle?",
+      "opciones": [
+        "Si, porque esta autorizado a regular el paso de vehiculos en el tramo de obras.",
+        "Solamente si circulan vehiculos en sentido contrario.",
+        "No, porque no es un agente de circulacion."
+      ],
+      "imagen": "../img/test_007_p17.jpg"
+    },
+    {
+      "texto": "¿Que parte del cuerpo resulta mas afectada en los accidentes de motocicleta?",
+      "opciones": [
+        "Laspiernas.",
+        "Losbrazos.",
+        "La cabeza y la cara."
+      ]
+    },
+    {
+      "texto": "Las motocicletas estan obligadas a llevar encendida la luz de cruce...",
+      "opciones": [
+        "soloentre lapuestayla salidadel sol.",
+        "durante todo el dia por cualquier via.",
+        "durante el dia por vias interurbanas y solo entre la puesta yla salida del sol por vias urbanas."
+      ]
+    },
+    {
+      "texto": "El medio ambiente, ¿ise ve afectado por los accidentes de trafico?",
+      "opciones": [
+        "Unicamente en via interurbana.",
+        "Si.",
+        "No."
+      ]
+    },
+    {
+      "texto": "Es obligatorio encender el alumbrado de posicion...",
+      "opciones": [
+        "al estacionar en la calzada deuna travesia suficientemente iluminada.",
+        "siempreque este estacionado en el arcen de una via urbana suficientemente iluminada.",
+        "siempre que deba utilizar cualquier otro alumbrado en circulacion."
+      ]
+    },
+    {
+      "texto": "Basicamente, ¿ique puede observar el conductor mirando por los espejos retrovisores?",
+      "opciones": [
+        "Que sucede dentro y delante del vehiculo.",
+        "Quesucededetrasdelvehiculo",
+        "Que sucedeen lospuntosciegos."
+      ],
+      "imagen": "../img/test_007_p22.jpg"
+    },
+    {
+      "texto": "¿Qué indica esta senal?",
+      "opciones": [
+        "Que esta prohibida la entradaa todos los varones.",
+        "Prohibida la entrada a menores de 18 anos.",
+        "Que esta prohibida la entrada a los peatones."
+      ],
+      "imagen": "../img/test_007_p23.jpg"
+    },
+    {
+      "texto": "Un turismo con remolque, ¿ies obligatorio que lleve una rueda de repuesto del remolque?",
+      "opciones": [
+        "Si, cuando el remolque no es ligero.",
+        "Si.",
+        "No."
+      ],
+      "imagen": "../img/test_007_p24.jpg"
+    },
+    {
+      "texto": "En caso de accidente, ¿zexiste relacion entre la velocidad de circulacion y la gravedad de las lesiones delos ocupantes de unvehiculo?",
+      "opciones": [
+        "Si; a mayor velocidad menor es la probabilidad de sufrir lesiones graves.",
+        "Si; a mayor velocidad mayor es la probabilidad de sufrir lesiones graves.",
+        "No; la gravedad delas lesiones depende solo de los sistemas de seguridad pasiva."
+      ],
+      "imagen": "../img/test_007_p25.jpg"
+    },
+    {
+      "texto": "¿Esta permitido parar o estacionar en un paso para peatones y en sus proximidades?",
+      "opciones": [
+        "Si, siempre.",
+        "En el paso para peatones se puede parar y, en sus proximidades, se puede parar y estacionar.",
+        "En el paso para peatones,no; pero en sus proximidades, si."
+      ],
+      "imagen": "../img/test_007_p26.jpg"
+    },
+    {
+      "texto": "¿Cuando tiene que mirar los retrovisores?",
+      "opciones": [
+        "Cuando vaya a realizaruna maniobra, unicamente.",
+        "Solocuandoseanecesario.",
+        "Regularmente, aunque no vaya a realizar ninguna maniobra."
+      ],
+      "imagen": "../img/test_007_p27.jpg"
+    },
+    {
+      "texto": "Los efectos del alcohol, ¿zson mayores en los conductores con poca experiencia al volante?",
+      "opciones": [
+        "No, solo dependen de la tasa de alcoholemia.",
+        "Si,por eso la tasa dealcoholemia permitida esmenor.",
+        "No,el alcohol afecta igual a todas las personas."
+      ]
+    },
+    {
+      "texto": "Un turismo circula en llano. ¿Cuando necesita mas distancia (espacio) para frenar?",
+      "opciones": [
+        "Cuando el vehiculollevapocopeso.",
+        "Cuando el vehiculo lleva mucho peso.",
+        "Frena siempre igual, porquelos frenos se adaptan al peso."
+      ]
+    },
+    {
+      "texto": "Los peatones de edad avanzada...",
+      "opciones": [
+        "distinguen perfectamente los colores de los semaforos.",
+        "nunca tienen problemas deorientacion.",
+        "a veces encuentran dificil apreciar la velocidad a la que se acercan los vehiculos."
+      ],
+      "imagen": "../img/test_007_p30.jpg"
+    }
+  ]
+}

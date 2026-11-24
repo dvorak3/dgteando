@@ -1,0 +1,264 @@
+{
+  "test_id": 12,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Cuando ha habido heridos en un accidente de circulacion es fundamental...",
+      "opciones": [
+        "darles algodebeberpara reanimarlos.",
+        "moverlos lo menos posible y llamar al 112.",
+        "sacarlosdelvehiculoparaintentarreanimarlos"
+      ]
+    },
+    {
+      "texto": "¿Que es el sistema ADAS conocido con el nombre de\"AEBS\"?",
+      "opciones": [
+        "Un sistema de frenado automatico de emergencia.",
+        "Un sistema antibloqueode frenos electronicos avanzado.",
+        "Un sistema que retiene el vehiculo en bajadas pronunciadas."
+      ]
+    },
+    {
+      "texto": "Si lleva instalado un navegador GPS debe tener en cuenta que...",
+      "opciones": [
+        "el criterio del conductor debeprevalecer en todo momento.",
+        "las instrucciones del navegadordeben prevalecer en todomomento.",
+        "debemirarsiempreal mapadelapantalla."
+      ],
+      "imagen": "../img/test_012_p03.jpg"
+    },
+    {
+      "texto": "Un peaton, ¿iesta obligado a someterse a una prueba de control de alcoholemia?",
+      "opciones": [
+        "Si, cuando sepueda sospecharque esta bajo la influencia de bebidas alcoholicas.",
+        "Si, cuando este implicado en un accidente de circulacion.",
+        "No, en ningun caso."
+      ]
+    },
+    {
+      "texto": "Cuando aumenta la velocidad..",
+      "opciones": [
+        "disminuye el tiempo de reaccion.",
+        "aumenta lacapacidad dereaccion.",
+        "aumenta la distancia de reaccion."
+      ]
+    },
+    {
+      "texto": "Entra en esta curva a mucha velocidad. ¿Que puede pasar?",
+      "opciones": [
+        "Nada,porqueesta biensenalizada.",
+        "El vehiculo se puede ir hacia la izquierda.",
+        "El vehiculo sepuede ir hacia la derecha."
+      ],
+      "imagen": "../img/test_012_p06.jpg"
+    },
+    {
+      "texto": "En esta interseccion, los conductores estan obligados a detenerse...",
+      "opciones": [
+        "ante la linea transversal, sin rebasarla.",
+        "junto a la senal de stop.",
+        "inmediatamente despues dela linea transversal."
+      ],
+      "imagen": "../img/test_012_p07.jpg"
+    },
+    {
+      "texto": "Un turismo, ¿ipuede transportar carga en la baca?",
+      "opciones": [
+        "Si, cuando no comprometa la estabilidad del vehiculo.",
+        "Si, pero solo si circula de dia.",
+        "No."
+      ],
+      "imagen": "../img/test_012_p08.jpg"
+    },
+    {
+      "texto": "Es conveniente que el traje del conductor o pasajero de una motocicleta sea...",
+      "opciones": [
+        "de piel u otro material similar que proteja de lesiones en caso de accidente.",
+        "poco vistoso y de colores apagados, para no distraer a los demas conductores.",
+        "muy amplio ysuelto porque lo mas importante es la estetica y la comodidad."
+      ]
+    },
+    {
+      "texto": "El alcohol, la fatiga y la velocidad excesiva, ¿ide que factor de riesgo forman parte?",
+      "opciones": [
+        "Del factor humano.",
+        "Del factor via y entorno.",
+        "Del factor vehiculo"
+      ]
+    },
+    {
+      "texto": "Al circular a mayor velocidad...",
+      "opciones": [
+        "seperciben peorlas senalesde trafico.",
+        "se percibenmejor las senales de trafico.",
+        "se puede ver y analizar mejor lo que ocurre alrededor."
+      ]
+    },
+    {
+      "texto": "¿Cuando esta prohibido adelantar en los tineles?",
+      "opciones": [
+        "Cuandoeltunelno esta iluminado.",
+        "Cuando solo existe un carril para cada sentido.",
+        "Cuando existe mas de un carril para cada sentido."
+      ],
+      "imagen": "../img/test_012_p12.jpg"
+    },
+    {
+      "texto": "¿En vias con trafico denso,ise puede hacer uso del claxon?",
+      "opciones": [
+        "Si, pero solo fuera de poblado.",
+        "Si, pero solo dentro de poblado.",
+        "No,salvoquesea estrictamente necesario."
+      ],
+      "imagen": "../img/test_012_p13.jpg"
+    },
+    {
+      "texto": "Al estacionar un vehiculo con remolque en una pendiente ascendente, si no dispone de calzos, ¿ique debe hacer?",
+      "opciones": [
+        "Apoyar una de las ruedas delanteras en el bordillo, orientada hacia el centro de la calzada.",
+        "Utilizarcomocalzos elementos naturales comopiedras,maderos,etc.",
+        "Es suficiente que deje engranada la marcha atras o la primera velocidad."
+      ]
+    },
+    {
+      "texto": "La presion de los neumaticos debera comprobarse con los neumaticos:",
+      "opciones": [
+        "Frios.",
+        "Calientes.",
+        "Frios o calientes, es indiferente."
+      ],
+      "imagen": "../img/test_012_p15.jpg"
+    },
+    {
+      "texto": "Los vehiculos que circulen por el arcen tienen prohibido circular en posicion paralela, excepto...",
+      "opciones": [
+        "losquecirculenmuydespacio",
+        "los ciclomotores y las motocicletas.",
+        "las bicicletas."
+      ],
+      "imagen": "../img/test_012_p16.jpg"
+    },
+    {
+      "texto": "¿Circulando por un paso inferior suficientemente iluminado zes necesario encender alguin alumbrado?",
+      "opciones": [
+        "Si, el alumbrado de posicion,para advertir mi presencia a los demas usuarios.",
+        "No,porque con la iluminacion de la via es suficiente.",
+        "Si, el alumbrado deposicion y el de corto alcance."
+      ],
+      "imagen": "../img/test_012_p17.jpg"
+    },
+    {
+      "texto": "Las personas que beben y conducen...",
+      "opciones": [
+        "tienen la misma probabilidad de sufrir un accidente.",
+        "tienen menor probabilidad de sufrir un accidente.",
+        "tienen mayor probabilidad de sufrir un accidente."
+      ]
+    },
+    {
+      "texto": "Si observa que el vehiculo blanco acaba de iniciar un desplazamiento al carril de la izquierda, ¿zpuede iniciar la maniobra de adelantamiento?",
+      "opciones": [
+        "No, porque tiene preferencia.",
+        "No, unicamente si la ha senalizado antes.",
+        "Si,debe realizar la maniobra lo antes posible para no entorpeceral otro vehiculo."
+      ],
+      "imagen": "../img/test_012_p19.jpg"
+    },
+    {
+      "texto": "Al cambiar el sentido de la marcha, ¿ique debe tener en cuenta?",
+      "opciones": [
+        "Quenopongaenpeligroniobstaculiceaotrosusuarios.",
+        "Que siempre debe existir un lugaracondicionado en la via para realizar la maniobra.",
+        "Que debe dejar una distancia de mas de 100 metros con el vehiculo que circula delante."
+      ],
+      "imagen": "../img/test_012_p20.jpg"
+    },
+    {
+      "texto": "Circula por una via y se encuentra a este agente, ¿ique indica con la bandera roja?",
+      "opciones": [
+        "Que debe detenerse en el lado derecho.",
+        "Quela viaqueda temporalmentecerrada al trafico apartir del paso de esa moto.",
+        "Quedebeextremar la atencionporlaproximidad deunpeligro."
+      ],
+      "imagen": "../img/test_012_p21.jpg"
+    },
+    {
+      "texto": "Esta senal indica direccion y sentido...",
+      "opciones": [
+        "obligatorios.",
+        "aconsejados.",
+        "prohibidos."
+      ],
+      "imagen": "../img/test_012_p22.jpg"
+    },
+    {
+      "texto": "Una senal de prohibicion junto a una senal de localizacion de poblacion, ¿zprohibe en toda la poblacion?",
+      "opciones": [
+        "Prohibesolamenteenlatravesia.",
+        "No.",
+        "Si, pero dentro de la poblacion puede haber otras senales que cambien la prohibicion anterior."
+      ],
+      "imagen": "../img/test_012_p23.jpg"
+    },
+    {
+      "texto": "Es obligatorio que todos los vehiculos con motor de combustion interna esten dotados de ...",
+      "opciones": [
+        "un dispositivo silenciador de explosiones.",
+        "un juego de correas para el equipo motor.",
+        "unextintordeincendios adecuadoyeficaz."
+      ]
+    },
+    {
+      "texto": "¿Es aconsejable llevar el cinturon de seguridad con este tipo de abrigo?",
+      "opciones": [
+        "Si, es mas comodo.",
+        "No, el cinturon puede perder eficacia al no estar ajustado al cuerpo.",
+        "Es indiferente."
+      ],
+      "imagen": "../img/test_012_p25.jpg"
+    },
+    {
+      "texto": "La senal de \"Zona de Bajas Emisiones\" que se muestra en la imagen ..",
+      "opciones": [
+        "Prohibe el acceso a vehiculos en funcion de su tamano y peso.",
+        "Prohibe el acceso a vehiculos en dias concondiciones climatologicas adversas debido a la niebla.",
+        "Prohibe el acceso a vehiculos en funcion de su distintivo ambiental u otros criterios ambientales."
+      ],
+      "imagen": "../img/test_012_p26.jpg"
+    },
+    {
+      "texto": "¿Que luz obliga a detenerse?",
+      "opciones": [
+        "La amarilla intermitente.",
+        "La amarilla fja.",
+        "La verde."
+      ],
+      "imagen": "../img/test_012_p27.jpg"
+    },
+    {
+      "texto": "En una zona de calzada helada ...",
+      "opciones": [
+        "sepuedemejorarlaadherencia, con cadenas o neumaticosde clavos.",
+        "no se pueden utilizar neumaticos de clavos.",
+        "no se puede circular."
+      ],
+      "imagen": "../img/test_012_p28.jpg"
+    },
+    {
+      "texto": "La principal causa de fatiga al volante es conducir...",
+      "opciones": [
+        "largosperiodoscondescansosadecuados.",
+        "cortosperiodos condescansos adecuados.",
+        "largos periodos con descansos muybreves."
+      ]
+    },
+    {
+      "texto": "Si es un enfermo cronico, ¿ique debe hacer para disminuir el riesgo de sufrir un accidente?",
+      "opciones": [
+        "Saber cuales son los efectos secundarios de losmedicamentos.",
+        "Suspender la medicacion siempre que vaya a conducir.",
+        "Ignorar los sintomaspara evitardistracciones."
+      ]
+    }
+  ]
+}

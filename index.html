@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>dgt-eando · Tests de conducir</title>
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/index.css?v=2">
 </head>
 <body>
 
@@ -146,6 +146,9 @@
               </div>
               <span class="widget-label">Repaso inteligente (Anki)</span>
             </div>
+            <button type="button" class="btn-editar-fecha btn-config-anki" id="btnConfigAnki" aria-label="Configuración de Anki" title="Configuración de Anki">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </button>
           </div>
 
           <div class="anki-main">
@@ -184,9 +187,107 @@
     </div>
   </div>
 
+
+  <!-- Modal Configuración de Anki -->
+  <div class="modal-overlay modal-anki-overlay" id="modalAnki" role="dialog" aria-modal="true" aria-labelledby="modalAnkiTitulo">
+    <div class="modal-contenido modal-anki">
+      <div class="modal-header">
+        <h2 class="modal-titulo" id="modalAnkiTitulo">Configuración de Anki</h2>
+        <button type="button" class="modal-cerrar" id="btnCerrarModalAnki" aria-label="Cerrar">&times;</button>
+      </div>
+
+      <div class="anki-cfg-cuerpo">
+        <!-- 1. Límite diario -->
+        <section class="anki-cfg-seccion">
+          <h3 class="anki-cfg-titulo"><span class="anki-cfg-num">1</span> Límite de tarjetas diarias</h3>
+          <div class="pill-grupo" role="radiogroup" aria-label="Límite de tarjetas diarias">
+            <label class="pill-opcion">
+              <input type="radio" name="ankiModoLimite" value="auto" checked>
+              <span>Automático (según examen)</span>
+            </label>
+            <label class="pill-opcion">
+              <input type="radio" name="ankiModoLimite" value="personalizado">
+              <span>Personalizado</span>
+            </label>
+            <label class="pill-opcion">
+              <input type="radio" name="ankiModoLimite" value="ilimitado">
+              <span>Sin límite (&infin;)</span>
+            </label>
+          </div>
+
+          <div class="anki-cfg-extra" id="ankiCampoPersonalizado" hidden>
+            <div class="anki-cfg-fila">
+              <label class="anki-cfg-label" for="ankiLimiteDiario">Tarjetas por día</label>
+              <input type="number" class="input-numero" id="ankiLimiteDiario" min="1" max="999" step="1" value="50" inputmode="numeric">
+            </div>
+            <label class="check-simple">
+              <input type="checkbox" id="ankiLimiteEstricto">
+              <span>Respetar el límite exacto (las vencidas que sobren pasan a otro día)</span>
+            </label>
+          </div>
+          <p class="anki-cfg-ayuda" id="ankiAyudaModo">Reparte el mazo para llegar al examen con todo repasado.</p>
+        </section>
+
+        <!-- 2. Máximo de nuevas -->
+        <section class="anki-cfg-seccion">
+          <h3 class="anki-cfg-titulo"><span class="anki-cfg-num">2</span> Máximo de tarjetas nuevas al día</h3>
+          <div class="anki-cfg-fila">
+            <input type="number" class="input-numero" id="ankiLimiteNuevas" min="1" max="999" step="1" value="10" inputmode="numeric" disabled aria-label="Máximo de tarjetas nuevas al día">
+            <label class="check-simple">
+              <input type="checkbox" id="ankiNuevasSinLimite" checked>
+              <span>Sin límite</span>
+            </label>
+          </div>
+        </section>
+
+        <!-- 3. Orden -->
+        <section class="anki-cfg-seccion">
+          <h3 class="anki-cfg-titulo"><span class="anki-cfg-num">3</span> Orden de aparición</h3>
+          <select class="select-anki" id="ankiOrden" aria-label="Orden de aparición">
+            <option value="prioridad">Priorizar falladas (Aprendiendo → Nuevas → Jóvenes)</option>
+            <option value="aleatorio">Aleatorio (mezclado)</option>
+            <option value="nuevas_primero">Nuevas primero</option>
+          </select>
+        </section>
+
+        <!-- 4. Barajar respuestas -->
+        <section class="anki-cfg-seccion">
+          <h3 class="anki-cfg-titulo"><span class="anki-cfg-num">4</span> Respuestas</h3>
+          <label class="switch-fila">
+            <span class="switch-texto">Barajar orden de respuestas (a, b, c) en modo repaso
+              <small>Evita memorizar la posición visual de la correcta.</small>
+            </span>
+            <span class="switch">
+              <input type="checkbox" id="ankiBarajar">
+              <span class="switch-pista"></span>
+            </span>
+          </label>
+        </section>
+
+        <!-- 5. Mantenimiento -->
+        <section class="anki-cfg-seccion anki-cfg-mant">
+          <h3 class="anki-cfg-titulo anki-cfg-titulo-suave">Mantenimiento del mazo</h3>
+          <div class="anki-mant-botones">
+            <button type="button" class="btn-secundario" id="btnAnkiSync">Buscar nuevos tests en data/</button>
+            <button type="button" class="btn-texto-rojo" id="btnAnkiReset">Reiniciar progreso Anki</button>
+          </div>
+          <p class="anki-mant-msg" id="ankiMantMsg" role="status" aria-live="polite"></p>
+        </section>
+      </div>
+
+      <div class="anki-cfg-pie">
+        <p class="anki-estado-guardado" id="ankiEstadoGuardado" role="status" aria-live="polite"></p>
+        <div class="anki-cfg-acciones">
+          <button type="button" class="btn-cancelar-anki" id="btnAnkiCancelar">Cancelar</button>
+          <button type="button" class="btn-guardar-anki" id="btnAnkiGuardar">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/storage.js?v=6"></script>
+  <script src="js/storage.js?v=7"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/index.js?v=4"></script>
+  <script src="js/index.js?v=5"></script>
 </body>
 </html>

@@ -1,0 +1,263 @@
+{
+  "test_id": 25,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Cuando se aproxime a ninos o ancianos...",
+      "opciones": [
+        "debeadoptarlasprecaucionesnecesariasparanoponerles enpeligro.",
+        "les avisara con senales acusticas.",
+        "sedetendrapara cederles el paso."
+      ],
+      "imagen": "../img/test_025_p01.jpg"
+    },
+    {
+      "texto": "¿Cuando se alcanza el maximo nivel o pico de alcoholemia?",
+      "opciones": [
+        "Entrelas tres y cuatrohoras despues dehaberbebido.",
+        "Entre 120-130 minutos despues de haber bebido.",
+        "Entrelos30-90minutosdespuesdehaberbebido."
+      ]
+    },
+    {
+      "texto": "Cuando las ruedas llevan poco aire...",
+      "opciones": [
+        "sedesgastanmaspor los lados.",
+        "se desgastan igual por los lados que por el centro.",
+        "sedesgastanmasporelcentro."
+      ],
+      "imagen": "../img/test_025_p03.jpg"
+    },
+    {
+      "texto": "Si la velocidad maxima que alcanza una motocicleta es inferior a 1oo kilometros por hora, ¿zcuantos retrovisores debe llevar?",
+      "opciones": [
+        "Uno obligatorio en el lado derecho y opcionalmente otro en el lado izquierdo.",
+        "Dos, uno a cada lado de la motocicleta.",
+        "Uno obligatorio en el lado izquierdo, y opcionalmente otro en el lado derecho."
+      ]
+    },
+    {
+      "texto": "Las motocicletas, ciclomotores o vehiculos de tres ruedas, ¿ipueden arrastrar un remolque o semirremolque?",
+      "opciones": [
+        "No.",
+        "Si, siempre que, entre otros requisitos, sea de dia y en condiciones que no disminuyan la visibilidad."
+      ],
+      "imagen": "../img/test_025_p05.jpg"
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Obliga a seguircirculando de frente.",
+        "Obliga a ceder el paso a la circulacion del sentido contrario.",
+        "Calzada con doble sentido de circulacion."
+      ],
+      "imagen": "../img/test_025_p06.jpg"
+    },
+    {
+      "texto": "El permiso de conduccion de la clase A1, ¿zautoriza a conducir motocicletas con sidecar?",
+      "opciones": [
+        "Si, si tiene una antiguedad de 2 anos.",
+        "No.",
+        "Si."
+      ],
+      "imagen": "../img/test_025_p07.jpg"
+    },
+    {
+      "texto": "En autopistas y autovias, ¿iesta prohibido el cambio de sentido?",
+      "opciones": [
+        "Si, salvo en los lugares habilitados al efecto.",
+        "No.",
+        "Si, siempre."
+      ]
+    },
+    {
+      "texto": "¿Como debe colocar su vehiculo al parar o estacionar?",
+      "opciones": [
+        "Es indiferente, siempre que pare el motor y accione el freno de estacionamiento.",
+        "Colocando el vehiculo en paralelo a la via, siempre.",
+        "Demanera que permita la mejor utilizacion del espacio disponible."
+      ],
+      "imagen": "../img/test_025_p09.jpg"
+    },
+    {
+      "texto": "Esta senal indica..",
+      "opciones": [
+        "proximidad de salida dela autovia.",
+        "bifurcacion hacia la derecha en calzada de tres carriles.",
+        "bifurcacion hacia la izquierda en calzada de tres carriles."
+      ],
+      "imagen": "../img/test_025_p10.jpg"
+    },
+    {
+      "texto": "Circulando entre la puesta y la salida del sol, ¿ique finalidad tiene el sistema ADAS \"Asistente de vision nocturna\"?",
+      "opciones": [
+        "Poder desconectar el alumbrado al cruzarse con otrovehiculopara evitar el deslumbramiento.",
+        "Detectar un vehiculo inmovilizado fuera de la calzada y de la parte transitable del arcen.",
+        "Detectarpeatones o animales marcandolos en un color u otro en la pantalla de informacion del conductor."
+      ],
+      "imagen": "../img/test_025_p11.jpg"
+    },
+    {
+      "texto": "Cuando preve que puede quedar detenido en una interseccion, ¿ique debe hacer?",
+      "opciones": [
+        "Atravesarla rapidamente.",
+        "Detener el vehiculo solo en el caso de no tener la prioridad.",
+        "Detener el vehiculo antes de entrar en la interseccion."
+      ],
+      "imagen": "../img/test_025_p12.jpg"
+    },
+    {
+      "texto": "La distancia de reaccion es:",
+      "opciones": [
+        "La distancia que debe guardarse con el vehiculo que va delante.",
+        "La distancia que recorre el vehiculo desde que empieza a frenar hasta que se detiene.",
+        "La distancia que recorre el vehiculo durante el tiempo de reaccion."
+      ]
+    },
+    {
+      "texto": "En un turismo para 5 plazas, incluido el conductor, ¿iesta permitido que viajen 6 personas?",
+      "opciones": [
+        "No,porqueno sepuede sobrepasarel numerodeplazas autorizadas.",
+        "Si, cuando no se supera la M.M.A del vehiculo.",
+        "Si, cuando el vehiculo circula en vias urbanas."
+      ]
+    },
+    {
+      "texto": "El conductor que efectuie un adelantamiento...",
+      "opciones": [
+        "puede rebasar la velocidadmaxima fijada para las autopistas yautovias en 20 kilometros por hora.",
+        "debemanteneruna velocidad moderada, sin importar el tiempo que emplee en el adelantamiento.",
+        "debe llevar su vehiculo a una velocidad notoriamente superior a la del vehiculo que pretende adelantar."
+      ]
+    },
+    {
+      "texto": "Si se realiza una reforma de importancia en el vehiculo, ¿ique tramites se deben realizar?",
+      "opciones": [
+        "Presentar el vehiculo a inspeccion tecnica extraordinaria antes de volvera circular. antigiedad del vehiculo.",
+        "No es necesario realizar una inspecciontecnica extraordinaria si lareforma se ha realizado enuntallerautorizado"
+      ],
+      "imagen": "../img/test_025_p16.jpg"
+    },
+    {
+      "texto": "¿Que puede favorecer la aparicion de fatiga?",
+      "opciones": [
+        "Recorrer una via con el firme bien conservado.",
+        "Circularcon el vehiculo enperfecto estado.",
+        "El mal diseno del asiento o de otros elementos interiores del vehiculo."
+      ]
+    },
+    {
+      "texto": "¿Esta permitido realizar una parada en una autovia o autopista?",
+      "opciones": [
+        "Si,perosoloenelarcensiestransitable",
+        "Si, en la mediana o el arcen, indistintamente.",
+        "No,solo sepuedeparar enzonas habilitadas,como las areasdedescanso."
+      ],
+      "imagen": "../img/test_025_p18.jpg"
+    },
+    {
+      "texto": "En una via de doble sentido, ¿zpor que lado de una isleta se circulara?",
+      "opciones": [
+        "Por su derecha.",
+        "Por su izquierda.",
+        "Por su derecha o por su izquierda, indistintamente."
+      ],
+      "imagen": "../img/test_025_p19.jpg"
+    },
+    {
+      "texto": "Si su vehiculo dispone de airbag, ¿ies obligatorio llevar abrochado el cinturon de seguridad?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Solofueradepoblado."
+      ]
+    },
+    {
+      "texto": "Esta senal..",
+      "opciones": [
+        "aconseja el uso de cadenas en caso denevada.",
+        "advierte del peligro que supone circular sin cadenas para la nieve.",
+        "obliga al uso de cadenas u otros dispositivos autorizados,en caso denevada."
+      ],
+      "imagen": "../img/test_025_p21.jpg"
+    },
+    {
+      "texto": "Conducir con depresion, ¿puede provocar un accidente?",
+      "opciones": [
+        "No,porque es algo habitual en muchos conductores.",
+        "No, siel conductor es adultoytiene experiencia.",
+        "Si,porque sepuedentomar decisiones erroneas."
+      ]
+    },
+    {
+      "texto": "Si el pasajero de una motocicleta no usa el casco, la responsabilidad es del...",
+      "opciones": [
+        "pasajero.",
+        "titular del vehiculo.",
+        "conductor."
+      ],
+      "imagen": "../img/test_025_p23.jpg"
+    },
+    {
+      "texto": "En vias interurbanas, los ciclos y ciclomotores de dos ruedas, ¿idonde deben situarse para girar a la izquierda?",
+      "opciones": [
+        "A la derecha, fuera de la calzada si es posible, e iniciarlo desde ese lugar.",
+        "En el centro, sin invadir el sentido contrario.",
+        "En el carril izquierdo."
+      ],
+      "imagen": "../img/test_025_p24.jpg"
+    },
+    {
+      "texto": "La sobrevaloracion de la capacidad de conduccion y la asuncion de riesgos son caracteristicas personales que hacen mas propensos a sufrir un accidente a..",
+      "opciones": [
+        "las personas mayores.",
+        "los jovenes.",
+        "losconductoresprofesionales."
+      ]
+    },
+    {
+      "texto": "Programar un navegador GPS mientras se conduce, ¿iprovoca distracciones que afectan a la conduccion?",
+      "opciones": [
+        "No, siempre y cuando circule a una velocidad moderada.",
+        "Si.",
+        "No,porque el GPS es una ayuda y nunca distraeal conductor."
+      ],
+      "imagen": "../img/test_025_p26.jpg"
+    },
+    {
+      "texto": "Las luces rojas encendidas del vehiculo de delante, ¿ique indican?",
+      "opciones": [
+        "Que hay niebla.",
+        "Que circuloporuna travesia.",
+        "Queelvehiculoestafrenando"
+      ],
+      "imagen": "../img/test_025_p27.jpg"
+    },
+    {
+      "texto": "Esta senalizacion, le indica la distancia...",
+      "opciones": [
+        "al lugar donde tiene que ceder el paso en la proxima interseccion.",
+        "a la que se encuentra la senal dedetencion obligatoria de la proxima interseccion.",
+        "al lugar donde tiene que detenerse en la proxima interseccion."
+      ],
+      "imagen": "../img/test_025_p28.jpg"
+    },
+    {
+      "texto": "Si circula con un vehiculo para personas de movilidad reducida, ¿zle afecta esta senal?",
+      "opciones": [
+        "No, prohibe solo la entrada a motocicletas.",
+        "No,prohibe solo la entrada a ciclomotores.",
+        "Si."
+      ],
+      "imagen": "../img/test_025_p29.jpg"
+    },
+    {
+      "texto": "¿Se debe aumentar la distancia de seguridad cuando exista niebla?",
+      "opciones": [
+        "La distancia no influye en la detencion cuando hay niebla.",
+        "Si,para tener mas espacio para reaccionarantecualquierfrenada del vehiculo que va delante.",
+        "No, si se llevan las luces encendidas."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "test_id": 18,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "De noche en un tramo con muchas curvas, senalizadas con la senal de curvas peligrosas, ¿zesta permitido circular con la luz antiniebla delantera?",
+      "opciones": [
+        "Si siempre, utilizandola junto con la luz de posicion.",
+        "No, si no hay condicionesmeteorologicas adversas.",
+        "Si, en vias estrechas."
+      ],
+      "imagen": "../img/test_018_p01.jpg"
+    },
+    {
+      "texto": "El semaforo de la derecha afecta a...",
+      "opciones": [
+        "tranvias,ciclosyciclomotores.",
+        "los autobusesde lineasregulares, exclusivamente.",
+        "los tranvias ya los autobuses de lineasregulares."
+      ],
+      "imagen": "../img/test_018_p02.jpg"
+    },
+    {
+      "texto": "El filtro de aceite, ¿Cuando hay que cambiarlo?",
+      "opciones": [
+        "Cada milkilometros.",
+        "Cuando cambio el aceite.",
+        "Cuando lo indique el manual del vehiculo."
+      ]
+    },
+    {
+      "texto": "¿Puede el conductor de una bicicleta transportar un pasajero?",
+      "opciones": [
+        "No, esta prohibido.",
+        "Si, sentado entre el conductor y el manillar.",
+        "Si, a unmenor de hasta 22kg que pueda sentarse por si solo, en un asiento adicional que cumpla las especificacionestecnicas establecidas."
+      ],
+      "imagen": "../img/test_018_p04.jpg"
+    },
+    {
+      "texto": "¿Cual de estos factores favorecen las distracciones al conducir?",
+      "opciones": [
+        "Una situacion de trafico normal.",
+        "Una situacionde trafico excesivamente compleja.",
+        "Unacarreteradesconocida."
+      ]
+    },
+    {
+      "texto": "La conduccion preventiva es...",
+      "opciones": [
+        "una forma de conducirpeligrosa.",
+        "unaformadeconduccionlentaeinadecuada.",
+        "una actitud antela conduccionquepermite al conductor circular deuna manera mas segura."
+      ]
+    },
+    {
+      "texto": "¿En que situacion suelen tener menos accidentes las personas mayores como peatones?",
+      "opciones": [
+        "Cuandovan acompanadas deotra persona mayor.",
+        "Cuandovanacompanandoaninos.",
+        "Cuando van solas."
+      ],
+      "imagen": "../img/test_018_p07.jpg"
+    },
+    {
+      "texto": "El vehiculo de la fotografia tiene encendida unicamente la senalizacion luminosa, ¿ztiene prioridad de paso?",
+      "opciones": [
+        "Si, siempreque la omision de la senal acustica no entrane peligro alguno para los demas usuarios.",
+        "Si,porque esta en una via urbana.",
+        "No,porqueno lleva la senalizacion optica yacustica simultaneamente."
+      ],
+      "imagen": "../img/test_018_p08.jpg"
+    },
+    {
+      "texto": "Que documentos debe llevar consigo el conductor de un motocicleta, ¿ademas del permiso de conduccion?",
+      "opciones": [
+        "Latarjeta ITVy el permisode circulacion.",
+        "El permiso de circulacion, solamente.",
+        "La tarjeta ITV, solamente."
+      ]
+    },
+    {
+      "texto": "¿Puede rebasar la velocidad maxima indicada en la senal?",
+      "opciones": [
+        "Si, en 20 km/h para adelantar.",
+        "No.",
+        "Si,mientraslopermitanlascircunstancias."
+      ],
+      "imagen": "../img/test_018_p10.jpg"
+    },
+    {
+      "texto": "En este tramo de carretera, ¿iesta permitido hacer un cambio de sentido?",
+      "opciones": [
+        "Si.",
+        "No."
+      ],
+      "imagen": "../img/test_018_p11.jpg"
+    },
+    {
+      "texto": "Una de las principales causas de los accidentes de trafico es...",
+      "opciones": [
+        "el mal estado del vehiculo.",
+        "el factor humano.",
+        "lameteorologiaadversa."
+      ]
+    },
+    {
+      "texto": "Se considera que una parada o estacionamiento obstaculiza gravemente la circulacion cuando...",
+      "opciones": [
+        "se realiza en una via publica calificada de atencion preferente.",
+        "se obstaculiza la utilizacion normal de los pasos rebajados para disminuidos fisicos.",
+        "se efectua en doble fila."
+      ]
+    },
+    {
+      "texto": "Cuando no existe zona peatonal o ésta no es practicable, los peatones..",
+      "opciones": [
+        "pueden transitar por el arcen.",
+        "deben transitar por la calzada.",
+        "nopuedentransitarporlas carreteras."
+      ],
+      "imagen": "../img/test_018_p14.jpg"
+    },
+    {
+      "texto": "Esta senal prohibe el paso a...",
+      "opciones": [
+        "camiones yfurgones, solamente.",
+        "cualquier vehiculo cuya masa maxima autorizada sea superior a la indicada.",
+        "los vehiculos cuya masa en carga sea superior a la indicada."
+      ],
+      "imagen": "../img/test_018_p15.jpg"
+    },
+    {
+      "texto": "¿Como debe realizarse un cambio de carril en una via saturada?",
+      "opciones": [
+        "Utilizando el arcen.",
+        "Realizando lamaniobra rapidamentepara no estorbar.",
+        "Advirtiendolo con suficiente antelacion."
+      ],
+      "imagen": "../img/test_018_p16.jpg"
+    },
+    {
+      "texto": "Llamamos grupos vulnerables a...",
+      "opciones": [
+        "determinados grupos de personas que sufren con mayor frecuencia los efectos negativos del trafico.",
+        "los pasajeros que resultan heridos en un accidente de trafico.",
+        "losninosylaspersonasmayores, exclusivamente."
+      ]
+    },
+    {
+      "texto": "El conductor del vehiculo de la fotografia esta indicando que va a...",
+      "opciones": [
+        "desplazarsehacia la izquierda.",
+        "desplazarse hacia la derecha.",
+        "frenar."
+      ],
+      "imagen": "../img/test_018_p18.jpg"
+    },
+    {
+      "texto": "En las tecnicas de conduccion preventiva, ¿ies suficiente con conducir cumpliendo las normas?",
+      "opciones": [
+        "No,hay que tenertambien en cuenta que otro conductor puede cometer una infraccion.",
+        "Si, porque cumpliendo la normativa de trafico el riesgo es nulo.",
+        "Si, porque cumplir las normas es obligatorio."
+      ]
+    },
+    {
+      "texto": "En una interseccion hay una senal vertical de stop y una marca vial de ceda el paso, ¿zcual debe obedecer?",
+      "opciones": [
+        "La senal vertical de stop.",
+        "Ninguna de las dos, en este caso se aplicara la norma general de prioridad.",
+        "La marca vial de ceda el paso."
+      ]
+    },
+    {
+      "texto": "Aunque no se superen los limites maximos de velocidad, ¿ipuede llegar a circular a una velocidad inadecuada?",
+      "opciones": [
+        "No, en ningun caso.",
+        "Si,en tanto quela velocidad debe adecuarse a las circunstancias de la via, como por ejemplo, la lluvia,nieve o hielo.",
+        "Si,siempre que vaya a mas de 100km/h."
+      ]
+    },
+    {
+      "texto": "El sistema avanzado de ayuda a la conduccion conocido como \"RcTA o Alerta de trafico cruzado\", ¿ien que momento emite un aviso al conductor?",
+      "opciones": [
+        "Cuando detecta un vehiculo que se acerca en sentido transversal en la proxima intersecciony existe peligro de colision.",
+        "Cuando al salir marcha atras de un hueco de estacionamiento, detecta que se acerca un vehiculo en sentido transversal.",
+        "Cuando realizando un adelantamiento, detecta que se acerca un vehiculo en sentido contrario."
+      ]
+    },
+    {
+      "texto": "Si queda detenido en un tunel por necesidades de la circulacion, ¿ique debe hacer?",
+      "opciones": [
+        "Mantener encendidas las luces de posicion, y detenerse lo mas lejos posible del vehiculo que le preceda.",
+        "Encender,solamente, el alumbrado de emergencia.",
+        "Detenerse lo mas cerca posible del vehiculo que circula delante."
+      ]
+    },
+    {
+      "texto": "Si padece una enfermedad cronica, ¿icomo puede reducir el riesgo de accidentes?",
+      "opciones": [
+        "Suspendiendo el tratamientocuandotenga queconducir.",
+        "Aumentando la dosisde medicamento cuandotenga que conducir."
+      ]
+    },
+    {
+      "texto": "¿Que presion deben llevar los neumaticos?",
+      "opciones": [
+        "Es recomendable que lleven distinta presion en cada eje.",
+        "Los neumaticos deben llevar lapresionmas alta delasrecomendadasporelfabricante.",
+        "Los neumaticosdeben llevar siemprelapresionrecomendadaporelfabricante."
+      ],
+      "imagen": "../img/test_018_p25.jpg"
+    },
+    {
+      "texto": "En caso de lluvia no intensa, ¿iesta permitido utilizar la luz antiniebla?",
+      "opciones": [
+        "Si,tantoladelantera como la trasera.",
+        "Si, pero solo la trasera.",
+        "No."
+      ],
+      "imagen": "../img/test_018_p26.jpg"
+    },
+    {
+      "texto": "Si su motocicleta lleva instalado cinturon de seguridad, ¿zcuando debe utilizarlo?",
+      "opciones": [
+        "Solo cuando circulepor vias interurbanas y travesias.",
+        "En todo tipo de vias.",
+        "Unicamente cuando circuleporvias interurbanas."
+      ],
+      "imagen": "../img/test_018_p27.jpg"
+    },
+    {
+      "texto": "La senal de limitacion de velocidad afecta a los vehiculos que circulen por...",
+      "opciones": [
+        "el lado de la via sobre el que esta situada.",
+        "toda la calzada.",
+        "el carril sobre el que esta situada."
+      ],
+      "imagen": "../img/test_018_p28.jpg"
+    },
+    {
+      "texto": "La senal significa...",
+      "opciones": [
+        "via obligatoria para losautobuses.",
+        "parada deautobuses.",
+        "carril reservadoparaautobuses."
+      ],
+      "imagen": "../img/test_018_p29.jpg"
+    },
+    {
+      "texto": "En los estrechamientos en tramos de gran pendiente, si no hay senalizacion expresa al efecto, tendra la preferencia de paso el vehiculo que circule en sentido...",
+      "opciones": [
+        "ascendente, salvo si pudiera llegar antes a un apartadero.",
+        "ascendente,entodocaso.",
+        "descendente,salvo si pudiera llegar antes a un apartadero."
+      ],
+      "imagen": "../img/test_018_p30.jpg"
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "test_id": 3,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "¿Pueden llevar las motocicletas la luz antiniebla delantera?",
+      "opciones": [
+        "Si,todas lasmotocicletas,con osin sidecar.",
+        "Si,pero solo lasmotocicletas con sidecar.",
+        "No, lasmotocicletas no pueden llevar luces antiniebla."
+      ]
+    },
+    {
+      "texto": "Un vehiculo expulsa mas humo del permitido, ¿ipuede seguir circulando?",
+      "opciones": [
+        "Si,porque el humono esnocivoni contamina.",
+        "No.",
+        "Si, siempre que circule fuera de poblado."
+      ]
+    },
+    {
+      "texto": "¿Circula con su turismo por una via que se cruza con un carril-bici;idebe ceder el paso a los ciclistas?",
+      "opciones": [
+        "No.Los ciclistas no tienen prioridad de paso frente a los vehiculos de motor.",
+        "Si, siempre.",
+        "Solo cuando los ciclistas seaproximen porsuderecha."
+      ],
+      "imagen": "../img/test_003_p03.jpg"
+    },
+    {
+      "texto": "Por la calzada a cuya entrada esta situada esta senal, ¿zque vehiculos estan obligados a circular?",
+      "opciones": [
+        "Solamenteloscamiones.",
+        "Toda clasede camiones y furgones, independientemente de su masa.",
+        "Solamentelosfurgonesycamionespesados."
+      ],
+      "imagen": "../img/test_003_p04.jpg"
+    },
+    {
+      "texto": "Esta senalizacion prohibe estacionar...",
+      "opciones": [
+        "en la travesia.",
+        "desde la vertical de la senal hasta la proxima interseccion.",
+        "entoda lapoblacion."
+      ],
+      "imagen": "../img/test_003_p05.jpg"
+    },
+    {
+      "texto": "Si se observa un incremento en el consumo de carburante de un vehiculo, ¿ique se debe revisar?",
+      "opciones": [
+        "El circuito de refrigeracion y el de lubricacion.",
+        "El circuito de escape.",
+        "El circuito de encendido y el de alimentacion."
+      ],
+      "imagen": "../img/test_003_p06.jpg"
+    },
+    {
+      "texto": "Si el equipaje dificulta la visibilidad a traves de la ventanilla posterior, ¿zque espejos son obligatorios?",
+      "opciones": [
+        "Los dos exteriores, uno a cada lado.",
+        "Uno interior panoramico, y el exterior derecho.",
+        "Uno interior panoramico y el exterior izquierdo."
+      ]
+    },
+    {
+      "texto": "Circulando con niebla es aconsejable...",
+      "opciones": [
+        "circular con las ventanillas abiertas para obtenermayor visibilidad.",
+        "mantener el habitaculo bien ventilado para evitar que se empanen los cristales.",
+        "ponerla calefaccion muyaltapara conducir comodamente."
+      ],
+      "imagen": "../img/test_003_p08.jpg"
+    },
+    {
+      "texto": "Si un cuatriciclo ligero tiene estructura de autoproteccion y cinturones de seguridad, ¿zes obligatorio ponerse el casco?",
+      "opciones": [
+        "Si,perounicamenteenviasurbanas.",
+        "Si,pero unicamente fuera de poblado.",
+        "No,si asi consta en la tarjeta de inspeccion tecnica."
+      ],
+      "imagen": "../img/test_003_p09.jpg"
+    },
+    {
+      "texto": "¿Cuantos puntos del permiso de conducir puede perder un conductor si no hace uso del cinturon de seguridad?",
+      "opciones": [
+        "2puntos.",
+        "3puntos.",
+        "4 puntos."
+      ],
+      "imagen": "../img/test_003_p10.jpg"
+    },
+    {
+      "texto": "En esta situacion, ¿zque debe hacer?",
+      "opciones": [
+        "No disminuirla velocidad,porquela senalizacion lopermite.",
+        "Moderarla velocidad, incluso detenerse,porquehay peatones en la calzada.",
+        "Detenerse, para obedecer las marcas viales."
+      ],
+      "imagen": "../img/test_003_p11.jpg"
+    },
+    {
+      "texto": "¿Cuando es obligatorio utilizar el alumbrado de corto alcance durante el dia?",
+      "opciones": [
+        "al circular por un carril reversible.",
+        "cuando llueve.",
+        "al circular por un carril para VAO."
+      ]
+    },
+    {
+      "texto": "Una persona provista de un certificado medico que le exima de utilizar los sistemas de retencion del vehiculo, ¿iesta exenta de llevar abrochado el cinturon de seguridad?",
+      "opciones": [
+        "Sí.",
+        "No.",
+        "Unicamentefuera depoblado."
+      ],
+      "imagen": "../img/test_003_p13.jpg"
+    },
+    {
+      "texto": "El titular de un permiso B con mas de tres anos de antiguedad, ¿ipuede conducir una motocicleta de 125 cm' que reuna los requisitos de la clase A1?",
+      "opciones": [
+        "No,porque es necesario obtener el permiso de la clase A1.",
+        "Si, el permiso de la clase\"B\"autoriza a conducir motocicletas de hasta 125 cc.",
+        "Si, pero solo por el territorio nacional."
+      ]
+    },
+    {
+      "texto": "En este ciclomotor, ¿zes obligatorio utilizar casco?",
+      "opciones": [
+        "Si, siempre.",
+        "Solamente en vias interurbanas.",
+        "No, solo cuando el conductor lo considere necesario."
+      ],
+      "imagen": "../img/test_003_p15.jpg"
+    },
+    {
+      "texto": "En un estrechamiento sin senales de prioridad se encuentran un turismo que arrastra un remolque y un autobus, sin que se sepa cual entro primero, ¿ique vehiculo tiene preferencia?",
+      "opciones": [
+        "El que tenga que dar marcha atras mas distancia.",
+        "Elautobus",
+        "El turismo que arrastra el remolque."
+      ],
+      "imagen": "../img/test_003_p16.jpg"
+    },
+    {
+      "texto": "¿Cual de los siguientes conductores esta exento de utilizar el cinturon de seguridad?",
+      "opciones": [
+        "El conductor de un turismo que realiza una maniobra de marcha atras.",
+        "El conductor de un vehiculo de distribucion de mercancias que realiza paradas de carga y descarga muy proximas entre si.",
+        "El conductor de un taxi que circula por vias urbanas."
+      ],
+      "imagen": "../img/test_003_p17.jpg"
+    },
+    {
+      "texto": "Si tras un accidente de trafico, ¿un herido no responde y aparentemente ha perdido la conciencia,qué es loprimero que debemos hacer?",
+      "opciones": [
+        "Buscar hemorragias externas o internas,para evitarque se desangre.",
+        "Abrir la via aerea y retirar cuerpos extranos de la boca,mediantemaniobras que no manipulen la columna.",
+        "Tumbarle en la denominada posicion lateral de seguridad, para que respire con mayor facilidad."
+      ],
+      "imagen": "../img/test_003_p18.jpg"
+    },
+    {
+      "texto": "A una ambulancia que usa unicamente la senal especial luminosa, ¿zse le debe ceder el paso?",
+      "opciones": [
+        "No,ya que siempre debeemplearla conjuntamente con la acustica.",
+        "Si.",
+        "Si, pero solo cuando se trate de via urbana."
+      ]
+    },
+    {
+      "texto": "Cuando debido a una averia un turismo circula por una autopista a velocidad anormalmente reducida, ¿ipor donde lo hara?",
+      "opciones": [
+        "Por el carril derecho y, si perturba gravemente la circulacion, debe circular por el arcen.",
+        "Por el arcenpara no serun obstaculo.",
+        "Por el carril derecho, siempre."
+      ],
+      "imagen": "../img/test_003_p20.jpg"
+    },
+    {
+      "texto": "Los antihistaminicos modernos, ¿ison mas seguros para la conduccion?",
+      "opciones": [
+        "No,producen somnolencia como todos los antihistaminicos.",
+        "Si, pero no deben mezclarse con alcohol o con otros medicamentos.",
+        "Si,ya quepuedenmezclarse sinproblemas con otrosmedicamentos."
+      ]
+    },
+    {
+      "texto": "Cual de las siguientes conductas es comun observar en un conductor que mientras conduce habla por el telefono movil, ¿aumentando el riesgo de sufrir un accidente?",
+      "opciones": [
+        "Llevar las ventanas traseras abiertas para mejorar la cobertura.",
+        "Desviacion de trayectoria, incluidos cambios de carril.",
+        "Conducir sin marcha engranada,especialmente en pendientes ascendentes."
+      ],
+      "imagen": "../img/test_003_p22.jpg"
+    },
+    {
+      "texto": "La senal de \"Zona de Bajas Emisiones\" que se muestra en la imagen ..",
+      "opciones": [
+        "Prohibe el acceso a vehiculos en funcion de su tamano y peso.",
+        "Prohibe el acceso a vehiculos en dias con condiciones climatologicas adversas debido a la niebla.",
+        "Prohibe el acceso a vehiculos en funcion de su distintivo ambiental u otros criterios ambientales."
+      ],
+      "imagen": "../img/test_003_p23.jpg"
+    },
+    {
+      "texto": "¿Cuantos espejos retrovisores llevara como maximo un turismo?",
+      "opciones": [
+        "2",
+        "4",
+        "3"
+      ]
+    },
+    {
+      "texto": "Esta senal prohibe...",
+      "opciones": [
+        "estacionar,peropermiteparar.",
+        "parar y estacionar.",
+        "parar,peropermiteestacionar."
+      ],
+      "imagen": "../img/test_003_p25.jpg"
+    },
+    {
+      "texto": "En esta curva de visibilidad reducida, ¿zesta permitido cambiar de sentido?",
+      "opciones": [
+        "Si, siempre que no se obstaculice a los vehiculos que circulen detras.",
+        "No, en ningun caso.",
+        "Si, porque no hay senal que lo prohiba."
+      ],
+      "imagen": "../img/test_003_p26.jpg"
+    },
+    {
+      "texto": "¿Donde se colocara un ciclomotor para girar a la izquierda en una via interurbana?",
+      "opciones": [
+        "En la parte central de su carril.",
+        "Si no existe carril especifico para realizar el giro,se situara en la derecha,fuera de la calzada",
+        "En el eje de la calzada si la via es de doble sentido."
+      ]
+    },
+    {
+      "texto": "De que advierte la senal luminosa de color amarillo auto, visible desde todas las direcciones, ¿que lleva el tractor agricola en su parte superior?",
+      "opciones": [
+        "De su presencia en la via o en sus inmediaciones.",
+        "De que no puede circular a una velocidad superior a 30 km/h.",
+        "De que circular en servicio urgente."
+      ],
+      "imagen": "../img/test_003_p28.jpg"
+    },
+    {
+      "texto": "En una autovia con dos carriles por sentido se forma una retencion. ¿Como deben colocarse los vehiculos para crear el carril de emergencia?",
+      "opciones": [
+        "Los dos carriles deberan desplazarse hacia la derecha.",
+        "Los vehiculos del carril derecho hacia la izquierda y los del izquierdo hacia la derecha.",
+        "Los vehiculos del carril izquierdo hacia la izquierda y los del carril derecho hacia la derecha."
+      ]
+    },
+    {
+      "texto": "Los ciclistas tienen prioridad de paso respecto a los vehiculos de motor...",
+      "opciones": [
+        "cuando circulen por un carril bici debidamente senalizado.",
+        "unicamenteen lospasospara ciclistas.",
+        "siempre que circulen en grupo."
+      ]
+    }
+  ]
+}

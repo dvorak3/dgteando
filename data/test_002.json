@@ -1,0 +1,257 @@
+{
+  "test_id": 2,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Circulando con lluvia muy intensa, ¿ies correcto encender la luz antiniebla trasera?",
+      "opciones": [
+        "Sí.",
+        "No,solopuede utilizarseconniebladensa ofuertenevada.",
+        "Si, pero su uso es opcional."
+      ]
+    },
+    {
+      "texto": "Para que pueda circular un ciclomotor, ¿zes obligatorio que este asegurado?",
+      "opciones": [
+        "Si, pero solamente los que tienen mas de dos ruedas.",
+        "Si.",
+        "No."
+      ]
+    },
+    {
+      "texto": "Los conductores jovenes suelen tener mas accidente..",
+      "opciones": [
+        "porque se distraen con mayor facilidad.",
+        "por un comportamiento exhibicionista cuando van en grupo.",
+        "porsudesconocimientode lasnormas."
+      ]
+    },
+    {
+      "texto": "La via, su entorno y el propio vehiculo, ¿ipueden favorecer la aparicion de distracciones al volante?",
+      "opciones": [
+        "Si, el vehiculo y la via pero no su entorno.",
+        "Si, la via pero no su entorno.",
+        "Si."
+      ]
+    },
+    {
+      "texto": "Esta senalizacion recomienda circular a 7o kilometros por hora...",
+      "opciones": [
+        "en cualquier caso.",
+        "solo cuando esta lloviendo.",
+        "solo cuando las condiciones meteorologicas y ambientales sean favorables."
+      ],
+      "imagen": "../img/test_002_p05.jpg"
+    },
+    {
+      "texto": "Al adelantar al ciclista que aparece en la fotografia, ¿zes obligatorio invadir el carril de sentido contrario de la calzada?",
+      "opciones": [
+        "No.",
+        "No,porque esta prohibido adelantar a los ciclistas.",
+        "Si."
+      ],
+      "imagen": "../img/test_002_p06.jpg"
+    },
+    {
+      "texto": "Si un agente le solicita su permiso de conduccion, ¿zen que medio puede mostrarlo?",
+      "opciones": [
+        "Tanto en documento fisico como en formato digital a traves de la AppmiDGT.",
+        "Solo en documento fisico.",
+        "Solo en documento digital."
+      ],
+      "imagen": "../img/test_002_p07.jpg"
+    },
+    {
+      "texto": "Ante un paso a nivel cuyas barreras estan en movimiento, ¿ies obligatorio detenerse?",
+      "opciones": [
+        "Si,pero solamente cuando el vehiculo no pueda pasar por debajo.",
+        "No,puesto que no se encuentran en posicion horizontal.",
+        "Si."
+      ],
+      "imagen": "../img/test_002_p08.jpg"
+    },
+    {
+      "texto": "¿Esta permitido que un vehiculo circule sin silenciador de explosiones?",
+      "opciones": [
+        "Si, cuando no moleste a otros usuarios de la via.",
+        "No, excepto los ciclomotores de dos ruedas.",
+        "No."
+      ]
+    },
+    {
+      "texto": "¿Esta correctamente inmovilizada esta furgoneta?",
+      "opciones": [
+        "Si,yaqueesta correctamentesenalizadaynoobstaculiza elpaso.",
+        "Si, siempreque setratede una parada.",
+        "No, ya que entre la furgoneta y la marca continua hay una distancia inferior a 3 metros."
+      ],
+      "imagen": "../img/test_002_p10.jpg"
+    },
+    {
+      "texto": "Los ciclomotores de dos ruedas deben llevar...",
+      "opciones": [
+        "dos espejos retrovisores exteriores obligatorios, uno al lado izquierdo y otro al lado derecho.",
+        "es obligatorio el del lado izquierdo y optativo el del lado derecho.",
+        "es optativo el del lado izquierdo y obligatorio el del lado derecho."
+      ]
+    },
+    {
+      "texto": "Debido al deterioro psicofisico consecuencia del envejecimiento, ¿zque situaciones de trafico ofrecen mas dificultades a las personas mayores?",
+      "opciones": [
+        "Los giros a la izquierda, especialmente en vias urbanas.",
+        "Los estacionamientos, sobre todo cuando se realizan a la derecha de la calzada.",
+        "Las situaciones complejas, como incorporarse a una via en la que se circula a alta velocidad."
+      ],
+      "imagen": "../img/test_002_p12.jpg"
+    },
+    {
+      "texto": "Un autobuis transporta pasajeros de pie porque asi esta autorizado. ¿Cual sera su velocidad maxima fuera de poblado?",
+      "opciones": [
+        "La misma que el turismo.",
+        "90km/h solo en autopistasyautovias.",
+        "80 km/h en cualquier tipo de via fuera de poblado."
+      ],
+      "imagen": "../img/test_002_p13.jpg"
+    },
+    {
+      "texto": "¿Cuando debe comprobar el reglaje de los espejos retrovisores?",
+      "opciones": [
+        "Antesde iniciar lamarcha enterreno llanoyrecto.",
+        "Cuando el vehiculo circule en terreno llano y recto.",
+        "Circulando auna velocidad lenta."
+      ],
+      "imagen": "../img/test_002_p14.jpg"
+    },
+    {
+      "texto": "Como mantenimiento preventivo, ¿zes conveniente realizar una revision periodica del sistema de alumbrado del vehiculo?",
+      "opciones": [
+        "Si, para comprobar su correcto reglado y funcionamiento.",
+        "No, salvo en los vehiculos que disponen de un sistema regulador automatico.",
+        "No,solamente, cuando lleve sobrecarga porquepodrianproducirsecambios de inclinacion del alcance luminoso."
+      ],
+      "imagen": "../img/test_002_p15.jpg"
+    },
+    {
+      "texto": "Para seguir de frente, ¿zdonde hay que detenerse?",
+      "opciones": [
+        "Ante la linea dedetencion.",
+        "Antelamarcadepasoparapeatones.",
+        "Enla interseccion. abiertas? O a) Si, para llevar bien ventilado el interior del vehiculo. O b) Solo en primavera. O c) No."
+      ],
+      "imagen": "../img/test_002_p16.jpg"
+    },
+    {
+      "texto": "Circulando observa que se aproxima una ambulancia en servicio urgente. Debe tener en cuenta que...",
+      "opciones": [
+        "debefacilitarle el paso apartandose a la derecha odeteniendose si fuera preciso.",
+        "puede saltarse algun semaforopara dejarpasara la ambulancia.",
+        "debera circular a mayorvelocidad para abrirle paso."
+      ]
+    },
+    {
+      "texto": "¿Puede circular con su motocicleta por un carril bus?",
+      "opciones": [
+        "No, con caracter general.",
+        "Si, pero solo para adelantar y durante el recorrido indispensable.",
+        "Si, en caso de circulacion muy densa."
+      ],
+      "imagen": "../img/test_002_p19.jpg"
+    },
+    {
+      "texto": "Los vehiculos que incorporan LED de ultima generacion, ¿icomo pueden evitar el deslumbramiento a otros usuarios de la via entre la puesta y la salida del sol?",
+      "opciones": [
+        "Desviandolas luceshacia la derechamientrashaya en la via otros usuariosquepuedan ser deslumbrados.",
+        "Reduciendo la velocidad del vehiculo llegando incluso a detenerlo.",
+        "Reduciendo la intensidad de la luz que incide directamente sobre el objetivo, permitiendo al conductor gozar de la maxima visibilidad del resto de la carretera."
+      ],
+      "imagen": "../img/test_002_p20.jpg"
+    },
+    {
+      "texto": "La carga transportada en un vehiculo, debe estar dispuesta de forma que...",
+      "opciones": [
+        "no oculte los dispositivos de alumbrado o de senalizacion luminosa.",
+        "ocupe el minimo espacioposible.",
+        "no oculte los dispositivos de alumbrado, aunque puede ocultar la senalizacion luminosa."
+      ]
+    },
+    {
+      "texto": "¿Qué indican estas senales?",
+      "opciones": [
+        "Prohiben circular a mas de 50 km/h en las curvas.",
+        "Obligan a circular a 50 km/h en las curvas.",
+        "Aconsejan no circulara mas de 50km/h en las curvas."
+      ],
+      "imagen": "../img/test_002_p22.jpg"
+    },
+    {
+      "texto": "¿Qué indica la senal?",
+      "opciones": [
+        "Que por el carril derecho se llega a una senda ciclable.",
+        "Que el carril derecho solo puede ser utilizado por ciclos.",
+        "Que el carril derecho solo puede ser utilizado por ciclos y ciclomotores."
+      ],
+      "imagen": "../img/test_002_p23.jpg"
+    },
+    {
+      "texto": "En una via urbana de sentido unico, si los carriles no estan delimitados por marcas viales, ¿ipor donde esta obligado a circular el conductor de un turismo?",
+      "opciones": [
+        "Por el carril que mejor convenga a su destino.",
+        "Porelcentrodelacalzada.",
+        "Por el carril derecho,pudiendo utilizar el resto cuando las circunstancias lo aconsejen."
+      ],
+      "imagen": "../img/test_002_p24.jpg"
+    },
+    {
+      "texto": "En caso de contradiccion entre senales del mismo tipo, ¿icual prevalecera?",
+      "opciones": [
+        "La menos restrictiva.",
+        "Ninguna de las senales.",
+        "La mas restrictiva."
+      ],
+      "imagen": "../img/test_002_p25.jpg"
+    },
+    {
+      "texto": "Si el vehiculo de detras se acerca demasiado, es conveniente...",
+      "opciones": [
+        "mantener la misma separacion con el vehiculo dedelante.",
+        "disminuir la separacion con el vehiculo de delante.",
+        "aumentar la separacion con el vehiculo dedelante."
+      ]
+    },
+    {
+      "texto": "Cuando llueve o hay viento, ¿ipor que hay que tener mas precaucion con los ciclistas?",
+      "opciones": [
+        "Porque pueden salpicar agua.",
+        "Porquetienen mas probabilidad de caerse.",
+        "Porque suelen estorbar el trafico."
+      ],
+      "imagen": "../img/test_002_p27.jpg"
+    },
+    {
+      "texto": "En esta curva pisa el freno muy fuerte. ¿Hay peligro?",
+      "opciones": [
+        "Si, porque puede reventar alguna rueda.",
+        "No, porque el vehiculo frena mejor.",
+        "Si, porque el vehiculo puede derrapar."
+      ],
+      "imagen": "../img/test_002_p28.jpg"
+    },
+    {
+      "texto": "Al adelantar a un peaton, es obligatorio dejar una separacion lateral minima de 1,50 metros cuando circule...",
+      "opciones": [
+        "porpoblado, exclusivamente.",
+        "por cualquier via, fuera o dentro de poblado.",
+        "envias interurbanas,solamente."
+      ]
+    },
+    {
+      "texto": "Esta senal indica peligro por la proximidad de...",
+      "opciones": [
+        "unestrechamiento.",
+        "curvas y la prohibicion de adelantar.",
+        "curva a la izquierda."
+      ],
+      "imagen": "../img/test_002_p30.jpg"
+    }
+  ]
+}

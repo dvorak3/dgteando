@@ -238,8 +238,18 @@
     let pregActual = null;
     let numOpciones = 0;
     let bloqueoHasta = 0;
+    let correctaVisual = -1;               // posición (0-based) de la correcta tal y como se ve en pantalla
 
     const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+    // Fisher–Yates (modifica y devuelve el array)
+    function barajarArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
 
     function pintarCarga(texto) {
       fase = 'carga';
@@ -285,10 +295,18 @@
       const porcentaje = sesion.total ? Math.round((sesion.hechas / sesion.total) * 100) : 0;
       const repeticion = sesion.repetidas.has(claveActual) ? '<span class="repaso-repeticion">repetición</span>' : '';
 
-      const opcionesHTML = pregActual.opciones.map((texto, i) => `
+      // Orden visual: posición en pantalla -> índice original en el JSON.
+      // Si "barajarOpciones" está activo se mezcla en cada aparición; el rastreo de la correcta se mantiene
+      // en correctaVisual, y las teclas 1-2-3 y las letras a-b-c siguen el orden visual de arriba abajo.
+      const barajar = typeof obtenerConfigAnki === 'function' && obtenerConfigAnki().barajarOpciones === true;
+      const ordenVisual = pregActual.opciones.map((_, i) => i);
+      if (barajar) barajarArray(ordenVisual);
+      correctaVisual = ordenVisual.indexOf(pregActual.correcta);
+
+      const opcionesHTML = ordenVisual.map((idxOriginal, i) => `
         <button type="button" class="repaso-opcion" data-op="${i}">
           <span class="repaso-tecla">${i + 1}</span>
-          <span class="repaso-opcion-texto"><span class="opcion-letra">${letras[i]})</span> ${texto}</span>
+          <span class="repaso-opcion-texto"><span class="opcion-letra">${letras[i]})</span> ${pregActual.opciones[idxOriginal]}</span>
         </button>
       `).join('');
 
@@ -324,7 +342,7 @@
       fase = 'confianza';
       bloqueoHasta = Date.now() + 200;   // evita que una doble pulsación salte la fase de confianza
 
-      const correcta = pregActual.correcta;
+      const correcta = correctaVisual;   // índice visual de la correcta (ya contempla el barajado)
       cont.querySelectorAll('.repaso-opcion').forEach((btn, idx) => {
         btn.classList.add('bloqueada');
         btn.disabled = true;

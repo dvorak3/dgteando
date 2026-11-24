@@ -87,6 +87,54 @@ async function guardarFechaExamen(nuevaFechaISO) {
   await guardarProgreso(progreso);
 }
 
+/* =====================================================================
+ *  ANKI: configuración (progreso._meta.ankiConfig, sincronizada con Supabase)
+ * ===================================================================== */
+
+const ANKI_CONFIG_DEFECTO = Object.freeze({
+  modoLimite: "auto",        // "auto" (ajustado al examen) | "personalizado" | "ilimitado"
+  limiteDiario: 50,          // solo se usa con modoLimite === "personalizado"
+  limiteNuevas: 0,           // 0 = sin tope específico de tarjetas nuevas
+  orden: "prioridad",        // "prioridad" | "aleatorio" | "nuevas_primero"
+  barajarOpciones: false,    // baraja a/b/c en modo repaso
+  limiteEstricto: false      // personalizado: true = respeta el límite exacto aunque haya más vencidas
+});
+const ANKI_MODOS_LIMITE = ["auto", "personalizado", "ilimitado"];
+const ANKI_ORDENES = ["prioridad", "aleatorio", "nuevas_primero"];
+
+// Valida y completa una configuración (valores desconocidos o corruptos vuelven al defecto)
+function normalizarConfigAnki(cruda) {
+  const c = cruda && typeof cruda === "object" ? cruda : {};
+  const D = ANKI_CONFIG_DEFECTO;
+  const entero = (v, def, min, max) => {
+    if (v === null || v === undefined || v === "") return def;
+    const n = Math.floor(Number(v));
+    return Number.isFinite(n) ? Math.min(max, Math.max(min, n)) : def;
+  };
+  return {
+    modoLimite: ANKI_MODOS_LIMITE.includes(c.modoLimite) ? c.modoLimite : D.modoLimite,
+    limiteDiario: entero(c.limiteDiario, D.limiteDiario, 1, 999),
+    limiteNuevas: entero(c.limiteNuevas, D.limiteNuevas, 0, 999),
+    orden: ANKI_ORDENES.includes(c.orden) ? c.orden : D.orden,
+    barajarOpciones: c.barajarOpciones === true,
+    limiteEstricto: c.limiteEstricto === true
+  };
+}
+
+function obtenerConfigAnki() {
+  const progreso = obtenerProgreso();
+  const guardada = progreso._meta && typeof progreso._meta === "object" ? progreso._meta.ankiConfig : null;
+  return normalizarConfigAnki(guardada);
+}
+
+// Guarda (fusionando con la actual) en _meta.ankiConfig y sincroniza. Devuelve true si llegó a la nube.
+async function guardarConfigAnki(nuevaConfig) {
+  const progreso = obtenerProgreso();
+  if (!progreso._meta || typeof progreso._meta !== "object") progreso._meta = {};
+  progreso._meta.ankiConfig = normalizarConfigAnki({ ...obtenerConfigAnki(), ...(nuevaConfig || {}) });
+  return await guardarProgreso(progreso);
+}
+
 // Calcula la racha actual de días seguidos practicando
 function calcularRachaEstudio() {
   const progreso = obtenerProgreso();
@@ -267,6 +315,62 @@ async function inicializarMazoAnkiDesdeTests() {
   return { testsCargados, anadidas, totalMazo: Object.keys(progreso._tarjetas).length };
 }
 
+// Busca en data/ tests que aún no tienen ninguna tarjeta en el mazo y los añade como "nueva".
+// No toca las tarjetas ya existentes (ni su progreso). Devuelve { anadidas, testsNuevos, totalMazo, sincronizado }.
+async function sincronizarNuevosTestsAlMazo() {
+  const testsConTarjetas = new Set(Object.values(obtenerTarjetas()).map((t) => Number(t.testId)));
+  const candidatos = [];
+  for (let n = 1; n <= ANKI_MAX_TEST; n++) {
+    if (!testsConTarjetas.has(n)) candidatos.push(n);
+  }
+
+  const cargas = await Promise.all(
+    candidatos.map((n) => cargarDatosTest(n).then((data) => ({ n, data })))
+  );
+
+  // Se lee el progreso DESPUÉS de las descargas para no pisar cambios hechos mientras tanto
+  const progreso = obtenerProgreso();
+  if (!progreso._tarjetas || typeof progreso._tarjetas !== "object") progreso._tarjetas = {};
+  if (!progreso._meta || typeof progreso._meta !== "object") progreso._meta = {};
+
+  const hoy = hoyISO();
+  let anadidas = 0;
+  let testsNuevos = 0;
+
+  cargas.forEach(({ n, data }) => {
+    const preguntas = preguntasDeDatosTest(data);
+    if (!preguntas) return;
+    let anadidasTest = 0;
+    preguntas.forEach((p, idx) => {
+      if (!p || typeof p.correcta !== "number") return;
+      const clave = claveTarjeta(n, idx);
+      if (!progreso._tarjetas[clave]) {
+        progreso._tarjetas[clave] = crearTarjeta(n, idx, hoy);
+        anadidasTest++;
+      }
+    });
+    if (anadidasTest > 0) testsNuevos++;
+    anadidas += anadidasTest;
+  });
+
+  const marcarInicializado = Object.keys(progreso._tarjetas).length > 0 && !progreso._meta.ankiInicializado;
+  if (marcarInicializado) progreso._meta.ankiInicializado = true;
+
+  let sincronizado = true;
+  if (anadidas > 0 || marcarInicializado) sincronizado = await guardarProgreso(progreso);
+
+  return { anadidas, testsNuevos, totalMazo: Object.keys(progreso._tarjetas).length, sincronizado };
+}
+
+// Vacía el mazo Anki (mantiene resultados de tests, fecha de examen y configuración) y lo vuelve a crear desde data/
+async function reiniciarProgresoAnki() {
+  const progreso = obtenerProgreso();
+  progreso._tarjetas = {};
+  if (progreso._meta && typeof progreso._meta === "object") delete progreso._meta.ankiInicializado;
+  await guardarProgreso(progreso);
+  return await inicializarMazoAnkiDesdeTests();
+}
+
 // Intervalo en días según confianza, acotado para no programar más allá del examen
 function intervaloPorConfianza(nivel, diasRestantes) {
   if (nivel === "medium") {
@@ -361,10 +465,41 @@ function registrarFallosEnMazo(progreso, testId, indicesFallados) {
   });
 }
 
-// Cola de repaso de hoy y estadísticas del mazo
+// Hash determinista (FNV-1a): da un orden "aleatorio" estable durante todo el día
+function hashDeterminista(texto) {
+  let h = 2166136261;
+  for (let i = 0; i < texto.length; i++) {
+    h ^= texto.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+// Ordena la cola según config.orden: "prioridad" | "aleatorio" | "nuevas_primero"
+function ordenarColaAnki(cola, orden, hoy) {
+  const copia = [...cola];
+  if (orden === "aleatorio") {
+    return copia.sort((a, b) =>
+      hashDeterminista(hoy + a.clave) - hashDeterminista(hoy + b.clave) || a.clave.localeCompare(b.clave)
+    );
+  }
+  const rangos = orden === "nuevas_primero"
+    ? { nueva: 0, aprendiendo: 1, joven: 2, madura: 3 }
+    : { aprendiendo: 0, nueva: 1, joven: 2, madura: 3 };
+  const rango = (t) => (rangos[t.madurez] !== undefined ? rangos[t.madurez] : 9);
+  return copia.sort((a, b) =>
+    rango(a) - rango(b) ||
+    a.proximaRevision.localeCompare(b.proximaRevision) ||
+    (b.fallos || 0) - (a.fallos || 0) ||
+    a.clave.localeCompare(b.clave)
+  );
+}
+
+// Cola de repaso de hoy y estadísticas del mazo (respeta obtenerConfigAnki())
 function obtenerColaRepasoHoy() {
   const hoy = hoyISO();
   const diasRestantes = calcularDiasHastaExamen();
+  const config = obtenerConfigAnki();
   const entradas = Object.entries(obtenerTarjetas()).map(([clave, t]) => ({ clave, ...t }));
 
   const porMadurez = { nueva: 0, aprendiendo: 0, joven: 0, madura: 0 };
@@ -379,18 +514,39 @@ function obtenerColaRepasoHoy() {
   const nuevas = entradas.filter((t) => t.madurez === "nueva" && t.proximaRevision <= hoy);
   const introducidasHoy = entradas.filter((t) => t.introducida === hoy);
   const vencidasAntiguas = vencidas.filter((t) => t.introducida !== hoy);
+  // Tarjetas ya terminadas hoy (revisadas y programadas para otro día)
+  const hechasHoy = entradas.filter((t) => t.ultimaRevision === hoy && t.proximaRevision > hoy).length;
 
-  // Todas las vencidas entran siempre; las nuevas solo rellenan lo que falta para la cuota del día
-  const cupoNuevas = Math.max(0, cuotaBase - vencidasAntiguas.length - introducidasHoy.length);
+  // Qué nuevas entran primero: por clave, o mezcladas (de forma estable por día) si el orden es aleatorio
+  if (config.orden === "aleatorio") {
+    nuevas.sort((a, b) =>
+      hashDeterminista(hoy + a.clave) - hashDeterminista(hoy + b.clave) || a.clave.localeCompare(b.clave)
+    );
+  } else {
+    nuevas.sort((a, b) => a.clave.localeCompare(b.clave));
+  }
 
-  vencidas.sort((a, b) =>
-    a.proximaRevision.localeCompare(b.proximaRevision) ||
-    (b.fallos || 0) - (a.fallos || 0) ||
-    a.clave.localeCompare(b.clave)
-  );
-  nuevas.sort((a, b) => a.clave.localeCompare(b.clave));
+  // Tope de nuevas al día (0 = sin tope); las ya introducidas hoy cuentan
+  const cupoNuevasConfig = config.limiteNuevas > 0
+    ? Math.max(0, config.limiteNuevas - introducidasHoy.length)
+    : Infinity;
 
-  const colaHoy = [...vencidas, ...nuevas.slice(0, cupoNuevas)];
+  // Todas las vencidas entran siempre; las nuevas rellenan lo que falta para la cuota del día
+  let nuevasElegidas;
+  if (config.modoLimite === "ilimitado") {
+    nuevasElegidas = nuevas.slice(0, cupoNuevasConfig);
+  } else {
+    const objetivo = config.modoLimite === "personalizado" ? config.limiteDiario : cuotaBase;
+    const cupoCuota = Math.max(0, objetivo - vencidasAntiguas.length - introducidasHoy.length);
+    nuevasElegidas = nuevas.slice(0, Math.min(cupoCuota, cupoNuevasConfig));
+  }
+
+  let colaHoy = ordenarColaAnki([...vencidas, ...nuevasElegidas], config.orden, hoy);
+
+  // Personalizado + límite estricto: se corta exactamente en el límite (descontando lo ya hecho hoy)
+  if (config.modoLimite === "personalizado" && config.limiteEstricto) {
+    colaHoy = colaHoy.slice(0, Math.max(0, config.limiteDiario - hechasHoy));
+  }
 
   return {
     totalMazo: entradas.length,
@@ -401,6 +557,7 @@ function obtenerColaRepasoHoy() {
     cuotaDiaria: colaHoy.length, // tarjetas pendientes hoy
     cuotaBase,                   // ritmo diario teórico: ceil(no maduras / días hasta el examen)
     diasRestantes,
+    modoLimite: config.modoLimite,
     colaHoy
   };
 }

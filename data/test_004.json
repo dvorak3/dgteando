@@ -1,0 +1,255 @@
+{
+  "test_id": 4,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "¿Esta permitido que una bicicleta utilice un remolque para transportar personas?",
+      "opciones": [
+        "No,lasbicicletas unicamentepuedenutilizar remolques para transportar carga.",
+        "No, las bicicletas no pueden utilizar ningun tipo de remolque.",
+        "Si,siempreque el remolquecumplalas especificacionestecnicas establecidasy se respeten lascondiciones previstas en la normativa."
+      ]
+    },
+    {
+      "texto": "En condiciones meteorologicas que disminuyan sensiblemente la visibilidad...",
+      "opciones": [
+        "es obligatorioutilizarel sistema dealumbrado.",
+        "solamente es obligatorio utilizar la luz antiniebla trasera.",
+        "no es obligatorio el uso del alumbrado, salvo que la senalizacion indique otra cosa. servicio por una via urbana? O a) No,esta obligado a utilizarlo en todo momento. O b) Si, cuando circula en servicio por vias urbanas. O c) Si, siempre que circule a una velocidad reducida."
+      ]
+    },
+    {
+      "texto": "Despues de adelantar al camion, ¿idebe regresar inmediatamente al carril de la derecha si pretende seguir adelantando?",
+      "opciones": [
+        "Si, en cualquiercaso.",
+        "No, no es obligatorio.",
+        "No, salvo cuando detras circule otro vehiculo a mayor velocidad."
+      ],
+      "imagen": "../img/test_004_p04.jpg"
+    },
+    {
+      "texto": "A partir de la senal que se muestra en la imagen, zque limitaciones existen para los",
+      "opciones": [
+        "No pueden circular, el puerto esta cerrado.",
+        "Deben utilizar cadenas para nieve u otro dispositivo equivalente.",
+        "No existe restriccion alguna para los turismos."
+      ],
+      "imagen": "../img/test_004_p05.jpg"
+    },
+    {
+      "texto": "Circular por debajo del limite maximo de velocidad, ¿zpuede causar accidentes?",
+      "opciones": [
+        "No.",
+        "Si, cuando la velocidad no se adapte a las circunstancias del trafico.",
+        "No,solo sepueden causaraccidentes circulandopor encimade ese limite."
+      ]
+    },
+    {
+      "texto": "Conducir bajo los efectos del alcohol o de las drogas, ¿iesta considerado como delito en el Codigo Penal?",
+      "opciones": [
+        "No,las sanciones son exclusivamente economicas.",
+        "Si.",
+        "Solo cuando el conductor sea responsable de un accidente con victimasmortales."
+      ],
+      "imagen": "../img/test_004_p07.jpg"
+    },
+    {
+      "texto": "Un peaton que empuja un vehiculo de dos ruedas, ¿ipor donde esta obligado a circular?",
+      "opciones": [
+        "Por la derecha, por la calzada o el arcen, segun su sentido de la marcha.",
+        "Por la izquierda, por la calzada o el arcen, segun su sentido de la marcha.",
+        "Por la derecha o porla izquierda indistintamente."
+      ],
+      "imagen": "../img/test_004_p08.jpg"
+    },
+    {
+      "texto": "Tras la exposicion prolongada de un vehiculo a altas temperaturas y al calor, ¿zes conveniente revisar si sus faros y pilotos han sufrido algun deterioro?",
+      "opciones": [
+        "Si,para comprobar de forma visual su estado ycapacidad de iluminacion.",
+        "No,ya que el acabado de los faros esta hecho de un material que soporta todo tipo de factores sin deteriorarse.",
+        "Si, salvo enlos vehiculosde poca antiguedad."
+      ],
+      "imagen": "../img/test_004_p09.jpg"
+    },
+    {
+      "texto": "El vehiculo que se observa en la parte derecha de la fotografia, ¿zesta correctamente estacionado?",
+      "opciones": [
+        "Si, siempreque el estacionamiento dure menos de dos minutos.",
+        "Si, porque se encuentra fuera de la zona transitable del arcen.",
+        "No,porqueobstaculiza."
+      ],
+      "imagen": "../img/test_004_p10.jpg"
+    },
+    {
+      "texto": "¿Que significa esta senal?",
+      "opciones": [
+        "Salida en autopista.",
+        "Bifurcacion hacia la derecha en calzada de dos carriles.",
+        "Que el carril de la derecha deja de ser utilizable."
+      ],
+      "imagen": "../img/test_004_p11.jpg"
+    },
+    {
+      "texto": "La informacion que proporcionan los sistemas ADAS del vehiculo...",
+      "opciones": [
+        "es irrelevanteparala conduccion.",
+        "facilita al conductor la toma de decisiones.",
+        "es contraproducente encaso depeligro."
+      ],
+      "imagen": "../img/test_004_p12.jpg"
+    },
+    {
+      "texto": "¿Que usuarios de la via deben obedecer este semaforo?",
+      "opciones": [
+        "Peatonesybicicletas.",
+        "Bicicletas y ciclos.",
+        "Motocicletas."
+      ],
+      "imagen": "../img/test_004_p13.jpg"
+    },
+    {
+      "texto": "Situado en un vehiculo, ¿zque identifica la senal V-25 Distintivo ambiental?",
+      "opciones": [
+        "Su clasificacion ambiental en funcion de su nivel de emisiones y combustible empleado.",
+        "El tipo de combustible empleado y su nivel de radiacion atmosferica.",
+        "Su clasificacion ambiental en funcion de su nivel de contaminacion acustica."
+      ],
+      "imagen": "../img/test_004_p14.jpg"
+    },
+    {
+      "texto": "Las luces adaptativas...",
+      "opciones": [
+        "adaptan su luminosidad a la visibilidad existente.",
+        "mejoran la visibilidad en determinadas situaciones, como una curva o una interseccion.",
+        "emiten mas luz que las luces convencionales."
+      ]
+    },
+    {
+      "texto": "Para prevenir la fatiga debe parar a descansar 20 6 30 minutos...",
+      "opciones": [
+        "cada2horaso20okilometrosde conduccion continuada.",
+        "cada 4horas o 40okilometros de conduccion continuada.",
+        "a mitad de recorrido."
+      ]
+    },
+    {
+      "texto": "Estaprohibido conducir...",
+      "opciones": [
+        "mas de una hora seguida sin descansar,pero solo en via urbana.",
+        "mas de una hora seguida sin descansar.",
+        "utilizando cascos o auriculares conectados a aparatos receptores o reproductores de sonido."
+      ]
+    },
+    {
+      "texto": "Vehiculo es todo aparato...",
+      "opciones": [
+        "que esta en la via publica.",
+        "que tiene un motor.",
+        "aptoparacircularporlasviaspublicas."
+      ]
+    },
+    {
+      "texto": "¿Cual es la accion correcta que debe tomar un conductor si ya ha ingresado en una interseccion y un agente levanta el brazo verticalmente?",
+      "opciones": [
+        "Detenerse de inmediato, independientemente de su ubicacion en la interseccion.",
+        "Continuar sutrayectoria a traves de la interseccion sin detenerse.",
+        "Detenerse solo si puede hacerlo de manera segura sin obstruir el trafico."
+      ],
+      "imagen": "../img/test_004_p19.jpg"
+    },
+    {
+      "texto": "Las autovias y las autopistas, en general, son en relacion con las carreteras convencionales...",
+      "opciones": [
+        "igual de seguras.",
+        "menos seguras.",
+        "mas seguras."
+      ]
+    },
+    {
+      "texto": "En general, un conductor con estres...",
+      "opciones": [
+        "se distrae con mayor facilidad.",
+        "tomadecisionesmas rapidas y cometemenos errores.",
+        "presta mayor atencion al entorno ytarda mas en tomar decisiones. c) presta mayor atencion al entorno y tarda mas en tomar decisiones."
+      ],
+      "imagen": "../img/test_004_p21.jpg"
+    },
+    {
+      "texto": "¿En que situaciones tienen mas dificultades las personas mayores?",
+      "opciones": [
+        "En situaciones complejas de incorporaciones y salidas de vias donde se circula a alta velocidad.",
+        "En las maniobras de estacionamiento.",
+        "En los giros a la izquierda."
+      ]
+    },
+    {
+      "texto": "¿Esta prohibido circular marcha atras?",
+      "opciones": [
+        "No,excepto enautopistasyautovias.",
+        "Si, si hay otros usuarios en las proximidades.",
+        "Si, salvo que no pueda marchar hacia delante o cambiar de direccion o sentido."
+      ]
+    },
+    {
+      "texto": "El alcohol, ¿zes una de las principales causas de accidentes de trafico?",
+      "opciones": [
+        "No,cuando el conductortiene experiencia ybebe habitualmente.",
+        "Si.",
+        "Soloenpersonasnoacostumbradasabeber."
+      ]
+    },
+    {
+      "texto": "¿Puede parar en un carril bus?",
+      "opciones": [
+        "No.",
+        "Si, cuando sea por un tiempo inferior a 2 minutos.",
+        "Si, si utiliza la senal de emergencia."
+      ],
+      "imagen": "../img/test_004_p25.jpg"
+    },
+    {
+      "texto": "La velocidad, ¿zes un factor de riesgo que produce accidentes?",
+      "opciones": [
+        "No, si el vehiculo dispone de los uiltimos sistemas de seguridad.",
+        "No; solo agrava las consecuencias del accidentepero no es un factor de riesgo.",
+        "Si, yporeso debe serlaadecuada en cada momento."
+      ],
+      "imagen": "../img/test_004_p26.jpg"
+    },
+    {
+      "texto": "¿Que indicala senalizacion de estevehiculo?",
+      "opciones": [
+        "Que se trata de un vehiculo que transporta mercancias peligrosas.",
+        "Que tiene limitacion de velocidad.",
+        "Que transporta una carga que sobresale por detras."
+      ],
+      "imagen": "../img/test_004_p27.jpg"
+    },
+    {
+      "texto": "En esta calle no hay senal de limitacion de velocidad. ¿A que velocidad maxima se puede circular?",
+      "opciones": [
+        "60 km/h.",
+        "40 km/h.",
+        "50 km/h."
+      ],
+      "imagen": "../img/test_004_p28.jpg"
+    },
+    {
+      "texto": "Esta senal indica...",
+      "opciones": [
+        "via publica calificadade atencion preferente.",
+        "prioridad de paso de los vehiculos que se acerquen por la derecha.",
+        "calzada conprioridad depaso enlas intersecciones."
+      ],
+      "imagen": "../img/test_004_p29.jpg"
+    },
+    {
+      "texto": "Al entrar en una glorieta que no dispone de senalizacion que regule la preferencia de paso, debe...",
+      "opciones": [
+        "ceder el paso a los vehiculos que circulan dentro de la glorieta.",
+        "incorporarse antes quelos vehiculos que seaproximenpor su izquierda.",
+        "ceder el paso a los vehiculos que se aproximen por su derecha."
+      ]
+    }
+  ]
+}

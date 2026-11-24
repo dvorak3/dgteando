@@ -1,0 +1,255 @@
+{
+  "test_id": 11,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "El agente, ¿za quien ordena detenerse?",
+      "opciones": [
+        "A los que se aproximen desde los lados.",
+        "A los usuarios que se aproximen tanto por delante como por detras.",
+        "Atodoslosusuariosdelavia"
+      ],
+      "imagen": "../img/test_011_p01.jpg"
+    },
+    {
+      "texto": "Una motocicleta que alcanza una velocidad superior a 1oo kilometros por hora, debe llevar obligatoriamente...",
+      "opciones": [
+        "un espejo retrovisor en el lado derecho, solamente.",
+        "un espejo retrovisor en el lado izquierdo, solamente.",
+        "dos espejos retrovisores,uno a cada lado."
+      ]
+    },
+    {
+      "texto": "Circula por una autovia y sufre una averia que le obliga a llevar una velocidad anormalmente reducida, ¿ique debe hacer?",
+      "opciones": [
+        "Continuar la marcha hasta llegar al destino encendiendo el alumbrado de cruce.",
+        "No detenerse en ningun caso.",
+        "Circular hasta la primera salida por la quepueda abandonar la via."
+      ]
+    },
+    {
+      "texto": "La mayoria de los accidentes de circulacion...",
+      "opciones": [
+        "son inevitables.",
+        "se pueden evitar.",
+        "casi nunca sepueden evitar."
+      ]
+    },
+    {
+      "texto": "Debe cambiar el alumbrado de largo alcance por el de corto alcance...",
+      "opciones": [
+        "cuando aprecie quepuede deslumbrara cualquierusuario de la via.",
+        "cuando circule por una via interurbana.",
+        "cuando pueda deslumbrar solo a los vehiculos que circulen en sentido contrario."
+      ]
+    },
+    {
+      "texto": "¿Es aconsejable quitar el casco de proteccion al pasajero de una motocicleta que ha sufrido un accidente?",
+      "opciones": [
+        "Si, lo antesposiblepara evitarasfixias.",
+        "Si, siempreque el herido este consciente.",
+        "No,salvo que seanecesarioyseconozcalatecnica."
+      ],
+      "imagen": "../img/test_011_p06.jpg"
+    },
+    {
+      "texto": "¿Que indica esta senal?",
+      "opciones": [
+        "Estacionamiento prohibido hacia el ladoderecho.",
+        "Estacionamiento prohibido hacia ambos lados dela senal.",
+        "Estacionamiento prohibido hacia el lado izquierdo."
+      ],
+      "imagen": "../img/test_011_p07.jpg"
+    },
+    {
+      "texto": "De las senales que realiza este conductor, ¿zcual prevalece?",
+      "opciones": [
+        "La senal luminosa, ya que la realizada con el brazono es reglamentaria.",
+        "La senal luminosa sobre la realizada con el brazo.",
+        "La que realiza con el brazo sobre la senal luminosa."
+      ],
+      "imagen": "../img/test_011_p08.jpg"
+    },
+    {
+      "texto": "Una de las principales causas de accidente en personas jovenes es...",
+      "opciones": [
+        "la falta de confianza en su capacidad de conduccion.",
+        "la falta de reflejos.",
+        "el excesodevelocidad."
+      ]
+    },
+    {
+      "texto": "La depresion puede afectar al conductor...",
+      "opciones": [
+        "produciendo una mayor inseguridad.",
+        "disminuyendolasdistracciones",
+        "reduciendo la irritabilidad y el estres."
+      ]
+    },
+    {
+      "texto": "Esta senal indica la situacion de...",
+      "opciones": [
+        "un paraje de interes paisajistico.",
+        "un apartadero.",
+        "un lugar desde el que puede realizar un cambio de sentido."
+      ],
+      "imagen": "../img/test_011_p11.jpg"
+    },
+    {
+      "texto": "¿De que peligro advierte la senal?",
+      "opciones": [
+        "Deuno ovariospasospara peatones.",
+        "De la proximidad de un lugar frecuentado por ninos, como escuelas,zonas de juego, etc.",
+        "De la proximidad deuna zona reservada para lospeatones."
+      ],
+      "imagen": "../img/test_011_p12.jpg"
+    },
+    {
+      "texto": "Un nino va sujeto con un sistema de retencion orientado hacia atras en el asiento delantero del vehiculo. ¿Esta permitido?",
+      "opciones": [
+        "Si, pero el airbag debe estar activado.",
+        "No.",
+        "Si,pero el airbag debe estar desactivado."
+      ],
+      "imagen": "../img/test_011_p13.jpg"
+    },
+    {
+      "texto": "¿Que indica la flecha pintada en la calzada?",
+      "opciones": [
+        "Que el carril en el que esta situada termina proximamente.",
+        "La direccion del ramal de la proxima salida.",
+        "La proximidad de una linea continua."
+      ],
+      "imagen": "../img/test_011_p14.jpg"
+    },
+    {
+      "texto": "¿Se puede circular marcha atras en cualquier tipo de via?",
+      "opciones": [
+        "No, solo en vias interurbanas.",
+        "No,siempreesta prohibidoenautopistasyautovias.",
+        "Si, el tipo de via es indiferente."
+      ]
+    },
+    {
+      "texto": "En un tunel, ¿zque distancia de seguridad se debe dejar con el vehiculo que circula delante?",
+      "opciones": [
+        "100 metros, al menos,cuando no se pretenda adelantar.",
+        "Unicamente la distancia suficientepara no colisionar en casode frenadobrusco.",
+        "200 metros."
+      ],
+      "imagen": "../img/test_011_p16.jpg"
+    },
+    {
+      "texto": "Esta senal..",
+      "opciones": [
+        "prohibe entrar en esta via porcongestion devehiculos.",
+        "indica peligro por la aproximacion a un lugar estrecho en el que se debe ir en fila.",
+        "advierte quedebo circularcon precaucion por congestion del trafico."
+      ],
+      "imagen": "../img/test_011_p17.jpg"
+    },
+    {
+      "texto": "En vias interurbanas con tres carriles para el mismo sentido, ¿zle esta permitido circular por el carril izquierdo a un turismo con remolque?",
+      "opciones": [
+        "Si,perosoloparaadelantara otrosvehiculos.",
+        "No, en ningun caso",
+        "Si, cuando la longitud del conjunto no supere los 7 metros."
+      ],
+      "imagen": "../img/test_011_p18.jpg"
+    },
+    {
+      "texto": "En un paso para peatones, ¿zesta permitido parar o estacionar?",
+      "opciones": [
+        "No.",
+        "Si.",
+        "Esta permitidoparar,pero esta prohibido estacionar."
+      ],
+      "imagen": "../img/test_011_p19.jpg"
+    },
+    {
+      "texto": "Esta senal...",
+      "opciones": [
+        "indica sentido obligatorio en una via de uno o mas carriles.",
+        "permite cambiardedireccionperono de sentido.",
+        "prohibe cambiar de direccion y de sentido."
+      ],
+      "imagen": "../img/test_011_p20.jpg"
+    },
+    {
+      "texto": "¿Que le indican estas senales?",
+      "opciones": [
+        "Que a partir de la senal rigen las normas de zona urbana y que esta prohibida la circulacion de camiones.",
+        "Que los camiones deben circular a 50km/h.",
+        "Que esta prohibida la circulacion de camiones de mas de 3,5 T de MMA."
+      ],
+      "imagen": "../img/test_011_p21.jpg"
+    },
+    {
+      "texto": "¿Es obligatorio llevar un extintor como equipamiento de un automovil que circula en servicio particular?",
+      "opciones": [
+        "No,sololollevanlosautobuses.",
+        "Si,todos los vehiculos deben llevarlo.",
+        "No,si se trata de un turismo o de una motocicleta."
+      ]
+    },
+    {
+      "texto": "Es obligatorio utilizar las luces de carretera al circular a mas de 4o km/h por una via...",
+      "opciones": [
+        "interurbana insuficientemente iluminada.",
+        "insuficientemente iluminada, dentro o fuera de poblado.",
+        "interurbana suficientemente iluminada."
+      ]
+    },
+    {
+      "texto": "¿Una motocicleta debe llevar un chaleco reflectante de alta visibilidad como dotacion obligatoria?",
+      "opciones": [
+        "No, no es obligatorio, pero si recomendable.",
+        "Si,debe llevarlo comodotacionobligatoria",
+        "Solo es obligatorio cuando secirculeporvias interurbanas."
+      ],
+      "imagen": "../img/test_011_p24.jpg"
+    },
+    {
+      "texto": "¿Esta permitido adelantar en una curva o cambio de rasante de visibilidad reducida?",
+      "opciones": [
+        "Si, moderando la velocidad.",
+        "Si, si no hay senal que lo prohiba.",
+        "No, salvo si los dos sentidos estan claramentedelimitados y la maniobra puede efectuarse sin invadir el sentido contrario. dos vehiculos, tiene prioridad el vehiculo que circula... Oa)ensentidodescendente. Ob)ensentidoascendente. O c) a mayor velocidad."
+      ]
+    },
+    {
+      "texto": "A los conductores noveles se les aplica una tasa de alcoholemia menor...",
+      "opciones": [
+        "porque carecen de la suficiente experiencia en la conduccion.",
+        "porqueen ellos los efectos del alcohol son menores.",
+        "unicamente porque las normas de trafico lo imponen."
+      ]
+    },
+    {
+      "texto": "Con el permiso B, como norma general, ¿ise puede conducir un vehiculo automovil de mas de 3.500 kg?",
+      "opciones": [
+        "Sí.",
+        "No.",
+        "Si,pero debe teneruna antiguedad superior a 3 anos."
+      ],
+      "imagen": "../img/test_011_p28.jpg"
+    },
+    {
+      "texto": "La funcion de los sistemas de seguridad pasiva de un vehiculo consiste en...",
+      "opciones": [
+        "la misma que la de los elementos de seguridad activa.",
+        "evitar o disminuir los danos que seproduzcan en caso de accidente.",
+        "evitar que se produzca un accidente."
+      ],
+      "imagen": "../img/test_011_p29.jpg"
+    },
+    {
+      "texto": "Cuando no se puede circular hacia adelante ni cambiar de direccion o sentido de la marcha, ¿ise permite circular marcha atras?",
+      "opciones": [
+        "No.",
+        "Si,pero el recorrido hacia atras no puede ser superior a 15 metros, ni se puede invadir un cruce de vias.",
+        "Si, pero solo con el recorrido minimo indispensable."
+      ]
+    }
+  ]
+}

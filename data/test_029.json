@@ -1,0 +1,262 @@
+{
+  "test_id": 29,
+  "respuestas_verificadas": false,
+  "preguntas": [
+    {
+      "texto": "Un vehiculo tiene el silenciador del escape estropeado. ¿Esta permitido circular asi?",
+      "opciones": [
+        "No,porla contaminacion acusticaqueproduce.",
+        "Si,solamente encarretera.",
+        "No, pero las motos y ciclomotores pueden circular sin el."
+      ],
+      "imagen": "../img/test_029_p01.jpg"
+    },
+    {
+      "texto": "¿Que indica esta marca de color blanco?",
+      "opciones": [
+        "La existencia de un carril reservado exclusivamente a los autobuses.",
+        "Indica el comienzo de un carril reservado para determinados vehiculos.",
+        "Indica el final de un carril reservado para determinados vehiculos."
+      ],
+      "imagen": "../img/test_029_p02.jpg"
+    },
+    {
+      "texto": "En una carretera de tres carriles en cada sentido, ¿icuando se puede circular por el carril izquierdo?",
+      "opciones": [
+        "Solamente para adelantar.",
+        "Nunca.",
+        "Cuando los otros carriles esten ocupados yno obstaculice a losvehiculos que circulan detras."
+      ],
+      "imagen": "../img/test_029_p03.jpg"
+    },
+    {
+      "texto": "¿Cuando debe iniciar las advertencias para realizar una maniobra?",
+      "opciones": [
+        "Justoantesdeiniciarlamaniobra.",
+        "Cuandohaya iniciadolamaniobra.",
+        "Con antelacion suficiente a la iniciacion de lamaniobra."
+      ]
+    },
+    {
+      "texto": "El nivel de aceite del motor, ¿zcomo se debe comprobar?",
+      "opciones": [
+        "Con el motorfuncionando.",
+        "Con el motor apagadoy frio.",
+        "Con el motor caliente."
+      ],
+      "imagen": "../img/test_029_p05.jpg"
+    },
+    {
+      "texto": "Circular en motocicleta bajo una lluvia intensa, obliga a...",
+      "opciones": [
+        "encender la luz de largo alcance incluso circulando dentro de poblado.",
+        "moderar la velocidad,llegando a detenerse si fuera preciso."
+      ]
+    },
+    {
+      "texto": "En las isletas de canalizacion del trafico situadas en la calzada, ¿ise puede parar o estacionar?",
+      "opciones": [
+        "Ni parar ni estacionar.",
+        "Solo parar.",
+        "Solo estacionar."
+      ],
+      "imagen": "../img/test_029_p07.jpg"
+    },
+    {
+      "texto": "Muchos atropellos a peatones se producen...",
+      "opciones": [
+        "durantela noche.",
+        "cuando losvehiculos circulan marchaatras.",
+        "enautopistas."
+      ]
+    },
+    {
+      "texto": "En una via sin pavimentar, ¿ia que velocidad maxima puede circular un turismo?",
+      "opciones": [
+        "A 90 km/h.",
+        "A 50 km/h.",
+        "A 30 km/h."
+      ],
+      "imagen": "../img/test_029_p09.jpg"
+    },
+    {
+      "texto": "El sistema avanzado de ayuda a la conduccion conocido como \"StartStop\", ¿zen que momento apaga el motor del vehiculo?",
+      "opciones": [
+        "Cuandoel motoresta al ralenti.",
+        "Cuando se pisa el embrague.",
+        "Cuando el motor esta muyrevolucionado."
+      ]
+    },
+    {
+      "texto": "Un conductor que senaliza un cambio de carril, ¿ztiene preferencia sobre los conductores de los vehiculos que circulan por el carril al que se pretende desplazar?",
+      "opciones": [
+        "Si.",
+        "Solo si va adelantar a un vehiculo de grandes dimensiones.",
+        "No."
+      ]
+    },
+    {
+      "texto": "Si encuentra esta senal a la entrada de una via debe saber que...",
+      "opciones": [
+        "estaprohibida lacirculaciondeciclomotores.",
+        "estaprohibida suutilizacionparatodos aquellos usuarios queno seanconductoresde ciclomotores.",
+        "esunaviareservadaparaciclosyciclomotores."
+      ],
+      "imagen": "../img/test_029_p12.jpg"
+    },
+    {
+      "texto": "Las senales de la fotografia, indican...",
+      "opciones": [
+        "obras a 300 metros.",
+        "curvas einterseccionaladerecha.",
+        "curvasyestrechamientoporobras."
+      ],
+      "imagen": "../img/test_029_p13.jpg"
+    },
+    {
+      "texto": "Va a girar a la derecha, y lo senaliza con el indicador luminoso correspondiente, ¿zhasta cuando es necesario mantenerlo encendido?",
+      "opciones": [
+        "Hasta que sepa con seguridad que el que me sigue ha visto la indicacion. a) Hasta que sepa con seguridad que el que me sigue ha visto la indicacion.",
+        "Hasta que finalice la maniobra.",
+        "El menor tiempo posible."
+      ]
+    },
+    {
+      "texto": "La lluvia...",
+      "opciones": [
+        "exigeal conductortomarmas precaucionespor lafaltade adherencia de los neumaticos.",
+        "es un fenomeno atmosferico queno influye enla conduccion.",
+        "mejora la visibilidad porque limpia el parabrisas."
+      ],
+      "imagen": "../img/test_029_p15.jpg"
+    },
+    {
+      "texto": "Los costes por primeros auxilios, atencion y tratamiento a los heridos, rehabilitacion y adaptaciones, ¿zcomo se llaman?",
+      "opciones": [
+        "Costes sanitarios.",
+        "Costesmateriales.",
+        "Costesadministrativos."
+      ],
+      "imagen": "../img/test_029_p16.jpg"
+    },
+    {
+      "texto": "Circular por una autopista a 120 km/h con lluvia intensa, es circular a una velocidad...",
+      "opciones": [
+        "inadecuada.",
+        "prohibida.",
+        "adecuada."
+      ]
+    },
+    {
+      "texto": "¿Como advertira el proposito de efectuar una parada en el carril derecho a los conductores de los vehiculos que circulan por detras del suyo?",
+      "opciones": [
+        "Utilizando la senal de emergencia.",
+        "Utilizando el intermitente derecho.",
+        "Utilizando el intermitente izquierdo."
+      ]
+    },
+    {
+      "texto": "¿Quien tiene preferencia de paso en esta interseccion?",
+      "opciones": [
+        "EI tranvia.",
+        "El automovil.",
+        "El que circule por la via principal."
+      ],
+      "imagen": "../img/test_029_p19.jpg"
+    },
+    {
+      "texto": "Si no hay niebla espesa, ¿zen que otra circunstancia puede emplear la luz antiniebla delantera?",
+      "opciones": [
+        "En cualquier circunstancia en que disminuya la visibilidad.",
+        "Solopuede encender la luz antiniebladelantera conniebla espesa."
+      ],
+      "imagen": "../img/test_029_p20.jpg"
+    },
+    {
+      "texto": "Si por emergencia queda inmovilizado con su vehiculo dentro de un tuinel, debera...",
+      "opciones": [
+        "conectarla senal de emergenciaymantener encendidas las luces de cruce.",
+        "apagarelmotor,conectar la senal de emergencia ymantenerencendidas lasluces de posicion.",
+        "conectar la senal de emergencia yhacer sonar el claxon."
+      ],
+      "imagen": "../img/test_029_p21.jpg"
+    },
+    {
+      "texto": "Las materias que produzcan polvo o puedan caer, es obligatorio transportarlas ..",
+      "opciones": [
+        "cubriendolas total y eficazmente.",
+        "envehiculostotalmentecerrados.",
+        "encontenedoresdepequenotamano."
+      ],
+      "imagen": "../img/test_029_p22.jpg"
+    },
+    {
+      "texto": "El sistema de alumbrado de los vehiculos...",
+      "opciones": [
+        "sirve para ver bien de noche.",
+        "sirve para que el conductor vea bien la carretera.",
+        "sirvepara que el conductorvea bien la carretera,y su vehiculo sea visto por los demas conductores."
+      ]
+    },
+    {
+      "texto": "Los psicofarmacos, ¿ipueden alterarlas capacidades para conducir con seguridad?",
+      "opciones": [
+        "No,excepto que ademas se ingiera alcohol.",
+        "Si,gravemente.",
+        "No,porque no tienen influencia sobre la conduccion."
+      ]
+    },
+    {
+      "texto": "Un agente circula en una moto portando una bandera verde, ¿ique indica?",
+      "opciones": [
+        "La calzada esta abierta pero hay que extremar la atencion.",
+        "En la calzada se esta desarrollando una actividad deportiva.",
+        "La calzada queda de nuevo abierta al trafico a partir de su paso."
+      ],
+      "imagen": "../img/test_029_p25.jpg"
+    },
+    {
+      "texto": "Si inmoviliza el vehiculo junto al borde de esta calzada, ¿zincumple alguna norma de circulacion?",
+      "opciones": [
+        "No, si espara efectuar una parada.",
+        "No,ya que estamarca vial no prohibeparar ni estacionar.",
+        "Si, porque es una zona de carga y descarga y esta prohibido cualquier tipo de inmovilizacion."
+      ],
+      "imagen": "../img/test_029_p26.jpg"
+    },
+    {
+      "texto": "Para regular correctamente el apoyacabezas, la distancia de este con la cabeza debe ser...",
+      "opciones": [
+        "superiora4cm.",
+        "la minima posible ynunca superiora 4 cm.",
+        "la que resultemas comoda para el conductor."
+      ],
+      "imagen": "../img/test_029_p27.jpg"
+    },
+    {
+      "texto": "¿Como debe advertir su presencia en la via este conjunto de vehiculos?",
+      "opciones": [
+        "Utilizando la senalizacion de emergencia.",
+        "Empleando tanto de dia como de noche una luz rotativa de color amarillo.",
+        "Conuna luz intermitenteamarilla."
+      ],
+      "imagen": "../img/test_029_p28.jpg"
+    },
+    {
+      "texto": "En un tramo de via con la senal \"tunel\", ¿zesta permitido hacer un cambio de sentido?",
+      "opciones": [
+        "No.",
+        "Si."
+      ],
+      "imagen": "../img/test_029_p29.jpg"
+    },
+    {
+      "texto": "Uno de los efectos que algunas drogas pueden producir en el conductor es...",
+      "opciones": [
+        "la ampliacion del campo visual.",
+        "la disminucion de la distancia de detencion.",
+        "la incorrectapercepciondel tiempo ydel espacio."
+      ]
+    }
+  ]
+}
