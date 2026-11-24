@@ -3,258 +3,287 @@
   "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "¿Que provoca mas accidentes?",
+      "texto": "¿Qué provoca más accidentes?",
       "opciones": [
         "La persona.",
-        "La via y su entorno.",
-        "El vehiculo."
-      ]
+        "La vía y su entorno.",
+        "El vehículo."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Se prohibe circular por autopistas a los...",
+      "texto": "Se prohíbe circular por autopistas a los...",
       "opciones": [
-        "vehiculos quetransportenmercanciaspeligrosas.",
-        "vehiculosconremolque.",
-        "vehiculosquenoseancapacesdealcanzaren llano60km/h."
+        "vehículos que transporten mercancías peligrosas.",
+        "vehículos con remolque.",
+        "vehículos que no sean capaces de alcanzar en llano 60 km/h."
       ],
+      "correcta": 2,
       "imagen": "../img/test_089_p02.jpg"
     },
     {
-      "texto": "La senal triangular indica que se debe...",
+      "texto": "La señal triangular indica que se debe...",
       "opciones": [
-        "detener el vehiculo y ceder el paso.",
-        "ceder el paso cuando seanecesario.",
+        "detener el vehículo y ceder el paso.",
+        "ceder el paso cuando sea necesario.",
         "acelerar para aumentar la velocidad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p03.jpg"
     },
     {
-      "texto": "Cuando para realizar un cambio de sentido obstaculiza la marcha de los vehiculos que circulan detras, debera...",
+      "texto": "Cuando para realizar un cambio de sentido obstaculiza la marcha de los vehículos que circulan detrás, deberá...",
       "opciones": [
-        "abstenerse derealizarloy continuar sumarcha.",
-        "salirde la calzadapor la derecha,y esperar hasta que las condicionespermitan hacerla maniobra.",
-        "hacer senales conla luz de freno para advertir su maniobra."
+        "abstenerse de realizarlo y continuar su marcha.",
+        "salir de la calzada por la derecha y esperar hasta que las condiciones permitan hacer la maniobra.",
+        "hacer señales con la luz de freno para advertir su maniobra."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p04.jpg"
     },
     {
-      "texto": "Sobre los railes de tranvia, ¿ique esta prohibido?",
+      "texto": "Sobre los raíles de tranvía, ¿qué está prohibido?",
       "opciones": [
         "Parar y estacionar.",
         "Estacionar, solamente.",
         "Circular."
       ],
+      "correcta": 0,
       "imagen": "../img/test_089_p05.jpg"
     },
     {
-      "texto": "Para estacionar, ¿esta permitido circular marcha atras atravesando una interseccion?",
+      "texto": "Para estacionar, ¿está permitido circular marcha atrás atravesando una intersección?",
       "opciones": [
         "Sí.",
-        "No. O a) Cuando circule por una carretera suficientemente iluminada. O b) Cuando circule por una calle suficientemente iluminada.",
-        "Para inmovilizar el vehiculo en un arcen fuera de poblado."
-      ]
-    },
-    {
-      "texto": "Se considera que una parada o estacionamiento obstaculiza gravemente la circulacion cuando..",
-      "opciones": [
-        "serealiza en una via publica calificada de atencion preferente.",
-        "se obstaculiza la utilizacion normal de los pasos rebajados para disminuidos fisicos.",
-        "seefectuaendoblefila."
-      ]
-    },
-    {
-      "texto": "Una motocicleta, ¿zpuede circular por la via senalizada con esta senal?",
-      "opciones": [
-        "Si, porque se trata de una via reservada a vehiculos de dos ruedas con motor.",
-        "No,porque setrata de una via reservada exclusivamente a los ciclomotores.",
-        "Si, si se trata de una motocicleta sin sidecar."
+        "No.",
+        "Para inmovilizar el vehículo en un arcén fuera de poblado."
       ],
+      "correcta": 1
+    },
+    {
+      "texto": "Se considera que una parada o estacionamiento obstaculiza gravemente la circulación cuando...",
+      "opciones": [
+        "se realiza en una vía pública calificada de atención preferente.",
+        "se obstaculiza la utilización normal de los pasos rebajados para disminuidos físicos.",
+        "se efectúa en doble fila."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Una motocicleta, ¿puede circular por la vía señalizada con esta señal?",
+      "opciones": [
+        "Sí, porque se trata de una vía reservada a vehículos de dos ruedas con motor.",
+        "No, porque se trata de una vía reservada exclusivamente a los ciclomotores.",
+        "Sí, si se trata de una motocicleta sin sidecar."
+      ],
+      "correcta": 1,
       "imagen": "../img/test_089_p09.jpg"
     },
     {
-      "texto": "Esta senal indica direccion y sentido...",
+      "texto": "Esta señal indica dirección y sentido...",
       "opciones": [
         "obligatorios.",
         "aconsejados.",
         "prohibidos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_089_p10.jpg"
     },
     {
-      "texto": "Si encontramos un semaforo en rojo a la entrada de un tunel, ¿ique haremos?",
+      "texto": "Si encontramos un semáforo en rojo a la entrada de un túnel, ¿qué haremos?",
       "opciones": [
-        "Pasar con precaucion.",
-        "Pasarcediendoelpaso.",
+        "Pasar con precaución.",
+        "Pasar cediendo el paso.",
         "Detenernos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_089_p11.jpg"
     },
     {
-      "texto": "Este panel, ¿ique indica?",
+      "texto": "Este panel, ¿qué indica?",
       "opciones": [
-        "La distancia desde el lugar donde esta la senal a aquel en que comienza el peligro.",
+        "La distancia desde el lugar donde está la señal a aquel en que comienza el peligro.",
         "La longitud en que existe pavimento en mal estado.",
         "La longitud que dura el peligro que se indica."
       ],
+      "correcta": 2,
       "imagen": "../img/test_089_p12.jpg"
     },
     {
-      "texto": "¿Las bicicletas que se nos aproximen por el lado izquierdo tendran prioridad?",
+      "texto": "¿Las bicicletas que se nos aproximen por el lado izquierdo tendrán prioridad?",
       "opciones": [
-        "Si, cuando circulen en grupo.",
+        "Sí, cuando circulen en grupo.",
         "No."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p13.jpg"
     },
     {
-      "texto": "Con esta senal, ¿itiene prioridad de paso en el estrechamiento?",
+      "texto": "Con esta señal, ¿tiene prioridad de paso en el estrechamiento?",
       "opciones": [
-        "No, la prioridad la tiene el vehiculo que circula en sentido contrario.",
-        "Si.",
-        "No, la senal concede prioridad al sentido contrario."
+        "No, la prioridad la tiene el vehículo que circula en sentido contrario.",
+        "Sí.",
+        "No, la señal concede prioridad al sentido contrario."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p14.jpg"
     },
     {
-      "texto": "En esta interseccion con los semaforos en amarillo intermitente, ¿ique debe hacer?",
+      "texto": "En esta intersección con los semáforos en amarillo intermitente, ¿qué debe hacer?",
       "opciones": [
-        "Continuar con precaucion, el semaforo en amarillo intermitente exime de cumplir la senal vertical.",
-        "Extremarlaprecaucion y,en su caso, cederel paso a ambos lados.",
-        "Detener el vehiculo."
+        "Continuar con precaución, el semáforo en amarillo intermitente exime de cumplir la señal vertical.",
+        "Extremar la precaución y, en su caso, ceder el paso a ambos lados.",
+        "Detener el vehículo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p15.jpg"
     },
     {
-      "texto": "La velocidad maxima a la que puede circular un automovil derivado de turismo en una carretera convencional es de...",
+      "texto": "La velocidad máxima a la que puede circular un automóvil derivado de turismo en una carretera convencional es de...",
       "opciones": [
         "80 km/h.",
         "90 km/h.",
         "100 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p16.jpg"
     },
     {
-      "texto": "¿Que separacion lateral mantendremos al adelantar una bicicleta dentro de poblado?",
+      "texto": "¿Qué separación lateral mantendremos al adelantar una bicicleta dentro de poblado?",
       "opciones": [
-        "1,5 metros como minimo.",
-        "1.5metroscomomaximo.",
-        "Una separacion lateral,suficientepara realizar lamaniobra con seguridad, que debera ser proporcional, a la anchura de la via y a la velocidad a la que se adelante"
+        "1,5 metros como mínimo.",
+        "1,5 metros como máximo.",
+        "Una separación lateral suficiente para realizar la maniobra con seguridad, que deberá ser proporcional a la anchura de la vía y a la velocidad a la que se adelante."
       ],
+      "correcta": 2,
       "imagen": "../img/test_089_p17.jpg"
     },
     {
-      "texto": "¿Que significa esta senal?",
+      "texto": "¿Qué significa esta señal?",
       "opciones": [
-        "Peligro por la existencia de un desnivel a lo largo de la via.",
-        "Peligro por la proximidad de un tramo en el que se puede proyectar gravilla al pasar los vehiculos.",
+        "Peligro por la existencia de un desnivel a lo largo de la vía.",
+        "Peligro por la proximidad de un tramo en el que se puede proyectar gravilla al pasar los vehículos.",
         "Peligro por la proximidad de una zona con desprendimientos frecuentes."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p18.jpg"
     },
     {
-      "texto": "Circulando con lluvia intensa, ¿zes obligatorio utilizar la luz antiniebla trasera?",
+      "texto": "Circulando con lluvia intensa, ¿es obligatorio utilizar la luz antiniebla trasera?",
       "opciones": [
-        "Si, el trasero y el delantero.",
-        "Si.",
+        "Sí, el trasero y el delantero.",
+        "Sí.",
         "No."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿En que vias utilizaremos las luces de corto alcance entre el ocaso y la salida del sol?",
+      "texto": "¿En qué vías utilizaremos las luces de corto alcance entre el ocaso y la salida del sol?",
       "opciones": [
-        "Solo en las viasurbanas suficientementeiluminadas.",
-        "Tanto en vias urbanas como interurbanas suficientemente iluminadas.",
-        "Solo en las vias interurbanas insuficientemente iluminadas."
+        "Solo en las vías urbanas suficientemente iluminadas.",
+        "Tanto en vías urbanas como interurbanas suficientemente iluminadas.",
+        "Solo en las vías interurbanas insuficientemente iluminadas."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p20.jpg"
     },
     {
       "texto": "Si estaciona un turismo con un remolque ligero en una pendiente sensible, debe...",
       "opciones": [
-        "accionar el freno de mano, unicamente.",
+        "accionar el freno de mano, únicamente.",
         "colocar calzos o apoyar las ruedas directrices en el bordillo.",
-        "calzar el vehiculo con cualquier elemento que sirva para ello."
+        "calzar el vehículo con cualquier elemento que sirva para ello."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p21.jpg"
     },
     {
-      "texto": "¿Cual sera la velocidad maxima a la que se podra circular por esta via?",
+      "texto": "¿Cuál será la velocidad máxima a la que se podrá circular por esta vía?",
       "opciones": [
         "90 km/h.",
         "100 km/h.",
         "60 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_089_p22.jpg"
     },
     {
-      "texto": "De los siguientes sistemas avanzados de ayuda a la conduccion o ADAS, ¿icual es conocido con el nombre de \"Alerta de trafico cruzado\"?",
+      "texto": "De los siguientes sistemas avanzados de ayuda a la conducción o ADAS, ¿cuál es conocido con el nombre de \"Alerta de tráfico cruzado\"?",
       "opciones": [
-        "EI \"ACT\".",
-        "EI \"LDW\".",
-        "EI \"RCTA\"."
+        "El \"ACT\".",
+        "El \"LDW\".",
+        "El \"RCTA\"."
       ],
+      "correcta": 2,
       "imagen": "../img/test_089_p23.jpg"
     },
     {
-      "texto": "En caso de emitir un aviso y no recibir respuesta por parte del conductor, ¿zque acciones Ileva a cabo el sistema ADAs\"Mantenimiento de carril o LKs\"?",
+      "texto": "En caso de emitir un aviso y no recibir respuesta por parte del conductor, ¿qué acciones lleva a cabo el sistema ADAS \"Mantenimiento de carril o LKS\"?",
       "opciones": [
-        "Detiene el vehiculo y enciende las luces de emergencia para evitar un accidente.",
-        "Detiene el vehiculo ante la presencia de un obstaculo.",
-        "Realiza una correccion en la direccion o en el sistema defrenos para que el vehiculo retorne hacia el centro del carril."
+        "Detiene el vehículo y enciende las luces de emergencia para evitar un accidente.",
+        "Detiene el vehículo ante la presencia de un obstáculo.",
+        "Realiza una corrección en la dirección o en el sistema de frenos para que el vehículo retorne hacia el centro del carril."
       ],
+      "correcta": 2,
       "imagen": "../img/test_089_p24.jpg"
     },
     {
-      "texto": "¿Esta permitido remolcar con un turismo a un vehiculo averiado por una autopista?",
+      "texto": "¿Está permitido remolcar con un turismo a un vehículo averiado por una autopista?",
       "opciones": [
-        "Si,hastaeltallermasproximo",
-        "No, debe hacerlo una gria.",
-        "Si, cuando la grua tarde mas de media hora."
+        "Sí, hasta el taller más próximo.",
+        "No, debe hacerlo una grúa.",
+        "Sí, cuando la grúa tarde más de media hora."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p25.jpg"
     },
     {
       "texto": "Cuando aumente la velocidad, debe...",
       "opciones": [
         "mirar a lo lejos una distancia mayor.",
-        "mirar hacia atras con menor frecuencia.",
-        "aumentar la vision por los laterales."
-      ]
+        "mirar hacia atrás con menor frecuencia.",
+        "aumentar la visión por los laterales."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "A la vista de la imagen, ¿A que velocidad como maximo podremos circular en esta via de sentido uinico con un solo carril?",
+      "texto": "A la vista de la imagen, ¿a qué velocidad como máximo podremos circular en esta vía de sentido único con un solo carril?",
       "opciones": [
         "20 km/h.",
         "30 km/h.",
         "50 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p27.jpg"
     },
     {
-      "texto": "El chaleco reflectante, ¿idonde lo llevaremos?",
+      "texto": "El chaleco reflectante, ¿dónde lo llevaremos?",
       "opciones": [
-        "Dentro del habitaculo del vehiculo para poder ponernoslo antes de salir de el.",
+        "Dentro del habitáculo del vehículo para poder ponérnoslo antes de salir de él.",
         "En el maletero.",
         "Es indiferente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_089_p28.jpg"
     },
     {
-      "texto": "Circula por una via y se encuentra a este agente, ¿ique indica con la bandera roja?",
+      "texto": "Circula por una vía y se encuentra a este agente, ¿qué indica con la bandera roja?",
       "opciones": [
-        "Quedebe detenerse en el lado derecho.",
-        "Quela via queda temporalmente cerrada al trafico a partir del paso de esa moto.",
-        "Quedebe extremar la atencion por la proximidad de un peligro."
+        "Que debe detenerse en el lado derecho.",
+        "Que la vía queda temporalmente cerrada al tráfico a partir del paso de esa moto.",
+        "Que debe extremar la atención por la proximidad de un peligro."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p29.jpg"
     },
     {
-      "texto": "Al adelantar en carreteras convencionales, ¿ique vehiculos podran rebasar la velocidad maxima generica en 20 km/h?",
+      "texto": "Al adelantar en carreteras convencionales, ¿qué vehículos podrán rebasar la velocidad máxima genérica en 20 km/h?",
       "opciones": [
         "Turismos.",
-        "Ninguno",
-        "Turismos, motocicletas y autocaravanas con MMA inferior a 3500 kg."
+        "Ninguno.",
+        "Turismos, motocicletas y autocaravanas con MMA inferior a 3.500 kg."
       ],
+      "correcta": 1,
       "imagen": "../img/test_089_p30.jpg"
     }
   ]

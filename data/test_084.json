@@ -6,262 +6,292 @@
       "texto": "¿Debe moverse a los heridos?",
       "opciones": [
         "No, salvo que sea imprescindible por su seguridad.",
-        "No, en ningun caso.",
-        "Si,cuando sus lesiones no songraves."
-      ]
-    },
-    {
-      "texto": "Los agentes de la Autoridad de Trafico, ¿icuando podran proceder a la inmovilizacion de una motocicleta?",
-      "opciones": [
-        "Cuandosu conductorno llevepuesto el casco.",
-        "Cuando el pasajero dela misma circule sin el casco.",
-        "En ningun caso."
-      ]
-    },
-    {
-      "texto": "¿Esta permitido adelantar en un tuinel?",
-      "opciones": [
-        "Si, excepto a los vehiculos de grandes dimensiones.",
-        "Si, cuando exista mas de un carril para cada sentido de circulacion.",
-        "No, independientemente del numero de carriles."
+        "No, en ningún caso.",
+        "Sí, cuando sus lesiones no son graves."
       ],
+      "correcta": 0
+    },
+    {
+      "texto": "Los agentes de la Autoridad de Tráfico, ¿cuándo podrán proceder a la inmovilización de una motocicleta?",
+      "opciones": [
+        "Cuando su conductor no lleve puesto el casco.",
+        "Cuando el pasajero de la misma circule sin el casco.",
+        "En ningún caso."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "¿Está permitido adelantar en un túnel?",
+      "opciones": [
+        "Sí, excepto a los vehículos de grandes dimensiones.",
+        "Sí, cuando exista más de un carril para cada sentido de circulación.",
+        "No, independientemente del número de carriles."
+      ],
+      "correcta": 1,
       "imagen": "../img/test_084_p03.jpg"
     },
     {
-      "texto": "Esta senal indica...",
+      "texto": "Esta señal indica...",
       "opciones": [
         "el final de una autopista.",
-        "el principio de una autovia.",
+        "el principio de una autovía.",
         "el principio de una autopista."
       ],
+      "correcta": 2,
       "imagen": "../img/test_084_p04.jpg"
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
         "Subida de fuerte pendiente.",
         "Bajada de fuerte pendiente.",
         "Pendiente deslizante."
       ],
+      "correcta": 1,
       "imagen": "../img/test_084_p05.jpg"
     },
     {
-      "texto": "En un tramo de via que tiene viviendas con acceso inmediato a la calzada, ¿ise debe tomar alguna precaucion?",
+      "texto": "En un tramo de vía que tiene viviendas con acceso inmediato a la calzada, ¿se debe tomar alguna precaución?",
       "opciones": [
         "No.",
-        "Si, moderar la velocidad.",
-        "Si, realizar senales acusticas para advertirde la presencia del vehiculo."
+        "Sí, moderar la velocidad.",
+        "Sí, realizar señales acústicas para advertir de la presencia del vehículo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_084_p06.jpg"
     },
     {
-      "texto": "Una enfermedad respiratoria sin el debido tratamiento, ¿ique puede causar en el conductor?",
+      "texto": "Una enfermedad respiratoria sin el debido tratamiento, ¿qué puede causar en el conductor?",
       "opciones": [
-        "Perdida de atencion y de concentracion.",
-        "Aumento de la concentracion.",
-        "Aumento de la atencion."
-      ]
+        "Pérdida de atención y de concentración.",
+        "Aumento de la concentración.",
+        "Aumento de la atención."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Si al llegar a una interseccion se acerca un grupo de ciclistas por su lado izquierdo, ¿iquien tendra prioridad de paso?",
+      "texto": "Si al llegar a una intersección se acerca un grupo de ciclistas por su lado izquierdo, ¿quién tendrá prioridad de paso?",
       "opciones": [
-        "Yo en aplicacion de la norma general.",
+        "Yo en aplicación de la norma general.",
         "El grupo de ciclistas.",
-        "El que llegue primero a la interseccion."
+        "El que llegue primero a la intersección."
       ],
+      "correcta": 0,
       "imagen": "../img/test_084_p08.jpg"
     },
     {
-      "texto": "Esta senal de peligro, ¿ique indica?",
+      "texto": "Esta señal de peligro, ¿qué indica?",
       "opciones": [
-        "Paso a nivel con barreras conmas de una via ferrea.",
-        "Paso a nivel sin barreras con mas de una via ferrea.",
-        "Paso a nivel con barreras de una via ferrea."
+        "Paso a nivel con barreras con más de una vía férrea.",
+        "Paso a nivel sin barreras con más de una vía férrea.",
+        "Paso a nivel con barreras de una vía férrea."
       ],
+      "correcta": 1,
       "imagen": "../img/test_084_p09.jpg"
     },
     {
-      "texto": "La distancia de seguridad con el vehiculo que circula delante depende de...",
+      "texto": "La distancia de seguridad con el vehículo que circula delante depende de...",
       "opciones": [
-        "el tipo de vehiculo que circula delante.",
+        "el tipo de vehículo que circula delante.",
         "la velocidad y las condiciones de adherencia y de frenado.",
-        "la densidad del trafico."
+        "la densidad del tráfico."
       ],
+      "correcta": 1,
       "imagen": "../img/test_084_p10.jpg"
     },
     {
-      "texto": "Los efectos que provoca el LsD en el comportamiento del conductor...",
+      "texto": "Los efectos que provoca el LSD en el comportamiento del conductor...",
       "opciones": [
-        "proporcionan un estado de relajacion.",
-        "pueden llegar a prolongarse de10 a 12 horas desde suconsumo.",
-        "sonmuybreves,peropueden reaparecerporsorpresa algun tiempodespues."
-      ]
+        "proporcionan un estado de relajación.",
+        "pueden llegar a prolongarse de 10 a 12 horas desde su consumo.",
+        "son muy breves, pero pueden reaparecer por sorpresa algún tiempo después."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿En cuanto tiempo se alcanzara el grado maximo de alcoholemia en sangre?",
+      "texto": "¿En cuánto tiempo se alcanzará el grado máximo de alcoholemia en sangre?",
       "opciones": [
-        "Dos horas despues de habertomado la ultima copa.",
-        "Entre 30y 90 minutos despues de habertomado la ultima copa.",
-        "Media hora despues de haber tomadola ultima copa."
+        "Dos horas después de haber tomado la última copa.",
+        "Entre 30 y 90 minutos después de haber tomado la última copa.",
+        "Media hora después de haber tomado la última copa."
       ],
+      "correcta": 1,
       "imagen": "../img/test_084_p12.jpg"
     },
     {
-      "texto": "En los vehiculos de anchura inferior a un metro, la carga no debe sobresalir por la parte posterior mas de...",
+      "texto": "En los vehículos de anchura inferior a un metro, la carga no debe sobresalir por la parte posterior más de...",
       "opciones": [
         "0,50 metros.",
-        "0,25metros.",
+        "0,25 metros.",
         "0,40 metros."
       ],
+      "correcta": 1,
       "imagen": "../img/test_084_p13.jpg"
     },
     {
-      "texto": "En esta interseccion, los conductores estan obligados a detenerse...",
+      "texto": "En esta intersección, los conductores están obligados a detenerse...",
       "opciones": [
-        "ante la linea transversal, sin rebasarla.",
-        "junto a la senal de stop.",
-        "inmediatamente despues de la linea transversal."
+        "ante la línea transversal, sin rebasarla.",
+        "junto a la señal de stop.",
+        "inmediatamente después de la línea transversal."
       ],
+      "correcta": 0,
       "imagen": "../img/test_084_p14.jpg"
     },
     {
-      "texto": "En esta via con tres calzadas separadas, ¿ipor que calzada debe circular?",
+      "texto": "En esta vía con tres calzadas separadas, ¿por qué calzada debe circular?",
       "opciones": [
-        "Solopor la calzadade la derecha.",
-        "Por la calzada de la derecha y por la central cuando haya senales que asi me lo permiten.",
-        "Soloporla calzada central."
+        "Solo por la calzada de la derecha.",
+        "Por la calzada de la derecha y por la central cuando haya señales que así me lo permiten.",
+        "Solo por la calzada central."
       ],
+      "correcta": 1,
       "imagen": "../img/test_084_p15.jpg"
     },
     {
       "texto": "Si circulamos con el filtro del aire sucio...",
       "opciones": [
-        "Elmotorproducira mas emisiones contaminantesal aire.",
-        "El motor consumira menos combustible y funcionara mejor.",
-        "La mezcla de aire/gasolina sera pobre."
+        "El motor producirá más emisiones contaminantes al aire.",
+        "El motor consumirá menos combustible y funcionará mejor.",
+        "La mezcla de aire/gasolina será pobre."
       ],
+      "correcta": 0,
       "imagen": "../img/test_084_p16.jpg"
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
         "Estacionamiento prohibido hacia el lado derecho.",
-        "Estacionamiento prohibido hacia ambos lados de la senal.",
+        "Estacionamiento prohibido hacia ambos lados de la señal.",
         "Estacionamiento prohibido hacia el lado izquierdo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_084_p17.jpg"
     },
     {
-      "texto": "Si circulamos a velocidad anormalmente reducida por una autopista, ¿ique debemos hacer?",
+      "texto": "Si circulamos a velocidad anormalmente reducida por una autopista, ¿qué debemos hacer?",
       "opciones": [
-        "Salir por la proxima salida.",
-        "Llegarhasta nuestro destino con precaucion.",
+        "Salir por la próxima salida.",
+        "Llegar hasta nuestro destino con precaución.",
         "Seguir circulando sin cambiarnos de carril."
       ],
+      "correcta": 0,
       "imagen": "../img/test_084_p18.jpg"
     },
     {
-      "texto": "El triangulo blanco pintado en la calzada, ¿ique significa?",
+      "texto": "El triángulo blanco pintado en la calzada, ¿qué significa?",
       "opciones": [
-        "Quelos conductores tienen preferencia de paso al cambiar de carril.",
-        "Que es obligatorio ceder el paso a los vehiculos que se aproximen por el carril derecho cuando cambie de carril.",
-        "Queel conductorestaobligadoa detenerel vehiculoentodocaso."
+        "Que los conductores tienen preferencia de paso al cambiar de carril.",
+        "Que es obligatorio ceder el paso a los vehículos que se aproximen por el carril derecho cuando cambie de carril.",
+        "Que el conductor está obligado a detener el vehículo en todo caso."
       ],
+      "correcta": 1,
       "imagen": "../img/test_084_p19.jpg"
     },
     {
-      "texto": "A la vista del grafico, ¿zes obligatorio adelantar al tranvia por la derecha?",
+      "texto": "A la vista del gráfico, ¿es obligatorio adelantar al tranvía por la derecha?",
       "opciones": [
-        "Si,entodocaso.",
+        "Sí, en todo caso.",
         "No, se le puede adelantar por la derecha o por la izquierda.",
-        "No,se ledebe adelantarpor la izquierda."
+        "No, se le debe adelantar por la izquierda."
       ],
+      "correcta": 1,
       "imagen": "../img/test_084_p20.jpg"
     },
     {
-      "texto": "Si debido a un pinchazo usted se ve obligado a circular con una rueda de uso temporal, ¿ique debera tener en cuenta?",
+      "texto": "Si debido a un pinchazo usted se ve obligado a circular con una rueda de uso temporal, ¿qué deberá tener en cuenta?",
       "opciones": [
-        "Que no debe circular a mas de 80 kilometros por hora.",
-        "Que no se debe circular mas de 80 kilometros con ella.",
-        "Que no se debe circular amas de 50 kilometros por hora."
+        "Que no debe circular a más de 80 kilómetros por hora.",
+        "Que no se debe circular más de 80 kilómetros con ella.",
+        "Que no se debe circular a más de 50 kilómetros por hora."
       ],
+      "correcta": 0,
       "imagen": "../img/test_084_p21.jpg"
     },
     {
-      "texto": "Para girar a la izquierda, es obligatorio aproximarse al borde izquierdo de la calzada en las vias...",
+      "texto": "Para girar a la izquierda, es obligatorio aproximarse al borde izquierdo de la calzada en las vías...",
       "opciones": [
-        "de un solo sentido de circulacion.",
-        "con mas de un carril para uno de los sentidos de circulacion.",
+        "de un solo sentido de circulación.",
+        "con más de un carril para uno de los sentidos de circulación.",
         "de doble sentido de circulacion."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Esta senalizacion recomienda circular a 70 kilometros por hora...",
+      "texto": "Esta señalización recomienda circular a 70 kilómetros por hora...",
       "opciones": [
         "en cualquier caso.",
-        "solo cuando esta lloviendo.",
-        "solo cuando las condiciones meteorologicas y ambientales sean favorables."
+        "solo cuando está lloviendo.",
+        "solo cuando las condiciones meteorológicas y ambientales sean favorables."
       ],
+      "correcta": 2,
       "imagen": "../img/test_084_p23.jpg"
     },
     {
-      "texto": "En caso de accidente, el seguro obligatorio de un vehiculo, ¿icubre los danos producidos a la parte contraria?",
+      "texto": "En caso de accidente, el seguro obligatorio de un vehículo, ¿cubre los daños producidos a la parte contraria?",
       "opciones": [
-        "Si, siempre, pues asi se contempla en la poliza del seguro obligatorio.",
-        "Si, cuando su conductor resulta civilmente responsable del accidente.",
-        "Si, en todo caso, si los gastos no superan los limites establecidos enlapoliza."
-      ]
+        "Sí, siempre, pues así se contempla en la póliza del seguro obligatorio.",
+        "Sí, cuando su conductor resulta civilmente responsable del accidente.",
+        "Sí, en todo caso, si los gastos no superan los límites establecidos en la póliza."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Antes de cambiar de carril, ¿icomo debe avisar?",
+      "texto": "Antes de cambiar de carril, ¿cómo debe avisar?",
       "opciones": [
-        "Con los indicadores de direccion.",
+        "Con los indicadores de dirección.",
         "Con el claxon.",
         "Con las luces de frenado."
       ],
+      "correcta": 0,
       "imagen": "../img/test_084_p25.jpg"
     },
     {
-      "texto": "¿Que indica la senal?",
+      "texto": "¿Qué indica la señal?",
       "opciones": [
         "Que yo tengo preferencia sobre los que circulan en sentido contrario.",
-        "Que tienen preferencia los vehiculos que circulan en sentido contrario.",
-        "Aconsejacederelpaso"
+        "Que tienen preferencia los vehículos que circulan en sentido contrario.",
+        "Aconseja ceder el paso."
       ],
+      "correcta": 0,
       "imagen": "../img/test_084_p26.jpg"
     },
     {
-      "texto": "¿Qué debe hacer un conductor que tiene sueno?",
+      "texto": "¿Qué debe hacer un conductor que tiene sueño?",
       "opciones": [
         "Tomar alguna bebida refrescante.",
         "Descansar lo antes posible en un lugar adecuado.",
-        "Continuar la marcha y descansar cuando pasen 2 horas o 200 kilometros."
-      ]
+        "Continuar la marcha y descansar cuando pasen 2 horas o 200 kilómetros."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
         "Que el itinerario que sigue el ramal de la derecha tiene prioridad.",
         "Que el itinerario que sigue el ramal de la izquierda tiene prioridad.",
         "Que el itinerario que sigue de frente tiene prioridad."
       ],
+      "correcta": 0,
       "imagen": "../img/test_084_p28.jpg"
     },
     {
-      "texto": "¿Que indica esta flecha?",
+      "texto": "¿Qué indica esta flecha?",
       "opciones": [
         "Retorno.",
         "Fin de carril."
       ],
+      "correcta": 0,
       "imagen": "../img/test_084_p29.jpg"
     },
     {
-      "texto": "Para evitar los atropellos, ¿ique deben hacer los conductores?",
+      "texto": "Para evitar los atropellos, ¿qué deben hacer los conductores?",
       "opciones": [
         "Indicar a los peatones cuando deben cruzar.",
         "Usar el claxon cuando se acerquen a un paso para peatones.",
-        "Respetarla prioridaddepasode lospeatones."
+        "Respetar la prioridad de paso de los peatones."
       ],
+      "correcta": 2,
       "imagen": "../img/test_084_p30.jpg"
     }
   ]

@@ -3,263 +3,293 @@
   "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En un paso de peatones, ¿zhay que hacer senales a los peatones para que crucen la calzada?",
+      "texto": "En un paso de peatones, ¿hay que hacer señales a los peatones para que crucen la calzada?",
       "opciones": [
-        "Si, pero solo si van a cruzar por él.",
-        "No,porque los demas conductores pueden no haberse dado cuenta de supresencia."
+        "Sí, pero solo si van a cruzar por él.",
+        "No, porque los demás conductores pueden no haberse dado cuenta de su presencia."
       ],
+      "correcta": 1,
       "imagen": "../img/test_090_p01.jpg"
     },
     {
-      "texto": "¿zcomo subiremos una pendiente ascendente que este nevada?",
+      "texto": "¿Cómo subiremos una pendiente ascendente que esté nevada?",
       "opciones": [
-        "De la forma mas rapida posible,porque si el vehiculo se cala patinara hacia atras.",
-        "Conla marcha mas cortaposibleacelerando almaximo.",
-        "Con suavidad y conuna velocidad sostenida."
+        "De la forma más rápida posible, porque si el vehículo se cala patinará hacia atrás.",
+        "Con la marcha más corta posible acelerando al máximo.",
+        "Con suavidad y con una velocidad sostenida."
       ],
+      "correcta": 2,
       "imagen": "../img/test_090_p02.jpg"
     },
     {
-      "texto": "En un tramo de gran pendiente en el que sea muy dificil o imposible el paso simultaneo de dos vehiculos que circulen en sentido contrario, ¿ique vehiculo tendra preferencia de paso?",
+      "texto": "En un tramo de gran pendiente en el que sea muy difícil o imposible el paso simultáneo de dos vehículos que circulen en sentido contrario, ¿qué vehículo tendrá preferencia de paso?",
       "opciones": [
-        "El vehiculo que circula en sentido ascendente.",
-        "El vehiculo que circula en sentido descendente.",
+        "El vehículo que circula en sentido ascendente.",
+        "El vehículo que circula en sentido descendente.",
         "El que tenga mayor dificultad de paso."
       ],
+      "correcta": 0,
       "imagen": "../img/test_090_p03.jpg"
     },
     {
-      "texto": "Estas senales indican peligro por...",
+      "texto": "Estas señales indican peligro por...",
       "opciones": [
-        "aproximaciondeunpasoanivelsinbarreras.",
-        "aproximaciondeunpaso anivel conbarreras.",
-        "situacion inmediata de un paso a nivel sin barreras."
+        "aproximación de un paso a nivel sin barreras.",
+        "aproximación de un paso a nivel con barreras.",
+        "situación inmediata de un paso a nivel sin barreras."
       ],
+      "correcta": 0,
       "imagen": "../img/test_090_p04.jpg"
     },
     {
-      "texto": "En una via sin pavimentar, ¿za que velocidad maxima puede circular un turismo?",
+      "texto": "En una vía sin pavimentar, ¿a qué velocidad máxima puede circular un turismo?",
       "opciones": [
         "A 90 km/h.",
         "A 50 km/h.",
         "A 30 km/h."
       ],
+      "correcta": 2,
       "imagen": "../img/test_090_p05.jpg"
     },
     {
-      "texto": "De noche, ¿zcomo se debe senalizar la carga que sobresale por delante y por detras?",
+      "texto": "De noche, ¿cómo se debe señalizar la carga que sobresale por delante y por detrás?",
       "opciones": [
-        "Solamente con el panel de franjas oblicuas rojas yblancas",
-        "Con una luz blanca por delante, una luz roja por detras y el panel de franjas oblicuas rojas y blancas.",
-        "Con un catadioptrico blanco por delante y uno rojo por detras."
-      ]
+        "Solamente con el panel de franjas oblicuas rojas y blancas.",
+        "Con una luz blanca por delante, una luz roja por detrás y el panel de franjas oblicuas rojas y blancas.",
+        "Con un catadióptrico blanco por delante y uno rojo por detrás."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "A la hora de determinar la distancia de seguridad con el vehiculo que circula delante..",
+      "texto": "A la hora de determinar la distancia de seguridad con el vehículo que circula delante...",
       "opciones": [
         "debe tener en cuenta la velocidad, la visibilidad y el estado de la calzada.",
-        "debe tener en cuenta las caracteristicas del vehiculo que circula delante.",
-        "debetener en cuenta la velocidad, exclusivamente."
+        "debe tener en cuenta las características del vehículo que circula delante.",
+        "debe tener en cuenta la velocidad, exclusivamente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_090_p07.jpg"
     },
     {
-      "texto": "La senal de la derecha, ¿zque indica?",
+      "texto": "La señal de la derecha, ¿qué indica?",
       "opciones": [
-        "Obliga a detenermeantes de la senal.",
+        "Obliga a detenerme antes de la señal.",
         "Avisa de un peligro.",
-        "Obliga a ceder el paso a todos los vehiculos."
+        "Obliga a ceder el paso a todos los vehículos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_090_p08.jpg"
     },
     {
       "texto": "Se considera conductor a la persona...",
       "opciones": [
         "que conduce a pie un ciclo o ciclomotor de dos ruedas.",
-        "que maneja el volante de un vehiculo cuando circula en practicas.",
-        "que maneja el mecanismo de direccion o va al mando de un vehiculo."
-      ]
+        "que maneja el volante de un vehículo cuando circula en prácticas.",
+        "que maneja el mecanismo de dirección o va al mando de un vehículo."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Se considera que un estacionamiento obstaculiza gravemente la circulacion cuando se realiza en..",
+      "texto": "Se considera que un estacionamiento obstaculiza gravemente la circulación cuando se realiza en...",
       "opciones": [
-        "una zona senalizadapara uso exclusivo de minusvalidos.",
+        "una zona señalizada para uso exclusivo de minusválidos.",
         "doble fila.",
         "medio de la calzada."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Para evitar ruidos excesivos e innecesarios en la conduccion, se debe...",
+      "texto": "Para evitar ruidos excesivos e innecesarios en la conducción, se debe...",
       "opciones": [
-        "cuidar de que el tubo de escape y el silenciador del vehiculo esten siempre en buen estado.",
+        "cuidar de que el tubo de escape y el silenciador del vehículo estén siempre en buen estado.",
         "utilizar el claxon frecuentemente pero sin producir ruidos estridentes o notas musicales.",
         "circular con el tubo de escape libre."
       ],
+      "correcta": 0,
       "imagen": "../img/test_090_p11.jpg"
     },
     {
-      "texto": "La senal triangular indica que se debe...",
+      "texto": "La señal triangular indica que se debe...",
       "opciones": [
-        "detenerel vehiculoycederelpaso.",
+        "detener el vehículo y ceder el paso.",
         "ceder el paso cuando sea necesario.",
-        "acelerarpara aumentar la velocidad."
+        "acelerar para aumentar la velocidad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_090_p12.jpg"
     },
     {
-      "texto": "¿Que haremos ante un fallo de los frenos?",
+      "texto": "¿Qué haremos ante un fallo de los frenos?",
       "opciones": [
-        "Tirar de la palanca del freno de estacionamientobruscamente.",
-        "Chocar gradualmente contra cualquier objeto rigido de la via para detenerse cuanto antes.",
+        "Tirar de la palanca del freno de estacionamiento bruscamente.",
+        "Chocar gradualmente contra cualquier objeto rígido de la vía para detenerse cuanto antes.",
         "Bombear el pedal de freno, por si alguno de los circuitos conserva capacidad de frenada."
       ],
+      "correcta": 2,
       "imagen": "../img/test_090_p13.jpg"
     },
     {
-      "texto": "La furgoneta esta en doble fila, ¿zpuede hacer una parada para descargar?",
+      "texto": "La furgoneta está en doble fila, ¿puede hacer una parada para descargar?",
       "opciones": [
-        "No, porque esta prohibido.",
-        "Si, cuando no hay un lugar de descarga cerca.",
-        "Si, el tiempo que quiera."
+        "No, porque está prohibido.",
+        "Sí, cuando no hay un lugar de descarga cerca.",
+        "Sí, el tiempo que quiera."
       ],
+      "correcta": 0,
       "imagen": "../img/test_090_p14.jpg"
     },
     {
-      "texto": "En la proxima interseccion nos encontramos con la senal de la imagen y con un coche que se nos aproxima por la derecha, ¿iquien tendra prioridad de paso?",
+      "texto": "En la próxima intersección nos encontramos con la señal de la imagen y con un coche que se nos aproxima por la derecha, ¿quién tendrá prioridad de paso?",
       "opciones": [
-        "El vehiculo que se aproxima por la derecha.",
-        "El que encuentra la senal.",
-        "Se aplicara la norma general de prioridad."
+        "El vehículo que se aproxima por la derecha.",
+        "El que encuentra la señal.",
+        "Se aplicará la norma general de prioridad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_090_p15.jpg"
     },
     {
-      "texto": "¿Que significa esta senal?",
+      "texto": "¿Qué significa esta señal?",
       "opciones": [
-        "Prohibicion de entrar en el paso estrecho si al hacerlo obligo al que se acerca de frente a detenerse.",
-        "Via de dos sentidos.",
-        "Quetengo prioridad depaso en este estrechamiento."
+        "Prohibición de entrar en el paso estrecho si al hacerlo obligo al que se acerca de frente a detenerse.",
+        "Vía de dos sentidos.",
+        "Que tengo prioridad de paso en este estrechamiento."
       ],
+      "correcta": 0,
       "imagen": "../img/test_090_p16.jpg"
     },
     {
-      "texto": "¿Que situaciones de trafico favorecen la aparicion de la somnolencia?",
+      "texto": "¿Qué situaciones de tráfico favorecen la aparición de la somnolencia?",
       "opciones": [
-        "Las monotonas.",
+        "Las monótonas.",
         "Las que tienen cambios en el entorno con mucha frecuencia.",
-        "La conduccion en zona urbana con bastante trafico."
-      ]
-    },
-    {
-      "texto": "¿Podemos estacionarendoblefila?",
-      "opciones": [
-        "Si, si no existe sitio en las inmediaciones.",
-        "No,esta prohibido.",
-        "Solo por tiempo inferior a 2 minutos y senalizandolo con la luz de emergencia."
-      ]
-    },
-    {
-      "texto": "Si tiene problemas de sueno, debe tener en cuenta que...",
-      "opciones": [
-        "debe dormir mas horas para conducir.",
-        "no seencuentra enperfectas condicionespara conducir.",
-        "es recomendable tomar sustancias estimulantes en abundancia para mantenerse despierto."
-      ]
-    },
-    {
-      "texto": "Los psicofarmacos, ¿zpueden alterar las capacidades para conducir con seguridad?",
-      "opciones": [
-        "No,excepto que ademas se ingiera alcohol.",
-        "Si, gravemente.",
-        "No, porque no tienen influencia sobre la conduccion."
-      ]
-    },
-    {
-      "texto": "¿En cuanto tiempo se alcanzara el grado maximo de alcoholemia en sangre?",
-      "opciones": [
-        "Dos horas despues de haber tomado la ultima copa.",
-        "Entre30 y90minutos despues dehabertomadolaultima copa.",
-        "Mediahora despuesde habertomado la uiltima copa."
+        "La conducción en zona urbana con bastante tráfico."
       ],
+      "correcta": 0
+    },
+    {
+      "texto": "¿Podemos estacionar en doble fila?",
+      "opciones": [
+        "Sí, si no existe sitio en las inmediaciones.",
+        "No, está prohibido.",
+        "Solo por tiempo inferior a 2 minutos y señalizándolo con la luz de emergencia."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Si tiene problemas de sueño, debe tener en cuenta que...",
+      "opciones": [
+        "debe dormir más horas para conducir.",
+        "no se encuentra en perfectas condiciones para conducir.",
+        "es recomendable tomar sustancias estimulantes en abundancia para mantenerse despierto."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Los psicofármacos, ¿pueden alterar las capacidades para conducir con seguridad?",
+      "opciones": [
+        "No, excepto que además se ingiera alcohol.",
+        "Sí, gravemente.",
+        "No, porque no tienen influencia sobre la conducción."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "¿En cuánto tiempo se alcanzará el grado máximo de alcoholemia en sangre?",
+      "opciones": [
+        "Dos horas después de haber tomado la última copa.",
+        "Entre 30 y 90 minutos después de haber tomado la última copa.",
+        "Media hora después de haber tomado la última copa."
+      ],
+      "correcta": 1,
       "imagen": "../img/test_090_p21.jpg"
     },
     {
-      "texto": "Leer un periodico o mirar un mapa mientras se circula, ¿ies un riesgo para la conduccion?",
+      "texto": "Leer un periódico o mirar un mapa mientras se circula, ¿es un riesgo para la conducción?",
       "opciones": [
         "Sí.",
-        "Leer un periodico si, pero mirar un mapa no.",
-        "Unicamente si se aparta la mirada de la carretera mas de dos segundos."
-      ]
+        "Leer un periódico si, pero mirar un mapa no.",
+        "Únicamente si se aparta la mirada de la carretera más de dos segundos."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Salida en autopista, autovia o via para automoviles a 300 metros y a la derecha.",
+        "Salida en autopista, autovía o vía para automóviles a 300 metros y a la derecha.",
         "Salida a 300 metros a la izquierda.",
-        "Pasoa nivela300metros."
+        "Paso a nivel a 300 metros."
       ],
+      "correcta": 0,
       "imagen": "../img/test_090_p23.jpg"
     },
     {
-      "texto": "El vehiculo rojo, ¿zdonde se detendra para realizar el SToP?",
+      "texto": "El vehículo rojo, ¿dónde se detendrá para realizar el STOP?",
       "opciones": [
-        "Justo antes de llegara la interseccion.",
-        "Antes de la interseccion sinpisar la marca vial deSTOP.",
-        "Antela lineadedetencion."
+        "Justo antes de llegar a la intersección.",
+        "Antes de la intersección sin pisar la marca vial de STOP.",
+        "Ante la línea de detención."
       ],
+      "correcta": 2,
       "imagen": "../img/test_090_p24.jpg"
     },
     {
-      "texto": "En caso de ser obligatorio el uso de cadenas, ¿ien que ruedas deberan instalarse?",
+      "texto": "En caso de ser obligatorio el uso de cadenas, ¿en qué ruedas deberán instalarse?",
       "opciones": [
         "En las ruedas delanteras siempre.",
         "En las ruedas directrices.",
         "En las ruedas motrices."
       ],
+      "correcta": 2,
       "imagen": "../img/test_090_p25.jpg"
     },
     {
-      "texto": "Si esta siguiendo un tratamiento con medicamentos, ¿ique precauciones debe adoptar?",
+      "texto": "Si está siguiendo un tratamiento con medicamentos, ¿qué precauciones debe adoptar?",
       "opciones": [
-        "No tomarlos durante la conduccion.",
+        "No tomarlos durante la conducción.",
         "Reducir la dosis antes de conducir.",
-        "Consultaralmedicoofarmaceutico los efectospara la conduccion."
-      ]
+        "Consultar al médico o farmacéutico los efectos para la conducción."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Esta linea discontinua, ¿ique indica?",
+      "texto": "Esta línea discontinua, ¿qué indica?",
       "opciones": [
         "Un carril especial.",
-        "La cercania a una linea longitudinal continua.",
+        "La cercanía a una línea longitudinal continua.",
         "Un carril reversible."
       ],
+      "correcta": 1,
       "imagen": "../img/test_090_p27.jpg"
     },
     {
       "texto": "¿Podremos estacionar en un carril reservado para autobuses?",
       "opciones": [
         "No.",
-        "Si,podremospararpero no estacionar.",
-        "Podremospararperomenosde2minutos."
+        "Sí, podremos parar pero no estacionar.",
+        "Podremos parar pero menos de 2 minutos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_090_p28.jpg"
     },
     {
-      "texto": "Cuando encuentre estas senales, ¿ique debe hacer?",
+      "texto": "Cuando encuentre estas señales, ¿qué debe hacer?",
       "opciones": [
-        "Circular por el lado que indica la flecha, pudiendo pasar por el lado izquierdo si observa que no se aproxima ningun vehiculo en sentido contrario.",
-        "Obedecer la senial mas restrictiva.",
-        "Pasar obligatoriamente por el lado que indica la flecha, porque hacia el lado izquierdo la entrada esta prohibida."
+        "Circular por el lado que indica la flecha, pudiendo pasar por el lado izquierdo si observa que no se aproxima ningún vehículo en sentido contrario.",
+        "Obedecer la señal más restrictiva.",
+        "Pasar obligatoriamente por el lado que indica la flecha, porque hacia el lado izquierdo la entrada está prohibida."
       ],
+      "correcta": 2,
       "imagen": "../img/test_090_p29.jpg"
     },
     {
-      "texto": "Cuando se adelante a vehiculos de traccion animal, la separacion lateral...",
+      "texto": "Cuando se adelante a vehículos de tracción animal, la separación lateral...",
       "opciones": [
         "no debe ser inferior a 1,5 metros, al adelantar tanto dentro como fuera de poblado.",
         "debe ser, al menos, de 1,5 metros al adelantar solamente fuera de poblado.",
-        "debe ser siempre proporcional a la anchura y caracteristicas de la via."
+        "debe ser siempre proporcional a la anchura y características de la vía."
       ],
+      "correcta": 0,
       "imagen": "../img/test_090_p30.jpg"
     }
   ]

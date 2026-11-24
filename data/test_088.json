@@ -3,256 +3,285 @@
   "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Esta senal...",
+      "texto": "Esta señal...",
       "opciones": [
-        "obliga a seguir una de las direcciones y sentidos que senalan las flechas.",
-        "prohibe continuar de frente o realizar un cambio de direccion a la derecha.",
-        "aconseja seguir una de las direcciones y sentidos que senalan las flechas."
+        "obliga a seguir una de las direcciones y sentidos que señalan las flechas.",
+        "prohíbe continuar de frente o realizar un cambio de dirección a la derecha.",
+        "aconseja seguir una de las direcciones y sentidos que señalan las flechas."
       ],
+      "correcta": 0,
       "imagen": "../img/test_088_p01.jpg"
     },
     {
-      "texto": "¿Se podra efectuar un cambio de sentido antes de la curva?",
+      "texto": "¿Se podrá efectuar un cambio de sentido antes de la curva?",
       "opciones": [
-        "Si, si tengo suficiente visibilidad.",
+        "Sí, si tengo suficiente visibilidad.",
         "No, por ser una curva sin visibilidad.",
-        "No,al existir la senal queprohibeadelantar."
+        "No, al existir la señal que prohíbe adelantar."
       ],
+      "correcta": 0,
       "imagen": "../img/test_088_p02.jpg"
     },
     {
-      "texto": "El conductor de un turismo, ¿zdebe llevar el cinturon de seguridad si el trayecto es corto?",
+      "texto": "El conductor de un turismo, ¿debe llevar el cinturón de seguridad si el trayecto es corto?",
       "opciones": [
-        "Si, siempre.",
-        "No, si circula en vias urbanas.",
+        "Sí, siempre.",
+        "No, si circula en vías urbanas.",
         "No, si realiza operaciones de carga y descarga a corta distancia."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Circula con su turismo por el arcen detras del tractor para facilitar el adelantamiento a un camion.Es correcto?",
+      "texto": "Circula con su turismo por el arcén detrás del tractor para facilitar el adelantamiento a un camión. ¿Es correcto?",
       "opciones": [
-        "Si, si el arcen fuera mas ancho.",
+        "Sí, si el arcén fuera más ancho.",
         "No."
       ],
+      "correcta": 1,
       "imagen": "../img/test_088_p04.jpg"
     },
     {
-      "texto": "¿Que separacion lateral deberemos dejar al adelantar a un peaton por una carretera convencional?",
+      "texto": "¿Qué separación lateral deberemos dejar al adelantar a un peatón por una carretera convencional?",
       "opciones": [
-        "1,5 metros como minimo.",
-        "La proporcional a la anchura y caracteristicas de la calzada.",
-        "1metro como maximo."
+        "1,5 metros como mínimo.",
+        "La proporcional a la anchura y características de la calzada.",
+        "1 metro como máximo."
       ],
+      "correcta": 0,
       "imagen": "../img/test_088_p05.jpg"
     },
     {
-      "texto": "Los ciclomotores, ¿zpueden circular por el arcen en columna de a dos?",
+      "texto": "Los ciclomotores, ¿pueden circular por el arcén en columna de a dos?",
       "opciones": [
         "No.",
-        "Si,de forma excepcional cuando el arcen sea transitable y suficiente.",
-        "Si, siempre."
-      ]
+        "Sí, de forma excepcional cuando el arcén sea transitable y suficiente.",
+        "Sí, siempre."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Esta senal prohibe...",
+      "texto": "Esta señal prohíbe...",
       "opciones": [
-        "estacionar,peropermiteparar.",
+        "estacionar, pero permite parar.",
         "parar y estacionar.",
-        "parar,peropermiteestacionar."
+        "parar, pero permite estacionar."
       ],
+      "correcta": 1,
       "imagen": "../img/test_088_p07.jpg"
     },
     {
-      "texto": "Si va a efectuar un giro en una interseccion, ¿icomo debe avisar a los demas conductores?",
+      "texto": "Si va a efectuar un giro en una intersección, ¿cómo debe avisar a los demás conductores?",
       "opciones": [
-        "Unicamente con los indicadores de direccion.",
-        "Con los indicadores de direccion o con el brazo.",
+        "Únicamente con los indicadores de dirección.",
+        "Con los indicadores de dirección o con el brazo.",
         "Con el brazo o con el claxon."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Pueden realizarle una prueba para detectar el consumo de drogas en un control de trafico?",
+      "texto": "¿Pueden realizarle una prueba para detectar el consumo de drogas en un control de tráfico?",
       "opciones": [
-        "No,si nomuestra signos dehaber consumido drogas.",
-        "No,porque no existenpruebas para detectar el consumo de drogas.",
-        "Si, en las mismas condiciones que en las pruebas de deteccion dela alcoholemia."
-      ]
+        "No, si no muestra signos de haber consumido drogas.",
+        "No, porque no existen pruebas para detectar el consumo de drogas.",
+        "Sí, en las mismas condiciones que en las pruebas de detección de la alcoholemia."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Que le indica esta senal?",
+      "texto": "¿Qué le indica esta señal?",
       "opciones": [
-        "Congestion.",
+        "Congestión.",
         "Visibilidad reducida.",
         "Pavimento deslizante por hielo o nieve."
       ],
+      "correcta": 1,
       "imagen": "../img/test_088_p10.jpg"
     },
     {
-      "texto": "Las cargas que sobresalen por detras del vehiculo, ¿ise senalizaran con este panel?",
+      "texto": "Las cargas que sobresalen por detrás del vehículo, ¿se señalizarán con este panel?",
       "opciones": [
-        "Si, y ademas con una luz de color rojo tanto de dia como de noche.",
-        "Si, y ademas con un trapo de color rojo vivo.",
-        "Si, y ademas si es de noche con una luz de color rojo."
+        "Sí, y además con una luz de color rojo tanto de día como de noche.",
+        "Sí, y además con un trapo de color rojo vivo.",
+        "Sí, y además si es de noche con una luz de color rojo."
       ],
+      "correcta": 2,
       "imagen": "../img/test_088_p11.jpg"
     },
     {
-      "texto": "De los siguientes sistemas avanzados de ayuda a la conduccion o ADAS, ¿icual es conocido con el nombre de \"Alerta de trafico cruzado\"?",
+      "texto": "De los siguientes sistemas avanzados de ayuda a la conducción o ADAS, ¿cuál es conocido con el nombre de \"Alerta de tráfico cruzado\"?",
       "opciones": [
-        "EI\"ACT\".",
-        "EI \"LDW\".",
-        "EI\"RCTA\"."
+        "El \"ACT\".",
+        "El \"LDW\".",
+        "El \"RCTA\"."
       ],
+      "correcta": 2,
       "imagen": "../img/test_088_p12.jpg"
     },
     {
-      "texto": "La carga de un turismo, ¿icuanto puede sobresalir por detras?",
+      "texto": "La carga de un turismo, ¿cuánto puede sobresalir por detrás?",
       "opciones": [
-        "El 20% de la longitud del vehiculo.",
-        "El 15% de la longitud del vehiculo.",
-        "1/3 de la longitud del vehiculo."
+        "El 20% de la longitud del vehículo.",
+        "El 15% de la longitud del vehículo.",
+        "1/3 de la longitud del vehículo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_088_p13.jpg"
     },
     {
-      "texto": "Cuando se incorporen a la circulacion, es obligatorio facilitar la maniobra a...",
+      "texto": "Cuando se incorporen a la circulación, es obligatorio facilitar la maniobra a...",
       "opciones": [
-        "los taxis,pero unicamente en poblado.",
-        "todos los vehiculos.",
-        "los vehiculos de transporte publico de viajeros, unicamente."
+        "los taxis, pero únicamente en poblado.",
+        "todos los vehículos.",
+        "los vehículos de transporte público de viajeros, únicamente."
       ],
+      "correcta": 2,
       "imagen": "../img/test_088_p14.jpg"
     },
     {
-      "texto": "¿Puede circular cualquier vehiculo por esta calzada?",
+      "texto": "¿Puede circular cualquier vehículo por esta calzada?",
       "opciones": [
-        "Si.",
-        "No,porque es una via exclusiva para automoviles.",
-        "Si, excepto motocicletas dedos ruedas sin sidecar."
+        "Sí.",
+        "No, porque es una vía exclusiva para automóviles.",
+        "Sí, excepto motocicletas de dos ruedas sin sidecar."
       ],
+      "correcta": 1,
       "imagen": "../img/test_088_p15.jpg"
     },
     {
-      "texto": "Las personas mayores suelen tener mas accidentes...",
+      "texto": "Las personas mayores suelen tener más accidentes...",
       "opciones": [
-        "cuando van acompanando aninos.",
+        "cuando van acompañando a niños.",
         "cuando van solas.",
-        "cuando van acompanadas por otros adultos."
+        "cuando van acompañadas por otros adultos."
       ],
+      "correcta": 1,
       "imagen": "../img/test_088_p16.jpg"
     },
     {
-      "texto": "Esta senal indica peligro por...",
+      "texto": "Esta señal indica peligro por...",
       "opciones": [
-        "pavimentodeslizantepornieve.",
-        "la proximidad de un tramo de la via con visibilidad reducida por niebla, luvia o nieve.",
-        "la proximidad de un tramo de la via con desprendimientos frecuentes y la presencia de obstaculosenlacalzada."
+        "pavimento deslizante por nieve.",
+        "la proximidad de un tramo de la vía con visibilidad reducida por niebla, lluvia o nieve.",
+        "la proximidad de un tramo de la vía con desprendimientos frecuentes y la presencia de obstáculos en la calzada."
       ],
+      "correcta": 2,
       "imagen": "../img/test_088_p17.jpg"
     },
     {
-      "texto": "A la vista de la senal y teniendo en cuenta que circulamos a 90o km/h, ¿ipodremos utilizar el carril derecho?",
+      "texto": "A la vista de la señal y teniendo en cuenta que circulamos a 90 km/h, ¿podremos utilizar el carril derecho?",
       "opciones": [
-        "No,porque estareservadoparavehiculos lentos.",
-        "Si, como norma general usaremos el derecho.",
+        "No, porque está reservado para vehículos lentos.",
+        "Sí, como norma general usaremos el derecho.",
         "Usaremos cualquier carril indistintamente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_088_p18.jpg"
     },
     {
-      "texto": "Despues de la senal vertical, ¿iesta permitido adelantar al vehiculo blanco?",
+      "texto": "Después de la señal vertical, ¿está permitido adelantar al vehículo blanco?",
       "opciones": [
-        "No, porque la senial prohibe adelantar.",
-        "Si, porque la senal es de <fin de prohibido adelantar>.",
-        "No,porque la linea continua me lo prohibe. 2o. La probabilidad de que un accidente sea mortal es mayor cuando se circula a velocidad.. O a) inadecuada. O b) adecuada. O c) moderada."
+        "No, porque la señal prohíbe adelantar.",
+        "Sí, porque la señal es de «fin de prohibido adelantar».",
+        "No, porque la línea continua me lo prohíbe."
       ],
+      "correcta": 2,
       "imagen": "../img/test_088_p19.jpg"
     },
     {
-      "texto": "A partir de esta senal...",
+      "texto": "A partir de esta señal...",
       "opciones": [
-        "Seaconseja no sobrepasar los 2okm/hy tendran prioridad los peatones.",
-        "Esta prohibido sobrepasar los 10 km/h ytendran prioridad los peatones.",
-        "Al tratarse de una calle residencial la velocidadmaxima sera de 30km/h."
+        "Se aconseja no sobrepasar los 20 km/h y tendrán prioridad los peatones.",
+        "Está prohibido sobrepasar los 10 km/h y tendrán prioridad los peatones.",
+        "Al tratarse de una calle residencial la velocidad máxima será de 30 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_088_p21.jpg"
     },
     {
-      "texto": "¿Que indica esta cuadricula de marcas amarillas?",
+      "texto": "¿Qué indica esta cuadrícula de marcas amarillas?",
       "opciones": [
-        "Prohibeparar yestacionar encima de estasmarcas viales.",
-        "Recuerda que no se tiene que penetrar en la interseccion si previsiblemente podemos quedar detenidos y obstruir la circulacion transversal.",
+        "Prohíbe parar y estacionar encima de estas marcas viales.",
+        "Recuerda que no se tiene que penetrar en la intersección si previsiblemente podemos quedar detenidos y obstruir la circulación transversal.",
         "Indican el lugar donde empieza una zona de frenado de emergencia."
       ],
+      "correcta": 1,
       "imagen": "../img/test_088_p22.jpg"
     },
     {
-      "texto": "Bajo los efectos del alcohol, la distancia de detencion...",
+      "texto": "Bajo los efectos del alcohol, la distancia de detención...",
       "opciones": [
         "no se ve afectada.",
         "disminuye.",
         "aumenta."
-      ]
+      ],
+      "correcta": 2
     },
     {
       "texto": "Las luces adaptativas...",
       "opciones": [
         "adaptan su luminosidad a la visibilidad existente.",
-        "mejoran la visibilidad en determinadas situaciones, como una curva o una interseccion.",
-        "emitenmas luz quelas luces convencionales."
-      ]
+        "mejoran la visibilidad en determinadas situaciones, como una curva o una intersección.",
+        "emiten más luz que las luces convencionales."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿En algun caso se podra circular con una luz antiniebla delantera junto con la de posicion y sin utilizar el alumbrado de corto alcance o cruce?",
+      "texto": "¿En algún caso se podrá circular con una luz antiniebla delantera junto con la de posición y sin utilizar el alumbrado de corto alcance o cruce?",
       "opciones": [
-        "No, para circular siempre se tendra que llevar el alumbrado de posicion junto con el de cruce.",
-        "Si, al circular durante el dia con niebla, no es necesario utilizar el alumbrado de corto alcance conjuntamente con el de posicion y el antiniebla.",
-        "Si, tanto de dia como de noche."
+        "No, para circular siempre se tendrá que llevar el alumbrado de posición junto con el de cruce.",
+        "Sí, al circular durante el día con niebla, no es necesario utilizar el alumbrado de corto alcance conjuntamente con el de posición y el antiniebla.",
+        "Sí, tanto de día como de noche."
       ],
+      "correcta": 1,
       "imagen": "../img/test_088_p25.jpg"
     },
     {
-      "texto": "Antes de abrir las puertas para bajar de un vehiculo, debe cerciorarse...",
+      "texto": "Antes de abrir las puertas para bajar de un vehículo, debe cerciorarse...",
       "opciones": [
         "de que no se ocasiona peligro a otros usuarios.",
-        "unicamente de que no se acercan peatones.",
-        "solodequeno seacercanvehiculos."
+        "únicamente de que no se acercan peatones.",
+        "solo de que no se acercan vehículos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_088_p26.jpg"
     },
     {
-      "texto": "Esta senal indica...",
+      "texto": "Esta señal indica...",
       "opciones": [
-        "una prohibicion.",
+        "una prohibición.",
         "un peligro.",
-        "una obligacion."
+        "una obligación."
       ],
+      "correcta": 0,
       "imagen": "../img/test_088_p27.jpg"
     },
     {
       "texto": "¿Qué es la velocidad inadecuada?",
       "opciones": [
-        "La velocidad que no se adapta a las condiciones del trafico, de la via o del conductor.",
-        "La velocidad permitida en la via.",
-        "La que no rebasa el limitemaximo develocidad para la via."
-      ]
+        "La velocidad que no se adapta a las condiciones del tráfico, de la vía o del conductor.",
+        "La velocidad permitida en la vía.",
+        "La que no rebasa el límite máximo de velocidad para la vía."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Si aumentamos la velocidad de 55 km/h a 110 km/h, ¿zhabremos aumentado tambien la distancia de frenado?",
+      "texto": "Si aumentamos la velocidad de 55 km/h a 110 km/h, ¿habremos aumentado también la distancia de frenado?",
       "opciones": [
-        "Si, en igual proporcion.",
-        "Si, en mayor proporcion.",
+        "Sí, en igual proporción.",
+        "Sí, en mayor proporción.",
         "No, la distancia de frenado no depende de la velocidad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_088_p29.jpg"
     },
     {
-      "texto": "Al circular marcha atras debe tener en cuenta que...",
+      "texto": "Al circular marcha atrás debe tener en cuenta que...",
       "opciones": [
-        "debe hacerlo con toda precaucion, ya que pueden pasar personas por detras del vehiculo.",
+        "debe hacerlo con toda precaución, ya que pueden pasar personas por detrás del vehículo.",
         "tiene prioridad sobre los peatones.",
-        "nodeberecorrermas de10metros."
-      ]
+        "no debe recorrer más de 10 metros."
+      ],
+      "correcta": 0
     }
   ]
 }

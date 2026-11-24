@@ -3,39 +3,43 @@
   "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Es consideradovehiculoespecial...",
+      "texto": "Es considerado vehículo especial...",
       "opciones": [
-        "El tractor agricola.",
-        "El remolque agricola.",
+        "El tractor agrícola.",
+        "El remolque agrícola.",
         "Las dos respuestas anteriores son correctas."
       ],
+      "correcta": 2,
       "imagen": "../img/test_087_p01.jpg"
     },
     {
-      "texto": "¿A nombre de quien debe estar inscrito el vehiculo en el registro oficial correspondiente?",
+      "texto": "¿A nombre de quién debe estar inscrito el vehículo en el registro oficial correspondiente?",
       "opciones": [
         "A nombre del conductor habitual.",
-        "A nombre del titular del vehiculo.",
+        "A nombre del titular del vehículo.",
         "Es indiferente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p02.jpg"
     },
     {
-      "texto": "Si las ruedas de su vehiculo estan desgastadas por la parte central se debera a..",
+      "texto": "Si las ruedas de su vehículo están desgastadas por la parte central se deberá a...",
       "opciones": [
-        "Llevar mas presion que la recomendada por el fabricante.",
-        "Llevar menos presion que la recomendadapor el fabricante.",
-        "Llevar los amortiguadores en mal estado"
+        "Llevar más presión que la recomendada por el fabricante.",
+        "Llevar menos presión que la recomendada por el fabricante.",
+        "Llevar los amortiguadores en mal estado."
       ],
+      "correcta": 0,
       "imagen": "../img/test_087_p03.jpg"
     },
     {
       "texto": "Si se ve obligado a circular con una rueda de repuesto de uso temporal o de emergencia, debe tener en cuenta...",
       "opciones": [
-        "que la presion debe sermas alta que las quelleva normalmente el vehiculo.",
+        "que la presión debe ser más alta que las que lleva normalmente el vehículo.",
         "las indicaciones de los fabricantes de este tipo de repuestos.",
-        "que si esta homologada no es necesario sustituirla por una rueda normal."
+        "que si está homologada no es necesario sustituirla por una rueda normal."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p04.jpg"
     },
     {
@@ -45,226 +49,252 @@
         "circula por un carril reversible.",
         "debe llevar al menos dos ocupantes."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p05.jpg"
     },
     {
-      "texto": "El conductor de este vehiculo, ¿zesta obligado a mantener la adecuada colocacion de los animales que transporta?",
+      "texto": "El conductor de este vehículo, ¿está obligado a mantener la adecuada colocación de los animales que transporta?",
       "opciones": [
-        "Si, los animales deben ir colocados correctamente en todomomento.",
-        "No,no esta obligado.",
-        "Si, aunque no esta obligado una vez iniciada la marcha."
+        "Sí, los animales deben ir colocados correctamente en todo momento.",
+        "No, no está obligado.",
+        "Sí, aunque no está obligado una vez iniciada la marcha."
       ],
+      "correcta": 0,
       "imagen": "../img/test_087_p06.jpg"
     },
     {
-      "texto": "¿A que velocidad podra circular un conductor novel por esta carretera convencional?",
+      "texto": "¿A qué velocidad podrá circular un conductor novel por esta carretera convencional?",
       "opciones": [
-        "80 km/h, mas 20 km/h para adelantar.",
+        "80 km/h, más 20 km/h para adelantar.",
         "90 km/h.",
         "100 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p07.jpg"
     },
     {
-      "texto": "El reglaje del espejo retrovisor exterior izquierdo sera correcto...",
+      "texto": "El reglaje del espejo retrovisor exterior izquierdo será correcto...",
       "opciones": [
-        "Cuando desde el asiento del conductor ymoviendo unpoco la cabeza veamos ligeramente el lado del vehiculo y el maximo de calzada.",
-        "Cuando desde el asiento del conductory sin desviar la cabeza veamos ligeramente el lado del vehiculo y el maximo de calzada.",
-        "Cuando desde el asiento del conductor y sin mover la cabeza veamos la mayor parte del lateral del vehiculo y una parte pequena de la calzada."
+        "Cuando desde el asiento del conductor y moviendo un poco la cabeza veamos ligeramente el lado del vehículo y el máximo de calzada.",
+        "Cuando desde el asiento del conductor y sin desviar la cabeza veamos ligeramente el lado del vehículo y el máximo de calzada.",
+        "Cuando desde el asiento del conductor y sin mover la cabeza veamos la mayor parte del lateral del vehículo y una parte pequeña de la calzada."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p08.jpg"
     },
     {
-      "texto": "Para evitar la contaminacion acuistica, es aconsejable quelos conductores de motocicletas...",
+      "texto": "Para evitar la contaminación acústica, es aconsejable que los conductores de motocicletas...",
       "opciones": [
-        "cuiden que el tubo de escape y el silenciador esten siempre en buen estado.",
+        "cuiden que el tubo de escape y el silenciador estén siempre en buen estado.",
         "circulen con el escape libre.",
         "cuiden solamente el silenciador, el tubo de escape no influye en los ruidos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_087_p09.jpg"
     },
     {
-      "texto": "Los agentes pueden inmovilizar un vehiculo cuando...",
+      "texto": "Los agentes pueden inmovilizar un vehículo cuando...",
       "opciones": [
-        "Emite humonegro por el tubo de escape.",
-        "Emitegases contaminantesoruidosporencima delos maximos legales.",
-        "Emitehumo por el tubo de escape."
+        "Emite humo negro por el tubo de escape.",
+        "Emite gases contaminantes o ruidos por encima de los máximos legales.",
+        "Emite humo por el tubo de escape."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p10.jpg"
     },
     {
-      "texto": "La senal significa...",
+      "texto": "La señal significa...",
       "opciones": [
-        "via obligatoria para los autobuses.",
-        "paradadeautobuses.",
+        "vía obligatoria para los autobuses.",
+        "parada de autobuses.",
         "carril reservado para autobuses."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p11.jpg"
     },
     {
-      "texto": "Al salir de un garaje a la via publica, ¿za que vehiculos debemos ceder el paso?",
+      "texto": "Al salir de un garaje a la vía pública, ¿a qué vehículos debemos ceder el paso?",
       "opciones": [
         "Solo a los que se acerquen por la derecha.",
         "Solo a los que se acerquen por la izquierda.",
         "A los que se acerquen tanto por la derecha como por la izquierda."
       ],
+      "correcta": 2,
       "imagen": "../img/test_087_p12.jpg"
     },
     {
       "texto": "¿Puede parar en un carril bus?",
       "opciones": [
         "No.",
-        "Si, cuando sea por un tiempo inferior a 2 minutos.",
-        "Si, si utiliza la senal de emergencia."
+        "Sí, cuando sea por un tiempo inferior a 2 minutos.",
+        "Sí, si utiliza la señal de emergencia."
       ],
+      "correcta": 0,
       "imagen": "../img/test_087_p13.jpg"
     },
     {
-      "texto": "Los ciclomotores, ¿ipueden circular por el arcen en columna de a dos?",
+      "texto": "Los ciclomotores, ¿pueden circular por el arcén en columna de a dos?",
       "opciones": [
         "No.",
-        "Si, deforma excepcional cuando el arcen sea transitable y suficiente.",
-        "Si, siempre."
-      ]
+        "Sí, de forma excepcional cuando el arcén sea transitable y suficiente.",
+        "Sí, siempre."
+      ],
+      "correcta": 1
     },
     {
       "texto": "La luz de carretera debe sustituirse por la de cruce...",
       "opciones": [
-        "al circular por una autopista o una autovia.",
+        "al circular por una autopista o una autovía.",
         "cuando exista la posibilidad de deslumbrar a otros usuarios.",
         "cuando haya niebla."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p15.jpg"
     },
     {
-      "texto": "Estando detenido en un semaforo en rojo, ¿ise podra hablar por el telefono movil sin utilizar el manos libres?",
+      "texto": "Estando detenido en un semáforo en rojo, ¿se podrá hablar por el teléfono móvil sin utilizar el manos libres?",
       "opciones": [
-        "Si, porque estamos detenidos.",
-        "No,porque esta prohibido.",
-        "Si, si es una llamada de menos de un minuto."
+        "Sí, porque estamos detenidos.",
+        "No, porque está prohibido.",
+        "Sí, si es una llamada de menos de un minuto."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p16.jpg"
     },
     {
-      "texto": "¿A que vehiculos prohibe la entrada esta senal?",
+      "texto": "¿A qué vehículos prohíbe la entrada esta señal?",
       "opciones": [
         "A camiones y autobuses de menos de 3.500 kilogramos de M.M.A.",
-        "A camiones y furgones dedicados al transporte de mercancias .",
-        "A todos los vehiculos de mas de 3.500 kilogramos de M.M.A."
+        "A camiones y furgones dedicados al transporte de mercancías.",
+        "A todos los vehículos de más de 3.500 kilogramos de M.M.A."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p17.jpg"
     },
     {
-      "texto": "La senal, ¿ique indica?",
+      "texto": "La señal, ¿qué indica?",
       "opciones": [
         "Peligro por hielo o nieve.",
-        "Peligro por hielo unicamente.",
-        "Peligropornieveunicamente."
+        "Peligro por hielo únicamente.",
+        "Peligro por nieve únicamente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_087_p18.jpg"
     },
     {
-      "texto": "¿Cuando debe pasar un turismo la primera inspeccion tecnica?",
+      "texto": "¿Cuándo debe pasar un turismo la primera inspección técnica?",
       "opciones": [
-        "A los 3 anos, a partir de la fecha de la primera matriculacion.",
-        "A los 4 anos, a partir de la fecha de fabricacion o importacion.",
-        "A los 4 anos, a partir de la fecha de la primera matriculacion."
-      ]
+        "A los 3 años, a partir de la fecha de la primera matriculación.",
+        "A los 4 años, a partir de la fecha de fabricación o importación.",
+        "A los 4 años, a partir de la fecha de la primera matriculación."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En un tunel, ¿ique distancia de seguridad se debe dejar con el vehiculo que circula delante?",
+      "texto": "En un túnel, ¿qué distancia de seguridad se debe dejar con el vehículo que circula delante?",
       "opciones": [
         "100 metros, al menos, cuando no se pretenda adelantar.",
-        "Unicamentela distancia suficientepara no colisionar en caso de frenadobrusco.",
+        "Únicamente la distancia suficiente para no colisionar en caso de frenado brusco.",
         "200 metros."
       ],
+      "correcta": 0,
       "imagen": "../img/test_087_p20.jpg"
     },
     {
-      "texto": "¿Puede parar en una zona de parada y estacionamiento de uso exclusivo para transporte publico urbano?",
+      "texto": "¿Puede parar en una zona de parada y estacionamiento de uso exclusivo para transporte público urbano?",
       "opciones": [
         "No.",
-        "Si.",
-        "Pararsi,pero no estacionar."
+        "Sí.",
+        "Parar sí, pero no estacionar."
       ],
+      "correcta": 0,
       "imagen": "../img/test_087_p21.jpg"
     },
     {
-      "texto": "Esta senal indica que los carriles sobre los que estan situadas las senales de velocidad minima...",
+      "texto": "Esta señal indica que los carriles sobre los que están situadas las señales de velocidad mínima...",
       "opciones": [
         "solo puede utilizarlos si circula a una velocidad inferior a la indicada.",
-        "son para vehiculos rapidos y el carril situado mas a la derecha es para vehiculos lentos.",
+        "son para vehículos rápidos y el carril situado más a la derecha es para vehículos lentos.",
         "solo puede utilizarlos si circula a una velocidad igual o superior a la indicada."
       ],
+      "correcta": 2,
       "imagen": "../img/test_087_p22.jpg"
     },
     {
-      "texto": "Para un ajuste optimo, la altura de la parte superior del reposacabezas debe colocarse...",
+      "texto": "Para un ajuste óptimo, la altura de la parte superior del reposacabezas debe colocarse...",
       "opciones": [
         "por encima de la nuca.",
         "por debajo de la nuca.",
-        "alamisma alturaquelaparte superiordela cabeza."
+        "a la misma altura que la parte superior de la cabeza."
       ],
+      "correcta": 2,
       "imagen": "../img/test_087_p23.jpg"
     },
     {
-      "texto": "Conducir por una via en mal estado, ¿zpuede favorecer la fatiga?",
+      "texto": "Conducir por una vía en mal estado, ¿puede favorecer la fatiga?",
       "opciones": [
-        "si.",
+        "Sí.",
         "No.",
-        "Solo si conducede noche."
+        "Solo si conduce de noche."
       ],
+      "correcta": 0,
       "imagen": "../img/test_087_p24.jpg"
     },
     {
-      "texto": "Durante un viaje largo, ¿ique se puede hacer para evitar la fatiga?",
+      "texto": "Durante un viaje largo, ¿qué se puede hacer para evitar la fatiga?",
       "opciones": [
-        "Realizardescansos suficientemente largos.",
-        "Beber cafe en lugar de hacer pausas en la conduccion.",
+        "Realizar descansos suficientemente largos.",
+        "Beber café en lugar de hacer pausas en la conducción.",
         "Poner muy alto el volumen de la radio."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El turismo, ¿iesta bien situado para girar a la izquierda?",
+      "texto": "El turismo, ¿está bien situado para girar a la izquierda?",
       "opciones": [
         "Sí.",
-        "Si, porque circula dentro de poblado.",
+        "Sí, porque circula dentro de poblado.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_087_p26.jpg"
     },
     {
-      "texto": "Debe saber que a partir de la senal hay peligro por la proximidad de...",
+      "texto": "Debe saber que a partir de la señal hay peligro por la proximidad de...",
       "opciones": [
         "grandes charcos de agua que obligan a reducir la velocidad.",
-        "una zona condesprendimientos frecuentes.",
-        "un tramo de via donde existe el riesgo de que se proyecte la gravilla al pasar los vehiculos."
+        "una zona con desprendimientos frecuentes.",
+        "un tramo de vía donde existe el riesgo de que se proyecte la gravilla al pasar los vehículos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_087_p27.jpg"
     },
     {
-      "texto": "Si estamos implicados en un accidente con heridos, despues de proteger y avisar, ¿zque tendremos que hacer?",
+      "texto": "Si estamos implicados en un accidente con heridos, después de proteger y avisar, ¿qué tendremos que hacer?",
       "opciones": [
         "No mover a los heridos hasta que llegue un servicio de urgencias y no modificar el estado de las cosas.",
-        "Trasladarrapidamentea los heridos al hospital mas cercano.",
-        "Realizarunmasajecardiacode2ventilacionespor30compresiones."
-      ]
+        "Trasladar rápidamente a los heridos al hospital más cercano.",
+        "Realizar un masaje cardiaco de 2 ventilaciones por 30 compresiones."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Para adelantar a este vehiculo...",
+      "texto": "Para adelantar a este vehículo...",
       "opciones": [
         "es obligatorio esperar a un tramo seco de calzada.",
         "debe tenerse especial cuidado, pues las salpicaduras pueden impedir la visibilidad.",
         "no deben tomarse precauciones especiales."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p29.jpg"
     },
     {
       "texto": "¿Es correcto realizar una parada en una isleta?",
       "opciones": [
-        "Si, en una isleta se podra parar pero no estacionar.",
-        "No,y ademas se considera que se obstaculiza gravemente la circulacion."
+        "Sí, en una isleta se podrá parar pero no estacionar.",
+        "No, y además se considera que se obstaculiza gravemente la circulación."
       ],
+      "correcta": 1,
       "imagen": "../img/test_087_p30.jpg"
     }
   ]

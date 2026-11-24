@@ -3,261 +3,291 @@
   "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En un tramo de gran pendiente, ¿ique vehiculo pasara primero en un estrechamiento en el que no esta senalizada la prioridad?",
+      "texto": "En un tramo de gran pendiente, ¿qué vehículo pasará primero en un estrechamiento en el que no está señalizada la prioridad?",
       "opciones": [
-        "El vehiculo con mayor dificultad de maniobra.",
+        "El vehículo con mayor dificultad de maniobra.",
         "El que circula en sentido ascendente.",
         "El que circula en sentido descendente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p01.jpg"
     },
     {
-      "texto": "Un peaton que empuja un carrito, ¿ipor donde puede circular?",
+      "texto": "Un peatón que empuja un carrito, ¿por dónde puede circular?",
       "opciones": [
-        "Solopor la zona peatonal.",
-        "Porla zona peatonal, opor el arcen o la calzada si pudiera obstaculizar el paso.",
-        "Soloporlacalzada"
+        "Solo por la zona peatonal.",
+        "Por la zona peatonal, o por el arcén o la calzada si pudiera obstaculizar el paso.",
+        "Solo por la calzada."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p02.jpg"
     },
     {
       "texto": "Los principales factores que intervienen en un accidente son...",
       "opciones": [
-        "la via y su entorno.",
-        "la via y su entorno, el vehiculo y el factor humano.",
-        "el vehiculo y su carga."
-      ]
+        "la vía y su entorno.",
+        "la vía y su entorno, el vehículo y el factor humano.",
+        "el vehículo y su carga."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Si quiero incorporarme a la circulacion efectuando marcha atras, ¿ique precauciones debo tomar?",
+      "texto": "Si quiero incorporarme a la circulación efectuando marcha atrás, ¿qué precauciones debo tomar?",
       "opciones": [
-        "No recorrer una distancia mayor de 15metros.",
-        "Incorporarme aunque invada un cruce de vias.",
-        "No recorrer mas de 40 metros."
+        "No recorrer una distancia mayor de 15 metros.",
+        "Incorporarme aunque invada un cruce de vías.",
+        "No recorrer más de 40 metros."
       ],
+      "correcta": 0,
       "imagen": "../img/test_085_p04.jpg"
     },
     {
-      "texto": "Un agente con el brazo levantado verticalmente obliga a los vehiculos que se aproximan de frente a ...",
+      "texto": "Un agente con el brazo levantado verticalmente obliga a los vehículos que se aproximan de frente a...",
       "opciones": [
         "detenerse.",
         "reducir la velocidad.",
         "continuar la marcha."
       ],
+      "correcta": 0,
       "imagen": "../img/test_085_p05.jpg"
     },
     {
-      "texto": "¿De noche y con lluvia muy intensa zes obligatorio llevar las luces antiniebla traseras?",
+      "texto": "De noche y con lluvia muy intensa, ¿es obligatorio llevar las luces antiniebla traseras?",
       "opciones": [
         "Sí.",
-        "Si, y ademas las delanteras antiniebla.",
-        "Si,y ademas las de corto alcance o de cruce."
+        "Sí, y además las delanteras antiniebla.",
+        "Sí, y además las de corto alcance o de cruce."
       ],
+      "correcta": 2,
       "imagen": "../img/test_085_p06.jpg"
     },
     {
-      "texto": "El vehiculo amarillo disminuye la velocidad porque el adelantamiento que esta haciendo el vehiculo rojo es peligroso, ¿zes correcto?",
+      "texto": "El vehículo amarillo disminuye la velocidad porque el adelantamiento que está haciendo el vehículo rojo es peligroso, ¿es correcto?",
       "opciones": [
-        "No, el vehiculo amarillo no debe variar de velocidad. con las luces.",
-        "Si, con el fin de que el vehiculo rojo vuelva cuanto antes a la derecha."
+        "No, el vehículo amarillo no debe variar de velocidad.",
+        "Sí, con el fin de que el vehículo rojo vuelva cuanto antes a la derecha."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p07.jpg"
     },
     {
-      "texto": "En una via interurbana insuficientemente iluminada, un turismo circula a menos de 4o km/h. ¿Puede circular con la luz de corto alcance?",
+      "texto": "En una vía interurbana insuficientemente iluminada, un turismo circula a menos de 40 km/h. ¿Puede circular con la luz de corto alcance?",
       "opciones": [
-        "Si, pero puede llevar la de largo alcance cuando no deslumbra.",
-        "No,debellevar la luz delargo alcance obligatoriamente",
+        "Sí, pero puede llevar la de largo alcance cuando no deslumbra.",
+        "No, debe llevar la luz de largo alcance obligatoriamente.",
         "No."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿A nombre de quien debe estar inscrito el vehiculo en el registro oficial correspondiente?",
+      "texto": "¿A nombre de quién debe estar inscrito el vehículo en el registro oficial correspondiente?",
       "opciones": [
-        "Anombre del conductor habitual.",
-        "A nombre del titular del vehiculo.",
+        "A nombre del conductor habitual.",
+        "A nombre del titular del vehículo.",
         "Es indiferente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p09.jpg"
     },
     {
-      "texto": "¿Puede parar en una zona de parada y estacionamiento de uso exclusivo para transporte publico urbano?",
+      "texto": "¿Puede parar en una zona de parada y estacionamiento de uso exclusivo para transporte público urbano?",
       "opciones": [
         "No.",
-        "Si.",
-        "Pararsi,pero no estacionar."
+        "Sí.",
+        "Parar sí, pero no estacionar."
       ],
+      "correcta": 0,
       "imagen": "../img/test_085_p10.jpg"
     },
     {
       "texto": "¿Podremos utilizar una glorieta para efectuar un cambio de sentido de la marcha?",
       "opciones": [
         "No, las glorietas no las podemos usar para efectuar cambios de sentido.",
-        "Si, las glorietas son un lugar adecuado."
+        "Sí, las glorietas son un lugar adecuado."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p11.jpg"
     },
     {
-      "texto": "Siobtenemos hoy nuestro primerpermiso de conducir sabremos quela tasa maxima de alcoholemia en aire espirado sera de...",
+      "texto": "Si obtenemos hoy nuestro primer permiso de conducir sabremos que la tasa máxima de alcoholemia en aire espirado será de...",
       "opciones": [
         "0,30 mg de alcohol por cada litro de aire.",
         "0,15 mg de alcohol por cada litro de aire.",
         "0,26 mg de alcohol por cada litro de aire."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p12.jpg"
     },
     {
-      "texto": "¿Cual es la velocidad maxima a la que le estapermitido circular poruna autovia conuna autocaravana de MMA inferior a 3500kg?",
+      "texto": "¿Cuál es la velocidad máxima a la que le está permitido circular por una autovía con una autocaravana de MMA inferior a 3.500 kg?",
       "opciones": [
         "100 km/h.",
         "120 km/h.",
         "90 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p13.jpg"
     },
     {
-      "texto": "La funcion de los sistemas de seguridad pasiva de un vehiculo consiste en...",
+      "texto": "La función de los sistemas de seguridad pasiva de un vehículo consiste en...",
       "opciones": [
         "la misma que la de los elementos de seguridad activa.",
-        "evitar o disminuir los danos que se produzcan en caso de accidente.",
+        "evitar o disminuir los daños que se produzcan en caso de accidente.",
         "evitar que se produzca un accidente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p14.jpg"
     },
     {
-      "texto": "¿Esta senal prohibe efectuar un cambio de direccion a la izquierda?",
+      "texto": "¿Esta señal prohíbe efectuar un cambio de dirección a la izquierda?",
       "opciones": [
         "Sí.",
         "No."
       ],
+      "correcta": 0,
       "imagen": "../img/test_085_p15.jpg"
     },
     {
-      "texto": "¿Que le indica la senal en esta via de sentido uinico?",
+      "texto": "¿Qué le indica la señal en esta vía de sentido único?",
       "opciones": [
-        "Queestaprohibida la parada yel estacionamientoen el ladoderecho.",
-        "Que esta prohibida la parada y el estacionamiento en ambosladosde la calzada.",
-        "Que esta prohibida laparada en el ladoderecho de la calzada."
+        "Que está prohibida la parada y el estacionamiento en el lado derecho.",
+        "Que está prohibida la parada y el estacionamiento en ambos lados de la calzada.",
+        "Que está prohibida la parada en el lado derecho de la calzada."
       ],
+      "correcta": 0,
       "imagen": "../img/test_085_p16.jpg"
     },
     {
-      "texto": "Si el conductor ha ingerido bebidas alcoholicas el tiempo de reaccion...",
+      "texto": "Si el conductor ha ingerido bebidas alcohólicas el tiempo de reacción...",
       "opciones": [
         "Aumenta.",
         "Disminuye.",
-        "Si no se sobrepasan los O,30 gramosde alcohol por litro de sangre, no tendra ninguna consecuencia."
+        "Si no se sobrepasan los 0,30 gramos de alcohol por litro de sangre, no tendrá ninguna consecuencia."
       ],
+      "correcta": 0,
       "imagen": "../img/test_085_p17.jpg"
     },
     {
-      "texto": "En esta motocicleta, ¿idebe llevar casco?",
+      "texto": "En esta motocicleta, ¿debe llevar casco?",
       "opciones": [
-        "No, no es obligatorio; pero debe llevar abrochado el cinturon de seguridad.",
-        "Si, el casco es obligatorio pero no el cinturon de seguridad.",
-        "Si, y ademas es obligatorio llevar abrochado el cinturon de seguridad."
+        "No, no es obligatorio; pero debe llevar abrochado el cinturón de seguridad.",
+        "Sí, el casco es obligatorio pero no el cinturón de seguridad.",
+        "Sí, y además es obligatorio llevar abrochado el cinturón de seguridad."
       ],
+      "correcta": 0,
       "imagen": "../img/test_085_p18.jpg"
     },
     {
-      "texto": "¿En que situacion se puede encender solamente la luz de posicion entre la puesta y la salida del sol?",
+      "texto": "¿En qué situación se puede encender solamente la luz de posición entre la puesta y la salida del sol?",
       "opciones": [
         "Cuando circule por una carretera suficientemente iluminada.",
-        "Cuando circule poruna calle suficientemente iluminada.",
-        "Para inmovilizar el vehiculo en un arcen fuera de poblado."
-      ]
+        "Cuando circule por una calle suficientemente iluminada.",
+        "Para inmovilizar el vehículo en un arcén fuera de poblado."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Es obligatorio llevar un botiquin de primeros auxilios?",
+      "texto": "¿Es obligatorio llevar un botiquín de primeros auxilios?",
       "opciones": [
         "Sí.",
         "No."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p20.jpg"
     },
     {
-      "texto": "¿Que luces antiniebla es obligatorio llevar con niebla densa durante el dia?",
+      "texto": "¿Qué luces antiniebla es obligatorio llevar con niebla densa durante el día?",
       "opciones": [
         "Luz antiniebla trasera.",
         "Luz antiniebla delantera.",
         "Luz antiniebla delantera y trasera."
       ],
+      "correcta": 0,
       "imagen": "../img/test_085_p21.jpg"
     },
     {
-      "texto": "¿Que circunstancias del conductor favorecen la aparicion de la fatiga?",
+      "texto": "¿Qué circunstancias del conductor favorecen la aparición de la fatiga?",
       "opciones": [
-        "Manteneruna velocidad adecuada durante mucho tiempo, ya que requiere mucha concentracion.",
+        "Mantener una velocidad adecuada durante mucho tiempo, ya que requiere mucha concentración.",
         "Conducir durante largos periodos sin parar o haciendo descansos inadecuados.",
-        "Conducir manteniendo los habitos normales de conduccion."
-      ]
+        "Conducir manteniendo los hábitos normales de conducción."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Si llevamos un retrovisor interior panoramico, ¿ipodremos sustituir el retrovisor exterior derecho cuando sea obligatorio suuso?",
+      "texto": "Si llevamos un retrovisor interior panorámico, ¿podremos sustituir el retrovisor exterior derecho cuando sea obligatorio su uso?",
       "opciones": [
         "Sí.",
         "No."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p23.jpg"
     },
     {
-      "texto": "Dentro de poblado, en una via de tres carriles para el mismo sentido y delimitados por marcas viales, ¿icircular por el carril de la izquierda es correcto?",
+      "texto": "Dentro de poblado, en una vía de tres carriles para el mismo sentido y delimitados por marcas viales, ¿circular por el carril de la izquierda es correcto?",
       "opciones": [
-        "No,deberemos circularporla derecha.",
-        "Si, si es el que mejor conviene a nuestro destino.",
+        "No, deberemos circular por la derecha.",
+        "Sí, si es el que mejor conviene a nuestro destino.",
         "Deberemos circular solo por el derecho o por el central."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p24.jpg"
     },
     {
-      "texto": "¿Es peligroso mandar un mensaje con el telefono movil mientras se conduce?",
+      "texto": "¿Es peligroso mandar un mensaje con el teléfono móvil mientras se conduce?",
       "opciones": [
-        "Si, porque puede provocar la distraccion del conductor.",
-        "No, porque el conductor estara mas atento a la conduccion.",
-        "No,sisecirculadespacio."
+        "Sí, porque puede provocar la distracción del conductor.",
+        "No, porque el conductor estará más atento a la conducción.",
+        "No, si se circula despacio."
       ],
+      "correcta": 0,
       "imagen": "../img/test_085_p25.jpg"
     },
     {
-      "texto": "En una calzada con dos sentidos hay un refugio en el centro. ¿Por que lado esta permitido circular?",
+      "texto": "En una calzada con dos sentidos hay un refugio en el centro. ¿Por qué lado está permitido circular?",
       "opciones": [
         "Por el lado derecho del refugio.",
-        "Porcualquieradeellos,indistintamente.",
+        "Por cualquiera de ellos, indistintamente.",
         "Por el lado izquierdo del refugio."
       ],
+      "correcta": 0,
       "imagen": "../img/test_085_p26.jpg"
     },
     {
-      "texto": "El vehiculo rojo, ¿zdonde se detendra para realizar el SToP?",
+      "texto": "El vehículo rojo, ¿dónde se detendrá para realizar el STOP?",
       "opciones": [
-        "Justo antesdellegara la interseccion.",
-        "Antes de la interseccion sin pisar la marca vial de STOP.",
-        "Ante la linea de detencion."
+        "Justo antes de llegar a la intersección.",
+        "Antes de la intersección sin pisar la marca vial de STOP.",
+        "Ante la línea de detención."
       ],
+      "correcta": 2,
       "imagen": "../img/test_085_p27.jpg"
     },
     {
-      "texto": "Son remolques o semirremolques pesados aquellos que tienen una masa maxima autorizada .",
+      "texto": "Son remolques o semirremolques pesados aquellos que tienen una masa máxima autorizada...",
       "opciones": [
         "igual a 750 kg.",
         "que supera los 750 kg.",
         "que no supera los 750 kg."
-      ]
+      ],
+      "correcta": 1
     },
     {
       "texto": "Cuando conduce una motocicleta, debe tener en cuenta que...",
       "opciones": [
         "cuanto mayor es la velocidad, hay mayor dificultad para mantener el equilibrio.",
-        "es menos estable y mas fragil que el resto de los vehiculos.",
-        "es mas visible que otros automoviles."
-      ]
+        "es menos estable y más frágil que el resto de los vehículos.",
+        "es más visible que otros automóviles."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Si el vehiculo de la imagen circula a 80 km/h,zlo hara correctamente a partir dela senal?",
+      "texto": "Si el vehículo de la imagen circula a 80 km/h, ¿lo hará correctamente a partir de la señal?",
       "opciones": [
         "Sí.",
         "No."
       ],
+      "correcta": 1,
       "imagen": "../img/test_085_p30.jpg"
     }
   ]
