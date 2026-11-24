@@ -279,7 +279,7 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/storage.js"></script>
   <script>
     const TOTAL_TESTS = 90;
@@ -301,7 +301,7 @@
       contenedor.innerHTML = '';
 
       for (let i = 1; i <= TOTAL_TESTS; i++) {
-        const numStr = String(i).padStart(3, '0'); // 001 .. 090
+        const numStr = String(i).padStart(3, '0');
         const clave = `test_${numStr}`;
         const datos = progreso[clave];
 
@@ -311,7 +311,6 @@
 
         let claseEstado = 'estado-pendiente';
         if (realizado > 0) {
-          // En tests de conducir (30 preguntas): <= 3 fallos verde, > 3 rojo
           claseEstado = datos.fallos <= 3 ? 'estado-aprobado' : 'estado-suspenso';
         }
 
@@ -342,9 +341,9 @@
       });
     }
 
-    function confirmarBorrado() {
+    async function confirmarBorrado() {
       if (confirm('¿Seguro que quieres borrar todos tus resultados guardados?')) {
-        borrarProgreso();
+        await borrarProgreso();
         renderTabla();
       }
     }
@@ -355,7 +354,9 @@
       }
     });
 
+    // Pinta al instante con lo local y luego actualiza desde Supabase
     renderTabla();
+    sincronizarDesdeNube().then(() => renderTabla());
   </script>
 </body>
 </html>
