@@ -191,6 +191,44 @@
       background-color: #e5e7eb;
     }
 
+    /* Celda de fallos clickable cuando hay datos */
+    .celda-fallos {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .celda-fallos.clickable {
+      cursor: pointer;
+    }
+
+    .celda-fallos.clickable .fallos-valor {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      border-bottom: 1.5px dotted #367cb8;
+      color: #2c4a6e;
+      font-weight: 600;
+      padding: 1px 3px;
+      border-radius: 3px;
+      transition: background-color 0.15s, color 0.15s;
+    }
+
+    .celda-fallos.clickable:hover .fallos-valor {
+      background-color: #e8f1fa;
+      color: #1d4ed8;
+    }
+
+    .icono-grafica {
+      width: 12px;
+      height: 12px;
+      stroke: #367cb8;
+      stroke-width: 2;
+      fill: none;
+      flex-shrink: 0;
+    }
+
     /* Flecha derecha ">" */
     .celda-flecha {
       display: flex;
@@ -214,6 +252,7 @@
         font-size: 13px;
       }
     }
+
     .barra-borrar {
       margin-top: 16px;
     }
@@ -230,6 +269,123 @@
 
     .btn-borrar:hover {
       background-color: #e2e2e2;
+    }
+
+    /* Estilos del Modal de Evolución */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(17, 24, 39, 0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 1000;
+      backdrop-filter: blur(2px);
+    }
+
+    .modal-overlay.activo {
+      display: flex;
+    }
+
+    .modal-contenido {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 540px;
+      border-radius: 8px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+      padding: 20px 22px 24px;
+      position: relative;
+      animation: modalEntrada 0.18s ease-out;
+    }
+
+    @keyframes modalEntrada {
+      from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .modal-titulo {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .modal-cerrar {
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      line-height: 1;
+      color: #6b7280;
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: 4px;
+      transition: background-color 0.15s, color 0.15s;
+    }
+
+    .modal-cerrar:hover {
+      background-color: #f3f4f6;
+      color: #111827;
+    }
+
+    .modal-leyenda {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+      font-size: 12px;
+      color: #6b7280;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .leyenda-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .leyenda-punto {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .leyenda-linea {
+      width: 16px;
+      height: 0;
+      border-top: 2px dashed #9ca3af;
+      display: inline-block;
+    }
+
+    .chart-wrapper {
+      position: relative;
+      width: 100%;
+      height: 270px;
+    }
+
+    @media (max-width: 480px) {
+      .modal-contenido {
+        padding: 16px;
+      }
+      .chart-wrapper {
+        height: 230px;
+      }
     }
   </style>
 </head>
@@ -280,10 +436,30 @@
     </div>
   </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/storage.js?v=2"></script>
+  <!-- Modal Gráfica de Evolución -->
+  <div class="modal-overlay" id="modalGrafica" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+    <div class="modal-contenido">
+      <div class="modal-header">
+        <h2 class="modal-titulo" id="modalTitulo">Evolución Test 001</h2>
+        <button type="button" class="modal-cerrar" id="btnCerrarModal" aria-label="Cerrar">&times;</button>
+      </div>
+      <div class="modal-leyenda">
+        <span class="leyenda-item"><span class="leyenda-punto" style="background:#8bc34a;"></span>Aprobado (&le; 3)</span>
+        <span class="leyenda-item"><span class="leyenda-punto" style="background:#f66e6e;"></span>Suspenso (&gt; 3)</span>
+        <span class="leyenda-item"><span class="leyenda-linea"></span>Límite (3)</span>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="canvasEvolucion"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/storage.js?v=3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
     const TOTAL_TESTS = 90;
+    let chartInstancia = null;
 
     function formatearVeces(n) {
       if (!n || n <= 0) return '-';
@@ -320,16 +496,37 @@
         enlace.dataset.num = numStr;
         enlace.href = `tests/test_${numStr}.html?modo=${modo}`;
 
+        const celdaFallosHTML = realizado > 0
+          ? `<div class="celda-fallos clickable" title="Ver evolución de fallos">
+               <span class="fallos-valor">
+                 ${fallos}
+                 <svg class="icono-grafica" viewBox="0 0 24 24">
+                   <polyline points="3 17 9 11 13 15 21 7"></polyline>
+                   <polyline points="14 7 21 7 21 14"></polyline>
+                 </svg>
+               </span>
+             </div>`
+          : `<div class="celda-fallos">-</div>`;
+
         enlace.innerHTML = `
           <div class="celda-num">${numStr}</div>
           <div class="celda-estado"><span class="cuadro-estado ${claseEstado}"></span></div>
-          <div>${fallos}</div>
+          ${celdaFallosHTML}
           <div>${formatearVeces(realizado)}</div>
           <div>${ultimo}</div>
           <div class="celda-flecha">
             <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
           </div>
         `;
+
+        if (realizado > 0) {
+          const celdaFallos = enlace.querySelector('.celda-fallos');
+          celdaFallos.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            abrirGraficaTest(numStr);
+          });
+        }
 
         contenedor.appendChild(enlace);
       }
@@ -341,6 +538,155 @@
         a.href = `tests/test_${a.dataset.num}.html?modo=${modo}`;
       });
     }
+
+    // Plugin ligero para dibujar la línea horizontal de referencia en y = 3
+    const lineaLimitePlugin = {
+      id: 'lineaLimiteAprobado',
+      beforeDatasetsDraw(chart) {
+        const { ctx, chartArea: { left, right }, scales: { y } } = chart;
+        if (!y) return;
+        const yPos = y.getPixelForValue(3);
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.setLineDash([6, 4]);
+        ctx.lineWidth = 1.5;
+        ctx.strokeStyle = 'rgba(107, 114, 128, 0.7)';
+        ctx.moveTo(left, yPos);
+        ctx.lineTo(right, yPos);
+        ctx.stroke();
+        ctx.restore();
+      }
+    };
+
+    function abrirGraficaTest(numStr) {
+      const clave = `test_${numStr}`;
+      const historial = typeof obtenerHistorialTest === 'function' ? obtenerHistorialTest(clave) : [];
+
+      document.getElementById('modalTitulo').textContent = `Evolución Test ${numStr}`;
+      const modal = document.getElementById('modalGrafica');
+      modal.classList.add('activo');
+
+      const etiquetas = historial.map((item, idx) => {
+        const numIntento = item.intento || (idx + 1);
+        const fecha = item.fecha || '';
+        return fecha ? `#${numIntento} (${fecha})` : `#${numIntento}`;
+      });
+
+      const valoresFallos = historial.map(item => Number(item.fallos) || 0);
+
+      const coloresPuntos = valoresFallos.map(f => f <= 3 ? '#8bc34a' : '#f66e6e');
+      const bordesPuntos = valoresFallos.map(f => f <= 3 ? '#558b2f' : '#d32f2f');
+
+      const maxFallos = valoresFallos.length ? Math.max(...valoresFallos) : 0;
+      const sugeridoMax = Math.max(5, maxFallos + 1);
+
+      if (chartInstancia) {
+        chartInstancia.destroy();
+        chartInstancia = null;
+      }
+
+      const ctx = document.getElementById('canvasEvolucion').getContext('2d');
+      chartInstancia = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: etiquetas,
+          datasets: [{
+            label: 'Fallos',
+            data: valoresFallos,
+            borderColor: '#367cb8',
+            backgroundColor: 'rgba(54, 124, 184, 0.12)',
+            borderWidth: 2,
+            tension: 0.25,
+            fill: true,
+            pointBackgroundColor: coloresPuntos,
+            pointBorderColor: bordesPuntos,
+            pointBorderWidth: 2,
+            pointRadius: 6,
+            pointHoverRadius: 8,
+            pointHitRadius: 16
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          events: ['mousemove', 'mouseout', 'click', 'touchstart', 'touchmove'],
+          interaction: {
+            mode: 'nearest',
+            intersect: false
+          },
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              enabled: true,
+              backgroundColor: 'rgba(31, 41, 55, 0.95)',
+              titleFont: { size: 13, weight: '600' },
+              bodyFont: { size: 13 },
+              padding: 10,
+              cornerRadius: 6,
+              displayColors: true,
+              callbacks: {
+                title(context) {
+                  return context[0].label;
+                },
+                label(context) {
+                  const val = context.parsed.y;
+                  const estado = val <= 3 ? 'Aprobado' : 'Suspenso';
+                  return ` Fallos: ${val} (${estado})`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false
+              },
+              ticks: {
+                color: '#6b7280',
+                font: { size: 11 },
+                maxRotation: 35,
+                minRotation: 0
+              }
+            },
+            y: {
+              beginAtZero: true,
+              suggestedMax: sugeridoMax,
+              ticks: {
+                stepSize: 1,
+                precision: 0,
+                color: '#6b7280',
+                font: { size: 12 }
+              },
+              grid: {
+                color: '#f3f4f6'
+              }
+            }
+          }
+        },
+        plugins: [lineaLimitePlugin]
+      });
+    }
+
+    function cerrarModalGrafica() {
+      document.getElementById('modalGrafica').classList.remove('activo');
+    }
+
+    document.getElementById('btnCerrarModal').addEventListener('click', cerrarModalGrafica);
+
+    document.getElementById('modalGrafica').addEventListener('click', (e) => {
+      if (e.target.id === 'modalGrafica') {
+        cerrarModalGrafica();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.getElementById('modalGrafica').classList.contains('activo')) {
+        cerrarModalGrafica();
+      }
+    });
 
     async function confirmarBorrado() {
       if (confirm('¿Seguro que quieres borrar todos tus resultados guardados?')) {

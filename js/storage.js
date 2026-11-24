@@ -61,16 +61,61 @@ async function guardarResultadoTest(claveTest, aciertos, fallos, total = 30) {
   const dia = String(hoy.getDate()).padStart(2, "0");
   const mes = String(hoy.getMonth() + 1).padStart(2, "0");
   const anio = hoy.getFullYear();
+  const fechaActual = `${dia}/${mes}/${anio}`;
+
+  let historial = [];
+
+  if (Array.isArray(anterior.historial)) {
+    historial = [...anterior.historial];
+  } else if ((anterior.intentos || 0) > 0) {
+    historial = [
+      {
+        fecha: anterior.ultimo || "Anterior",
+        fallos: Number(anterior.fallos ?? 0)
+      }
+    ];
+  }
+
+  historial.push({
+    fecha: fechaActual,
+    fallos: Number(fallos)
+  });
 
   progreso[claveTest] = {
     intentos: (anterior.intentos || 0) + 1,
     aciertos: aciertos,
     fallos: fallos,
     total: total,
-    ultimo: `${dia}/${mes}/${anio}`
+    ultimo: fechaActual,
+    historial: historial
   };
 
   await guardarProgreso(progreso);
+}
+
+// Devuelve el historial de fallos de un test concreto con retrocompatibilidad
+function obtenerHistorialTest(claveTest) {
+  const progreso = obtenerProgreso();
+  const datos = progreso[claveTest];
+
+  if (!datos) {
+    return [];
+  }
+
+  if (Array.isArray(datos.historial)) {
+    return datos.historial;
+  }
+
+  if ((datos.intentos || 0) > 0) {
+    return [
+      {
+        fecha: datos.ultimo || "Anterior",
+        fallos: Number(datos.fallos ?? 0)
+      }
+    ];
+  }
+
+  return [];
 }
 
 // Exporta a archivo .json
