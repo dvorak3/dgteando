@@ -12,6 +12,10 @@ function guardarProgreso(datos) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(datos, null, 2));
 }
 
+function borrarProgreso() {
+  localStorage.removeItem(STORAGE_KEY);
+}
+
 function fechaHoyFormato() {
   const hoy = new Date();
   const d = String(hoy.getDate()).padStart(2, '0');
