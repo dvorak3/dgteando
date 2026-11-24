@@ -640,6 +640,58 @@ body {
   color: var(--green-primary);
 }
 
+/* Tarjeta 3: Repaso Inteligente (Anki) */
+.anki-main {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.anki-num {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.anki-texto {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.anki-sub {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.btn-repaso-anki {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 14px;
+  background-color: var(--green-primary);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.12s ease;
+}
+
+.btn-repaso-anki:hover {
+  background-color: #166534;
+}
+
 /* ================= RESPONSIVE (< 860px) ================= */
 @media (max-width: 860px) {
   .dashboard-grid {
@@ -655,12 +707,17 @@ body {
     gap: 12px;
   }
 
+  .widget-card-anki {
+    grid-column: 1 / -1;
+  }
+
   .widget-card {
     padding: 16px;
   }
 
   .examen-dias-num,
-  .racha-num {
+  .racha-num,
+  .anki-num {
     font-size: 28px;
   }
 }

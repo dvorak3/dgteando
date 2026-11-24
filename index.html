@@ -134,6 +134,33 @@
           <p class="racha-mensaje" id="rachaMensaje">Haz un test hoy para iniciar tu racha.</p>
           <span class="racha-badge-hoy" id="rachaBadge">Pendiente hoy</span>
         </div>
+
+        <!-- Tarjeta 3: Repaso Inteligente (Anki) -->
+        <div class="card widget-card widget-card-anki">
+          <div class="widget-top">
+            <div class="widget-title-group">
+              <div class="widget-icon-green" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <span class="widget-label">Repaso inteligente (Anki)</span>
+            </div>
+          </div>
+
+          <div class="anki-main">
+            <span class="anki-num" id="ankiCuotaNum">0</span>
+            <span class="anki-texto" id="ankiCuotaEtiqueta">tarjetas para hoy</span>
+          </div>
+          <p class="anki-sub" id="ankiTotalSeguimiento">0 preguntas en seguimiento</p>
+
+          <a href="test.html?modo=repaso" class="btn-repaso-anki" id="btnRepasoAnki">
+            Repasar 0 tarjetas hoy
+          </a>
+          <span class="racha-badge-hoy completado" id="ankiBadgeAlDia" style="display: none;">
+            ¡Al día! 0 tarjetas pendientes
+          </span>
+        </div>
       </aside>
     </main>
   </div>
@@ -157,8 +184,8 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/storage.js?v=4"></script>
+  <script src="js/storage.js?v=5"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/index.js?v=3"></script>
 </body>
 </html>
