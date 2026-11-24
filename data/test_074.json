@@ -8,7 +8,7 @@
         "La placa L se llevara colocada en el vehiculo durante los 2 primeros anos desde la expedicion del permiso.",
         "La placa L debera llevarse en la parte posterior izquierda del vehiculo y visible para los demas conductores."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_074_p01.jpg"
     },
     {
@@ -18,7 +18,7 @@
         "Aquella que me permita detenerme, sin colisionar con el.",
         "90 metros."
       ],
-      "correcta": 0,
+      "correcta": 1,
       "imagen": "../img/test_074_p02.jpg"
     },
     {
@@ -28,7 +28,7 @@
         "Solo por el central.",
         "Por el de la derecha."
       ],
-      "correcta": 0,
+      "correcta": 1,
       "imagen": "../img/test_074_p03.jpg"
     },
     {
@@ -47,7 +47,7 @@
         "Si, abandonandola por la primera salida.",
         "No."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_074_p05.jpg"
     },
     {
@@ -57,7 +57,7 @@
         "Si, por el exterior izquierdo.",
         "No."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_074_p06.jpg"
     },
     {
@@ -76,7 +76,7 @@
         "No.",
         "Solo cuando el vehiculolleva dos espejos retrovisores exteriores."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "Entre los costes humanos derivados de los accidentes de trafico se encuentran...",
@@ -85,7 +85,7 @@
         "la alta capacidad de rehabilitaciones.",
         "la perdida de capacidad productiva."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "zQue le indica la senal?",
@@ -114,7 +114,7 @@
         "Detectar mediante observacion directa si hay desgaste de las pastillas de freno.",
         "Sustituir laspastllas por otras nuevas,en cuantoaparezcan losprimeros sintomas."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_074_p12.jpg"
     },
     {
@@ -124,7 +124,7 @@
         "Una prohibicion anterior.",
         "Unarecomendacionanterior."
       ],
-      "correcta": 0
+      "correcta": 1
     },
     {
       "texto": "Al circular bajo condiciones de visibilidad especialmente desfavorables, zes obligatorio encender la luz antiniebla trasera?",
@@ -133,7 +133,7 @@
         "Si, siendo tambien obligatorio encender la luz de largo alcance.",
         "Si,para indicar suposicional resto delos usuarios."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_074_p14.jpg"
     },
     {
@@ -143,7 +143,7 @@
         "una autovia.",
         "una autopista."
       ],
-      "correcta": 0
+      "correcta": 1
     },
     {
       "texto": "El enorme impacto economico de los accidentes de trafico...",
@@ -171,7 +171,7 @@
         "Queproteja convenientementede losruidos.",
         "Quetengabuena ventilacionpara que no se empane."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_074_p18.jpg"
     },
     {
@@ -181,7 +181,7 @@
         "enautovias,pero no enautopistas.",
         "en autopistas y en autovias."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_074_p19.jpg"
     },
     {
@@ -191,7 +191,7 @@
         "tienen prioridad sobre el resto de senales.",
         "tienen prioridad sobre el resto de senales, salvo las de los agentes de la autoridad."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_074_p20.jpg"
     },
     {
@@ -201,7 +201,7 @@
         "Que tome decisiones masrapidasycometamenos errores.",
         "Queaparezcanmas distracciones al volante."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "Un ciclomotor, itiene motor?",
@@ -210,7 +210,7 @@
         "Si.",
         "Si, pero no se considera vehiculo de motor."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "zQue debe tener en cuenta sobre el sistema RcTA de alerta de trafico cruzado trasero?",
@@ -248,7 +248,7 @@
         "No.",
         "Si,mientraslopermitanlascircunstancias."
       ],
-      "correcta": 0
+      "correcta": 1
     },
     {
       "texto": "Mirarse en el espejo retrovisor mientras se conduce, ipuede aumentar el riesgo de accidente?",
@@ -277,7 +277,7 @@
         "Solo si hay una senal que lo indique.",
         "Si, al menos 20 km/h respecto al limite existente en la via."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_074_p29.jpg"
     },
     {
@@ -287,7 +287,7 @@
         "El vehiculo rojo.",
         "El vehiculo azul. Corregir el test"
       ],
-      "correcta": 0,
+      "correcta": 1,
       "imagen": "../img/test_074_p30.jpg"
     }
   ]

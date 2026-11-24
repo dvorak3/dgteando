@@ -8,7 +8,7 @@
         "Si, cada seis meses porque es un elemento sujeto a inspeccion tecnica periodica.",
         "Si, sobre todo al inicio de la primavera, ya que su capacidad de retencion es limitada."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "Uno de los factores que propician la accidentalidad de los jovenes conductores es...",
@@ -17,7 +17,7 @@
         "la percepcion delaconduccion como algopeligroso.",
         "la menor percepcion del riesgo."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "Si los amortiguadores de su turismo estan en mal estado, ique puede ocurrir?",
@@ -26,7 +26,7 @@
         "Que la distancia de frenado disminuye en un 40%.",
         "La distancia de frenado aumentara peligrosamente."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_077_p03.jpg"
     },
     {
@@ -36,7 +36,7 @@
         "Si, en tanto que la velocidad debe adecuarse a las circunstancias de la via, como por ejemplo, la lluvia, nieve o hielo.",
         "Si, siempre que vaya a mas de 100 km/h."
       ],
-      "correcta": 0
+      "correcta": 1
     },
     {
       "texto": "Llevar encendido el telefono movil en el vehiculo, zpuede resultar peligroso?",
@@ -45,7 +45,7 @@
         "No, porque no es un ruido que pueda distraer al conductor.",
         "Si, el sonido del telefono, al igual que otro ruido, puede sorprender al conductor."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "zQue debe hacer un conductor para que los demas usuarios puedan anticiparse a sus intenciones?",
@@ -73,7 +73,7 @@
         "Si, siempre que sea por un tiempo inferior a 2 minutos.",
         "No, excepto para la carga ydescarga dentro del horario."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "zQue vehiculo tendra preferencia de paso en un estrechamiento cuando la prioridad no este expresamente senalizada?",
@@ -82,7 +82,7 @@
         "El vehiculo que haya entrado primero.",
         "El vehiculo que haya llegado primero."
       ],
-      "correcta": 0,
+      "correcta": 1,
       "imagen": "../img/test_077_p09.jpg"
     },
     {
@@ -92,7 +92,7 @@
         "Ponernosun chaleco reflectante certificado.",
         "Ponernos el chaleco homologado, una vez estemos fuera del vehiculo."
       ],
-      "correcta": 0
+      "correcta": 1
     },
     {
       "texto": "Que haremos ante un fallo de los frenos?",
@@ -101,7 +101,7 @@
         "Chocar gradualmente contra cualquier objeto rigido de la via para detenerse cuanto antes.",
         "Bombear el pedal de freno, por si alguno de los circuitos conserva capacidad de frenada."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_077_p11.jpg"
     },
     {
@@ -111,7 +111,7 @@
         "No,y tampoco son una de las principales causas demortalidad.",
         "Si,ytambien son una de las principales causas de mortalidad."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_077_p12.jpg"
     },
     {
@@ -121,7 +121,7 @@
         "No, pues esta prohibida la circulacion con el escape libre tanto en vias urbanas como interurbanas.",
         "No,si la conduccion es vias interurbanas."
       ],
-      "correcta": 0,
+      "correcta": 1,
       "imagen": "../img/test_077_p13.jpg"
     },
     {
@@ -140,7 +140,7 @@
         "50 metros.",
         "100 metros."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "Las marcas viales que senalizan un tramo de obras...",
@@ -179,7 +179,7 @@
         "Si, durante 2 anos.",
         "No."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "Debe saber que a partir de la senal hay peligro por la proximidad de...",
@@ -188,7 +188,7 @@
         "una zonacondesprendimientosfrecuentes.",
         "un tramo de via donde existe el riesgo de que se proyecte la gravilla al pasar los vehiculos."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "zQué significa esta senal?",
@@ -197,7 +197,7 @@
         "Calzada de 3 carriles con bifurcacion hacia la izquierda.",
         "Calzada de3carriles con bifurcacion hacia la derecha."
       ],
-      "correcta": 0,
+      "correcta": 1,
       "imagen": "../img/test_077_p21.jpg"
     },
     {
@@ -207,7 +207,7 @@
         "No.",
         "Si, si no hay sitio en las proximidades para dejar el vehiculo al borde de la calzada."
       ],
-      "correcta": 0,
+      "correcta": 1,
       "imagen": "../img/test_077_p22.jpg"
     },
     {
@@ -217,7 +217,7 @@
         "No, solo es obligatorio para los camiones.",
         "Si, con un panel reglamentario."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_077_p23.jpg"
     },
     {
@@ -227,7 +227,7 @@
         "Tanto en viasurbanas como interurbanas suficientemente iluminadas.",
         "Soloen las vias interurbanas insuficientemente iluminadas."
       ],
-      "correcta": 0,
+      "correcta": 1,
       "imagen": "../img/test_077_p24.jpg"
     },
     {
@@ -237,7 +237,7 @@
         "No guardar la distancia de seguridad con el vehiculo que circula delante.",
         "Las velocidades superiores a 100 km por hora."
       ],
-      "correcta": 0,
+      "correcta": 1,
       "imagen": "../img/test_077_p25.jpg"
     },
     {
@@ -256,7 +256,7 @@
         "menor que cuando circula sin carga.",
         "mayor que cuando circula sin carga."
       ],
-      "correcta": 0
+      "correcta": 2
     },
     {
       "texto": "Al llegar a este punto de peaje, ipor que carriles podremos pasar?",
@@ -265,7 +265,7 @@
         "Solo por el central.",
         "Por el de la derecha."
       ],
-      "correcta": 0,
+      "correcta": 1,
       "imagen": "../img/test_077_p28.jpg"
     },
     {
@@ -275,7 +275,7 @@
         "solo gastos en atencion y tratamiento de los heridos.",
         "danos a la via y el entorno."
       ],
-      "correcta": 0,
+      "correcta": 2,
       "imagen": "../img/test_077_p29.jpg"
     },
     {
@@ -285,7 +285,7 @@
         "Si, en calzadas con carriles estrechos.",
         "Si, siempre que no moleste. Corregir el test"
       ],
-      "correcta": 0,
+      "correcta": 1,
       "imagen": "../img/test_077_p30.jpg"
     }
   ]
