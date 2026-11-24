@@ -3,266 +3,296 @@
   "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Ademas de llevar la placa L, ¿ique otras condiciones deben cumplir los conductores noveles?",
+      "texto": "Además de llevar la placa L, ¿qué otras condiciones deben cumplir los conductores noveles?",
       "opciones": [
-        "Circularcomomaximoa80km/h.",
-        "La placa L se llevara colocada en el vehiculo durante los 2 primeros anos desde la expedicion del permiso.",
-        "La placa L debera llevarse en la parte posterior izquierda del vehiculo y visible para los demas conductores."
+        "Circular como máximo a 80 km/h.",
+        "La placa L se llevará colocada en el vehículo durante los 2 primeros años desde la expedición del permiso.",
+        "La placa L deberá llevarse en la parte posterior izquierda del vehículo y visible para los demás conductores."
       ],
+      "correcta": 2,
       "imagen": "../img/test_074_p01.jpg"
     },
     {
-      "texto": "En esta situacion, ¿icual es la distancia de seguridad entre vehiculos?",
+      "texto": "En esta situación, ¿cuál es la distancia de seguridad entre vehículos?",
       "opciones": [
         "60 metros.",
-        "Aquella que me permita detenerme, sin colisionar con el.",
+        "Aquella que me permita detenerme sin colisionar con él.",
         "90 metros."
       ],
+      "correcta": 1,
       "imagen": "../img/test_074_p02.jpg"
     },
     {
-      "texto": "Al llegar a este punto de peaje, ¿zpor que carriles podremos pasar?",
+      "texto": "Al llegar a este punto de peaje, ¿por qué carriles podremos pasar?",
       "opciones": [
         "Por cualquiera de los tres carriles.",
         "Solo por el central.",
         "Por el de la derecha."
       ],
+      "correcta": 1,
       "imagen": "../img/test_074_p03.jpg"
     },
     {
-      "texto": "En las tecnicas de conduccion preventiva, ¿zes suficiente con conducir cumpliendo las normas?",
+      "texto": "En las técnicas de conducción preventiva, ¿es suficiente con conducir cumpliendo las normas?",
       "opciones": [
-        "No,hayque tenertambien en cuenta que otro conductor puede cometer una infraccion.",
-        "Si, porque cumpliendo la normativa de trafico el riesgo es nulo.",
-        "Si,porque cumplir las normas es obligatorio."
-      ]
+        "No, hay que tener también en cuenta que otro conductor puede cometer una infracción.",
+        "Sí, porque cumpliendo la normativa de tráfico el riesgo es nulo.",
+        "Sí, porque cumplir las normas es obligatorio."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En caso de congestion del trafico en una autopista, ¿ise podra circular por el arcen?",
+      "texto": "En caso de congestión del tráfico en una autopista, ¿se podrá circular por el arcén?",
       "opciones": [
         "Sí.",
-        "Si, abandonandola por la primera salida.",
+        "Sí, abandonándola por la primera salida.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_074_p05.jpg"
     },
     {
-      "texto": "¿Se podra sustituir el espejo retrovisor exterior por uno interior panoramico?",
+      "texto": "¿Se podrá sustituir el espejo retrovisor exterior por uno interior panorámico?",
       "opciones": [
-        "Si, por el exterior derecho.",
-        "Si, por el exterior izquierdo.",
+        "Sí, por el exterior derecho.",
+        "Sí, por el exterior izquierdo.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_074_p06.jpg"
     },
     {
       "texto": "El sistema antibloqueo de frenos ABS...",
       "opciones": [
-        "permite mantener el control sobre la direccion.",
-        "reducela distancia defrenado en todos los casos.",
-        "haceque el vehiculo mantenga su trayectoria."
-      ]
+        "permite mantener el control sobre la dirección.",
+        "reduce la distancia de frenado en todos los casos.",
+        "hace que el vehículo mantenga su trayectoria."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Un turismo con cortinillas contra el sol en las ventanillas traseras, ¿ipuede circular?",
+      "texto": "Un turismo con cortinillas contra el sol en las ventanillas traseras, ¿puede circular?",
       "opciones": [
-        "Si, siempre.",
+        "Sí, siempre.",
         "No.",
-        "Solo cuando el vehiculolleva dos espejos retrovisores exteriores."
-      ]
+        "Solo cuando el vehículo lleva dos espejos retrovisores exteriores."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Entre los costes humanos derivados de los accidentes de trafico se encuentran...",
+      "texto": "Entre los costes humanos derivados de los accidentes de tráfico se encuentran...",
       "opciones": [
         "el aumento de la capacidad productiva.",
         "la alta capacidad de rehabilitaciones.",
-        "la perdida de capacidad productiva."
-      ]
+        "la pérdida de capacidad productiva."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Que le indica la senal?",
+      "texto": "¿Qué le indica la señal?",
       "opciones": [
-        "La velocidad maxima a la que puedo circular en un tramo de obras.",
-        "La velocidad maxima a la que debo circular en esa via.",
-        "La velocidad maxima para los vehiculos de obras."
+        "La velocidad máxima a la que puedo circular en un tramo de obras.",
+        "La velocidad máxima a la que debo circular en esa vía.",
+        "La velocidad máxima para los vehículos de obras."
       ],
+      "correcta": 0,
       "imagen": "../img/test_074_p10.jpg"
     },
     {
-      "texto": "¿Donde esta permitido parar en una via interurbana?",
+      "texto": "¿Dónde está permitido parar en una vía interurbana?",
       "opciones": [
-        "En el lado derecho, fuera de la calzada y de la parte transitable del arcen.",
-        "En cualquier lado, siemprefuera de la calzada yde la parte transitable del arcen.",
-        "Si es por necesidades del trafico, en el arcen si es transitable."
+        "En el lado derecho, fuera de la calzada y de la parte transitable del arcén.",
+        "En cualquier lado, siempre fuera de la calzada y de la parte transitable del arcén.",
+        "Si es por necesidades del tráfico, en el arcén si es transitable."
       ],
+      "correcta": 0,
       "imagen": "../img/test_074_p11.jpg"
     },
     {
-      "texto": "Cuando aparezcan los primeros sintomas de desgaste de la pastillas de freno, ¿ique deberemos hacer?",
+      "texto": "Cuando aparezcan los primeros síntomas de desgaste de las pastillas de freno, ¿qué deberemos hacer?",
       "opciones": [
         "Esperar a notar chirridos anormales en el momento de frenar.",
-        "Detectar mediante observacion directa si hay desgaste de las pastillas de freno.",
-        "Sustituir laspastllas por otras nuevas,en cuantoaparezcan losprimeros sintomas."
+        "Detectar mediante observación directa si hay desgaste de las pastillas de freno.",
+        "Sustituir las pastillas por otras nuevas en cuanto aparezcan los primeros síntomas."
       ],
+      "correcta": 2,
       "imagen": "../img/test_074_p12.jpg"
     },
     {
-      "texto": "Esta senal indica que ha finalizado...",
+      "texto": "Esta señal indica que ha finalizado...",
       "opciones": [
-        "Una obligacion anterior.",
-        "Una prohibicion anterior.",
-        "Unarecomendacionanterior."
+        "Una obligación anterior.",
+        "Una prohibición anterior.",
+        "Una recomendación anterior."
       ],
+      "correcta": 1,
       "imagen": "../img/test_074_p13.jpg"
     },
     {
-      "texto": "Al circular bajo condiciones de visibilidad especialmente desfavorables, ¿zes obligatorio encender la luz antiniebla trasera?",
+      "texto": "Al circular bajo condiciones de visibilidad especialmente desfavorables, ¿es obligatorio encender la luz antiniebla trasera?",
       "opciones": [
         "No, es solo opcional.",
-        "Si, siendo tambien obligatorio encender la luz de largo alcance.",
-        "Si,para indicar suposicional restode los usuarios."
+        "Sí, siendo también obligatorio encender la luz de largo alcance.",
+        "Sí, para indicar su posición al resto de los usuarios."
       ],
+      "correcta": 2,
       "imagen": "../img/test_074_p14.jpg"
     },
     {
-      "texto": "Estas senales, sobre una carretera convencional, indican salida inmediata hacia...",
+      "texto": "Estas señales, sobre una carretera convencional, indican salida inmediata hacia...",
       "opciones": [
         "otra carretera convencional.",
-        "una autovia.",
+        "una autovía.",
         "una autopista."
       ],
+      "correcta": 2,
       "imagen": "../img/test_074_p15.jpg"
     },
     {
-      "texto": "El enorme impacto economico de los accidentes de trafico...",
+      "texto": "El enorme impacto económico de los accidentes de tráfico...",
       "opciones": [
-        "nos afectaatodos.",
-        "afecta soloa los conductores.",
-        "afecta solo a los propietarios de vehiculos."
+        "nos afecta a todos.",
+        "afecta solo a los conductores.",
+        "afecta solo a los propietarios de vehículos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_074_p16.jpg"
     },
     {
-      "texto": "Una correcta suspension del vehiculo sirve para:",
+      "texto": "Una correcta suspensión del vehículo sirve para:",
       "opciones": [
-        "Mantenerel vehiculo siempre en contacto con el suelo.",
-        "Mantener inmovilizado el vehiculo.",
+        "Mantener el vehículo siempre en contacto con el suelo.",
+        "Mantener inmovilizado el vehículo.",
         "Transmitir el giro del motor a las ruedas."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Al elegir un casco para conducir una motocicleta, ¿ique debe tener en cuenta?",
+      "texto": "Al elegir un casco para conducir una motocicleta, ¿qué debe tener en cuenta?",
       "opciones": [
         "Que se pueda sujetar sin tener que llevarlo abrochado.",
-        "Queproteja convenientementede losruidos.",
-        "Quetengabuena ventilacionpara que no se empane."
+        "Que proteja convenientemente de los ruidos.",
+        "Que tenga buena ventilación para que no se empañe."
       ],
+      "correcta": 2,
       "imagen": "../img/test_074_p18.jpg"
     },
     {
-      "texto": "La circulacion de peatones esta prohibida...",
+      "texto": "La circulación de peatones está prohibida...",
       "opciones": [
-        "en autopistas,pero no en autovias.",
-        "enautovias,pero no enautopistas.",
-        "en autopistas y en autovias."
+        "en autopistas, pero no en autovías.",
+        "en autovías, pero no en autopistas.",
+        "en autopistas y en autovías."
       ],
+      "correcta": 2,
       "imagen": "../img/test_074_p19.jpg"
     },
     {
-      "texto": "Los conos de la fotografia ...",
+      "texto": "Los conos de la fotografía...",
       "opciones": [
-        "sirven solo para senalizar un nuevo carril.",
-        "tienen prioridad sobre el resto de senales.",
-        "tienen prioridad sobre el resto de senales, salvo las de los agentes de la autoridad."
+        "sirven solo para señalizar un nuevo carril.",
+        "tienen prioridad sobre el resto de señales.",
+        "tienen prioridad sobre el resto de señales, salvo las de los agentes de la autoridad."
       ],
+      "correcta": 2,
       "imagen": "../img/test_074_p20.jpg"
     },
     {
-      "texto": "El estrés, ¿ique efectos puede tener sobre el conductor?",
+      "texto": "El estrés, ¿qué efectos puede tener sobre el conductor?",
       "opciones": [
-        "Que tome decisiones mas lentas ycometamenos errores.",
-        "Que tome decisiones masrapidasycometamenos errores.",
-        "Queaparezcanmas distracciones al volante."
-      ]
+        "Que tome decisiones más lentas y cometa menos errores.",
+        "Que tome decisiones más rápidas y cometa menos errores.",
+        "Que aparezcan más distracciones al volante."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Un ciclomotor, ¿itiene motor?",
+      "texto": "Un ciclomotor, ¿tiene motor?",
       "opciones": [
         "No.",
-        "Si.",
-        "Si, pero no se considera vehiculo de motor."
+        "Sí.",
+        "Sí, pero no se considera vehículo de motor."
       ],
+      "correcta": 2,
       "imagen": "../img/test_074_p22.jpg"
     },
     {
-      "texto": "¿Que debe tener en cuenta sobre el sistema RcTA de alerta de trafico cruzado trasero?",
+      "texto": "¿Qué debe tener en cuenta sobre el sistema RCTA de alerta de tráfico cruzado trasero?",
       "opciones": [
-        "Alerta de vehiculos que se aproximan transversalmente; algunos modelos incorporan frenado automatico.",
-        "Todos los modelos frenan automaticamente a cualquier velocidad.",
-        "Sustituye la observacion del conductor al salir marcha atras."
+        "Alerta de vehículos que se aproximan transversalmente; algunos modelos incorporan frenado automático.",
+        "Todos los modelos frenan automáticamente a cualquier velocidad.",
+        "Sustituye la observación del conductor al salir marcha atrás."
       ],
+      "correcta": 0,
       "imagen": "../img/test_074_p23.jpg"
     },
     {
-      "texto": "¿Cuando debe aumentarse la distancia de seguridad?",
+      "texto": "¿Cuándo debe aumentarse la distancia de seguridad?",
       "opciones": [
-        "Cuando aumenta la velocidad de los vehiculos.",
-        "Cuandoquiero adelantar.",
-        "Cuando disminuyela velocidad de los vehiculos."
-      ]
+        "Cuando aumenta la velocidad de los vehículos.",
+        "Cuando quiero adelantar.",
+        "Cuando disminuye la velocidad de los vehículos."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Una de las tecnicas de vision en la conduccion preventiva consiste en...",
+      "texto": "Una de las técnicas de visión en la conducción preventiva consiste en...",
       "opciones": [
         "mirar a lo lejos, a los lados y por los retrovisores.",
-        "instalar espejos panoramicos.",
-        "acostumbrarsea losdeslumbramientos."
+        "instalar espejos panorámicos.",
+        "acostumbrarse a los deslumbramientos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_074_p25.jpg"
     },
     {
-      "texto": "¿Puede rebasar la velocidad maxima indicada en la senal?",
+      "texto": "¿Puede rebasar la velocidad máxima indicada en la señal?",
       "opciones": [
-        "Si, en 20km/h para adelantar.",
+        "Sí, en 20 km/h para adelantar.",
         "No.",
-        "Si,mientraslopermitanlascircunstancias."
+        "Sí, mientras lo permitan las circunstancias."
       ],
+      "correcta": 1,
       "imagen": "../img/test_074_p26.jpg"
     },
     {
-      "texto": "Mirarse en el espejo retrovisor mientras se conduce, ¿ipuede aumentar el riesgo de accidente?",
+      "texto": "Mirarse en el espejo retrovisor mientras se conduce, ¿puede aumentar el riesgo de accidente?",
       "opciones": [
-        "Si, porque el tiempo que se mira al espejo no se presta atencion a la conduccion.",
-        "Si, pero solamente de noche.",
-        "No,porque es posible mirarse al espejo y conducir a la vez."
+        "Sí, porque el tiempo que se mira al espejo no se presta atención a la conducción.",
+        "Sí, pero solamente de noche.",
+        "No, porque es posible mirarse al espejo y conducir a la vez."
       ],
+      "correcta": 0,
       "imagen": "../img/test_074_p27.jpg"
     },
     {
-      "texto": "Los conductores de vehiculos especiales que estan obligados a utilizar la senal V-2, ¿cuando la utilizaran?",
+      "texto": "Los conductores de vehículos especiales que están obligados a utilizar la señal V-2, ¿cuándo la utilizarán?",
       "opciones": [
-        "Tanto de dia como de noche.",
-        "Solo de dia.",
+        "Tanto de día como de noche.",
+        "Solo de día.",
         "Solo de noche."
       ],
+      "correcta": 0,
       "imagen": "../img/test_074_p28.jpg"
     },
     {
-      "texto": "Al rebasar un vehiculo inmovilizado por una averia que ocupa parte de la calzada, ¿zdebe reducirse la velocidad?",
+      "texto": "Al rebasar un vehículo inmovilizado por una avería que ocupa parte de la calzada, ¿debe reducirse la velocidad?",
       "opciones": [
         "No, si se mantiene la trayectoria.",
-        "Solo si hay una senal que lo indique.",
-        "Si, al menos 20 km/h respecto al limite existente en la via."
+        "Solo si hay una señal que lo indique.",
+        "Sí, al menos 20 km/h respecto al límite existente en la vía."
       ],
+      "correcta": 2,
       "imagen": "../img/test_074_p29.jpg"
     },
     {
-      "texto": "En esta interseccion, ¿ique vehiculo pasara en uiltimo lugar si el vehiculo rojo gira hacia la izquierda?",
+      "texto": "En esta intersección, ¿qué vehículo pasará en último lugar si el vehículo rojo gira hacia la izquierda?",
       "opciones": [
-        "El vehiculo verde.",
-        "El vehiculo rojo.",
-        "El vehiculo azul."
+        "El vehículo verde.",
+        "El vehículo rojo.",
+        "El vehículo azul."
       ],
+      "correcta": 1,
       "imagen": "../img/test_074_p30.jpg"
     }
   ]
