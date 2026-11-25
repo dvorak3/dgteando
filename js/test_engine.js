@@ -223,7 +223,7 @@
   const ETIQUETA_MADUREZ = { nueva: 'Nueva', aprendiendo: 'Aprendiendo', joven: 'Joven', madura: 'Madura' };
   const ETIQUETA_NIVEL = { hard: 'Hard', medium: 'Medium', easy: 'Easy', again: 'Again' };
   const PUESTOS_REENCOLAR = 4; // "again": la tarjeta vuelve a salir unos puestos más adelante
-  const MS_SALIDA = 180;       // duración de la animación de salida de la tarjeta
+  const MS_SALIDA = 144;       // duración de la animación de salida de la tarjeta (debe coincidir con .repaso-stage.saliendo en test.css)
 
   const SVG_ATTRS = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
   const ICONO_CHECK = `<svg ${SVG_ATTRS}><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>`;
@@ -559,7 +559,7 @@
       });
 
       const ayuda = el('repasoAyuda');
-      if (ayuda) ayuda.innerHTML = 'Pulsa <kbd>1</kbd> Hard · <kbd>2</kbd> Medium · <kbd>3</kbd> Easy · <kbd>4</kbd> Again · <kbd>Espacio</kbd>/<kbd>Enter</kbd> acepta la sugerida y pasa a la siguiente';
+      if (ayuda) ayuda.innerHTML = '<kbd>Espacio</kbd>/<kbd>Enter</kbd> acepta la sugerida y pasa a la siguiente';
 
       // En pantallas pequeñas asegura que el panel de confianza quede a la vista
       requestAnimationFrame(() => {
