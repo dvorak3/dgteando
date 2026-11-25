@@ -15,10 +15,10 @@
   padding: 1px 6px;
   border: 1px solid var(--borde-tecla);
   border-bottom-width: 2px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--bg-pagina);
-  font-size: 12px;
-  font-weight: 700;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
   text-align: center;
   color: var(--texto-etiqueta);
 }
@@ -34,33 +34,33 @@
 }
 
 .repaso-salir {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
   color: var(--texto-secundario);
   text-decoration: none;
 }
 .repaso-salir:hover { color: var(--texto-principal); }
 
 .repaso-contador {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
   color: var(--texto-principal);
 }
 
 .repaso-repeticion {
   margin-left: 6px;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-fallo-oscuro);
 }
 
 .repaso-badge {
-  font-size: 11.5px;
-  font-weight: 700;
+  font-size: var(--text-2xs-plus);
+  font-weight: var(--weight-bold);
   padding: 3px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--bg-neutro);
   color: var(--texto-badge);
 }
@@ -71,14 +71,14 @@
 
 .repaso-progreso {
   height: 8px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--bg-barra-vacia);
   overflow: hidden;
   margin-bottom: 16px;
 }
 .repaso-progreso-barra {
   height: 100%;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--color-primario);
   transition: width 0.25s ease;
 }
@@ -90,15 +90,15 @@
   gap: 16px;
   background: var(--bg-tarjeta);
   border: 1px solid var(--borde-suave);
-  border-radius: 16px;
+  border-radius: var(--radius-3xl);
   padding: 20px;
-  box-shadow: 0 4px 20px -2px var(--asfalto-a05);
+  box-shadow: var(--sombra-tarjeta-repaso);
 }
 .repaso-tarjeta.con-imagen { grid-template-columns: 1fr 190px; }
 
 .repaso-enunciado {
-  font-size: 17px;
-  font-weight: 600;
+  font-size: var(--text-lg-plus);
+  font-weight: var(--weight-semibold);
   line-height: 1.45;
   margin-bottom: 16px;
 }
@@ -116,12 +116,12 @@
   width: 100%;
   text-align: left;
   font: inherit;
-  font-size: 15px;
+  font-size: var(--text-md);
   line-height: 1.4;
   color: var(--texto-principal);
   background: var(--bg-tarjeta);
   border: 1.5px solid var(--borde-suave);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   padding: 12px 14px;
   cursor: pointer;
   transition: border-color 0.12s, background-color 0.12s;
@@ -132,7 +132,7 @@
 .repaso-opcion.es-correcta { border-color: var(--color-primario); background: var(--color-primario-suave); }
 .repaso-opcion.es-fallo    { border-color: var(--color-fallo); background: var(--color-fallo-fondo); }
 
-.repaso-opcion-texto .opcion-letra { font-weight: 700; margin-right: 2px; }
+.repaso-opcion-texto .opcion-letra { font-weight: var(--weight-bold); margin-right: 2px; }
 
 .repaso-tecla {
   flex-shrink: 0;
@@ -144,10 +144,10 @@
   padding: 0 6px;
   border: 1px solid var(--borde-tecla);
   border-bottom-width: 2px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--bg-pagina);
-  font-size: 12px;
-  font-weight: 700;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
   color: var(--texto-etiqueta);
 }
 
@@ -156,7 +156,7 @@
   width: 100%;
   height: auto;
   border: 1px solid var(--borde-suave);
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
 }
 
 /* ---------- Botones de confianza ---------- */
@@ -165,8 +165,8 @@
 
 .repaso-confianza-titulo {
   margin-bottom: 10px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
   color: var(--texto-secundario);
 }
 
@@ -185,7 +185,7 @@
   gap: 4px;
   font: inherit;
   padding: 11px 10px;
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   border: 1.5px solid transparent;
   cursor: pointer;
   transition: transform 0.1s ease, filter 0.12s ease;
@@ -194,8 +194,8 @@
 .repaso-btn-confianza:disabled { opacity: 0.6; cursor: default; }
 .repaso-btn-confianza:focus-visible { outline: 2px solid var(--texto-principal); outline-offset: 2px; }
 
-.repaso-btn-linea { font-size: 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
-.repaso-btn-dias  { font-size: 12px; font-weight: 600; opacity: 0.85; }
+.repaso-btn-linea { font-size: var(--text-base); font-weight: var(--weight-bold); display: inline-flex; align-items: center; gap: 6px; }
+.repaso-btn-dias  { font-size: var(--text-xs); font-weight: var(--weight-semibold); opacity: 0.85; }
 
 .repaso-btn-confianza .repaso-tecla { background: var(--blanco-a70); border-color: var(--negro-a15); color: inherit; }
 
@@ -204,23 +204,23 @@
 .btn-easy   { background: var(--color-primario);      color: var(--texto-sobre-color);         border-color: var(--color-primario); }
 .btn-easy .repaso-tecla { background: var(--blanco-a22); border-color: var(--blanco-a45); color: var(--texto-sobre-color); }
 .btn-again  { background: var(--color-fallo-fondo);   color: var(--color-fallo-oscuro);   border-color: var(--color-fallo-borde-suave); margin-left: auto; }
-.btn-again.sugerido { box-shadow: 0 0 0 3px var(--rojo-a25); }
+.btn-again.sugerido { box-shadow: var(--anillo-again-antiguo); }
 
 .repaso-ayuda {
   margin-top: 14px;
   text-align: center;
-  font-size: 12.5px;
+  font-size: var(--text-xs-plus);
   color: var(--texto-secundario);
 }
 
 .repaso-aviso-nube {
   margin-top: 10px;
   padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   background: var(--color-aviso-fondo);
   color: var(--color-aviso-oscuro);
-  font-size: 12.5px;
-  font-weight: 600;
+  font-size: var(--text-xs-plus);
+  font-weight: var(--weight-semibold);
 }
 .repaso-aviso-nube[hidden] { display: none; }
 
@@ -232,14 +232,14 @@
   gap: 14px;
   padding: 60px 0;
   color: var(--texto-secundario);
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
 }
 .repaso-spinner {
   width: 28px;
   height: 28px;
   border: 3px solid var(--borde-suave);
   border-top-color: var(--color-primario);
-  border-radius: 50%;
+  border-radius: var(--radius-circulo);
   animation: repasoGiro 0.8s linear infinite;
 }
 @keyframes repasoGiro { to { transform: rotate(360deg); } }
@@ -249,9 +249,9 @@
   text-align: center;
   background: var(--bg-tarjeta);
   border: 1px solid var(--borde-suave);
-  border-radius: 16px;
+  border-radius: var(--radius-3xl);
   padding: 32px 22px;
-  box-shadow: 0 4px 20px -2px var(--asfalto-a05);
+  box-shadow: var(--sombra-tarjeta-repaso);
 }
 .repaso-final-icono {
   width: 56px;
@@ -260,14 +260,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: var(--radius-circulo);
   background: var(--color-primario-suave);
   color: var(--color-primario);
-  font-size: 28px;
-  font-weight: 800;
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-extrabold);
 }
-.repaso-final h2 { font-size: 22px; margin-bottom: 8px; }
-.repaso-final-sub { color: var(--texto-secundario); font-size: 14px; margin: 8px 0; }
+.repaso-final h2 { font-size: var(--text-xl-plus); margin-bottom: 8px; }
+.repaso-final-sub { color: var(--texto-secundario); font-size: var(--text-base); margin: 8px 0; }
 
 .repaso-resumen {
   display: grid;
@@ -280,12 +280,12 @@
   flex-direction: column;
   gap: 2px;
   padding: 12px 6px;
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   background: var(--bg-neutro);
   color: var(--texto-badge);
 }
-.repaso-resumen-item strong { font-size: 24px; line-height: 1.1; }
-.repaso-resumen-item span { font-size: 12px; font-weight: 600; }
+.repaso-resumen-item strong { font-size: var(--text-2xl); line-height: 1.1; }
+.repaso-resumen-item span { font-size: var(--text-xs); font-weight: var(--weight-semibold); }
 .repaso-resumen-item.madurez-nueva       { background: var(--color-info-pastel);  color: var(--color-info-intenso); }
 .repaso-resumen-item.madurez-aprendiendo { background: var(--color-aviso-fondo); color: var(--color-aviso-oscuro); }
 .repaso-resumen-item.madurez-joven       { background: var(--color-primario-suave); color: var(--color-primario); }
@@ -299,9 +299,9 @@
   gap: 8px;
   margin: 12px 6px 0;
   padding: 11px 20px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 700;
+  border-radius: var(--radius-lg);
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
   text-decoration: none;
 }
 .repaso-btn-volver { background: var(--color-primario); color: var(--texto-sobre-color); }
@@ -315,7 +315,7 @@
   .repaso-tarjeta { padding: 16px; }
   .repaso-tarjeta.con-imagen { grid-template-columns: 1fr; }
   .repaso-media { max-width: 240px; }
-  .repaso-enunciado { font-size: 16px; }
+  .repaso-enunciado { font-size: var(--text-lg); }
   .repaso-btn-confianza { flex: 1 1 calc(50% - 10px); }
   .btn-again { margin-left: 0; }
   .repaso-resumen { grid-template-columns: repeat(2, 1fr); }

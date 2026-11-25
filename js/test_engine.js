@@ -28,18 +28,18 @@
   /* ================= AVISOS ================= */
   function mostrarAviso(html) {
     form.style.display = 'none';
-    aviso.style.cssText = 'display:block;padding:18px 20px;margin:24px 0;border-radius:14px;' +
+    aviso.style.cssText = 'display:block;padding:18px 20px;margin:24px 0;border-radius:var(--radius-2xl);' +
       'background:var(--color-aviso-fondo);border:1px solid var(--color-aviso-borde);color:var(--color-aviso-texto);line-height:1.5;';
     aviso.innerHTML = html + '<p style="margin:12px 0 0;"><a href="index.html">← Volver a la lista de tests</a></p>';
   }
 
   function mostrarEstadoGuardado(tipo, texto) {
     const colores = {
-      guardando: 'var(--texto-suave)',
+      guardando: 'var(--texto-secundario)',
       ok: 'var(--color-primario)',
       aviso: 'var(--color-aviso-oscuro)'
     };
-    estadoGuardado.style.cssText = `margin-top:12px;font-size:14px;font-weight:600;color:${colores[tipo] || 'var(--texto-suave)'};`;
+    estadoGuardado.style.cssText = `margin-top:12px;font-size:var(--text-base);font-weight:var(--weight-semibold);color:${colores[tipo] || 'var(--texto-secundario)'};`;
     estadoGuardado.textContent = texto;
   }
 

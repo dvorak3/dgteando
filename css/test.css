@@ -18,10 +18,10 @@ html {
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-test);
   background-color: var(--bg-pagina-gris);
-  color: var(--texto-oscuro);
-  font-size: 15px;
+  color: var(--texto-principal);
+  font-size: var(--text-md);
   line-height: 1.5;
   display: flex;
   flex-direction: column;
@@ -64,8 +64,8 @@ a:hover {
 }
 
 .test-title {
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-size: var(--text-rem-175);
+  font-weight: var(--weight-bold);
   letter-spacing: -0.02em;
   color: var(--texto-titulo);
 }
@@ -75,13 +75,13 @@ a:hover {
 }
 
 .modo-badge {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--texto-suave);
+  font-size: var(--text-rem-75);
+  font-weight: var(--weight-bold);
+  color: var(--texto-secundario);
   background: var(--bg-tarjeta);
-  border: 1px solid var(--borde-pagina);
+  border: 1px solid var(--borde-suave);
   padding: 5px 12px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
 }
 
 /* =====================================================================
@@ -95,8 +95,8 @@ a:hover {
 
 .pregunta-item {
   background: var(--bg-tarjeta);
-  border: 1px solid var(--borde-pagina);
-  border-radius: 18px;
+  border: 1px solid var(--borde-suave);
+  border-radius: var(--radius-4xl);
   box-shadow: var(--sombra-suave);
   padding: 22px 24px;
   display: grid;
@@ -110,8 +110,8 @@ a:hover {
 }
 
 .pregunta-enunciado {
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: var(--text-rem-105);
+  font-weight: var(--weight-bold);
   line-height: 1.4;
   color: var(--texto-titulo);
   margin-bottom: 14px;
@@ -133,12 +133,12 @@ a:hover {
   align-items: flex-start;
   gap: 10px;
   cursor: pointer;
-  font-size: 0.95rem;
-  color: var(--texto-oscuro);
+  font-size: var(--text-rem-95);
+  color: var(--texto-principal);
   padding: 11px 14px;
   min-height: 46px;
-  border: 1.5px solid var(--borde-pagina);
-  border-radius: 12px;
+  border: 1.5px solid var(--borde-suave);
+  border-radius: var(--radius-xl);
   background: var(--bg-tarjeta);
   transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
@@ -155,8 +155,8 @@ a:hover {
 }
 
 .opcion-letra {
-  font-weight: 800;
-  color: var(--texto-suave);
+  font-weight: var(--weight-extrabold);
+  color: var(--texto-secundario);
 }
 
 .opcion-label:has(input:checked):not(.es-correcta):not(.es-fallo) {
@@ -188,8 +188,8 @@ a:hover {
   height: auto;
   max-height: 140px;
   object-fit: contain;
-  border: 1px solid var(--borde-pagina);
-  border-radius: 12px;
+  border: 1px solid var(--borde-suave);
+  border-radius: var(--radius-xl);
   background-color: var(--bg-tarjeta);
   padding: 4px;
 }
@@ -198,8 +198,8 @@ a:hover {
 .corregir-box {
   margin-top: 18px;
   background-color: var(--bg-tarjeta);
-  border: 1px solid var(--borde-pagina);
-  border-radius: 18px;
+  border: 1px solid var(--borde-suave);
+  border-radius: var(--radius-4xl);
   box-shadow: var(--sombra-suave);
   padding: 16px;
   display: flex;
@@ -213,11 +213,11 @@ a:hover {
   background-color: var(--color-primario);
   color: var(--texto-sobre-color);
   border: none;
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   padding: 13px 44px;
   min-height: 48px;
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: var(--text-rem-95);
+  font-weight: var(--weight-bold);
   cursor: pointer;
   transition: background-color 0.15s, transform 0.15s;
 }
@@ -237,14 +237,14 @@ a:hover {
 
 .btn-volver {
   background-color: var(--bg-tarjeta);
-  color: var(--texto-oscuro);
+  color: var(--texto-principal);
   border: 1.5px solid var(--borde-fuerte);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   padding: 12px 22px;
   min-height: 48px;
   align-items: center;
-  font-size: 0.92rem;
-  font-weight: 700;
+  font-size: var(--text-rem-92);
+  font-weight: var(--weight-bold);
   text-decoration: none !important;
   display: none;
 }
@@ -257,8 +257,8 @@ a:hover {
   display: none;
   margin-top: 16px;
   padding: 16px 20px;
-  border-radius: 14px;
-  font-size: 1rem;
+  border-radius: var(--radius-2xl);
+  font-size: var(--text-rem-100);
   border: 1px solid transparent;
 }
 
@@ -304,7 +304,7 @@ html.modo-repaso .test-column {
   background: var(--bg-topbar);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--borde-pagina);
+  border-bottom: 1px solid var(--borde-suave);
   padding-top: env(safe-area-inset-top, 0px);
 }
 
@@ -323,16 +323,16 @@ html.modo-repaso .test-column {
   height: 40px;
   display: grid;
   place-items: center;
-  border-radius: 50%;
-  color: var(--texto-suave);
-  font-size: 1.2rem;
+  border-radius: var(--radius-circulo);
+  color: var(--texto-secundario);
+  font-size: var(--text-rem-120);
   line-height: 1;
   text-decoration: none !important;
   transition: background-color 0.15s, color 0.15s;
 }
 
 .repaso-cerrar:hover {
-  background: var(--borde-pagina);
+  background: var(--borde-suave);
   color: var(--texto-titulo);
 }
 
@@ -343,15 +343,15 @@ html.modo-repaso .test-column {
 
 .repaso-progreso {
   height: 10px;
-  border-radius: 999px;
-  background: var(--borde-pagina);
+  border-radius: var(--radius-full);
+  background: var(--borde-suave);
   overflow: hidden;
 }
 
 .repaso-progreso-barra {
   height: 100%;
   width: 0;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: linear-gradient(90deg, var(--color-primario), var(--color-primario-vivo));
   transition: width 0.6s var(--ease);
 }
@@ -359,9 +359,9 @@ html.modo-repaso .test-column {
 .repaso-contador {
   margin-top: 6px;
   text-align: center;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--texto-suave);
+  font-size: var(--text-rem-78);
+  font-weight: var(--weight-bold);
+  color: var(--texto-secundario);
   font-variant-numeric: tabular-nums;
 }
 
@@ -375,12 +375,12 @@ html.modo-repaso .test-column {
   min-width: 68px;
   height: 40px;
   padding: 0 14px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--bg-tarjeta);
-  border: 1px solid var(--borde-pagina);
+  border: 1px solid var(--borde-suave);
   color: var(--texto-gris-claro);
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: var(--text-rem-100);
+  font-weight: var(--weight-extrabold);
   font-variant-numeric: tabular-nums;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
@@ -429,8 +429,8 @@ html.modo-repaso .test-column {
 
 .repaso-tarjeta {
   background: var(--bg-tarjeta);
-  border: 1px solid var(--borde-pagina);
-  border-radius: 20px;
+  border: 1px solid var(--borde-suave);
+  border-radius: var(--radius-5xl);
   box-shadow: var(--sombra-elevada);
   padding: 26px 32px 32px;
   animation: slideInRight 256ms var(--ease) both;
@@ -442,11 +442,11 @@ html.modo-repaso .test-column {
   align-items: center;
   gap: 12px;
   margin-bottom: 20px;
-  font-size: 0.78rem;
-  font-weight: 800;
+  font-size: var(--text-rem-78);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--texto-suave);
+  color: var(--texto-secundario);
 }
 
 .repaso-contexto-der {
@@ -457,11 +457,11 @@ html.modo-repaso .test-column {
 
 .repaso-repeticion {
   padding: 5px 10px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--color-aviso-fondo);
   color: var(--color-aviso-texto);
-  font-size: 0.7rem;
-  font-weight: 800;
+  font-size: var(--text-rem-70);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -469,9 +469,9 @@ html.modo-repaso .test-column {
 /* Madurez (badge de la tarjeta y resumen final) */
 .repaso-badge {
   padding: 5px 12px;
-  border-radius: 999px;
-  font-size: 0.74rem;
-  font-weight: 800;
+  border-radius: var(--radius-full);
+  font-size: var(--text-rem-74);
+  font-weight: var(--weight-extrabold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -516,8 +516,8 @@ html.modo-repaso .test-column {
 
 .repaso-enunciado {
   grid-area: enun;
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: var(--text-rem-135);
+  font-weight: var(--weight-bold);
   line-height: 1.4;
   letter-spacing: -0.01em;
   color: var(--texto-titulo);
@@ -537,8 +537,8 @@ html.modo-repaso .test-column {
   max-height: 300px;
   object-fit: contain;
   background: var(--bg-tarjeta);
-  border: 1px solid var(--borde-pagina);
-  border-radius: 14px;
+  border: 1px solid var(--borde-suave);
+  border-radius: var(--radius-2xl);
   padding: 6px;
 }
 
@@ -560,13 +560,13 @@ html.modo-repaso .test-column {
   min-height: 58px;
   padding: 14px 16px;
   text-align: left;
-  font-size: 1.02rem;
-  font-weight: 500;
+  font-size: var(--text-rem-102);
+  font-weight: var(--weight-medium);
   line-height: 1.4;
-  color: var(--texto-oscuro);
+  color: var(--texto-principal);
   background: var(--bg-tarjeta);
-  border: 2px solid var(--borde-pagina);
-  border-radius: 14px;
+  border: 2px solid var(--borde-suave);
+  border-radius: var(--radius-2xl);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition:
@@ -598,7 +598,7 @@ html.modo-repaso .test-column {
 
 .repaso-opcion:disabled {
   cursor: default;
-  color: var(--texto-oscuro);
+  color: var(--texto-principal);
 }
 
 .repaso-opcion.bloqueada:not(.es-correcta):not(.es-fallo) {
@@ -611,9 +611,9 @@ html.modo-repaso .test-column {
 }
 
 .opcion-letra {
-  font-weight: 800;
+  font-weight: var(--weight-extrabold);
   margin-right: 4px;
-  color: var(--texto-suave);
+  color: var(--texto-secundario);
 }
 
 /* Badge de tecla */
@@ -624,13 +624,13 @@ html.modo-repaso .test-column {
   min-width: 28px;
   height: 28px;
   padding: 0 7px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--bg-pagina-gris);
-  border: 1px solid var(--borde-pagina);
+  border: 1px solid var(--borde-suave);
   border-bottom-width: 2px;
-  color: var(--texto-suave);
-  font-size: 0.82rem;
-  font-weight: 800;
+  color: var(--texto-secundario);
+  font-size: var(--text-rem-82);
+  font-weight: var(--weight-extrabold);
   line-height: 1;
   transition: background-color 0.28s, border-color 0.28s, color 0.28s;
 }
@@ -642,7 +642,7 @@ html.modo-repaso .test-column {
   height: 28px;
   display: grid;
   place-items: center;
-  border-radius: 50%;
+  border-radius: var(--radius-circulo);
   opacity: 0;
   transform: scale(0.4);
 }
@@ -715,8 +715,8 @@ html.modo-repaso .test-column {
 /* ---------- Panel de confianza ---------- */
 .repaso-confianza {
   background: var(--bg-tarjeta);
-  border: 1px solid var(--borde-pagina);
-  border-radius: 20px;
+  border: 1px solid var(--borde-suave);
+  border-radius: var(--radius-5xl);
   box-shadow: var(--sombra-elevada);
   padding: 20px 24px 24px;
   animation: slideUpFade 320ms var(--ease) both;
@@ -741,16 +741,16 @@ html.modo-repaso .test-column {
 }
 
 .repaso-confianza-titulo {
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: var(--text-rem-100);
+  font-weight: var(--weight-extrabold);
   color: var(--texto-titulo);
 }
 
 .repaso-resultado {
   padding: 5px 12px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 800;
+  border-radius: var(--radius-full);
+  font-size: var(--text-rem-80);
+  font-weight: var(--weight-extrabold);
 }
 
 .repaso-resultado.ok {
@@ -771,8 +771,8 @@ html.modo-repaso .test-column {
 }
 
 .repaso-confianza-sep {
-  background: var(--borde-pagina);
-  border-radius: 1px;
+  background: var(--borde-suave);
+  border-radius: var(--radius-2xs);
   margin: 4px 6px;
 }
 
@@ -785,9 +785,9 @@ html.modo-repaso .test-column {
   min-height: 64px;
   padding: 10px 8px;
   border: 1.5px solid transparent;
-  border-radius: 14px;
-  font-weight: 800;
-  font-size: 0.95rem;
+  border-radius: var(--radius-2xl);
+  font-weight: var(--weight-extrabold);
+  font-size: var(--text-rem-95);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: transform 0.15s, box-shadow 0.15s, background-color 0.2s, border-color 0.2s;
@@ -815,16 +815,16 @@ html.modo-repaso .test-column {
 .repaso-btn-confianza .repaso-tecla {
   min-width: 22px;
   height: 22px;
-  font-size: 0.72rem;
-  border-radius: 6px;
+  font-size: var(--text-rem-72);
+  border-radius: var(--radius-sm);
   background: var(--blanco-a65);
   border-color: var(--negro-a08);
   color: inherit;
 }
 
 .repaso-btn-dias {
-  font-size: 0.74rem;
-  font-weight: 600;
+  font-size: var(--text-rem-74);
+  font-weight: var(--weight-semibold);
   opacity: 0.8;
 }
 
@@ -862,14 +862,14 @@ html.modo-repaso .test-column {
 }
 
 .repaso-btn-confianza.sugerido {
-  box-shadow: 0 0 0 3px var(--rojo-a22);
+  box-shadow: var(--anillo-again);
 }
 
 /* Ayuda de teclado y avisos */
 .repaso-ayuda {
   text-align: center;
-  font-size: 0.82rem;
-  color: var(--texto-suave);
+  font-size: var(--text-rem-82);
+  color: var(--texto-secundario);
   animation: slideInRight 256ms var(--ease) both;
 }
 
@@ -880,23 +880,23 @@ html.modo-repaso .test-column {
   height: 22px;
   padding: 0 6px;
   margin: 0 2px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--bg-tarjeta);
-  border: 1px solid var(--borde-pagina);
+  border: 1px solid var(--borde-suave);
   border-bottom-width: 2px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--texto-oscuro);
+  font-size: var(--text-rem-75);
+  font-weight: var(--weight-extrabold);
+  color: var(--texto-principal);
 }
 
 .repaso-aviso-nube {
   text-align: center;
-  font-size: 0.82rem;
-  font-weight: 600;
+  font-size: var(--text-rem-82);
+  font-weight: var(--weight-semibold);
   color: var(--color-aviso-texto);
   background: var(--color-aviso-fondo);
   border: 1px solid var(--color-aviso-borde);
-  border-radius: 12px;
+  border-radius: var(--radius-xl);
   padding: 10px 14px;
 }
 
@@ -907,15 +907,15 @@ html.modo-repaso .test-column {
   flex-direction: column;
   align-items: center;
   gap: 14px;
-  color: var(--texto-suave);
-  font-weight: 600;
+  color: var(--texto-secundario);
+  font-weight: var(--weight-semibold);
 }
 
 .repaso-spinner {
   width: 36px;
   height: 36px;
-  border-radius: 50%;
-  border: 4px solid var(--borde-pagina);
+  border-radius: var(--radius-circulo);
+  border: 4px solid var(--borde-suave);
   border-top-color: var(--color-primario);
   animation: spin 0.8s linear infinite;
 }
@@ -926,8 +926,8 @@ html.modo-repaso .test-column {
   width: calc(100% - 32px);
   max-width: 560px;
   background: var(--bg-tarjeta);
-  border: 1px solid var(--borde-pagina);
-  border-radius: 24px;
+  border: 1px solid var(--borde-suave);
+  border-radius: var(--radius-6xl);
   box-shadow: var(--sombra-elevada);
   padding: 36px 28px 30px;
   text-align: center;
@@ -940,25 +940,25 @@ html.modo-repaso .test-column {
   margin: 0 auto 16px;
   display: grid;
   place-items: center;
-  border-radius: 50%;
+  border-radius: var(--radius-circulo);
   background: var(--color-primario-suave);
   color: var(--color-primario);
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: var(--text-rem-200);
+  font-weight: var(--weight-extrabold);
   animation: pop 520ms var(--ease) 120ms both;
 }
 
 .repaso-final h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: var(--text-rem-150);
+  font-weight: var(--weight-extrabold);
   letter-spacing: -0.02em;
   color: var(--texto-titulo);
   margin-bottom: 8px;
 }
 
 .repaso-final-sub {
-  color: var(--texto-suave);
-  font-size: 0.95rem;
+  color: var(--texto-secundario);
+  font-size: var(--text-rem-95);
   margin: 8px 0;
 }
 
@@ -968,12 +968,12 @@ html.modo-repaso .test-column {
   gap: 6px;
   margin: 6px 0 4px;
   padding: 6px 14px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--color-racha-fondo);
   border: 1px solid var(--color-racha-borde);
   color: var(--color-aviso-oscuro);
-  font-weight: 800;
-  font-size: 0.9rem;
+  font-weight: var(--weight-extrabold);
+  font-size: var(--text-rem-90);
 }
 
 .repaso-resumen {
@@ -988,18 +988,18 @@ html.modo-repaso .test-column {
   flex-direction: column;
   gap: 2px;
   padding: 12px 6px;
-  border-radius: 14px;
+  border-radius: var(--radius-2xl);
 }
 
 .repaso-resumen-item strong {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: var(--text-rem-150);
+  font-weight: var(--weight-extrabold);
   line-height: 1.1;
 }
 
 .repaso-resumen-item span {
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: var(--text-rem-72);
+  font-weight: var(--weight-bold);
 }
 
 .repaso-btn-volver,
@@ -1011,9 +1011,9 @@ html.modo-repaso .test-column {
   min-height: 50px;
   padding: 12px 26px;
   margin-top: 14px;
-  border-radius: 14px;
-  font-size: 0.95rem;
-  font-weight: 800;
+  border-radius: var(--radius-2xl);
+  font-size: var(--text-rem-95);
+  font-weight: var(--weight-extrabold);
   text-decoration: none !important;
   transition: background-color 0.15s, transform 0.15s;
 }
@@ -1029,10 +1029,10 @@ html.modo-repaso .test-column {
 
 .repaso-btn-volver kbd {
   padding: 2px 8px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--blanco-a20);
-  font-size: 0.72rem;
-  font-weight: 700;
+  font-size: var(--text-rem-72);
+  font-weight: var(--weight-bold);
 }
 
 .repaso-btn-secundario {
@@ -1149,12 +1149,12 @@ html.modo-repaso .test-column {
 
   .repaso-tarjeta {
     padding: 18px 16px 20px;
-    border-radius: 18px;
+    border-radius: var(--radius-4xl);
   }
 
   .repaso-contexto {
     margin-bottom: 14px;
-    font-size: 0.7rem;
+    font-size: var(--text-rem-70);
   }
 
   .repaso-cuerpo,
@@ -1178,7 +1178,7 @@ html.modo-repaso .test-column {
   }
 
   .repaso-enunciado {
-    font-size: 1.18rem;
+    font-size: var(--text-rem-118);
   }
 
   .repaso-media {
@@ -1192,12 +1192,12 @@ html.modo-repaso .test-column {
 
   .repaso-opcion {
     padding: 12px 14px;
-    font-size: 1rem;
+    font-size: var(--text-rem-100);
   }
 
   .repaso-confianza {
     padding: 16px 14px 16px;
-    border-radius: 18px;
+    border-radius: var(--radius-4xl);
   }
 
   .repaso-confianza-botones {
@@ -1238,18 +1238,18 @@ html.modo-repaso .test-column {
   flex-wrap: wrap;
   gap: 6px 10px;
   margin: -4px 0 14px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--texto-suave);
+  font-size: var(--text-rem-82);
+  font-weight: var(--weight-semibold);
+  color: var(--texto-secundario);
 }
 
 .repaso-sugerencia-tag {
   padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 0.74rem;
-  font-weight: 800;
+  border-radius: var(--radius-full);
+  font-size: var(--text-rem-74);
+  font-weight: var(--weight-extrabold);
   background: var(--bg-etiqueta);
-  color: var(--texto-oscuro);
+  color: var(--texto-principal);
 }
 
 .repaso-sugerencia.nivel-easy .repaso-sugerencia-tag   { background: var(--color-primario-suave); color: var(--color-primario-hover); }
@@ -1258,13 +1258,13 @@ html.modo-repaso .test-column {
 .repaso-sugerencia.nivel-again .repaso-sugerencia-tag  { background: var(--color-fallo-fondo);  color: var(--color-fallo-oscuro); }
 
 /* Anillo del botón sugerido con el color de su nivel (again conserva el rojo de arriba) */
-.repaso-btn-confianza.btn-hard.sugerido   { box-shadow: 0 0 0 3px var(--ambar-a32); }
-.repaso-btn-confianza.btn-medium.sugerido { box-shadow: 0 0 0 3px var(--cielo-a30); }
-.repaso-btn-confianza.btn-easy.sugerido   { box-shadow: 0 0 0 3px var(--verde-a32); }
+.repaso-btn-confianza.btn-hard.sugerido   { box-shadow: var(--anillo-hard); }
+.repaso-btn-confianza.btn-medium.sugerido { box-shadow: var(--anillo-medium); }
+.repaso-btn-confianza.btn-easy.sugerido   { box-shadow: var(--anillo-easy); }
 
 .repaso-btn-fecha {
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: var(--text-rem-70);
+  font-weight: var(--weight-semibold);
   opacity: 0.7;
   text-transform: capitalize;
 }
@@ -1286,49 +1286,49 @@ html.modo-repaso .test-column {
   flex-direction: column;
   gap: 2px;
   padding: 11px 6px;
-  border-radius: 14px;
-  background: var(--bg-chip-suave);
-  border: 1px solid var(--borde-pagina);
+  border-radius: var(--radius-2xl);
+  background: var(--bg-boton-suave);
+  border: 1px solid var(--borde-suave);
 }
 
 .repaso-tiempo-item strong {
-  font-size: 1.2rem;
-  font-weight: 800;
+  font-size: var(--text-rem-120);
+  font-weight: var(--weight-extrabold);
   line-height: 1.1;
   color: var(--texto-titulo);
   font-variant-numeric: tabular-nums;
 }
 
 .repaso-tiempo-item span {
-  font-size: 0.74rem;
-  font-weight: 600;
-  color: var(--texto-suave);
+  font-size: var(--text-rem-74);
+  font-weight: var(--weight-semibold);
+  color: var(--texto-secundario);
 }
 
-.repaso-tiempo-item.limite strong { color: var(--texto-suave); }
+.repaso-tiempo-item.limite strong { color: var(--texto-secundario); }
 
 .repaso-tiempos-barra {
   height: 6px;
   margin-top: 12px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--bg-pista-suave);
   overflow: hidden;
 }
 
 .repaso-tiempos-relleno {
   height: 100%;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--color-primario);
 }
 
 .repaso-tiempos-mejora {
   margin-top: 12px;
   padding: 9px 12px;
-  border-radius: 12px;
-  background: var(--bg-chip-suave);
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--texto-suave);
+  border-radius: var(--radius-xl);
+  background: var(--bg-boton-suave);
+  font-size: var(--text-rem-85);
+  font-weight: var(--weight-bold);
+  color: var(--texto-secundario);
 }
 
 .repaso-tiempos-mejora.hay-mejora {
@@ -1338,6 +1338,6 @@ html.modo-repaso .test-column {
 
 .repaso-tiempos-nota {
   margin-top: 8px;
-  font-size: 0.78rem;
-  color: var(--texto-suave);
+  font-size: var(--text-rem-78);
+  color: var(--texto-secundario);
 }

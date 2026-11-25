@@ -1,6 +1,6 @@
 /* =====================================================================
-   variables.css · Paleta única de dgt-eando
-   Cambia aquí cualquier color y se actualiza en toda la web.
+   variables.css · Tokens de diseño de dgt-eando
+   Colores, tipografía, radios de borde y sombras en un único archivo.
    Enlázalo SIEMPRE antes que el resto de hojas de estilo:
    <link rel="stylesheet" href="css/variables.css">
    ===================================================================== */
@@ -34,6 +34,7 @@
   /* ===== ESTADOS DE TEST ===== */
   /* Resultado de la lista */
   --estado-aprobado: #c6e56e;  /* Insignia de test aprobado */
+  --estado-aprobado-punto: #8bc34a;  /* Punto «Aprobado» de la leyenda de la gráfica */
   --estado-suspenso: #f66e6e;  /* Insignia de test suspenso */
   /* Fallo (rojo señal) */
   --color-fallo: #dc2626;  /* Borde de error / opción fallada / campo inválido */
@@ -63,11 +64,9 @@
   --bg-hover-fila: #f8fafc;  /* Hover de fila de la tabla */
   --bg-hover-opcion: #fafaf7;  /* Hover de opciones y botón volver */
   --bg-hover-opcion-verde: #fafcf8;  /* Hover de opción (repaso antiguo) */
-  --bg-hover-suave: #f1f0eb;  /* Hover de botones secundarios / input deshabilitado */
-  --bg-boton-suave: #f4f3ef;  /* Botones secundarios (borrar, cancelar) */
+  --bg-boton-suave: #f4f3ef;  /* Botones secundarios, hovers suaves, chips y inputs deshabilitados */
   --bg-boton-suave-hover: #eceae3;  /* Hover de botón cancelar */
   --bg-barra-vacia: #ecebe5;  /* Pista vacía de la barra de progreso (repaso antiguo) */
-  --bg-chip-suave: #f6f5f1;  /* Chips de tiempos del repaso */
   --bg-pista-suave: #e8e6df;  /* Pista de la barra de tiempos */
   --bg-etiqueta: #eceae4;  /* Etiqueta de sugerencia */
   --bg-hover-icono: #f3f4f6;  /* Hover del botón cerrar del modal */
@@ -75,8 +74,7 @@
   --bg-switch-apagado: #d4d4cc;  /* Interruptor apagado */
 
   /* ===== BORDES ===== */
-  --borde-suave: #e5e5e0;  /* Borde estándar de tarjetas (index y repaso) */
-  --borde-pagina: #e4e3dd;  /* Borde estándar de la página de test */
+  --borde-suave: #e4e3dd;  /* Borde estándar de tarjetas, tablas y separadores (index, test y repaso) */
   --borde-fuerte: #c9c8c0;  /* Borde reforzado (hover de opciones) */
   --borde-fila: #efefea;  /* Separador de filas de tabla */
   --borde-seccion: #efeee8;  /* Separador de secciones del modal Anki */
@@ -90,11 +88,9 @@
   --borde-opcion-hover: #b9c7b0;  /* Borde de opción en hover (repaso antiguo) */
 
   /* ===== TEXTOS ===== */
-  --texto-principal: #1f2421;  /* Texto principal (index y repaso) */
-  --texto-secundario: #6b706c;  /* Texto atenuado (index y repaso) */
+  --texto-principal: #1f2421;  /* Texto principal (index, test y repaso) */
+  --texto-secundario: #6b706c;  /* Texto atenuado (index, test, repaso y flecha del select) */
   --texto-titulo: #111827;  /* Títulos y texto en hover del modal */
-  --texto-oscuro: #1f2937;  /* Texto principal de la página de test y títulos de modal */
-  --texto-suave: #6b7280;  /* Texto atenuado de la página de test y modal */
   --texto-etiqueta: #4b504c;  /* Etiquetas, radios, kbd */
   --texto-boton: #444744;  /* Texto de botones secundarios */
   --texto-fila: #4b5563;  /* Texto de filas y hover de la celda de número */
@@ -136,8 +132,84 @@
   --pizarra-a05: rgba(31, 41, 55, 0.05);  /* Sombra de tarjeta (test) */
   --pizarra-a07: rgba(31, 41, 55, 0.07);  /* Sombra elevada (test) */
 
-  /* ===== SOMBRAS COMPUESTAS (usan las transparencias de arriba) ===== */
-  --sombra-tarjeta: 0 4px 20px -2px var(--asfalto-a04), 0 1px 3px var(--asfalto-a03);  /* Sombra de tarjetas del panel (index) */
-  --sombra-elevada: 0 1px 2px var(--pizarra-a05), 0 8px 24px var(--pizarra-a07);  /* Sombra elevada de tarjetas de test / repaso */
-  --sombra-suave: 0 1px 2px var(--pizarra-a05), 0 2px 8px var(--pizarra-a05);  /* Sombra suave de tarjetas de test / repaso */
+  /* ===== TIPOGRAFÍA ===== */
+  /* Familias */
+  --font-principal: "Bricolage Grotesque", "Bricolage Grotesque Fallback", sans-serif;  /* Panel principal (index.html) · 1 uso */
+  --font-test: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;  /* Test y repaso (test.html) · 1 uso */
+  /* Tamaños en px (panel y repaso antiguo): xs/sm/base/lg/xl son los escalones principales */
+  --text-2xs: 11px;  /* 5 usos */
+  --text-2xs-plus: 11.5px;  /* 4 usos */
+  --text-xs: 12px;  /* 9 usos */
+  --text-xs-plus: 12.5px;  /* 10 usos */
+  --text-sm: 13px;  /* 13 usos */
+  --text-sm-plus: 13.5px;  /* 3 usos */
+  --text-base: 14px;  /* 6 usos */
+  --text-md: 15px;  /* 4 usos */
+  --text-lg: 16px;  /* 3 usos */
+  --text-lg-plus: 17px;  /* 1 uso */
+  --text-xl: 20px;  /* 2 usos */
+  --text-xl-plus: 22px;  /* 1 uso */
+  --text-2xl: 24px;  /* 2 usos */
+  --text-3xl: 28px;  /* 2 usos */
+  --text-4xl: 34px;  /* 2 usos */
+  --text-5xl: 38px;  /* 1 uso */
+  /* Tamaños en rem (test y repaso): el número es el valor en centésimas de rem */
+  --text-rem-70: 0.7rem;  /* 3 usos */
+  --text-rem-72: 0.72rem;  /* 3 usos */
+  --text-rem-74: 0.74rem;  /* 4 usos */
+  --text-rem-75: 0.75rem;  /* 2 usos */
+  --text-rem-78: 0.78rem;  /* 3 usos */
+  --text-rem-80: 0.8rem;  /* 1 uso */
+  --text-rem-82: 0.82rem;  /* 4 usos */
+  --text-rem-85: 0.85rem;  /* 1 uso */
+  --text-rem-90: 0.9rem;  /* 1 uso */
+  --text-rem-92: 0.92rem;  /* 1 uso */
+  --text-rem-95: 0.95rem;  /* 5 usos */
+  --text-rem-100: 1rem;  /* 4 usos */
+  --text-rem-102: 1.02rem;  /* 1 uso */
+  --text-rem-105: 1.05rem;  /* 1 uso */
+  --text-rem-118: 1.18rem;  /* 1 uso */
+  --text-rem-120: 1.2rem;  /* 2 usos */
+  --text-rem-135: 1.35rem;  /* 1 uso */
+  --text-rem-150: 1.5rem;  /* 2 usos */
+  --text-rem-175: 1.75rem;  /* 1 uso */
+  --text-rem-200: 2rem;  /* 1 uso */
+  /* Grosores */
+  --weight-medium: 500;  /* 9 usos */
+  --weight-semibold: 600;  /* 32 usos */
+  --weight-bold: 700;  /* 27 usos */
+  --weight-extrabold: 800;  /* 25 usos */
+
+  /* ===== RADIOS DE BORDE ===== */
+  --radius-2xs: 1px;  /* Separador fino · 1 uso */
+  --radius-xs: 5px;  /* Detalles pequeños · 2 usos */
+  --radius-sm: 6px;  /* Teclas y chips · 6 usos */
+  --radius-md: 8px;  /* Botones pequeños · 2 usos */
+  --radius-lg: 10px;  /* Botones y filas · 13 usos */
+  --radius-xl: 12px;  /* Inputs, botones y opciones · 12 usos */
+  --radius-2xl: 14px;  /* Opciones y botones grandes · 7 usos */
+  --radius-3xl: 16px;  /* Tarjetas · 5 usos */
+  --radius-4xl: 18px;  /* Tarjetas grandes · 4 usos */
+  --radius-5xl: 20px;  /* Tarjetas del repaso · 2 usos */
+  --radius-6xl: 24px;  /* Pantalla final · 1 uso */
+  --radius-full: 999px;  /* Píldoras y badges · 22 usos */
+  --radius-circulo: 50%;  /* Círculos · 12 usos */
+
+  /* ===== SOMBRAS (de menos a más intensidad) ===== */
+  --sombra-xs: 0 1px 2px var(--negro-a02);  /* Botón JSON · 1 uso */
+  --sombra-sm: 0 1px 3px var(--negro-a08);  /* Radio marcado · 1 uso */
+  --sombra-interruptor: 0 1px 3px var(--negro-a25);  /* Pulgar del interruptor · 1 uso */
+  --sombra-suave: 0 1px 2px var(--pizarra-a05), 0 2px 8px var(--pizarra-a05);  /* Tarjetas y opciones (test / repaso) · 4 usos */
+  --sombra-tarjeta: 0 4px 20px -2px var(--asfalto-a04), 0 1px 3px var(--asfalto-a03);  /* Tarjetas del panel (index) · 1 uso */
+  --sombra-tarjeta-repaso: 0 4px 20px -2px var(--asfalto-a05);  /* Tarjeta y pantalla final del repaso antiguo (repaso.css) · 2 usos */
+  --sombra-elevada: 0 1px 2px var(--pizarra-a05), 0 8px 24px var(--pizarra-a07);  /* Tarjeta del repaso y panel de confianza · 3 usos */
+  --sombra-modal: 0 16px 36px var(--negro-a18);  /* Modales · 1 uso */
+  /* Anillos de foco / sugerencia (sombra sólida de 3px) */
+  --anillo-foco-verde: 0 0 0 3px var(--verde-a12);  /* Foco de inputs y selects · 2 usos */
+  --anillo-error: 0 0 0 3px var(--rojo-a10);  /* Input inválido · 1 uso */
+  --anillo-again: 0 0 0 3px var(--rojo-a22);  /* Botón sugerido Again · 1 uso */
+  --anillo-again-antiguo: 0 0 0 3px var(--rojo-a25);  /* Botón sugerido Again (repaso.css) · 1 uso */
+  --anillo-hard: 0 0 0 3px var(--ambar-a32);  /* Botón sugerido Hard · 1 uso */
+  --anillo-medium: 0 0 0 3px var(--cielo-a30);  /* Botón sugerido Medium · 1 uso */
+  --anillo-easy: 0 0 0 3px var(--verde-a32);  /* Botón sugerido Easy · 1 uso */
 }
