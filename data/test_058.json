@@ -1,267 +1,297 @@
 {
   "test_id": 58,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
       "texto": "En general, la fatiga en el conductor...",
       "opciones": [
-        "aumenta eltiempodereaccion.",
-        "favorece los movimientos rapidos y precisos.",
-        "no afecta sus condiciones fisicas."
-      ]
-    },
-    {
-      "texto": "Un conductor detenido dentro de un paso inferior por necesidades de la circulacion esta obligado a...",
-      "opciones": [
-        "abandonarel vehiculo,aligual quelospasajeros.",
-        "conectar la senal de emergencia, mantener encendidas las luces de posicion yapagar elmotor.",
-        "apagartodoslos sistemas electricos."
-      ]
-    },
-    {
-      "texto": "Circula con un turismo por una autovia con trafico muy denso, ¿iesta permitido circular por el arcen para tomar la siguiente salida?",
-      "opciones": [
-        "Si,con las luces de emergencia.",
-        "Si, para facilitar la fluidez.",
-        "No."
-      ]
-    },
-    {
-      "texto": "¿Que grupos de peatones tienen mas riesgo de sufrir un accidente?",
-      "opciones": [
-        "Los ninos y los mayores.",
-        "Los mayores fundamentalmente.",
-        "Los ninos y los jovenes."
-      ]
-    },
-    {
-      "texto": "Fumar mientras conduce, ¿ipuede afectar a la conduccion?",
-      "opciones": [
-        "Si, porque distrae y se pierde capacidad de maniobra.",
-        "No, y ademas relaja.",
-        "Si, ademas esta prohibido."
+        "aumenta el tiempo de reacción.",
+        "favorece los movimientos rápidos y precisos.",
+        "no afecta sus condiciones físicas."
       ],
+      "correcta": 0
+    },
+    {
+      "texto": "Un conductor detenido dentro de un paso inferior por necesidades de la circulación está obligado a...",
+      "opciones": [
+        "abandonar el vehículo, al igual que los pasajeros.",
+        "conectar la señal de emergencia, mantener encendidas las luces de posición y apagar el motor.",
+        "apagar todos los sistemas eléctricos."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Circula con un turismo por una autovía con tráfico muy denso, ¿está permitido circular por el arcén para tomar la siguiente salida?",
+      "opciones": [
+        "Sí, con las luces de emergencia.",
+        "Sí, para facilitar la fluidez.",
+        "No."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "¿Qué grupos de peatones tienen más riesgo de sufrir un accidente?",
+      "opciones": [
+        "Los niños y los mayores.",
+        "Los mayores fundamentalmente.",
+        "Los niños y los jóvenes."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "Fumar mientras conduce, ¿puede afectar a la conducción?",
+      "opciones": [
+        "Sí, porque distrae y se pierde capacidad de maniobra.",
+        "No, y además relaja.",
+        "Sí, además esta prohibido."
+      ],
+      "correcta": 0,
       "imagen": "../img/test_058_p05.jpg"
     },
     {
-      "texto": "¿Que indica la senal?",
+      "texto": "¿Qué indica la señal?",
       "opciones": [
-        "Que yo tengopreferencia sobre los quecirculan en sentido contrario.",
-        "Quetienenpreferencia losvehiculos que circulan en sentido contrario.",
-        "Aconseja cederel paso."
+        "Que yo tengo preferencia sobre los que circulan en sentido contrario.",
+        "Que tienen preferencia los vehículos que circulan en sentido contrario.",
+        "Aconseja ceder el paso."
       ],
+      "correcta": 0,
       "imagen": "../img/test_058_p06.jpg"
     },
     {
       "texto": "Con la lluvia se forma una capa de agua que crea un mayor peligro por...",
       "opciones": [
-        "no se crea ningun peligro porque el agua refrigera los neumaticos y frenan mejor.",
-        "la posible falta de adherencia de los neumaticos al pavimento.",
+        "no se crea ningún peligro porque el agua refrigera los neumáticos y frenan mejor.",
+        "la posible falta de adherencia de los neumáticos al pavimento.",
         "el calentamiento de los frenos al mojarse."
       ],
+      "correcta": 1,
       "imagen": "../img/test_058_p07.jpg"
     },
     {
-      "texto": "Esta senal indica...",
+      "texto": "Esta señal indica...",
       "opciones": [
-        "una prohibicion.",
+        "una prohibición.",
         "un peligro.",
-        "una obligacion."
+        "una obligación."
       ],
+      "correcta": 1,
       "imagen": "../img/test_058_p08.jpg"
     },
     {
       "texto": "El efecto submarino se produce...",
       "opciones": [
-        "cuando el cuerpo se desliza por debajo de la banda abdominal porque el cinturon no lo retiene adecuadamente.",
-        "cuando se lleva el cinturon de seguridad muy apretado.",
-        "cuando el reposacabezas no esta bien reglado."
+        "cuando el cuerpo se desliza por debajo de la banda abdominal porque el cinturón no lo retiene adecuadamente.",
+        "cuando se lleva el cinturón de seguridad muy apretado.",
+        "cuando el reposacabezas no está bien reglado."
       ],
+      "correcta": 0,
       "imagen": "../img/test_058_p09.jpg"
     },
     {
-      "texto": "¿Que debe hacer un conductor que tiene sueno?",
+      "texto": "¿Qué debe hacer un conductor que tiene sueño?",
       "opciones": [
-        "Tomaralgunabebidarefrescante.",
+        "Tomar alguna bebida refrescante.",
         "Descansar lo antes posible en un lugar adecuado.",
-        "Continuar lamarcha ydescansar cuandopasen2horas o20okilometros."
-      ]
+        "Continuar la marcha y descansar cuando pasen 2 horas o 200 kilómetros."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En una carretera convencional, ¿zesta permitido que un peaton circule por la calzada?",
+      "texto": "En una carretera convencional, ¿está permitido que un peatón circule por la calzada?",
       "opciones": [
         "No.",
-        "Si, cuando no existe arcen o no es transitable.",
-        "Si,cuandoarrastra unvehiculo."
+        "Sí, cuando no existe arcén o no es transitable.",
+        "Sí, cuando arrastra un vehículo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_058_p11.jpg"
     },
     {
       "texto": "Cuando llueve es importante...",
       "opciones": [
         "no pisar el pedal del embrague.",
-        "aumentarlapresiondelosneumaticos.",
-        "comprobardevezencuandolosfrenos."
+        "aumentar la presión de los neumáticos.",
+        "comprobar de vez en cuando los frenos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_058_p12.jpg"
     },
     {
-      "texto": "Es conveniente cambiar los neumaticos del vehiculo...",
+      "texto": "Es conveniente cambiar los neumáticos del vehículo...",
       "opciones": [
-        "al menos cada 5 anos, aunque no esten gastados.",
+        "al menos cada 5 años, aunque no estén gastados.",
         "solo si presentan desgastes irregulares, cortes, grietas o deformaciones.",
-        "solo si la profundidad del dibujo es inferior a 1,6 milimetros."
+        "solo si la profundidad del dibujo es inferior a 1,6 milímetros."
       ],
+      "correcta": 0,
       "imagen": "../img/test_058_p13.jpg"
     },
     {
-      "texto": "Su vehiculo que no tiene luces antiniebla delanteras, ¿zque alumbrado debe encender cuando hay niebla?",
+      "texto": "Su vehículo no tiene luces antiniebla delanteras, ¿qué alumbrado debe encender cuando hay niebla?",
       "opciones": [
         "El de corto alcance o el de largo alcance.",
-        "El deposicion solamente.",
+        "El de posición solamente.",
         "El de largo alcance, solamente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_058_p14.jpg"
     },
     {
-      "texto": "Un turismo acaba de pasar satisfactoriamente la primera inspeccion tecnica periodica. ¿Cuando debe pasar la siguiente?",
+      "texto": "Un turismo acaba de pasar satisfactoriamente la primera inspección técnica periódica. ¿Cuándo debe pasar la siguiente?",
       "opciones": [
-        "Pasadosdos anios.",
-        "Pasados cuatro anos.",
-        "Al ano siguiente."
-      ]
+        "Pasados dos años.",
+        "Pasados cuatro años.",
+        "Al año siguiente."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Que factores de riesgo afectan al conductor directamente?",
+      "texto": "¿Qué factores de riesgo afectan al conductor directamente?",
       "opciones": [
         "La velocidad, la fatiga y el alcohol.",
-        "El alcohol y la velocidad, unicamente.",
-        "La fatiga y el alcohol, unicamente."
-      ]
+        "El alcohol y la velocidad, únicamente.",
+        "La fatiga y el alcohol, únicamente."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿En que situaciones complejas pueden tener mas accidentes las personas mayores?",
+      "texto": "¿En qué situaciones complejas pueden tener más accidentes las personas mayores?",
       "opciones": [
-        "En las que exijan una respuesta rapida.",
-        "En los cambios de direccion.",
-        "Enlos adelantamientos."
+        "En las que exijan una respuesta rápida.",
+        "En los cambios de dirección.",
+        "En los adelantamientos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_058_p17.jpg"
     },
     {
-      "texto": "En este caso en que la senalizacion se contradice, prevalece la senal...",
+      "texto": "En este caso en que la señalización se contradice, prevalece la señal...",
       "opciones": [
-        "mas restrictiva.",
+        "más restrictiva.",
         "realizada con el brazo.",
         "luminosa."
       ],
+      "correcta": 1,
       "imagen": "../img/test_058_p18.jpg"
     },
     {
-      "texto": "Circulando marcha atras, ¿esta permitido invadir un cruce de vias?",
+      "texto": "Circulando marcha atrás, ¿está permitido invadir un cruce de vías?",
       "opciones": [
-        "No,estaprohibido.",
-        "Si, mientras no recorra mas de15metros.",
-        "Si,en cualquiercaso."
-      ]
+        "No, está prohibido.",
+        "Sí, mientras no recorra más de 15 metros.",
+        "Sí, en cualquier caso."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En los pasos para peatones y en sus proximidades, ¿zesta permitido adelantar?",
+      "texto": "En los pasos para peatones y en sus proximidades, ¿está permitido adelantar?",
       "opciones": [
-        "Si, cuando serealice a una velocidad tan reducida que permita detenerse a tiempo si surgiera peligro de atropello.",
-        "No, en ningun caso.",
-        "Si, cuando se haga a vehiculos de dos ruedas que no impidan la visibilidad."
+        "Sí, cuando se realice a una velocidad tan reducida que permita detenerse a tiempo si surgiera peligro de atropello.",
+        "No, en ningún caso.",
+        "Sí, cuando se haga a vehículos de dos ruedas que no impidan la visibilidad."
       ],
+      "correcta": 0,
       "imagen": "../img/test_058_p20.jpg"
     },
     {
-      "texto": "¿Que indica la senal?",
+      "texto": "¿Qué indica la señal?",
       "opciones": [
         "Fin de prohibido adelantar solamente.",
-        "Fin de las prohibiciones de las senales anteriores.",
-        "Fin de las prohibiciones de todas las normas de circulacion."
+        "Fin de las prohibiciones de las señales anteriores.",
+        "Fin de las prohibiciones de todas las normas de circulación."
       ],
+      "correcta": 1,
       "imagen": "../img/test_058_p21.jpg"
     },
     {
-      "texto": "En esta via, zcual es la velocidad maxima permitida para un turismo, ¿si no pretende adelantar?",
+      "texto": "En esta vía, ¿cuál es la velocidad máxima permitida para un turismo si no pretende adelantar?",
       "opciones": [
         "110 km/h.",
         "100 km/h.",
         "90 km/h."
       ],
+      "correcta": 2,
       "imagen": "../img/test_058_p22.jpg"
     },
     {
-      "texto": "¿Con una motocicleta de hasta 125 cm3,ia que velocidad maxima puede circular por una autovia?",
+      "texto": "Con una motocicleta de hasta 125 cm³, ¿a qué velocidad máxima puede circular por una autovía?",
       "opciones": [
         "A 120 km/h.",
         "A 90 km/h.",
         "A 80 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_058_p23.jpg"
     },
     {
-      "texto": "Un vehiculo circula con poca presion de aire en las ruedas. ¿Cuanto carburante consumira?",
+      "texto": "Un vehículo circula con poca presión de aire en las ruedas. ¿Cuánto carburante consumirá?",
       "opciones": [
-        "Igual que con la presion normal.",
-        "Menos que con la presionnormal.",
-        "Mas que con la presion normal."
+        "Igual que con la presión normal.",
+        "Menos que con la presión normal.",
+        "Más que con la presión normal."
       ],
+      "correcta": 2,
       "imagen": "../img/test_058_p24.jpg"
     },
     {
-      "texto": "Los distribuidores de mercancias, ¿zestan exentos de utilizar el cinturon de seguridad?",
+      "texto": "Los distribuidores de mercancías, ¿están exentos de utilizar el cinturón de seguridad?",
       "opciones": [
-        "En los supuestosgeneralesdeexencion,comoal efectuarlamaniobrademarchaatras o de estacionamiento, o si tienen una exencion medica justificada.",
-        "Si, en viasdepoblado cuandorealicen operaciones frecuentes decarga ydescarga a corta distancia.",
-        "Si, en todas las vias cuandorealicen operaciones de carga y descarga a corta distancia."
+        "En los supuestos generales de exención, como al efectuar la maniobra de marcha atrás o de estacionamiento, o si tienen una exención médica justificada.",
+        "Sí, en vías de poblado cuando realicen operaciones frecuentes de carga y descarga a corta distancia.",
+        "Sí, en todas las vías cuando realicen operaciones de carga y descarga a corta distancia."
       ],
+      "correcta": 0,
       "imagen": "../img/test_058_p25.jpg"
     },
     {
-      "texto": "La senal afecta a...",
+      "texto": "La señal afecta a...",
       "opciones": [
-        "todos los vehiculos cuya masa maxima en carga supere la indicada.",
-        "los vehiculos detransportedemercancias, exclusivamente.",
-        "losvehiculosautomoviles,exclusivamente."
+        "todos los vehículos cuya masa máxima en carga supere la indicada.",
+        "los vehículos de transporte de mercancías, exclusivamente.",
+        "los vehículos automóviles, exclusivamente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_058_p26.jpg"
     },
     {
-      "texto": "¿Que indica la senal?",
+      "texto": "¿Qué indica la señal?",
       "opciones": [
-        "Peligroporpendientedescendente.",
-        "Peligro por escalon lateral.",
+        "Peligro por pendiente descendente.",
+        "Peligro por escalón lateral.",
         "Peligro por pendiente ascendente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_058_p27.jpg"
     },
     {
-      "texto": "¿Esta prohibido arrojar cualquier objeto que pueda dar lugar a la produccion de incendios o poner en peligro la seguridad vial?",
+      "texto": "¿Está prohibido arrojar cualquier objeto que pueda dar lugar a la producción de incendios o poner en peligro la seguridad vial?",
       "opciones": [
-        "Si, en la via,pero no en sus inmediaciones.",
+        "Sí, en la vía, pero no en sus inmediaciones.",
         "No.",
-        "Si, tanto en la via como en sus inmediaciones."
+        "Sí, tanto en la vía como en sus inmediaciones."
       ],
+      "correcta": 2,
       "imagen": "../img/test_058_p28.jpg"
     },
     {
-      "texto": "Durante el dia, ¿icuando se produce el mayor nimero de accidentes?",
+      "texto": "Durante el día, ¿cuándo se produce el mayor número de accidentes?",
       "opciones": [
-        "A primera hora de la manana.",
+        "A primera hora de la mañana.",
         "A las horas de entrada o salida del trabajo.",
         "A la hora de entrada en los trabajos, solamente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_058_p29.jpg"
     },
     {
-      "texto": "Los conductores de motocicletas, ¿ipueden utilizar dispositivos inalambricos integrados en el casco de proteccion con fines de comunicacion o navegacion?",
+      "texto": "Los conductores de motocicletas, ¿pueden utilizar dispositivos inalámbricos integrados en el casco de protección con fines de comunicación o navegación?",
       "opciones": [
-        "Si, porque los conductores de vehiculos de dos ruedas no tienen prohibido utilizar dispositivos de comunicacion.",
-        "Si, cuando se trate de dispositivos inalambricos certificados u homologados integrados en el casco de proteccion, exclusivamente con fines de intercomunicacion o navegacion y siempre que no afecten a la seguridad de la conduccion.",
-        "Si, siempre que no tengan que emplear las manos para utilizarlos."
-      ]
+        "Sí, porque los conductores de vehículos de dos ruedas no tienen prohibido utilizar dispositivos de comunicación.",
+        "Sí, cuando se trate de dispositivos inalámbricos certificados u homologados integrados en el casco de protección, exclusivamente con fines de intercomunicación o navegación y siempre que no afecten a la seguridad de la conducción.",
+        "Sí, siempre que no tengan que emplear las manos para utilizarlos."
+      ],
+      "correcta": 1
     }
   ]
 }

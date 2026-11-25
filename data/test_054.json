@@ -1,266 +1,296 @@
 {
   "test_id": 54,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "El lunes a las 9 de la manana, a partir del lugar donde se encuentra situada esta senal...",
+      "texto": "El lunes a las 9 de la mañana, a partir del lugar donde se encuentra situada esta señal...",
       "opciones": [
-        "solo sepuede estacionar para dejar unpaquete.",
-        "esta prohibidoparary estacionar.",
-        "sepuedepararperonoestacionar."
+        "solo se puede estacionar para dejar un paquete.",
+        "está prohibido parar y estacionar.",
+        "se puede parar pero no estacionar."
       ],
+      "correcta": 2,
       "imagen": "../img/test_054_p01.jpg"
     },
     {
-      "texto": "Si queda detenido en el interior de un tuinel y se produce un incendio, ¿ique debe hacer?",
+      "texto": "Si queda detenido en el interior de un túnel y se produce un incendio, ¿qué debe hacer?",
       "opciones": [
-        "Apartar el vehiculo a la derecha, apagar el motor y dirigirse a la salida mas proxima.",
-        "Circular marcha atras hasta el inicio del tunel.",
-        "Esperar en el interior del vehiculo a los servicios de emergencia."
+        "Apartar el vehículo a la derecha, apagar el motor y dirigirse a la salida más próxima.",
+        "Circular marcha atrás hasta el inicio del túnel.",
+        "Esperar en el interior del vehículo a los servicios de emergencia."
       ],
+      "correcta": 0,
       "imagen": "../img/test_054_p02.jpg"
     },
     {
-      "texto": "Un tractor agricola de 300o kg. de MMA, una bicicleta y un ciclomotor circulan por el arcen. ¿Es correcto?",
+      "texto": "Un tractor agrícola de 3.000 kg de MMA, una bicicleta y un ciclomotor circulan por el arcén. ¿Es correcto?",
       "opciones": [
-        "No, solo debe circular por el arcen la bicicleta.",
-        "Si, todos deben circular por el arcen.",
-        "Si, salvo el tractor, que debe circular por la calzada."
+        "No, solo debe circular por el arcén la bicicleta.",
+        "Sí, todos deben circular por el arcén.",
+        "Sí, salvo el tractor, que debe circular por la calzada."
       ],
+      "correcta": 1,
       "imagen": "../img/test_054_p03.jpg"
     },
     {
-      "texto": "En zona urbana, ¿zes obligatorio facilitar a un autobuis la incorporacion desde una parada senalizada?",
+      "texto": "En zona urbana, ¿es obligatorio facilitar a un autobús la incorporación desde una parada señalizada?",
       "opciones": [
-        "No, no es obligatorio, pero si recomendable.",
-        "Si.",
-        "Si,yademasesobligatoriodetenerseencasonecesario"
+        "No, no es obligatorio, pero sí recomendable.",
+        "Sí.",
+        "Sí, y además es obligatorio detenerse en caso necesario."
       ],
+      "correcta": 2,
       "imagen": "../img/test_054_p04.jpg"
     },
     {
-      "texto": "Usar el telefono movil mientras se conduce, ¿zpuede ser peligroso?",
+      "texto": "Usar el teléfono móvil mientras se conduce, ¿puede ser peligroso?",
       "opciones": [
-        "No,cuandola conversaciondura poco tiempo.",
+        "No, cuando la conversación dura poco tiempo.",
         "No, cuando se utiliza un dispositivo de manos libres.",
-        "Si, porque disminuye la atencion necesaria para conducir."
-      ]
+        "Sí, porque disminuye la atención necesaria para conducir."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Quien tiene prioridad si en el paso estrecho se encuentra con otro turismo?",
+      "texto": "¿Quién tiene prioridad si en el paso estrecho se encuentra con otro turismo?",
       "opciones": [
-        "Su vehiculo.",
-        "El que tenga mayor dificultad demaniobra.",
+        "Su vehículo.",
+        "El que tenga mayor dificultad de maniobra.",
         "El otro turismo."
       ],
+      "correcta": 2,
       "imagen": "../img/test_054_p06.jpg"
     },
     {
-      "texto": "Los accidentes de trafico generan costes...",
+      "texto": "Los accidentes de tráfico generan costes...",
       "opciones": [
-        "administrativos, materiales y sanitarios, pero no humanos",
-        "materiales, sanitarios,administrativos yhumanos.",
-        "materialesysanitarios solamente."
+        "administrativos, materiales y sanitarios, pero no humanos.",
+        "materiales, sanitarios, administrativos y humanos.",
+        "materiales y sanitarios solamente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_054_p07.jpg"
     },
     {
-      "texto": "¿Esta permitido conducir utilizando un dispositivo manos libres?",
+      "texto": "¿Está permitido conducir utilizando un dispositivo manos libres?",
       "opciones": [
         "No.",
-        "Si.",
-        "Si,empleandoporejemploauriculares."
-      ]
+        "Sí.",
+        "Sí, empleando por ejemplo auriculares."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "La flecha verde esta iluminada. Si quiere girar a la derecha, ¿ztiene preferencia de paso?",
+      "texto": "La flecha verde está iluminada. Si quiere girar a la derecha, ¿tiene preferencia de paso?",
       "opciones": [
-        "No,porque la flecha verde me permite pasar pero debo ceder el paso al vehiculo que se aproxima.",
-        "No, porque la luz roja me prohibe girar.",
-        "Si, porque la flecha verde me obliga a girar."
+        "No, porque la flecha verde me permite pasar pero debo ceder el paso al vehículo que se aproxima.",
+        "No, porque la luz roja me prohíbe girar.",
+        "Sí, porque la flecha verde me obliga a girar."
       ],
+      "correcta": 0,
       "imagen": "../img/test_054_p09.jpg"
     },
     {
-      "texto": "En este cruce, ¿ipuede pasar cuando se enciende la luz verde?",
+      "texto": "En este cruce, ¿puede pasar cuando se enciende la luz verde?",
       "opciones": [
-        "Si,perodeboesperarhastapoderpasar sinbloquearlo.",
-        "Si, pero debo ceder el paso a los vehiculos de la derecha.",
-        "Si, siempre,porquetengo preferencia."
+        "Sí, pero debo esperar hasta poder pasar sin bloquearlo.",
+        "Sí, pero debo ceder el paso a los vehículos de la derecha.",
+        "Sí, siempre, porque tengo preferencia."
       ],
+      "correcta": 0,
       "imagen": "../img/test_054_p10.jpg"
     },
     {
-      "texto": "La Organizacion Mundial de la Salud (OMs) considera que la siniestralidad vial es un problema prioritario de salud publica...",
+      "texto": "La Organización Mundial de la Salud (OMS) considera que la siniestralidad vial es un problema prioritario de salud pública...",
       "opciones": [
-        "solo enlos paises mas desarrollados.",
+        "solo en los países más desarrollados.",
         "en todo el mundo.",
-        "en Europa,perono en Estados Unidos ni Japonporque esmuybaja."
+        "en Europa, pero no en Estados Unidos ni Japón porque es muy baja."
       ],
+      "correcta": 1,
       "imagen": "../img/test_054_p11.jpg"
     },
     {
-      "texto": "Un conductor que se incorpora a una via utilizando un carril de aceleracion, ¿zdebe cerciorarse previamente de que puede hacerlo sin peligro?",
+      "texto": "Un conductor que se incorpora a una vía utilizando un carril de aceleración, ¿debe cerciorarse previamente de que puede hacerlo sin peligro?",
       "opciones": [
         "No, porque tiene prioridad de paso.",
-        "Si,yno iniciarlamaniobrahasta estarseguro.",
-        "No,porque los demas conductores deben facilitarle la incorporacion."
+        "Sí, y no iniciar la maniobra hasta estar seguro.",
+        "No, porque los demás conductores deben facilitarle la incorporación."
       ],
+      "correcta": 1,
       "imagen": "../img/test_054_p12.jpg"
     },
     {
-      "texto": "¿Si debido a un pinchazo usted se ve obligado a circular con una rueda de uso temporal ique debera tener en cuenta?",
+      "texto": "Si debido a un pinchazo usted se ve obligado a circular con una rueda de uso temporal, ¿qué deberá tener en cuenta?",
       "opciones": [
-        "Que no debe circular a mas de 80 kilometros por hora.",
-        "Que no se debe circular mas de 80kilometros con ella.",
-        "Que no se debe circular a mas de 50 kilometros por hora."
+        "Que no debe circular a más de 80 kilómetros por hora.",
+        "Que no se debe circular más de 80 kilómetros con ella.",
+        "Que no se debe circular a más de 50 kilómetros por hora."
       ],
+      "correcta": 0,
       "imagen": "../img/test_054_p13.jpg"
     },
     {
-      "texto": "¿Puede adelantar al vehiculo blanco por la derecha?",
+      "texto": "¿Puede adelantar al vehículo blanco por la derecha?",
       "opciones": [
-        "No, porque esta prohibido.",
-        "Si, porque es una autovia.",
-        "Si,porque circula incorrectamente"
+        "No, porque está prohibido.",
+        "Sí, porque es una autovía.",
+        "Sí, porque circula incorrectamente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_054_p14.jpg"
     },
     {
-      "texto": "¿Que produce mas distracciones en la conduccion?",
+      "texto": "¿Qué produce más distracciones en la conducción?",
       "opciones": [
-        "Usarel telefonomovil.",
-        "Observarlassenales.",
+        "Usar el teléfono móvil.",
+        "Observar las señales.",
         "Escuchar la radio."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Puede instalar laminas adhesivas en las ventanas traseras de su vehiculo?",
+      "texto": "¿Puede instalar láminas adhesivas en las ventanas traseras de su vehículo?",
       "opciones": [
         "No.",
-        "Si,si lleva dos espejos retrovisores exteriores.",
+        "Sí, si lleva dos espejos retrovisores exteriores.",
         "No, si no dispone de un espejo retrovisor interior."
       ],
+      "correcta": 1,
       "imagen": "../img/test_054_p16.jpg"
     },
     {
-      "texto": "Esta senal indica el lugar en el que...",
+      "texto": "Esta señal indica el lugar en el que...",
       "opciones": [
-        "termina la obligacion de circular, al menos, a 40 km/h.",
-        "finaliza la recomendacion de circular a velocidad superior a 40 km/h.",
-        "comienza la obligacion de circular a mas de 40 km/h."
+        "termina la obligación de circular, al menos, a 40 km/h.",
+        "finaliza la recomendación de circular a velocidad superior a 40 km/h.",
+        "comienza la obligación de circular a más de 40 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_054_p17.jpg"
     },
     {
-      "texto": "Si en un tramo de via muy estrecho sin senalizar la prioridad se encuentran un camion y un turismo, ¿zque vehiculo pasara primero?",
+      "texto": "Si en un tramo de vía muy estrecho sin señalizar la prioridad se encuentran un camión y un turismo, ¿qué vehículo pasará primero?",
       "opciones": [
         "El turismo, porque sus dimensiones son menores.",
         "El turismo, porque tiene menor dificultad para pasar.",
-        "El camion si existe duda de que vehiculo entro primero."
+        "El camión si existe duda de qué vehículo entró primero."
       ],
+      "correcta": 2,
       "imagen": "../img/test_054_p18.jpg"
     },
     {
       "texto": "Se considera conductor a la persona...",
       "opciones": [
         "que conduce a pie un ciclo o ciclomotor de dos ruedas.",
-        "que maneja el volante de un vehiculo cuando circula en practicas.",
-        "que maneja el mecanismo de direccion o va al mando de un vehiculo."
-      ]
+        "que maneja el volante de un vehículo cuando circula en prácticas.",
+        "que maneja el mecanismo de dirección o va al mando de un vehículo."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "La tasa maxima de alcoholemia, permitida en sangre, para conductores noveles es...",
+      "texto": "La tasa máxima de alcoholemia permitida en sangre para conductores noveles es...",
       "opciones": [
         "0,30 gramos por litro.",
         "0,50 gramos por litro.",
         "0,45 gramos por litro."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Cuando se estaciona el vehiculo en una pendiente ascendente es obligatorio dejar...",
+      "texto": "Cuando se estaciona el vehículo en una pendiente ascendente es obligatorio dejar...",
       "opciones": [
-        "el frenode estacionamiento accionado,unicamente.",
-        "accionado el frenode estacionamiento ycolocada la primera velocidad.",
-        "colocada lamarcha atras y el freno de estacionamiento accionado."
+        "el freno de estacionamiento accionado, únicamente.",
+        "accionado el freno de estacionamiento y colocada la primera velocidad.",
+        "colocada la marcha atrás y el freno de estacionamiento accionado."
       ],
+      "correcta": 1,
       "imagen": "../img/test_054_p21.jpg"
     },
     {
-      "texto": "¿En que situacion se puede encender solamente la luz de posicion entre la puesta y la salida del sol?",
+      "texto": "¿En qué situación se puede encender solamente la luz de posición entre la puesta y la salida del sol?",
       "opciones": [
-        "Cuando circulepor una carretera suficientemente iluminada.",
-        "Cuando circulepor una calle suficientemente iluminada.",
-        "Para inmovilizar el vehiculo en un arcen fuera de poblado."
-      ]
+        "Cuando circule por una carretera suficientemente iluminada.",
+        "Cuando circule por una calle suficientemente iluminada.",
+        "Para inmovilizar el vehículo en un arcén fuera de poblado."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Esta prohibido arrojar a la via objetos...",
+      "texto": "Está prohibido arrojar a la vía objetos...",
       "opciones": [
-        "unicamente si pueden entorpecer la libre circulacion.",
-        "que puedan deteriorar la via o sus instalaciones.",
-        "solamente si pueden deteriorar la via."
+        "únicamente si pueden entorpecer la libre circulación.",
+        "que puedan deteriorar la vía o sus instalaciones.",
+        "solamente si pueden deteriorar la vía."
       ],
+      "correcta": 1,
       "imagen": "../img/test_054_p23.jpg"
     },
     {
-      "texto": "Los conductores de bicicletas mayores de 14 anos, ¿ipueden circular por los arcenes de las autovias?",
+      "texto": "Los conductores de bicicletas mayores de 14 años, ¿pueden circular por los arcenes de las autovías?",
       "opciones": [
-        "Si, tantopor los arcenes de las autovias como por los de las autopistas.",
-        "No, esta prohibido por razones de seguridad vial.",
-        "Si, salvo que por razones de seguridad vial se prohiba mediante senales."
+        "Sí, tanto por los arcenes de las autovías como por los de las autopistas.",
+        "No, está prohibido por razones de seguridad vial.",
+        "Sí, salvo que por razones de seguridad vial se prohíba mediante señales."
       ],
+      "correcta": 2,
       "imagen": "../img/test_054_p24.jpg"
     },
     {
-      "texto": "En un vehiculo de menos de 5 metros de longitud, destinado al transporte de mercancias, ¿icuanto puede sobresalir una carga de longitud indivisible por su parte delantera?",
+      "texto": "En un vehículo de menos de 5 metros de longitud, destinado al transporte de mercancías, ¿cuánto puede sobresalir una carga de longitud indivisible por su parte delantera?",
       "opciones": [
         "No puede sobresalir nada.",
-        "Un tercio de la longitud del vehiculo.",
-        "Un 15 por 100 de la longitud del vehiculo."
+        "Un tercio de la longitud del vehículo.",
+        "Un 15 por 100 de la longitud del vehículo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_054_p25.jpg"
     },
     {
-      "texto": "Los conos de la fotografia ..",
+      "texto": "Los conos de la fotografía...",
       "opciones": [
-        "sirven solo para senalizar un nuevo carril.",
-        "tienen prioridad sobre el resto de senales.",
-        "tienen prioridad sobre el resto de senales, salvo las de los agentes de la autoridad."
+        "sirven solo para señalizar un nuevo carril.",
+        "tienen prioridad sobre el resto de señales.",
+        "tienen prioridad sobre el resto de señales, salvo las de los agentes de la autoridad."
       ],
+      "correcta": 2,
       "imagen": "../img/test_054_p26.jpg"
     },
     {
-      "texto": "En caso de sufrir un reventon circulando por una via a velocidad elevada, ¿zes aconsejable pisar el pedal de freno con brusquedad?",
+      "texto": "En caso de sufrir un reventón circulando por una vía a velocidad elevada, ¿es aconsejable pisar el pedal de freno con brusquedad?",
       "opciones": [
-        "Si, para mantener con mayor facilidad la trayectoria del vehiculo.",
+        "Sí, para mantener con mayor facilidad la trayectoria del vehículo.",
         "No, el frenado debe ser suave y progresivo.",
-        "Solo si el reventon se produce en una de las ruedas delanteras."
-      ]
+        "Solo si el reventón se produce en una de las ruedas delanteras."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Para evitar los atropellos, ¿ique deben hacer los conductores?",
+      "texto": "Para evitar los atropellos, ¿qué deben hacer los conductores?",
       "opciones": [
         "Indicar a los peatones cuando deben cruzar.",
-        "Respetarlaprioridaddepasodelospeatones."
+        "Respetar la prioridad de paso de los peatones."
       ],
+      "correcta": 1,
       "imagen": "../img/test_054_p28.jpg"
     },
     {
-      "texto": "¿Por que tipo de vias no pueden circular los ciclomotores?",
+      "texto": "¿Por qué tipo de vías no pueden circular los ciclomotores?",
       "opciones": [
-        "Por las autopistas yautovias.",
-        "Porlas autopistasunicamente.",
-        "Por las vias que no tengan arcen."
-      ]
+        "Por las autopistas y autovías.",
+        "Por las autopistas únicamente.",
+        "Por las vías que no tengan arcén."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Los accidentes de trafico, ¿ison una de las principales causas de lesiones?",
+      "texto": "Los accidentes de tráfico, ¿son una de las principales causas de lesiones?",
       "opciones": [
-        "No,pero son una delas principales causas de mortalidad.",
-        "No,y tampoco son una de las principales causas de mortalidad.",
-        "Si, y tambien son una de las principales causas de mortalidad."
+        "No, pero son una de las principales causas de mortalidad.",
+        "No, y tampoco son una de las principales causas de mortalidad.",
+        "Sí, y también son una de las principales causas de mortalidad."
       ],
+      "correcta": 2,
       "imagen": "../img/test_054_p30.jpg"
     }
   ]

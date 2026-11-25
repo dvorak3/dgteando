@@ -1,267 +1,297 @@
 {
   "test_id": 61,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En una interseccion que no tiene senal de preferencia. ¿Cuando debe ceder el paso a un vehiculo de traccion animal?",
+      "texto": "En una intersección que no tiene señal de preferencia. ¿Cuándo debe ceder el paso a un vehículo de tracción animal?",
       "opciones": [
-        "Nunca,porque no es un vehiculo de motor.",
-        "Siempre,porque tienen preferencia.",
-        "Cuando entra pormi derecha."
+        "Nunca, porque no es un vehículo de motor.",
+        "Siempre, porque tienen preferencia.",
+        "Cuando entra por mi derecha."
       ],
+      "correcta": 2,
       "imagen": "../img/test_061_p01.jpg"
     },
     {
-      "texto": "Cuando las indicaciones de un semaforo y una senal de balizamiento se contradicen prevalece...",
+      "texto": "Cuando las indicaciones de un semáforo y una señal de balizamiento se contradicen prevalece...",
       "opciones": [
-        "el semaforo.",
-        "la senal de balizamiento, por orden de prioridad.",
-        "lasenalmasrestrictiva."
+        "el semáforo.",
+        "la señal de balizamiento, por orden de prioridad.",
+        "la señal más restrictiva."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p02.jpg"
     },
     {
-      "texto": "¿Quésenalalaflechadela senal?",
+      "texto": "¿Qué señala la flecha de la señal?",
       "opciones": [
-        "Recomienda el lado del refugio por el que los vehiculos pueden pasar.",
-        "El lado del refugio por el que los vehiculos han de pasar.",
-        "Sentidounico."
+        "Recomienda el lado del refugio por el que los vehículos pueden pasar.",
+        "El lado del refugio por el que los vehículos han de pasar.",
+        "Sentido único."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p03.jpg"
     },
     {
-      "texto": "En una retencion con los vehiculos detenidos, ¿iesta permitido usar el telefono movil?",
+      "texto": "En una retención con los vehículos detenidos, ¿está permitido usar el teléfono móvil?",
       "opciones": [
-        "Unicamente si dispone de un dispositivo de manos libres que no precise auriculares.",
-        "Si, si la inmovilizacion dura mas de dos minutos.",
-        "Si,porqueel vehiculonoestaenmovimiento."
+        "Únicamente si dispone de un dispositivo de manos libres que no precise auriculares.",
+        "Sí, si la inmovilización dura más de dos minutos.",
+        "Sí, porque el vehículo no está en movimiento."
       ],
+      "correcta": 0,
       "imagen": "../img/test_061_p04.jpg"
     },
     {
-      "texto": "Un turismo circula por una travesia insuficientemente iluminada, ¿zque alumbrado debe llevar?",
+      "texto": "Un turismo circula por una travésía insuficientemente iluminada, ¿qué alumbrado debe llevar?",
       "opciones": [
-        "Solo el alumbrado de posicion.",
-        "El alumbrado de posicion y el de cruce.",
-        "Soloelalumbradodecarretera."
-      ]
+        "Solo el alumbrado de posición.",
+        "El alumbrado de posición y el de cruce.",
+        "Solo el alumbrado de carretera."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Que indican estas senales?",
+      "texto": "¿Qué indican estas señales?",
       "opciones": [
-        "Que esta prohibido circular a mas de 60 km/h en la interseccion.",
-        "Que esta prohibido circular a mas de 60 km/h en toda la via.",
+        "Que está prohibido circular a más de 60 km/h en la intersección.",
+        "Que está prohibido circular a más de 60 km/h en toda la vía.",
         "Que es obligatorio circular a 60 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_061_p06.jpg"
     },
     {
-      "texto": "¿Estan obligados a usar cinturon de seguridad los pasajeros de un taxi?",
+      "texto": "¿Están obligados a usar cinturón de seguridad los pasajeros de un taxi?",
       "opciones": [
         "No.",
-        "Si, solocuandoviajen en lasplazas delanteras.",
-        "Si."
+        "Sí, solo cuando viajen en las plazas delanteras.",
+        "Sí."
       ],
+      "correcta": 2,
       "imagen": "../img/test_061_p07.jpg"
     },
     {
-      "texto": "¿Es correcto circular marcha atras para cambiar el sentido de la marcha?",
+      "texto": "¿Es correcto circular marcha atrás para cambiar el sentido de la marcha?",
       "opciones": [
-        "Si, si no se obstaculiza a otros conductores.",
+        "Sí, si no se obstaculiza a otros conductores.",
         "No.",
-        "Si, si no se recorren marcha atras mas de 15 metros."
+        "Sí, si no se recorren marcha atrás más de 15 metros."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p08.jpg"
     },
     {
-      "texto": "En una motocicleta de anchura inferior a un metro, ¿icuanto puede sobresalir longitudinalmente la carga transportada?",
+      "texto": "En una motocicleta de anchura inferior a un metro, ¿cuánto puede sobresalir longitudinalmente la carga transportada?",
       "opciones": [
-        "Hasta 0,25 metros tanto por delante como por detras.",
-        "Nada por delante y hasta 0,25 metros por detras.",
-        "Nada,en las motocicletas la carga no puede sobresalir."
-      ]
+        "Hasta 0,25 metros tanto por delante como por detrás.",
+        "Nada por delante y hasta 0,25 metros por detrás.",
+        "Nada, en las motocicletas la carga no puede sobresalir."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Un tractor que arrastra un remolque, ¿ique velocidad maxima no debe rebasar fuera de poblado?",
+      "texto": "Un tractor que arrastra un remolque, ¿qué velocidad máxima no debe rebasar fuera de poblado?",
       "opciones": [
-        "70kilometrosporhora.",
-        "25kilometros por hora.",
-        "40kilometrospor hora."
+        "70 kilómetros por hora.",
+        "25 kilómetros por hora.",
+        "40 kilómetros por hora."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p10.jpg"
     },
     {
-      "texto": "El conductor de un vehiculo esta obligado a mostrar a los agentes de la autoridad que se Io soliciten...",
+      "texto": "El conductor de un vehículo está obligado a mostrar a los agentes de la autoridad que se lo soliciten...",
       "opciones": [
-        "unicamenteelpermisodecirculacion",
-        "el permiso de conduccion, el permiso de circulacion y la tarjeta de inspeccion tecnica.",
-        "solamente la tarjeta de inspeccion tecnica."
+        "únicamente el permiso de circulación.",
+        "el permiso de conducción, el permiso de circulación y la tarjeta de inspección técnica.",
+        "solamente la tarjeta de inspección técnica."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p11.jpg"
     },
     {
-      "texto": "En poblado, ¿zesta permitido usar las advertencias acusticas?",
+      "texto": "En poblado, ¿está permitido usar las advertencias acústicas?",
       "opciones": [
-        "Si,exclusivamentepara evitarunaccidente.",
+        "Sí, exclusivamentepara evitar un accidente.",
         "No.",
-        "Si,para evitar un accidente o avisar a los demas usuarios de que se realiza un servicio de urgencia"
-      ]
+        "Sí, para evitar un accidente o avisar a los demás usuarios de que se realiza un servicio de urgencia"
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Entre los momentos de peligro en el uso del telefono movil se encuentran...",
+      "texto": "Entre los momentos de peligro en el uso del teléfono móvil se encuentran...",
       "opciones": [
         "recibir una llamada y detenerse en un lugar seguro para hablar.",
-        "colgar y guardar el movil.",
-        "no utilizarel telefono movil."
-      ]
+        "colgar y guardar el móvil.",
+        "no útilizar el teléfono móvil."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Cual es la funcion del alumbrado como elemento de seguridad activa?",
+      "texto": "¿Cuál es la función del alumbrado como elemento de seguridad activa?",
       "opciones": [
-        "Deslumbrarconfacilidad.",
+        "Deslumbrar con fácilidad.",
         "Permitir ver y ser vistos.",
-        "Indicaruna situacionde emergencia."
-      ]
+        "Indicar una situación de emergencia."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Cuando se producen accidentes de trafico con mas frecuencia?",
+      "texto": "¿Cuándo se producen accidentes de tráfico con más frecuencia?",
       "opciones": [
         "Los lunes.",
-        "En los periodos devacaciones y los fines de semana.",
+        "En los periodos de vacaciones y los fines de semana.",
         "En invierno."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Como debe conducir con nieve?",
+      "texto": "¿Cómo debe conducir con nieve?",
       "opciones": [
-        "Conlas lucesdeemergenciaencendidas.",
+        "Con las luces de emergencia encendidas.",
         "Frenando y acelerando con suavidad.",
-        "Por el arcen."
+        "Por el arcén."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p16.jpg"
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
         "Obliga a circular a todo tipo de camiones y furgones, independientemente de su M.M.A.",
-        "Prohibe circular a los camiones de mas de 3500 Kg. de M.M.A.",
-        "Obliga a circular, unicamente, a los camiones y furgones de mas de 3500 Kg de M.M.A."
+        "Prohíbe circular a los camiones de más de 3500 Kg. de M.M.A.",
+        "Obliga a circular, únicamente, a los camiones y furgones de más de 3500 Kg de M.M.A."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p17.jpg"
     },
     {
-      "texto": "En los vehiculos de anchura inferior a un metro, la carga no debe sobresalir por la parte posterior mas de...",
+      "texto": "En los vehículos de anchura inferior a un metro, la carga no debe sobresalir por la parte posterior más de...",
       "opciones": [
-        "0,50metros.",
+        "0,50 metros.",
         "0,25 metros.",
         "0,40 metros."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p18.jpg"
     },
     {
-      "texto": "¿La velocidad zes un factor de riesgo que produce accidentes?",
+      "texto": "¿La velocidad es un factor de riesgo que produce accidentes?",
       "opciones": [
-        "No,porque solo agrava las consecuencias de unaccidentepero no los causa.",
-        "Si,ypor eso debe serla adecuada en cadamomento.",
-        "No, si el vehiculo dispone de los uiltimos sistemas de seguridad."
-      ]
+        "No, porque solo agrava las consecuencias de un accidente pero no los causa.",
+        "Sí, y por eso debe ser la adecuada en cada momento.",
+        "No, si el vehículo dispone de los últimos sistemas de seguridad."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "El consumo de drogas, ¿zafecta a la seguridad vial?",
+      "texto": "El consumo de drogas, ¿afecta a la seguridad vial?",
       "opciones": [
         "No, en absoluto.",
-        "Si, demanera importante.",
-        "Si,perodemanerapocoimportante."
+        "Sí, de manera importante.",
+        "Sí, perode manerapocoimportante."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p20.jpg"
     },
     {
-      "texto": "En una calzada con los dos sentidos separados por una linea continua, ¿zesta permitido girar a la izquierda?",
+      "texto": "En una calzada con los dos sentidos separados por una línea continua, ¿está permitido girar a la izquierda?",
       "opciones": [
-        "Si, cuando no se comprometa la seguridad de ningun usuario de la via.",
+        "Sí, cuando no se comprometa la seguridad de ningún usuario de la vía.",
         "No.",
         "Solo dentro de poblado."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p21.jpg"
     },
     {
-      "texto": "En una interseccion senalizada en la que se encuentra un agente regulando el trafico, ¿ique debe hacer?",
+      "texto": "En una intersección señalizada en la que se encuentra un agente regulando el tráfico, ¿qué debe hacer?",
       "opciones": [
-        "Aplicar las normas generales deprioridad de paso de los vehiculos que se acerquen por la derecha.",
-        "Obedecer las senales del agente.",
-        "Obedecer las senales de trafico que regulan la prioridad."
+        "Aplicar las normas generales de prioridad de paso de los vehículos que se acerquen por la derecha.",
+        "Obedecer las señales del agente.",
+        "Obedecer las señales de tráfico que regulan la prioridad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p22.jpg"
     },
     {
-      "texto": "¿Puede adelantar por la derecha al vehiculo gris?",
+      "texto": "¿Puede adelantar por la derecha al vehículo gris?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "No."
       ],
+      "correcta": 0,
       "imagen": "../img/test_061_p23.jpg"
     },
     {
-      "texto": "¿Qué indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Entrada prohibida a vehiculos quetransporten mercancias explosivas o inflamables.",
-        "Entrada prohibida a vehiculos que transporten mercancias peligrosas.",
-        "Calzada obligatoria para vehiculos que transporten mercancias explosivas."
+        "Entrada prohibida a vehículos que transporten mercancías explosivas o inflamables.",
+        "Entrada prohibida a vehículos que transporten mercancías peligrosas.",
+        "Calzada obligatoria para vehículos que transporten mercancías explosivas."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p24.jpg"
     },
     {
-      "texto": "En esta curva de visibilidad reducida, ¿zesta permitido parar?",
+      "texto": "En esta curva de visibilidad reducida, ¿está permitido parar?",
       "opciones": [
-        "En la curva no,pero si en sus proximidades.",
-        "Si.",
+        "En la curva no, pero si en sus proximidades.",
+        "Sí.",
         "No, ni en la curva, ni en sus proximidades."
       ],
+      "correcta": 2,
       "imagen": "../img/test_061_p25.jpg"
     },
     {
-      "texto": "En una zona de obras se encuentra un panel direccional provisional, ¿zque indica?",
+      "texto": "En una zona de obras se encuentra un panel direccional provisional, ¿qué indica?",
       "opciones": [
-        "La presencia de una curva y su direccion en una zona de obras.",
-        "Prohibe el paso e informa sobre el sentido de la circulacion.",
-        "Adviertedel peligroporobras."
+        "La presencia de una curva y su dirección en una zona de obras.",
+        "Prohíbe el paso e informa sobre el sentido de la circulación.",
+        "Advierte del peligro por obras."
       ],
+      "correcta": 0,
       "imagen": "../img/test_061_p26.jpg"
     },
     {
       "texto": "El estrés produce en el conductor...",
       "opciones": [
-        "una mayoragresividadyun comportamiento imprudenteal volante.",
-        "unamayorrapidez en latoma dedecisiones.",
-        "una disminucion de la fatiga."
+        "una mayor agresividad y un comportamiento imprudente al volante.",
+        "una mayor rapidez en la toma de decisiones.",
+        "una disminución de la fatiga."
       ],
+      "correcta": 0,
       "imagen": "../img/test_061_p27.jpg"
     },
     {
-      "texto": "Al acercarse a un peaton que quiere cruzar la calzada, ¿ique debe hacer?",
+      "texto": "Al acercarse a un peatón que quiere cruzar la calzada, ¿qué debe hacer?",
       "opciones": [
         "Moderar la velocidad y detenerse si es necesario.",
-        "Continuar circulando, ya que el vehiculo tiene prioridad.",
+        "Continuar circulando, ya que el vehículo tiene prioridad.",
         "Tocar el claxon y seguir la marcha a la misma velocidad."
       ],
+      "correcta": 0,
       "imagen": "../img/test_061_p28.jpg"
     },
     {
-      "texto": "Esta senal significa intervalo...",
+      "texto": "Esta señal significa intervalo...",
       "opciones": [
         "aconsejado de velocidades, aunque las condiciones sean desfavorables.",
-        "aconsejado de velocidades, siempreque las condiciones sean favorables.",
-        "obligatorio develocidades, siempreque las condiciones sean favorables."
+        "aconsejado de velocidades, siempre que las condiciones sean favorables.",
+        "obligatorio de velocidades, siempre que las condiciones sean favorables."
       ],
+      "correcta": 1,
       "imagen": "../img/test_061_p29.jpg"
     },
     {
-      "texto": "Cualquier conductor esta obligado a...",
+      "texto": "Cualquier conductor está obligado a...",
       "opciones": [
-        "circular siempre por debajo de la velocidad maxima de la via.",
-        "circular siempre a la velocidad maxima de la via.",
-        "comportarse de forma que no entorpezca indebidamente la circulacion."
-      ]
+        "circular siempre por debajo de la velocidad máxima de la vía.",
+        "circular siempre a la velocidad máxima de la vía.",
+        "comportarse de forma que no entorpezca indebidamente la circulación."
+      ],
+      "correcta": 2
     }
   ]
 }

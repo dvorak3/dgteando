@@ -1,215 +1,239 @@
 {
   "test_id": 59,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "A la vista de esta senal, ¿ique separacion se debe mantener con el vehiculo que circula delante?",
+      "texto": "A la vista de esta señal, ¿qué separación se debe mantener con el vehículo que circula delante?",
       "opciones": [
-        "70metroscomomaximo.",
-        "70metros comominimo,exceptoparaadelantar.",
-        "70 metros como minimo, en cualquier caso."
+        "70 metros como máximo.",
+        "70 metros como mínimo, excepto para adelantar.",
+        "70 metros como mínimo, en cualquier caso."
       ],
+      "correcta": 1,
       "imagen": "../img/test_059_p01.jpg"
     },
     {
-      "texto": "¿Que velocidades o marchas dan mas fuerza al vehiculo?",
+      "texto": "¿Qué velocidades o marchas dan más fuerza al vehículo?",
       "opciones": [
-        "La 1a y la 2a.",
-        "La 3a y la 4a.",
-        "La 4a y la 5a."
+        "La 1.ª y la 2.ª.",
+        "La 3.ª y la 4.ª.",
+        "La 4.ª y la 5.ª."
       ],
+      "correcta": 0,
       "imagen": "../img/test_059_p02.jpg"
     },
     {
-      "texto": "¿Esta permitido circular por una travesia con las luces antiniebla encendidas en condiciones normales de visibilidad?",
+      "texto": "¿Está permitido circular por una travesía con las luces antiniebla encendidas en condiciones normales de visibilidad?",
       "opciones": [
         "No.",
-        "No,porque en travesia estan prohibidas.",
-        "Si."
+        "No, porque en travesía están prohibidas.",
+        "Sí."
       ],
+      "correcta": 0,
       "imagen": "../img/test_059_p03.jpg"
     },
     {
-      "texto": "El conductor de un vehiculo extiende el brazo horizontalmente con la palma de la mano hacia atras, ¿ique indica?",
+      "texto": "El conductor de un vehículo extiende el brazo horizontalmente con la palma de la mano hacia atrás, ¿qué indica?",
       "opciones": [
-        "Quevaacircularmarchaatras.",
-        "Quevaa girar a la izquierda.",
-        "Que tiene intencion de inmovilizar el vehiculo o de frenar su marcha de modo considerable."
+        "Que va a circular marcha atrás.",
+        "Que va a girar a la izquierda.",
+        "Que tiene intención de inmovilizar el vehículo o de frenar su marcha de modo considerable."
       ],
+      "correcta": 2,
       "imagen": "../img/test_059_p04.jpg"
     },
     {
-      "texto": "En esta motocicleta, ¿zdebe llevar casco?",
+      "texto": "En esta motocicleta, ¿debe llevar casco?",
       "opciones": [
-        "No, no es obligatorio; pero debe llevar abrochado el cinturon de seguridad.",
-        "Si, el casco es obligatorio pero no el cinturon de seguridad.",
-        "Si,y ademas es obligatorio llevar abrochado el cinturon de seguridad."
+        "No, no es obligatorio; pero debe llevar abrochado el cinturón de seguridad.",
+        "Sí, el casco es obligatorio pero no el cinturón de seguridad.",
+        "Sí, y además es obligatorio llevar abrochado el cinturón de seguridad."
       ],
+      "correcta": 0,
       "imagen": "../img/test_059_p05.jpg"
     },
     {
-      "texto": "Si tiene problemas de sueno, debe tener en cuenta que...",
+      "texto": "Si tiene problemas de sueño, debe tener en cuenta que...",
       "opciones": [
-        "debe dormir mas horas para conducir.",
-        "no se encuentra enperfectas condiciones para conducir.",
-        "es recomendabletomar sustancias estimulantes en abundancia para mantenersedespierto."
-      ]
+        "debe dormir más horas para conducir.",
+        "no se encuentra en perfectas condiciones para conducir.",
+        "es recomendable tomar sustancias estimulantes en abundancia para mantenerse despierto."
+      ],
+      "correcta": 1
     },
     {
       "texto": "Para evitar ruidos excesivos e innecesarios, el conductor de una motocicleta debe...",
       "opciones": [
         "circular con el escape libre.",
-        "evitardaracelerones.",
-        "conducir utilizando la relacion de marchas mas baja posible."
-      ]
+        "evitar dar acelerones.",
+        "conducir utilizando la relación de marchas más baja posible."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "El navegador GPs, ¿ipuede ser peligroso para la conduccion?",
+      "texto": "El navegador GPS, ¿puede ser peligroso para la conducción?",
       "opciones": [
-        "Si,cuandoproducedistracciones.",
-        "Si, cuando nos lleva por una ruta distinta a la habitual.",
-        "No, es de gran ayuda a la conduccion."
+        "Sí, cuando produce distracciones.",
+        "Sí, cuando nos lleva por una ruta distinta a la habitual.",
+        "No, es de gran ayuda a la conducción."
       ],
+      "correcta": 0,
       "imagen": "../img/test_059_p08.jpg"
     },
     {
-      "texto": "En una interseccion regulada por esta senal, ¿za quien debe ceder el paso?",
+      "texto": "En una intersección regulada por esta señal, ¿a quién debe ceder el paso?",
       "opciones": [
-        "Solo alos vehiculos que tengan mayores dificultades de maniobra.",
-        "A ningun vehiculo, porque esta senal me indica que circulo por la via con prioridad.",
-        "A los vehiculos que se aproximen por mi derecha."
+        "Solo a los vehículos que tengan mayores dificultades de maniobra.",
+        "A ningún vehículo, porque esta señal me indica que circulo por la vía con prioridad.",
+        "A los vehículos que se aproximen por mi derecha."
       ],
+      "correcta": 2,
       "imagen": "../img/test_059_p09.jpg"
     },
     {
-      "texto": "En esta carretera estrecha quiere realizar un cambio de sentido. ¿Donde debe colocarse para no molestar a otros vehiculos?",
+      "texto": "En esta carretera estrecha quiere realizar un cambio de sentido. ¿Dónde debe colocarse para no molestar a otros vehículos?",
       "opciones": [
         "En el centro de la calzada, sin ocupar el carril contrario.",
-        "En el borde derecho y esperar hasta poder hacerlo sinpeligro."
+        "En el borde derecho y esperar hasta poder hacerlo sin peligro."
       ],
+      "correcta": 1,
       "imagen": "../img/test_059_p10.jpg"
     },
     {
-      "texto": "La funcion de los sistemas de seguridad pasiva de un vehiculo consiste en...",
+      "texto": "La función de los sistemas de seguridad pasiva de un vehículo consiste en...",
       "opciones": [
-        "evitar o disminuir los danos que se produzcan en caso de accidente.",
+        "evitar o disminuir los daños que se produzcan en caso de accidente.",
         "la misma que la de los elementos de seguridad activa.",
-        "evitarqueseproduzcaunaccidente."
-      ]
+        "evitar que se produzca un accidente."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Las marcas viales que senalizan un tramo de obras..",
+      "texto": "Las marcas viales que señalizan un tramo de obras...",
       "opciones": [
         "significan lo mismo que las que se utilizan cuando no hay obras.",
-        "solamentealertan sobre la necesidad de extremarlaprecaucion.",
+        "solamente alertan sobre la necesidad de extremar la precaución.",
         "solamente hay que respetarlas cuando hay personas trabajando."
       ],
+      "correcta": 0,
       "imagen": "../img/test_059_p12.jpg"
     },
     {
-      "texto": "Bajo los efectosdel sueno...",
+      "texto": "Bajo los efectos del sueño...",
       "opciones": [
-        "puedeaparecerlafatiga ocular.",
-        "es mas dificil sufrir un deslumbramiento.",
-        "es mas facil reaccionar ante una situacion depeligro."
-      ]
+        "puede aparecer la fatiga ocular.",
+        "es más difícil sufrir un deslumbramiento.",
+        "es más fácil reaccionar ante una situación de peligro."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Ante un semaforo circular de color amarillo fjo, ¿zhay que detenerse?",
+      "texto": "Ante un semáforo circular de color amarillo fijo, ¿hay que detenerse?",
       "opciones": [
-        "No,pero siobligaapasar conprecaucion.",
-        "Si, a no ser que no pueda hacerse en condiciones de seguridad.",
-        "No, porque unicamente avisa que va a cambiar a color rojo."
+        "No, pero sí obliga a pasar con precaución.",
+        "Sí, a no ser que no pueda hacerse en condiciones de seguridad.",
+        "No, porque únicamente avisa que va a cambiar a color rojo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_059_p14.jpg"
     },
     {
-      "texto": "Que funcion tienen las guias sonoras situadas en el borde derecho de la calzada, ¿ubicadas normalmente en el arcen coincidiendo con la marca vial que delimita el carril derecho?",
+      "texto": "¿Qué función tienen las guías sonoras situadas en el borde derecho de la calzada, ubicadas normalmente en el arcén coincidiendo con la marca vial que delimita el carril derecho?",
       "opciones": [
         "Balizar el borde de la calzada, especialmente en condiciones de baja visibilidad.",
-        "Alertar al conductor en caso de que se desvie de la trayectoria de su carril.",
-        "Indicar la existencia de un carril especial o reservado a determinados vehiculos."
+        "Alertar al conductor en caso de que se desvíe de la trayectoria de su carril.",
+        "Indicar la existencia de un carril especial o reservado a determinados vehículos."
       ],
+      "correcta": 1,
       "imagen": "../img/test_059_p15.jpg"
     },
     {
-      "texto": "Un agente le indica, desde su vehiculo, que debe detenerse en el lado derecho, ¿icomo lo senaliza?",
+      "texto": "Un agente le indica, desde su vehículo, que debe detenerse en el lado derecho, ¿cómo lo señaliza?",
       "opciones": [
         "Con una bandera roja.",
         "Con el brazo extendido hacia abajo inclinado y fijo.",
         "Con una bandera amarilla."
       ],
+      "correcta": 1,
       "imagen": "../img/test_059_p16.jpg"
     },
     {
-      "texto": "En esta curva de visibilidad reducida, ¿zesta permitido parar o estacionar?",
+      "texto": "En esta curva de visibilidad reducida, ¿está permitido parar o estacionar?",
       "opciones": [
-        "Si, siempre que lo haga en el arcen.",
+        "Sí, siempre que lo haga en el arcén.",
         "No.",
-        "Si,yaquenohaysenalque loprohiba."
+        "Sí, ya que no hay señal que lo prohíba."
       ],
+      "correcta": 1,
       "imagen": "../img/test_059_p17.jpg"
     },
     {
-      "texto": "¿Es recomendable la utilizacion de los reposacabezas en todos los asientos de un turismo?",
+      "texto": "¿Es recomendable la utilización de los reposacabezas en todos los asientos de un turismo?",
       "opciones": [
         "No, es un elemento que puede ser perjudicial para la seguridad de los ocupantes.",
-        "Si, puede evitar lesiones graves en la zona cervical.",
+        "Sí, puede evitar lesiones graves en la zona cervical.",
         "No, al ser un elemento decorativo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_059_p18.jpg"
     },
     {
-      "texto": "En un control de alcoholemia, ¿zcuantas pruebas pueden realizarle?",
+      "texto": "En un control de alcoholemia, ¿cuántas pruebas pueden realizarle?",
       "opciones": [
-        "Una unicapruebaconel etilometro.",
-        "Dos pruebas a elegir entre aire espirado con el etilometro o un analisis de sangre.",
-        "La primera de aire espirado con el etilometro y pueden solicitar una segunda prueba transcurridos 10 minutos."
+        "Una única prueba con el etilómetro.",
+        "Dos pruebas a elegir entre aire espirado con el etilómetro o un análisis de sangre.",
+        "La primera de aire espirado con el etilómetro y pueden solicitar una segunda prueba transcurridos 10 minutos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_059_p19.jpg"
     },
     {
-      "texto": "El consumo de drogas, ¿zafecta a la capacidad de reaccion?",
+      "texto": "El consumo de drogas, ¿afecta a la capacidad de reacción?",
       "opciones": [
-        "Si,aumentandola.",
+        "Sí, aumentándola.",
         "No.",
-        "Si, disminuyendola."
-      ]
+        "Sí, disminuyéndola."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
         "La longitud en la que existe el peligro.",
-        "La distancia quefalta para llegar a un stop.",
-        "Que a 4,25 kilometros hay un peligro."
+        "La distancia que falta para llegar a un stop.",
+        "Que a 4,25 kilómetros hay un peligro."
       ],
+      "correcta": 0,
       "imagen": "../img/test_059_p21.jpg"
     },
     {
-      "texto": "Un neumatico con una presion de inflado incorrecta...",
+      "texto": "Un neumático con una presión de inflado incorrecta...",
       "opciones": [
-        "se desgasta menos y tiene menor riesgo de reventon.",
+        "se desgasta menos y tiene menor riesgo de reventón.",
         "normalmente consume menos carburante.",
-        "se desgasta de forma irregular y tiene mayor riesgo de reventon."
+        "se desgasta de forma irregular y tiene mayor riesgo de reventón."
       ],
+      "correcta": 2,
       "imagen": "../img/test_059_p22.jpg"
     },
     {
-      "texto": "¿Cuantos espejos retrovisores tiene que llevar instalados una motocicleta con estructura de autoproteccion?",
+      "texto": "¿Cuántos espejos retrovisores tiene que llevar instalados una motocicleta con estructura de autoprotección?",
       "opciones": [
-        "Obligatoriamente dos,uno en cada lado, independientementede la velocidadmaxima que pueda alcanzar.",
+        "Obligatoriamente dos, uno en cada lado, independientemente de la velocidad máxima que pueda alcanzar.",
         "Uno interior y otro exterior izquierdo.",
-        "Uno si su velocidad maxima no supera los 100 km/h."
+        "Uno si su velocidad máxima no supera los 100 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_059_p23.jpg"
     },
     {
-      "texto": "El permiso de la clase B, ¿zautoriza a conducir motocicletas de mas de 125 centimetros cubicos?",
+      "texto": "El permiso de la clase B, ¿autoriza a conducir motocicletas de más de 125 centímetros cúbicos?",
       "opciones": [
-        "Si,pero sin llevar pasajeros.",
-        "Si, si tiene una antiguedad superiora 3anos.",
+        "Sí, pero sin llevar pasajeros.",
+        "Sí, si tiene una antigüedad superior a 3 años.",
         "No."
-      ]
+      ],
+      "correcta": 2
     },
     {
       "texto": "En los ciclistas, el uso del casco...",
@@ -218,50 +242,56 @@
         "reduce totalmente la probabilidad de sufrir lesiones en la cabeza.",
         "reduce considerablemente la probabilidad de sufrir lesiones en la cabeza."
       ],
+      "correcta": 2,
       "imagen": "../img/test_059_p25.jpg"
     },
     {
-      "texto": "Esta senal informa de la distancia a un tramo en el que se puede efectuar un cambio de sentido...",
+      "texto": "Esta señal informa de la distancia a un tramo en el que se puede efectuar un cambio de sentido...",
       "opciones": [
         "al mismo nivel.",
         "a distinto nivel.",
-        "y un cambio de direccion."
+        "y un cambio de dirección."
       ],
+      "correcta": 1,
       "imagen": "../img/test_059_p26.jpg"
     },
     {
-      "texto": "Un conductor, ¿iesta obligado a someterse a las pruebas de deteccion de drogas?",
+      "texto": "Un conductor, ¿está obligado a someterse a las pruebas de detección de drogas?",
       "opciones": [
         "Sí.",
-        "No, si no esta implicado en un accidente.",
-        "No,solo esta obligado a las pruebas de deteccion de alcohol."
-      ]
+        "No, si no está implicado en un accidente.",
+        "No, solo está obligado a las pruebas de detección de alcohol."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Que vehiculos tienen permitido circular por un carril habilitado, por razones de fluidez, ¿en sentido contrario al habitual?",
+      "texto": "¿Qué vehículos tienen permitido circular por un carril habilitado, por razones de fluidez, en sentido contrario al habitual?",
       "opciones": [
-        "Automoviles y vehiculos con remolque hasta 750 kg de M.M.A.",
-        "Automoviles que superen los 3.500 kg de M.M.A. y motocicletas.",
-        "Solo turismos ymotocicletas."
+        "Automóviles y vehículos con remolque hasta 750 kg de M.M.A.",
+        "Automóviles que superen los 3.500 kg de M.M.A. y motocicletas.",
+        "Solo turismos y motocicletas."
       ],
+      "correcta": 2,
       "imagen": "../img/test_059_p28.jpg"
     },
     {
-      "texto": "Las senales y placas de la parte trasera del camion, ¿ique indican?",
+      "texto": "Las señales y placas de la parte trasera del camión, ¿qué indican?",
       "opciones": [
-        "Quetransporta mercanciaspeligrosasyquemidemas de12metros.",
-        "Quesupesoydimensiones sonmayoresque losnormales.",
-        "Quetransporta productos alimenticios."
+        "Que transporta mercancías peligrosas y que mide más de 12 metros.",
+        "Que su peso y dimensiones son mayores que los normales.",
+        "Que transporta productos alimenticios."
       ],
+      "correcta": 0,
       "imagen": "../img/test_059_p29.jpg"
     },
     {
       "texto": "Uno de los efectos del estrés es...",
       "opciones": [
-        "el incremento de la capacidad de concentracion.",
-        "un comportamientomas prudente.",
-        "la aparicion de fatiga al volante."
-      ]
+        "el incremento de la capacidad de concentración.",
+        "un comportamiento más prudente.",
+        "la aparición de fatiga al volante."
+      ],
+      "correcta": 2
     }
   ]
 }

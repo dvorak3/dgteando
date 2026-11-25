@@ -1,213 +1,237 @@
 {
   "test_id": 69,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Si va a efectuar un giro en una interseccion, ¿icomo debe avisar a los demas conductores?",
+      "texto": "Si va a efectuar un giro en una intersección, ¿cómo debe avisar a los demás conductores?",
       "opciones": [
-        "Unicamente con los indicadores de direccion.",
-        "Con los indicadores de direccion o con el brazo.",
+        "Únicamente con los indicadores de dirección.",
+        "Con los indicadores de dirección o con el brazo.",
         "Con el brazo o con el claxon."
-      ]
-    },
-    {
-      "texto": "Al adelantar a un peaton, es obligatorio dejar una separacion lateral minima de 1,50 metros cuando circule...",
-      "opciones": [
-        "porpoblado,exclusivamente.",
-        "por cualquier via, fuera o dentro de poblado.",
-        "envias interurbanas,solamente."
-      ]
-    },
-    {
-      "texto": "Esta senal indica...",
-      "opciones": [
-        "Paradadeautobuses.",
-        "Carril reservadoparaautobuses.",
-        "Estaciondeautobuses."
       ],
+      "correcta": 1
+    },
+    {
+      "texto": "Al adelantar a un peatón, es obligatorio dejar una separación lateral mínima de 1,50 metros cuando circule...",
+      "opciones": [
+        "por poblado, exclusivamente.",
+        "por cualquier vía, fuera o dentro de poblado.",
+        "en vías interurbanas, solamente."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Esta señal indica...",
+      "opciones": [
+        "Parada de autobuses.",
+        "Carril reservado para autobuses.",
+        "Estación de autobuses."
+      ],
+      "correcta": 0,
       "imagen": "../img/test_069_p03.jpg"
     },
     {
-      "texto": "A la vista de la senalizacion, ¿zquien tiene preferencia de paso?",
+      "texto": "A la vista de la señalización, ¿quién tiene preferencia de paso?",
       "opciones": [
-        "Los automoviles.",
-        "Los vehiculos de dos ruedas.",
-        "Lospeatones."
+        "Los automóviles.",
+        "Los vehículos de dos ruedas.",
+        "Los peatones."
       ],
+      "correcta": 2,
       "imagen": "../img/test_069_p04.jpg"
     },
     {
       "texto": "En caso de calzada helada...",
       "opciones": [
         "Para mejorar la adherencia podremos usar cadenas o ruedas con clavos.",
-        "Nopodremos usar ruedas con clavos.",
+        "No podremos usar ruedas con clavos.",
         "No podremos circular."
       ],
+      "correcta": 0,
       "imagen": "../img/test_069_p05.jpg"
     },
     {
-      "texto": "En un turismo de 9 plazas incluido el conductor, ¿ipueden viajar 9 ninos?",
+      "texto": "En un turismo de 9 plazas incluido el conductor, ¿pueden viajar 9 niños?",
       "opciones": [
-        "No, porque se supera el numero de plazas autorizado.",
-        "Si, cuando van al cargo de un adulto.",
-        "Si, cuando los ninostienenedades comprendidas entrelos2y los12anosde edad."
-      ]
-    },
-    {
-      "texto": "El consumo de alcohol, ¿zque produce en el conductor?",
-      "opciones": [
-        "Aumento del tiempo de reaccion (=actuia mas lento)",
-        "Disminucion del tiempo de reaccion (=actua mas rapido)",
-        "Aumento del campo visual (=ve mejor)."
-      ]
-    },
-    {
-      "texto": "¿Podremos efectuar una detencion circulando por una autopista?",
-      "opciones": [
-        "No,en la autopista no podremos detenernos en ningun caso.",
-        "Si,perodeberemos usar las areas especialmentehabilitadaspara ello.",
-        "Si."
+        "No, porque se supera el número de plazas autorizado.",
+        "Sí, cuando van al cargo de un adulto.",
+        "Sí, cuando los niños tienen edades comprendidas entre los 2 y los 12 años de edad."
       ],
+      "correcta": 0
+    },
+    {
+      "texto": "El consumo de alcohol, ¿qué produce en el conductor?",
+      "opciones": [
+        "Aumento del tiempo de reacción (=actúa más lento)",
+        "Disminucion del tiempo de reacción (=actúa más rápido)",
+        "Aumento del campo visual (=ve mejor)."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "¿Podremos efectuar una detención circulando por una autopista?",
+      "opciones": [
+        "No, en la autopista no podremos detenernos en ningún caso.",
+        "Sí, pero deberemos usar las áreas especialmente habilitadas para ello.",
+        "Sí."
+      ],
+      "correcta": 1,
       "imagen": "../img/test_069_p08.jpg"
     },
     {
-      "texto": "EI tractor agricola de la fotografia, de MMA inferior a 3500 kg., ¿zcircula correctamente?",
+      "texto": "El tractor agrícola de la fotografía, de MMA inferior a 3500 kg., ¿circula correctamente?",
       "opciones": [
-        "No, pues debe utilizar el carril derecho.",
-        "Si.",
-        "No, pues puede utilizar cualquier parte de la via."
+        "No, pues debe útilizar el carril derecho.",
+        "Sí.",
+        "No, pues puede útilizar cualquier parte de la vía."
       ],
+      "correcta": 0,
       "imagen": "../img/test_069_p09.jpg"
     },
     {
-      "texto": "Ante un semaforo circular de color amarillo fjo, ¿zhay que detenerse?",
+      "texto": "Ante un semáforo circular de color amarillo fijo, ¿hay que detenerse?",
       "opciones": [
-        "No,pero si obliga a pasar conprecaucion.",
-        "Si, a no ser que no pueda hacerse en condiciones de seguridad.",
-        "No,porque unicamente avisa queva a cambiara color rojo."
+        "No, pero si obliga a pasar con precaución.",
+        "Sí, a no ser que no pueda hacerse en condiciones de seguridad.",
+        "No, porque únicamente avisa que va a cambiar a color rojo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_069_p10.jpg"
     },
     {
-      "texto": "¿Que debe hacer un conductor que ha sido deslumbrado?",
+      "texto": "¿Qué debe hacer un conductor que ha sido deslumbrado?",
       "opciones": [
-        "Desviarse siempre a la derecha para detenerse en el arcen.",
+        "Desviarse siempre a la derecha para detenerse en el arcén.",
         "Reducir la velocidad, incluso hasta llegar a detenerse totalmente, si fuera necesario.",
-        "Encenderelalumbradodelargoalcance"
-      ]
+        "Encender el alumbrado de largo alcance."
+      ],
+      "correcta": 1
     },
     {
       "texto": "¿Se puede quitar el casco a un motorista accidentado?",
       "opciones": [
-        "Si,como norma general.",
-        "Si, para darle de beber.",
-        "No,comonormageneral."
+        "Sí, como norma general.",
+        "Sí, para darle de beber.",
+        "No, como norma general."
       ],
+      "correcta": 2,
       "imagen": "../img/test_069_p12.jpg"
     },
     {
-      "texto": "Un turismo, ¿Podra superar en 20 km/h la velocidad maxima generica para adelantar?",
+      "texto": "Un turismo, ¿Podrá superar en 20 km/h la velocidad máxima genérica para adelantar?",
       "opciones": [
         "No.",
-        "Si,en carreteras convencionales que nodiscurran por suelo urbano.",
-        "en todas las vias, siempre que no lo prohiba la senalizacion."
+        "Sí, en carreteras convencionales que no discurran por suelo urbano.",
+        "en todas las vías, siempre que no lo prohíba la señalización."
       ],
+      "correcta": 0,
       "imagen": "../img/test_069_p13.jpg"
     },
     {
-      "texto": "¿Cual es la distancia minima que mantendremos con el vehiculo que nos precede dentro de un tunel?",
+      "texto": "¿Cuál es la distancia mínima que mantendremos con el vehículo que nos precede dentro de un túnel?",
       "opciones": [
-        "La quepermita frenar sin colisionar con el vehiculo quenosprecede.",
-        "100metros como minimo.",
-        "150metroscomominimo."
+        "La que permita frenar sin colisionar con el vehículo que nos precede.",
+        "100 metros como mínimo.",
+        "150 metros como mínimo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_069_p14.jpg"
     },
     {
-      "texto": "Circulando de noche,por una via urbana suficientemente iluminada, ¿ique alumbrado utilizaremos?",
+      "texto": "Circulando de noche, por una vía urbana suficientemente iluminada, ¿qué alumbrado útilizaremos?",
       "opciones": [
-        "Posiciony corto alcance.",
+        "Posición y corto alcance.",
         "Ninguno.",
         "Corto o largo indistintamente."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Las tecnicas de conduccion eficiente...",
+      "texto": "Las técnicas de conducción eficiente...",
       "opciones": [
-        "son complementariasalastecnicasdeconduccionpreventiva.",
-        "sonmas eficacesque lastecnicas de conduccionpreventiva.",
-        "son lomismoquelastecnicas de conduccion preventiva."
-      ]
+        "son complementarias a las técnicas de conducción preventiva.",
+        "son más eficaces que las técnicas de conducción preventiva.",
+        "son lo mismo que las técnicas de conducción preventiva."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Cual sera la velocidad minima en esta via para un turismo?",
+      "texto": "¿Cuál será la velocidad mínima en esta vía para un turismo?",
       "opciones": [
         "50 km/h.",
         "45 km/h.",
         "60 km/h."
       ],
+      "correcta": 2,
       "imagen": "../img/test_069_p17.jpg"
     },
     {
-      "texto": "Si circula de noche por una via urbana, ¿ique alumbrado debe utilizar?",
+      "texto": "Si circula de noche por una vía urbana, ¿qué alumbrado debe útilizar?",
       "opciones": [
-        "El delargo alcance.",
-        "Solo el de posicion.",
+        "El de largo alcance.",
+        "Solo el de posición.",
         "El de corto alcance."
       ],
+      "correcta": 2,
       "imagen": "../img/test_069_p18.jpg"
     },
     {
-      "texto": "El alcohol, ¿zes una de las principales causas de accidentes de trafico?",
+      "texto": "El alcohol, ¿es una de las principales causas de accidentes de tráfico?",
       "opciones": [
-        "No,cuando el conductortiene experiencia y bebe habitualmente.",
-        "Si.",
-        "Soloen personas noacostumbradas a beber."
-      ]
+        "No, cuando el conductor tiene experiencia y bebe habitualmente.",
+        "Sí.",
+        "Solo en personas no acostumbradas a beber."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Para evitar ruidos excesivos e innecesarios en la conduccion, se debe...",
+      "texto": "Para evitar ruidos excesivos e innecesarios en la conducción, se debe...",
       "opciones": [
-        "cuidar de que el tubo de escape y el silenciador del vehiculo esten siempre en buen estado.",
-        "utilizar el claxonfrecuentemente pero sin producir ruidos estridentes o notas musicales.",
-        "circularcon el tubode escape libre."
+        "cuidar de que el tubo de escape y el silenciador del vehículo estén siempre en buen estado.",
+        "útilizar el claxon frecuentemente pero sin producir ruidos estridentes o notas musicales.",
+        "circular con el tubo de escape libre."
       ],
+      "correcta": 0,
       "imagen": "../img/test_069_p20.jpg"
     },
     {
-      "texto": "Al inmovilizar un turismo por emergencia, ¿ise debe colocar el dispositivo de presenalizacion de peligro?",
+      "texto": "Al inmovilizar un turismo por emergencia, ¿se debe colocar el dispositivo de preseñalización de peligro?",
       "opciones": [
-        "No, basta con encender la senal de emergencia.",
-        "Si,en la parte mas alta posibledel vehiculo inmovilizado garantizando sumaxima visibilidad, si utiliza la senal luminosa.",
-        "Si, siempre por delante del vehiculo inmovilizado."
+        "No, basta con encender la señal de emergencia.",
+        "Sí, en la parte más alta posible del vehículo inmovilizado garantizando su máxima visibilidad, si útiliza la señal luminosa.",
+        "Sí, siempre por delante del vehículo inmovilizado."
       ],
+      "correcta": 1,
       "imagen": "../img/test_069_p21.jpg"
     },
     {
-      "texto": "Para circular de forma segura la profundidad minima de las ranuras del dibujo de los neumaticos sera de...",
+      "texto": "Para circular de forma segura la profundidad mínima de las ranuras del dibujo de los neumáticos será de...",
       "opciones": [
-        "1,6milimetros.",
-        "1,5milimetros.",
-        "1,2 milimetros."
+        "1,6 milímetros.",
+        "1,5 milímetros.",
+        "1,2 milímetros."
       ],
+      "correcta": 0,
       "imagen": "../img/test_069_p22.jpg"
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Obligacion de girar a la izquierda.",
-        "Prohibicion de cambiar de direccion a la izquierda y tambien de cambiar el sentido.",
-        "Prohibicion solamente de cambiar el sentido de la marcha."
+        "Obligación de girar a la izquierda.",
+        "Prohibición de cambiar de dirección a la izquierda y también de cambiar el sentido.",
+        "Prohibición solamente de cambiar el sentido de la marcha."
       ],
+      "correcta": 1,
       "imagen": "../img/test_069_p23.jpg"
     },
     {
-      "texto": "¿Quien debe realizar las actuaciones de soporte vital basico a las victimas de un accidente?",
+      "texto": "¿Quién debe realizar las actúaciones de soporte vital básico a las víctimas de un accidente?",
       "opciones": [
         "El personal especializado, siempre.",
-        "Estas actuaciones siempre deben realizarse en un hospital.",
-        "El personal especializado, salvo que la persona que presteauxilio este totalmente segura deconocerlas y poderlas realizar."
-      ]
+        "Estas actúaciones siempre deben realizarse en un hospital.",
+        "El personal especializado, salvo que la persona que preste auxilio esté totalmente segura de conocerlas y poderlas realizar."
+      ],
+      "correcta": 2
     },
     {
       "texto": "En las personas que toman drogas de abuso y conducen, la probabilidad de sufrir un accidente es...",
@@ -215,51 +239,57 @@
         "mayor.",
         "menor.",
         "la misma."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Qué indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Prohibida lacirculacion.",
-        "Findeprohibiciones.",
-        "Quetenemosprioridad en todas las intersecciones."
+        "Prohibida la circulación.",
+        "Fin de prohibiciones.",
+        "Que tenemos prioridad en todas las intersecciones."
       ],
+      "correcta": 1,
       "imagen": "../img/test_069_p26.jpg"
     },
     {
-      "texto": "En un paso para peatones, ¿zesta permitido parar o estacionar?",
+      "texto": "En un paso para peatones, ¿está permitido parar o estacionar?",
       "opciones": [
         "No.",
-        "Si.",
-        "Estapermitidoparar,pero esta prohibidoestacionar."
+        "Sí.",
+        "Está permitido parar, pero está prohibido estacionar."
       ],
+      "correcta": 0,
       "imagen": "../img/test_069_p27.jpg"
     },
     {
-      "texto": "¿Esta permitido estacionar en doble fila?",
+      "texto": "¿Está permitido estacionar en doble fila?",
       "opciones": [
-        "Si, cuando no haya espacio libre en las proximidades.",
-        "Si, en las vias urbanas, por un tiempo inferior a dos minutos.",
-        "Noestapermitidoenninguncaso."
+        "Sí, cuando no haya espacio libre en las proximidades.",
+        "Sí, en las vías urbanas, por un tiempo inferior a dos minutos.",
+        "No está permitido en ningún caso."
       ],
+      "correcta": 2,
       "imagen": "../img/test_069_p28.jpg"
     },
     {
-      "texto": "¿Esta permitido cambiar el sentido de la marcha en un tunel?",
+      "texto": "¿Está permitido cambiar el sentido de la marcha en un túnel?",
       "opciones": [
-        "Si, salvo que no exista suficiente visibilidad.",
-        "Si, cuandono esteexpresamenteprohibido.",
+        "Sí, salvo que no exista suficiente visibilidad.",
+        "Sí, cuando no esté expresamente prohibido.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_069_p29.jpg"
     },
     {
-      "texto": "Con caracter general, ¿ipuede un menor de diez anos y de estatura superior a 1,35 m viajar en el asiento delantero de un turismo?",
+      "texto": "Con carácter general, ¿puede un menor de diez años y de estatura superior a 1,35 m viajar en el asiento delantero de un turismo?",
       "opciones": [
-        "No,debeteneralmenos doceanos.",
-        "Si, utilizando correctamente el cinturon de seguridad.",
-        "Si, siempre que utilice un sistema de retencion infantil homologado."
-      ]
+        "No, debe tener al menos doce años.",
+        "Sí, útilizando correctamente el cinturón de seguridad.",
+        "Sí, siempre que útilice un sistema de retención infantil homologado."
+      ],
+      "correcta": 1
     }
   ]
 }

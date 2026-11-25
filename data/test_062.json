@@ -1,263 +1,292 @@
 {
   "test_id": 62,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
       "texto": "¿Es aconsejable conducir un turismo calzado con unas chanclas?",
       "opciones": [
-        "No,porque podrian caerse y dificultar el manejo de los pedales.",
-        "Si, porque al no sujetar el pie, es mas facil ejercer la presion correcta sobre los pedales.",
-        "Si, porque permiten un manejo mas rapido y seguro de los pedales."
+        "No, porque podrían caerse y dificultar el manejo de los pedales.",
+        "Sí, porque al no sujetar el pie, es más fácil ejercer la presión correcta sobre los pedales.",
+        "Sí, porque permiten un manejo más rápido y seguro de los pedales."
       ],
+      "correcta": 0,
       "imagen": "../img/test_062_p01.jpg"
     },
     {
-      "texto": "¿Cual es la sancion por no tener el seguro obligatorio del vehiculo?",
+      "texto": "¿Cuál es la sanción por no tener el seguro obligatorio del vehículo?",
       "opciones": [
-        "Una multa, pero sin inmovilizacion del vehiculo.",
-        "Una multa, y ademas se podra inmovilizar el vehiculo.",
-        "La inmovilizacion del vehiculo,pero no supone sancion economica."
+        "Una multa, pero sin inmovilización del vehículo.",
+        "Una multa, y además se podrá inmovilizar el vehículo.",
+        "La inmovilización del vehículo, pero no supone sanción económica."
       ],
+      "correcta": 1,
       "imagen": "../img/test_062_p02.jpg"
     },
     {
-      "texto": "¿Al aumentar la velocidad incrementa la probabilidad de muerte en caso de atropello a un peaton?",
+      "texto": "¿Al aumentar la velocidad incrementa la probabilidad de muerte en caso de atropello a un peatón?",
       "opciones": [
-        "No, la velocidad del vehiculo no tiene impacto significativo en la probabilidad de muerte deunpeaton atropellado.",
-        "Si, al aumentar la velocidad de un vehiculo se incrementa la probabilidad de fatalidad en caso de atropello a un peaton.",
-        "La probabilidad es la misma, dependera exclusivamente del estado de salud del peaton."
+        "No, la velocidad del vehículo no tiene impacto significativo en la probabilidad de muerte de un peatón atropellado.",
+        "Sí, al aumentar la velocidad de un vehículo se incrementa la probabilidad de fatalidad en caso de atropello a un peatón.",
+        "La probabilidad es la misma, dependerá exclusivamente del estado de salud del peatón."
       ],
+      "correcta": 1,
       "imagen": "../img/test_062_p03.jpg"
     },
     {
-      "texto": "Si los paneles de mensaje variable indican que los turismos con distintivo ambiental B pueden circular por un carril VAo, ¿Que ocupacion minima debe tener el vehiculo?",
+      "texto": "Si los paneles de mensaje variable indican que los turismos con distintivo ambiental B pueden circular por un carril VAO, ¿Qué ocupación mínima debe tener el vehículo?",
       "opciones": [
         "Dos ocupantes, incluido el conductor.",
-        "Unocupante.",
+        "Un ocupante.",
         "Dos ocupantes, sin incluir al conductor."
       ],
+      "correcta": 0,
       "imagen": "../img/test_062_p04.jpg"
     },
     {
-      "texto": "El efecto submarino, que en un accidente de trafico puede provocar graves lesiones al conductor, esta relacionado con...",
+      "texto": "El efecto submarino, que en un accidente de tráfico puede provocar graves lesiones al conductor, está relaciónado con...",
       "opciones": [
-        "Una incorrectapresiondelosneumaticos.",
-        "Un mal uso del cinturon de seguridad.",
+        "Una incorrecta presión de los neumáticos.",
+        "Un mal uso del cinturón de seguridad.",
         "Un consumo excesivo de alcohol, medicamentos o drogas de abuso."
       ],
+      "correcta": 1,
       "imagen": "../img/test_062_p05.jpg"
     },
     {
-      "texto": "Si queda detenido en un atasco, ¿ique distancia es aconsejable mantener con el vehiculo de delante?",
+      "texto": "Si queda detenido en un atasco, ¿qué distancia es aconsejable mantener con el vehículo de delante?",
       "opciones": [
-        "Unmetro como maximo.",
-        "Unespaciominimopara ocuparmenos espacio.",
-        "Dos o tres metros para no golpear al vehiculo de delante en caso de alcance trasero."
+        "Un metro como máximo.",
+        "Un espacio mínimo para ocupar menos espacio.",
+        "Dos o tres metros para no golpear al vehículo de delante en caso de alcance trasero."
       ],
+      "correcta": 2,
       "imagen": "../img/test_062_p06.jpg"
     },
     {
-      "texto": "Si un agente le solicita su permiso de conduccion, ¿en que medio puede mostrarlo?",
+      "texto": "Si un agente le solicita su permiso de conducción, ¿en que medio puede mostrarlo?",
       "opciones": [
-        "Tanto en documento fisico como en formato digital a traves de la App miDGT.",
-        "Solo en documento fisico.",
+        "Tanto en documento físico como en formato digital a través de la App miDGT.",
+        "Solo en documento físico.",
         "Solo en documento digital."
       ],
+      "correcta": 0,
       "imagen": "../img/test_062_p07.jpg"
     },
     {
-      "texto": "Debido al deterioro psicofisico consecuencia del envejecimiento, ¿zque situaciones de trafico ofrecen mas dificultades a las personas mayores?",
+      "texto": "Debido al deterioro psicofísico consecuencia del envejecimiento, ¿qué situaciones de tráfico ofrecen más dificultades a las personas mayores?",
       "opciones": [
-        "Los giros a la izquierda, especialmente en vias urbanas.",
-        "Los estacionamientos, sobretodo cuando serealizan a la derecha de la calzada.",
-        "Las situaciones complejas, como incorporarse a una via en la que se circula a alta c) Las situaciones complejas, como incorporarse a una via en la que se circula a alta velocidad."
+        "Los giros a la izquierda, especialmente en vías urbanas.",
+        "Los estacionamientos, sobre todo cuando se realizan a la derecha de la calzada.",
+        "Las situaciones complejas, como incorporarse a una vía en la que se circula a alta velocidad."
       ],
+      "correcta": 2,
       "imagen": "../img/test_062_p08.jpg"
     },
     {
-      "texto": "Como mantenimiento preventivo, ¿zes conveniente realizar una revision periodica del sistema dealumbrado del vehiculo?",
+      "texto": "Como mantenimiento preventivo, ¿es conveniente realizar una revisión periódica del sistema de alumbrado del vehículo?",
       "opciones": [
-        "Si, para comprobar su correcto reglado y funcionamiento.",
-        "No, salvo en los vehiculos quedisponen de un sistema regulador automatico.",
-        "No, solamente, cuando lleve sobrecarga porquepodrian producirse cambios de inclinacion del alcanceluminoso. abiertas? O a) Si, para llevar bien ventilado el interior del vehiculo. Ob)Solo enprimavera. O c) No."
+        "Sí, para comprobar su correcto reglado y funciónamiento.",
+        "No, salvo en los vehículos que disponen de un sistema regulador automático.",
+        "No, solamente cuando lleve sobrecarga porque podrían producirse cambios de inclinación del alcance luminoso."
       ],
+      "correcta": 0,
       "imagen": "../img/test_062_p09.jpg"
     },
     {
-      "texto": "¿Circula con su turismo por una via que se cruza con un carril-bici;zdebe ceder el paso a los ciclistas?",
+      "texto": "Circula con su turismo por una vía que se cruza con un carril-bici; ¿debe ceder el paso a los ciclistas?",
       "opciones": [
-        "No.Los ciclistas no tienen prioridad de paso frente a los vehiculos de motor.",
-        "Si, siempre.",
-        "Solo cuandolos ciclistas se aproximen porsuderecha."
+        "No. Los ciclistas no tienen prioridad de paso frente a los vehículos de motor.",
+        "Sí, siempre.",
+        "Solo cuando los ciclistas se aproximen por su derecha."
       ],
+      "correcta": 1,
       "imagen": "../img/test_062_p11.jpg"
     },
     {
-      "texto": "Si se observa un incremento en el consumo de carburante de un vehiculo, ¿ique se debe revisar?",
+      "texto": "Si se observa un incremento en el consumo de carburante de un vehículo, ¿qué se debe revisar?",
       "opciones": [
-        "El circuito de refrigeracion y el de lubricacion.",
+        "El circuito de refrigeración y el de lubricación.",
         "El circuito de escape.",
-        "El circuito de encendido y el de alimentacion."
+        "El circuito de encendido y el de alimentación."
       ],
+      "correcta": 2,
       "imagen": "../img/test_062_p12.jpg"
     },
     {
-      "texto": "¿Cuantos puntos del permiso de conducir puede perder un conductor si no hace uso del cinturon de seguridad?",
+      "texto": "¿Cuántos puntos del permiso de conducir puede perder un conductor si no hace uso del cinturón de seguridad?",
       "opciones": [
         "2 puntos.",
         "3 puntos.",
         "4 puntos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_062_p13.jpg"
     },
     {
-      "texto": "Una persona provista de un certificado medico que le exima de utilizar los sistemas de retencion del vehiculo, ¿zesta exenta de llevar abrochado el cinturon de seguridad?",
+      "texto": "Una persona provista de un certificado médico que le exima de útilizar los sistemas de retención del vehículo, ¿está exenta de llevar abrochado el cinturón de seguridad?",
       "opciones": [
         "Sí.",
         "No.",
-        "Unicamente fuera de poblado."
+        "Únicamente fuera de poblado."
       ],
+      "correcta": 0,
       "imagen": "../img/test_062_p14.jpg"
     },
     {
-      "texto": "Si tras un accidente de trafico, un herido no responde y aparentemente ha perdido la conciencia, ¿zque es lo primero que debemos hacer?",
+      "texto": "Si tras un accidente de tráfico, un herido no responde y aparentemente ha perdido la conciencia, ¿qué es lo primero que debemos hacer?",
       "opciones": [
         "Buscar hemorragias externas o internas, para evitar que se desangre.",
-        "Abrir la via aerea yretirar cuerpos extranos de la boca,mediantemaniobrasqueno manipulen la columna.",
-        "Tumbarle en la denominada posicion lateral de seguridad, para que respire con mayor facilidad."
+        "Abrir la vía aérea y retirar cuerpos extraños de la boca, medíante maniobras que no manipulen la columna.",
+        "Tumbarle en la denominada posición lateral de seguridad, para que respire con mayor fácilidad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_062_p15.jpg"
     },
     {
-      "texto": "&Cual de las siguientes conductas es comun observar en un conductor que mientras conduce habla por el telefono movil, ¿aumentando el riesgo de sufrir un accidente?",
+      "texto": "¿Cuál de las siguientes conductas es común observar en un conductor que mientras conduce habla por el teléfono móvil, aumentando el riesgo de sufrir un accidente?",
       "opciones": [
         "Llevar las ventanas traseras abiertas para mejorar la cobertura.",
-        "Desviacion de trayectoria, incluidos cambios de carril.",
-        "Conducir sinmarcha engranada, especialmente enpendientes ascendentes."
+        "Desviación de trayectoria, incluidos cambios de carril.",
+        "Conducir sin marcha engranada, especialmente en pendientes ascendentes."
       ],
+      "correcta": 1,
       "imagen": "../img/test_062_p16.jpg"
     },
     {
-      "texto": "De que advierte la senal luminosa de color amarillo auto, visible desde todas las direcciones, ¿que lleva el tractor agricola en su parte superior?",
+      "texto": "De que advierte la señal luminosa de color amarillo auto, visible desde todas las direcciones, ¿qué lleva el tractor agrícola en su parte superior?",
       "opciones": [
-        "De su presencia en la via o en sus inmediaciones.",
+        "De su presencia en la vía o en sus inmedíaciones.",
         "De que no puede circular a una velocidad superior a 30 km/h.",
         "De que circular en servicio urgente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_062_p17.jpg"
     },
     {
-      "texto": "A partir de la senal que se muestra en la imagen, ¿ique limitaciones existen para los turismos?",
+      "texto": "A partir de la señal que se muestra en la imagen, ¿qué limitaciones existen para los turismos?",
       "opciones": [
-        "Nopueden circular, el puerto esta cerrado",
-        "Deben utilizar cadenas para nieve u otro dispositivo equivalente.",
-        "Noexisterestriccionalgunaparalosturismos"
+        "No pueden circular, el puerto está cerrado",
+        "Deben útilizar cadenas para nieve u otro dispositivo equivalente.",
+        "No existe restricción alguna para los turismos."
       ],
+      "correcta": 1,
       "imagen": "../img/test_062_p18.jpg"
     },
     {
-      "texto": "Conducir bajo los efectos del alcohol o de las drogas, ¿iesta considerado como delito en el Codigo Penal?",
+      "texto": "Conducir bajo los efectos del alcohol o de las drogas, ¿está considerado como delito en el Código Penal?",
       "opciones": [
-        "No, las sanciones son exclusivamente economicas.",
-        "Si.",
-        "Solo cuando el conductor sea responsable de un accidente con victimas mortales."
+        "No, las sanciones son exclusivamente económicas.",
+        "Sí.",
+        "Solo cuando el conductor sea responsable de un accidente con víctimas mortales."
       ],
+      "correcta": 1,
       "imagen": "../img/test_062_p19.jpg"
     },
     {
-      "texto": "Tras la exposicion prolongada de un vehiculo a altas temperaturas y al calor, ¿ies conveniente revisar si sus faros y pilotos han sufrido algun deterioro?",
+      "texto": "Tras la exposición prolongada de un vehículo a altas temperaturas y al calor, ¿es conveniente revisar si sus faros y pilotos han sufrido algún deterioro?",
       "opciones": [
-        "Si, para comprobar deforma visual su estado y capacidad de iluminacion.",
+        "Sí, para comprobar de forma visual su estado y capacidad de iluminación.",
         "No, ya que el acabado de los faros esta hecho de un material que soporta todo tipo de factores sin deteriorarse.",
-        "Si, salvoen los vehiculosdepocaantiguedad."
+        "Sí, salvo en los vehículos de poca antigüedad."
       ],
+      "correcta": 0,
       "imagen": "../img/test_062_p20.jpg"
     },
     {
-      "texto": "Situado en un vehiculo, ¿zque identifica la senal V-25 Distintivo ambiental?",
+      "texto": "Situado en un vehículo, ¿qué identifica la señal V-25 Distintivo ambiental?",
       "opciones": [
-        "Suclasificacion ambiental en funcion de sunivel de emisiones y combustible empleado.",
-        "El tipo de combustible empleado y su nivel de radiacion atmosferica. b) El tipo de combustible empleado y su nivel de radiacion atmosferica.",
-        "Su clasificacion ambiental enfuncion de sunivel de contaminacion acustica."
+        "Su clasificación ambiental en función de su nivel de emisiones y combustible empleado.",
+        "El tipo de combustible empleado y su nivel de radíación atmosférica.",
+        "Su clasificación ambiental en función de su nivel de contaminación acústica."
       ],
+      "correcta": 0,
       "imagen": "../img/test_062_p21.jpg"
     },
     {
-      "texto": "¿Cual es la accion correcta que debe tomar un conductor si ya ha ingresado en una interseccion y un agente levanta el brazo verticalmente?",
+      "texto": "¿Cuál es la acción correcta que debe tomar un conductor si ya ha ingresado en una intersección y un agente levanta el brazo verticalmente?",
       "opciones": [
-        "Detenerse de inmediato, independientemente de su ubicacion en la interseccion.",
-        "Continuar sutrayectoria a traves de la interseccion sin detenerse.",
-        "Detenerse solo si puede hacerlo de manera segura sin obstruir el trafico."
+        "Detenerse de inmedíato, independientemente de su ubicación en la intersección.",
+        "Continuar su trayectoria a través de la intersección sin detenerse.",
+        "Detenerse solo si puede hacerlo de manera segura sin obstruir el tráfico."
       ],
+      "correcta": 1,
       "imagen": "../img/test_062_p22.jpg"
     },
     {
-      "texto": "En general, un conductor con estres...",
+      "texto": "En general, un conductor con estrés...",
       "opciones": [
-        "se distrae con mayor facilidad.",
-        "tomadecisiones mas rapidas y comete menos errores.",
-        "prestamayoratencion al entornoytarda mas en tomardecisiones."
+        "se distrae con mayor fácilidad.",
+        "toma de decisiones más rápidas y comete menos errores.",
+        "presta mayor atención al entorno y tarda más en tomar decisiones."
       ],
+      "correcta": 0,
       "imagen": "../img/test_062_p23.jpg"
     },
     {
-      "texto": "La velocidad, ¿ies un factor de riesgo que produce accidentes?",
+      "texto": "La velocidad, ¿es un factor de riesgo que produce accidentes?",
       "opciones": [
-        "No, si el vehiculo dispone de los ultimos sistemas de seguridad.",
+        "No, si el vehículo dispone de los últimos sistemas de seguridad.",
         "No; solo agrava las consecuencias del accidente pero no es un factor de riesgo.",
-        "Si,ypor eso debe ser la adecuada en cada momento."
+        "Sí, y por eso debe ser la adecuada en cada momento."
       ],
+      "correcta": 2,
       "imagen": "../img/test_062_p24.jpg"
     },
     {
-      "texto": "De los siguientes, ¿icual es un sintoma caracteristico de la aparicion de la fatiga durante la conduccion?",
+      "texto": "De los siguientes, ¿cuál es un síntoma carácterístico de la aparición de la fatiga durante la conducción?",
       "opciones": [
-        "Sedistingue mejor la informacion relevante de la irrelevante.",
-        "La disminucion en el numero de correcciones de la direccion.",
+        "Se distingue mejor la información relevante de la irrelevante.",
+        "La disminución en el número de correcciónes de la dirección.",
         "El incremento de la agudeza visual."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Que alumbrado debera mantener encendido un vehiculo estacionado durante la noche en el arcen de una travesia insuficientemente iluminada?",
+      "texto": "¿Qué alumbrado deberá mantener encendido un vehículo estacionado durante la noche en el arcén de una travésía insuficientemente iluminada?",
       "opciones": [
-        "Ninguno,ya que es un estacionamiento dentro de poblado.",
-        "Las luces de largo alcance ylas luces de emergencia.",
-        "Las luces de posicion,que podra sustituirpor las de estacionamiento."
-      ]
+        "Ninguno, ya que es un estacionamiento dentro de poblado.",
+        "Las luces de largo alcance y las luces de emergencia.",
+        "Las luces de posición, que podrá sustituir por las de estacionamiento."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Cuales son los cuatro niveles de clasificacion ambiental utilizados para identificar el nivel de contaminacion de los vehiculos en funcion de sus emisiones?",
+      "texto": "¿Cuáles son los cuatro niveles de clasificación ambiental útilizados para identificar el nivel de contaminación de los vehículos en función de sus emisiones?",
       "opciones": [
-        "O emisiones, Eco, C y D.",
+        "0 emisiones, Eco, C y D.",
         "Sin emisiones, Eco, A y B.",
-        "O emisiones, Eco, C y B."
-      ]
+        "0 emisiones, Eco, C y B."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Para qué sirve el carril de deceleracion?",
+      "texto": "¿Para qué sirve el carril de deceleración?",
       "opciones": [
-        "Paraque circulen losvehiculoslentos.",
+        "Para que circulen los vehículos lentos.",
         "Para adelantar por la derecha.",
         "Para reducir la velocidad al salir de una autopista."
       ],
+      "correcta": 2,
       "imagen": "../img/test_062_p28.jpg"
     },
     {
-      "texto": "Conduce un turismo con un remolque de un solo eje. ¿Le afecta esta senal?",
+      "texto": "Conduce un turismo con un remolque de un solo eje. ¿Le afecta esta señal?",
       "opciones": [
         "No.",
-        "Si, porque lleva un remolque de un eje.",
-        "No, salvo que la M.M.A. del remolque supere la cifra indicada en la senal."
+        "Sí, porque lleva un remolque de un eje.",
+        "No, salvo que la M.M.A. del remolque supere la cifra indicada en la señal."
       ],
+      "correcta": 2,
       "imagen": "../img/test_062_p29.jpg"
     },
     {
-      "texto": "¿La mayoria de los vehiculos disponen de un filtro en el habitaculo o filtro antipolen.zDebe sustituirse?",
+      "texto": "La mayoría de los vehículos disponen de un filtro en el habitáculo o filtro antipolen. ¿Debe sustituirse?",
       "opciones": [
-        "Si, sobre todo al inicio de la primavera, ya que su capacidad de retencion es limitada.",
-        "Si, cada seis mesesporque es un elemento sujetoa inspeccion tecnicaperiodica.",
-        "No,ya que es un filtro que se limpia automaticamente."
+        "Sí, sobre todo al inicio de la primavera, ya que su capacidad de retención es limitada.",
+        "Sí, cada seis meses porque es un elemento sujeto a inspección técnica periódica.",
+        "No, ya que es un filtro que se limpia automáticamente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_062_p30.jpg"
     }
   ]

@@ -1,269 +1,299 @@
 {
   "test_id": 66,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En vias interurbanas, ¿zcual es la infraccion mas habitual que cometen los peatones victimas de atropello?",
+      "texto": "En vías interurbanas, ¿cuál es la infracción más habitual que cometen los peatones víctimas de atropello?",
       "opciones": [
-        "Norespetarlos semaforos.",
-        "Estaromarcharporla calzada deforma antirreglamentaria.",
-        "No obedecer las seniales de los agentes."
+        "No respetar los semáforos.",
+        "Estar o marchar por la calzada de forma antirreglamentaria.",
+        "No obedecer las señales de los agentes."
       ],
+      "correcta": 1,
       "imagen": "../img/test_066_p01.jpg"
     },
     {
-      "texto": "Al abandonar una autovia debera...",
+      "texto": "Al abandonar una autovía deberá...",
       "opciones": [
-        "Reducir la velocidad de 60km/h.",
-        "Continuarporsucarril hastala salida.",
-        "Circular por el carril de deceleracion lo antes posible."
-      ]
+        "Reducir la velocidad de 60 km/h.",
+        "Continuar por su carril hasta la salida.",
+        "Circular por el carril de deceleración lo antes posible."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En una autopista con tres carriles para el mismo sentido, normalmente, ¿icual debe utilizar?",
+      "texto": "En una autopista con tres carriles para el mismo sentido, normalmente, ¿cuál debe útilizar?",
       "opciones": [
         "Cualquiera de ellos.",
         "El central o el derecho, indistintamente.",
         "El derecho."
       ],
+      "correcta": 2,
       "imagen": "../img/test_066_p03.jpg"
     },
     {
-      "texto": "La lluvia, ¿zafecta al agarre de las ruedas del vehiculo a la calzada?",
+      "texto": "La lluvia, ¿afecta al agarre de las ruedas del vehículo a la calzada?",
       "opciones": [
-        "No,el agarre es el mismo que cuando la calzada esta seca.",
-        "Si, seagarran mas a la calzada.",
-        "Si, se agarran menos."
+        "No, el agarre es el mismo que cuando la calzada está seca.",
+        "Sí, se agarran más a la calzada.",
+        "Sí, se agarran menos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_066_p04.jpg"
     },
     {
-      "texto": "La senal que se observa en la fotografia indica que tienen prohibido adelantar...",
+      "texto": "La señal que se observa en la fotografía indica que tienen prohibido adelantar...",
       "opciones": [
         "los turismos.",
         "los turismos y los camiones de menos de 3.500 kg.",
-        "los camiones de mas de 3.500 kg."
+        "los camiones de más de 3.500 kg."
       ],
+      "correcta": 2,
       "imagen": "../img/test_066_p05.jpg"
     },
     {
-      "texto": "Las senales azules, ¿ique indican?",
+      "texto": "Las señales azules, ¿qué indican?",
       "opciones": [
         "Que la autopista se termina.",
-        "Quelaautopistaesdepeaje.",
-        "Los carriles para ir a otras carreteras opoblaciones."
+        "Que la autopista es de peaje.",
+        "Los carriles para ir a otras carreteras o poblaciones."
       ],
+      "correcta": 2,
       "imagen": "../img/test_066_p06.jpg"
     },
     {
-      "texto": "Que debe hacer un peaton si, cuando va a cruzar una via, ¿se encuentra de frente a un agente con el brazo levantado verticalmente?",
+      "texto": "¿Qué debe hacer un peatón si, cuando va a cruzar una vía, se encuentra de frente a un agente con el brazo levantado verticalmente?",
       "opciones": [
         "Detenerse.",
-        "Cruzar. Las senales de los agentes solo obligan a los conductores de vehiculos.",
-        "Detenerse, excepto si un semaforo le da preferencia de paso, en cuyo caso debe cruzar."
+        "Cruzar. Las señales de los agentes solo obligan a los conductores de vehículos.",
+        "Detenerse, excepto si un semáforo le da preferencia de paso, en cuyo caso debe cruzar."
       ],
+      "correcta": 0,
       "imagen": "../img/test_066_p07.jpg"
     },
     {
-      "texto": "El consumo de alcohol, aunque sea en pequenas cantidades...",
+      "texto": "El consumo de alcohol, aunque sea en pequeñas cantidades...",
       "opciones": [
         "no deteriora la capacidad para conducir.",
-        "deteriora la capacidadpara conducir."
+        "deteriora la capacidad para conducir."
       ],
+      "correcta": 1,
       "imagen": "../img/test_066_p08.jpg"
     },
     {
-      "texto": "En un accidente de trafico se produce el efecto submarino cuando...",
+      "texto": "En un accidente de tráfico se produce el efecto submarino cuando...",
       "opciones": [
-        "el cuerpo del ocupante del vehiculo se desliza por debajo del cinturon de seguridad.",
-        "el reposacabezas esta mal regulado y el cuello sufre un violento movimiento de vaiven.",
+        "el cuerpo del ocupante del vehículo se desliza por debajo del cinturón de seguridad.",
+        "el reposacabezas está mal regulado y el cuello sufre un violento movimiento de vaivén.",
         "el conductor recibe un impacto directo y fuerte del airbag en la cara."
       ],
+      "correcta": 0,
       "imagen": "../img/test_066_p09.jpg"
     },
     {
       "texto": "¿Es posible ahorrar combustible evitando cambios de marcha innecesarios?",
       "opciones": [
-        "Si.",
-        "No, en ningun caso.",
-        "Depende de si el vehiculo tiene motor diesel o de gasolina."
+        "Sí.",
+        "No, en ningún caso.",
+        "Depende de si el vehículo tiene motor diésel o de gasolina."
       ],
+      "correcta": 0,
       "imagen": "../img/test_066_p10.jpg"
     },
     {
-      "texto": "Una persona mayor de edad, ipuede transportar a un menor en una bicicleta que, por construccion, ¿no pueda ser ocupada por mas de una persona?",
+      "texto": "Una persona mayor de edad, ¿puede transportar a un menor en una bicicleta que, por construcción, no pueda ser ocupada por más de una persona?",
       "opciones": [
-        "Solo si el conductor pedalea levantado y el menor va sentado en el sillin.",
-        "Si, a un menor de hasta 22kg que pueda sentarse por si solo, en un asiento adicional que cumplalas especificaciones tecnicas establecidas.",
-        "No, esta prohibido."
+        "Solo si el conductor pedalea levantado y el menor va sentado en el sillín.",
+        "Sí, a un menor de hasta 22 kg que pueda sentarse por sí solo, en un asiento adicional que cumpla las especificaciones técnicas establecidas.",
+        "No, está prohibido."
       ],
+      "correcta": 1,
       "imagen": "../img/test_066_p11.jpg"
     },
     {
-      "texto": "A falta de senalizacion, ¿icual es la velocidad maxima permitida para una furgoneta cuando circule por una autovia que discurra dentro de poblado?",
+      "texto": "A falta de señalización, ¿cuál es la velocidad máxima permitida para una furgoneta cuando circule por una autovía que discurra dentro de poblado?",
       "opciones": [
         "80 km/h.",
         "100 km/h.",
         "90 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_066_p12.jpg"
     },
     {
-      "texto": "En condiciones meteorologicas especialmente desfavorables, como en caso de fuerte granizada, ique precauciones, entre otras, ¿debe tomar?",
+      "texto": "En condiciones meteorológicas especialmente desfavorables, como en caso de fuerte granizada, ¿qué precauciones, entre otras, debe tomar?",
       "opciones": [
         "Disminuir la velocidad, evitando pisar el freno, y aumentar la distancia de seguridad.",
-        "Acercarse al vehiculo de delante y encender el dispositivo de presenalizacion de peligro.",
-        "Circular con cambios frecuentes de direccion para evitar que se produzca\"aquaplaning\"."
+        "Acercarse al vehículo de delante y encender el dispositivo de preseñalización de peligro.",
+        "Circular con cambios frecuentes de dirección para evitar que se produzca\"aquaplaning\"."
       ],
+      "correcta": 0,
       "imagen": "../img/test_066_p13.jpg"
     },
     {
-      "texto": "La tasa de alcoholemia en sangre mas segura para circular es ..",
+      "texto": "La tasa de alcoholemia en sangre más segura para circular es.",
       "opciones": [
         "0,0 gramos por litro.",
         "0,5 gramos por litro.",
         "0,3 gramos por litro."
       ],
+      "correcta": 0,
       "imagen": "../img/test_066_p14.jpg"
     },
     {
-      "texto": "Sobrevalorar su capacidad de conduccion o una menor percepcion del riesgo son conductas que, en general, hacen que los conductores jovenes...",
+      "texto": "Sobrevalorar su capacidad de conducción o una menor percepcion del riesgo son conductas que, en general, hacen que los conductores jóvenes...",
       "opciones": [
         "tengan menos probabilidad de sufrir un accidente.",
-        "tengan mas probabilidad de sufrir un accidente.",
-        "sean mas prudentes al volante."
+        "tengan más probabilidad de sufrir un accidente.",
+        "sean más prudentes al volante."
       ],
+      "correcta": 1,
       "imagen": "../img/test_066_p15.jpg"
     },
     {
-      "texto": "Una vez termine de adelantar al camion, ¿zpuede seguir circulando por el carril izquierdo?",
+      "texto": "Una vez termine de adelantar al camión, ¿puede seguir circulando por el carril izquierdo?",
       "opciones": [
         "No, debe circular por el carril derecho.",
-        "No, porque por el carril izquierdo solo se puede utilizar para adelantar.",
-        "Si, porque en autopista se puede circular por cualquier carril."
+        "No, porque por el carril izquierdo solo se puede útilizar para adelantar.",
+        "Sí, porque en autopista se puede circular por cualquier carril."
       ],
+      "correcta": 0,
       "imagen": "../img/test_066_p16.jpg"
     },
     {
-      "texto": "De las siguientes situaciones, ¿icual favorece la aparicion de fatiga en el conductor?",
+      "texto": "De las siguientes situaciones, ¿cuál favorece la aparición de fatiga en el conductor?",
       "opciones": [
-        "Conducir de noche con una iluminacion deficiente.",
-        "Circular por una via con la calzada en buen estado.",
-        "Mantenga el interior del vehiculo adecuadamente ventilado."
-      ]
+        "Conducir de noche con una iluminación deficiente.",
+        "Circular por una vía con la calzada en buen estado.",
+        "Mantenga el interior del vehículo adecuadamente ventilado."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En general, un conductor que sufre un trastorno depresivo ...",
+      "texto": "En general, un conductor que sufre un trastorno depresivo...",
       "opciones": [
-        "no tiene distracciones.",
+        "no tiene distracciónes.",
         "cometemenos errores a la hora de tomar decisiones.",
-        "esmas inseguroalvolante."
+        "es más inseguro al volante."
       ],
+      "correcta": 2,
       "imagen": "../img/test_066_p18.jpg"
     },
     {
-      "texto": "Cuando son victimas deatropello, las lesionesmas graves en los ciclistas, quepueden incluso provocar la muerte, se localizan en...",
+      "texto": "Cuando son víctimas de atropello, las lesiones más graves en los ciclistas, que pueden incluso provocar la muerte, se localizan en...",
       "opciones": [
         "las piernas.",
         "la cabeza.",
         "las manos."
       ],
+      "correcta": 1,
       "imagen": "../img/test_066_p19.jpg"
     },
     {
-      "texto": "En esta carretera convencional con arcen transitable, ¿zpor donde debe circular un ciclomotor?",
+      "texto": "En esta carretera convencional con arcén transitable, ¿por dónde debe circular un ciclomotor?",
       "opciones": [
-        "Por el centro de la calzada o por el arcen de la derecha.",
-        "Por la calzada, lo mas cerca posible del borde derecho.",
-        "Por el arcen de la derecha."
+        "Por el centro de la calzada o por el arcén de la derecha.",
+        "Por la calzada, lo más cerca posible del borde derecho.",
+        "Por el arcén de la derecha."
       ],
+      "correcta": 2,
       "imagen": "../img/test_066_p20.jpg"
     },
     {
-      "texto": "¿Circula por una calzada en la que debido a la niebla el pavimento esta huimedo y resbaladizo.zcomo debe ser la conduccion?",
+      "texto": "Circula por una calzada en la que debido a la niebla el pavimento está húmedo y resbaladizo, ¿cómo debe ser la conducción?",
       "opciones": [
-        "Dinamica y,a una velocidad alta para evitar que las ruedas patinen.",
-        "Suave,sinmovimientos bruscos,aumentando la distancia de seguridad, ademas de reducir la velocidad.",
-        "Igual que cuando la calzada esta seca, ya que los neumaticos no pierden adherencia."
+        "Dinámica y, a una velocidad alta para evitar que las ruedas patinen.",
+        "Suave, sin movimientos bruscos, aumentando la distancia de seguridad, además de reducir la velocidad.",
+        "Igual que cuando la calzada está seca, ya que los neumáticos no pierden adherencia."
       ],
+      "correcta": 1,
       "imagen": "../img/test_066_p21.jpg"
     },
     {
-      "texto": "Un conductor se encuentra situado en el carril derecho de esta calzada, ¿ipuede seguir de frente?",
+      "texto": "Un conductor se encuentra situado en el carril derecho de esta calzada, ¿puede seguir de frente?",
       "opciones": [
-        "Si, puede girar a la derecha o continuar de frente.",
-        "Si, porque no existe una senal vertical que prohiba seguir de frente.",
-        "No,esta obligado agirar aladerecha."
+        "Sí, puede girar a la derecha o continuar de frente.",
+        "Sí, porque no existe una señal vertical que prohíba seguir de frente.",
+        "No, está obligado a girar a la derecha."
       ],
+      "correcta": 2,
       "imagen": "../img/test_066_p22.jpg"
     },
     {
-      "texto": "En el caso de condiciones climaticas que reduzcan significativamente la visibilidad, ¿icomo se debe senalizar la carga que sobresale de la parte delantera del vehiculo?",
+      "texto": "En el caso de condiciones climáticas que reduzcan significativamente la visibilidad, ¿cómo se debe señalizar la carga que sobresale de la parte delantera del vehículo?",
       "opciones": [
         "Con una luz roja.",
         "Con una luz blanca.",
-        "Conuna luz blanca y un dispositivoreflectante tambienblanco."
-      ]
+        "Con una luz blanca y un dispositivo reflectante también blanco."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En un tunel insuficientemente iluminado, ¿ique iluminacion deberia llevar encendida en su vehiculo si circula a una velocidad de 80 km/h?",
+      "texto": "En un túnel insuficientemente iluminado, ¿qué iluminación debería llevar encendida en su vehículo si circula a una velocidad de 80 km/h?",
       "opciones": [
-        "Luz de posicion y luz de corto alcance, pero nunca se utilizara las luces de carretera.",
-        "Luz de carretera, siempre que no deslumbre a los demas usuarios.",
-        "Luz de posicion y luz de carretera, pero nunca se utilizara la luz de de corto alcance."
+        "Luz de posición y luz de corto alcance, pero nunca se útilizará las luces de carretera.",
+        "Luz de carretera, siempre que no deslumbre a los demás usuarios.",
+        "Luz de posición y luz de carretera, pero nunca se útilizará la luz de corto alcance."
       ],
+      "correcta": 1,
       "imagen": "../img/test_066_p24.jpg"
     },
     {
-      "texto": "En una via de doble sentido, no hay senales ni marcas viales que prohiban cambiar el sentido. ¿Cuando se permite cambiar de sentido?",
+      "texto": "En una vía de doble sentido, no hay señales ni marcas viales que prohíban cambiar el sentido. ¿Cuándo se permite cambiar de sentido?",
       "opciones": [
         "Nunca.",
-        "Cuando quieras, porque siempre esta permitido.",
-        "Cuando no pongan enpeligro a otros usuarios."
-      ]
+        "Cuando quieras, porque siempre está permitido.",
+        "Cuando no pongan en peligro a otros usuarios."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Esta permitido introducir manualmente la direccion de destino en el navegador mientras se conduce un vehiculo?",
+      "texto": "¿Está permitido introducir manualmente la dirección de destino en el navegador mientras se conduce un vehículo?",
       "opciones": [
-        "Si, siemprey cuando puedas controlar el vehiculo.",
-        "No; constituye un delito contra la seguridad vial segun el Codigo Penal.",
-        "No; es una infraccion grave que supone la perdida de 3 puntos."
+        "Sí, siempre y cuando puedas controlar el vehículo.",
+        "No; constituye un delito contra la seguridad vial según el Código Penal.",
+        "No; es una infracción grave que supone la pérdida de 3 puntos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_066_p26.jpg"
     },
     {
-      "texto": "En este paso de peatones si el semaforo no funciona, ¿es obligatorio detenerse y ceder el paso a los peatones que intentan cruzarlo?",
+      "texto": "En este paso de peatones si el semáforo no funcióna, ¿es obligatorio detenerse y ceder el paso a los peatones que intentan cruzarlo?",
       "opciones": [
-        "Solo si la persona que intenta cruzar es una filade escolares.",
-        "No, porque los vehiculos tienen prioridad.",
-        "Si, porque los peatones tienen prioridad."
+        "Solo si la persona que intenta cruzar es una fila de escolares.",
+        "No, porque los vehículos tienen prioridad.",
+        "Sí, porque los peatones tienen prioridad."
       ],
+      "correcta": 2,
       "imagen": "../img/test_066_p27.jpg"
     },
     {
-      "texto": "Con el permiso de la clase B, ¿ipuedes conducir un tractor agricola?",
+      "texto": "Con el permiso de la clase B, ¿puedes conducir un tractor agrícola?",
       "opciones": [
-        "Si, siemprey cuando no llevesremolque.",
-        "Si. b) Si.",
-        "No,porqueesun vehiculopesado."
+        "Sí, siempre y cuando no lleves remolque.",
+        "Sí.",
+        "No, porque es un vehículo pesado."
       ],
+      "correcta": 1,
       "imagen": "../img/test_066_p28.jpg"
     },
     {
-      "texto": "La maniobra de marcha atras, ¿idebe senalizarse?",
+      "texto": "La maniobra de marcha atrás, ¿debe señalizarse?",
       "opciones": [
-        "Si, utilizando la senal de emergencia o mediante el empleo reiterado de la luz de frenado.",
-        "No,no es obligatorio senalizar la maniobra de marcha atras.",
-        "Si, con la luz de marcha atras."
-      ]
+        "Sí, útilizando la señal de emergencia o medíante el empleo reiterado de la luz de frenado.",
+        "No, no es obligatorio señalizar la maniobra de marcha atrás.",
+        "Sí, con la luz de marcha atrás."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Esta senal, ¿zprohibe la entrada a camiones?",
+      "texto": "Esta señal, ¿prohíbe la entrada a camiones?",
       "opciones": [
-        "Solo si la masa maxima delcamion no superalas2toneladas.",
-        "Si, en cualquier caso.",
+        "Solo si la masa máxima del camión no supera las 2 toneladas.",
+        "Sí, en cualquier caso.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_066_p30.jpg"
     }
   ]

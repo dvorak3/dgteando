@@ -1,273 +1,303 @@
 {
   "test_id": 65,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "La senal de velocidad maxima pintada sobre un carril, ¿ique indica?",
+      "texto": "La señal de velocidad máxima pintada sobre un carril, ¿qué indica?",
       "opciones": [
-        "Prohibido circular a mas de 6o kilometros por hora en todos los carriles.",
-        "Prohibido circular a mas de 60 kilometros por hora en ese carril.",
-        "Prohibido circular a mas de 6okilometros por hora para los vehiculos que van a girar a la derecha."
+        "Prohibido circular a más de 60 kilómetros por hora en todos los carriles.",
+        "Prohibido circular a más de 60 kilómetros por hora en ese carril.",
+        "Prohibido circular a más de 60 kilómetros por hora para los vehículos que van a girar a la derecha."
       ],
+      "correcta": 1,
       "imagen": "../img/test_065_p01.jpg"
     },
     {
-      "texto": "Si un vehiculo estacionado se incorpora a la circulacion, ¿ztiene prioridad para realizar la maniobra?",
+      "texto": "Si un vehículo estacionado se incorpora a la circulación, ¿tiene prioridad para realizar la maniobra?",
       "opciones": [
-        "Si, en cualquier caso.",
-        "Si, si loha senalizadopreviamente.",
+        "Sí, en cualquier caso.",
+        "Sí, si lo ha señalizado previamente.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p02.jpg"
     },
     {
-      "texto": "Esta senal indica la situacion de un lugar donde se puede...",
+      "texto": "Esta señal indica la situación de un lugar donde se puede...",
       "opciones": [
-        "estacionarel vehiculocuandoestaaveriado.",
-        "realizarunaparadaparadescansar.",
-        "apartar el vehiculo en un tunel para dejar libre el paso."
+        "estacionar el vehículo cuando está averiado.",
+        "realizar una parada para descansar.",
+        "apartar el vehículo en un túnel para dejar libre el paso."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p03.jpg"
     },
     {
-      "texto": "¿Como se llama la distancia que recorre un vehiculo desde que el conductor percibe un estimulo hastaque serespondealmismo?",
+      "texto": "¿Cómo se llama la distancia que recorre un vehículo desde que el conductor percibe un estímulo hasta que se responde al mismo?",
       "opciones": [
-        "Distanciadefrenado",
-        "Distanciadereaccion.",
-        "Distancia de detencion."
+        "Distancia de frenado.",
+        "Distancia de reacción.",
+        "Distancia de detención."
       ],
+      "correcta": 1,
       "imagen": "../img/test_065_p04.jpg"
     },
     {
-      "texto": "Dos vehiculos del mismo tipo se encuentran en un estrechamiento, en el que la prioridad no esta senalizada. ¿Cual de ellos tendra preferencia de paso?",
+      "texto": "Dos vehículos del mismo tipo se encuentran en un estrechamiento, en el que la prioridad no está señalizada. ¿Cuál de ellos tendrá preferencia de paso?",
       "opciones": [
-        "El vehiculo que tenga que dar marcha atras una menor distancia.",
-        "El vehiculo que tenga que dar marcha atras mayor distancia.",
-        "El vehiculo que tenga mayor anchura, longitud o masa maxima autorizada."
-      ]
+        "El vehículo que tenga que dar marcha atrás una menor distancia.",
+        "El vehículo que tenga que dar marcha atrás mayor distancia.",
+        "El vehículo que tenga mayor anchura, longitud o masa máxima autorizada."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Si ha instalado en su vehiculo neumaticos de invierno, ¿ies conveniente sustituirlos cuando las temperaturas comiencen a sermas calidas?",
+      "texto": "Si ha instalado en su vehículo neumáticos de invierno, ¿es conveniente sustituirlos cuando las temperaturas comiencen a ser más cálidas?",
       "opciones": [
-        "Si,porque cuando la temperatura esmas calida sedesgastan con mas rapidez.",
+        "Sí, porque cuando la temperatura es más cálida se desgastan con más rapidez.",
         "No, porque se adaptan progresivamente a los cambios de temperatura.",
-        "Si,porque en tiempo calido disminuye considerablemente la distancia de frenado."
+        "Sí, porque en tiempo cálido disminuye considerablemente la distancia de frenado."
       ],
+      "correcta": 0,
       "imagen": "../img/test_065_p06.jpg"
     },
     {
-      "texto": "En una travesia, ¿iesta permitido circular con la luz de largo alcance encendida?",
+      "texto": "En una travésía, ¿está permitido circular con la luz de largo alcance encendida?",
       "opciones": [
         "No.",
-        "Si,en travesias insuficientemente iluminadas.",
+        "Sí, en travésías insuficientemente iluminadas.",
         "Solo si se circula a una velocidad superior a los 40 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_065_p07.jpg"
     },
     {
-      "texto": "¿Esta permitido que las motocicletas circulen por un carril reservado para vehiculos con alta ocupacion (VAO)?",
+      "texto": "¿Está permitido que las motocicletas circulen por un carril reservado para vehículos con alta ocupación (VAO)?",
       "opciones": [
         "No.",
-        "Solo si llevaalgun ocupante,ademas del conductor.",
-        "Si."
+        "Solo si lleva algún ocupante, además del conductor.",
+        "Sí."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p08.jpg"
     },
     {
       "texto": "El alcohol desaparece de la sangre...",
       "opciones": [
-        "rapidamente, eliminandosepor completo una hora despuesde su consumo.",
-        "inmediatamente despues de su consumo a traves del sudor y de la orina.",
-        "muy lentamente, eliminandose por completo varias horas despues de su consumo."
+        "rápidamente, eliminándose por completo una hora después de su consumo.",
+        "inmedíatamente después de su consumo a través del sudor y de la orina.",
+        "muy lentamente, eliminándose por completo varias horas después de su consumo."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p09.jpg"
     },
     {
       "texto": "¿Es seguro conducir después de haber consumido anfetaminas?",
       "opciones": [
         "No.",
-        "Si,porque son relajantes y retrasan la aparicion del sueno.",
-        "Solo siseconsumen acompanadasdealgunabebidaalcoholica."
+        "Sí, porque son relajantes y retrasan la aparición del sueño.",
+        "Solo si se consumen acompañadas de alguna bebida alcohólica."
       ],
+      "correcta": 0,
       "imagen": "../img/test_065_p10.jpg"
     },
     {
-      "texto": "¿Que debe hacer para que el vehiculo tenga un mejor agarre sobre la calzada?",
+      "texto": "¿Qué debe hacer para que el vehículo tenga un mejor agarre sobre la calzada?",
       "opciones": [
-        "Inflar los neumaticos por encima de la presion recomendada por el fabricante.",
-        "Cuidar que la profundidad del dibujo del neumatico nunca sea inferior a 1,6 mm.",
-        "Utilizar neumaticos radiales en las ruedas delanterasy diagonales en las traseras."
+        "Inflar los neumáticos por encima de la presión recomendada por el fabricante.",
+        "Cuidar que la profundidad del dibujo del neumático nunca sea inferior a 1,6 mm.",
+        "Utilizar neumáticos radíales en las ruedas delanteras y díagonales en las traseras."
       ],
+      "correcta": 1,
       "imagen": "../img/test_065_p11.jpg"
     },
     {
-      "texto": "Durante el dia y con tiempo soleado, debera llevar encendida la luz de corto alcance cuando...",
+      "texto": "Durante el día y con tiempo soleado, deberá llevar encendida la luz de corto alcance cuando...",
       "opciones": [
-        "Circulea unavelocidad inferiora 40km/h.",
-        "Circule en tramos devias estrechas con muchas curvas.",
+        "Circule a una velocidad inferior a 40 km/h.",
+        "Circule en tramos de vías estrechas con muchas curvas.",
         "Circule por un carril reversible."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p12.jpg"
     },
     {
-      "texto": "En una carretera convencional, ¿ise puede parar o estacionar fuera de la calzada y de la parte transitable del arcen?",
+      "texto": "En una carretera convencional, ¿se puede parar o estacionar fuera de la calzada y de la parte transitable del arcén?",
       "opciones": [
-        "Si, sepuede parar yestacionar en el lado derecho de la calzada.",
-        "Sepuedeparar,peronoestacionar.",
-        "Sepuedeestacionar,peronoparar."
-      ]
+        "Sí, se puede parar y estacionar en el lado derecho de la calzada.",
+        "Se puede parar, pero no estacionar.",
+        "Se puede estacionar, pero no parar."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En esta via, la separacion entre los trazos de la linea discontinua es sensiblemente mas corta que en el caso general; ¿ique puede anunciar?",
+      "texto": "En esta vía, la separación entre los trazos de la línea discontinua es sensiblemente más corta que en el caso general; ¿qué puede anunciar?",
       "opciones": [
-        "La proximidad de una travesia.",
-        "La proximidad de un tramo de via que presenta un riesgo especial.",
+        "La proximidad de una travésía.",
+        "La proximidad de un tramo de vía que presenta un riesgo especial.",
         "La proximidad de un carril especial."
       ],
+      "correcta": 1,
       "imagen": "../img/test_065_p14.jpg"
     },
     {
-      "texto": "Si presencia un accidente en el que ni esta implicado, ni, de forma manifiesta, es necesaria su colaboracion, ¿idebe detenerse?",
+      "texto": "Si presencia un accidente en el que ni está implicado, ni, de forma manifiesta, es necesaria su colaboración, ¿debe detenerse?",
       "opciones": [
-        "Si, hay que detenersey colaborar siempre.",
+        "Sí, hay que detenerse y colaborar siempre.",
         "No, se debe continuar.",
-        "Solo si se produce fuera de poblado y no hay cerca ningun poste sos."
+        "Solo si se produce fuera de poblado y no hay cerca ningún poste sos."
       ],
+      "correcta": 1,
       "imagen": "../img/test_065_p15.jpg"
     },
     {
       "texto": "¿Es aconsejable regular los reposacabezas de los asientos traseros?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "Solo si en ellos viajan menores.",
         "No."
       ],
+      "correcta": 0,
       "imagen": "../img/test_065_p16.jpg"
     },
     {
-      "texto": "¿A que velocidad maxima puede circular por una autopista un turismo que arrastra un remolque ligero?",
+      "texto": "¿A que velocidad máxima puede circular por una autopista un turismo que arrastra un remolque ligero?",
       "opciones": [
         "120 km/h.",
         "100 km/h.",
         "90 km/h."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p17.jpg"
     },
     {
-      "texto": "Si por motivos de la circulacion un vehiculo queda detenido en el interior de un tunel por un tiempo superior a dos minutos, su conductor debera...",
+      "texto": "Si por motivos de la circulación un vehículo queda detenido en el interior de un túnel por un tiempo superior a dos minutos, su conductor deberá...",
       "opciones": [
-        "Dejar el motorarrancado yencenderlas luces de emergencia",
-        "Apagar el motor y las luces deposicion.",
-        "Apagarelmotorymantenerencendidas las luces deposicion."
+        "Dejar el motor arrancado y encender las luces de emergencia",
+        "Apagar el motor y las luces de posición.",
+        "Apagar el motor y mantener encendidas las luces de posición."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p18.jpg"
     },
     {
-      "texto": "En un turismo, ¿ies obligatorio llevar algun chaleco reflectante de alta visibilidad?",
+      "texto": "En un turismo, ¿es obligatorio llevar algún chaleco reflectante de alta visibilidad?",
       "opciones": [
-        "Si, es obligatorio llevar un chaleco.",
+        "Sí, es obligatorio llevar un chaleco.",
         "No, es equipamiento opcional en un turismo.",
-        "Si, es obligatorio llevar dos chalecos."
+        "Sí, es obligatorio llevar dos chalecos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_065_p19.jpg"
     },
     {
-      "texto": "Como norma general, los clientes de un taxi que se encuentre prestando servicio publico de viajeros, ¿ipueden viajar sin ponerse el cinturon de seguridad?",
+      "texto": "Como norma general, los clientes de un taxi que se encuentre prestando servicio público de viajeros, ¿pueden viajar sin ponerse el cinturón de seguridad?",
       "opciones": [
         "Sí.",
-        "Solo cuando circulen por vias urbanas o travesias.",
+        "Solo cuando circulen por vías urbanas o travésías.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p20.jpg"
     },
     {
-      "texto": "Los conductores de turismos, ¿zestan obligados a llevar en su vehiculo una rueda de uso temporal y las herramientas indispensables para su cambio?",
+      "texto": "Los conductores de turismos, ¿están obligados a llevar en su vehículo una rueda de uso temporal y las herramientas indispensables para su cambio?",
       "opciones": [
         "No, ya que puede sustituirse por un sistema alternativo que permita la movilidad.",
-        "Es obligatorio llevar una rueda de uso temporal, perono las herramientas para su cambio.",
-        "Si, es un repuesto obligatorio e insustituible quedeben llevar todos los turismos."
+        "Es obligatorio llevar una rueda de uso temporal, pero no las herramientas para su cambio.",
+        "Sí, es un repuesto obligatorio e insustituible que deben llevar todos los turismos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_065_p21.jpg"
     },
     {
-      "texto": "Los conductores, ¿ipueden llevar en los oidos cascos o auriculares conectados a un telefono movil mientras conducen?",
+      "texto": "Los conductores, ¿pueden llevar en los oídos cascos o auriculares conectados a un teléfono móvil mientras conducen?",
       "opciones": [
-        "No,excepto los conductores de bicicletas y los de vehiculos de movilidad personal.",
-        "Si, siempre que los auriculares sean inalambricos.",
-        "No, esta prohibido como norma general."
+        "No, excepto los conductores de bicicletas y los de vehículos de movilidad personal.",
+        "Sí, siempre que los auriculares sean inalámbricos.",
+        "No, está prohibido como norma general."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p22.jpg"
     },
     {
-      "texto": "Los accidentes de trafico en los que el sueno es el principal factor de riesgo, ¿ipueden suceder durante las horas diurnas?",
+      "texto": "Los accidentes de tráfico en los que el sueño es el principal factor de riesgo, ¿pueden suceder durante las horas diurnas?",
       "opciones": [
-        "Si, especialmente entre las dos y las cuatro de la tarde.",
-        "Si, aunque es un tipo de accidente que solo sufren los conductores profesionales.",
-        "No,solo suceden durantelas horas nocturnas."
+        "Sí, especialmente entre las dos y las cuatro de la tarde.",
+        "Sí, aunque es un tipo de accidente que solo sufren los conductores profesionales.",
+        "No, solo suceden durante las horas nocturnas."
       ],
+      "correcta": 0,
       "imagen": "../img/test_065_p23.jpg"
     },
     {
-      "texto": "Los conductores de bicicletas tienen prioridad de paso respecto a los vehiculos de motor...",
+      "texto": "Los conductores de bicicletas tienen prioridad de paso respecto a los vehículos de motor...",
       "opciones": [
-        "en las zonaspeatonalesdebidamentesenalizadas.",
-        "entodaslas intersecciones.",
-        "cuando crucen porun paso para ciclistas."
+        "en las zonas peatonales debidamente señalizadas.",
+        "en todas las intersecciones.",
+        "cuando crucen por un paso para ciclistas."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p24.jpg"
     },
     {
-      "texto": "¿Que debe llevar todo peaton que transite de noche por el arcen de una via fuera de poblado?",
+      "texto": "¿Qué debe llevar todo peatón que transite de noche por el arcén de una vía fuera de poblado?",
       "opciones": [
-        "Un catadioptrico amarilloquepueda verse a una distancia minima de 50 metros.",
-        "Un telefono movil.",
-        "Un elemento luminoso o reflectante que sea visiblea una distancia minima de 150 metros."
+        "Un catadióptrico amarillo que pueda verse a una distancia mínima de 50 metros.",
+        "Un teléfono móvil.",
+        "Un elemento luminoso o reflectante que sea visible a una distancia mínima de 150 metros."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p25.jpg"
     },
     {
-      "texto": "Consumir alcohol con el estomago lleno, ¿zinfluye en la tasa de alcoholemia?",
+      "texto": "Consumir alcohol con el estómago lleno, ¿influye en la tasa de alcoholemia?",
       "opciones": [
-        "Si; el alcohol seabsorbe mas lentamente,pero esto no evita el riesgo de accidente.",
-        "Si; el alcohol se absorbemas rapidamente,porloque la tasa dealcoholemia es mayor.",
-        "No; es un factorque no influye enla tasa dealcoholemia."
+        "Si; el alcohol se absorbe más lentamente, pero esto no evita el riesgo de accidente.",
+        "Si; el alcohol se absorbe más rápidamente, por lo que la tasa de alcoholemia es mayor.",
+        "No; es un factor que no influye en la tasa de alcoholemia."
       ],
+      "correcta": 0,
       "imagen": "../img/test_065_p26.jpg"
     },
     {
-      "texto": "Ademas de estar regulado a la altura idonea, ¿zque separacion debe existir entre el reposacabezas y la cabeza para que sea eficaz?",
+      "texto": "Además de estar regulado a la altura idónea, ¿qué separación debe existir entre el reposacabezas y la cabeza para que sea eficaz?",
       "opciones": [
-        "Laminimaposibleynunca superiora4centimetros.",
-        "La maxima posible y nunca inferior a 5 centimetros.",
-        "Superiora10centimetros."
+        "La mínima posible y nunca superior a 4 centímetros.",
+        "La máxima posible y nunca inferior a 5 centímetros.",
+        "Superior a 10 centímetros."
       ],
+      "correcta": 0,
       "imagen": "../img/test_065_p27.jpg"
     },
     {
-      "texto": "Como norma general, en una via interurbana de doble sentido de la circulacion esta permitido parar fuera de la calzada...",
+      "texto": "Como norma general, en una vía interurbana de doble sentido de la circulación está permitido parar fuera de la calzada...",
       "opciones": [
-        "en el lado izquierdo y dejando libre la parte transitable del arcen.",
-        "en el lado derecho y dejando libre la parte transitable del arcen.",
-        "en el lado derecho y sobre la parte transitable del arcen."
+        "en el lado izquierdo y dejando libre la parte transitable del arcén.",
+        "en el lado derecho y dejando libre la parte transitable del arcén.",
+        "en el lado derecho y sobre la parte transitable del arcén."
       ],
+      "correcta": 1,
       "imagen": "../img/test_065_p28.jpg"
     },
     {
-      "texto": "Si un conductor novel presenta una tasa del alcohol en aire espirado de 0,20 miligramos por litro, el agente de trafico, ¿zle realizara una segunda prueba de alcoholemia?",
+      "texto": "Si un conductor novel presenta una tasa del alcohol en aire espirado de 0,20 miligramos por litro, el agente de tráfico, ¿le realizará una segunda prueba de alcoholemia?",
       "opciones": [
         "No; para ello debe tener una tasa superior a 0,25 miligramos por litro.",
-        "Solo si esta implicado directamente en un accidentede circulacion.",
-        "Si, para una mayor garantia y a efectos de contraste."
+        "Solo si está implicado directamente en un accidente de circulación.",
+        "Sí, para una mayor garantía y a efectos de contraste."
       ],
+      "correcta": 2,
       "imagen": "../img/test_065_p29.jpg"
     },
     {
-      "texto": "Circula con un turismo que arrastra un remolque de menos de 750 kg. de M.M.A. en el que transporta mercancias. En cuanto a la distribucion de la carga, ¿zdebe tomar precauciones especiales?",
+      "texto": "Circula con un turismo que arrastra un remolque de menos de 750 kg. de M.M.A. en el que transporta mercancías. En cuanto a la distribución de la carga, ¿debe tomar precauciones especiales?",
       "opciones": [
-        "Si, la carga debe estar bien distribuida e ir bien sujeta para evitar que se desplace y pueda llegara desestabilizar al vehiculo.",
-        "No,salvo que superelamasa maxima autorizada del remolque.",
-        "Si, debe situarse en la parte trasera del remolque para bajar el centro de gravedad y asegurar la estabilidad del vehiculo."
+        "Sí, la carga debe estar bien distribuida e ir bien sujeta para evitar que se desplace y pueda llegar a desestabilizar al vehículo.",
+        "No, salvo que supere la masa máxima autorizada del remolque.",
+        "Sí, debe situarse en la parte trasera del remolque para bajar el centro de gravedad y asegurar la estabilidad del vehículo."
       ],
+      "correcta": 0,
       "imagen": "../img/test_065_p30.jpg"
     }
   ]

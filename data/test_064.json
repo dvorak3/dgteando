@@ -1,262 +1,291 @@
 {
   "test_id": 64,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "¿Siconduce unamotocicletaporuna autovia contreso mas carriles,zle esta permitido circular por el carril situado mas a la izquierda?",
+      "texto": "Si conduce una motocicleta por una autovía con tres o más carriles, ¿le está permitido circular por el carril situado más a la izquierda?",
       "opciones": [
-        "Si, cuando las circunstancias del trafico o la via lo aconsejen.",
-        "Solo cuando la circulacion se encuentre saturada.",
-        "No, solo puede utilizar los carriles derecho y central."
+        "Sí, cuando las circunstancias del tráfico o la vía lo aconsejen.",
+        "Solo cuando la circulación se encuentre saturada.",
+        "No, solo puede útilizar los carriles derecho y central."
       ],
+      "correcta": 0,
       "imagen": "../img/test_064_p01.jpg"
     },
     {
-      "texto": "El conductor de un turismo se ve obligado a realizar el traslado de un enfermo en servicio de urgencia; ¿zque luces debe llevar encendidas?",
+      "texto": "El conductor de un turismo se ve obligado a realizar el traslado de un enfermo en servicio de urgencia; ¿qué luces debe llevar encendidas?",
       "opciones": [
         "Las de emergencia.",
         "Las largas.",
-        "Las de posicion."
-      ]
+        "Las de posición."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En este cruce, ¿iqué se debe hacer?",
+      "texto": "En este cruce, ¿qué se debe hacer?",
       "opciones": [
-        "Detenerse solo si seaproximan vehiculos porla derecha.",
-        "Detenerse y ceder el paso a todos los vehiculos que se aproximen por ambos lados.",
-        "Detenerse solo si seaproximan vehiculos por la izquierda."
+        "Detenerse solo si se aproximan vehículos por la derecha.",
+        "Detenerse y ceder el paso a todos los vehículos que se aproximen por ambos lados.",
+        "Detenerse solo si se aproximan vehículos por la izquierda."
       ],
+      "correcta": 1,
       "imagen": "../img/test_064_p03.jpg"
     },
     {
-      "texto": "El carril izquierdo esta abierto en sentido contrario al habitual; ¿za que velocidad maxima pueden circular los vehiculos que circulan por el carril derecho?",
+      "texto": "El carril izquierdo está abierto en sentido contrario al habitual; ¿a qué velocidad máxima pueden circular los vehículos que circulan por el carril derecho?",
       "opciones": [
-        "Ala velocidad maxima dela via,120 km/h.",
+        "A la velocidad máxima de la vía, 120 km/h.",
         "A 60 km/h.",
-        "A80 km/h."
+        "A 80 km/h."
       ],
+      "correcta": 2,
       "imagen": "../img/test_064_p04.jpg"
     },
     {
-      "texto": "¿Esta permitido circular por una autovia por debajo del limite minimo de velocidad establecido para dicha via sin causa justificada?",
+      "texto": "¿Está permitido circular por una autovía por debajo del límite mínimo de velocidad establecido para dicha vía sin causa justificada?",
       "opciones": [
         "No, porque es una velocidad anormalmente reducida.",
-        "Si, aunque es obligatorio circular por el arcen.",
-        "Solo si no se entorpece la marcha normal de otros vehiculos."
+        "Sí, aunque es obligatorio circular por el arcén.",
+        "Solo si no se entorpece la marcha normal de otros vehículos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_064_p05.jpg"
     },
     {
-      "texto": "Entre los gastos sanitarios derivados de los accidentes de trafico con victimas se encuentran...",
+      "texto": "Entre los gastos sanitarios derivados de los accidentes de tráfico con víctimas se encuentran...",
       "opciones": [
-        "los derivados porla perdida de produccion de personas empleadas.",
-        "los danos causados al medio ambiente.",
-        "los de rehabilitacion en centros de salud."
+        "los derivados por la pérdida de producción de personas empleadas.",
+        "los daños causados al medio ambiente.",
+        "los de rehabilitación en centros de salud."
       ],
+      "correcta": 2,
       "imagen": "../img/test_064_p06.jpg"
     },
     {
-      "texto": "Debido a una retencion de circulacion tiene que reducir, de modo considerable, la velocidad de su vehiculo. Debe advertir, siempre que sea posible, ¿a los vehiculos que circulan detras?",
+      "texto": "Debido a una retención de circulación tiene que reducir, de modo considerable, la velocidad de su vehículo. Debe advertir, siempre que sea posible, ¿a los vehículos que circulan detrás?",
       "opciones": [
-        "Si, con el empleo de la luz de emergencia.",
-        "Si, con el empleo reiterado de las luces de frenado o moviendo el brazo alternativamente de arriba a abajo.",
-        "No, esta prohibido hacer advertencias, ya que pueden crear confusion."
+        "Sí, con el empleo de la luz de emergencia.",
+        "Sí, con el empleo reiterado de las luces de frenado o moviendo el brazo alternativamente de arriba a abajo.",
+        "No, está prohibido hacer advertencias, ya que pueden crear confusión."
       ],
+      "correcta": 1,
       "imagen": "../img/test_064_p07.jpg"
     },
     {
-      "texto": "En vias urbanas de doble sentido de circulacion, ¿zen que lado de la calzada puede estacionar un turismo?",
+      "texto": "En vías urbanas de doble sentido de circulación, ¿en qué lado de la calzada puede estacionar un turismo?",
       "opciones": [
-        "A ambos lados cuando la linea de separacion de los sentidos sea discontinua.",
+        "A ambos lados cuando la línea de separación de los sentidos sea discontinua.",
         "En el lado izquierdo de la calzada en el sentido de la marcha.",
         "En el lado derecho de la calzada en el sentido de la marcha."
       ],
+      "correcta": 2,
       "imagen": "../img/test_064_p08.jpg"
     },
     {
-      "texto": "Si no esta implicado en un accidente, ¿zdebe prestar auxilio a los heridos?",
+      "texto": "Si no está implicado en un accidente, ¿debe prestar auxilio a los heridos?",
       "opciones": [
-        "Solo si lo solicita algun herido.",
+        "Solo si lo solicita algún herido.",
         "No.",
-        "Si, salvo que la ayuda ya este organizada."
+        "Sí, salvo que la ayuda ya esté organizada."
       ],
+      "correcta": 2,
       "imagen": "../img/test_064_p09.jpg"
     },
     {
-      "texto": "En una autovia, el limite de velocidad para una motocicleta es de...",
+      "texto": "En una autovía, el límite de velocidad para una motocicleta es de...",
       "opciones": [
-        "120km/h,pudiendose superar en20km/hpara adelantar.",
+        "120 km/h, pudiéndose superar en 20 km/h para adelantar.",
         "120 km/h.",
         "100 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_064_p10.jpg"
     },
     {
-      "texto": "¿Que usuarios deben obedecer el semaforo de la fotografia?",
+      "texto": "¿Qué usuarios deben obedecer el semáforo de la fotografía?",
       "opciones": [
-        "Los conductores de todos los vehiculos de dos ruedas.",
-        "Los conductores de bicicletas yde ciclos.",
+        "Los conductores de todos los vehículos de dos ruedas.",
+        "Los conductores de bicicletas y de ciclos.",
         "Los peatones y los conductores de bicicletas."
       ],
+      "correcta": 1,
       "imagen": "../img/test_064_p11.jpg"
     },
     {
-      "texto": "Una embarazada, ¿zdebe llevar puesto el cinturon de seguridad?",
+      "texto": "Una embarazada, ¿debe llevar puesto el cinturón de seguridad?",
       "opciones": [
-        "Si,perosolo envias interurbanas.",
-        "Si, es obligatorio.",
+        "Sí, pero solo en vías interurbanas.",
+        "Sí, es obligatorio.",
         "No, no es obligatorio."
-      ]
-    },
-    {
-      "texto": "De las siguientes, ¿zcual es una obligacion que corresponde al titular del vehiculo?",
-      "opciones": [
-        "Verificar que las placas de matricula del vehiculo no presentan obstaculos que impidan su lectura.",
-        "Identificar ante la Administracion al conductor del vehiculo en el momento de cometerse una infraccion.",
-        "Comprobar que todos los ocupantes del vehiculo hacen uso del cinturon de seguridad."
-      ]
-    },
-    {
-      "texto": "¿Esta permitido circular en ciclomotor por una via que tiene esta senal en la entrada?",
-      "opciones": [
-        "No,prohibe el paso de todos los vehiculos motorizados de dos ruedas.",
-        "Si.",
-        "No, las bicicletas y los ciclomotores estan prohibidos."
       ],
+      "correcta": 1
+    },
+    {
+      "texto": "De las siguientes, ¿cuál es una obligación que corresponde al titular del vehículo?",
+      "opciones": [
+        "Verificar que las placas de matrícula del vehículo no presentan obstáculos que impidan su lectura.",
+        "Identificar ante la Administración al conductor del vehículo en el momento de cometerse una infracción.",
+        "Comprobar que todos los ocupantes del vehículo hacen uso del cinturón de seguridad."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "¿Está permitido circular en ciclomotor por una vía que tiene esta señal en la entrada?",
+      "opciones": [
+        "No, prohíbe el paso de todos los vehículos motorizados de dos ruedas.",
+        "Sí.",
+        "No, las bicicletas y los ciclomotores están prohibidos."
+      ],
+      "correcta": 1,
       "imagen": "../img/test_064_p14.jpg"
     },
     {
-      "texto": "El conductor de un turismo, ¿zque debe hacer para incorporarse a la circulacion?",
+      "texto": "El conductor de un turismo, ¿qué debe hacer para incorporarse a la circulación?",
       "opciones": [
-        "Solo senalizar la maniobra,porquelos demas tienen que ceder el paso.",
+        "Solo señalizar la maniobra, porque los demás tienen que ceder el paso.",
         "Seguir siempre las indicaciones de otra persona.",
-        "Asegurarse de que puede hacerlo sin peligro para los demas usuarios."
+        "Asegurarse de que puede hacerlo sin peligro para los demás usuarios."
       ],
+      "correcta": 2,
       "imagen": "../img/test_064_p15.jpg"
     },
     {
-      "texto": "Siempre que exista espacio suficiente y adoptando las maximas precauciones, esta permitido adelantar por la derecha...",
+      "texto": "Siempre que exista espacio suficiente y adoptando las máximas precauciones, está permitido adelantar por la derecha...",
       "opciones": [
-        "en vias interurbanas, en las intersecciones y sus proximidades.",
-        "en autopistas yautoviasquediscurran exclusivamentedentrodepoblado.",
-        "en vias urbanas con dos omas carriles delimitados por lineas longitudinales."
+        "en vías interurbanas, en las intersecciones y sus proximidades.",
+        "en autopistas y autovías que discurran exclusivamente dentro de poblado.",
+        "en vías urbanas con dos o más carriles delimitados por líneas longitudinales."
       ],
+      "correcta": 2,
       "imagen": "../img/test_064_p16.jpg"
     },
     {
-      "texto": "En caso de estar implicado en un accidente, ¿idebe detenerse para ayudar a restablecer la seguridad de la circulacion?",
+      "texto": "En caso de estar implicado en un accidente, ¿debe detenerse para ayudar a restablecer la seguridad de la circulación?",
       "opciones": [
-        "No,esa tarea correspondea la policiade trafico.",
-        "Si, en la medida de lo posible.",
+        "No, esa tarea corresponde a la policía de tráfico.",
+        "Sí, en la medida de lo posible.",
         "Solo si hay fallecidos o heridos graves."
       ],
+      "correcta": 1,
       "imagen": "../img/test_064_p17.jpg"
     },
     {
       "texto": "¿Es recomendable tener especial cuidado al adelantar a un grupo de ciclistas en los ascensos prolongados?",
       "opciones": [
         "No; los adelantamientos a ciclistas no implican riesgo alguno.",
-        "Solo si algun ciclista va bebiendo algun liquido o tomando alimentos solidos.",
-        "Si,porque debido al esfuerzo y pedaleo pueden realizar cambiosbruscos de trayectoria."
+        "Solo si algún ciclista va bebiendo algún líquido o tomando alimentos sólidos.",
+        "Sí, porque debido al esfuerzo y pedaleo pueden realizar cambios bruscos de trayectoria."
       ],
+      "correcta": 2,
       "imagen": "../img/test_064_p18.jpg"
     },
     {
-      "texto": "En general, bajo los efectos de la cocaina...",
+      "texto": "En general, bajo los efectos de la cocaína...",
       "opciones": [
-        "aumenta la capacidadde concentraciondel conductor.",
-        "disminuye la capacidadde concentraciondel conductor.",
-        "se percibe mejor el entorno y se toman decisiones mas seguras."
+        "aumenta la capacidad de concentración del conductor.",
+        "disminuye la capacidad de concentración del conductor.",
+        "se percibe mejor el entorno y se toman decisiones más seguras."
       ],
+      "correcta": 1,
       "imagen": "../img/test_064_p19.jpg"
     },
     {
-      "texto": "Cuando la carga sobresale de un vehiculo, ¿zes obligatorio senalizarla con el panel de la imagen?",
+      "texto": "Cuando la carga sobresale de un vehículo, ¿es obligatorio señalizarla con el panel de la imagen?",
       "opciones": [
-        "No,exceptopara los vehiculos destinados al transportede mercancias.",
-        "Solo es obligatorio si la carga sobresale porla parte trasera.",
-        "Si, para todo tipo de vehiculos,pero solo cuando la carga sea indivisible. conductor? O a) No. Ob) Solo si las emisoras deradio no estan guardadas en memoria. O c) Si, aumentando el riesgo de accidente."
+        "No, exceptopara los vehículos destinados al transporte de mercancías.",
+        "Solo es obligatorio si la carga sobresale por la parte trasera.",
+        "Sí, para todo tipo de vehículos, pero solo cuando la carga sea indivisible."
       ],
+      "correcta": 2,
       "imagen": "../img/test_064_p20.jpg"
     },
     {
-      "texto": "¿Que vehiculos podran disponer del distintivo medioambiental Eco?",
+      "texto": "¿Qué vehículos podrán disponer del distintivo medioambiental Eco?",
       "opciones": [
-        "Electricos enchufables, conmenos de 40 km de autonomia, hibridos no enchufables, entre otros.",
-        "Electricos puros de bateria, tambien los de autonomia extendida, electricos hibridos enchufables con autonomia minima de 40 km, entre otros.",
-        "Motores de combustion interna fabricados a partir de2015."
+        "Eléctricos enchufables, con menos de 40 km de autonomía, híbridos no enchufables, entre otros.",
+        "Eléctricos puros de batería, también los de autonomía extendida, eléctricos híbridos enchufables con autonomía mínima de 40 km, entre otros.",
+        "Motores de combustión interna fabricados a partir de 2015."
       ],
+      "correcta": 0,
       "imagen": "../img/test_064_p22.jpg"
     },
     {
-      "texto": "En una via urbana con un carril en cada sentido, debera circular...",
+      "texto": "En una vía urbana con un carril en cada sentido, deberá circular...",
       "opciones": [
-        "lomas cerca posible del borde derecho de la calzada.",
+        "lo más cerca posible del borde derecho de la calzada.",
         "por la zona que mejor convenga.",
         "por el centro de la calzada, en tramos rectos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_064_p23.jpg"
     },
     {
-      "texto": "Un conductor circula por una calzada muy mojada; si para frenar necesita pisar a fondo el pedal de freno, za que puede ser debido, ¿principalmente?",
+      "texto": "Un conductor circula por una calzada muy mojada; si para frenar necesita pisar a fondo el pedal de freno, ¿a qué puede ser debido, principalmente?",
       "opciones": [
         "A un fallo del sistema de frenos.",
-        "A que el sistema ABS necesitauna revision.",
-        "Al enfriamientoexcesivodelosdiscosdefreno."
+        "A que el sistema ABS necesita una revisión.",
+        "Al enfriamiento excesivo de los discos de freno."
       ],
+      "correcta": 0,
       "imagen": "../img/test_064_p24.jpg"
     },
     {
-      "texto": "Esta marca transversal continua, ¿iesta permitido franquearla sin detenerse antes?",
+      "texto": "Esta marca transversal continua, ¿está permitido franquearla sin detenerse antes?",
       "opciones": [
         "No, nunca.",
-        "Si, cuando haya peatones.",
-        "Si, cuando no sea obligatoria la detencion."
+        "Sí, cuando haya peatones.",
+        "Sí, cuando no sea obligatoria la detención."
       ],
+      "correcta": 2,
       "imagen": "../img/test_064_p25.jpg"
     },
     {
-      "texto": "Normalmente, ¿ique ocurre cuando un conductor sufre una distraccion al volante?",
+      "texto": "Normalmente, ¿qué ocurre cuando un conductor sufre una distracción al volante?",
       "opciones": [
         "Enciende las luces de emergencia o pisa el pedal de freno reiteradamente.",
         "Pisa el pedal de freno en lugar del acelerador.",
-        "Tarda mas tiempo en reaccionar ante una situacion de riesgo."
-      ]
+        "Tarda más tiempo en reaccionar ante una situación de riesgo."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En una via con un carril para cada sentido de la marcha, ¿iesta permitido que un conductor adelante a varios vehiculos a la vez?",
+      "texto": "En una vía con un carril para cada sentido de la marcha, ¿está permitido que un conductor adelante a varios vehículos a la vez?",
       "opciones": [
-        "No, en ningun caso.",
-        "Solo si puede volver a la derecha sin causarpeligro en caso de encontrar vehiculosde frente.",
-        "Si, siempre que adelante a vehiculos de grandes dimensiones."
+        "No, en ningún caso.",
+        "Solo si puede volver a la derecha sin causar peligro en caso de encontrar vehículos de frente.",
+        "Sí, siempre que adelante a vehículos de grandes dimensiones."
       ],
+      "correcta": 1,
       "imagen": "../img/test_064_p27.jpg"
     },
     {
-      "texto": "Un peaton, ¿ipuede estar obligado a realizar una prueba de alcoholemia?",
+      "texto": "Un peatón, ¿puede estar obligado a realizar una prueba de alcoholemia?",
       "opciones": [
-        "Si, cuando este implicado directamente como posible responsable deun accidente.",
-        "Si, en un control preventivo de alcoholemia.",
-        "No, en ningun caso."
+        "Sí, cuando esté implicado directamente como posible responsable de un accidente.",
+        "Sí, en un control preventivo de alcoholemia.",
+        "No, en ningún caso."
       ],
+      "correcta": 0,
       "imagen": "../img/test_064_p28.jpg"
     },
     {
-      "texto": "Si un conductor se encuentra esta senal, debe saber que en la proxima interseccion...",
+      "texto": "Si un conductor se encuentra esta señal, debe saber que en la próxima intersección...",
       "opciones": [
-        "tiene prioridad sobre los vehiculos que se acerquen tanto por la derecha como por la izquierda.",
+        "tiene prioridad sobre los vehículos que se acerquen tanto por la derecha como por la izquierda.",
         "se aplica la regla general de prioridad de paso.",
-        "debe ceder el paso a los vehiculos que se acerquen tanto por la derecha como por la izquierda."
+        "debe ceder el paso a los vehículos que se acerquen tanto por la derecha como por la izquierda."
       ],
+      "correcta": 2,
       "imagen": "../img/test_064_p29.jpg"
     },
     {
       "texto": "En un viaje largo es aconsejable descansar...",
       "opciones": [
-        "siemprequeseencuentreunareadedescanso.",
-        "cada2horasaproximadamente.",
-        "cada5horasaproximadamente."
-      ]
+        "siempre que se encuentre un área de descanso.",
+        "cada 2 horas aproximadamente.",
+        "cada 5 horas aproximadamente."
+      ],
+      "correcta": 1
     }
   ]
 }

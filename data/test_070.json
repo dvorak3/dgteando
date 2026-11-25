@@ -64,13 +64,13 @@
       "opciones": [
         "Una hora después de haber tomado la última copa.",
         "Cuatro horas después de haber tomado la última copa.",
-        "Inmediatamente después de haber tomado la última copa."
+        "Inmedíatamente después de haber tomado la última copa."
       ],
       "correcta": 0,
       "imagen": "../img/test_070_p07.jpg"
     },
     {
-      "texto": "Para estacionar, ¿está permitido circular marcha atrás atravesando una intersección?",
+      "texto": "Para estacionar, ¿está permitido circular marcha atrás atravésando una intersección?",
       "opciones": [
         "Sí.",
         "No."
@@ -82,7 +82,7 @@
       "opciones": [
         "Sí, en vía dentro de poblado suficientemente iluminado.",
         "No.",
-        "Sí, en travesía suficientemente iluminada."
+        "Sí, en travésía suficientemente iluminada."
       ],
       "correcta": 1,
       "imagen": "../img/test_070_p09.jpg"
@@ -108,7 +108,7 @@
       "imagen": "../img/test_070_p11.jpg"
     },
     {
-      "texto": "Entre las conductas de riesgo más comunes que cometen los peatones está...",
+      "texto": "Entre las conductas de riesgo más comúnes que cometen los peatones está...",
       "opciones": [
         "respetar los semáforos pero no los pasos para peatones.",
         "no situarse en las calzadas o en los arcenes correctamente.",
@@ -269,7 +269,7 @@
       "imagen": "../img/test_070_p28.jpg"
     },
     {
-      "texto": "¿Cuándo está permitido utilizar las señales acústicas?",
+      "texto": "¿Cuándo está permitido útilizar las señales acústicas?",
       "opciones": [
         "Cuando circulo por vías urbanas solamente.",
         "Cuando circulo por cualquier vía.",
@@ -282,7 +282,7 @@
       "texto": "Con un vehículo que emita niveles de ruido superiores a los permitidos...",
       "opciones": [
         "únicamente está permitido circular por carretera.",
-        "está permitido circular por carreteras pero no por travesías.",
+        "está permitido circular por carreteras pero no por travésías.",
         "no está permitido circular."
       ],
       "correcta": 2

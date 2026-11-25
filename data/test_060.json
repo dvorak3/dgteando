@@ -1,251 +1,279 @@
 {
   "test_id": 60,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "¿Que condiciones tienen que tener los neumaticos de una motocicleta?",
+      "texto": "¿Qué condiciones tienen que tener los neumáticos de una motocicleta?",
       "opciones": [
-        "Las dos ruedas tienen que ser del mismotamanoycaracteristicas.",
+        "Las dos ruedas tienen que ser del mismo tamaño y características.",
         "No tienen que presentar cortes, roces, deformaciones, etc.",
-        "Las ranuras de la banda de rodadura tienen que tener una profundidad minima de 1,6 milimetros."
+        "Las ranuras de la banda de rodadura tienen que tener una profundidad mínima de 1,6 milímetros."
       ],
+      "correcta": 1,
       "imagen": "../img/test_060_p01.jpg"
     },
     {
-      "texto": "Invadir marcha atras una interseccion para incorporarse a la circulacion, ¿zesta permitido?",
+      "texto": "Invadir marcha atrás una intersección para incorporarse a la circulación, ¿está permitido?",
       "opciones": [
-        "Si, si no obstaculiza la circulacion a otros vehiculos.",
-        "No, porque esta prohibido invadir un cruce de vias.",
-        "Si, sinorecorremarcha atrasmasde15metros."
-      ]
+        "Sí, si no obstaculiza la circulación a otros vehículos.",
+        "No, porque está prohibido invadir un cruce de vías.",
+        "Sí, si no recorre marcha atrás más de 15 metros."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Es de dia, hay niebla y no lleva luces antiniebla delanteras. Que luces debe encender?",
+      "texto": "Es de día, hay niebla y no lleva luces antiniebla delanteras. ¿Qué luces debe encender?",
       "opciones": [
         "Las luces largas.",
-        "Las lucesdeposicion solamente.",
+        "Las luces de posición solamente.",
         "Las luces cortas."
       ],
+      "correcta": 2,
       "imagen": "../img/test_060_p03.jpg"
     },
     {
-      "texto": "En un estacionamiento con limitacion horaria, ¿iesta permitido estacionar sin colocar el ticket correspondiente?",
+      "texto": "En un estacionamiento con limitación horaria, ¿está permitido estacionar sin colocar el ticket correspondiente?",
       "opciones": [
-        "No,yinicamentepuedeser sancionado.",
-        "No, y ademas de la sancion, los agentes pueden inmovilizar el vehiculo.",
-        "Si, si es por un corto espacio de tiempo."
+        "No, y únicamente puede ser sancionado.",
+        "No, y además de la sanción, los agentes pueden inmovilizar el vehículo.",
+        "Sí, si es por un corto espacio de tiempo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_060_p04.jpg"
     },
     {
-      "texto": "Esta senal indica...",
+      "texto": "Esta señal indica...",
       "opciones": [
-        "el principio de una autovia.",
-        "el final de una autovia.",
-        "que se circula por un carril que conduce a una autovia. vehiculo puede sobresalir, como maximo, por detras? O a) El 20% de la longitud del vehiculo. b) El 15% de la longitud del vehiculo. Oc)1/3delalongituddelvehiculo."
+        "el principio de una autovía.",
+        "el final de una autovía.",
+        "que se circula por un carril que conduce a una autovía."
       ],
+      "correcta": 0,
       "imagen": "../img/test_060_p05.jpg"
     },
     {
-      "texto": "¿Quien es el responsable de que el vehiculo se encuentre al corriente de las inspecciones tecnicas?",
+      "texto": "¿Quién es el responsable de que el vehículo se encuentre al corriente de las inspecciones técnicas?",
       "opciones": [
         "El tomador del seguro.",
         "El conductor habitual.",
-        "El titular del vehiculo. c) El titular del vehiculo."
-      ]
+        "El titular del vehículo."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Esta senal indica entrada prohibida a...",
+      "texto": "Esta señal indica entrada prohibida a...",
       "opciones": [
-        "vehiculosautomoviles.",
-        "vehiculos de motor, excepto motocicletas de dos ruedas sin sidecar.",
+        "vehículos automóviles.",
+        "vehículos de motor, excepto motocicletas de dos ruedas sin sidecar.",
         "turismos."
       ],
+      "correcta": 1,
       "imagen": "../img/test_060_p08.jpg"
     },
     {
       "texto": "El sistema antibloqueo de frenos ABS...",
       "opciones": [
-        "permite mantener el control sobre la direccion.",
+        "permite mantener el control sobre la dirección.",
         "reduce la distancia de frenado en todos los casos.",
-        "hace que el vehiculo mantenga su trayectoria."
-      ]
+        "hace que el vehículo mantenga su trayectoria."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Esta senal advierte del peligro por la proximidad de una zona donde...",
+      "texto": "Esta señal advierte del peligro por la proximidad de una zona donde...",
       "opciones": [
-        "vuelan frecuentemente aeronaves abaja altura sobre la via.",
-        "normalmente sopla viento fuerte en cualquier direccion.",
-        "sopla frecuentemente vientofuerte en direccion transversal."
+        "vuelan frecuentemente aeronaves a baja altura sobre la vía.",
+        "normalmente sopla viento fuerte en cualquier dirección.",
+        "sopla frecuentemente viento fuerte en dirección transversal."
       ],
+      "correcta": 2,
       "imagen": "../img/test_060_p10.jpg"
     },
     {
-      "texto": "Si tiene su permiso B desde hace mas de un ano, y ahora obtiene el de la clase A, ¿iesta obligado a llevar la placa Len su motocicleta?",
+      "texto": "Si tiene su permiso B desde hace más de un año, y ahora obtiene el de la clase A, ¿está obligado a llevar la placa L en su motocicleta?",
       "opciones": [
-        "Si, durante un ano,en la parte trasera.",
+        "Sí, durante un año, en la parte trasera.",
         "No.",
-        "Si, en la parte delantera, durante un ano."
+        "Sí, en la parte delantera, durante un año."
       ],
+      "correcta": 1,
       "imagen": "../img/test_060_p11.jpg"
     },
     {
-      "texto": "¿Que le permiten los espejos retrovisores?",
+      "texto": "¿Qué le permiten los espejos retrovisores?",
       "opciones": [
-        "Observar unicamente lo que esta detras del vehiculo.",
-        "Evitar los angulos muertos.",
-        "Observar entodomomento loquerodea al vehiculo."
+        "Observar únicamente lo que está detrás del vehículo.",
+        "Evitar los ángulos muertos.",
+        "Observar en todo momento lo que rodea al vehículo."
       ],
+      "correcta": 2,
       "imagen": "../img/test_060_p12.jpg"
     },
     {
-      "texto": "El efecto tunel producido por la velocidad hace que el conductor...",
+      "texto": "El efecto túnel producido por la velocidad hace que el conductor...",
       "opciones": [
-        "seamas sensiblea losdeslumbramientos.",
-        "solo sea capaz de percibir con nitidez la parte lateral de la via.",
-        "solo sea capaz depercibir con nitidez el centro de la via."
+        "sea más sensible a los deslumbramientos.",
+        "solo sea capaz de percibir con nitidez la parte lateral de la vía.",
+        "solo sea capaz de percibir con nitidez el centro de la vía."
       ],
+      "correcta": 2,
       "imagen": "../img/test_060_p13.jpg"
     },
     {
-      "texto": "Estas senales de balizamiento, ¿ique indican?",
+      "texto": "Estas señales de balizamiento, ¿qué indican?",
       "opciones": [
-        "Que esta prohibido circular por el carril izquierdo.",
-        "Quehay un carril de salida a la derecha.",
-        "Quelaproxima curva es especialmentepeligrosa."
+        "Que está prohibido circular por el carril izquierdo.",
+        "Que hay un carril de salida a la derecha.",
+        "Que la próxima curva es especialmente peligrosa."
       ],
+      "correcta": 2,
       "imagen": "../img/test_060_p14.jpg"
     },
     {
-      "texto": "Conduciendo una motocicleta, ¿zesta permitido llevar el casco desabrochado?",
+      "texto": "Conduciendo una motocicleta, ¿está permitido llevar el casco desabrochado?",
       "opciones": [
-        "No, en ningun caso.",
-        "Unicamente en vias urbanas, si la velocidad es inferior a 40 km/h.",
-        "Si, cuando sea un casco integral."
+        "No, en ningún caso.",
+        "Únicamente en vías urbanas, si la velocidad es inferior a 40 km/h.",
+        "Sí, cuando sea un casco integral."
       ],
+      "correcta": 0,
       "imagen": "../img/test_060_p15.jpg"
     },
     {
-      "texto": "Ante un paso a nivel esta obligado a...",
+      "texto": "Ante un paso a nivel está obligado a...",
       "opciones": [
-        "pasaraunque lasbarreras estenenmovimiento.",
-        "asegurarse antes de atravesarlo de que no existe ningun peligro.",
-        "atravesarlorapidamente."
+        "pasar aunque las barreras estén en movimiento.",
+        "asegurarse antes de atravesarlo de que no existe ningún peligro.",
+        "atravesarlo rápidamente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_060_p16.jpg"
     },
     {
-      "texto": "En un cambio de carril, ¿zque vehiculo tiene preferencia de paso?",
+      "texto": "En un cambio de carril, ¿qué vehículo tiene preferencia de paso?",
       "opciones": [
-        "El vehiculo que cambia de carril, en cualquier caso.",
-        "El vehiculo que ya circulaba por el carril.",
-        "El vehiculo que cambia de carril, si circula a gran velocidad."
+        "El vehículo que cambia de carril, en cualquier caso.",
+        "El vehículo que ya circulaba por el carril.",
+        "El vehículo que cambia de carril, si circula a gran velocidad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_060_p17.jpg"
     },
     {
-      "texto": "¿Cuando puede estacionar a la vista de esta senal?",
+      "texto": "¿Cuándo puede estacionar a la vista de esta señal?",
       "opciones": [
-        "Nunca,yaqueestasenal prohibeel estacionamientopermanentemente.",
-        "A partir de las 9 horas del dia 16 y hasta las 9 horas del dia 1.",
-        "A partir de las 9 horas del dia 1 y hasta las 9 horas del dia 16."
+        "Nunca, ya que esta señal prohíbe el estacionamiento permanentemente.",
+        "A partir de las 9 horas del día 16 y hasta las 9 horas del día 1.",
+        "A partir de las 9 horas del día 1 y hasta las 9 horas del día 16."
       ],
+      "correcta": 1,
       "imagen": "../img/test_060_p18.jpg"
     },
     {
-      "texto": "¿Donde esta permitido parar en una via interurbana?",
+      "texto": "¿Dónde está permitido parar en una vía interurbana?",
       "opciones": [
-        "En el lado derecho, fuera de la calzada y de la parte transitable del arcen.",
-        "En cualquier lado, siempre fuera de la calzada y de la parte transitable del arcen.",
-        "Si es pornecesidades del trafico,en el arcen si es transitable."
+        "En el lado derecho, fuera de la calzada y de la parte transitable del arcén.",
+        "En cualquier lado, siempre fuera de la calzada y de la parte transitable del arcén.",
+        "Si es por necesidades del tráfico, en el arcén si es transitable."
       ],
+      "correcta": 0,
       "imagen": "../img/test_060_p19.jpg"
     },
     {
-      "texto": "En un tunel con un carril para cada sentido, ¿ique distancia de seguridad minima es obligatoria para turismos?",
+      "texto": "En un túnel con un carril para cada sentido, ¿qué distancia de seguridad mínima es obligatoria para turismos?",
       "opciones": [
-        "50metros.",
-        "100metros.",
-        "200metros."
+        "50 metros.",
+        "100 metros.",
+        "200 metros."
       ],
+      "correcta": 1,
       "imagen": "../img/test_060_p20.jpg"
     },
     {
-      "texto": "Esta calle tiene tres carriles en cada sentido. ¿Por donde se debe circular?",
+      "texto": "Esta calle tiene tres carriles en cada sentido. ¿Por dónde se debe circular?",
       "opciones": [
-        "Depende de la velocidad demi vehiculo.",
-        "Por el carril mas adecuado para ir a mi destino.",
+        "Depende de la velocidad de mi vehículo.",
+        "Por el carril más adecuado para ir a mi destino.",
         "Por el carril derecho y por los otros solo para adelantar."
       ],
+      "correcta": 1,
       "imagen": "../img/test_060_p21.jpg"
     },
     {
       "texto": "Al mezclar las drogas con alcohol...",
       "opciones": [
-        "las reaccionespueden serprevisiblesy,portanto,controlables.",
+        "las reacciones pueden ser previsibles y, por tanto, controlables.",
         "las reacciones pueden ser imprevisibles y, por tanto, peligrosas.",
-        "no seproducen reaccionesporque las drogas anulan la accion del alcohol."
-      ]
+        "no se producen reacciones porque las drogas anulan la acción del alcohol."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "El conductor de este vehiculo, ¿zesta obligado a mantener la adecuada colocacion de los animales que transporta?",
+      "texto": "El conductor de este vehículo, ¿está obligado a mantener la adecuada colocación de los animales que transporta?",
       "opciones": [
-        "Si, los animales deben ircolocados correctamente en todo momento.",
-        "No, no esta obligado.",
-        "Si, aunque no esta obligado una vez iniciada la marcha."
+        "Sí, los animales deben ir colocados correctamente en todo momento.",
+        "No, no está obligado.",
+        "Sí, aunque no está obligado una vez iniciada la marcha."
       ],
+      "correcta": 0,
       "imagen": "../img/test_060_p23.jpg"
     },
     {
-      "texto": "¿Esta permitido adelantar en el interior de un tunel?",
+      "texto": "¿Está permitido adelantar en el interior de un túnel?",
       "opciones": [
         "No.",
-        "Si, si hay mas de un carril en el mismo sentido de la marcha.",
-        "Si, cuando los sentidos estan separados."
+        "Sí, si hay más de un carril en el mismo sentido de la marcha.",
+        "Sí, cuando los sentidos están separados."
       ],
+      "correcta": 1,
       "imagen": "../img/test_060_p24.jpg"
     },
     {
-      "texto": "¿Por donde debe pasar la cinta toracica del cinturon de seguridad?",
+      "texto": "¿Por dónde debe pasar la cinta torácica del cinturón de seguridad?",
       "opciones": [
-        "Porel hombro.",
+        "Por el hombro.",
         "Por la pelvis.",
-        "Sobrela clavicula y por el centro del pecho."
+        "Sobre la clavícula y por el centro del pecho."
       ],
+      "correcta": 2,
       "imagen": "../img/test_060_p25.jpg"
     },
     {
-      "texto": "El panel colocado debajo de la senal vertical...",
+      "texto": "El panel colocado debajo de la señal vertical...",
       "opciones": [
-        "es complementario de la senial vertical, e indica niebla.",
-        "adviertede la presencia deuna senalizacion.",
+        "es complementario de la señal vertical, e indica niebla.",
+        "advierte de la presencia de una señalización.",
         "advierte al conductor de condiciones adversas como nieve, niebla o lluvia."
       ],
+      "correcta": 2,
       "imagen": "../img/test_060_p26.jpg"
     },
     {
-      "texto": "La velocidad inadecuada, el alcohol y las enfermedades, ¿zse consideran factores de riesgo?",
+      "texto": "La velocidad inadecuada, el alcohol y las enfermedades, ¿se consideran factores de riesgo?",
       "opciones": [
-        "La velocidad inadecuada y el alcohol si, pero las enfermedades no.",
+        "La velocidad inadecuada y el alcohol sí, pero las enfermedades no.",
         "No.",
-        "Si."
-      ]
-    },
-    {
-      "texto": "De noche, es obligatorio senalizar una carga que sobresale lateralmente mas de 0,40 metros del borde exterior de la luz delantera o posterior de posicion del vehiculo...",
-      "opciones": [
-        "con una luz blanca y un dispositivo reflectante de color blanco por delante y con una luz roja y un dispositivo reflectante de color rojo por detras.",
-        "con un panel reflectante por detras solamente.",
-        "con una luz roja yun dispositivo reflectante rojo por detras,solamente."
-      ]
-    },
-    {
-      "texto": "¿Hay nieve en la calzada. Como debe circular?",
-      "opciones": [
-        "Lentamente,pero con la velocidad mas largaposible.",
-        "Rapidamente para que no patine el vehiculo.",
-        "En la primera relacion de marchas y acelerando a fondo. 3o. Si conduce y se encuentra en tratamiento medico con medicamentos, debe saber... O a) que hay medicamentos que influyen negativamente en la atencion y el tiempo de"
+        "Sí."
       ],
+      "correcta": 2
+    },
+    {
+      "texto": "De noche, es obligatorio señalizar una carga que sobresale lateralmente más de 0,40 metros del borde exterior de la luz delantera o posterior de posición del vehículo...",
+      "opciones": [
+        "con una luz blanca y un dispositivo reflectante de color blanco por delante y con una luz roja y un dispositivo reflectante de color rojo por detrás.",
+        "con un panel reflectante por detrás solamente.",
+        "con una luz roja y un dispositivo reflectante rojo por detrás, solamente."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "Hay nieve en la calzada. ¿Cómo debe circular?",
+      "opciones": [
+        "Lentamente, pero con la velocidad más larga posible.",
+        "Rápidamente para que no patine el vehículo.",
+        "En la primera relación de marchas y acelerando a fondo."
+      ],
+      "correcta": 0,
       "imagen": "../img/test_060_p29.jpg"
     }
   ]

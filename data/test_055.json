@@ -1,268 +1,298 @@
 {
   "test_id": 55,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Si en via interurbana un ciclomotor de dos ruedas quiere girar a la izquierda y no hay carril acondicionado para ello:",
+      "texto": "Si en vía interurbana un ciclomotor de dos ruedas quiere girar a la izquierda y no hay carril acondicionado para ello:",
       "opciones": [
         "No puede realizar el giro.",
         "Debe situarse a la derecha, e iniciarlo siempre desde el centro de la calzada.",
         "Debe situarse a la derecha, e iniciarlo fuera de la calzada siempre que sea posible."
       ],
+      "correcta": 2,
       "imagen": "../img/test_055_p01.jpg"
     },
     {
-      "texto": "¿Esta permitido que un menor viaje en el asiento delantero de un turismo?",
+      "texto": "¿Está permitido que un menor viaje en el asiento delantero de un turismo?",
       "opciones": [
         "No.",
-        "Si,pero debe utilizar siempre un dispositivo de retencion orientado hacia atras.",
-        "Si,simidemasde135centimetros."
-      ]
+        "Sí, pero debe utilizar siempre un dispositivo de retención orientado hacia atrás.",
+        "Sí, si mide más de 135 centímetros."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En un casco, ¿ies importante la ventilacion?",
+      "texto": "En un casco, ¿es importante la ventilación?",
       "opciones": [
         "Sí.",
         "No.",
-        "Es importante en verano, el resto del ano es indiferente."
+        "Es importante en verano, el resto del año es indiferente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_055_p03.jpg"
     },
     {
-      "texto": "¿Se puede atravesar la linea de conos para cambiar de carril?",
+      "texto": "¿Se puede atravesar la línea de conos para cambiar de carril?",
       "opciones": [
-        "Si, para realizar una parada.",
-        "Si,para adelantar.",
-        "No,porque esta prohibido."
+        "Sí, para realizar una parada.",
+        "Sí, para adelantar.",
+        "No, porque está prohibido."
       ],
+      "correcta": 2,
       "imagen": "../img/test_055_p04.jpg"
     },
     {
-      "texto": "En una autopista, ¿icuando se puede circular por el arcen?",
+      "texto": "En una autopista, ¿cuándo se puede circular por el arcén?",
       "opciones": [
-        "Cuandohaymuchosvehiculoscirculando.",
+        "Cuando hay muchos vehículos circulando.",
         "Nunca.",
-        "Cuando por emergencia o averia se circule a velocidad anormalmentereducida."
+        "Cuando por emergencia o avería se circule a velocidad anormalmente reducida."
       ],
+      "correcta": 2,
       "imagen": "../img/test_055_p05.jpg"
     },
     {
-      "texto": "Por esta carretera convencional, ¿zcual es la velocidad maxima a la que puede adelantar un vehiculo turismo?",
+      "texto": "Por esta carretera convencional, ¿cuál es la velocidad máxima a la que puede adelantar un vehículo turismo?",
       "opciones": [
         "A 90 km/h.",
-        "A100 km/h.",
-        "A110 km/h."
+        "A 100 km/h.",
+        "A 110 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_055_p06.jpg"
     },
     {
-      "texto": "La senalizacion vertical prevalece sobre...",
+      "texto": "La señalización vertical prevalece sobre...",
       "opciones": [
-        "los semaforos.",
-        "las senaleshorizontales.",
-        "las senalesdebalizamiento."
+        "los semáforos.",
+        "las señales horizontales.",
+        "las señales de balizamiento."
       ],
+      "correcta": 1,
       "imagen": "../img/test_055_p07.jpg"
     },
     {
-      "texto": "Las senales horizontales o marcas viales de color blanco, ¿ztienen el mismo significado que las senales verticales?",
+      "texto": "Las señales horizontales o marcas viales de color blanco, ¿tienen el mismo significado que las señales verticales?",
       "opciones": [
-        "Si.",
-        "No, en ningun caso.",
-        "No,salvolas senalesdeceda elpaso》ystop>."
+        "Sí.",
+        "No, en ningún caso.",
+        "No, salvo las señales de «ceda el paso» y «stop»."
       ],
+      "correcta": 0,
       "imagen": "../img/test_055_p08.jpg"
     },
     {
-      "texto": "El alumbrado, ¿ise considera un sistema de seguridad del vehiculo?",
+      "texto": "El alumbrado, ¿se considera un sistema de seguridad del vehículo?",
       "opciones": [
-        "Si, de seguridad activa.",
-        "Si,de seguridadpasiva.",
-        "No, unicamente sirve para ver y ser visto."
+        "Sí, de seguridad activa.",
+        "Sí, de seguridad pasiva.",
+        "No, únicamente sirve para ver y ser visto."
       ],
+      "correcta": 0,
       "imagen": "../img/test_055_p09.jpg"
     },
     {
-      "texto": "En una via interurbana que no dispone de zona peatonal, ¿zpor que lado deben circular los peatones?",
+      "texto": "En una vía interurbana que no dispone de zona peatonal, ¿por qué lado deben circular los peatones?",
       "opciones": [
         "Por su derecha.",
         "Indistintamente, por cualquiera de los dos lados.",
         "Por su izquierda."
       ],
+      "correcta": 2,
       "imagen": "../img/test_055_p10.jpg"
     },
     {
-      "texto": "Para conseguir una conduccion eficiente se debe circular...",
+      "texto": "Para conseguir una conducción eficiente se debe circular...",
       "opciones": [
-        "variando continuamente la velocidad,para que no se fatigue el motor.",
+        "variando continuamente la velocidad, para que no se fatigue el motor.",
         "a una velocidad uniforme, evitando los frenazos y los acelerones.",
-        "utilizando, en la medida de lo posible, las marchas mas cortas."
-      ]
+        "utilizando, en la medida de lo posible, las marchas más cortas."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "La senal circular con borde rojo, ¿ique indica?",
+      "texto": "La señal circular con borde rojo, ¿qué indica?",
       "opciones": [
-        "Prohibe circular a todos los vehiculos y por todos los carriles.",
-        "Prohibe circularpor el carril.",
-        "Obligaadetenerelvehiculo."
+        "Prohíbe circular a todos los vehículos y por todos los carriles.",
+        "Prohíbe circular por el carril.",
+        "Obliga a detener el vehículo."
       ],
+      "correcta": 0,
       "imagen": "../img/test_055_p12.jpg"
     },
     {
-      "texto": "Para realizar una parada, ¿zesta permitido circular marcha atras?",
+      "texto": "Para realizar una parada, ¿está permitido circular marcha atrás?",
       "opciones": [
-        "Si, con ciertas condiciones.",
+        "Sí, con ciertas condiciones.",
         "No.",
-        "Si, siempre."
+        "Sí, siempre."
       ],
+      "correcta": 0,
       "imagen": "../img/test_055_p13.jpg"
     },
     {
-      "texto": "¿Cuando debe apagar el indicador de direccion un vehiculo que se desplaza para adelantar?",
+      "texto": "¿Cuándo debe apagar el indicador de dirección un vehículo que se desplaza para adelantar?",
       "opciones": [
-        "Cuando haya rebasado al vehiculo yantes de volver a la derecha.",
+        "Cuando haya rebasado al vehículo y antes de volver a la derecha.",
         "Cuando vuelva al carril derecho.",
-        "Cuandohayaterminadoeldesplazamiento."
-      ]
+        "Cuando haya terminado el desplazamiento."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Los resaltos en los pasos para peatones, ¿zse consideran obstaculos en la calzada?",
+      "texto": "Los resaltos en los pasos para peatones, ¿se consideran obstáculos en la calzada?",
       "opciones": [
         "No, siempre que se garantice la seguridad vial de los usuarios y especialmente de los ciclistas.",
-        "Si, cuando son metalicos.",
-        "Si,puesto que dificultan el crucedelos pasos depeatones."
+        "Sí, cuando son metálicos.",
+        "Sí, puesto que dificultan el cruce de los pasos de peatones."
       ],
+      "correcta": 0,
       "imagen": "../img/test_055_p15.jpg"
     },
     {
       "texto": "Bajo los efectos del calor es posible que...",
       "opciones": [
-        "aumente el tiempo de reaccion y disminuya la agresividad.",
-        "aumenteel tiempo de reaccionylaagresividad.",
-        "disminuya el tiempo de reaccion y aumente la agresividad."
-      ]
-    },
-    {
-      "texto": "El consumo de alcohol, ¿zaltera la posibilidad de deslumbramiento de un conductor?",
-      "opciones": [
-        "Si, la disminuye.",
-        "No, en ningun caso.",
-        "Si, la aumenta."
-      ]
-    },
-    {
-      "texto": "Este panel, colocado bajo una senal de prohibicion, indica...",
-      "opciones": [
-        "la distancia en que se aplica la prohibicion a ambos lados de la calzada.",
-        "la distancia al comienzo de la prohibicion.",
-        "la distancia en que se aplica la prohibicion en el sentido de la flecha."
+        "aumente el tiempo de reacción y disminuya la agresividad.",
+        "aumente el tiempo de reacción y la agresividad.",
+        "disminuya el tiempo de reacción y aumente la agresividad."
       ],
+      "correcta": 1
+    },
+    {
+      "texto": "El consumo de alcohol, ¿altera la posibilidad de deslumbramiento de un conductor?",
+      "opciones": [
+        "Sí, la disminuye.",
+        "No, en ningún caso.",
+        "Sí, la aumenta."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "Este panel, colocado bajo una señal de prohibición, indica...",
+      "opciones": [
+        "la distancia en que se aplica la prohibición a ambos lados de la calzada.",
+        "la distancia al comienzo de la prohibición.",
+        "la distancia en que se aplica la prohibición en el sentido de la flecha."
+      ],
+      "correcta": 2,
       "imagen": "../img/test_055_p18.jpg"
     },
     {
-      "texto": "La senal que se observa en la fotografia prohibe...",
+      "texto": "La señal que se observa en la fotografía prohíbe...",
       "opciones": [
         "cambiar el sentido de la marcha y girar a la izquierda.",
-        "girarala izquierda.",
+        "girar a la izquierda.",
         "cambiar el sentido de la marcha."
       ],
+      "correcta": 0,
       "imagen": "../img/test_055_p19.jpg"
     },
     {
-      "texto": "¿Que debe hacer si sufre una averia en un tuinel?",
+      "texto": "¿Qué debe hacer si sufre una avería en un túnel?",
       "opciones": [
-        "Encender lasluces delargoalcancepara que sevea mejoryque todos los ocupantes desciendan del vehiculo.",
-        "Si la averia permite la marcha del vehiculo, debe continuar hasta salir del tunel o hasta una zona reservada para emergencias.",
-        "Detener el vehiculo en cualquier lugar del tunel para evitar el peligro, aunque la averia permita la marcha del vehiculo."
+        "Encender las luces de largo alcance para que se vea mejor y que todos los ocupantes desciendan del vehículo.",
+        "Si la avería permite la marcha del vehículo, debe continuar hasta salir del túnel o hasta una zona reservada para emergencias.",
+        "Detener el vehículo en cualquier lugar del túnel para evitar el peligro, aunque la averia permita la marcha del vehículo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_055_p20.jpg"
     },
     {
-      "texto": "Esta senal, ¿zque indica?",
+      "texto": "Esta señal, ¿qué indica?",
       "opciones": [
-        "La velocidad maxima a la que podemos circular.",
-        "La velocidad minima a la que debemos circular.",
-        "La velocidad maxima que se aconseja no sobrepasar, aunque las circunstancias meteorologicas sean favorables."
+        "La velocidad máxima a la que podemos circular.",
+        "La velocidad mínima a la que debemos circular.",
+        "La velocidad máxima que se aconseja no sobrepasar, aunque las circunstancias meteorológicas sean favorables."
       ],
+      "correcta": 2,
       "imagen": "../img/test_055_p21.jpg"
     },
     {
       "texto": "En una frenada de emergencia con ABS, si el pedal de freno vibra debe...",
       "opciones": [
-        "soltar el pedal paranobloquear las ruedas.",
+        "soltar el pedal para no bloquear las ruedas.",
         "seguir frenando a fondo.",
         "pisar el pedal de forma intermitente."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Un turismo con cortinillas contra el sol en las ventanillas traseras, ¿zpuede circular?",
+      "texto": "Un turismo con cortinillas contra el sol en las ventanillas traseras, ¿puede circular?",
       "opciones": [
-        "Si, siempre.",
+        "Sí, siempre.",
         "No.",
-        "Solo cuando el vehiculo lleva dos espejos retrovisores exteriores."
-      ]
+        "Solo cuando el vehículo lleva dos espejos retrovisores exteriores."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "La velocidad maxima para un vehiculo mixto adaptable en autopista es...",
+      "texto": "La velocidad máxima para un vehículo mixto adaptable en autopista es...",
       "opciones": [
         "100 km/h.",
         "120 km/h.",
         "90 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_055_p24.jpg"
     },
     {
-      "texto": "Un agente balancea una luz roja o amarilla, ¿ia que obliga?",
+      "texto": "Un agente balancea una luz roja o amarilla, ¿a qué obliga?",
       "opciones": [
-        "Apasar por el lado correspondiente al brazo con el que realiza la senal.",
-        "A detenerse a los vehiculos hacia los que dirige la luz.",
+        "A pasar por el lado correspondiente al brazo con el que realiza la señal.",
+        "A detenerse a los vehículos hacia los que dirige la luz.",
         "A disminuir la velocidad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_055_p25.jpg"
     },
     {
-      "texto": "Los peatones deberan cruzar las plazas y glorietas...",
+      "texto": "Los peatones deberán cruzar las plazas y glorietas...",
       "opciones": [
-        "rodeandolas.",
+        "rodeándolas.",
         "por el centro de la calzada.",
-        "porel recorridomascorto."
+        "por el recorrido más corto."
       ],
+      "correcta": 0,
       "imagen": "../img/test_055_p26.jpg"
     },
     {
-      "texto": "¿Que es el reposacabezas?",
+      "texto": "¿Qué es el reposacabezas?",
       "opciones": [
         "Es un elemento de confort.",
         "Es un elemento de seguridad importante para evitar lesiones cervicales.",
-        "Es un elemento decorativo del vehiculo."
+        "Es un elemento decorativo del vehículo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_055_p27.jpg"
     },
     {
-      "texto": "En el caso de que el camion no pueda cenirse al borde derecho de la calzada, ¿icomo indicara su conductor que puede ser adelantado con seguridad?",
+      "texto": "En el caso de que el camión no pueda ceñirse al borde derecho de la calzada, ¿cómo indicará su conductor que puede ser adelantado con seguridad?",
       "opciones": [
-        "Moviendo el brazo extendido de atras hacia adelante.",
+        "Moviendo el brazo extendido de atrás hacia adelante.",
         "Con el intermitente izquierdo.",
-        "Reduciendobruscamentelamarcha."
+        "Reduciendo bruscamente la marcha."
       ],
+      "correcta": 0,
       "imagen": "../img/test_055_p28.jpg"
     },
     {
-      "texto": "En una carretera, ¿zesta permitido cambiar el sentido de la marcha?",
+      "texto": "En una carretera, ¿está permitido cambiar el sentido de la marcha?",
       "opciones": [
-        "Si, en cualquier lugar.",
-        "No, esta siempre prohibido.",
-        "Si, en los lugares adecuados."
+        "Sí, en cualquier lugar.",
+        "No, está siempre prohibido.",
+        "Sí, en los lugares adecuados."
       ],
+      "correcta": 2,
       "imagen": "../img/test_055_p29.jpg"
     },
     {
-      "texto": "¿Que debe hacer si por circunstancias del trafico tiene que disminuir considerablemente la velocidad?",
+      "texto": "¿Qué debe hacer si por circunstancias del tráfico tiene que disminuir considerablemente la velocidad?",
       "opciones": [
-        "Frenarbruscamente.",
-        "Senalizarlo con el alumbrado de posicion.",
-        "Asegurarse de que puede hacerlo sin peligro y senalizarlo con las luces de frenado."
+        "Frenar bruscamente.",
+        "Señalizarlo con el alumbrado de posición.",
+        "Asegurarse de que puede hacerlo sin peligro y señalizarlo con las luces de frenado."
       ],
+      "correcta": 2,
       "imagen": "../img/test_055_p30.jpg"
     }
   ]
