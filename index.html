@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>dgt-eando · Tests de conducir</title>
-  <!-- Tokens de diseño (colores, tipografía, radios, sombras): SIEMPRE antes que el resto de hojas -->
-  <link rel="stylesheet" href="css/variables.css?v=2">
-  <!-- Fuente (antes era un @import dentro de index.css) -->
+  <!-- Hojas de estilo · orden obligatorio: 1º variables.css · 2º componentes.css · 3º CSS de la página -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/variables.css?v=3">
+  <link rel="stylesheet" href="css/componentes.css?v=1">
+  <link rel="stylesheet" href="css/index.css?v=3">
+  <!-- Fuente (ya no hay @import dentro de los CSS) -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap">
-  <link rel="stylesheet" href="css/index.css?v=2">
 </head>
 <body>
 

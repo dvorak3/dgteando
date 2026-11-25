@@ -1,0 +1,479 @@
+--- css/test.css	2026-11-25 10:48:51.261244845 +0000
++++ css/test.css.tmp	2026-11-25 10:34:47.748113489 +0000
+@@ -394,38 +394,3 @@
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 10px;
+ }
+-
+-/* =====================================================================
+-   Repaso · categoría DGT de la pregunta y categorías a reforzar
+-   ===================================================================== */
+-.repaso-contexto-izq {
+-  display: inline-flex;
+-  align-items: center;
+-  flex-wrap: wrap;
+-  gap: 6px 10px;
+-  min-width: 0;
+-}
+-
+-.repaso-debiles {
+-  max-width: 440px;
+-  margin: 14px auto 6px;
+-  text-align: left;
+-}
+-
+-.repaso-debiles-titulo {
+-  margin-bottom: 8px;
+-  font-size: var(--text-rem-78);
+-  font-weight: var(--weight-extrabold);
+-  letter-spacing: 0.06em;
+-  text-transform: uppercase;
+-  color: var(--texto-secundario);
+-}
+-
+-.repaso-debiles-lista {
+-  list-style: none;
+-  margin: 0;
+-  padding: 0;
+-  display: flex;
+-  flex-direction: column;
+-  gap: 8px;
+-}
+--- js/storage.js	2026-11-25 04:59:54.005705460 +0000
++++ js/storage.tmp	2026-11-25 04:39:39.930511326 +0000
+@@ -251,20 +251,100 @@
+ }
+ 
+ /* =====================================================================
+- *  CATEGORÍAS: la clasificación vive en js/categorias.js (cargar antes que este archivo)
++ *  CATEGORÍAS DGT (clasificación automática por palabras clave)
+  * ===================================================================== */
+ 
+ const SIN_CATEGORIA = "Sin clasificar";
+-const CATEGORIA_FALLBACK = "Normativa general"; // solo si categorias.js no estuviera cargado
++const CATEGORIA_POR_DEFECTO = "Otras normas";
+ 
+-// Categoría de una pregunta del JSON: respeta su campo "categoria" y, si no, la calcula
++// El orden importa: en caso de empate gana la categoría que aparece antes.
++// Los patrones se aplican sobre texto en minúsculas y SIN tildes ni ñ (ver normalizarTextoDGT).
++const CATEGORIAS_DGT = [
++  { nombre: "Señales y marcas viales", patrones: [
++    /\bsenal(es|izacion|izada|izadas)?\b/, /\bmarcas? viales?\b/, /\blineas? (blanca|amarilla|continua|discontinua|longitudinal|transversal|de detencion)/,
++    /\bsemaforos?\b/, /\bpaneles?\b/, /\bagentes?\b/, /\bcebreado/, /\bbaden\b/, /\bresalto/, /\bcarriles? (bus|reversible|especial|vao)/,
++    /\bpaso de peatones\b/, /\bdelimit/, /\bbalizamiento/, /\bmarcas? (longitudinales|transversales|blancas|amarillas)/, /\bpictograma/
++  ]},
++  { nombre: "Velocidad", patrones: [
++    /\bvelocidad/, /\bkm\/h\b/, /\bdistancias? de (seguridad|separacion|detencion|frenado|reaccion)/, /\bdistancia\b/, /\bfrenado\b/,
++    /\btiempo de reaccion/, /\bradar/, /\bacelera/
++  ]},
++  { nombre: "Prioridad y cruces", patrones: [
++    /\bprioridad/, /\bced(er|a)( el)? paso\b/, /\binterseccion/, /\bcruces?\b/, /\bglorieta/, /\brotonda/, /\bpreferencia/, /\bstop\b/,
++    /\bpaso a nivel\b/, /\bbifurcacion/, /\bvehiculos? (prioritario|de servicio)/, /\bpuente estrecho/, /\bestrechamiento/
++  ]},
++  { nombre: "Maniobras", patrones: [
++    /\badelant/, /\bcambio de sentido\b/, /\bmarcha atras\b/, /\bgir(o|a|ar|e|ando)\b/, /\bincorpor/, /\bestacion/, /\bparadas?\b/,
++    /\bcambio de (carril|direccion)\b/, /\bcambiar de carril\b/, /\bmaniobra/, /\bcarril\b/, /\bretroceder/, /\bdar la vuelta\b/,
++    /\b(entrar|entrada|salir|salida) (en|de) (una |la )?(autopista|autovia)/, /\bsentido contrario\b/, /\bdetenerse\b/, /\bdetencion\b/
++  ]},
++  { nombre: "Alumbrado y visibilidad", patrones: [
++    /\bluz\b/, /\bluces\b/, /\balumbrado/, /\bniebla/, /\bvisibilidad/, /\bdeslumbr/, /\bfaros?\b/, /\bintermitentes?\b/, /\bantiniebla/,
++    /\bnoche\b/, /\bnocturn/, /\banochecer|amanecer|puesta de(l)? sol|salida de(l)? sol\b/, /\bchaleco/, /\bcatadioptric/, /\bpilotos?\b/, /\bcondiciones de (luz|visibilidad)/
++  ]},
++  { nombre: "Alcohol, drogas y fatiga", patrones: [
++    /\balcohol/, /\bdrogas?\b/, /\bestupefaciente/, /\bfatiga/, /\bcansancio/, /\bsomnolencia/, /\bsueno\b/, /\bmedicamento/, /\bmedicina/,
++    /\bembriaguez/, /\bdescans(o|ar)/, /\balcoholemia/, /\bsustancias\b/, /\bbebidas\b/
++  ]},
++  { nombre: "Seguridad y sistemas", patrones: [
++    /\bcinturon/, /\bcasco\b/, /\bairbag/, /\badas\b/, /\bsistemas? (avanzados|de (retencion|seguridad|ayuda|asistencia|frenado))/, /\bretencion/,
++    /\bnin(o|a|os|as)\b/, /\babs\b/, /\besp\b/, /\bestabilidad\b/, /\bposicion\b/, /\bapoyacabezas|reposacabezas/, /\bchanclas|calzado/,
++    /\bseguridad (activa|pasiva|vial)/, /\bsubmarino/, /\bdistraccion/, /\bmovil\b/, /\btelefono/, /\bauriculares/, /\bmanos libres\b/,
++    /\bconduccion (segura|defensiva)/, /\bsri\b/, /\bvehiculos? (autonomo|conectado)/
++  ]},
++  { nombre: "Accidentes y primeros auxilios", patrones: [
++    /\baccidente/, /\bherid(o|os|a|as)\b/, /\bprimeros auxilios\b/, /\bsocorro/, /\bauxilio/, /\bextintor/, /\bincendio/, /\barder\b/, /\bfuego/,
++    /\baveri/, /\bv-?16\b/, /\btriangulos?\b/, /\bpresenaliz/, /\bambulancia/, /\bevacuar/, /\bhemorragia/, /\breanimacion/, /\binmovilizado\b/, /\bp\.?a\.?s\b/
++  ]},
++  { nombre: "Documentación y normativa", patrones: [
++    /\bpermiso/, /\blicencia/, /\bseguro (obligatorio|del vehiculo)/, /\bitv\b/, /\binspeccion tecnica/, /\bdocumentacion/, /\bsancion/, /\bmultas?\b/,
++    /\bpuntos? (del|de) (permiso|carnet|conducir)/, /\binfraccion/, /\bmatricula/, /\breglamento|normativa|\bley\b/, /\bautorizacion/,
++    /\bdistintivo ambiental/, /\btarjeta\b/, /\bcarne\b|\bcarnet\b/, /\bnovel\b/, /\bautoescuela/, /\bprofesor/, /\balumno/, /\bresponsab/,
++    /\bdenuncia/, /\bretirada\b/, /\bzonas? de bajas emisiones\b|\bzbe\b/, /\bvao\b/, /\bantecedentes/
++  ]},
++  { nombre: "Mecánica y mantenimiento", patrones: [
++    /\bneumatic/, /\baceite/, /\bbateria/, /\bmotor\b/, /\bliquido/, /\bfrenos?\b/, /\bamortiguador/, /\brefrigerante/, /\bdesgaste/, /\bpresion\b/,
++    /\bcombustible/, /\bconsumo\b/, /\bmantenimiento/, /\bremolque/, /\bespejos?\b/, /\bretrovisor/, /\bparabrisas/, /\bescape\b|\bcatalizador|\bemisiones\b/,
++    /\bembrague/, /\bcaja de cambios\b/, /\bsuspension/, /\btestigo/, /\bcadenas\b/, /\bfiltro\b/, /\bcarga\b/, /\bmecanic/
++  ]}
++];
++
++function normalizarTextoDGT(texto) {
++  return String(texto === null || texto === undefined ? "" : texto)
++    .toLowerCase()
++    .normalize("NFD")
++    .replace(/[\u0300-\u036f]/g, "")            // quita tildes (la ñ pasa a n)
++    .replace(/\bluces? de cruce\b/g, "luz corta") // evita confundir "luz de cruce" con "cruce" de calles
++    .replace(/\s+/g, " ");
++}
++
++// Asigna una categoría DGT analizando el enunciado (peso 3) y, si se pasan, las opciones (peso 1).
++// Devuelve siempre un texto: la categoría con más coincidencias o "Otras normas" si no hay ninguna.
++function clasificarCategoriaDGT(enunciado, opciones = null) {
++  const textoEnunciado = normalizarTextoDGT(enunciado);
++  const textoOpciones = Array.isArray(opciones) ? normalizarTextoDGT(opciones.join(" . ")) : "";
++
++  let mejor = CATEGORIA_POR_DEFECTO;
++  let mejorPuntos = 0;
++  CATEGORIAS_DGT.forEach((cat) => {
++    let puntos = 0;
++    cat.patrones.forEach((re) => {
++      if (re.test(textoEnunciado)) puntos += 3;
++      if (textoOpciones && re.test(textoOpciones)) puntos += 1;
++    });
++    if (puntos > mejorPuntos) { // estrictamente mayor: en empate gana la categoría que va antes
++      mejorPuntos = puntos;
++      mejor = cat.nombre;
++    }
++  });
++  return mejor;
++}
++
++// Si el JSON de la pregunta ya trae "categoria" se respeta; si no, se calcula
+ function categoriaDePregunta(pregunta) {
+-  if (!pregunta || typeof pregunta !== "object") return CATEGORIA_FALLBACK;
+-  const explicita = typeof pregunta.categoria === "string" ? pregunta.categoria.trim() : "";
+-  if (typeof clasificarCategoriaDGT === "function") {
+-    return clasificarCategoriaDGT(pregunta.texto, explicita, pregunta.opciones);
+-  }
+-  return explicita || CATEGORIA_FALLBACK;
++  if (!pregunta || typeof pregunta !== "object") return CATEGORIA_POR_DEFECTO;
++  if (typeof pregunta.categoria === "string" && pregunta.categoria.trim()) return pregunta.categoria.trim();
++  return clasificarCategoriaDGT(pregunta.texto, pregunta.opciones);
+ }
+ 
+ function crearTarjeta(testId, preguntaIdx, hoy = hoyISO(), categoria = null) {
+--- js/test_engine.js	2026-11-25 10:49:29.402463126 +0000
++++ js/test_engine.js.tmp	2026-11-25 10:35:39.656796787 +0000
+@@ -181,7 +181,7 @@
+     try {
+       await sincronizacionInicial;                       // parte del progreso más reciente de la nube
+       const clave = `test_${String(window.TEST_ID).padStart(3, '0')}`;  // misma clave que usa index.js
+-      const resultado = await guardarResultadoTest(clave, aciertos, fallos, total, indicesFallados, PREGUNTAS);
++      const resultado = await guardarResultadoTest(clave, aciertos, fallos, total, indicesFallados);
+       if (resultado === false) guardadoNube = false;     // storage.js devuelve false si Supabase falló
+ 
+       const guardado = obtenerProgreso()[clave];
+@@ -221,9 +221,8 @@
+     { nivel: 'again', tecla: '4', etiqueta: 'Again' }
+   ];
+   const ETIQUETA_MADUREZ = { nueva: 'Nueva', aprendiendo: 'Aprendiendo', joven: 'Joven', madura: 'Madura' };
+-  const ETIQUETA_NIVEL = { hard: 'Hard', medium: 'Medium', easy: 'Easy', again: 'Again' };
+   const PUESTOS_REENCOLAR = 4; // "again": la tarjeta vuelve a salir unos puestos más adelante
+-  const MS_SALIDA = 144;       // duración de la animación de salida de la tarjeta (debe coincidir con .repaso-stage.saliendo en test.css)
++  const MS_SALIDA = 180;       // duración de la animación de salida de la tarjeta
+ 
+   const SVG_ATTRS = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
+   const ICONO_CHECK = `<svg ${SVG_ATTRS}><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>`;
+@@ -247,16 +246,6 @@
+     let bloqueoHasta = 0;
+     let correctaVisual = -1;               // posición (0-based) de la correcta tal y como se ve en pantalla
+ 
+-    // --- Medición de tiempo (silenciosa: no se muestra ningún contador) ---
+-    const TOPE_TIEMPO_SEG = 60;            // tope por pregunta (= límite oficial DGT: 1 min/pregunta)
+-    const REFERENCIA_INICIAL_SEG = 10;     // mediana "neutral" mientras haya < 3 respuestas
+-    const MIN_RESPUESTAS_MEDIANA = 3;
+-    const tiemposSesion = [];              // segundos (tope 60) de las preguntas respondidas en esta sesión
+-    let inicioTarjeta = null;              // performance.now() al mostrar la tarjeta
+-    let tiempoActual = 0;                  // tiempo congelado de la tarjeta actual (1 decimal)
+-    let nivelSugerido = '';                // 'hard' | 'medium' | 'easy' | 'again'
+-    let aciertoActual = false;             // si la respuesta de la tarjeta actual fue correcta
+-
+     const el = (id) => document.getElementById(id);
+     const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+     const reducirMovimiento = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+@@ -270,68 +259,6 @@
+       return arr;
+     }
+ 
+-    function calcularMediana(valores) {
+-      if (!valores.length) return 0;
+-      const orden = [...valores].sort((a, b) => a - b);
+-      const mitad = Math.floor(orden.length / 2);
+-      return orden.length % 2 ? orden[mitad] : (orden[mitad - 1] + orden[mitad]) / 2;
+-    }
+-
+-    const fmtSeg = (s) => `${(Math.round(s * 10) / 10).toFixed(1)}s`;
+-
+-    function fechaCortaISO(iso) {
+-      const [y, m, d] = iso.split('-').map(Number);
+-      return new Date(y, m - 1, d)
+-        .toLocaleDateString('es-ES', { weekday: 'short', day: 'numeric', month: 'short' })
+-        .replace(/\./g, '');
+-    }
+-
+-    // Cronómetro silencioso: solo guarda el instante de inicio; no pinta nada en pantalla
+-    function iniciarCronometro() {
+-      inicioTarjeta = performance.now();
+-    }
+-
+-    // Congela el tiempo exacto al responder (tope 60 s, 1 decimal) en tiempoActual
+-    function detenerCronometro() {
+-      if (inicioTarjeta === null) return;
+-      const seg = Math.min(TOPE_TIEMPO_SEG, (performance.now() - inicioTarjeta) / 1000);
+-      inicioTarjeta = null;
+-      tiempoActual = Math.round(seg * 10) / 10;
+-    }
+-
+-    // Tiempo esperado para ESTA tarjeta:
+-    //   con historial (tiempoMedioSeg > 0): 65 % su tiempo medio histórico + 35 % mediana de hoy
+-    //   sin historial: la mediana de hoy (10 s de referencia neutral mientras haya < 3 respuestas)
+-    function calcularReferencia(tiemposPrevios, tiempoMedioTarjeta) {
+-      const real = tiemposPrevios.length >= MIN_RESPUESTAS_MEDIANA;
+-      const medianaHoy = real ? calcularMediana(tiemposPrevios) : REFERENCIA_INICIAL_SEG;
+-      const hist = Number(tiempoMedioTarjeta) > 0;
+-      const esperado = hist ? (0.65 * Number(tiempoMedioTarjeta)) + (0.35 * medianaHoy) : medianaHoy;
+-      return { real, medianaHoy, hist, esperado };
+-    }
+-
+-    // La sugerencia solo destaca un botón: la calificación final la elige siempre el usuario.
+-    function sugerirConfianza(acierto, tiempo, tiemposPrevios, tiempoMedioTarjeta) {
+-      const r = calcularReferencia(tiemposPrevios, tiempoMedioTarjeta);
+-      const esp = fmtSeg(r.esperado);
+-      const t = fmtSeg(tiempo);
+-
+-      if (!acierto) return { nivel: 'again', texto: `Incorrecta (${t})` };
+-
+-      if (tiempo <= r.esperado * 0.85) {
+-        let texto;
+-        if (r.hist) {
+-          const pct = Math.round((tiempo / r.esperado - 1) * 100);
+-          texto = `¡Más rápida! ${t} vs esperado ${esp} (${pct > 0 ? '+' : ''}${pct}%)`;
+-        } else {
+-          texto = r.real ? `Rápida hoy (${t} vs ${esp})` : `Rápida (${t} vs referencia ${esp})`;
+-        }
+-        return { nivel: 'easy', texto };
+-      }
+-      if (tiempo <= r.esperado * 1.30) return { nivel: 'medium', texto: `Ritmo esperado (${t} vs ${esp})` };
+-      return { nivel: 'hard', texto: `Más lenta de lo esperado (${t} vs ${esp})` };
+-    }
+-
+     function pintarCarga(texto) {
+       fase = 'carga';
+       cont.innerHTML = `<div class="repaso-carga"><div class="repaso-spinner" aria-hidden="true"></div><p>${esc(texto)}</p></div>`;
+@@ -428,9 +355,6 @@
+       const repeticion = sesion.repetidas.has(claveActual) ? '<span class="repaso-repeticion">Repetición</span>' : '';
+       const refTest = String(tarjeta.testId).padStart(3, '0');
+       const refPregunta = String((Number(tarjeta.preguntaIdx) || 0) + 1).padStart(2, '0');
+-      // Categoría DGT: la guardada en la tarjeta o, si aún no se ha migrado, la calculada al vuelo
+-      const categoria = tarjeta.categoria
+-        || (typeof categoriaDePregunta === 'function' ? categoriaDePregunta(pregActual) : '');
+ 
+       // Orden visual: posición en pantalla -> índice original en el JSON.
+       // Si "barajarOpciones" está activo se mezcla en cada aparición; el rastreo de la correcta se mantiene
+@@ -451,10 +375,7 @@
+       stage.innerHTML = `
+         <article class="repaso-tarjeta ${imagenSrc ? 'con-imagen' : ''}" id="repasoTarjeta">
+           <div class="repaso-contexto">
+-            <span class="repaso-contexto-izq">
+-              <span>Test ${esc(refTest)} · Pregunta ${esc(refPregunta)}</span>
+-              ${categoria ? `<span class="repaso-categoria">${esc(categoria)}</span>` : ''}
+-            </span>
++            <span>Test ${esc(refTest)} · Pregunta ${esc(refPregunta)}</span>
+             <span class="repaso-contexto-der">
+               ${repeticion}
+               <span class="repaso-badge madurez-${esc(tarjeta.madurez)}">${ETIQUETA_MADUREZ[tarjeta.madurez] || esc(tarjeta.madurez)}</span>
+@@ -476,14 +397,12 @@
+       });
+ 
+       window.scrollTo(0, 0);
+-      iniciarCronometro();
+     }
+ 
+     /* ---------- Fase 1: elegir respuesta ---------- */
+     function seleccionarOpcion(i) {
+       if (fase !== 'pregunta' || i < 0 || i >= numOpciones) return;
+       fase = 'confianza';
+-      detenerCronometro();               // congela el tiempo exacto al instante
+       bloqueoHasta = Date.now() + 200;   // evita que una doble pulsación salte la fase de confianza
+ 
+       const correcta = correctaVisual;   // índice visual de la correcta (ya contempla el barajado)
+@@ -514,45 +433,20 @@
+         pintarCombo(habiaRacha ? 'cae' : null);
+       }
+ 
+-      // Sugerencia de confianza según tiempo esperado (65 % histórico de la tarjeta + 35 % mediana de hoy)
+-      const tarjetaAntes = obtenerTarjetas()[claveActual] || {};
+-      aciertoActual = acierto;
+-      const sug = sugerirConfianza(acierto, tiempoActual, tiemposSesion, tarjetaAntes.tiempoMedioSeg);
+-      nivelSugerido = sug.nivel;
+-      tiemposSesion.push(tiempoActual);  // entra en la mediana a partir de la SIGUIENTE pregunta
+-
+-      // Mejora vs. el anterior repaso: solo la 1.ª vez que sale la tarjeta en la sesión y si hay tiempo previo
+-      if (!sesion.vistas.has(claveActual)) {
+-        sesion.vistas.add(claveActual);
+-        if (Number(tarjetaAntes.ultimoTiempoSeg) > 0) {
+-          sesion.comparables.add(claveActual);
+-          if (acierto && tiempoActual < Number(tarjetaAntes.ultimoTiempoSeg)) sesion.mejoradas.add(claveActual);
+-        }
+-      }
+-
+       const intervalos = previsualizarIntervalosTarjeta(claveActual) || {};
+       const panel = el('repasoConfianza');
+-      const hoyStr = hoyISO();
+-      const botonHTML = (n) => {
+-        const dias = intervalos[n.nivel];
+-        const fecha = n.nivel !== 'again' && dias > 0 ? fechaCortaISO(sumarDiasISO(hoyStr, dias)) : '';
+-        return `
+-        <button type="button" class="repaso-btn-confianza btn-${n.nivel} ${sug.nivel === n.nivel ? 'sugerido' : ''}" data-nivel="${n.nivel}">
++      const sugerido = acierto ? '' : 'again';
++      const botonHTML = (n) => `
++        <button type="button" class="repaso-btn-confianza btn-${n.nivel} ${sugerido === n.nivel ? 'sugerido' : ''}" data-nivel="${n.nivel}">
+           <span class="repaso-btn-linea"><span class="repaso-tecla">${n.tecla}</span> ${n.etiqueta}</span>
+-          <span class="repaso-btn-dias">${etiquetaIntervalo(n.nivel, dias)}</span>
+-          ${fecha ? `<span class="repaso-btn-fecha">${esc(fecha)}</span>` : ''}
++          <span class="repaso-btn-dias">${etiquetaIntervalo(n.nivel, intervalos[n.nivel])}</span>
+         </button>`;
+-      };
+ 
+       panel.innerHTML = `
+         <div class="repaso-confianza-cab">
+           <span class="repaso-confianza-titulo">Calibrar confianza</span>
+           <span class="repaso-resultado ${acierto ? 'ok' : 'ko'}">${acierto ? '¡Correcto!' : 'Incorrecta'}</span>
+         </div>
+-        <p class="repaso-sugerencia nivel-${sug.nivel}">
+-          <span class="repaso-sugerencia-tag">Sugerida: ${esc(ETIQUETA_NIVEL[sug.nivel])}</span>
+-          <span class="repaso-sugerencia-texto">${esc(sug.texto)}</span>
+-        </p>
+         <div class="repaso-confianza-botones">
+           ${NIVELES.filter((n) => n.nivel !== 'again').map(botonHTML).join('')}
+           <span class="repaso-confianza-sep" aria-hidden="true"></span>
+@@ -565,7 +459,7 @@
+       });
+ 
+       const ayuda = el('repasoAyuda');
+-      if (ayuda) ayuda.innerHTML = '<kbd>Espacio</kbd>/<kbd>Enter</kbd> acepta la sugerida y pasa a la siguiente';
++      if (ayuda) ayuda.innerHTML = 'Pulsa <kbd>1</kbd> Hard · <kbd>2</kbd> Medium · <kbd>3</kbd> Easy · <kbd>4</kbd> Again';
+ 
+       // En pantallas pequeñas asegura que el panel de confianza quede a la vista
+       requestAnimationFrame(() => {
+@@ -582,7 +476,7 @@
+       cont.querySelectorAll('.repaso-btn-confianza').forEach((b) => { b.disabled = true; });
+ 
+       try {
+-        await calificarTarjetaAnki(claveActual, nivel, tiempoActual, aciertoActual);   // el botón elegido manda; el tiempo solo es estadística
++        await calificarTarjetaAnki(claveActual, nivel);
+       } catch (err) {
+         console.error('Error calificando la tarjeta:', err);
+       }
+@@ -621,50 +515,6 @@
+       const rachaMax = sesion ? sesion.rachaMax : 0;
+       const hayMas = e.colaHoy.length > 0;
+ 
+-      // Categorías más flojas según el historial real (mayor % de fallos)
+-      const debiles = typeof obtenerCategoriasDebiles === 'function' ? obtenerCategoriasDebiles(3) : [];
+-      const bloqueDebiles = debiles.length ? `
+-        <div class="repaso-debiles">
+-          <h3 class="repaso-debiles-titulo">Categorías a reforzar</h3>
+-          <ul class="repaso-debiles-lista">
+-            ${debiles.map((c) => {
+-              const pct = Math.round(c.tasaFallo * 100);
+-              return `
+-              <li class="repaso-debil-item">
+-                <span class="repaso-debil-nombre">${esc(c.categoria)}</span>
+-                <span class="repaso-debil-barra" aria-hidden="true"><span style="width:${pct}%"></span></span>
+-                <span class="repaso-debil-pct">${pct} % de fallos</span>
+-              </li>`;
+-            }).join('')}
+-          </ul>
+-        </div>` : '';
+-
+-      // Resumen de tiempos de la sesión vs. límite oficial del examen (60 s/pregunta)
+-      let bloqueTiempos = '';
+-      if (tiemposSesion.length) {
+-        const nMejoradas = sesion ? sesion.mejoradas.size : 0;
+-        const nComparables = sesion ? sesion.comparables.size : 0;
+-        const textoMejora = nComparables === 0
+-          ? 'Aún no hay tiempos previos con los que comparar: en tu próximo repaso verás cuánto mejoras.'
+-          : nMejoradas > 0
+-            ? `⚡ ${nMejoradas} ${nMejoradas === 1 ? 'tarjeta respondida' : 'tarjetas respondidas'} más rápido que en tu anterior repaso (de ${nComparables} con historial)`
+-            : `Ninguna tarjeta más rápida que en tu anterior repaso (${nComparables} con historial)`;
+-        const mediana = calcularMediana(tiemposSesion);
+-        const media = tiemposSesion.reduce((a, b) => a + b, 0) / tiemposSesion.length;
+-        const pct = Math.min(100, Math.round((media / TOPE_TIEMPO_SEG) * 100));
+-        bloqueTiempos = `
+-          <div class="repaso-tiempos">
+-            <div class="repaso-tiempos-fila">
+-              <div class="repaso-tiempo-item"><strong>${fmtSeg(mediana)}</strong><span>Mediana de hoy</span></div>
+-              <div class="repaso-tiempo-item"><strong>${fmtSeg(media)}</strong><span>Media por pregunta</span></div>
+-              <div class="repaso-tiempo-item limite"><strong>${TOPE_TIEMPO_SEG}s</strong><span>Límite DGT</span></div>
+-            </div>
+-            <div class="repaso-tiempos-barra" aria-hidden="true"><div class="repaso-tiempos-relleno" style="width:${pct}%"></div></div>
+-            <p class="repaso-tiempos-mejora ${nMejoradas > 0 ? 'hay-mejora' : ''}">${textoMejora}</p>
+-            <p class="repaso-tiempos-nota">Usas de media el ${pct} % del tiempo por pregunta del examen (${tiemposSesion.length} ${tiemposSesion.length === 1 ? 'respuesta' : 'respuestas'} cronometradas).</p>
+-          </div>`;
+-      }
+-
+       cont.innerHTML = `
+         <div class="repaso-final">
+           <div class="repaso-final-icono" aria-hidden="true">✓</div>
+@@ -679,8 +529,6 @@
+             <div class="repaso-resumen-item madurez-joven"><strong>${e.jovenes}</strong><span>Jóvenes</span></div>
+             <div class="repaso-resumen-item madurez-madura"><strong>${e.maduras}</strong><span>Maduras</span></div>
+           </div>
+-          ${bloqueTiempos}
+-          ${bloqueDebiles}
+           <p class="repaso-final-sub">${e.totalMazo} preguntas en seguimiento · examen en ${e.diasRestantes} ${e.diasRestantes === 1 ? 'día' : 'días'}</p>
+           ${hayMas ? `<a class="repaso-btn-secundario" href="test.html?modo=repaso">Seguir con ${e.colaHoy.length} ${e.colaHoy.length === 1 ? 'tarjeta más' : 'tarjetas más'}</a>` : ''}
+           <a class="repaso-btn-volver" href="index.html">Volver al panel <kbd>Enter</kbd></a>
+@@ -698,7 +546,6 @@
+       } else if (fase === 'confianza') {
+         const nivel = TECLA_A_NIVEL[e.key];
+         if (nivel) { e.preventDefault(); calificar(nivel); }
+-        else if ((e.key === ' ' || e.key === 'Enter') && nivelSugerido) { e.preventDefault(); calificar(nivelSugerido); }
+       } else if (fase === 'final' && e.key === 'Enter') {
+         window.location.href = 'index.html';
+       }
+@@ -712,9 +559,6 @@
+         if (necesitaInicializarMazo()) {
+           pintarCarga('Preparando mazo Anki...');
+           await inicializarMazoAnkiDesdeTests();
+-        } else {
+-          pintarCarga('Buscando tests nuevos...');
+-          await sincronizarTestsSiToca();
+         }
+       } catch (err) {
+         console.error('Error preparando el mazo:', err);
+@@ -732,8 +576,7 @@
+         pendientes: [], total: 0, hechas: 0,
+         contadores: { hard: 0, medium: 0, easy: 0, again: 0 },
+         repetidas: new Set(),
+-        racha: 0, rachaMax: 0,
+-        vistas: new Set(), comparables: new Set(), mejoradas: new Set()
++        racha: 0, rachaMax: 0
+       };
+       if (!estado.colaHoy.length) { mostrarFinal(); return; }
+ 
+--- index.html	2026-11-25 10:49:10.301190043 +0000
++++ index.html.tmp	2026-11-25 10:35:17.385930285 +0000
+@@ -293,8 +293,7 @@
+   </div>
+ 
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+-  <script src="js/categorias.js?v=1"></script>
+-  <script src="js/storage.js?v=12"></script>
++  <script src="js/storage.js?v=10"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <script src="js/index.js?v=6"></script>
+ </body>
+--- test.html	2026-11-25 10:49:19.274120560 +0000
++++ test.html.tmp	2026-11-25 10:35:29.248616473 +0000
+@@ -52,8 +52,7 @@
+   <noscript>Este test necesita JavaScript. <a href="index.html">Volver a la lista</a></noscript>
+ 
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+-  <script src="js/categorias.js?v=1"></script>
+-  <script src="js/storage.js?v=12"></script>
+-  <script src="js/test_engine.js?v=9"></script>
++  <script src="js/storage.js?v=10"></script>
++  <script src="js/test_engine.js?v=8"></script>
+ </body>
+ </html>
