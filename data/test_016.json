@@ -1,267 +1,297 @@
 {
   "test_id": 16,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En un viaje largo, ¿icuando debe descansar?",
+      "texto": "En un viaje largo, ¿cuando debe descansar?",
       "opciones": [
-        "Cada 2horas aproximadamente.",
-        "Cuando encuentre un area de descanso.",
-        "Cada5horasaproximadamente."
-      ]
+        "Cada 2 horas aproximadamente.",
+        "Cuando encuentre un área de descanso.",
+        "Cada 5 horas aproximadamente.."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Este semaforo, ¿ia que vehiculos afecta?",
+      "texto": "Este semáforo, ¿a que vehículos afecta?",
       "opciones": [
-        "Soloatranvias.",
-        "A tranvias y autobuses de lineas regulares.",
-        "Aciclos yciclomotores."
+        "Solo a tranvías..",
+        "A tranvías y autobuses de líneas regulares.",
+        "A ciclos y ciclomotores."
       ],
-      "imagen": "../img/test_016_p02.jpg"
+      "imagen": "../img/test_016_p02.jpg",
+      "correcta": 1
     },
     {
       "texto": "Si conducimos de noche para evitar los atascos debemos tener en cuenta que...",
       "opciones": [
-        "el sueno o la somnolencia al volanteaparecen conmayor facilidad.",
+        "el sueño o la somnolencia al volante aparecen con mayor facilidad.",
         "no es necesario descansar en trayectos largos, ya que durante la noche no aparece la fatiga.",
-        "la oscuridad impide la aparicion del sueno, pero favorece la aparicion de la fatiga."
+        "la oscuridad impide la aparicion del sueño, pero favorece la aparicion de la fatiga."
       ],
-      "imagen": "../img/test_016_p03.jpg"
+      "imagen": "../img/test_016_p03.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Cuando un vehiculo esta inmovilizado en el lado derecho de la calzada...",
+      "texto": "Cuando un vehículo esta inmovilizado en el lado derecho de la calzada...",
       "opciones": [
-        "el conductor podra entrar o salir por el lado izquierdo,pero con rapidez y precaucion.",
+        "el conductor podra entrar o salir por el lado izquierdo, pero con rapidez y precaución.",
         "el conductor no podra salir o entrar nunca por el lado derecho.",
         "el conductor debe entrar o salir siempre por el lado derecho."
       ],
-      "imagen": "../img/test_016_p04.jpg"
+      "imagen": "../img/test_016_p04.jpg",
+      "correcta": 0
     },
     {
       "texto": "¿Donde debe estacionar en una autopista?",
       "opciones": [
         "En la mediana.",
-        "Fuera de la calzada, en el arcen de la derecha.",
-        "En los lugares especificamente senalizadospara talfin."
+        "Fuera de la calzada, en el arcén de la derecha.",
+        "En los lugares especificamente señalizados para tal fin."
       ],
-      "imagen": "../img/test_016_p05.jpg"
+      "imagen": "../img/test_016_p05.jpg",
+      "correcta": 2
     },
     {
-      "texto": "¿En esta carretera estrecha quiere realizarun cambio de sentido.zDonde debe colocarse para no molestar a otros vehiculos?",
+      "texto": "¿En esta carretera estrecha quiere realizar un cambio de sentido.zDonde debe colocarse para no molestar a otros vehículos?",
       "opciones": [
         "En el centro de la calzada, sin ocupar el carril contrario.",
         "En el borde derecho y esperar hasta poder hacerlo sin peligro."
       ],
-      "imagen": "../img/test_016_p06.jpg"
+      "imagen": "../img/test_016_p06.jpg",
+      "correcta": 1
     },
     {
-      "texto": "A la vista de la senal, ¿ies obligatorio detenerse para dejar pasar a un vehiculo que circula en sentido contrario?",
+      "texto": "A la vista de la señal, ¿es obligatorio detenerse para dejar pasar a un vehículo que circula en sentido contrario?",
       "opciones": [
-        "Si, mientras no se pueda continuar la marcha sin obligar a detenerse a los vehiculos que circulen en sentido contrario.",
-        "No,porquela senal otorga prioridadde paso. b) No, porque la senal otorga prioridad de paso.",
-        "No,porque la senal no afecta a la prioridad de paso."
+        "Sí, mientras no se pueda continuar la marcha sin obligar a detenerse a los vehículos que circulen en sentido contrario.",
+        "No, porquela señal otorga prioridad de paso.",
+        "No, porque la señal no afecta a la prioridad de paso."
       ],
-      "imagen": "../img/test_016_p07.jpg"
+      "imagen": "../img/test_016_p07.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Si va a adelantar y el vehiculo que circula delante ha encendido el intermitente izquierdo, manifestando su intencion de adelantar, ¿iquien tiene preferencia en el adelantamiento?",
+      "texto": "Si va a ade lantar y el vehículo que circula de lante ha encendido el intermitente izquierdo, manifestando su intencion de ade lantar, ¿quien tiene preferencia en el ade lantamiento?",
       "opciones": [
         "El que inicie antes el desplazamiento lateral.",
         "El que circule a mayor velocidad.",
-        "El conductor del vehiculo que ya ha encendido el intermitente."
-      ]
+        "El conductor del vehículo que ya ha encendido el intermitente."
+      ],
+      "correcta": 2
     },
     {
       "texto": "Bajo condiciones de luminosidad desfavorables, el alumbrado...",
       "opciones": [
-        "permite percibir posibles peligros unicamente cuando se circula con la luz de carretera.",
-        "permitepercibirposiblespeligroscontiempo suficientepara reaccionar.",
+        "permite percibir posibles peligros únicamente cuando se circula con la luz de carretera.",
+        "permite percibir posibles peligros con tiempo suficiente para reaccionar.",
         "no es de mucha utilidad."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "El uso del telefono movil mientras se conduce, ¿icuando esta permitido?",
+      "texto": "El uso del telefono móvil mientras se conduce, ¿cuando está permitido?",
       "opciones": [
         "Solo cuando se disponga de un dispositivo manos libres.",
         "Siempre.",
         "Nunca, porque puede producir distracciones."
       ],
-      "imagen": "../img/test_016_p10.jpg"
+      "imagen": "../img/test_016_p10.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Esta senal indica...",
+      "texto": "Esta señal indica...",
       "opciones": [
-        "unazonadefrenado",
-        "un area de descanso.",
+        "una zona de frenado.",
+        "un área de descanso.",
         "el acceso a un lago en una ciudad."
       ],
-      "imagen": "../img/test_016_p11.jpg"
+      "imagen": "../img/test_016_p11.jpg",
+      "correcta": 0
     },
     {
       "texto": "Durante el dia, el mayor numero de accidentes tiene lugar...",
       "opciones": [
         "al mediodia.",
         "a ultima hora de la tarde al salir del trabajo.",
-        "a primera hora delamanana, los fines de semana."
+        "a primera hora de lamanana, los fines de semana."
       ],
-      "imagen": "../img/test_016_p12.jpg"
+      "imagen": "../img/test_016_p12.jpg",
+      "correcta": 1
     },
     {
-      "texto": "En caso de incendio en un tunel debe...",
+      "texto": "En caso de incendio en un túnel debe...",
       "opciones": [
-        "abandonar el vehiculo,dejando las puertas cerradas con llave.",
-        "aproximar el vehiculo todo lo posible a la derecha, apagar el motor, dejar las llaves puestas y las puertas abiertas.",
-        "encender las luces de emergencia y las de posicion, sin abandonar el vehiculo hasta que no lleguen los servicios de emergencia."
+        "abandonar el vehículo, dejando las puertas cerradas con llave.",
+        "aproximar el vehículo todo lo posible a la derecha, apagar el motor, dejar las llaves puestas y las puertas abiertas.",
+        "encender las luces de emergencia y las de posición, sin abandonar el vehículo hasta que no lleguen los servicios de emergencia."
       ],
-      "imagen": "../img/test_016_p13.jpg"
+      "imagen": "../img/test_016_p13.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Si tiene que circular con su motocicleta por una zona especialmente deslizante, ¿ique precauciones debe tomar?",
+      "texto": "Si tiene que circular con su motocicleta por una zona especialmente deslizante, ¿que precauciones debe tomar?",
       "opciones": [
         "Frenar en la zona para controlar la trayectoria.",
-        "Disminuir la velocidad antes dellegar ymantener la motocicleta vertical al pasar sobre ella.",
-        "Acelerarpara pasarporlazona enelmenortiempoposible."
+        "Disminuir la velocidad antes de llegar y mantener la motocicleta vertical al pasar sobre ella.",
+        "Acelerar para pasar por la zona en el menor tiempo posible."
       ],
-      "imagen": "../img/test_016_p14.jpg"
+      "imagen": "../img/test_016_p14.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Desde el punto de vista de la circulacion, ¿zes una motocicleta un automovil?",
+      "texto": "Desde el punto de vista de la circulación, ¿es una motocicleta un automóvil?",
       "opciones": [
-        "No,porquelosautomovilessonlosturismos.",
-        "Si.",
-        "Si, porque es un vehiculo que se mueve por si mismo."
-      ]
+        "No, porquelosautomovilessonlosturismos.",
+        "Sí.",
+        "Sí, porque es un vehículo que se mueve por si mismo."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "De los siguientes sistemas avanzados de ayuda a la conduccion o ADAS, ¿icual es conocido con el nombre de \"Alerta de trafico cruzado\"?",
+      "texto": "De los siguientes sistemas avanzados de ayuda a la conducción o ADAS, ¿cual es conocido con el nombre de \"Alerta de trafico cruzado\"?",
       "opciones": [
-        "EI\"ACT\".",
-        "EI\"LDW\".",
-        "EI\"RCTA\"."
+        "El \"ACT\".",
+        "El \"LDW\".",
+        "El \"RCTA\"."
       ],
-      "imagen": "../img/test_016_p16.jpg"
+      "imagen": "../img/test_016_p16.jpg",
+      "correcta": 2
     },
     {
       "texto": "¿Puede sentir mayor sensacion de fatiga si sufre de estres?",
       "opciones": [
         "No.",
-        "Solo siademas tieneproblemas de sueno.",
-        "Si."
-      ]
+        "Solo si además tiene problemas de sueño.",
+        "Sí."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Encuentra estas dos senales, ¿ia cual debe obedecer?",
+      "texto": "Encuentra estas dos señales, ¿a cual debe obedecer?",
       "opciones": [
-        "Alaquesoloprohibeestacionar.",
-        "A la queprohibeparar yestacionar.",
+        "A la que solo prohíbe estacionar..",
+        "A la que prohíbe parar y estacionar.",
         "A ninguna por estar en contradiccion."
       ],
-      "imagen": "../img/test_016_p18.jpg"
+      "imagen": "../img/test_016_p18.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Por donde se debe circular en un cambio de rasante de reducida visibilidad?",
       "opciones": [
-        "Dejandocompletamente librelamitad delacalzadaquecorresponda a losquepuedan circular en sentido contrario.",
+        "Dejando completamente libre la mitad de lacalzadaquecorresponda a los que puedan circular en sentido contrario.",
         "Por la izquierda, aunque se invada parte del centro de la calzada.",
-        "Pordondemas convengaamidestino."
+        "Por donde más convenga a mi destino."
       ],
-      "imagen": "../img/test_016_p19.jpg"
+      "imagen": "../img/test_016_p19.jpg",
+      "correcta": 0
     },
     {
       "texto": "En carretera, circula con la luz de corto alcance por averia. ¿Que debe hacer?",
       "opciones": [
-        "Circular a una velocidad que permita la detencion del vehiculo dentro de la zona iluminada en caso necesario.",
-        "Circular siempre por el arcen.",
-        "Detener el vehiculo en el arcen."
-      ]
+        "Circular a una velocidad que permita la detención del vehículo dentro de la zona iluminada en caso necesario.",
+        "Circular siempre por el arcén.",
+        "Detener el vehículo en el arcén."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿En que curvas esta prohibido adelantar?",
+      "texto": "¿En que curvas está prohibido ade lantar?",
       "opciones": [
-        "Entodas las curvas.",
-        "Encurvasaladerecha.",
+        "En todas las curvas.",
+        "Encurvasa la derecha.",
         "En curvas de visibilidad reducida."
       ],
-      "imagen": "../img/test_016_p21.jpg"
+      "imagen": "../img/test_016_p21.jpg",
+      "correcta": 2
     },
     {
-      "texto": "¿Pueden los agentes inmovilizar un vehiculo si produce un ruido excesivo?",
+      "texto": "¿Pueden los agentes inmovilizar un vehículo si produce un ruido excesivo?",
       "opciones": [
-        "Si, cuando el ruido supere los niveles permitidos.",
+        "Sí, cuando el ruido supere los niveles permitidos.",
         "No, solo pueden multarle.",
-        "No,ya queno supone ningun peligro para la circulacion."
+        "No, ya que no supone ningún peligro para la circulación."
       ],
-      "imagen": "../img/test_016_p22.jpg"
+      "imagen": "../img/test_016_p22.jpg",
+      "correcta": 0
     },
     {
       "texto": "Por debajo de las tasas permitidas de alcoholemia...",
       "opciones": [
-        "es muypoco probable tener un accidente debido a los efectosdel alcohol.",
-        "no es posible tener un accidentedebido a los efectos del alcohol.",
-        "tambien es posible tener un accidente debido a los efectos del alcohol."
-      ]
+        "es muy poco probable tener un accidente debido a los efectos del alcohol.",
+        "no es posible tener un accidente debido a los efectos del alcohol.",
+        "también es posible tener un accidente debido a los efectos del alcohol."
+      ],
+      "correcta": 2
     },
     {
       "texto": "Una de las principales causas de mortalidad en los accidentes de moto y ciclomotor es...",
       "opciones": [
         "no utilizar el casco.",
-        "el arrollamientoporotrosvehiculos.",
+        "el arrollamientoporotros vehículos.",
         "los golpes contra el asfalto en las caidas."
       ],
-      "imagen": "../img/test_016_p24.jpg"
+      "imagen": "../img/test_016_p24.jpg",
+      "correcta": 0
     },
     {
-      "texto": "¿Cual es la velocidad maxima permitida en esta via para un camion de 3500 kg de MMA?",
+      "texto": "¿Cual es la velocidad máxima permitida en esta vía para un camión de 3500 kg de MMA?",
       "opciones": [
         "70 km/h.",
         "90 km/h.",
         "80 km/h."
       ],
-      "imagen": "../img/test_016_p25.jpg"
+      "imagen": "../img/test_016_p25.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Al realizar una maniobra que requiere un desplazamiento lateral, ¿zcomo debe senalizarse?",
+      "texto": "Al realizar una maniobra que requiere un desplazamiento lateral, ¿como debe senalizarse?",
       "opciones": [
-        "Unicamente con las luces intermitentes.",
-        "Unicamente con el brazo.",
-        "Conlas luces intermitentes hasta adoptar la nueva trayectoria o con el brazo."
+        "Únicamente con las luces intermitentes.",
+        "Únicamente con el brazo.",
+        "Con las luces intermitentes hasta adoptar la nueva trayectoria o con el brazo."
       ],
-      "imagen": "../img/test_016_p26.jpg"
+      "imagen": "../img/test_016_p26.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Los animales conducidos en manada o en rebano...",
+      "texto": "Los animales conducidos en manada o en rebaño...",
       "opciones": [
-        "atravesaran lasviaspor cualquierlugar, siempreque esten custodiados porunapersona mayor de 18 anos.",
-        "no podran circular por la noche a no serque el conductor disponga de elementos retrorreflectantes.",
-        "iran al paso, lo mas cerca al borde derecho de la via y sin ocupar mas de la mitad derecha de la calzada."
+        "atravesaran las vías por cualquierlugar, siempre que estén custodiados por una persona mayor de 18 años.",
+        "no podran circular por la noche a no ser que el conductor disponga de elementos retrorreflectantes.",
+        "iran al paso, lo más cerca al borde derecho de la vía y sin ocupar más de la mitad derecha de la calzada."
       ],
-      "imagen": "../img/test_016_p27.jpg"
+      "imagen": "../img/test_016_p27.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Las motocicletas que se pueden conducir con el permiso de la clase A1, ¿iestan obligadas a Ilevar placa de matricula?",
+      "texto": "Las motocicletas que se pueden conducir con el permiso de la clase A1, ¿están obligadas a llevar placa de matricula?",
       "opciones": [
         "No.",
-        "Si.",
-        "Solosi llevansidecar."
-      ]
-    },
-    {
-      "texto": "La senal de la derecha, ¿ique indica?",
-      "opciones": [
-        "Obliga a detenerme antes de la senal.",
-        "Avisa de un peligro.",
-        "Obliga a ceder el paso a todos los vehiculos."
+        "Sí.",
+        "Solo si llevan sidecar."
       ],
-      "imagen": "../img/test_016_p29.jpg"
+      "correcta": 1
     },
     {
-      "texto": "Esta senal indica peligro ante la proximidad...",
+      "texto": "La señal de la derecha, ¿que indica?",
       "opciones": [
-        "de un puente movil.",
+        "Obliga a detenerme antes de la señal.",
+        "Avisa de un peligro.",
+        "Obliga a ceder el paso a todos los vehículos."
+      ],
+      "imagen": "../img/test_016_p29.jpg",
+      "correcta": 2
+    },
+    {
+      "texto": "Esta señal indica peligro ante la proximidad...",
+      "opciones": [
+        "de un puente móvil.",
         "de un resalto o baden en el pavimento.",
         "de un muelle."
       ],
-      "imagen": "../img/test_016_p30.jpg"
+      "imagen": "../img/test_016_p30.jpg",
+      "correcta": 2
     }
   ]
 }

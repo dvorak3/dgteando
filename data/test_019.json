@@ -1,267 +1,298 @@
 {
   "test_id": 19,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "¿Que le indicalaflecha verde del semaforo?",
+      "texto": "¿Que le indica la flecha verde del semáforo?",
       "opciones": [
-        "Quepuedo tomar la direccionque indica la flecha, con precaucionydejandopasar a los vehiculos que circulen por el carril al que me incorporo.",
-        "Que puedo girar a la derecha cuando se encienda la luz verde del semaforo principal.",
+        "Que puedo tomar la dirección que indica la flecha, con precaución y dejando pasar a los vehículos que circulen por el carril al que me incorporo.",
+        "Que puedo girar a la derecha cuando se encienda la luz verde del semáforo principal.",
         "Que puedo girar a la derecha con prioridad."
       ],
-      "imagen": "../img/test_019_p01.jpg"
+      "imagen": "../img/test_019_p01.jpg",
+      "correcta": 0
     },
     {
       "texto": "Si se ve obligado a circular con una rueda de repuesto de uso temporal o de emergencia, debe tener en cuenta...",
       "opciones": [
-        "que la presion debe sermas alta que las quelleva normalmente el vehiculo.",
+        "que la presión debe ser más alta que las que lleva normalmente el vehículo.",
         "las indicaciones de los fabricantes de este tipo de repuestos.",
-        "que si esta homologada no es necesario sustituirla poruna rueda normal."
+        "que si esta homologada no es necesario sustituirla por una rueda normal."
       ],
-      "imagen": "../img/test_019_p02.jpg"
+      "imagen": "../img/test_019_p02.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Un vehiculo le esta adelantando y no puede terminar la maniobra con seguridad, ¿ique debe hacer?",
+      "texto": "Un vehículo le esta ade lantando y no puede terminar la maniobra con seguridad, ¿que debe hacer?",
       "opciones": [
-        "Aumentar la velocidad, para evitar el adelantamiento.",
-        "Seguir la trayectoria con normalidad, ya que no es problema del vehiculo que adelanta.",
-        "Facilitarla finalizacion de la maniobra de adelantamiento."
+        "Aumentar la velocidad, para evitar el ade lantamiento.",
+        "Seguir la trayectoria con normalidad, ya que no es problema del vehículo que ade lanta.",
+        "Facilitar la finalizacion de la maniobra de ade lantamiento."
       ],
-      "imagen": "../img/test_019_p03.jpg"
+      "imagen": "../img/test_019_p03.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Un conjunto de vehiculos, cuya longitud es de 7,30 metros, circula por una via con tres carriles por sentido de la circulacion, ¿zque carriles puede utilizar?",
+      "texto": "Un conjunto de vehículos, cuya longitud es de 7,30 metros, circula por una vía con tres carriles por sentido de la circulación, ¿que carriles puede utilizar?",
       "opciones": [
-        "Cualquiera deellos indistintamente.",
-        "El de la derecha y el inmediato unicamente cuando las circunstancias del trafico o de la via lo aconsejen.",
+        "Cualquiera de ellos indistintamente.",
+        "El de la derecha y el inmediato únicamente cuando las circunstancias del trafico o de la vía lo aconsejen.",
         "Solamente el de la derecha."
       ],
-      "imagen": "../img/test_019_p04.jpg"
+      "imagen": "../img/test_019_p04.jpg",
+      "correcta": 1
     },
     {
-      "texto": "¿Cuando debe pasar una motocicleta la primera inspeccion tecnica periodica?",
+      "texto": "¿Cuando debe pasar una motocicleta la primera inspección técnica periódica?",
       "opciones": [
-        "Alos cuatroanosdeantiguedad para cilindradas superiores a125centimetros cubicos.",
-        "A los seis anos de antiguedad.",
-        "A los cuatro anos de antiguedad"
-      ]
+        "A los cuatro años de antigüedad para cilindradas superiores a 125 centímetros cúbicos.",
+        "A los seis años de antigüedad.",
+        "A los cuatro años de antigüedad"
+      ],
+      "correcta": 2
     },
     {
       "texto": "Las distracciones suelen estar relacionadas con...",
       "opciones": [
-        "el estado y el comportamientodel propio conductor.",
-        "factores externos al conductor,unicamente.",
-        "el comportamiento del conductor, unicamente."
-      ]
+        "el estado y el comportamiento del propio conductor.",
+        "factores externos al conductor, únicamente.",
+        "el comportamiento del conductor, únicamente."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Para saber la fecha en que se debe pasar la primera ITv, la antiguedad de un vehiculo empieza a contar a partir de..",
+      "texto": "Para saber la fecha en que se debe pasar la primera ITV, la antigüedad de un vehículo empieza a contar a partir de...",
       "opciones": [
-        "la fecha en que paso la inspeccion defabrica.",
-        "el dia de la compra del vehiculo.",
-        "la fecha dela primera matriculacion."
-      ]
+        "la fecha en que paso la inspección de fábrica.",
+        "el dia de la compra del vehículo.",
+        "la fecha de la primera matriculación."
+      ],
+      "correcta": 2
     },
     {
       "texto": "¿Tiene permitido una motocicleta estacionar en una zona delimitada por marcas viales azules?",
       "opciones": [
         "Sí.",
-        "No,el estacionamiento solo esta permitido a turismos.",
-        "Si,pero solo sila motocicleta es dedos ruedas."
+        "No, el estacionamiento solo está permitido a turismos.",
+        "Sí, pero solo si la motocicleta es de dos ruedas."
       ],
-      "imagen": "../img/test_019_p08.jpg"
+      "imagen": "../img/test_019_p08.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Debido a una averia circula por una autopista a 5o Km/h y dificulta la circulacion. ¿Que debe hacer?",
+      "texto": "Debido a una averia circula por una autopista a 50 Km/h y dificulta la circulación. ¿Que debe hacer?",
       "opciones": [
-        "Inmovilizar siempre el vehiculo en el arcen.",
+        "Inmovilizar siempre el vehículo en el arcén.",
         "Circular por el carril derecho.",
-        "Circular por el arcen y salir por la primera salida."
+        "Circular por el arcén y salir por la primera salida."
       ],
-      "imagen": "../img/test_019_p09.jpg"
+      "imagen": "../img/test_019_p09.jpg",
+      "correcta": 2
     },
     {
-      "texto": "A partir de esta senal esta obligado a llevar encendido, al menos, el alumbrado de..",
+      "texto": "A partir de esta señal está obligado a llevar encendido, al menos, el alumbrado de...",
       "opciones": [
-        "largoalcance.",
-        "cortoalcance.",
-        "posicion."
+        "largo alcance.",
+        "corto alcance.",
+        "posición."
       ],
-      "imagen": "../img/test_019_p10.jpg"
+      "imagen": "../img/test_019_p10.jpg",
+      "correcta": 1
     },
     {
-      "texto": "¿Los efectos de los tratamientos farmacologicos generan las mismas reacciones en todos los consumidores?",
+      "texto": "¿Los efectos de los tratamientos farmacológicos generan las mismas reacciones en todos los consumidores?",
       "opciones": [
-        "Si, puesto que el efecto es el mismo.",
+        "Sí, puesto que el efecto es el mismo.",
         "No, depende del peso y la corpulencia de la persona.",
-        "No, depende de la edad, el habito de consumo y el estado fisico."
+        "No, depende de la edad, el hábito de consumo y el estado físico."
       ],
-      "imagen": "../img/test_019_p11.jpg"
+      "imagen": "../img/test_019_p11.jpg",
+      "correcta": 2
     },
     {
-      "texto": "La linea longitudinal discontinua ancha, ¿ique indica?",
+      "texto": "La línea longitudinal discontinua ancha, ¿que indica?",
       "opciones": [
         "La existencia de un carril especial.",
-        "La proximidad de una linea continua.",
+        "La proximidad de una línea continua.",
         "La existencia de un carril reversible."
       ],
-      "imagen": "../img/test_019_p12.jpg"
+      "imagen": "../img/test_019_p12.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Si circula por un carril de aceleracion, ¿debe ceder el paso a los vehiculos que circulan por la via a laque pretende incorporarse?",
+      "texto": "Si circula por un carril de aceleracion, ¿debe ceder el paso a los vehículos que circulan por la vía a la que pretende incorporarse?",
       "opciones": [
         "No, sime incorporo por la derecha.",
         "si.",
-        "No,porque tengo prioridad."
+        "No, porque tengo prioridad."
       ],
-      "imagen": "../img/test_019_p13.jpg"
+      "imagen": "../img/test_019_p13.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Se considera que un estacionamiento obstaculiza gravemente la circulacion cuando se realiza en...",
+      "texto": "Se considera que un estacionamiento obstaculiza gravemente la circulación cuando se realiza en...",
       "opciones": [
-        "una zona senalizadapara uso exclusivo deminusvalidos.",
+        "una zona señalizada para uso exclusivo de minusválidos.",
         "doble fila.",
-        "mediodelacalzada."
-      ]
-    },
-    {
-      "texto": "Esta senal prohibe...",
-      "opciones": [
-        "el paso a los vehiculos demenos de 4,5metros de ancho, incluida la carga.",
-        "el paso a los vehiculos de mas de 4,5 metros de ancho, incluida la carga.",
-        "el paso atodos losvehiculos cuando sucarga sobresalepor los lados."
+        "mediode lacalzada."
       ],
-      "imagen": "../img/test_019_p15.jpg"
+      "correcta": 1
     },
     {
-      "texto": "En una via con esta senalizacion se encuentra con un rebano, ¿zdebe ceder el paso a los animales?",
+      "texto": "Esta señal prohíbe...",
+      "opciones": [
+        "el paso a los vehículos de menos de 4,5 metros de ancho, incluida la carga.",
+        "el paso a los vehículos de más de 4,5 metros de ancho, incluida la carga.",
+        "el paso a todos los vehículos cuando su carga sobresale por los lados."
+      ],
+      "imagen": "../img/test_019_p15.jpg",
+      "correcta": 1
+    },
+    {
+      "texto": "En una vía con esta señalización se encuentra con un rebaño, ¿debe ceder el paso a los animales?",
       "opciones": [
         "No, los animales en la calzada no tienen prioridad de paso nunca.",
-        "Si, es un paso deanimales domesticos y se debe ceder el paso.",
-        "Solocuandoyaesten cruzando."
+        "Sí, es un paso de animales domesticos y se debe ceder el paso.",
+        "Solo cuando ya estén cruzando."
       ],
-      "imagen": "../img/test_019_p16.jpg"
+      "imagen": "../img/test_019_p16.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Los asientos de un camion tienen cinturones de seguridad, ¿zesta obligado el conductor a utilizarlo?",
+      "texto": "Los asientos de un camión tienen cinturones de seguridad, ¿está obligado el conductor a utilizarlo?",
       "opciones": [
-        "No,en vias fuera depoblado.",
-        "No, en ningun tipo de via.",
-        "Si, en todas las vias."
-      ]
+        "No, en vías fuera de poblado.",
+        "No, en ningún tipo de vía.",
+        "Sí, en todas las vías."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Si circula de noche y la carga sobresale por delante y por detras del vehiculo debera:",
+      "texto": "Si circula de noche y la carga sobresale por de lante y por detrás del vehículo debera:",
       "opciones": [
-        "Colocar la luz solo en la parte trasera,pues en la delantera no es obligatoria.",
+        "Colocar la luz solo en la parte trasera, pues en la de lantera no es obligatoria.",
         "Senalizar la carga con una luz roja en la parte posterior y una luz blanca en la anterior.",
-        "Colocar un trapo rojo a cada lado dela carga."
+        "Colocar un trapo rojo a cada lado de la carga."
       ],
-      "imagen": "../img/test_019_p18.jpg"
+      "imagen": "../img/test_019_p18.jpg",
+      "correcta": 1
     },
     {
-      "texto": "En caso de activarse el sistema avanzado de ayuda a la conduccion\"AEBs\", ¿ide que forma actuara?",
+      "texto": "En caso de activarse el sistema avanzado de ayuda a la conducción\"AEBS\", ¿de que forma actuara?",
       "opciones": [
-        "Actuara tomando el control de la direccion del vehiculo yrealizando una maniobra evasiva.",
-        "Emitira un rapido parpadeo de las luces de frenado cuando se apliquen los frenos de manera potente ante una situacion de emergencia."
+        "Actuara tomando el control de la dirección del vehículo y realizando una maniobra evasiva.",
+        "Emitira un rápido parpadeo de las luces de frenado cuando se apliquen los frenos de manera potente ante una situación de emergencia.",
+        "Alertando al conductor de una posible colisión y, si este no reacciona, frenando automáticamente el vehículo."
       ],
-      "imagen": "../img/test_019_p19.jpg"
+      "imagen": "../img/test_019_p19.jpg",
+      "correcta": 2
     },
     {
       "texto": "Gran parte de los accidentes son debidos principalmente al factor...",
       "opciones": [
         "humano.",
-        "via y entorno.",
-        "vehiculo."
-      ]
+        "vía y entorno.",
+        "vehículo."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En esta via urbana, ¿zesta permitido adelantar por la derecha?",
+      "texto": "En esta vía urbana, ¿está permitido ade lantar por la derecha?",
       "opciones": [
-        "No, se debe adelantar por la izquierda.",
-        "Si, porque la via cuenta con dos carriles delimitados en el mismo sentido de la marcha.",
-        "No, porque se puede entorpecer la marcha de otros vehiculos."
+        "No, se debe ade lantar por la izquierda.",
+        "Sí, porque la vía cuenta con dos carriles delimitados en el mismo sentido de la marcha.",
+        "No, porque se puede entorpecer la marcha de otros vehículos."
       ],
-      "imagen": "../img/test_019_p21.jpg"
+      "imagen": "../img/test_019_p21.jpg",
+      "correcta": 1
     },
     {
       "texto": "Para conducir con hielo en la calzada de una forma preventiva debe...",
       "opciones": [
         "tener especialcuidado duranteel dia.",
-        "disminuirlavelocidad y utilizarmarchas cortas.",
+        "disminuir la velocidad y utilizar marchas cortas.",
         "disminuir la velocidad y utilizar marchas largas."
       ],
-      "imagen": "../img/test_019_p22.jpg"
+      "imagen": "../img/test_019_p22.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Si es necesario avisar a un ciclista con senales acuisticas, ¿icomo deben realizarse?",
+      "texto": "Si es necesario avisar a un ciclista con señales acuisticas, ¿como deben realizarse?",
       "opciones": [
         "Es indiferente.",
         "Cerca del ciclista.",
         "A cierta distancia del ciclista, para evitar que se asuste."
       ],
-      "imagen": "../img/test_019_p23.jpg"
+      "imagen": "../img/test_019_p23.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Respetar la prioridad de paso por parte de los conductores de motocicletas, ¿ipuede evitar accidentes?",
+      "texto": "Respetar la prioridad de paso por parte de los conductores de motocicletas, ¿puede evitar accidentes?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "No, porque estos conductores no dificultan la visibilidad.",
-        "No,porqueocupanpocolugaren la calzada."
-      ]
+        "No, porqueocupanpocolugaren la calzada."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En la via de la fotografia, que carril debe utilizar para circular, ¿como norma general?",
+      "texto": "En la vía de la fotografia, que carril debe utilizar para circular, ¿como norma general?",
       "opciones": [
-        "El carril situado mas a la derecha.",
+        "El carril situado más a la derecha.",
         "Cualquiera de los carriles de mi sentido de la marcha.",
-        "El carril central, siempre que mi velocidad sea igual o superior a la indicada en la senal."
+        "El carril central, siempre que mi velocidad sea igual o superior a la indicada en la señal."
       ],
-      "imagen": "../img/test_019_p25.jpg"
+      "imagen": "../img/test_019_p25.jpg",
+      "correcta": 0
     },
     {
-      "texto": "¿Comoafectael cannabis ala conduccion?",
+      "texto": "¿Cómo afecta el cannabis a la conducción?",
       "opciones": [
-        "Disminuyeeltiempo dereaccion.",
+        "Disminuye el tiempo de reacción.",
         "Disminuye la somnolencia y la concentracion.",
-        "Aumentalasomnolencia."
+        "Aumenta lasomnolencia."
       ],
-      "imagen": "../img/test_019_p26.jpg"
+      "imagen": "../img/test_019_p26.jpg",
+      "correcta": 2
     },
     {
-      "texto": "El calor, ¿zinfluye en el desgaste de los neumaticos?",
+      "texto": "El calor, ¿nfluye en el desgaste de los neumaticos?",
       "opciones": [
-        "Si, aumenta el desgaste.",
-        "Si, reduce el desgaste.",
+        "Sí, aumenta el desgaste.",
+        "Sí, reduce el desgaste.",
         "No."
       ],
-      "imagen": "../img/test_019_p27.jpg"
+      "imagen": "../img/test_019_p27.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Con niebla densa, ¿zque luces antiniebla esta obligado a utilizar un turismo?",
+      "texto": "Con niebla densa, ¿que luces antiniebla está obligado a utilizar un turismo?",
       "opciones": [
-        "Laluz antiniebla trasera solamente.",
-        "La luz antiniebla trasera y la delantera si la tiene instalada.",
-        "La luz antiniebla delantera y la luz de largo alcance."
+        "La luz antiniebla trasera solamente.",
+        "La luz antiniebla trasera y la de lantera si la tiene insta lada.",
+        "La luz antiniebla de lantera y la luz de largo alcance."
       ],
-      "imagen": "../img/test_019_p28.jpg"
+      "imagen": "../img/test_019_p28.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Si la temperatura en el interior del vehiculo es muy alta, ¿zpuede influir en el tiempo de reaccion del conductor?",
+      "texto": "Si la temperatura en el interior del vehículo es muy alta, ¿puede influir en el tiempo de reacción del conductor?",
       "opciones": [
         "No, no influye.",
-        "Si, aumentandolo.",
-        "Si, disminuyendolo."
-      ]
+        "Sí, aumentandolo.",
+        "Sí, disminuyendolo."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Si utiliza un casco sin pantalla o visera, ¿zes aconsejable utilizar gafas de seguridad?",
+      "texto": "Si utiliza un casco sin pantalla o visera, ¿es aconsejable utilizar gafas de seguridad?",
       "opciones": [
-        "No,no es necesario.",
-        "Si,para proteger los ojos.",
-        "No,porqueesobligatorioquetodos loscascos llevenpantalla."
+        "No, no es necesario.",
+        "Sí, para proteger los ojos.",
+        "No, porqueesobligatorioquetodos los cascos lleven pantalla."
       ],
-      "imagen": "../img/test_019_p30.jpg"
+      "imagen": "../img/test_019_p30.jpg",
+      "correcta": 1
     }
   ]
 }

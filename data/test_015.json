@@ -1,186 +1,207 @@
 {
   "test_id": 15,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "¿Cual es la finalidad de la camara de marcha atras instalada en el vehiculo?",
+      "texto": "¿Cual es la finalidad de la cámara de marcha atrás insta lada en el vehículo?",
       "opciones": [
-        "Realizar la maniobrade estacionamiento deforma rapida ysegura.",
-        "Tener una vista clara y en tiempo real de la zona situada detras del vehiculo.",
-        "Poder circularmas de15metrospara realizar un estacionamiento."
-      ]
-    },
-    {
-      "texto": "La senal indica que...",
-      "opciones": [
-        "nopuededesplazarse lateralmenteni a la derecha niala izquierda.",
-        "debe circular en el sentido indicado por la flecha, ya que es una calzada de sentido unico.",
-        "estaprohibidoelcambiodedireccion."
+        "Realizar la maniobra de estacionamiento de forma rápida y segura.",
+        "Tener una vista clara y en tiempo real de la zona situada detrás del vehículo.",
+        "Poder circular más de 15 metros para realizar un estacionamiento."
       ],
-      "imagen": "../img/test_015_p02.jpg"
+      "correcta": 1
     },
     {
-      "texto": "¿Se puede circular marcha atras en una autopista?",
+      "texto": "La señal indica que...",
+      "opciones": [
+        "no puede desplazarse lateralmente ni a la derecha ni a la izquierda.",
+        "debe circular en el sentido indicado por la flecha, ya que es una calzada de sentido único.",
+        "estaprohibidoelcambio dedireccion."
+      ],
+      "imagen": "../img/test_015_p02.jpg",
+      "correcta": 1
+    },
+    {
+      "texto": "¿Se puede circular marcha atrás en una autopista?",
       "opciones": [
         "No.",
-        "Si,para salir de la autopista",
-        "Si, cuando sea necesario pararealizar alguna maniobra."
-      ]
+        "Sí, para salir de la autopista",
+        "Sí, cuando sea necesario para realizar alguna maniobra."
+      ],
+      "correcta": 0
     },
     {
       "texto": "Los airbags son sistemas muy seguros pero...",
       "opciones": [
-        "son muypeligrosos si el conductor lleva gafas.",
+        "son muy peligrosos si el conductor lleva gafas.",
         "son incompatibles con los cinturones de seguridad.",
-        "hayquetomaralgunas precauciones para evitar efectos adversos."
+        "hay que tomar algunas precauciones para evitar efectos adversos."
       ],
-      "imagen": "../img/test_015_p04.jpg"
+      "imagen": "../img/test_015_p04.jpg",
+      "correcta": 2
     },
     {
       "texto": "Las distracciones al volante...",
       "opciones": [
-        "causanmuypocosaccidentes.",
-        "nocausanaccidentes.",
+        "causan muy pocos accidentes.",
+        "no causan accidentes.",
         "causan una gran cantidad de accidentes."
       ],
-      "imagen": "../img/test_015_p05.jpg"
+      "imagen": "../img/test_015_p05.jpg",
+      "correcta": 2
     },
     {
-      "texto": "El automovil es un vehiculo de motor que sirve normalmente...",
+      "texto": "El automóvil es un vehículo de motor que sirve normalmente...",
       "opciones": [
-        "para la realizacion de trabajos agricolas.",
-        "para transportar personas o cosas o ambas a la vez, o para la traccion de otros vehiculos con ese fin.",
-        "pararealizarobrasodeterminadosservicios."
-      ]
+        "para la realizacion de trabajos agrícolas.",
+        "para transportar personas o cosas o ambas a la vez, o para la tracción de otros vehículos con ese fin.",
+        "para realizarobrasodeterminadosservicios."
+      ],
+      "correcta": 1
     },
     {
       "texto": "En las motocicletas, la postura del conductor ha de ser...",
       "opciones": [
-        "lomas aerodinamica posible,encorvando el cuerpo cuanto masmejor.",
-        "suelta y no forzada, sin encorvar el cuerpo mas de lo necesario.",
+        "lo más aerodinámica posible, encorvando el cuerpo cuanto más mejor.",
+        "suelta y no forzada, sin encorvar el cuerpo más de lo necesario.",
         "un poco forzada, para evitar relajamientos."
-      ]
-    },
-    {
-      "texto": "El vehiculo que sale de una via no pavimentada, ¿ia que vehiculos debe ceder el paso?",
-      "opciones": [
-        "Unicamente a los que se aproximen por la izquierda.",
-        "Atodoslosquecirculenporla viapavimentada.",
-        "Unicamentea los vehiculos de motorque se aproximen por la derecha."
       ],
-      "imagen": "../img/test_015_p08.jpg"
+      "correcta": 1
     },
     {
-      "texto": "¿Cual es la tasa maxima de alcohol en sangre permitida a los conductores con caracter general?",
+      "texto": "El vehículo que sale de una vía no pavimentada, ¿a que vehículos debe ceder el paso?",
+      "opciones": [
+        "Únicamente a los que se aproximen por la izquierda.",
+        "A todos los que circulen por la vía pavimentada.",
+        "Únicamente a los vehículos de motor que se aproximen por la derecha."
+      ],
+      "imagen": "../img/test_015_p08.jpg",
+      "correcta": 1
+    },
+    {
+      "texto": "¿Cual es la tasa máxima de alcohol en sangre permitida a los conductores con caracter general?",
       "opciones": [
         "0,5 gramos por litro.",
         "0,25 miligramos por litro.",
         "0,3 gramos por litro."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Hay muchos vehiculos circulando y preve que va a quedar detenido en el paso para peatones. Debe entrar en el paso?",
+      "texto": "¿Hay muchos vehículos circulando y prevé que va a quedar detenido en el paso para peatones. Debe entrar en el paso?",
       "opciones": [
         "Sí.",
-        "Si, cuando el semaforo estaverde.",
-        "No,porquecortoel paso a lospeatones."
+        "Sí, cuando el semáforo está verde.",
+        "No, porquecortoel paso a los peatones."
       ],
-      "imagen": "../img/test_015_p10.jpg"
+      "imagen": "../img/test_015_p10.jpg",
+      "correcta": 2
     },
     {
-      "texto": "¿Esta permitido que una persona en silla de ruedas se desplace por el arcen?",
+      "texto": "¿Esta permitido que una persona en silla de ruedas se desplace por el arcén?",
       "opciones": [
-        "Solo en vias urbanas.",
+        "Solo en vías urbanas.",
         "No.",
-        "Si, siemprequeadoptelas debidasprecauciones."
+        "Sí, siempre queadoptelas debidas precauciones."
       ],
-      "imagen": "../img/test_015_p11.jpg"
+      "imagen": "../img/test_015_p11.jpg",
+      "correcta": 2
     },
     {
       "texto": "Si sopla un fuerte viento lateral de la izquierda, los conductores de turismos deberan...",
       "opciones": [
-        "sujetar el volante, con firmeza pero sin rigidez,hacia la izquierda.",
-        "circular por el arcen lentamente.",
-        "sujetar el volante, con firmeza pero sin rigidez,hacia la derecha."
+        "sujetar el volante, con firmeza pero sin rigidez, hacia la izquierda.",
+        "circular por el arcén lentamente.",
+        "sujetar el volante, con firmeza pero sin rigidez, hacia la derecha."
       ],
-      "imagen": "../img/test_015_p12.jpg"
+      "imagen": "../img/test_015_p12.jpg",
+      "correcta": 0
     },
     {
       "texto": "En un carril reversible...",
       "opciones": [
-        "debe circular como maximo a 100 km/h y como minimo a 60 km/h.",
-        "no debe cambiarnuncade carril salvopara adelantar.",
-        "debe llevar encendida la luz de cruce,siempre"
+        "debe circular como máximo a 100 km/h y como mínimo a 60 km/h.",
+        "no debe cambiar nunca de carril salvo para ade lantar.",
+        "debe llevar encendida la luz de cruce, siempre"
       ],
-      "imagen": "../img/test_015_p13.jpg"
+      "imagen": "../img/test_015_p13.jpg",
+      "correcta": 2
     },
     {
-      "texto": "¿Que relacion existe entre la velocidad y el campo de vision del conductor?",
+      "texto": "¿Que relacion existe entre la velocidad y el campo de visión del conductor?",
       "opciones": [
-        "A mayor velocidad,mayor campo visual.",
+        "A mayor velocidad, mayor campo visual.",
         "A mayor velocidad, menor campo visual.",
-        "Amenor velocidad, menor campo visual."
+        "A menor velocidad, menor campo visual."
       ],
-      "imagen": "../img/test_015_p14.jpg"
+      "imagen": "../img/test_015_p14.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Cuando su vehiculo quede inmovilizado de noche en el arcen de esta via, ¿ique luces debe dejar encendidas?",
+      "texto": "Cuando su vehículo quede inmovilizado de noche en el arcén de esta vía, ¿que luces debe dejar encendidas?",
       "opciones": [
         "Las luces de estacionamiento.",
         "Las luces de corto alcance.",
-        "Las luces de posicion."
+        "Las luces de posición."
       ],
-      "imagen": "../img/test_015_p15.jpg"
+      "imagen": "../img/test_015_p15.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Segun la estadistica, la mayoria de los accidentes de trafico tienen lugar en...",
+      "texto": "Segun la estadística, la mayoría de los accidentes de trafico tienen lugar en...",
       "opciones": [
         "periodos de trabajo o alta ocupacion laboral.",
-        "losmeses deprimavera, por las alergias.",
-        "periodosdevacaciones."
-      ]
+        "los meses de primavera, por las alergias.",
+        "periodos de vacaciones."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En esta via un ciclomotor tiene que circular por...",
+      "texto": "En esta vía un ciclomotor tiene que circular por...",
       "opciones": [
-        "la calzada, lomas cerca posible del borde derecho.",
-        "el arcen.",
+        "la calzada, lo más cerca posible del borde derecho.",
+        "el arcén.",
         "el carril derecho."
       ],
-      "imagen": "../img/test_015_p17.jpg"
+      "imagen": "../img/test_015_p17.jpg",
+      "correcta": 1
     },
     {
-      "texto": "La edad avanzada, ¿ipuede ser un factor que favorezca la distraccion al volante?",
+      "texto": "La edad avanzada, ¿puede ser un factor que favorezca la distracción al volante?",
       "opciones": [
         "No.",
-        "Si, siempre.",
-        "Si, si no se toman las debidas precauciones."
-      ]
+        "Sí, siempre.",
+        "Sí, si no se toman las debidas precauciones."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "La mayoria de los atropellos a ninos se produce...",
+      "texto": "La mayoría de los atropellos a niños se produce...",
       "opciones": [
         "durante los fines de semana.",
-        "al termino de la jornada escolar.",
-        "al inicio de la jornada escolar. maxima permitida de alcohol? O a) 0,25 miligramos por litro de aire espirado. O b) 0,15 miligramos por litro de aire espirado. O c) 0,30 miligramos por litro de aire espirado."
+        "al término de la jornada escolar.",
+        "al inicio de la jornada escolar."
       ],
-      "imagen": "../img/test_015_p19.jpg"
+      "imagen": "../img/test_015_p19.jpg",
+      "correcta": 1
     },
     {
-      "texto": "¿Que tipo de molestias sueleprovocar el latigazo cervical?",
+      "texto": "¿Que tipo de molestias suele provocar el latigazo cervical?",
       "opciones": [
-        "Dolores musculares y de cabeza, disminucion de la movilidad del cuello, vertigo o mareos, entre otras.",
-        "Molestias enlagarganta.",
+        "Dolores musculares y de cabeza, disminución de la movilidad del cuello, vértigo o mareos, entre otras.",
+        "Molestias en la garganta.",
         "Dolores en las extremidades."
-      ]
+      ],
+      "correcta": 0
     },
     {
       "texto": "¿Es obligatorio prestar auxilio a las victimas de un accidente?",
       "opciones": [
-        "No,porque el auxilio le corresponde a los servicios sanitarios.",
-        "Si,pero solopara los conductores implicados.",
-        "Si,excepto cuando la ayuda esteorganizada."
-      ]
+        "No, porque el auxilio le corresponde a los servicios sanitarios.",
+        "Sí, pero solo para los conductores implicados.",
+        "Sí, excepto cuando la ayuda esté organizada."
+      ],
+      "correcta": 2
     },
     {
       "texto": "Para reducir la probabilidad de sufrir un accidente de trafico es recomendable...",
@@ -188,68 +209,76 @@
         "conducir durante la noche.",
         "evitar los factores de riesgo que dependen del conductor.",
         "conocer los factores de riesgo."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Los vehiculos para personas de movilidad reducida, ¿zestan obligados a circular por el arcén?",
+      "texto": "Los vehículos para personas de movilidad reducida, ¿están obligados a circular por el arcén?",
       "opciones": [
-        "No,pero pueden circular por el arcen cuando lo crean conveniente.",
-        "Si, en el casode que noexista via o parte dela misma queles este especialmente destinada.",
-        "No, dependera de las indicaciones de los agentes y del tipo de via."
+        "No, pero pueden circular por el arcén cuando lo crean conveniente.",
+        "Sí, en el caso de que no exista vía o parte de la misma que les este especialmente destinada.",
+        "No, dependera de las indicaciones de los agentes y del tipo de vía."
       ],
-      "imagen": "../img/test_015_p24.jpg"
+      "imagen": "../img/test_015_p24.jpg",
+      "correcta": 1
     },
     {
       "texto": "El alcohol, tomado junto con la comida, pasa a la sangre...",
       "opciones": [
-        "mas rapidamente.",
-        "mas lentamente.",
-        "con lamismarapidezquesincomida."
-      ]
-    },
-    {
-      "texto": "¿Es correcto depositar objetos en la via mientras se realizan operaciones de carga y descarga ?",
-      "opciones": [
-        "No,ya que no se pueden depositarmercancias en la via.",
-        "Si, si se realiza por el lado mas proximo al borde de la calzada.",
-        "Si, siemprequeno causemolestias."
+        "más rápidamente.",
+        "más lentamente.",
+        "con la misma rapidez que sin comida."
       ],
-      "imagen": "../img/test_015_p26.jpg"
+      "correcta": 1
     },
     {
-      "texto": "En esta situacion, ¿cual es la distancia de seguridad entre vehiculos?",
+      "texto": "¿Es correcto depositar objetos en la vía mientras se realizan operaciones de carga y descarga?",
       "opciones": [
-        "60metros.",
-        "Aquella que mepermita detenerme, sin colisionar con el.",
+        "No, ya que no se pueden depositar mercancías en la vía.",
+        "Sí, si se realiza por el lado más próximo al borde de la calzada.",
+        "Sí, siempre que no cause molestias."
+      ],
+      "imagen": "../img/test_015_p26.jpg",
+      "correcta": 0
+    },
+    {
+      "texto": "En esta situación, ¿cual es la distancia de seguridad entre vehículos?",
+      "opciones": [
+        "60 metros.",
+        "Aquella que me permita detenerme, sin colisionar con el.",
         "90 metros."
       ],
-      "imagen": "../img/test_015_p27.jpg"
+      "imagen": "../img/test_015_p27.jpg",
+      "correcta": 1
     },
     {
       "texto": "El mal uso de los medicamentos puede ser causa de...",
       "opciones": [
-        "mayorriesgodeaccidente",
-        "estados defuerte somnolencia.",
+        "mayor riesgo de accidente.",
+        "estados de fuerte somnolencia.",
         "un incremento de las alergias."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Qué indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
         "Que el itinerario que sigue el ramal de la derecha tiene prioridad.",
         "Que el itinerario que sigue el ramal de la izquierda tiene prioridad.",
         "Que el itinerario que sigue de frente tiene prioridad."
       ],
-      "imagen": "../img/test_015_p29.jpg"
+      "imagen": "../img/test_015_p29.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Modificar la senalizacion de la via...",
+      "texto": "Modificar la señalización de la vía...",
       "opciones": [
-        "estaprohibido,salvoporcausa justificada.",
-        "no esta prohibido, pero no es recomendable.",
-        "esta permitido siempre que la modificacion ayude a aclarar el sentido de la senalizacion."
+        "estaprohibido, salvoporcausa justificada.",
+        "no está prohibido, pero no es recomendable.",
+        "está permitido siempre que la modificacion ayude a aclarar el sentido de la señalización."
       ],
-      "imagen": "../img/test_015_p30.jpg"
+      "imagen": "../img/test_015_p30.jpg",
+      "correcta": 0
     }
   ]
 }

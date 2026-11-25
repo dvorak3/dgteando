@@ -1,50 +1,55 @@
 {
   "test_id": 14,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Esta senal, ¿ique indica?",
+      "texto": "Esta señal, ¿que indica?",
       "opciones": [
-        "La velocidad maxima aconsejada.",
-        "La velocidad maxima permitida.",
-        "La velocidad minimaaconsejada."
+        "La velocidad máxima aconsejada.",
+        "La velocidad máxima permitida.",
+        "La velocidad mínima aconsejada."
       ],
-      "imagen": "../img/test_014_p01.jpg"
+      "imagen": "../img/test_014_p01.jpg",
+      "correcta": 0
     },
     {
       "texto": "El intermitente derecho se utilizara para indicar...",
       "opciones": [
-        "cambio del sentido dela marcha.",
-        "cambio de direccion a la izquierda.",
-        "el desplazamientolaterala laderecha."
+        "cambio del sentido de la marcha.",
+        "cambio de dirección a la izquierda.",
+        "el desplazamiento lateral a la derecha."
       ],
-      "imagen": "../img/test_014_p02.jpg"
+      "imagen": "../img/test_014_p02.jpg",
+      "correcta": 2
     },
     {
-      "texto": "¿Es eficaz el airbag en el caso de que los ocupantes del vehiculo no utilicen el cinturon de seguridad?",
+      "texto": "¿Es eficaz el airbag en el caso de que los ocupantes del vehículo no utilicen el cinturón de seguridad?",
       "opciones": [
-        "No,ypuedeprovocar graves lesiones.",
-        "Si,pero solo para el conductor.",
-        "Si."
+        "No, ypuedeprovocar graves lesiones.",
+        "Sí, pero solo para el conductor.",
+        "Sí."
       ],
-      "imagen": "../img/test_014_p03.jpg"
+      "imagen": "../img/test_014_p03.jpg",
+      "correcta": 0
     },
     {
-      "texto": "El conductor, al circular marcha atras para estacionar, ¿zdebe llevar puesto el cinturon de seguridad?",
+      "texto": "El conductor, al circular marcha atrás para estacionar, ¿debe llevar puesto el cinturón de seguridad?",
       "opciones": [
         "No.",
-        "Si, cuando la velocidad sea superior a20 km/h.",
-        "Si, solo estan exentos los taxistas envia urbana."
-      ]
+        "Sí, cuando la velocidad sea superior a 20 km/h.",
+        "Sí, solo están exentos los taxistas en vía urbana."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "La senal, ¿zque indica?",
+      "texto": "La señal, ¿que indica?",
       "opciones": [
-        "Que a partir de la senal la circulacion es de dos sentidos.",
+        "Que a partir de la señal la circulación es de dos sentidos.",
         "Que la calzada va a quedar reducida a un solo carril.",
-        "Que la calzada se estrecha por el lado deladerecha. O a) No existe ningun sistema que simule un plano centil del vehiculo. O b) De un satelite. O c) De las camaras instaladas en la periferia del vehiculo."
+        "Que la calzada se estrecha por el lado de la derecha."
       ],
-      "imagen": "../img/test_014_p05.jpg"
+      "imagen": "../img/test_014_p05.jpg",
+      "correcta": 2
     },
     {
       "texto": "¿Que indican estas marcas viales?",
@@ -53,202 +58,226 @@
         "Zona de estacionamiento de duracion limitada.",
         "Zona de estacionamiento."
       ],
-      "imagen": "../img/test_014_p07.jpg"
+      "imagen": "../img/test_014_p07.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Esta permitido estacionar en doble fila?",
       "opciones": [
-        "Si, cuando no hay espacio libre cerca.",
-        "No, en ningun caso.",
-        "Si, cuando el conductor no abandone el vehiculo."
-      ]
+        "Sí, cuando no hay espacio libre cerca.",
+        "No, en ningún caso.",
+        "Sí, cuando el conductor no abandone el vehículo."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Es conveniente circular en paralelo junto a un vehiculo de dos ruedas?",
+      "texto": "¿Es conveniente circular en paralelo junto a un vehículo de dos ruedas?",
       "opciones": [
-        "Si.",
-        "No, salvo en vias urbanas oconmucho trafico.",
+        "Sí.",
+        "No, salvo en vías urbanas o con mucho trafico.",
         "No."
-      ]
-    },
-    {
-      "texto": "Los conductores de ciclomotores, ¿zestan obligados a llevar casco de proteccion por vias urbanas?",
-      "opciones": [
-        "Si, es obligatorio.",
-        "No, solo es obligatorio cuando circulen por vias interurbanas.",
-        "No, los conductores de ciclomotores no estan obligados a llevar casco."
-      ]
-    },
-    {
-      "texto": "¿Que puede hacer para evitar los peligros que causa el uso del telefono movil durante la conduccion?",
-      "opciones": [
-        "Esperaradetenerse en un semaforooenunpasodepeatonespara usarlo.",
-        "Detener el vehiculo en un lugar seguro para poder usar el telefono.",
-        "Colgarlasllamadascuandosuenen."
       ],
-      "imagen": "../img/test_014_p11.jpg"
+      "correcta": 2
     },
     {
-      "texto": "Un conjunto de turismo con remolque ligero, que mide menos de 7 metros, ¿ipor donde debe circular?",
+      "texto": "Los conductores de ciclomotores, ¿están obligados a llevar casco de protección por vías urbanas?",
       "opciones": [
-        "Por cualquiera de los dos carriles de la izquierda, por ser esta la velocidad maxima a la que puede circular.",
+        "Sí, es obligatorio.",
+        "No, solo es obligatorio cuando circulen por vías interurbanas.",
+        "No, los conductores de ciclomotores no están obligados a llevar casco."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "¿Que puede hacer para evitar los peligros que causa el uso del telefono móvil durante la conducción?",
+      "opciones": [
+        "Esperar a detenerse en un semáforo o en un paso de peatones para usarlo.",
+        "Detener el vehículo en un lugar seguro para poder usar el telefono.",
+        "Colgar las llamadas cuando suenen."
+      ],
+      "imagen": "../img/test_014_p11.jpg",
+      "correcta": 1
+    },
+    {
+      "texto": "Un conjunto de turismo con remolque ligero, que mide menos de 7 metros, ¿por donde debe circular?",
+      "opciones": [
+        "Por cualquiera de los dos carriles de la izquierda, por ser esta la velocidad máxima a la que puede circular.",
         "Por el carril de la derecha, aunque puede circular por cualquiera de los tres.",
-        "Por el carril de la derecha, por ser este el unico permitido para remolques."
+        "Por el carril de la derecha, por ser este el único permitido para remolques."
       ],
-      "imagen": "../img/test_014_p12.jpg"
+      "imagen": "../img/test_014_p12.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Durmiendo un poco, ¿ise consigue eliminar mas rapidamente el alcohol?",
+      "texto": "Durmiendo un poco, ¿se consigue eliminar más rápidamente el alcohol?",
       "opciones": [
         "No.",
-        "Si, si se duerme un par de horas.",
-        "Si, cuando se duerme bien."
-      ]
+        "Sí, si se duerme un par de horas.",
+        "Sí, cuando se duerme bien."
+      ],
+      "correcta": 0
     },
     {
       "texto": "Este panel debera colocarse...",
       "opciones": [
-        "solamente en la partetrasera de los vehiculos destinados exclusivamente al transporte de mercancias.",
-        "en la parte trasera de la carga que sobresalga de cualquier vehiculo, excepto en los de anchura inferior a 1 metro.",
-        "en la partedelantera y trasera en los vehiculosdestinados exclusivamente al transporte demercancias."
+        "solamente en la parte trasera de los vehículos destinados exclusivamente al transporte de mercancías.",
+        "en la parte trasera de la carga que sobresalga de cualquier vehículo, excepto en los de anchura inferior a 1 metro.",
+        "en la partede lantera y trasera en los vehículos destinados exclusivamente al transporte de mercancías."
       ],
-      "imagen": "../img/test_014_p14.jpg"
+      "imagen": "../img/test_014_p14.jpg",
+      "correcta": 1
     },
     {
       "texto": "El consumo de combustible es menor si se circula con marchas...",
       "opciones": [
-        "largas y el motormuy revolucionado.",
-        "cortasyelmotormuyrevolucionado.",
+        "largas y el motor muy revolucionado.",
+        "cortasyelmotor muyrevolucionado.",
         "largas y el motor poco revolucionado."
       ],
-      "imagen": "../img/test_014_p15.jpg"
+      "imagen": "../img/test_014_p15.jpg",
+      "correcta": 2
     },
     {
-      "texto": "En una zona de obras un operario le indica que tiene que detener su vehiculo, ¿iesta obligado a obedecerle?",
+      "texto": "En una zona de obras un operario le indica que tiene que detener su vehículo, ¿está obligado a obedecerle?",
       "opciones": [
-        "No, solo los agentes de circulacion estan autorizados a regular la circulacion.",
-        "No, el personal de obras en la via solo puede advertir la necesidad de extremar la atencion.",
-        "Si, en ausencia de agentes de circulacion, el personal de obras en la via esta autorizado a regular la circulacion."
+        "No, solo los agentes de circulación están autorizados a regular la circulación.",
+        "No, el personal de obras en la vía solo puede advertir la necesidad de extremar la atención.",
+        "Sí, en ausencia de agentes de circulación, el personal de obras en la vía esta autorizado a regular la circulación."
       ],
-      "imagen": "../img/test_014_p16.jpg"
+      "imagen": "../img/test_014_p16.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Conducir durante mucho tiempo a una velocidad elevada..",
+      "texto": "Conducir durante mucho tiempo a una velocidad elevada...",
       "opciones": [
-        "acelera la aparicion de la fatiga yaumenta los comportamientos agresivos.",
-        "disminuye la aparicion dela fatiga pero aumenta los comportamientos agresivos.",
+        "acelera la aparicion de la fatiga y aumenta los comportamientos agresivos.",
+        "disminuye la aparicion de la fatiga pero aumenta los comportamientos agresivos.",
         "acelera la aparicion de la fatiga y, por tanto, disminuye la agresividad."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Puede utilizar el telefono movil en alguin momento de la conduccion?",
+      "texto": "¿Puede utilizar el telefono móvil en algún momento de la conducción?",
       "opciones": [
-        "Si, pero solo en vias urbanas a poca velocidad.",
-        "No, cuando no dispone de un dispositivo\"manos libres\".",
-        "Si,porejemplodetenidoenunsemaforo."
-      ]
+        "Sí, pero solo en vías urbanas a poca velocidad.",
+        "No, cuando no dispone de un dispositivo \"manos libres\".",
+        "Sí, porejemplodetenidoenunsemaforo."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En un tramo de via con un carril de aceleracion, ¿ise considera adelantamiento que un vehiculo avance mas rapidamente que otro que lo hace por el carril normal?",
+      "texto": "En un tramo de vía con un carril de aceleracion, ¿se considera ade lantamiento que un vehículo avance más rápidamente que otro que lo hace por el carril normal?",
       "opciones": [
         "No.",
-        "si, como otro adelantamiento cualquiera.",
-        "Si, porque se trata de una via interurbana."
+        "si, como otro ade lantamiento cualquiera.",
+        "Sí, porque se trata de una vía interurbana."
       ],
-      "imagen": "../img/test_014_p19.jpg"
+      "imagen": "../img/test_014_p19.jpg",
+      "correcta": 0
     },
     {
-      "texto": "¿2o.En un cruce no hay senales de preferencia.zDebe ceder elpaso a un tranvia?",
+      "texto": "En un cruce no hay señales de preferencia.zDebe ceder el paso a un tranvía?",
       "opciones": [
         "No.",
-        "Si."
+        "Sí."
       ],
-      "imagen": "../img/test_014_p20.jpg"
+      "imagen": "../img/test_014_p20.jpg",
+      "correcta": 1
     },
     {
-      "texto": "¿A que velocidad maxima puede circular un turismo por esta carretera convencional?",
+      "texto": "¿A que velocidad máxima puede circular un turismo por esta carretera convencional?",
       "opciones": [
         "A 90 km/h.",
         "A 100 km/h.",
         "A120 km/h."
       ],
-      "imagen": "../img/test_014_p21.jpg"
+      "imagen": "../img/test_014_p21.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Un camion de mas de 3.500 kilogramos de masa maxima autorizada destinado al servicio publico debe Ilevar siempre...",
+      "texto": "Un camión de más de 3.500 kilogramos de masa máxima autorizada destinado al servicio público debe llevar siempre...",
       "opciones": [
-        "un extintor de incendios y al menos un calzo adecuado para el vehiculo.",
+        "un extintor de incendios y al menos un calzo adecuado para el vehículo.",
         "un extintor de incendios.",
-        "un calzo adecuado para el vehiculo."
-      ]
+        "un calzo adecuado para el vehículo."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Para evitar la contaminacion acustica, es aconsejable que los conductores de motocicletas...",
+      "texto": "Para evitar la contaminación acústica, es aconsejable que los conductores de motocicletas...",
       "opciones": [
-        "cuidenque el tubode escapey el silenciador esten siempre en buen estado.",
+        "cuiden que el tubo de escape y el silenciador estén siempre en buen estado.",
         "circulen con el escape libre.",
         "cuiden solamente el silenciador, el tubo de escape no influye en los ruidos."
       ],
-      "imagen": "../img/test_014_p23.jpg"
+      "imagen": "../img/test_014_p23.jpg",
+      "correcta": 0
     },
     {
       "texto": "La mayor parte de los accidentes se producen en...",
       "opciones": [
         "las rectas.",
         "las curvas.",
-        "viasurbanas,especialmentelos accidentesmortales."
-      ]
-    },
-    {
-      "texto": "Circulando con lluvia muy intensa, ¿ise pueden utilizar las luces antiniebla delanteras y traseras?",
-      "opciones": [
-        "No,porquesolo sepueden utilizarcon niebla.",
-        "Si, y ademas es obligatorio utilizar la luz antiniebla trasera.",
-        "Si, pero solo la luz antiniebla delantera."
-      ]
-    },
-    {
-      "texto": "En esta situacion, ¿ique debe hacer?",
-      "opciones": [
-        "Detenerse obedeciendo la senal del agente.",
-        "Pasarmoderando la velocidad.",
-        "Solo detenerse si ademas existe una senal de stop."
+        "viasurbanas, especialmentelos accidentes mortales."
       ],
-      "imagen": "../img/test_014_p26.jpg"
+      "correcta": 0
     },
     {
-      "texto": "El consumo de drogas de abuso, ¿ztiene relacion con los accidentes mas graves?",
+      "texto": "Circulando con lluvia muy intensa, ¿se pueden utilizar las luces antiniebla de lanteras y traseras?",
       "opciones": [
-        "Si,granparteestacausadoporesteconsumo.",
+        "No, porquesolo se pueden utilizar con niebla.",
+        "Sí, y además es obligatorio utilizar la luz antiniebla trasera.",
+        "Sí, pero solo la luz antiniebla de lantera."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "En esta situación, ¿que debe hacer?",
+      "opciones": [
+        "Detenerse obedeciendo la señal del agente.",
+        "Pasar moderando la velocidad.",
+        "Solo detenerse si además existe una señal de stop."
+      ],
+      "imagen": "../img/test_014_p26.jpg",
+      "correcta": 0
+    },
+    {
+      "texto": "El consumo de drogas de abuso, ¿tiene relacion con los accidentes más graves?",
+      "opciones": [
+        "Sí, granparteestacausadoporesteconsumo.",
         "Solo cuando se mezclan con alcohol.",
-        "No, se relaciona generalmente con los accidentes de menorgravedad."
-      ]
+        "No, se relaciona generalmente con los accidentes de menor gravedad."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Estas senales significan...",
+      "texto": "Estas señales significan...",
       "opciones": [
-        "presenalizacionen autopista oautovia hacia cualquiercarretera ydireccionpropia.",
-        "salida inmediata hacia carretera convencional y direccion propia en autopista o autovia.",
-        "presenalizacion en carretera convencional hacia autopista o autovia."
+        "preseñalización en autopista o autovía hacia cualquier carretera y dirección propia.",
+        "salida inmediata hacia carretera convencional y dirección propia en autopista o autovía.",
+        "presenalizacion en carretera convencional hacia autopista o autovía."
       ],
-      "imagen": "../img/test_014_p28.jpg"
+      "imagen": "../img/test_014_p28.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Esta senal prohibe...",
+      "texto": "Esta señal prohíbe...",
       "opciones": [
-        "el pasoa vehiculos que transporten mas de 5oo litros deproductos capaces de contaminar el agua.",
-        "el paso a vehiculosque transporten mas de10oo litros deproductos capaces de contaminar el agua.",
-        "elpasoavehiculos cisternas."
+        "el paso a vehículos que transporten más de 500 litros de productos capaces de contaminar el agua.",
+        "el paso a vehículos que transporten más de 1.000 litros de productos capaces de contaminar el agua.",
+        "el paso avehiculos cisternas."
       ],
-      "imagen": "../img/test_014_p29.jpg"
+      "imagen": "../img/test_014_p29.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Esta permitido colocar adhesivos en el parabrisas de un turismo?",
       "opciones": [
-        "Si, mientras sea posible la visibilidad diafana del conductor sobre toda la via.",
-        "No, esta prohibido.",
+        "Sí, mientras sea posible la visibilidad diáfana del conductor sobre toda la vía.",
+        "No, está prohibido.",
         "No, si no han sido previamente homologados."
-      ]
+      ],
+      "correcta": 0
     }
   ]
 }

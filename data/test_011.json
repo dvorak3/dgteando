@@ -1,255 +1,284 @@
 {
   "test_id": 11,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "El agente, ¿za quien ordena detenerse?",
+      "texto": "El agente, ¿a quien ordena detenerse?",
       "opciones": [
         "A los que se aproximen desde los lados.",
-        "A los usuarios que se aproximen tanto por delante como por detras.",
-        "Atodoslosusuariosdelavia"
+        "A los usuarios que se aproximen tanto por de lante como por detrás.",
+        "A todos los usuarios de la vía."
       ],
-      "imagen": "../img/test_011_p01.jpg"
+      "imagen": "../img/test_011_p01.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Una motocicleta que alcanza una velocidad superior a 1oo kilometros por hora, debe llevar obligatoriamente...",
+      "texto": "Una motocicleta que alcanza una velocidad superior a 100 kilómetros por hora, debe llevar obligatoriamente...",
       "opciones": [
         "un espejo retrovisor en el lado derecho, solamente.",
         "un espejo retrovisor en el lado izquierdo, solamente.",
-        "dos espejos retrovisores,uno a cada lado."
-      ]
+        "dos espejos retrovisores, uno a cada lado."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Circula por una autovia y sufre una averia que le obliga a llevar una velocidad anormalmente reducida, ¿ique debe hacer?",
+      "texto": "Circula por una autovía y sufre una averia que le obliga a llevar una velocidad anormalmente reducida, ¿que debe hacer?",
       "opciones": [
         "Continuar la marcha hasta llegar al destino encendiendo el alumbrado de cruce.",
-        "No detenerse en ningun caso.",
-        "Circular hasta la primera salida por la quepueda abandonar la via."
-      ]
+        "No detenerse en ningún caso.",
+        "Circular hasta la primera salida por la que pueda abandonar la vía."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "La mayoria de los accidentes de circulacion...",
+      "texto": "La mayoría de los accidentes de circulación...",
       "opciones": [
         "son inevitables.",
         "se pueden evitar.",
-        "casi nunca sepueden evitar."
-      ]
+        "casi nunca se pueden evitar."
+      ],
+      "correcta": 1
     },
     {
       "texto": "Debe cambiar el alumbrado de largo alcance por el de corto alcance...",
       "opciones": [
-        "cuando aprecie quepuede deslumbrara cualquierusuario de la via.",
-        "cuando circule por una via interurbana.",
-        "cuando pueda deslumbrar solo a los vehiculos que circulen en sentido contrario."
-      ]
-    },
-    {
-      "texto": "¿Es aconsejable quitar el casco de proteccion al pasajero de una motocicleta que ha sufrido un accidente?",
-      "opciones": [
-        "Si, lo antesposiblepara evitarasfixias.",
-        "Si, siempreque el herido este consciente.",
-        "No,salvo que seanecesarioyseconozcalatecnica."
+        "cuando aprecie que puede deslumbrar a cualquier usuario de la vía.",
+        "cuando circule por una vía interurbana.",
+        "cuando pueda deslumbrar solo a los vehículos que circulen en sentido contrario."
       ],
-      "imagen": "../img/test_011_p06.jpg"
+      "correcta": 0
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Es aconsejable quitar el casco de protección al pasajero de una motocicleta que ha sufrido un accidente?",
       "opciones": [
-        "Estacionamiento prohibido hacia el ladoderecho.",
-        "Estacionamiento prohibido hacia ambos lados dela senal.",
+        "Sí, lo antes posible para evitar asfixias.",
+        "Sí, siempre que el herido esté consciente.",
+        "No, salvo que seanecesarioyseconozca latecnica."
+      ],
+      "imagen": "../img/test_011_p06.jpg",
+      "correcta": 2
+    },
+    {
+      "texto": "¿Que indica esta señal?",
+      "opciones": [
+        "Estacionamiento prohibido hacia el lado derecho.",
+        "Estacionamiento prohibido hacia ambos lados de la señal.",
         "Estacionamiento prohibido hacia el lado izquierdo."
       ],
-      "imagen": "../img/test_011_p07.jpg"
+      "imagen": "../img/test_011_p07.jpg",
+      "correcta": 1
     },
     {
-      "texto": "De las senales que realiza este conductor, ¿zcual prevalece?",
+      "texto": "De las señales que realiza este conductor, ¿cual prevalece?",
       "opciones": [
-        "La senal luminosa, ya que la realizada con el brazono es reglamentaria.",
-        "La senal luminosa sobre la realizada con el brazo.",
-        "La que realiza con el brazo sobre la senal luminosa."
+        "La señal luminosa, ya que la realizada con el brazo no es reglamentaria.",
+        "La señal luminosa sobre la realizada con el brazo.",
+        "La que realiza con el brazo sobre la señal luminosa."
       ],
-      "imagen": "../img/test_011_p08.jpg"
+      "imagen": "../img/test_011_p08.jpg",
+      "correcta": 2
     },
     {
       "texto": "Una de las principales causas de accidente en personas jovenes es...",
       "opciones": [
-        "la falta de confianza en su capacidad de conduccion.",
+        "la falta de confianza en su capacidad de conducción.",
         "la falta de reflejos.",
-        "el excesodevelocidad."
-      ]
+        "el exceso de velocidad."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "La depresion puede afectar al conductor...",
+      "texto": "La depresión puede afectar al conductor...",
       "opciones": [
         "produciendo una mayor inseguridad.",
-        "disminuyendolasdistracciones",
+        "disminuyendo las distracciones.",
         "reduciendo la irritabilidad y el estres."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Esta senal indica la situacion de...",
+      "texto": "Esta señal indica la situación de...",
       "opciones": [
-        "un paraje de interes paisajistico.",
+        "un paraje de interes paisajístico.",
         "un apartadero.",
         "un lugar desde el que puede realizar un cambio de sentido."
       ],
-      "imagen": "../img/test_011_p11.jpg"
+      "imagen": "../img/test_011_p11.jpg",
+      "correcta": 2
     },
     {
-      "texto": "¿De que peligro advierte la senal?",
+      "texto": "¿De que peligro advierte la señal?",
       "opciones": [
-        "Deuno ovariospasospara peatones.",
-        "De la proximidad de un lugar frecuentado por ninos, como escuelas,zonas de juego, etc.",
-        "De la proximidad deuna zona reservada para lospeatones."
+        "De uno o varios pasos para peatones.",
+        "De la proximidad de un lugar frecuentado por niños, como escuelas, zonas de juego, etc.",
+        "De la proximidad de una zona reservada para los peatones."
       ],
-      "imagen": "../img/test_011_p12.jpg"
+      "imagen": "../img/test_011_p12.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Un nino va sujeto con un sistema de retencion orientado hacia atras en el asiento delantero del vehiculo. ¿Esta permitido?",
+      "texto": "Un niño va sujeto con un sistema de retencion orientado hacia atrás en el asiento de lantero del vehículo. ¿Esta permitido?",
       "opciones": [
-        "Si, pero el airbag debe estar activado.",
+        "Sí, pero el airbag debe estar activado.",
         "No.",
-        "Si,pero el airbag debe estar desactivado."
+        "Sí, pero el airbag debe estar desactivado."
       ],
-      "imagen": "../img/test_011_p13.jpg"
+      "imagen": "../img/test_011_p13.jpg",
+      "correcta": 2
     },
     {
       "texto": "¿Que indica la flecha pintada en la calzada?",
       "opciones": [
-        "Que el carril en el que esta situada termina proximamente.",
-        "La direccion del ramal de la proxima salida.",
-        "La proximidad de una linea continua."
+        "Que el carril en el que está situada termina próximamente.",
+        "La dirección del ramal de la próxima salida.",
+        "La proximidad de una línea continua."
       ],
-      "imagen": "../img/test_011_p14.jpg"
+      "imagen": "../img/test_011_p14.jpg",
+      "correcta": 0
     },
     {
-      "texto": "¿Se puede circular marcha atras en cualquier tipo de via?",
+      "texto": "¿Se puede circular marcha atrás en cualquier tipo de vía?",
       "opciones": [
-        "No, solo en vias interurbanas.",
-        "No,siempreesta prohibidoenautopistasyautovias.",
-        "Si, el tipo de via es indiferente."
-      ]
+        "No, solo en vías interurbanas.",
+        "No, siempre está prohibido en autopistas y autovías.",
+        "Sí, el tipo de vía es indiferente."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En un tunel, ¿zque distancia de seguridad se debe dejar con el vehiculo que circula delante?",
+      "texto": "En un túnel, ¿que distancia de seguridad se debe dejar con el vehículo que circula de lante?",
       "opciones": [
-        "100 metros, al menos,cuando no se pretenda adelantar.",
-        "Unicamente la distancia suficientepara no colisionar en casode frenadobrusco.",
+        "100 metros, al menos, cuando no se pretenda ade lantar.",
+        "Únicamente la distancia suficiente para no colisionar en caso de frenado brusco.",
         "200 metros."
       ],
-      "imagen": "../img/test_011_p16.jpg"
+      "imagen": "../img/test_011_p16.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Esta senal..",
+      "texto": "Esta señal...",
       "opciones": [
-        "prohibe entrar en esta via porcongestion devehiculos.",
+        "prohíbe entrar en esta vía por congestión de vehículos.",
         "indica peligro por la aproximacion a un lugar estrecho en el que se debe ir en fila.",
-        "advierte quedebo circularcon precaucion por congestion del trafico."
+        "advierte que debo circular con precaución por congestión del trafico."
       ],
-      "imagen": "../img/test_011_p17.jpg"
+      "imagen": "../img/test_011_p17.jpg",
+      "correcta": 2
     },
     {
-      "texto": "En vias interurbanas con tres carriles para el mismo sentido, ¿zle esta permitido circular por el carril izquierdo a un turismo con remolque?",
+      "texto": "En vías interurbanas con tres carriles para el mismo sentido, ¿le está permitido circular por el carril izquierdo a un turismo con remolque?",
       "opciones": [
-        "Si,perosoloparaadelantara otrosvehiculos.",
-        "No, en ningun caso",
-        "Si, cuando la longitud del conjunto no supere los 7 metros."
+        "Sí, perosolo paraade lantara otros vehículos.",
+        "No, en ningún caso",
+        "Sí, cuando la longitud del conjunto no supere los 7 metros."
       ],
-      "imagen": "../img/test_011_p18.jpg"
+      "imagen": "../img/test_011_p18.jpg",
+      "correcta": 2
     },
     {
-      "texto": "En un paso para peatones, ¿zesta permitido parar o estacionar?",
+      "texto": "En un paso para peatones, ¿está permitido parar o estacionar?",
       "opciones": [
         "No.",
-        "Si.",
-        "Esta permitidoparar,pero esta prohibido estacionar."
+        "Sí.",
+        "Esta permitido parar, pero está prohibido estacionar."
       ],
-      "imagen": "../img/test_011_p19.jpg"
+      "imagen": "../img/test_011_p19.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Esta senal...",
+      "texto": "Esta señal...",
       "opciones": [
-        "indica sentido obligatorio en una via de uno o mas carriles.",
-        "permite cambiardedireccionperono de sentido.",
-        "prohibe cambiar de direccion y de sentido."
+        "indica sentido obligatorio en una vía de uno o más carriles.",
+        "permite cambiar de dirección pero no de sentido.",
+        "prohíbe cambiar de dirección y de sentido."
       ],
-      "imagen": "../img/test_011_p20.jpg"
+      "imagen": "../img/test_011_p20.jpg",
+      "correcta": 0
     },
     {
-      "texto": "¿Que le indican estas senales?",
+      "texto": "¿Que le indican estas señales?",
       "opciones": [
-        "Que a partir de la senal rigen las normas de zona urbana y que esta prohibida la circulacion de camiones.",
+        "Que a partir de la señal rigen las normas de zona urbana y que esta prohibida la circulación de camiones.",
         "Que los camiones deben circular a 50km/h.",
-        "Que esta prohibida la circulacion de camiones de mas de 3,5 T de MMA."
+        "Que esta prohibida la circulación de camiones de más de 3,5 T de MMA."
       ],
-      "imagen": "../img/test_011_p21.jpg"
+      "imagen": "../img/test_011_p21.jpg",
+      "correcta": 0
     },
     {
-      "texto": "¿Es obligatorio llevar un extintor como equipamiento de un automovil que circula en servicio particular?",
+      "texto": "¿Es obligatorio llevar un extintor como equipamiento de un automóvil que circula en servicio particular?",
       "opciones": [
-        "No,sololollevanlosautobuses.",
-        "Si,todos los vehiculos deben llevarlo.",
-        "No,si se trata de un turismo o de una motocicleta."
-      ]
+        "No, sololollevanlos autobuses.",
+        "Sí, todos los vehículos deben llevarlo.",
+        "No, si se trata de un turismo o de una motocicleta."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Es obligatorio utilizar las luces de carretera al circular a mas de 4o km/h por una via...",
+      "texto": "Es obligatorio utilizar las luces de carretera al circular a más de 40 km/h por una vía...",
       "opciones": [
         "interurbana insuficientemente iluminada.",
         "insuficientemente iluminada, dentro o fuera de poblado.",
         "interurbana suficientemente iluminada."
-      ]
+      ],
+      "correcta": 0
     },
     {
       "texto": "¿Una motocicleta debe llevar un chaleco reflectante de alta visibilidad como dotacion obligatoria?",
       "opciones": [
         "No, no es obligatorio, pero si recomendable.",
-        "Si,debe llevarlo comodotacionobligatoria",
-        "Solo es obligatorio cuando secirculeporvias interurbanas."
+        "Sí, debe llevarlo como dotación obligatoria.",
+        "Solo es obligatorio cuando se circule por vías interurbanas."
       ],
-      "imagen": "../img/test_011_p24.jpg"
+      "imagen": "../img/test_011_p24.jpg",
+      "correcta": 0
     },
     {
-      "texto": "¿Esta permitido adelantar en una curva o cambio de rasante de visibilidad reducida?",
+      "texto": "¿Esta permitido ade lantar en una curva o cambio de rasante de visibilidad reducida?",
       "opciones": [
-        "Si, moderando la velocidad.",
-        "Si, si no hay senal que lo prohiba.",
-        "No, salvo si los dos sentidos estan claramentedelimitados y la maniobra puede efectuarse sin invadir el sentido contrario. dos vehiculos, tiene prioridad el vehiculo que circula... Oa)ensentidodescendente. Ob)ensentidoascendente. O c) a mayor velocidad."
-      ]
+        "Sí, moderando la velocidad.",
+        "Sí, si no hay señal que lo prohiba.",
+        "No, salvo si los dos sentidos están claramente delimitados y la maniobra puede efectuarse sin invadir el sentido contrario."
+      ],
+      "correcta": 2
     },
     {
       "texto": "A los conductores noveles se les aplica una tasa de alcoholemia menor...",
       "opciones": [
-        "porque carecen de la suficiente experiencia en la conduccion.",
-        "porqueen ellos los efectos del alcohol son menores.",
-        "unicamente porque las normas de trafico lo imponen."
-      ]
+        "porque carecen de la suficiente experiencia en la conducción.",
+        "porque en ellos los efectos del alcohol son menores.",
+        "únicamente porque las normas de trafico lo imponen."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Con el permiso B, como norma general, ¿ise puede conducir un vehiculo automovil de mas de 3.500 kg?",
+      "texto": "Con el permiso B, como norma general, ¿se puede conducir un vehículo automóvil de más de 3.500 kg?",
       "opciones": [
         "Sí.",
         "No.",
-        "Si,pero debe teneruna antiguedad superior a 3 anos."
+        "Sí, pero debe tener una antigüedad superior a 3 años."
       ],
-      "imagen": "../img/test_011_p28.jpg"
+      "imagen": "../img/test_011_p28.jpg",
+      "correcta": 1
     },
     {
-      "texto": "La funcion de los sistemas de seguridad pasiva de un vehiculo consiste en...",
+      "texto": "La función de los sistemas de seguridad pasiva de un vehículo consiste en...",
       "opciones": [
         "la misma que la de los elementos de seguridad activa.",
-        "evitar o disminuir los danos que seproduzcan en caso de accidente.",
+        "evitar o disminuir los daños que se produzcan en caso de accidente.",
         "evitar que se produzca un accidente."
       ],
-      "imagen": "../img/test_011_p29.jpg"
+      "imagen": "../img/test_011_p29.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Cuando no se puede circular hacia adelante ni cambiar de direccion o sentido de la marcha, ¿ise permite circular marcha atras?",
+      "texto": "Cuando no se puede circular hacia ade lante ni cambiar de dirección o sentido de la marcha, ¿se permite circular marcha atrás?",
       "opciones": [
         "No.",
-        "Si,pero el recorrido hacia atras no puede ser superior a 15 metros, ni se puede invadir un cruce de vias.",
-        "Si, pero solo con el recorrido minimo indispensable."
-      ]
+        "Sí, pero el recorrido hacia atrás no puede ser superior a 15 metros, ni se puede invadir un cruce de vías.",
+        "Sí, pero solo con el recorrido mínimo indispensable."
+      ],
+      "correcta": 1
     }
   ]
 }

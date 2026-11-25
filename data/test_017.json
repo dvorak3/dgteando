@@ -1,268 +1,298 @@
 {
   "test_id": 17,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En esta interseccion entre una via pavimentada y otra sin pavimentar, ¿idebe ceder el paso a este vehiculo?",
+      "texto": "En esta intersección entre una vía pavimentada y otra sin pavimentar, ¿debe ceder el paso a este vehículo?",
       "opciones": [
-        "Si, porque se incorpora por la derecha.",
-        "Si,porque en las intersecciones sin senalizar debe cederel paso a los vehiculos que se aproximen por la derecha.",
-        "No,ya que se incorpora desde una via sin pavimentar."
+        "Sí, porque se incorpora por la derecha.",
+        "Sí, porque en las intersecciones sin señalizar debe ceder el paso a los vehículos que se aproximen por la derecha.",
+        "No, ya que se incorpora desde una vía sin pavimentar."
       ],
-      "imagen": "../img/test_017_p01.jpg"
+      "imagen": "../img/test_017_p01.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Un vehiculo circula a velocidad anormalmente reducida cuando...",
+      "texto": "Un vehículo circula a velocidad anormalmente reducida cuando...",
       "opciones": [
-        "circula a velocidad inferior a la minima permitida en esa via.",
+        "circula a velocidad inferior a la mínima permitida en esa vía.",
         "circula a velocidad inferior a la del resto de los conductores.",
-        "nose adaptaa las circunstancias dela via."
-      ]
+        "no se adapta a las circunstancias de la vía."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Se puede circular marcha atras en una autopista?",
+      "texto": "¿Se puede circular marcha atrás en una autopista?",
       "opciones": [
-        "Si,pero sin obstaculizar.",
+        "Sí, pero sin obstaculizar.",
         "No.",
-        "Si, porque esta dentro de poblado."
+        "Sí, porque esta dentro de poblado."
       ],
-      "imagen": "../img/test_017_p03.jpg"
+      "imagen": "../img/test_017_p03.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Los remolques y semirremolques, ¿ideben tener tarjeta de inspeccion tecnica?",
+      "texto": "Los remolques y semirremolques, ¿deben tener tarjeta de inspección técnica?",
       "opciones": [
-        "No,es suficiente con la del vehiculo que los arrastra.",
-        "Si,perounicamentelosnoligeros.",
-        "Si, todos."
+        "No, es suficiente con la del vehículo que los arrastra.",
+        "Sí, perounicamentelosnoligeros.",
+        "Sí, todos."
       ],
-      "imagen": "../img/test_017_p04.jpg"
+      "imagen": "../img/test_017_p04.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Ante esta situacion...",
+      "texto": "Ante esta situación...",
       "opciones": [
-        "se debe circular a velocidad moderada, llegando incluso a detener el vehiculo.",
-        "seacelerarapara dejar atras a la nina cuanto antes yevitarasi el peligro.",
-        "se circulara normalmente,pues la nina no ha invadido la via."
+        "se debe circular a velocidad moderada, llegando incluso a detener el vehículo.",
+        "se acelerará para dejar atrás a la niña cuanto antes y evitar así el peligro.",
+        "se circulara normalmente, pues la niña no ha invadido la vía."
       ],
-      "imagen": "../img/test_017_p05.jpg"
+      "imagen": "../img/test_017_p05.jpg",
+      "correcta": 0
     },
     {
       "texto": "Si padece una alergia respiratoria, ¿que debe tener en cuenta a la hora de conducir?",
       "opciones": [
         "Poner muy fuerte el aire acondicionado.",
-        "Noponermuyfuerte el aire acondicionado y cerrar las ventanillas.",
+        "No poner muy fuerte el aire acondicionado y cerrar las ventanillas.",
         "Apagar el aire acondicionado y abrir las ventanillas."
       ],
-      "imagen": "../img/test_017_p06.jpg"
+      "imagen": "../img/test_017_p06.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Conducir seguro, ¿zde que depende?",
+      "texto": "Conducir seguro, ¿de que depende?",
       "opciones": [
-        "Depende del conductor y del buen estado del vehiculo.",
-        "Depende del conductor, del vehiculo no.",
-        "Depende del buen estado del vehiculo, del conductor no."
-      ]
+        "Depende del conductor y del buen estado del vehículo.",
+        "Depende del conductor, del vehículo no.",
+        "Depende del buen estado del vehículo, del conductor no."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El semaforo de la derecha esta verde y el de la izquierda esta rojo. ¿Que debe hacer para continuar de frente?",
+      "texto": "El semáforo de la derecha está verde y el de la izquierda está rojo. ¿Que debe hacer para continuar de frente?",
       "opciones": [
         "Esperar a que se ponga verde el de la izquierda.",
-        "Esperara que sepongan los dosverdes.",
+        "Esperar a que se pongan los dos verdes.",
         "Seguir de frente porque me lo permite el de la derecha."
       ],
-      "imagen": "../img/test_017_p08.jpg"
+      "imagen": "../img/test_017_p08.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Los paneles de las esquinas del camion, ¿ique indican?",
+      "texto": "Los paneles de las esquinas del camión, ¿que indican?",
       "opciones": [
         "Que la carga sobresale por los lados.",
-        "Que la carga sobresale por detras.",
-        "Quela carga sobresalepor delante."
+        "Que la carga sobresale por detrás.",
+        "Que la carga sobresale por de lante."
       ],
-      "imagen": "../img/test_017_p09.jpg"
+      "imagen": "../img/test_017_p09.jpg",
+      "correcta": 1
     },
     {
       "texto": "Los principales factores que intervienen en un accidente son...",
       "opciones": [
-        "la via y su entorno.",
-        "la via y su entorno, el vehiculo y el factor humano.",
-        "el vehiculo y su carga."
-      ]
+        "la vía y su entorno.",
+        "la vía y su entorno, el vehículo y el factor humano.",
+        "el vehículo y su carga."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En una carretera con un carril para cada sentido, un camion esta adelantando y no le deja ver. ¿Puede adelantar detras del camion?",
+      "texto": "En una carretera con un carril para cada sentido, un camión esta ade lantando y no le deja ver. ¿Puede ade lantar detrás del camión?",
       "opciones": [
-        "Si,porqueel camionmeprotege.",
+        "Sí, porqueel camión me protege.",
         "No, porque no hay visibilidad.",
-        "Si, cuando no hay senal de prohibicion de adelantar."
+        "Sí, cuando no hay señal de prohibición de ade lantar."
       ],
-      "imagen": "../img/test_017_p11.jpg"
+      "imagen": "../img/test_017_p11.jpg",
+      "correcta": 1
     },
     {
-      "texto": "¿Esta permitido circular utilizando solamente el alumbrado de posicion del vehiculo entre la puesta y la salida del sol?",
+      "texto": "¿Esta permitido circular utilizando solamente el alumbrado de posición del vehículo entre la puesta y la salida del sol?",
       "opciones": [
-        "Si, en vias de poblado suficientemente iluminadas.",
-        "Si,encualquiervia suficientementeiluminada.",
-        "No, debe utilizarse ademas el alumbrado de cruce o el de carretera."
-      ]
-    },
-    {
-      "texto": "Si realiza con su motocicleta un giro muy cerrado a una velocidad lenta, ¿ique precaucion debe tener?",
-      "opciones": [
-        "A esa velocidad tan lenta no es necesario tomar ninguna precaucion.",
-        "Debe compensar el efecto giroscopico con el peso del cuerpo.",
-        "No frenar con el freno delantero porque la rueda puede bloquearse y producirse una caida."
+        "Sí, en vías de poblado suficientemente iluminadas.",
+        "Sí, encualquiervia suficientemente iluminada.",
+        "No, debe utilizarse además el alumbrado de cruce o el de carretera."
       ],
-      "imagen": "../img/test_017_p13.jpg"
+      "correcta": 2
     },
     {
-      "texto": "Las motocicletas con mas de cinco anos de antigiuedad deben pasar la ITV...",
+      "texto": "Si realiza con su motocicleta un giro muy cerrado a una velocidad lenta, ¿que precaución debe tener?",
       "opciones": [
-        "cadacincoanos. a) cada cinco anos.",
-        "cada ano.",
-        "cada dos anos."
-      ]
-    },
-    {
-      "texto": "¿Que debe tener en cuenta sobre el sistema RcTA de alerta de trafico cruzado trasero?",
-      "opciones": [
-        "Alerta devehiculos que se aproximan transversalmente; algunos modelos incorporan frenado automatico.",
-        "Todos losmodelos frenan automaticamente a cualquier velocidad.",
-        "Sustituye la observacion del conductor al salir marcha atras."
+        "A esa velocidad tan lenta no es necesario tomar ninguna precaución.",
+        "Debe compensar el efecto giroscópico con el peso del cuerpo.",
+        "No frenar con el freno de lantero porque la rueda puede bloquearse y producirse una caida."
       ],
-      "imagen": "../img/test_017_p15.jpg"
+      "imagen": "../img/test_017_p13.jpg",
+      "correcta": 2
     },
     {
-      "texto": "El vehiculo del arcen, ¿zesta bien estacionado?",
+      "texto": "Las motocicletas con más de cinco años de antigüedad deben pasar la ITV...",
       "opciones": [
-        "Si,porquenomolesta.",
-        "No,porque en el arcen no se puede estacionar.",
-        "No,porque noesta senalizado."
+        "cada cinco años.",
+        "cada año.",
+        "cada dos años."
       ],
-      "imagen": "../img/test_017_p16.jpg"
+      "correcta": 2
+    },
+    {
+      "texto": "¿Que debe tener en cuenta sobre el sistema RCTA de alerta de trafico cruzado trasero?",
+      "opciones": [
+        "Alerta de vehículos que se aproximan transversalmente; algunos mode los incorporan frenado automático.",
+        "Todos losmode los frenan automáticamente a cualquier velocidad.",
+        "Sustituye la observación del conductor al salir marcha atrás."
+      ],
+      "imagen": "../img/test_017_p15.jpg",
+      "correcta": 0
+    },
+    {
+      "texto": "El vehículo del arcén, ¿está bien estacionado?",
+      "opciones": [
+        "Sí, porque nomolesta.",
+        "No, porque en el arcén no se puede estacionar.",
+        "No, porque no está señalizado."
+      ],
+      "imagen": "../img/test_017_p16.jpg",
+      "correcta": 1
     },
     {
       "texto": "Hay que mirar por los retrovisores...",
       "opciones": [
         "con regularidad durante la marcha.",
-        "solamente cuando haya que adelantar.",
-        "unicamenteal realizarmaniobras."
+        "solamente cuando haya que ade lantar.",
+        "únicamente al realizar maniobras."
       ],
-      "imagen": "../img/test_017_p17.jpg"
+      "imagen": "../img/test_017_p17.jpg",
+      "correcta": 0
     },
     {
-      "texto": "¿Que puede hacer para evitar los accidentes debidos al sueno o a la fatiga?",
+      "texto": "¿Que puede hacer para evitar los accidentes debidos al sueño o a la fatiga?",
       "opciones": [
-        "Conducirmas rapido para que la conduccion sea mas distraida.",
-        "Prestar atenciona los signos y sintomas del sueno,a la fatiga,yparar a descansar.",
-        "Circularporviasdesconocidas."
-      ]
+        "Conducir más rápido para que la conducción sea más distraida.",
+        "Prestar atención a los signos y síntomas del sueño, a la fatiga, yparar a descansar.",
+        "Circular por vías desconocidas.."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Como puede advertir fuera de poblado la intencion de adelantar?",
+      "texto": "¿Como puede advertir fuera de poblado la intencion de ade lantar?",
       "opciones": [
-        "Con las luces de corto o de largo alcance, unicamente.",
-        "Con senalesopticasyacusticas.",
-        "Con las senales acusticas, exclusivamente."
+        "Con las luces de corto o de largo alcance, únicamente.",
+        "Con señales ópticas y acústicas.",
+        "Con las señales acústicas, exclusivamente."
       ],
-      "imagen": "../img/test_017_p19.jpg"
+      "imagen": "../img/test_017_p19.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Después de la senal vertical, ¿zesta permitido adelantar al vehiculo blanco?",
+      "texto": "Después de la señal vertical, ¿está permitido ade lantar al vehículo blanco?",
       "opciones": [
-        "No,porque la senal prohibe adelantar.",
-        "Si, porque la senal es de fin de prohibido adelantar>.",
-        "No,porquela linea continua me loprohibe."
+        "No, porque la señal prohíbe ade lantar.",
+        "Sí, porque la señal es de fin de prohibido ade lantar.",
+        "No, porquela línea continua me lo prohíbe."
       ],
-      "imagen": "../img/test_017_p20.jpg"
+      "imagen": "../img/test_017_p20.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Una motocicleta, ¿ipuede circular por la via senalizada con esta senal?",
+      "texto": "Una motocicleta, ¿puede circular por la vía señalada con esta señal?",
       "opciones": [
-        "Si, porque se trata de una via reservada a vehiculos de dos ruedas con motor.",
-        "No, porque se trata de una via reservada exclusivamente a los ciclomotores.",
-        "Si, si se trata de una motocicleta sin sidecar."
+        "Sí, porque se trata de una vía reservada a vehículos de dos ruedas con motor.",
+        "No, porque se trata de una vía reservada exclusivamente a los ciclomotores.",
+        "Sí, si se trata de una motocicleta sin sidecar."
       ],
-      "imagen": "../img/test_017_p21.jpg"
+      "imagen": "../img/test_017_p21.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Un turismo que lleve esta senal de minusvalido, ¿ipuede circular por un carril VAo?",
+      "texto": "Un turismo que lleve esta señal de minusválido, ¿puede circular por un carril VAO?",
       "opciones": [
-        "No, salvo que tenga una autorizacion especial del titular de la via.",
-        "Solosiestaocupadopordosomaspersonas.",
-        "Si,aun cuando solo lo ocupe su conductor."
+        "No, salvo que tenga una autorización especial del titular de la vía.",
+        "Solo siestaocupadopordosomaspersonas.",
+        "Sí, aun cuando solo lo ocupe su conductor."
       ],
-      "imagen": "../img/test_017_p22.jpg"
+      "imagen": "../img/test_017_p22.jpg",
+      "correcta": 2
     },
     {
-      "texto": "La senal prohibe la entrada a...",
+      "texto": "La señal prohíbe la entrada a...",
       "opciones": [
-        "toda clase devehiculos.",
-        "vehiculos demotor.",
-        "turismosymotocicletas."
+        "toda clase de vehículos.",
+        "vehículos de motor.",
+        "turismos y motocicletas."
       ],
-      "imagen": "../img/test_017_p23.jpg"
+      "imagen": "../img/test_017_p23.jpg",
+      "correcta": 1
     },
     {
       "texto": "El estres hace que el conductor...",
       "opciones": [
-        "seamashostil conlosdemas usuarios.",
-        "respetemas la senalizacion.",
-        "asumamenosriesgos."
+        "sea más hostil con los demás usuarios.",
+        "respete más la señalización.",
+        "asuma menos riesgos."
       ],
-      "imagen": "../img/test_017_p24.jpg"
+      "imagen": "../img/test_017_p24.jpg",
+      "correcta": 0
     },
     {
       "texto": "El conductor del turismo amarillo...",
       "opciones": [
         "no puede utilizar este carril.",
-        "circula porun carril reversible.",
-        "debe llevaralmenosdosocupantes."
+        "circula por un carril reversible.",
+        "debe llevar al menos dos ocupantes."
       ],
-      "imagen": "../img/test_017_p25.jpg"
+      "imagen": "../img/test_017_p25.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Los Agentes de la autoridad y el personal de obras, ¿zestan obligados a utilizar dispositivos retrorreflectantes que permitan distinguirlos a una distancia minima de 150 metros?",
+      "texto": "Los Agentes de la autoridad y el personal de obras, ¿están obligados a utilizar dispositivos retrorreflectantes que permitan distinguirlos a una distancia mínima de 150 metros?",
       "opciones": [
-        "Si, siempre.",
-        "Si, pero solo de noche.",
+        "Sí, siempre.",
+        "Sí, pero solo de noche.",
         "No."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "La senal horizontal de limitacion de velocidad situada en un carril, afecta ...",
+      "texto": "La señal horizontal de limitacion de velocidad situada en un carril, afecta...",
       "opciones": [
-        "unicamenteavehiculospesados.",
-        "solamente a los vehiculos que circulen por el carril en el que esta situada la senal.",
+        "únicamente a vehículos pesados.",
+        "solamente a los vehículos que circulen por el carril en el que está situada la señal.",
         "a todos y cada uno de los carriles que tenga la calzada."
       ],
-      "imagen": "../img/test_017_p27.jpg"
+      "imagen": "../img/test_017_p27.jpg",
+      "correcta": 1
     },
     {
-      "texto": "El vehiculo amarillo va a girar a la izquierda, ¿zesta permitido adelantarle por la derecha?",
+      "texto": "El vehículo amarillo va a girar a la izquierda, ¿está permitido ade lantarle por la derecha?",
       "opciones": [
-        "No,porque el adelantamiento siempre debe efectuarsepor la izquierda.",
-        "Solo cuando suponga un riesgo para la seguridad vial el no adelantar.",
-        "Si, porque esta indicando claramente su proposito de girar a la izquierda."
+        "No, porque el ade lantamiento siempre debe efectuarse por la izquierda.",
+        "Solo cuando suponga un riesgo para la seguridad vial el no ade lantar.",
+        "Sí, porque está indicando claramente su proposito de girar a la izquierda."
       ],
-      "imagen": "../img/test_017_p28.jpg"
+      "imagen": "../img/test_017_p28.jpg",
+      "correcta": 2
     },
     {
       "texto": "¿Esta permitido llevar las puertas o el maletero abiertos para aumentar la capacidad de carga?",
       "opciones": [
         "Las puertas no, pero si el maletero si esta sujeto de forma que no pueda caer la carga.",
-        "No, excepto en los vehiculos destinados al transporte de mercancias.",
+        "No, excepto en los vehículos destinados al transporte de mercancías.",
         "No."
       ],
-      "imagen": "../img/test_017_p29.jpg"
+      "imagen": "../img/test_017_p29.jpg",
+      "correcta": 2
     },
     {
       "texto": "Cuando sienta fatiga al volante, debe tener en cuenta que...",
       "opciones": [
-        "el sueno puede aparecerde un momento a otro.",
-        "eldeslumbramientoesconstante.",
+        "el sueño puede aparecer de un momento a otro.",
+        "el deslumbramiento es constante.",
         "se producen efectos similares a una tasa de alcoholemia de 0,5 gramos por litro de sangre."
-      ]
+      ],
+      "correcta": 0
     }
   ]
 }

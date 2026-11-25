@@ -1,193 +1,215 @@
 {
   "test_id": 20,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
       "texto": "¿Que debe hacer un conductor que ha sido deslumbrado?",
       "opciones": [
-        "Desviarse siempre a la derecha para detenerse en el arcen.",
+        "Desviarse siempre a la derecha para detenerse en el arcén.",
         "Reducir la velocidad, incluso hasta llegar a detenerse totalmente, si fuera necesario.",
-        "Encenderelalumbradodelargo alcance."
-      ]
+        "Encenderelalumbradode largo alcance."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Cuando senaliza un cambio de carril, ¿ztiene preferencia sobre los vehiculos que ya circulan por ese carril?",
+      "texto": "Cuando señala un cambio de carril, ¿tiene preferencia sobre los vehículos que ya circulan por ese carril?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "No."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Una vez abrochado el cinturon de seguridad, debe...",
+      "texto": "Una vez abrochado el cinturón de seguridad, debe...",
       "opciones": [
-        "comprobar que esta bien colocado y ajustado al cuerpo.",
+        "comprobar que está bien colocado y ajustado al cuerpo.",
         "aflojar la zona abdominal para mayor comodidad.",
         "colocar una pinza para ajustarlo."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Estapermitido adelantar por la derecha si existe espacio suficiente?",
+      "texto": "¿Está permitido ade lantar por la derecha si existe espacio suficiente?",
       "opciones": [
-        "No, en ningun caso.",
-        "Si, en vias urbanas, con dos o mas carriles delimitados por marcas viales.",
-        "Unicamentea los tranvias."
+        "No, en ningún caso.",
+        "Sí, en vías urbanas, con dos o más carriles delimitados por marcas viales.",
+        "Únicamente a los tranvías."
       ],
-      "imagen": "../img/test_020_p04.jpg"
+      "imagen": "../img/test_020_p04.jpg",
+      "correcta": 1
     },
     {
       "texto": "La persona que conduce bajo los efectos de las drogas...",
       "opciones": [
-        "pone a todos losque lerodean en un grave riesgo de accidente.",
+        "pone a todos los que le rodean en un grave riesgo de accidente.",
         "asumemenosriesgos.",
         "solo pone en riesgo su propia vida."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Algunos sintomas que pueden anunciarle la fatiga son...",
+      "texto": "Algunos síntomas que pueden anunciarle la fatiga son...",
       "opciones": [
-        "ansiedadydepresion.",
+        "ansiedad y depresión.",
         "fuertes picores.",
-        "bostezos,acomodos en el asientoymolestias en la nuca."
-      ]
+        "bostezos, acomodos en el asiento y molestias en la nuca."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En una travesia sin senales de velocidad, ¿icual es la velocidad maxima permitida?",
+      "texto": "En una travesia sin señales de velocidad, ¿cual es la velocidad máxima permitida?",
       "opciones": [
         "40 km/h.",
         "50 km/h.",
         "60 km/h."
       ],
-      "imagen": "../img/test_020_p07.jpg"
+      "imagen": "../img/test_020_p07.jpg",
+      "correcta": 1
     },
     {
-      "texto": "¿Cual es la funcion del sistema antibloqueo de frenos ABs?",
+      "texto": "¿Cual es la función del sistema antibloqueo de frenos ABS?",
       "opciones": [
         "Evita el bloqueo de las ruedas solo en calzadas secas.",
-        "Hacequelos neumaticos sedesgasten menos.",
+        "Hace que los neumaticos se desgasten menos.",
         "Impide el bloqueo de las ruedas durante el frenado."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "El alcohol, ¿zinfluye en la distancia de reaccion?",
+      "texto": "El alcohol, ¿nfluye en la distancia de reacción?",
       "opciones": [
-        "No, el estado del conductor no influye en la distancia de reaccion, solo depende del estado del vehiculo.",
+        "No, el estado del conductor no influye en la distancia de reacción, solo depende del estado del vehículo.",
         "No, pero si influye en la distancia de frenado.",
-        "Si, porque afecta al tiempo de reaccion."
-      ]
-    },
-    {
-      "texto": "¿En que momento entra en funcionamiento el sistema de frenado automatico de emergencia\"AEBS\"?",
-      "opciones": [
-        "Cuando existaun peligro, en todo caso.",
-        "En caso de despiste del conductor y riesgo de colision por alcance.",
-        "Unicamente en caso de una colision inevitable."
+        "Sí, porque afecta al tiempo de reacción."
       ],
-      "imagen": "../img/test_020_p10.jpg"
+      "correcta": 2
     },
     {
-      "texto": "La carga de un turismo, ¿ipuede sobresalir por los bordes laterales?",
+      "texto": "¿En que momento entra en funcionamiento el sistema de frenado automático de emergencia\"AEBS\"?",
       "opciones": [
-        "Si,siempreque el ancho del vehiculo cargado no sea superior a 2,55metros.",
-        "Si, hasta 0,40 metros por cada lateral.",
-        "No."
-      ]
-    },
-    {
-      "texto": "¿Que le indica la senal?",
-      "opciones": [
-        "Me indica un peligro y me informa del sentido de la circulacion.",
-        "Prohibe el paso y me informa del sentido de la circulacion pudiendo atravesar la linea que forman los conos si quiero adelantar.",
-        "Prohibe el paso yme informa del sentido de la circulacion, no pudiendo atravesar la lineaqueforman los conos."
+        "Cuando exista un peligro, en todo caso.",
+        "En caso de despiste del conductor y riesgo de colisión por alcance.",
+        "Únicamente en caso de una colisión inevitable."
       ],
-      "imagen": "../img/test_020_p12.jpg"
+      "imagen": "../img/test_020_p10.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Las senales acusticas, ¿zse pueden utilizar para evitar un posible accidente?",
+      "texto": "La carga de un turismo, ¿puede sobresalir por los bordes laterales?",
       "opciones": [
-        "Si,pero solo enviasestrechasconmuchas curvas.",
-        "Si, en cualquier tipo de via.",
+        "Sí, siempre que el ancho del vehículo cargado no sea superior a 2,55 metros.",
+        "Sí, hasta 0,40 metros por cada lateral.",
         "No."
-      ]
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "¿Que le indica la señal?",
+      "opciones": [
+        "Me indica un peligro y me informa del sentido de la circulación.",
+        "Prohibe el paso y me informa del sentido de la circulación pudiendo atravesar la línea que forman los conos si quiero ade lantar.",
+        "Prohibe el paso y me informa del sentido de la circulación, no pudiendo atravesar la línea que forman los conos."
+      ],
+      "imagen": "../img/test_020_p12.jpg",
+      "correcta": 2
+    },
+    {
+      "texto": "Las señales acústicas, ¿se pueden utilizar para evitar un posible accidente?",
+      "opciones": [
+        "Sí, pero solo en víasestrechasconmuchas curvas.",
+        "Sí, en cualquier tipo de vía.",
+        "No."
+      ],
+      "correcta": 1
     },
     {
       "texto": "Si conduce con lluvia...",
       "opciones": [
-        "debe aumentarla distancia de seguridad con el vehiculo que circula delante.",
+        "debe aumentar la distancia de seguridad con el vehículo que circula de lante.",
         "la distancia de frenado disminuye.",
-        "la distancia de reaccion aumenta."
+        "la distancia de reacción aumenta."
       ],
-      "imagen": "../img/test_020_p14.jpg"
+      "imagen": "../img/test_020_p14.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Esta senal de advertencia de peligro indica la proximidad de...",
+      "texto": "Esta señal de advertencia de peligro indica la proximidad de...",
       "opciones": [
-        "unresaltoobadenenlavia.",
-        "una zona de la via en la que se estrecha la calzada.",
-        "una obstruccion en la calzada."
+        "un resalto o badén en la vía..",
+        "una zona de la vía en la que se estrecha la calzada.",
+        "una obstrucción en la calzada."
       ],
-      "imagen": "../img/test_020_p15.jpg"
+      "imagen": "../img/test_020_p15.jpg",
+      "correcta": 0
     },
     {
-      "texto": "¿Que indica este panel bajo la senal de ceda el paso?",
+      "texto": "¿Que indica este panel bajo la señal de ceda el paso?",
       "opciones": [
-        "El lugar en el que hay que detenerse en la proxima interseccion.",
-        "El sitio exacto donde hay que ceder el paso en la proxima interseccion.",
-        "La distancia a la que se encuentra la senal de stop en la proxima interseccion."
+        "El lugar en el que hay que detenerse en la próxima intersección.",
+        "El sitio exacto donde hay que ceder el paso en la próxima intersección.",
+        "La distancia a la que se encuentra la señal de stop en la próxima intersección."
       ],
-      "imagen": "../img/test_020_p16.jpg"
+      "imagen": "../img/test_020_p16.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Esta senal situada sobre un carril de un puesto de peaje indica que en el...",
+      "texto": "Esta señal situada sobre un carril de un puesto de peaje indica que en el...",
       "opciones": [
-        "solo se puede abonar el peaje mediantetarjeta.",
-        "es obligatorio el pago del peaje mediante el sistema de peaje dinamico o telepeaje.",
-        "se puede pagarmediante el sistema depeaje dinamico o telepeaje."
+        "solo se puede abonar el peaje mediante tarjeta.",
+        "es obligatorio el pago del peaje mediante el sistema de peaje dinámico o telepeaje.",
+        "se puede pagar mediante el sistema de peaje dinámico o telepeaje."
       ],
-      "imagen": "../img/test_020_p17.jpg"
+      "imagen": "../img/test_020_p17.jpg",
+      "correcta": 1
     },
     {
-      "texto": "En una travesia de dos carriles para cada sentido, ¿ipuede circular por el segundo carril para girar a la izquierda?",
+      "texto": "En una travesia de dos carriles para cada sentido, ¿puede circular por el segundo carril para girar a la izquierda?",
       "opciones": [
-        "Si, porque en la travesia debo circular igual que en las vias urbanas.",
-        "No,porquela travesia es unavia interurbana.",
-        "No,porque en la travesia siempre debo circular por la derecha."
+        "Sí, porque en la travesia debo circular igual que en las vías urbanas.",
+        "No, porquela travesia es una vía interurbana.",
+        "No, porque en la travesia siempre debo circular por la derecha."
       ],
-      "imagen": "../img/test_020_p18.jpg"
+      "imagen": "../img/test_020_p18.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Al averiarse el vehiculo que conduce dentro de un tuinel debe...",
+      "texto": "Al averiarse el vehículo que conduce dentro de un túnel debe...",
       "opciones": [
-        "esperar dentro del tunel yno abandonar el vehiculo en ningun caso.",
-        "solicitar el auxilio de otros conductores llegando a ordenarsudetencion si es preciso.",
-        "abandonar el vehiculo dentro del tunel y dirigirse al refugio o salida mas proximos"
+        "esperar dentro del túnel y no abandonar el vehículo en ningún caso.",
+        "solicitar el auxilio de otros conductores llegando a ordenar su detención si es preciso.",
+        "abandonar el vehículo dentro del túnel y dirigirse al refugio o salida más próximos"
       ],
-      "imagen": "../img/test_020_p19.jpg"
+      "imagen": "../img/test_020_p19.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Un mantenimiento adecuado del vehiculo...",
+      "texto": "Un mantenimiento adecuado del vehículo...",
       "opciones": [
         "elimina la probabilidad de sufrir un accidente.",
         "puede reducir la probabilidad de sufrir un accidente.",
         "no reduce nunca la probabilidad de sufrir un accidente."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Entre los siguientes tipos de senales, ¿zcual es el orden de prioridad?",
+      "texto": "Entre los siguientes tipos de señales, ¿cual es el orden de prioridad?",
       "opciones": [
-        "Semaforos,agentesy senales verticales.",
-        "Agentes, semaforosysenalesverticales.",
-        "Senales verticales,agentes y semaforos."
+        "Semaforos, agentesy señales verticales.",
+        "Agentes, semáforos y señales verticales.",
+        "Señales verticales, agentes y semáforos."
       ],
-      "imagen": "../img/test_020_p21.jpg"
+      "imagen": "../img/test_020_p21.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Esta senal...",
+      "texto": "Esta señal...",
       "opciones": [
-        "indica como debeaparcarun camion.",
-        "prohibe el paso a vehiculos o conjuntos de vehiculos con longitud maxima, incluida la b) prohibe el paso a vehiculos o conjuntos de vehiculos con longitud maxima, incluida la carga, superior a 10 metros.",
-        "prohibe aparcar si el camion mide mas de 10 metros."
+        "indica como debe aparcar un camión.",
+        "prohíbe el paso a vehículos o conjuntos de vehículos con longitud máxima, incluida la b) prohíbe el paso a vehículos o conjuntos de vehículos con longitud máxima, incluida la carga, superior a 10 metros.",
+        "prohíbe aparcar si el camión mide más de 10 metros."
       ],
-      "imagen": "../img/test_020_p22.jpg"
+      "imagen": "../img/test_020_p22.jpg",
+      "correcta": 1
     },
     {
       "texto": "En las personas que toman drogas de abuso y conducen, la probabilidad de sufrir un accidente es...",
@@ -195,68 +217,76 @@
         "mayor.",
         "menor.",
         "la misma."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Cuando no utiliza la baca del vehiculo, ¿zes aconsejable quitarla?",
+      "texto": "Cuando no utiliza la baca del vehículo, ¿es aconsejable quitarla?",
       "opciones": [
-        "No,porque la baca aumenta la estabilidad del vehiculo.",
-        "Si,porque sin baca ahorro carburante.",
+        "No, porque la baca aumenta la estabilidad del vehículo.",
+        "Sí, porque sin baca ahorro carburante.",
         "Es igual, porque la baca no influye en el consumo."
       ],
-      "imagen": "../img/test_020_p24.jpg"
+      "imagen": "../img/test_020_p24.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Para un uso adecuado del alumbrado, ¿ique debe revisar?",
+      "texto": "Para un uso adecuado del alumbrado, ¿que debe revisar?",
       "opciones": [
-        "Solo la regulacion,pero con una ciertafrecuencia.",
-        "La regulacion, el funcionamiento y el estado del sistema.",
+        "Solo la regulación, pero con una cierta frecuencia.",
+        "La regulación, el funcionamiento y el estado del sistema.",
         "Nada, porque el alumbrado lo tienen que revisar en un taller."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En esta via, ¿zesta permitido superar la velocidad maxima generica de la via para adelantar?",
+      "texto": "En esta vía, ¿está permitido superar la velocidad máxima generica de la vía para ade lantar?",
       "opciones": [
-        "Si, hasta los 140 km/h.",
-        "Si,en20km/h.",
+        "Sí, hasta los 140 km/h.",
+        "Sí, en20km/h.",
         "No."
       ],
-      "imagen": "../img/test_020_p26.jpg"
+      "imagen": "../img/test_020_p26.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Si el resultado de la inspeccion realizada a su vehiculo en una estacion ITV es desfavorable, ¿podra circular por las vias publicas?",
+      "texto": "Si el resultado de la inspección realizada a su vehículo en una estacion ITV es desfavorable, ¿podra circular por las vías públicas?",
       "opciones": [
-        "Si, si el defecto observado no impide la marcha del vehiculo.",
-        "No,salvo para su traslado al tallery la vuelta a la ITV para nueva inspeccion.",
-        "No, en absoluto, porque el vehiculo causara baja definitiva."
-      ]
+        "Sí, si el defecto observado no impide la marcha del vehículo.",
+        "No, salvo para su traslado al taller y la vuelta a la ITV para nueva inspección.",
+        "No, en absoluto, porque el vehículo causara baja definitiva."
+      ],
+      "correcta": 1
     },
     {
       "texto": "En un control, los agentes le piden que haga la prueba de alcohol. ¿Es obligatorio hacer la prueba?",
       "opciones": [
-        "Si, pero cuando tengo un accidente.",
-        "Si, pero cuando he cometido una infraccion.",
-        "Si, siempre."
+        "Sí, pero cuando tengo un accidente.",
+        "Sí, pero cuando he cometido una infracción.",
+        "Sí, siempre."
       ],
-      "imagen": "../img/test_020_p28.jpg"
+      "imagen": "../img/test_020_p28.jpg",
+      "correcta": 2
     },
     {
-      "texto": "¿Tiene que ceder el paso a este autobuis que quiere incorporarse a la circulacion?",
+      "texto": "¿Tiene que ceder el paso a este autobús que quiere incorporarse a la circulación?",
       "opciones": [
-        "Si, en la medida de lo posible,llegando incluso a detener el vehiculo.",
-        "No, porque se trata de una via urbana.",
-        "No,porque los turismos tienenpreferencia."
+        "Sí, en la medida de lo posible, llegando incluso a detener el vehículo.",
+        "No, porque se trata de una vía urbana.",
+        "No, porque los turismos tienen preferencia."
       ],
-      "imagen": "../img/test_020_p29.jpg"
+      "imagen": "../img/test_020_p29.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Para que el airbag cumpla adecuadamente su funcion de proteccion, debe utilizarse ..",
+      "texto": "Para que el airbag cumpla adecuadamente su función de protección, debe utilizarse...",
       "opciones": [
-        "juntoconel apoyacabezas.",
+        "junto con el apoyacabezas.",
         "el del conductor y el del acompanante.",
-        "junto con el cinturon de seguridad."
+        "junto con el cinturón de seguridad."
       ],
-      "imagen": "../img/test_020_p30.jpg"
+      "imagen": "../img/test_020_p30.jpg",
+      "correcta": 2
     }
   ]
 }

@@ -1,253 +1,282 @@
 {
   "test_id": 13,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "A un vehiculo prioritario que circula en servicio de urgencia se le facilitara el paso...",
+      "texto": "A un vehículo prioritario que circula en servicio de urgencia se le facilitara el paso...",
       "opciones": [
-        "adoptando lasmedidas adecuadas segun lascircunstanciasdelmomento.",
+        "adoptando las medidas adecuadas según las circunstancias del momento.",
         "apartandose siempre a la derecha de la calzada.",
-        "deteniendo siempre el vehiculo en el lado izquierdo de la calzada."
+        "deteniendo siempre el vehículo en el lado izquierdo de la calzada."
       ],
-      "imagen": "../img/test_013_p01.jpg"
+      "imagen": "../img/test_013_p01.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Expulsar a un insecto del vehiculo mientras se conduce, ¿ies peligroso?",
+      "texto": "Expulsar a un insecto del vehículo mientras se conduce, ¿es peligroso?",
       "opciones": [
-        "Si,porquepuede distraeral conductor.",
+        "Sí, porque puede distraer al conductor.",
         "No, esto ocupa al conductor muy poco tiempo.",
-        "No,si secirculaa velocidadreducida."
-      ]
-    },
-    {
-      "texto": "Un peaton pretende cruzar por un paso de peatones debidamente senalizado, ¿icuando debe penetrar en la calzada?",
-      "opciones": [
-        "Cuando el peaton lo decida, puesto que dispone de la preferencia de paso.",
-        "Cuando la distancia y velocidad de los vehiculos permitan hacerlo con seguridad.",
-        "Solamente cuando nohaya vehiculos cerca."
+        "No, si se circula a velocidad reducida."
       ],
-      "imagen": "../img/test_013_p03.jpg"
+      "correcta": 0
     },
     {
-      "texto": "La parte de la via destinada a la circulacion de turismos es...",
+      "texto": "Un peatón pretende cruzar por un paso de peatones debidamente señalizado, ¿cuando debe penetrar en la calzada?",
+      "opciones": [
+        "Cuando el peatón lo decida, puesto que dispone de la preferencia de paso.",
+        "Cuando la distancia y velocidad de los vehículos permitan hacerlo con seguridad.",
+        "Solamente cuando no haya vehículos cerca."
+      ],
+      "imagen": "../img/test_013_p03.jpg",
+      "correcta": 1
+    },
+    {
+      "texto": "La parte de la vía destinada a la circulación de turismos es...",
       "opciones": [
         "la calzada.",
-        "el arcen.",
+        "el arcén.",
         "la mediana."
       ],
-      "imagen": "../img/test_013_p04.jpg"
+      "imagen": "../img/test_013_p04.jpg",
+      "correcta": 0
     },
     {
-      "texto": "El titular de un permiso de la clase B, ¿ipuede conducir una motocicleta dentro del territorio nacional?",
+      "texto": "El titular de un permiso de la clase B, ¿puede conducir una motocicleta dentro del territorio nacional?",
       "opciones": [
-        "Si,unamotocicleta que se pueda conducir con el permiso A1,siemprequela antiguedad del permiso sea superior a3 anos.",
-        "No, no puedo conducir ningun tipo de motocicleta.",
-        "Si, de cualquier tipo."
-      ]
+        "Sí, unamotocicleta que se pueda conducir con el permiso A1, siempre quela antigüedad del permiso sea superior a 3 años.",
+        "No, no puedo conducir ningún tipo de motocicleta.",
+        "Sí, de cualquier tipo."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Hay hielo en la via. Que debe hacer?",
+      "texto": "¿Hay hielo en la vía. Que debe hacer?",
       "opciones": [
         "Circular pisando el freno intermitentemente.",
-        "Circulara poca velocidadpara no tenerque frenar.",
+        "Circular a poca velocidad para no tener que frenar.",
         "Circular con el pie en el embrague."
       ],
-      "imagen": "../img/test_013_p06.jpg"
+      "imagen": "../img/test_013_p06.jpg",
+      "correcta": 1
     },
     {
       "texto": "En caso de caida de la carga en la calzada, el conductor debera...",
       "opciones": [
-        "cortar la circulacion en todo caso.",
-        "proseguir la marcha y avisar del accidentea las autoridades pertinentes.",
-        "retirarla lo antes posible yadoptarentretantolas medidasnecesarias para avisar al resto de usuarios y para que no se dificulte la circulacion."
+        "cortar la circulación en todo caso.",
+        "proseguir la marcha y avisar del accidente a las autoridades pertinentes.",
+        "retirarla lo antes posible y adoptar entretanto las medidas necesarias para avisar al resto de usuarios y para que no se dificulte la circulación."
       ],
-      "imagen": "../img/test_013_p07.jpg"
+      "imagen": "../img/test_013_p07.jpg",
+      "correcta": 2
     },
     {
-      "texto": "En una interseccion sin senalizar, tienen prioridad de paso los vehiculos que circulen por...",
+      "texto": "En una intersección sin señalizar, tienen prioridad de paso los vehículos que circulen por...",
       "opciones": [
         "una glorieta sobre los que pretenden entrar en ella.",
-        "un carril de uso exclusivo para determinados vehiculos.",
-        "la via sin pavimentar."
+        "un carril de uso exclusivo para determinados vehículos.",
+        "la vía sin pavimentar."
       ],
-      "imagen": "../img/test_013_p08.jpg"
+      "imagen": "../img/test_013_p08.jpg",
+      "correcta": 0
     },
     {
-      "texto": "En una via urbana con plataforma unica de calzada y acera, ¿icual sera la velocidad maxima a la quepodremos circular?",
+      "texto": "En una vía urbana con plataforma única de calzada y acera, ¿cual sera la velocidad máxima a la que podremos circular?",
       "opciones": [
-        "A 50 kilometros por hora.",
-        "A30 kilometros por hora.",
-        "A 20 kilometros por hora."
+        "A 50 kilómetros por hora.",
+        "A30 kilómetros por hora.",
+        "A 20 kilómetros por hora."
       ],
-      "imagen": "../img/test_013_p09.jpg"
+      "imagen": "../img/test_013_p09.jpg",
+      "correcta": 2
     },
     {
-      "texto": "En una autopista, ¿idonde puede realizar un cambio de sentido?",
+      "texto": "En una autopista, ¿donde puede realizar un cambio de sentido?",
       "opciones": [
-        "En una autopista no estapermitido nunca el cambiode sentido.",
-        "En aquellos lugares habilitadospor la senalizacion.",
-        "En cualquiermediana opaso abierto."
-      ]
-    },
-    {
-      "texto": "Al llegar a una plaza se encuentra esta senal, ¿ipuede cambiar de sentido?",
-      "opciones": [
-        "No, la senial prohibe el cambio de sentido.",
-        "No, solo puede cambiar de direccion a la izquierda.",
-        "Si, siguiendo la direccion y el sentido de las flechas."
+        "En una autopista no está permitido nunca el cambio de sentido.",
+        "En aquellos lugares habilitadospor la señalización.",
+        "En cualquier mediana o paso abierto."
       ],
-      "imagen": "../img/test_013_p11.jpg"
+      "correcta": 1
     },
     {
-      "texto": "¿En que asiento debe viajar un nino de dos anos?",
+      "texto": "Al llegar a una plaza se encuentra esta señal, ¿puede cambiar de sentido?",
       "opciones": [
-        "En el asiento delantero o trasero, utilizando siempre el cinturon de seguridad.",
-        "En el asiento delantero o trasero,utilizando siempre un dispositivo homologado adaptado a su talla ypeso.",
-        "En el asiento trasero,utilizando siempre un dispositivo homologado adaptado a sutalla ypeso."
-      ]
+        "No, la señal prohíbe el cambio de sentido.",
+        "No, solo puede cambiar de dirección a la izquierda.",
+        "Sí, siguiendo la dirección y el sentido de las flechas."
+      ],
+      "imagen": "../img/test_013_p11.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Conducir con sueno, hace que...",
+      "texto": "¿En que asiento debe viajar un niño de dos años?",
+      "opciones": [
+        "En el asiento de lantero o trasero, utilizando siempre el cinturón de seguridad.",
+        "En el asiento de lantero o trasero, utilizando siempre un dispositivo homologado adaptado a su talla y peso.",
+        "En el asiento trasero, utilizando siempre un dispositivo homologado adaptado a su talla y peso."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "Conducir con sueño, hace que...",
       "opciones": [
         "aumente el tiempo que se tarda en reaccionar.",
-        "los movimientos sean mas rapidos y automatizados.",
-        "sea mas dificil sufrir una distraccion."
-      ]
+        "los movimientos sean más rapidos y automatizados.",
+        "sea más dificil sufrir una distracción."
+      ],
+      "correcta": 0
     },
     {
       "texto": "Uno de los factores que propician la accidentalidad de los jovenes conductores es...",
       "opciones": [
-        "lamayorcapacidadparacontrolarelvehiculo",
-        "lapercepciondela conduccion comoalgopeligroso.",
-        "la menor percepcion del riesgo."
-      ]
+        "la mayor capacidad para controlar el vehículo.",
+        "lapercepcionde la conducción como algo peligroso.",
+        "la menor percepción del riesgo."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Las malas condiciones meteorologicas, como lluvia, viento o hielo, ¿zpueden influir en los accidentes de motocicleta?",
+      "texto": "Las ma las condiciones meteorologicas, como lluvia, viento o hielo, ¿pueden influir en los accidentes de motocicleta?",
       "opciones": [
-        "Si, pero solamente cuando el conductor no va bien equipado.",
-        "Si,ya que existe mayor probabilidad demovimientos bruscos o caidas delos motoristas.",
-        "No, las condicionesmeteorologicas no influyen en la conduccion demotocicletas."
+        "Sí, pero solamente cuando el conductor no va bien equipado.",
+        "Sí, ya que existe mayor probabilidad de movimientos bruscos o caidas de los motoristas.",
+        "No, las condiciones meteorológicas no influyen en la conducción de motocicletas."
       ],
-      "imagen": "../img/test_013_p15.jpg"
+      "imagen": "../img/test_013_p15.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Quien es el responsable de pasar la ITV a un turismo?",
       "opciones": [
-        "El titular del vehiculo.",
+        "El titular del vehículo.",
         "El conductor habitual.",
-        "El tomadordel seguro."
-      ]
-    },
-    {
-      "texto": "En la interseccion de la imagen, ¿iquien tendra preferencia de paso?",
-      "opciones": [
-        "Elvehiculoverde.",
-        "El vehiculo azul porque el verde tiene una linea de detencion.",
-        "El vehiculo azul porque circula por la via principal."
+        "El tomador del seguro."
       ],
-      "imagen": "../img/test_013_p17.jpg"
+      "correcta": 0
     },
     {
-      "texto": "¿Que finalidad tiene el sistema ADAs \"Deteccion de fatiga\"?",
+      "texto": "En la intersección de la imagen, ¿quien tendra preferencia de paso?",
       "opciones": [
-        "Tomar el control de la direccion del vehiculo en caso de somnolencia del conductor.",
-        "Evitar un posible accidente porfatiga o sueno.",
-        "Realizar una detencionde emergencia cuando detecta que el conductorno se encuentra en condiciones optimas de continuar la marcha."
-      ]
-    },
-    {
-      "texto": "Si circula por una carretera con dos carriles para su sentido, ¿ipuede permanecer en el carril izquierdo tras efectuar un adelantamiento?",
-      "opciones": [
-        "Si,puesto que no hay trafico en sentido contrario.",
-        "No, hay que volver al carril derecho, excepto si se va a realizar otro adelantamiento.",
-        "Si, en cualquier caso. 20o. Para conducir con mas seguridad, es necesario... Oa) circular a una velocidad adecuada que se adapte a las circunstancias. Ob)instalarmas dispositivosde seguridad,como los airbags. O c) reducir la velocidad por debajo de la minima generica."
+        "El vehículo verde.",
+        "El vehículo azul porque el verde tiene una línea de detención.",
+        "El vehículo azul porque circula por la vía principal."
       ],
-      "imagen": "../img/test_013_p19.jpg"
+      "imagen": "../img/test_013_p17.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Utilizar pinzas para retener el cinturon de seguridad...",
+      "texto": "¿Que finalidad tiene el sistema ADAS \"Deteccion de fatiga\"?",
       "opciones": [
-        "es conveniente, porque reduce la presion del cinturon sobre el pecho.",
-        "es peligroso,porque reduce la eficacia del cinturon.",
-        "es necesario, como complemento del airbag,enlos vehiculos dotados del mismo."
+        "Tomar el control de la dirección del vehículo en caso de somnolencia del conductor.",
+        "Evitar un posible accidente por fatiga o sueño.",
+        "Realizar una detención de emergencia cuando detecta que el conductor no se encuentra en condiciones optimas de continuar la marcha."
       ],
-      "imagen": "../img/test_013_p21.jpg"
+      "correcta": 1
     },
     {
-      "texto": "El consumo de alcohol, ¿zproduce el mismo efecto en todas las personas?",
+      "texto": "Si circula por una carretera con dos carriles para su sentido, ¿puede permanecer en el carril izquierdo tras efectuar un ade lantamiento?",
       "opciones": [
-        "Si.",
-        "No, puede variar, por ejemplo segun el peso, sexo y estado psicofisico.",
+        "Sí, puesto que no hay trafico en sentido contrario.",
+        "No, hay que volver al carril derecho, excepto si se va a realizar otro ade lantamiento.",
+        "Sí, en cualquier caso."
+      ],
+      "imagen": "../img/test_013_p19.jpg",
+      "correcta": 1
+    },
+    {
+      "texto": "Utilizar pinzas para retener el cinturón de seguridad...",
+      "opciones": [
+        "es conveniente, porque reduce la presión del cinturón sobre el pecho.",
+        "es peligroso, porque reduce la eficacia del cinturón.",
+        "es necesario, como complemento del airbag, enlos vehículos dotados del mismo."
+      ],
+      "imagen": "../img/test_013_p21.jpg",
+      "correcta": 1
+    },
+    {
+      "texto": "El consumo de alcohol, ¿produce el mismo efecto en todas las personas?",
+      "opciones": [
+        "Sí.",
+        "No, puede variar, por ejemplo según el peso, sexo y estado psicofísico.",
         "No, depende solo de la costumbre de beber."
-      ]
-    },
-    {
-      "texto": "¿Esta permitido parar a la vista de la senal en el sentido que indica la flecha?",
-      "opciones": [
-        "Si, solamente prohibe el estacionamiento en el sentido de la flecha.",
-        "No,seprohibetantolaparada como el estacionamiento.",
-        "Si,porque esta senal no hace referencia a la parada."
       ],
-      "imagen": "../img/test_013_p23.jpg"
+      "correcta": 1
     },
     {
-      "texto": "Al aproximarse a un semaforo con una o dos luces amarillas intermitentes, ¿ique hay que hacer?",
+      "texto": "¿Esta permitido parar a la vista de la señal en el sentido que indica la flecha?",
       "opciones": [
-        "Pasarconprecaucion.",
-        "Extremarla precaucion y,si es necesario,cederelpaso.",
+        "Sí, solamente prohíbe el estacionamiento en el sentido de la flecha.",
+        "No, seprohibetantolaparada como el estacionamiento.",
+        "Sí, porque esta señal no hace referencia a la parada."
+      ],
+      "imagen": "../img/test_013_p23.jpg",
+      "correcta": 0
+    },
+    {
+      "texto": "Al aproximarse a un semáforo con una o dos luces amarillas intermitentes, ¿que hay que hacer?",
+      "opciones": [
+        "Pasar con precaución.",
+        "Extremar la precaución y, si es necesario, ceder el paso.",
         "Detenerse en las mismas condiciones que si se tratara de una luz roja fija."
       ],
-      "imagen": "../img/test_013_p24.jpg"
+      "imagen": "../img/test_013_p24.jpg",
+      "correcta": 1
     },
     {
-      "texto": "La distancia de detencion es el espacio que recorre el vehiculo...",
+      "texto": "La distancia de detención es el espacio que recorre el vehículo...",
       "opciones": [
-        "desde que el conductor percibe un peligro hasta que el vehiculo se detiene.",
-        "desdeque el conductorfrena hasta que se detiene el vehiculo."
-      ]
-    },
-    {
-      "texto": "En una interseccion hay un semaforo en verde y una senal de stop, ¿ia cual se debe obedecer?",
-      "opciones": [
-        "Aninguna,porsercontradictorias.",
-        "Alstop,por ser la senal mas restrictiva.",
-        "Al semaforo,por ser la senal prioritaria."
+        "desde que el conductor percibe un peligro hasta que el vehículo se detiene.",
+        "desde que el conductor frena hasta que se detiene el vehículo."
       ],
-      "imagen": "../img/test_013_p26.jpg"
+      "correcta": 0
+    },
+    {
+      "texto": "En una intersección hay un semáforo en verde y una señal de stop, ¿a cual se debe obedecer?",
+      "opciones": [
+        "Aninguna, porsercontradictorias.",
+        "Alstop, por ser la señal más restrictiva.",
+        "Al semáforo, por ser la señal prioritaria."
+      ],
+      "imagen": "../img/test_013_p26.jpg",
+      "correcta": 2
     },
     {
       "texto": "Para conducir un turismo con remolque de menos de 750Kg. de MMA, ique permiso, al menos, ¿se necesita?",
       "opciones": [
         "El de la clase B.",
-        "EI de la clase B+E.",
+        "El de la clase B+E.",
         "El de la clase C1, al ser un remolque ligero."
-      ]
-    },
-    {
-      "texto": "Nada mas producirse un accidente, antes de atender a las victimas hay que...",
-      "opciones": [
-        "proteger y senializar la zona del accidente.",
-        "organizara los servicios deurgencia.",
-        "avisaralapolicia."
       ],
-      "imagen": "../img/test_013_p28.jpg"
+      "correcta": 0
     },
     {
-      "texto": "Un ciclomotor y un turismo llegan al mismo tiempo a un estrechamiento sin senalizar la prioridad, ¿iquien tiene prioridad?",
+      "texto": "Nada más producirse un accidente, antes de atender a las victimas hay que...",
+      "opciones": [
+        "proteger y señalizar la zona del accidente.",
+        "organizar a los servicios de urgencia.",
+        "avisar a la policía."
+      ],
+      "imagen": "../img/test_013_p28.jpg",
+      "correcta": 0
+    },
+    {
+      "texto": "Un ciclomotor y un turismo llegan al mismo tiempo a un estrechamiento sin señalizar la prioridad, ¿quien tiene prioridad?",
       "opciones": [
         "El turismo.",
         "El ciclomotor.",
         "El que pueda circular con menos seguridad."
-      ]
+      ],
+      "correcta": 0
     },
     {
       "texto": "¿Quien debe realizar las actuaciones de soporte vital basico a las victimas de un accidente?",
       "opciones": [
         "El personal especializado, siempre.",
         "Estas actuaciones siempredeben realizarse en un hospital. b)Estas actuaciones siempredeben realizarseenunhospital.",
-        "El personal especializado, salvoque la persona que presteauxilio este totalmente segura deconocerlas y poderlas realizar."
-      ]
+        "El personal especializado, salvo que la persona que preste auxilio este totalmente segura de conocerlas y poderlas realizar."
+      ],
+      "correcta": 2
     }
   ]
 }
