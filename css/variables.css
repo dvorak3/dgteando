@@ -40,6 +40,8 @@
   --aviso: #b45309;  /* Ámbar vial: avisos, racha, foco de teclado */
   --aviso-fondo: #fef3c7;  /* Fondo ámbar suave (avisos, racha, Hard) */
   --acento: #ea580c;  /* Naranja de acento del panel (radio marcado, ayuda) */
+  --aprobado: #c6e56e;  /* Cuadro y punto de «Aprobado» (listado de tests y leyenda) */
+  --suspenso: #f66e6e;  /* Cuadro y punto de «Suspenso» (listado de tests y leyenda) */
   --info: #367cb8;  /* Azul: cabecera de tabla, enlaces e iconos */
   --info-oscuro: #2c4a6e;  /* Texto azul oscuro (legible sobre fondo azul suave) */
   --info-fondo: #e0f2fe;  /* Fondo azul suave (Medium, madurez «Nueva», hover) */
@@ -52,8 +54,6 @@
   --tinte-claro-fuerte: color-mix(in srgb, var(--texto-inverso) 65%, transparent);  /* Tecla sobre botones de color (65 %) */
   --tinte-oscuro-suave: color-mix(in srgb, var(--texto-principal) 10%, transparent);  /* Borde de tecla sobre botones de color (10 %) */
   --primario-velo: color-mix(in srgb, var(--primario) 14%, transparent);  /* Borde del logo (14 %) */
-  --aprobado-suave: color-mix(in srgb, var(--primario) 55%, var(--bg-tarjeta));  /* Cuadro y punto de «Aprobado» */
-  --suspenso-suave: color-mix(in srgb, var(--fallo) 55%, var(--bg-tarjeta));  /* Cuadro y punto de «Suspenso» */
 
   /* ===== TIPOGRAFÍA ===== */
   /* Familias */

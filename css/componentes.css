@@ -121,11 +121,11 @@
 }
 
 .estado-aprobado {
-  background-color: var(--aprobado-suave);
+  background-color: var(--aprobado);
 }
 
 .estado-suspenso {
-  background-color: var(--suspenso-suave);
+  background-color: var(--suspenso);
 }
 
 .estado-pendiente {
@@ -374,11 +374,11 @@
 }
 
 .leyenda-punto-aprobado {
-  background: var(--aprobado-suave);
+  background: var(--aprobado);
 }
 
 .leyenda-punto-suspenso {
-  background: var(--suspenso-suave);
+  background: var(--suspenso);
 }
 
 .leyenda-linea {
