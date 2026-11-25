@@ -1,266 +1,296 @@
 {
   "test_id": 33,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Un dispositivo de retencion infantil, ¿icomo se debe elegir?",
+      "texto": "Un dispositivo de retención infantil, ¿cómo se debe elegir?",
       "opciones": [
-        "El demayor tamano,para quepueda usarse durantemas tiempo.",
-        "En funcion de la estatura del menor y de los limites establecidos por el fabricante.",
-        "En funcion de la edad."
+        "El de mayor tamaño, para que pueda usarse durante más tiempo.",
+        "En función de la estatura del menor y de los límites establecidos por el fabricante.",
+        "En función de la edad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_033_p01.jpg"
     },
     {
-      "texto": "¿Que indican las siguientes senales?",
+      "texto": "¿Qué indican las siguientes señales?",
       "opciones": [
-        "Que a 200m.hay un resalto obaden en la via opavimento en mal estado.",
-        "Proximidad a 200 m. de un canal de agua.",
-        "Distancia maxima quedebenllevar los vehiculos en ese tramo de via."
+        "Que a 200 m hay un resalto o badén en la vía o pavimento en mal estado.",
+        "Proximidad a 200 m de un canal de agua.",
+        "Distancia máxima que deben llevar los vehículos en ese tramo de vía."
       ],
+      "correcta": 0,
       "imagen": "../img/test_033_p02.jpg"
     },
     {
-      "texto": "Si conduce un cuatriciclo equipado con cinturones de seguridad, ¿iquienes los deben utilizar?",
+      "texto": "Si conduce un cuatriciclo equipado con cinturones de seguridad, ¿quiénes los deben utilizar?",
       "opciones": [
-        "Solo el conductor en todo tipo de vias.",
-        "El conductor y el pasajero solo cuando circulen por vias fuera de poblado.",
+        "Solo el conductor en todo tipo de vías.",
+        "El conductor y el pasajero solo cuando circulen por vías fuera de poblado.",
         "Tanto el conductor como el pasajero."
       ],
+      "correcta": 2,
       "imagen": "../img/test_033_p03.jpg"
     },
     {
-      "texto": "Las condiciones meteorologicas, ¿zinfluyen en la distancia de frenado?",
+      "texto": "Las condiciones meteorológicas, ¿influyen en la distancia de frenado?",
       "opciones": [
         "No.",
         "No, solo depende de la velocidad.",
-        "Si."
-      ]
+        "Sí."
+      ],
+      "correcta": 2
     },
     {
       "texto": "La velocidad inadecuada y el alcohol...",
       "opciones": [
-        "pocasvecesprovocanaccidentes.",
+        "pocas veces provocan accidentes.",
         "son factores de riesgo.",
-        "no soncausas deaccidentes."
-      ]
+        "no son causas de accidentes."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En las intersecciones y sus proximidades, si se dificulta el giro o la visibilidad a otros vehiculos, esta prohibido...",
+      "texto": "En las intersecciones y sus proximidades, si se dificulta el giro o la visibilidad a otros vehículos, está prohibido...",
       "opciones": [
-        "parar, unicamente.",
-        "estacionar,solamente.",
+        "parar, únicamente.",
+        "estacionar, solamente.",
         "parar y estacionar."
       ],
+      "correcta": 2,
       "imagen": "../img/test_033_p06.jpg"
     },
     {
-      "texto": "En la proxima interseccion, ¿ique direccion hay que seguir?",
+      "texto": "En la próxima intersección, ¿qué dirección hay que seguir?",
       "opciones": [
         "Girar a la derecha.",
-        "Continuar defrente.",
+        "Continuar de frente.",
         "Girar a la izquierda."
       ],
+      "correcta": 0,
       "imagen": "../img/test_033_p07.jpg"
     },
     {
       "texto": "El navegador debe colocarse...",
       "opciones": [
-        "a una distancia comodapara que el conductor pueda manejarlo en marcha.",
-        "a una altura correcta para no tener que apartar la vista de la conduccion.",
-        "cercadelasientodelacompanante."
+        "a una distancia cómoda para que el conductor pueda manejarlo en marcha.",
+        "a una altura correcta para no tener que apartar la vista de la conducción.",
+        "cerca del asiento del acompañante."
       ],
+      "correcta": 1,
       "imagen": "../img/test_033_p08.jpg"
     },
     {
-      "texto": "Si la separacion entre los trazos de una linea longitudinal discontinua es sensiblemente mas corta que en el caso general anuncia...",
+      "texto": "Si la separación entre los trazos de una línea longitudinal discontinua es sensiblemente más corta que en el caso general anuncia...",
       "opciones": [
-        "la proximidad de una travesia.",
-        "la proximidad de un tramo de via que presenta un riesgo especial.",
-        "la proximidad deun tramo con una pendientemayor al cinco por ciento."
+        "la proximidad de una travesía.",
+        "la proximidad de un tramo de vía que presenta un riesgo especial.",
+        "la proximidad de un tramo con una pendiente mayor al cinco por ciento."
       ],
+      "correcta": 1,
       "imagen": "../img/test_033_p09.jpg"
     },
     {
-      "texto": "Si existe gravilla en la calzada, ¿zque se debe hacer para evitar la rotura del parabrisas?",
+      "texto": "Si existe gravilla en la calzada, ¿qué se debe hacer para evitar la rotura del parabrisas?",
       "opciones": [
-        "Nada,porque si el parabrisas esta limpio sereduce el riesgo de rotura porgravilla.",
-        "Aumentarla separacioncon los vehiculosque nospreceden.",
+        "Nada, porque si el parabrisas está limpio se reduce el riesgo de rotura por gravilla.",
+        "Aumentar la separación con los vehículos que nos preceden.",
         "Aumentar la velocidad para disminuir los efectos del impacto."
       ],
+      "correcta": 1,
       "imagen": "../img/test_033_p10.jpg"
     },
     {
-      "texto": "Si va a efectuar un giro en una interseccion, ¿icomo debe avisar a los demas conductores?",
+      "texto": "Si va a efectuar un giro en una intersección, ¿cómo debe avisar a los demás conductores?",
       "opciones": [
-        "Unicamente con los indicadores de direccion.",
-        "Con los indicadores de direccion o con el brazo.",
+        "Únicamente con los indicadores de dirección.",
+        "Con los indicadores de dirección o con el brazo.",
         "Con el brazo o con el claxon."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En un tramo de via que tiene viviendas con acceso inmediato a la calzada, ¿ise debe tomar alguna precaucion?",
+      "texto": "En un tramo de vía que tiene viviendas con acceso inmediato a la calzada, ¿se debe tomar alguna precaución?",
       "opciones": [
         "No.",
-        "Si, moderarlavelocidad.",
-        "Si, realizar senales acusticas para advertir dela presencia del vehiculo."
+        "Sí, moderar la velocidad.",
+        "Sí, realizar señales acústicas para advertir de la presencia del vehículo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_033_p12.jpg"
     },
     {
-      "texto": "¿Cuando se considera que una via esta insuficientemente iluminada?",
+      "texto": "¿Cuándo se considera que una vía está insuficientemente iluminada?",
       "opciones": [
-        "Cuando no puedo leer una placa de matricula a 10 metros.",
-        "Cuando no se distinga un vehiculo oscuro a 100 metros.",
-        "Cuandono puede leer una placa de matricula a 50metros."
+        "Cuando no puedo leer una placa de matrícula a 10 metros.",
+        "Cuando no se distinga un vehículo oscuro a 100 metros.",
+        "Cuando no puede leer una placa de matrícula a 50 metros."
       ],
+      "correcta": 0,
       "imagen": "../img/test_033_p13.jpg"
     },
     {
-      "texto": "¿Por donde debe circular un rebano?",
+      "texto": "¿Por dónde debe circular un rebaño?",
       "opciones": [
-        "Por el arcen de la izquierda en el sentido de su marcha.",
-        "Lo mas cerca posible del borde derecho de la via en el sentido de su marcha.",
-        "Por el arcen derecho o el izquierdo, indistintamente."
+        "Por el arcén de la izquierda en el sentido de su marcha.",
+        "Lo más cerca posible del borde derecho de la vía en el sentido de su marcha.",
+        "Por el arcén derecho o el izquierdo, indistintamente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_033_p14.jpg"
     },
     {
-      "texto": "Adelantar a varios vehiculos a la vez, ¿iesta permitido?",
+      "texto": "Adelantar a varios vehículos a la vez, ¿está permitido?",
       "opciones": [
-        "Si, cuando se puede volver a la derecha sin peligro en caso de encontrarvehiculos en sentido contrario.",
-        "Si,unicamente cuando los vehiculos adelantados circulan a velocidad lenta.",
+        "Sí, cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario.",
+        "Sí, únicamente cuando los vehículos adelantados circulan a velocidad lenta.",
         "No."
       ],
+      "correcta": 0,
       "imagen": "../img/test_033_p15.jpg"
     },
     {
-      "texto": "¿Cual es la finalidad principal del airbag?",
+      "texto": "¿Cuál es la finalidad principal del airbag?",
       "opciones": [
-        "Ninguna,esun elemento decorativo",
-        "Evitar, en caso deaccidente, el impactode los ocupantes del vehiculo contra los elementos del automovil.",
+        "Ninguna, es un elemento decorativo.",
+        "Evitar, en caso de accidente, el impacto de los ocupantes del vehículo contra los elementos del automóvil.",
         "Disminuir el consumo de combustible."
       ],
+      "correcta": 1,
       "imagen": "../img/test_033_p16.jpg"
     },
     {
-      "texto": "La senal que se observa en la fotografia obliga a mantener esa velocidad maxima en todo el poblado...",
+      "texto": "La señal que se observa en la fotografía obliga a mantener esa velocidad máxima en todo el poblado...",
       "opciones": [
-        "independientemente de otras senales de velocidad que encuentre dentro de el.",
-        "pudiendo rebasarla en 20km/h para adelantar.",
-        "excepto donde se indique otra velocidad"
+        "independientemente de otras señales de velocidad que encuentre dentro de él.",
+        "pudiendo rebasarla en 20 km/h para adelantar.",
+        "excepto donde se indique otra velocidad."
       ],
+      "correcta": 2,
       "imagen": "../img/test_033_p17.jpg"
     },
     {
-      "texto": "La falta de experiencia en la conduccion, ¿ies una de las causas de accidentes en conductores jovenes?",
+      "texto": "La falta de experiencia en la conducción, ¿es una de las causas de accidentes en conductores jóvenes?",
       "opciones": [
         "Sí.",
-        "No, en ningun caso.",
-        "No,porque la experiencia no es importante."
-      ]
+        "No, en ningún caso.",
+        "No, porque la experiencia no es importante."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Esta senal, en un carril de entrada a un peaje, obliga a quienes circulen por el a...",
+      "texto": "Esta señal, en un carril de entrada a un peaje, obliga a quienes circulen por él a...",
       "opciones": [
-        "pagar mediante el sistema de telepeajeocon otrosmedios.",
-        "utilizarlo, aunque el vehiculo no este equipado con el sistema de telepeaje operativo.",
-        "pagar, exclusivamente,mediante el sistema de peaje dinamico o telepeaje."
+        "pagar mediante el sistema de telepeaje o con otros medios.",
+        "utilizarlo, aunque el vehículo no esté equipado con el sistema de telepeaje operativo.",
+        "pagar, exclusivamente, mediante el sistema de peaje dinámico o telepeaje."
       ],
+      "correcta": 2,
       "imagen": "../img/test_033_p19.jpg"
     },
     {
-      "texto": "¿Circular con las ventanillas bajadas zmodifica la aerodinamica del vehiculo?",
+      "texto": "¿Circular con las ventanillas bajadas modifica la aerodinámica del vehículo?",
       "opciones": [
-        "Si, incrementando el consumo decombustible.",
-        "No,ytampoco influye en el consumo de combustible.",
-        "Si,reduciendo el consumo de combustible."
-      ]
+        "Sí, incrementando el consumo de combustible.",
+        "No, y tampoco influye en el consumo de combustible.",
+        "Sí, reduciendo el consumo de combustible."
+      ],
+      "correcta": 0
     },
     {
       "texto": "Cuando una persona tiene una enfermedad...",
       "opciones": [
-        "antes deponerse al volantedebeconocer los efectos secundarios delos medicamentos.",
-        "no debe conducir en ningun caso.",
-        "puedeconsumiralcoholantes de conducir si no toma medicamentos."
-      ]
+        "antes de ponerse al volante debe conocer los efectos secundarios de los medicamentos.",
+        "no debe conducir en ningún caso.",
+        "puede consumir alcohol antes de conducir si no toma medicamentos."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Al circular marcha atras observa una senal de aviso de otro vehiculo. ¿Que debe hacer?",
+      "texto": "Al circular marcha atrás observa una señal de aviso de otro vehículo. ¿Qué debe hacer?",
       "opciones": [
-        "Detener el vehiculo, desistiendo de la maniobra si fuera preciso.",
-        "Terminarlamaniobra lomas rapidoposible.",
-        "Senalizar la maniobra con las luces de emergencia."
-      ]
+        "Detener el vehículo, desistiendo de la maniobra si fuera preciso.",
+        "Terminar la maniobra lo más rápido posible.",
+        "Señalizar la maniobra con las luces de emergencia."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Puede un vehiculo de tres ruedas, arrastrar un remolque?",
+      "texto": "¿Puede un vehículo de tres ruedas arrastrar un remolque?",
       "opciones": [
         "No, nunca.",
-        "Si.",
-        "Si, cualquier remolque."
+        "Sí.",
+        "Sí, cualquier remolque."
       ],
+      "correcta": 1,
       "imagen": "../img/test_033_p23.jpg"
     },
     {
-      "texto": "El conductor que consume cocaina...",
+      "texto": "El conductor que consume cocaína...",
       "opciones": [
-        "es mas agresivo ymenos competitivo.",
-        "puedevolversemas competitivoyagresivo.",
-        "esmastranquiloymenoscompetitivo."
+        "es más agresivo y menos competitivo.",
+        "puede volverse más competitivo y agresivo.",
+        "es más tranquilo y menos competitivo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_033_p24.jpg"
     },
     {
-      "texto": "¿Esta permitida la colocacion en un turismo de vidrios tintados no homologados?",
+      "texto": "¿Está permitida la colocación en un turismo de vidrios tintados no homologados?",
       "opciones": [
-        "Si,pero solamente en las ventanillasdelanteras.",
-        "Si, puesto que no son elementos que influyan en la seguridad vial.",
-        "No,estan prohibidos."
+        "Sí, pero solamente en las ventanillas delanteras.",
+        "Sí, puesto que no son elementos que influyan en la seguridad vial.",
+        "No, están prohibidos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_033_p25.jpg"
     },
     {
-      "texto": "Conducir con sueno, ¿ipor que es peligroso?",
+      "texto": "Conducir con sueño, ¿por qué es peligroso?",
       "opciones": [
-        "Porque se pierde capacidad de reaccion.",
-        "Porque se circula mas despacio.",
-        "Porque el viaje dura mas."
-      ]
+        "Porque se pierde capacidad de reacción.",
+        "Porque se circula más despacio.",
+        "Porque el viaje dura más."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Puede aumentar el tiempo de reaccion del conductor?",
+      "texto": "¿Puede aumentar el tiempo de reacción del conductor?",
       "opciones": [
         "No, solo puede disminuir.",
-        "Si, dependiendo por ejemplo de su estado fisico.",
+        "Sí, dependiendo por ejemplo de su estado físico.",
         "No, siempre es menos de un segundo."
-      ]
+      ],
+      "correcta": 1
     },
     {
       "texto": "¿Puede circular por este cebreado conduciendo un ciclomotor?",
       "opciones": [
-        "Si,porque esta obligado a circularporel arcen,por esa zona.",
-        "No, ningun vehiculo puede circular.",
-        "Si, cuando lo tenga que utilizar para realizar un giro a la izquierda."
+        "Sí, porque está obligado a circular por el arcén, por esa zona.",
+        "No, ningún vehículo puede circular.",
+        "Sí, cuando lo tenga que utilizar para realizar un giro a la izquierda."
       ],
+      "correcta": 0,
       "imagen": "../img/test_033_p28.jpg"
     },
     {
-      "texto": "Un conductor que gira para entrar en otra via, ¿zdebe ceder el paso a un peaton que este cruzandola?",
+      "texto": "Un conductor que gira para entrar en otra vía, ¿debe ceder el paso a un peatón que esté cruzándola?",
       "opciones": [
-        "Solo cuando exista unpasoparapeatones senalizado.",
-        "Si.",
+        "Solo cuando exista un paso para peatones señalizado.",
+        "Sí.",
         "No."
       ],
+      "correcta": 1,
       "imagen": "../img/test_033_p29.jpg"
     },
     {
-      "texto": "¿Esta permitido circular sobre una marca longitudinal discontinua si circula por una calzada con carriles de menos de 3 metros de anchura?",
+      "texto": "¿Está permitido circular sobre una marca longitudinal discontinua si circula por una calzada con carriles de menos de 3 metros de anchura?",
       "opciones": [
         "No, nunca.",
-        "Si, siempre.",
-        "Si, siempre que sea necesario y la seguridad de la circulacion lo permita."
+        "Sí, siempre.",
+        "Sí, siempre que sea necesario y la seguridad de la circulación lo permita."
       ],
+      "correcta": 2,
       "imagen": "../img/test_033_p30.jpg"
     }
   ]

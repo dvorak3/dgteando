@@ -1,256 +1,294 @@
 {
   "test_id": 37,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Si estaciona un turismo en linea en el arcen de una travesia insuficientemente iluminada, ¿ique luces debe dejar encendidas?",
+      "texto": "Si estaciona un turismo en línea en el arcén de una travesía insuficientemente iluminada, ¿qué luces debe dejar encendidas?",
       "opciones": [
-        "Las deposicion y las cortas.",
-        "Las dos deposicion del lado correspondientea la calzadaolas deestacionamiento.",
+        "Las de posición y las cortas.",
+        "Las dos de posición del lado correspondiente a la calzada o las de estacionamiento.",
         "Las de estacionamiento y las de emergencia."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Con hielo en la calzada, si su vehiculo no tiene ABS, es preferible...",
+      "texto": "Con hielo en la calzada, si su vehículo no tiene ABS, es preferible...",
       "opciones": [
         "usar el freno de mano.",
         "evitar pisar el freno.",
         "pisar el freno a fondo, junto con el embrague."
       ],
+      "correcta": 1,
       "imagen": "../img/test_037_p02.jpg"
     },
     {
-      "texto": "La luz verde de un semaforo circular para vehiculos, indica que...",
+      "texto": "La luz verde de un semáforo circular para vehículos indica que...",
       "opciones": [
-        "esta permitido el pasoy con preferencia depaso.",
-        "debe ceder el paso a los demas vehiculos.",
-        "puedepasar,cediendoelpasoa lospeatones"
+        "está permitido el paso y con preferencia de paso.",
+        "debe ceder el paso a los demás vehículos.",
+        "puede pasar, cediendo el paso a los peatones."
       ],
+      "correcta": 0,
       "imagen": "../img/test_037_p03.jpg"
     },
     {
-      "texto": "¿Se pueden llevar objetos opaquetes que salgan por las ventanillas de los lados?",
+      "texto": "¿Se pueden llevar objetos o paquetes que salgan por las ventanillas de los lados?",
       "opciones": [
         "No.",
-        "Si,hasta30centimetros.",
-        "Si, con una tela de color rojo."
-      ]
+        "Sí, hasta 30 centímetros.",
+        "Sí, con una tela de color rojo."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Si tiene que empujar a pie un ciclomotor de dos ruedas por una via interurbana sin arcen, ¿ipor donde circulara?",
+      "texto": "Si tiene que empujar a pie un ciclomotor de dos ruedas por una vía interurbana sin arcén, ¿por dónde circulará?",
       "opciones": [
-        "Eneste caso no sepuede circular.",
+        "En este caso no se puede circular.",
         "Por el lado izquierdo, como los peatones.",
-        "Por el lado derechode la calzada."
+        "Por el lado derecho de la calzada."
       ],
+      "correcta": 2,
       "imagen": "../img/test_037_p05.jpg"
     },
     {
-      "texto": "Para evitar un accidente en caso de frenada brusca, ¿idebe adaptar la velocidad y la distancia de seguridad con el vehiculo de delante si circula con una furgoneta cargada?",
+      "texto": "Para evitar un accidente en caso de frenada brusca, ¿debe adaptar la velocidad y la distancia de seguridad con el vehículo de delante si circula con una furgoneta cargada?",
       "opciones": [
-        "Si, el peso de la carga hace que aumente la distancia defrenado.",
+        "Sí, el peso de la carga hace que aumente la distancia de frenado.",
         "No, el peso de la carga no influye en la distancia de frenado.",
-        "Si, el peso de la carga hace que disminuya la distancia de frenado."
-      ]
+        "Sí, el peso de la carga hace que disminuya la distancia de frenado."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Quela entrada esta prohibida a vehiculos de motor, excepto motocicletas dedos ruedas sin sidecar.",
-        "Que se debe cambiar decarril.",
-        "Que no se debe circular por el carril asi senalizado."
+        "Que la entrada está prohibida a vehículos de motor, excepto motocicletas de dos ruedas sin sidecar.",
+        "Que se debe cambiar de carril.",
+        "Que no se debe circular por el carril así señalizado."
       ],
+      "correcta": 0,
       "imagen": "../img/test_037_p07.jpg"
     },
     {
-      "texto": "¿Que debe hacer ante las indicaciones de los agentes?",
+      "texto": "¿Qué debe hacer ante las indicaciones de los agentes?",
       "opciones": [
         "Pasar por el lado izquierdo porque el agente va a parar a la derecha.",
         "Detenerse en el lado derecho.",
-        "Reducirlamarcha. c) Reducir la marcha."
+        "Reducir la marcha."
       ],
+      "correcta": 1,
       "imagen": "../img/test_037_p08.jpg"
     },
     {
-      "texto": "¿Puede sentir sueno conduciendo aunque haya dormido suficiente?",
+      "texto": "¿Puede sentir sueño conduciendo aunque haya dormido suficiente?",
       "opciones": [
-        "Si, en las primeras horasde la noche.",
+        "Sí, en las primeras horas de la noche.",
         "No.",
-        "Si, especialmente en horas de madrugada y las primeras horas de la tarde. 1o.Unconductorqueha consumidococainasera... O a) inseguro,ya que el conductor no valora correctamente sus capacidades al volante. O b) muy relajado, ya que baja su capacidad de concentracion. Oc)competitivoeimpulsivo."
-      ]
+        "Sí, especialmente en horas de madrugada y las primeras horas de la tarde."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "La tasa maxima de alcohol para un conductor de autobus es de...",
+      "texto": "Un conductor que ha consumido cocaína será...",
       "opciones": [
-        "0,25miligramosporlitrodeaireespirado.",
+        "inseguro, ya que el conductor no valora correctamente sus capacidades al volante.",
+        "muy relajado, ya que baja su capacidad de concentración.",
+        "competitivo e impulsivo."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "La tasa máxima de alcohol para un conductor de autobús es de...",
+      "opciones": [
+        "0,25 miligramos por litro de aire espirado.",
         "0,15 miligramos por litro de aire espirado.",
         "0,40 miligramos por litro de aire espirado."
-      ]
+      ],
+      "correcta": 1
     },
     {
       "texto": "En los turismos, el espejo retrovisor izquierdo es...",
       "opciones": [
-        "obligatorio solo cuando el retrovisor interior no permite el campo de vision reglamentario.",
+        "obligatorio solo cuando el retrovisor interior no permite el campo de visión reglamentario.",
         "siempre obligatorio.",
         "opcional."
       ],
+      "correcta": 1,
       "imagen": "../img/test_037_p12.jpg"
     },
     {
-      "texto": "Esta senal, ¿zque indica?",
+      "texto": "Esta señal, ¿qué indica?",
       "opciones": [
         "Que hay un hotel.",
-        "Que hayuna paradade autobus.",
-        "Quehayun areadedescanso."
+        "Que hay una parada de autobús.",
+        "Que hay un área de descanso."
       ],
+      "correcta": 2,
       "imagen": "../img/test_037_p13.jpg"
     },
     {
-      "texto": "El numero de telefono de emergencias en caso de accidentes de trafico es...",
+      "texto": "El número de teléfono de emergencias en caso de accidentes de tráfico es...",
       "opciones": [
         "el 911.",
         "el 1003.",
         "el 112."
       ],
+      "correcta": 2,
       "imagen": "../img/test_037_p14.jpg"
     },
     {
-      "texto": "Si desea girar a la izquierda, debe saber que esta prohibido cuando no exista...",
+      "texto": "Si desea girar a la izquierda, debe saber que está prohibido cuando no exista...",
       "opciones": [
-        "senal que autorice expresamente el giro.",
+        "señal que autorice expresamente el giro.",
         "visibilidad suficiente.",
         "un carril especialmente acondicionado para realizar el giro."
       ],
+      "correcta": 1,
       "imagen": "../img/test_037_p15.jpg"
     },
     {
-      "texto": "Las condiciones psicofisicas del conductor, ¿zpueden influir en la capacidad de reaccion?",
+      "texto": "Las condiciones psicofísicas del conductor, ¿pueden influir en la capacidad de reacción?",
       "opciones": [
         "No.",
-        "Depende de la situacion.",
-        "si."
-      ]
+        "Depende de la situación.",
+        "Sí."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Por que es aconsejable circular en vias urbanas respetando en todo momento la velocidad establecida para cada tramo de via?",
+      "texto": "¿Por qué es aconsejable circular en vías urbanas respetando en todo momento la velocidad establecida para cada tramo de vía?",
       "opciones": [
-        "Porqueelmotordel vehiculo consumemenos combustible si trabaja a altas revoluciones.",
-        "Porque las multas por exceso de velocidad en vias urbanas son mas caras que en vias interurbanas.",
-        "Porque la mayoriade los atropellos con muerte delpeaton seproducen en vias urbanas."
+        "Porque el motor del vehículo consume menos combustible si trabaja a altas revoluciones.",
+        "Porque las multas por exceso de velocidad en vías urbanas son más caras que en vías interurbanas.",
+        "Porque la mayoría de los atropellos con muerte del peatón se producen en vías urbanas."
       ],
+      "correcta": 2,
       "imagen": "../img/test_037_p17.jpg"
     },
     {
-      "texto": "Para adelantar a este vehiculo...",
+      "texto": "Para adelantar a este vehículo...",
       "opciones": [
         "es obligatorio esperar a un tramo seco de calzada.",
         "debe tenerse especial cuidado, pues las salpicaduras pueden impedir la visibilidad.",
-        "nodebentomarseprecaucionesespeciales."
+        "no deben tomarse precauciones especiales."
       ],
+      "correcta": 1,
       "imagen": "../img/test_037_p18.jpg"
     },
     {
-      "texto": "El conductor de este vehiculo esta indicando que va a...",
+      "texto": "El conductor de este vehículo está indicando que va a...",
       "opciones": [
         "frenar.",
         "desplazarse a la derecha.",
-        "desplazarsea la izquierda."
+        "desplazarse a la izquierda."
       ],
+      "correcta": 0,
       "imagen": "../img/test_037_p19.jpg"
     },
     {
-      "texto": "Circular demasiado cerca del vehiculo de delante, ¿ipuede ser peligroso?",
+      "texto": "Circular demasiado cerca del vehículo de delante, ¿puede ser peligroso?",
       "opciones": [
-        "Si,por el riesgode alcance encaso defrenada.",
-        "No, cuando circule a la misma velocidad que el vehiculo de delante.",
-        "No, cuando los frenos de mi vehiculo esten en buen estado."
+        "Sí, por el riesgo de alcance en caso de frenada.",
+        "No, cuando circule a la misma velocidad que el vehículo de delante.",
+        "No, cuando los frenos de mi vehículo estén en buen estado."
       ],
+      "correcta": 0,
       "imagen": "../img/test_037_p20.jpg"
     },
     {
-      "texto": "El titular de un permiso de la clase B, ¿zpuede conducir motocicletas con sidecar?",
+      "texto": "El titular de un permiso de la clase B, ¿puede conducir motocicletas con sidecar?",
       "opciones": [
-        "Si, pero solo en territorio nacional.",
+        "Sí, pero solo en territorio nacional.",
         "No.",
-        "Si, siempre que el permiso de la clase B tenga una antiguedad superior a 3 anos, solo en territorio nacional."
+        "Sí, siempre que el permiso de la clase B tenga una antigüedad superior a 3 años, solo en territorio nacional."
       ],
+      "correcta": 2,
       "imagen": "../img/test_037_p21.jpg"
     },
     {
-      "texto": "¿Puede adelantar a partir de la senal vertical?",
+      "texto": "¿Puede adelantar a partir de la señal vertical?",
       "opciones": [
-        "No,porqueestaprohibido.",
-        "Si, por la parte izquierda de la calzada.",
-        "Si, por el arcen derecho."
+        "No, porque está prohibido.",
+        "Sí, por la parte izquierda de la calzada.",
+        "Sí, por el arcén derecho."
       ],
+      "correcta": 0,
       "imagen": "../img/test_037_p22.jpg"
     },
     {
-      "texto": "Los conductores que llegan a un puente movil cerrado o con la barrera o semibarrera en movimiento, deben...",
+      "texto": "Los conductores que llegan a un puente móvil cerrado o con la barrera o semibarrera en movimiento deben...",
       "opciones": [
-        "dar la vuelta ybuscarotro itinerario.",
-        "detenerse uno detras de otro en el carril adecuado.",
-        "acelerarypasarcuantoantes."
+        "dar la vuelta y buscar otro itinerario.",
+        "detenerse uno detrás de otro en el carril adecuado.",
+        "acelerar y pasar cuanto antes."
       ],
+      "correcta": 1,
       "imagen": "../img/test_037_p23.jpg"
     },
     {
-      "texto": "Los ninos suelen tener problemas en el trafico porque...",
+      "texto": "Los niños suelen tener problemas en el tráfico porque...",
       "opciones": [
         "su campo visual es mayor.",
-        "su vision periferica es mayor.",
-        "noconocentodosloscomportamientosadecuadosparacircular."
-      ]
-    },
-    {
-      "texto": "¿Como puede afectar la depresion durante la conduccion?",
-      "opciones": [
-        "Recopilandodemasiada informacion relevante, especialmente en situaciones sencillas.",
-        "Creando una sensacion de falsa seguridad.",
-        "Aumentandolasdistracciones."
-      ]
-    },
-    {
-      "texto": "Esta senal indica peligro por...",
-      "opciones": [
-        "pavimentodeslizantepornieve.",
-        "la proximidad de un tramo de la via con visibilidad reducida por niebla, Iluvia o nieve.",
-        "laproximidad deun tramo de la via con desprendimientos frecuentes y la presencia de obstaculos en la calzada."
+        "su visión periférica es mayor.",
+        "no conocen todos los comportamientos adecuados para circular."
       ],
+      "correcta": 2
+    },
+    {
+      "texto": "¿Cómo puede afectar la depresión durante la conducción?",
+      "opciones": [
+        "Recopilando demasiada información relevante, especialmente en situaciones sencillas.",
+        "Creando una sensación de falsa seguridad.",
+        "Aumentando las distracciones."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "Esta señal indica peligro por...",
+      "opciones": [
+        "pavimento deslizante por nieve.",
+        "la proximidad de un tramo de la vía con visibilidad reducida por niebla, lluvia o nieve.",
+        "la proximidad de un tramo de la vía con desprendimientos frecuentes y la presencia de obstáculos en la calzada."
+      ],
+      "correcta": 1,
       "imagen": "../img/test_037_p26.jpg"
     },
     {
-      "texto": "Si conduce una motocicleta, ¿zes aconsejable utilizar guantes?",
+      "texto": "Si conduce una motocicleta, ¿es aconsejable utilizar guantes?",
       "opciones": [
-        "Si, incluso en verano, para proteger las manos en caso de caida.",
-        "No,porque pueden dificultar la conduccion.",
-        "Si, su uso es obligatorio en todo tipo de vias."
+        "Sí, incluso en verano, para proteger las manos en caso de caída.",
+        "No, porque pueden dificultar la conducción.",
+        "Sí, su uso es obligatorio en todo tipo de vías."
       ],
+      "correcta": 0,
       "imagen": "../img/test_037_p27.jpg"
     },
     {
-      "texto": "En la disposicion mas generalizada en los mandos de una motocicleta, el acelerador se acciona con...",
+      "texto": "En la disposición más generalizada en los mandos de una motocicleta, el acelerador se acciona con...",
       "opciones": [
-        "la mano izquierda",
+        "la mano izquierda.",
         "la mano derecha.",
         "el pie derecho."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Se denomina distancia de reaccion:",
+      "texto": "Se denomina distancia de reacción:",
       "opciones": [
-        "La distancia recorrida desde que se comienza a frenar hasta que se detiene el vehiculo.",
-        "La distancia recorrida desde que se ve un peligro hasta que se actua sobre los mandos del vehiculo.",
-        "La distancia que debe dejarse entre dos vehiculos cuando van circulando uno detras del otro."
-      ]
+        "La distancia recorrida desde que se comienza a frenar hasta que se detiene el vehículo.",
+        "La distancia recorrida desde que se ve un peligro hasta que se actúa sobre los mandos del vehículo.",
+        "La distancia que debe dejarse entre dos vehículos cuando van circulando uno detrás del otro."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Circulando a mas de 4o km/h y sin deslumbrar a otros usuarios, ¿ien que vias debe utilizar las luces de largo alcance?",
+      "texto": "Circulando a más de 40 km/h y sin deslumbrar a otros usuarios, ¿en qué vías debe utilizar las luces de largo alcance?",
       "opciones": [
-        "En las vias interurbanas insuficientemente iluminadas.",
-        "En cualquier tipo de via, siempre que sea necesario.",
-        "En las vias urbanas,incluidas lastravesias."
-      ]
+        "En las vías interurbanas insuficientemente iluminadas.",
+        "En cualquier tipo de vía, siempre que sea necesario.",
+        "En las vías urbanas, incluidas las travesías."
+      ],
+      "correcta": 0
     }
   ]
 }

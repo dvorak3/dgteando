@@ -1,258 +1,288 @@
 {
   "test_id": 35,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "No pueden circular por autopista ...",
+      "texto": "No pueden circular por autopista...",
       "opciones": [
-        "lasmotocicletas.",
+        "las motocicletas.",
         "los ciclomotores.",
-        "los camiones de mas de 3.500 kg de MMA."
+        "los camiones de más de 3.500 kg de MMA."
       ],
+      "correcta": 1,
       "imagen": "../img/test_035_p01.jpg"
     },
     {
-      "texto": "El alcohol, ¿zafecta a todas las personas por igual?",
+      "texto": "El alcohol, ¿afecta a todas las personas por igual?",
       "opciones": [
-        "Si, salvo que se haya tomado enayunas.",
-        "Si, cuando se ha tomado la misma cantidad.",
-        "No, sus efectos dependen defactores como la constitucion corporal, la edad o el habito de beber."
+        "Sí, salvo que se haya tomado en ayunas.",
+        "Sí, cuando se ha tomado la misma cantidad.",
+        "No, sus efectos dependen de factores como la constitución corporal, la edad o el hábito de beber."
       ],
+      "correcta": 2,
       "imagen": "../img/test_035_p02.jpg"
     },
     {
-      "texto": "Su vehiculo queda detenido por una averia en el arcen, ¿idebe senalizarlo?",
+      "texto": "Su vehículo queda detenido por una avería en el arcén, ¿debe señalizarlo?",
       "opciones": [
-        "Si, con la senal de emergencia y el dispositivode presenalizacionde peligro.",
-        "No, en el arcen no esnecesario.",
-        "Si, unicamente con el dispositivo de presenalizacion de peligro."
+        "Sí, con la señal de emergencia y el dispositivo de preseñalización de peligro.",
+        "No, en el arcén no es necesario.",
+        "Sí, únicamente con el dispositivo de preseñalización de peligro."
       ],
+      "correcta": 0,
       "imagen": "../img/test_035_p03.jpg"
     },
     {
-      "texto": "Aunque este prohibido el adelantamiento, un turismo podra rebasar, incluso invadiendo el sentido contrario, a...",
+      "texto": "Aunque esté prohibido el adelantamiento, un turismo podrá rebasar, incluso invadiendo el sentido contrario, a...",
       "opciones": [
-        "cualquier camion.",
-        "conductoresdebicicletas.",
-        "cualquierautobus ocamion quecirculelentamente."
+        "cualquier camión.",
+        "conductores de bicicletas.",
+        "cualquier autobús o camión que circule lentamente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_035_p04.jpg"
     },
     {
-      "texto": "Estas senales, sobre una carretera convencional, indican, desvio hacia...",
+      "texto": "Estas señales, sobre una carretera convencional, indican desvío hacia...",
       "opciones": [
         "otra carretera convencional.",
-        "una autopistaoautovia.",
-        "la poblacion indicada."
+        "una autopista o autovía.",
+        "la población indicada."
       ],
+      "correcta": 1,
       "imagen": "../img/test_035_p05.jpg"
     },
     {
-      "texto": "La regulacion, el funcionamiento y el estado del sistema de alumbrado, ¿zhay que revisarlos con frecuencia?",
+      "texto": "La regulación, el funcionamiento y el estado del sistema de alumbrado, ¿hay que revisarlos con frecuencia?",
       "opciones": [
-        "No,con unavez cadados otres anos es suficiente.",
-        "Si.",
-        "No, solo es necesario cambiar las bombillas cuando esten fundidas."
-      ]
+        "No, con una vez cada dos o tres años es suficiente.",
+        "Sí.",
+        "No, solo es necesario cambiar las bombillas cuando estén fundidas."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Si no existe via o parte de ella que les este especialmente destinada, circularan por el arcen...",
+      "texto": "Si no existe vía o parte de ella que les esté especialmente destinada, circularán por el arcén...",
       "opciones": [
         "los turismos con remolque.",
-        "los vehiculos para personas de movilidad reducida.",
-        "cualquier vehiculo en supuestos de trafico denso."
-      ]
+        "los vehículos para personas de movilidad reducida.",
+        "cualquier vehículo en supuestos de tráfico denso."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En condiciones climatologicas adversas, ¿zdebe aumentarse la distancia de seguridad?",
+      "texto": "En condiciones climatológicas adversas, ¿debe aumentarse la distancia de seguridad?",
       "opciones": [
-        "Si, pero solo de noche.",
-        "Si, en todo caso.",
-        "No, nunca. c) No, nunca."
+        "Sí, pero solo de noche.",
+        "Sí, en todo caso.",
+        "No, nunca."
       ],
+      "correcta": 1,
       "imagen": "../img/test_035_p08.jpg"
     },
     {
-      "texto": "Esta senal, ¿ique indica?",
+      "texto": "Esta señal, ¿qué indica?",
       "opciones": [
         "Prohibido girar a la izquierda, solamente.",
         "Prohibido girar a la izquierda y a la derecha.",
         "Prohibido girar a la izquierda y cambiar de sentido."
       ],
+      "correcta": 2,
       "imagen": "../img/test_035_p09.jpg"
     },
     {
-      "texto": "¿Puede evitar el conductor un accidente debido al estado del vehiculo?",
+      "texto": "¿Puede evitar el conductor un accidente debido al estado del vehículo?",
       "opciones": [
-        "No,porque el conductor no es el responsable del mantenimiento del vehiculo.",
-        "No, un fallo mecanico es siempre imprevisible e inevitable.",
-        "Si, en cierto modo, porque el estado del vehiculo depende de el."
-      ]
-    },
-    {
-      "texto": "¿Que efectos tiene en la conduccion una conversacion por el movil que supera el minuto y medio?",
-      "opciones": [
-        "El conductor deja de percibir una parte importante de las senales, incluso con el dispositivo de manos libres.",
-        "La velocidad media aumenta, incluso con el dispositivo de manos libres.",
-        "El conductor no deja de percibir las senales si usa el dispositivo de manos libres."
-      ]
-    },
-    {
-      "texto": "¿Es recomendable utilizar el alumbrado interior de su vehiculo, circulando de noche en una via insuficientemente iluminada?",
-      "opciones": [
-        "No,ya que en estas circunstancias,puede afectar negativamentea la visibilidad.",
-        "Si, porque nos permite ver mejor dentro del vehiculo.",
-        "Si, se debe utilizar entre la puesta y la salida del sol."
+        "No, porque el conductor no es el responsable del mantenimiento del vehículo.",
+        "No, un fallo mecánico es siempre imprevisible e inevitable.",
+        "Sí, en cierto modo, porque el estado del vehículo depende de él."
       ],
+      "correcta": 2
+    },
+    {
+      "texto": "¿Qué efectos tiene en la conducción una conversación por el móvil que supera el minuto y medio?",
+      "opciones": [
+        "El conductor deja de percibir una parte importante de las señales, incluso con el dispositivo de manos libres.",
+        "La velocidad media aumenta, incluso con el dispositivo de manos libres.",
+        "El conductor no deja de percibir las señales si usa el dispositivo de manos libres."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "¿Es recomendable utilizar el alumbrado interior de su vehículo, circulando de noche en una vía insuficientemente iluminada?",
+      "opciones": [
+        "No, ya que en estas circunstancias puede afectar negativamente a la visibilidad.",
+        "Sí, porque nos permite ver mejor dentro del vehículo.",
+        "Sí, se debe utilizar entre la puesta y la salida del sol."
+      ],
+      "correcta": 0,
       "imagen": "../img/test_035_p12.jpg"
     },
     {
-      "texto": "Los ninosmenores de doce anos, ¿ipueden viajar como pasajeros en las motocicletas?",
+      "texto": "Los niños menores de doce años, ¿pueden viajar como pasajeros en las motocicletas?",
       "opciones": [
-        "Si,en cualquier caso.",
-        "Si,siemprequelleven uncascodebidamentehomologado",
+        "Sí, en cualquier caso.",
+        "Sí, siempre que lleven un casco debidamente homologado.",
         "No, como norma general."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Los jovenes suelen realizar mas maniobras de riesgo...",
+      "texto": "Los jóvenes suelen realizar más maniobras de riesgo...",
       "opciones": [
         "cuando van solos.",
-        "cuandovanacompaniados.",
-        "tantocuandovan solos como cuandovan acompanados."
-      ]
+        "cuando van acompañados.",
+        "tanto cuando van solos como cuando van acompañados."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Debe comprobar antes de circular marcha atras que...",
+      "texto": "Debe comprobar antes de circular marcha atrás que...",
       "opciones": [
-        "puede hacerlo sin ocasionar peligro a otros usuarios de la via,ayudandose de las indicaciones de otra persona, si fuera necesario.",
-        "no va a recorrer mas de 50 metros.",
-        "tiene visibilidad suficiente, unicamente."
-      ]
+        "puede hacerlo sin ocasionar peligro a otros usuarios de la vía, ayudándose de las indicaciones de otra persona, si fuera necesario.",
+        "no va a recorrer más de 50 metros.",
+        "tiene visibilidad suficiente, únicamente."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Una motocicleta con un solo espejo retrovisor, ¿zen que lado debe llevarlo?",
+      "texto": "Una motocicleta con un solo espejo retrovisor, ¿en qué lado debe llevarlo?",
       "opciones": [
         "En el lado derecho o en el izquierdo, es indiferente.",
         "En el lado izquierdo.",
         "En el lado derecho."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Via reservada para ciclos.",
-        "Viareservadaaciclomotores.",
-        "Prohibicion de entrada a ciclomotores."
+        "Vía reservada para ciclos.",
+        "Vía reservada a ciclomotores.",
+        "Prohibición de entrada a ciclomotores."
       ],
+      "correcta": 1,
       "imagen": "../img/test_035_p17.jpg"
     },
     {
-      "texto": "¿Que sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturon de seguridad?",
+      "texto": "¿Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad?",
       "opciones": [
-        "Los airbagy losreposacabezas.",
-        "La suspension y los amortiguadores.",
+        "Los airbag y los reposacabezas.",
+        "La suspensión y los amortiguadores.",
         "Los frenos y el ABS."
-      ]
-    },
-    {
-      "texto": "Si esta tomando medicamentos y va a conducir...",
-      "opciones": [
-        "debe leerlas indicaciones del prospecto y,en caso de duda, consultar al medico o al farmaceutico",
-        "debe esperaralmenos dos horasantesde conducir.",
-        "no es necesario tomar ninguna precaucion cuando no se necesita receta medica para poder comprarlos."
-      ]
-    },
-    {
-      "texto": "Detiene su vehiculo al ver a un agente que tiene el brazo extendido horizontalmente, puede reanudar la marcha cuando el agente...",
-      "opciones": [
-        "emitaunostoquesdesilbatocortosyfrecuentes.",
-        "baje el brazo.",
-        "lo indique con otra senal."
       ],
+      "correcta": 0
+    },
+    {
+      "texto": "Si está tomando medicamentos y va a conducir...",
+      "opciones": [
+        "debe leer las indicaciones del prospecto y, en caso de duda, consultar al médico o al farmacéutico.",
+        "debe esperar al menos dos horas antes de conducir.",
+        "no es necesario tomar ninguna precaución cuando no se necesita receta médica para poder comprarlos."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "Detiene su vehículo al ver a un agente que tiene el brazo extendido horizontalmente, puede reanudar la marcha cuando el agente...",
+      "opciones": [
+        "emita unos toques de silbato cortos y frecuentes.",
+        "baje el brazo.",
+        "lo indique con otra señal."
+      ],
+      "correcta": 2,
       "imagen": "../img/test_035_p20.jpg"
     },
     {
-      "texto": "Un turismo, ¿ique debe hacer para incorporarse a la circulacion?",
+      "texto": "Un turismo, ¿qué debe hacer para incorporarse a la circulación?",
       "opciones": [
-        "Asegurarse dequepuede hacerlo sinpeligropara losdemas usuarios.",
-        "Senalizar la maniobra porquelos demas tienen que ceder el paso.",
+        "Asegurarse de que puede hacerlo sin peligro para los demás usuarios.",
+        "Señalizar la maniobra porque los demás tienen que ceder el paso.",
         "Seguir siempre las indicaciones de otra persona."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Las operaciones de carga y descarga se llevaran a cabo...",
+      "texto": "Las operaciones de carga y descarga se llevarán a cabo...",
       "opciones": [
-        "por el lado del vehiculo mas proximo al centro de la calzada.",
-        "dentro de la via.",
-        "procurando evitarruidos ymolestias innecesarias."
-      ]
+        "por el lado del vehículo más próximo al centro de la calzada.",
+        "dentro de la vía.",
+        "procurando evitar ruidos y molestias innecesarias."
+      ],
+      "correcta": 2
     },
     {
       "texto": "Un carril delimitado por marcas longitudinales dobles discontinuas es un carril...",
       "opciones": [
         "reversible.",
-        "adicional de circulacion.",
-        "de utilizacion en sentido contrario al habitual."
+        "adicional de circulación.",
+        "de utilización en sentido contrario al habitual."
       ],
+      "correcta": 0,
       "imagen": "../img/test_035_p23.jpg"
     },
     {
-      "texto": "Esta prohibido conducir un camion de menos de 3.50o kg de MMA con una tasa de alcohol en aire espirado superior a...",
+      "texto": "Está prohibido conducir un camión de menos de 3.500 kg de MMA con una tasa de alcohol en aire espirado superior a...",
       "opciones": [
         "0,25 miligramos por litro.",
         "0,15 miligramos por litro.",
         "0,30 miligramos por litro."
-      ]
-    },
-    {
-      "texto": "Un permiso de conduccion caducado, ¿iautoriza a su titular a conducir?",
-      "opciones": [
-        "Si, porque aunque haya caducado tiene permiso.",
-        "Si, salvo que haya transcurrido mas de un ano.",
-        "No."
-      ]
-    },
-    {
-      "texto": "¿Que le puede suceder a un conductor que circula a velocidad inadecuada?",
-      "opciones": [
-        "Que sea capaz de controlar mejor su vehiculo anteuna situacion de emergencia.",
-        "Queno sea capazdecontrolarsuvehiculoanteunasituacionde emergencia.",
-        "Que su tiempo de reaccion disminuya."
-      ]
-    },
-    {
-      "texto": "¿Quienes pueden ocupar los asientos delanteros del turismo?",
-      "opciones": [
-        "Solo los mayoresde18 anos.",
-        "Los menores de 18 anos, cuando midan mas de 135 centimetros de altura y lleven abrochado el cinturon de seguridad.",
-        "Los menores de 18 anos, cuandomidan mas de 150 centimetros de altura."
-      ]
-    },
-    {
-      "texto": "Como norma general, en una via interurbana la parada y el estacionamiento se realizaran...",
-      "opciones": [
-        "siempre fuera de la calzada, en el lado derecho de la misma y dejando libre la parte transitable del arcen.",
-        "en el arcen, cuando sea transitable y suficiente.",
-        "siempre en el arcen."
       ],
+      "correcta": 0
+    },
+    {
+      "texto": "Un permiso de conducción caducado, ¿autoriza a su titular a conducir?",
+      "opciones": [
+        "Sí, porque aunque haya caducado tiene permiso.",
+        "Sí, salvo que haya transcurrido más de un año.",
+        "No."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "¿Qué le puede suceder a un conductor que circula a velocidad inadecuada?",
+      "opciones": [
+        "Que sea capaz de controlar mejor su vehículo ante una situación de emergencia.",
+        "Que no sea capaz de controlar su vehículo ante una situación de emergencia.",
+        "Que su tiempo de reacción disminuya."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "¿Quiénes pueden ocupar los asientos delanteros del turismo?",
+      "opciones": [
+        "Solo los mayores de 18 años.",
+        "Los menores de 18 años, cuando midan más de 135 centímetros de altura y lleven abrochado el cinturón de seguridad.",
+        "Los menores de 18 años, cuando midan más de 150 centímetros de altura."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Como norma general, en una vía interurbana la parada y el estacionamiento se realizarán...",
+      "opciones": [
+        "siempre fuera de la calzada, en el lado derecho de la misma y dejando libre la parte transitable del arcén.",
+        "en el arcén, cuando sea transitable y suficiente.",
+        "siempre en el arcén."
+      ],
+      "correcta": 0,
       "imagen": "../img/test_035_p28.jpg"
     },
     {
-      "texto": "La parte delantera del vehiculo, ¿ipor que no debe modificarse?",
+      "texto": "La parte delantera del vehículo, ¿por qué no debe modificarse?",
       "opciones": [
-        "Porque suele estar disenadapara evitarlesiones a los peatones.",
-        "Porque el vehiculo pierde velocidad punta.",
-        "Unicamente porque lo prohiben las normas."
-      ]
+        "Porque suele estar diseñada para evitar lesiones a los peatones.",
+        "Porque el vehículo pierde velocidad punta.",
+        "Únicamente porque lo prohíben las normas."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Cuando se considera que un vehiculo estacionado constituye un grave obstaculo para la circulacion?",
+      "texto": "¿Cuándo se considera que un vehículo estacionado constituye un grave obstáculo para la circulación?",
       "opciones": [
-        "Cuando eltiempode estacionamiento exceda de15minutos.",
-        "Cuando se efectue en una zona reservada a carga o descarga, fuera delas horas senaladas.",
-        "Cuandoseefectueendoblefila sinconductor."
-      ]
+        "Cuando el tiempo de estacionamiento exceda de 15 minutos.",
+        "Cuando se efectúe en una zona reservada a carga o descarga, fuera de las horas señaladas.",
+        "Cuando se efectúe en doble fila sin conductor."
+      ],
+      "correcta": 2
     }
   ]
 }

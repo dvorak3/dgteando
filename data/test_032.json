@@ -1,261 +1,292 @@
 {
   "test_id": 32,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Esta senal prohibe ...",
+      "texto": "Esta señal prohíbe...",
       "opciones": [
-        "el estacionamiento, en el lado dela calzada en que esta situada la senal.Permite la parada.",
-        "la parada los dias pares, en el lado de la calzada en que esta situada la senal.",
-        "la parada y el estacionamiento, en el lado de la calzada en que esta situada la senal."
+        "el estacionamiento, en el lado de la calzada en que está situada la señal. Permite la parada.",
+        "la parada los días pares, en el lado de la calzada en que está situada la señal.",
+        "la parada y el estacionamiento, en el lado de la calzada en que está situada la señal."
       ],
+      "correcta": 0,
       "imagen": "../img/test_032_p01.jpg"
     },
     {
-      "texto": "En una caida conduciendo un vehiculo de dos ruedas, el casco...",
+      "texto": "En una caída conduciendo un vehículo de dos ruedas, el casco...",
       "opciones": [
-        "evita la abrasiondela caray la cabeza al arrastrarpor el pavimento.",
-        "protegedegolpes articulares.",
-        "reducelaslesioneslumbares."
+        "evita la abrasión de la cara y la cabeza al arrastrar por el pavimento.",
+        "protege de golpes articulares.",
+        "reduce las lesiones lumbares."
       ],
+      "correcta": 0,
       "imagen": "../img/test_032_p02.jpg"
     },
     {
-      "texto": "En esta via de doble sentido de circulacion y tres carriles, ¿zdonde debe colocarse el vehiculo azul para cambiar de direccion a la izquierda?",
+      "texto": "En esta vía de doble sentido de circulación y tres carriles, ¿dónde debe colocarse el vehículo azul para cambiar de dirección a la izquierda?",
       "opciones": [
-        "En el carril situado mas a la derecha.",
+        "En el carril situado más a la derecha.",
         "En el carril central.",
-        "En el carril situado mas a la izquierda,si no esta ocupado."
+        "En el carril situado más a la izquierda, si no está ocupado."
       ],
+      "correcta": 1,
       "imagen": "../img/test_032_p03.jpg"
     },
     {
-      "texto": "Si debido a una averia circula por una autopista a velocidad anormalmente reducida perturbando la circulacion, ¿ique debe hacer?",
+      "texto": "Si debido a una avería circula por una autopista a velocidad anormalmente reducida perturbando la circulación, ¿qué debe hacer?",
       "opciones": [
-        "Circular por el arcen y abandonarla por la primera salida.",
-        "Detenerse en el arcenysolicitarayuda.",
-        "Circularpor el arcen hasta la zona de servicios mas proxima."
-      ]
+        "Circular por el arcén y abandonarla por la primera salida.",
+        "Detenerse en el arcén y solicitar ayuda.",
+        "Circular por el arcén hasta la zona de servicios más próxima."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El impacto economico de los accidentes de trafico afecta a...",
+      "texto": "El impacto económico de los accidentes de tráfico afecta a...",
       "opciones": [
-        "los conductores que han tenido un accidente al pagar el seguro de su vehiculo.",
-        "todos los ciudadanos,directa o indirectamente.",
-        "las companias aseguradoras unicamente."
-      ]
+        "los conductores que han tenido un accidente al pagar el seguro de su vehículo.",
+        "todos los ciudadanos, directa o indirectamente.",
+        "las compañías aseguradoras únicamente."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Debe saber que a partir de la senal hay peligro por la proximidad de...",
+      "texto": "Debe saber que a partir de la señal hay peligro por la proximidad de...",
       "opciones": [
         "grandes charcos de agua que obligan a reducir la velocidad.",
-        "una zona condesprendimientos frecuentes.",
-        "un tramo de via donde existe el riesgo de que se proyecte la gravilla al pasar los vehiculos."
+        "una zona con desprendimientos frecuentes.",
+        "un tramo de vía donde existe el riesgo de que se proyecte la gravilla al pasar los vehículos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_032_p06.jpg"
     },
     {
-      "texto": "Conducir por una via en mal estado, ¿ipuede favorecer la fatiga?",
+      "texto": "Conducir por una vía en mal estado, ¿puede favorecer la fatiga?",
       "opciones": [
         "Sí.",
         "No.",
         "Solo si conduce de noche."
       ],
+      "correcta": 0,
       "imagen": "../img/test_032_p07.jpg"
     },
     {
-      "texto": "Al circular bajo condiciones de visibilidad especialmente desfavorables, ¿zes obligatorio encender la luz antiniebla trasera?",
+      "texto": "Al circular bajo condiciones de visibilidad especialmente desfavorables, ¿es obligatorio encender la luz antiniebla trasera?",
       "opciones": [
         "No, es solo opcional.",
-        "Si, siendo tambien obligatorio encender la luz de largo alcance.",
-        "Si,para indicar su posicion al resto de los usuarios."
+        "Sí, siendo también obligatorio encender la luz de largo alcance.",
+        "Sí, para indicar su posición al resto de los usuarios."
       ],
+      "correcta": 2,
       "imagen": "../img/test_032_p08.jpg"
     },
     {
-      "texto": "¿Puede el conductor de un turismo circular con un solo dispositivo de presenalizacion de peligro?",
+      "texto": "¿Puede el conductor de un turismo circular con un solo dispositivo de preseñalización de peligro?",
       "opciones": [
-        "No,debe llevardos dispositivos depresenalizacion obligatoriamente.",
-        "No,debellevar tres dispositivos de presenalizacion obligatoriamente.",
-        "Si, debe llevar solo un dispositivo de presenalizacion V-16."
+        "No, debe llevar dos dispositivos de preseñalización obligatoriamente.",
+        "No, debe llevar tres dispositivos de preseñalización obligatoriamente.",
+        "Sí, debe llevar solo un dispositivo de preseñalización V-16."
       ],
+      "correcta": 2,
       "imagen": "../img/test_032_p09.jpg"
     },
     {
-      "texto": "El consumo de alcohol, ¿zque produce en el conductor?",
+      "texto": "El consumo de alcohol, ¿qué produce en el conductor?",
       "opciones": [
-        "Aumento del tiempo de reaccion (= actua mas lento).",
-        "Disminucion del tiempo de reaccion (=actua mas rapido).",
-        "Aumento del campo visual (=vemejor)."
-      ]
+        "Aumento del tiempo de reacción (= actúa más lento).",
+        "Disminución del tiempo de reacción (= actúa más rápido).",
+        "Aumento del campo visual (= ve mejor)."
+      ],
+      "correcta": 0
     },
     {
       "texto": "Es obligatorio finalizar un adelantamiento...",
       "opciones": [
-        "incorporandose al carril de forma gradual sin obstaculizar.",
-        "unicamente senalizando el desplazamiento lateral.",
-        "incorporandose al carril derecho a la mayor velocidad posible."
+        "incorporándose al carril de forma gradual sin obstaculizar.",
+        "únicamente señalizando el desplazamiento lateral.",
+        "incorporándose al carril derecho a la mayor velocidad posible."
       ],
+      "correcta": 0,
       "imagen": "../img/test_032_p11.jpg"
     },
     {
-      "texto": "Con el permiso B para conducir turismos, ¿ique otros vehiculos se pueden conducir?",
+      "texto": "Con el permiso B para conducir turismos, ¿qué otros vehículos se pueden conducir?",
       "opciones": [
-        "Motocicletasdemasde125cc.",
-        "Ciclomotores de dos,tres y cuatro ruedas.",
-        "Todos los vehiculos que se pueden conducir con el permiso A."
-      ]
-    },
-    {
-      "texto": "Los conductores estan obligados a advertir mediante senales opticas...",
-      "opciones": [
-        "unicamente las maniobras que impliquenun desplazamiento lateral.",
-        "sololas maniobras queno impliquen un desplazamientolateral.",
-        "toda maniobra que implique undesplazamientolateral ohacia atras."
-      ]
-    },
-    {
-      "texto": "¿Esta prohibida la parada en las intersecciones y sus proximidades de las vias interurbanas?",
-      "opciones": [
-        "Si, en cualquier via.",
-        "No.",
-        "Si, cuando se genere peligro por falta de visibilidad."
-      ]
-    },
-    {
-      "texto": "¿Que elementos del vehiculo requieren una mayor supervision por parte del conductor?",
-      "opciones": [
-        "La amortiguacion.",
-        "Losneumaticos.",
-        "Los frenos."
-      ]
-    },
-    {
-      "texto": "Esta senal, ¿zprohibe proseguir la marcha si no dispone de cadenas para nieve?",
-      "opciones": [
-        "No,ya que esta senal solo recomienda la utilizacion de cadenas.",
-        "Si, en cualquier caso.",
-        "Si, a no ser que disponga de otros dispositivos autorizados,igual de eficaces."
+        "Motocicletas de más de 125 cc.",
+        "Ciclomotores de dos, tres y cuatro ruedas.",
+        "Todos los vehículos que se pueden conducir con el permiso A."
       ],
+      "correcta": 1
+    },
+    {
+      "texto": "Los conductores están obligados a advertir mediante señales ópticas...",
+      "opciones": [
+        "únicamente las maniobras que impliquen un desplazamiento lateral.",
+        "solo las maniobras que no impliquen un desplazamiento lateral.",
+        "toda maniobra que implique un desplazamiento lateral o hacia atrás."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "¿Está prohibida la parada en las intersecciones y sus proximidades de las vías interurbanas?",
+      "opciones": [
+        "Sí, en cualquier vía.",
+        "No.",
+        "Sí, cuando se genere peligro por falta de visibilidad."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "¿Qué elementos del vehículo requieren una mayor supervisión por parte del conductor?",
+      "opciones": [
+        "La amortiguación.",
+        "Los neumáticos.",
+        "Los frenos."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Esta señal, ¿prohíbe proseguir la marcha si no dispone de cadenas para nieve?",
+      "opciones": [
+        "No, ya que esta señal solo recomienda la utilización de cadenas.",
+        "Sí, en cualquier caso.",
+        "Sí, a no ser que disponga de otros dispositivos autorizados, igual de eficaces."
+      ],
+      "correcta": 2,
       "imagen": "../img/test_032_p16.jpg"
     },
     {
-      "texto": "Una vez inmovilizado el vehiculo, los usuarios deberan entrar o salir..",
+      "texto": "Una vez inmovilizado el vehículo, los usuarios deberán entrar o salir...",
       "opciones": [
-        "siemprepor el lado del conductor.",
-        "porcualquierlado,tomando las debidasprecauciones.",
-        "como norma general,por el lado mas proximo a la acera o arcen."
-      ]
-    },
-    {
-      "texto": "Al dar marcha atras para estacionar, ¿ise puede invadir un cruce de vias?",
-      "opciones": [
-        "Si, siemprequeno recorramasde15metros.",
-        "Si.",
-        "No."
-      ]
-    },
-    {
-      "texto": "Las personas mayores pueden sufrir mas accidentes de circulacion en situaciones...",
-      "opciones": [
-        "dondehaytiemposuficienteparareaccionar.",
-        "que exigen una respuesta rapida.",
-        "la edad no influye en la accidentalidad."
-      ]
-    },
-    {
-      "texto": "Que tipo de danos, en general, ¿cubre el seguro de responsabilidad civil de suscripcion obligatoria?",
-      "opciones": [
-        "Solamente los danos materiales.",
-        "Solamentelosdanospersonales.",
-        "Losdanospersonalesylosmateriales."
-      ]
-    },
-    {
-      "texto": "En esta via circula por el carril que mejor conviene a su destino, ¿icuando puede abandonarlo?",
-      "opciones": [
-        "Al prepararsepara cambiar de direccion,adelantar,parar o estacionar.",
-        "Unicamente cuando pretenda parar o estacionar.",
-        "Cuandoquiera cambiardedireccion odesentido."
+        "siempre por el lado del conductor.",
+        "por cualquier lado, tomando las debidas precauciones.",
+        "como norma general, por el lado más próximo a la acera o arcén."
       ],
+      "correcta": 2
+    },
+    {
+      "texto": "Al dar marcha atrás para estacionar, ¿se puede invadir un cruce de vías?",
+      "opciones": [
+        "Sí, siempre que no recorra más de 15 metros.",
+        "Sí.",
+        "No."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "Las personas mayores pueden sufrir más accidentes de circulación en situaciones...",
+      "opciones": [
+        "donde hay tiempo suficiente para reaccionar.",
+        "que exigen una respuesta rápida.",
+        "la edad no influye en la accidentalidad."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "¿Qué tipo de daños, en general, cubre el seguro de responsabilidad civil de suscripción obligatoria?",
+      "opciones": [
+        "Solamente los daños materiales.",
+        "Solamente los daños personales.",
+        "Los daños personales y los materiales."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "En esta vía circula por el carril que mejor conviene a su destino, ¿cuándo puede abandonarlo?",
+      "opciones": [
+        "Al prepararse para cambiar de dirección, adelantar, parar o estacionar.",
+        "Únicamente cuando pretenda parar o estacionar.",
+        "Cuando quiera cambiar de dirección o de sentido."
+      ],
+      "correcta": 0,
       "imagen": "../img/test_032_p21.jpg"
     },
     {
-      "texto": "Cuando esta lloviendo, ¿ique presion deben tener los neumaticos?",
+      "texto": "Cuando está lloviendo, ¿qué presión deben tener los neumáticos?",
       "opciones": [
-        "La presion que aconseja el fabricante.",
+        "La presión que aconseja el fabricante.",
         "Mayor que la aconsejada por el fabricante.",
-        "Menorque la aconsejada por elfabricante."
+        "Menor que la aconsejada por el fabricante."
       ],
+      "correcta": 0,
       "imagen": "../img/test_032_p22.jpg"
     },
     {
-      "texto": "La luz rotativa que llevan los vehiculos especiales, ¿iles concede prioridad frente a los demas conductores?",
+      "texto": "La luz rotativa que llevan los vehículos especiales, ¿les concede prioridad frente a los demás conductores?",
       "opciones": [
-        "Si, en cualquier caso.",
-        "No,solosenalizasusituacion.",
-        "Si, cuando circulan con ella encendida."
+        "Sí, en cualquier caso.",
+        "No, solo señaliza su situación.",
+        "Sí, cuando circulan con ella encendida."
       ],
+      "correcta": 1,
       "imagen": "../img/test_032_p23.jpg"
     },
     {
-      "texto": "¿Como debe senalizar la carga que sobresale de una motocicleta?",
+      "texto": "¿Cómo debe señalizar la carga que sobresale de una motocicleta?",
       "opciones": [
         "Con un panel reglamentario en el extremo de la carga.",
-        "En las motocicletas la carga que sobresale por detras no es necesario senalizarla.",
-        "De noche con una luz roja por la partetrasera."
-      ]
+        "En las motocicletas la carga que sobresale por detrás no es necesario señalizarla.",
+        "De noche con una luz roja por la parte trasera."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Cuando termina la prohibicion de adelantar?",
+      "texto": "¿Cuándo termina la prohibición de adelantar?",
       "opciones": [
         "Cuando se llega a un cruce.",
-        "Cuando se sobrepasa la senal de fin de prohibido adelantar.",
-        "Cuandosellegaauntramoconcurvas."
+        "Cuando se sobrepasa la señal de fin de prohibido adelantar.",
+        "Cuando se llega a un tramo con curvas."
       ],
+      "correcta": 1,
       "imagen": "../img/test_032_p25.jpg"
     },
     {
-      "texto": "¿Que efectos tiene la fatiga sobre los conductores?",
+      "texto": "¿Qué efectos tiene la fatiga sobre los conductores?",
       "opciones": [
-        "Aumentael angulovisual.",
-        "La vision puedevolverseborrosa.",
-        "Aumentalasensibilidadauditiva."
-      ]
+        "Aumenta el ángulo visual.",
+        "La visión puede volverse borrosa.",
+        "Aumenta la sensibilidad auditiva."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Esta senal indica...",
+      "texto": "Esta señal indica...",
       "opciones": [
-        "bifurcacion hacia la izquierda en calzada de un solo carril.",
-        "la proximidad de una zona en la que puede inmovilizar el vehiculo para realizar algun descanso. en caso de fallo del sistema de frenado."
+        "bifurcación hacia la izquierda en calzada de un solo carril.",
+        "la proximidad de una zona en la que puede inmovilizar el vehículo para realizar algún descanso.",
+        "la proximidad de una zona en la que puede inmovilizar el vehículo en caso de fallo del sistema de frenado."
       ],
+      "correcta": 2,
       "imagen": "../img/test_032_p27.jpg"
     },
     {
-      "texto": "En esta via, si circula mas rapido por el carril de la derecha, ¿ise considera adelantamiento?",
+      "texto": "En esta vía, si circula más rápido por el carril de la derecha, ¿se considera adelantamiento?",
       "opciones": [
-        "Si, fuera de poblado se considera adelantamiento,pero no en via urbana.",
-        "Si, se considera adelantamiento tanto dentro como fuera de poblado.",
-        "No,porque,en este caso,no seconsidera adelantamiento."
+        "Sí, fuera de poblado se considera adelantamiento, pero no en vía urbana.",
+        "Sí, se considera adelantamiento tanto dentro como fuera de poblado.",
+        "No, porque, en este caso, no se considera adelantamiento."
       ],
+      "correcta": 2,
       "imagen": "../img/test_032_p28.jpg"
     },
     {
-      "texto": "Al aproximarse a un paso a nivel o a un puente movil, ¿zcuando se debe extremar la prudencia y reducir la velocidad?",
+      "texto": "Al aproximarse a un paso a nivel o a un puente móvil, ¿cuándo se debe extremar la prudencia y reducir la velocidad?",
       "opciones": [
         "Solo cuando se encuentran abiertos.",
-        "Solo cuandoseencuentrancerrados.",
+        "Solo cuando se encuentran cerrados.",
         "Siempre."
       ],
+      "correcta": 2,
       "imagen": "../img/test_032_p29.jpg"
     },
     {
-      "texto": "¿Que le indica la senal?",
+      "texto": "¿Qué le indica la señal?",
       "opciones": [
-        "La velocidad maxima a la que puedo circular en un tramo de obras.",
-        "La velocidad maxima a la que debo circular en esa via. b) La velocidad maxima a la que debo circular en esa via.",
-        "Lavelocidadmaximaparalosvehiculosdeobras."
+        "La velocidad máxima a la que puedo circular en un tramo de obras.",
+        "La velocidad máxima a la que debo circular en esa vía.",
+        "La velocidad máxima para los vehículos de obras."
       ],
+      "correcta": 0,
       "imagen": "../img/test_032_p30.jpg"
     }
   ]

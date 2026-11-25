@@ -1,264 +1,294 @@
 {
   "test_id": 40,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En una explanada de peaje de una autopista, ¿iesta permitido recoger a una persona que hace autostop?",
+      "texto": "En una explanada de peaje de una autopista, ¿está permitido recoger a una persona que hace autostop?",
       "opciones": [
         "No.",
-        "Si, siempre que no se origine una situacion de peligro.",
-        "Si."
+        "Sí, siempre que no se origine una situación de peligro.",
+        "Sí."
       ],
+      "correcta": 0,
       "imagen": "../img/test_040_p01.jpg"
     },
     {
-      "texto": "Si en un estrechamiento sin senalizar han entrado a la vez un turismo y un vehiculo de traccion animal, ¿icual de los dos vehiculos tendra preferencia de paso?",
+      "texto": "Si en un estrechamiento sin señalizar han entrado a la vez un turismo y un vehículo de tracción animal, ¿cuál de los dos vehículos tendrá preferencia de paso?",
       "opciones": [
-        "El vehiculo de traccion animal.",
-        "El que tenga que darmarcha atras una mayor distancia.",
+        "El vehículo de tracción animal.",
+        "El que tenga que dar marcha atrás una mayor distancia.",
         "El turismo."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Ante una averia, ¿icomo debe colocar la luz de presenalizacion de peligro V-16?",
+      "texto": "Ante una avería, ¿cómo debe colocar la luz de preseñalización de peligro V-16?",
       "opciones": [
-        "A 150 metros del vehiculo inmovilizado.",
-        "A 100 metros del vehiculo inmovilizado.",
-        "En la parte mas alta posible del vehiculo inmovilizado garantizando su maxima visibilidad."
+        "A 150 metros del vehículo inmovilizado.",
+        "A 100 metros del vehículo inmovilizado.",
+        "En la parte más alta posible del vehículo inmovilizado garantizando su máxima visibilidad."
       ],
+      "correcta": 2,
       "imagen": "../img/test_040_p03.jpg"
     },
     {
-      "texto": "Para incorporarse a la circulacion dando marcha atras, ¿ise puede invadir un cruce de vias?",
+      "texto": "Para incorporarse a la circulación dando marcha atrás, ¿se puede invadir un cruce de vías?",
       "opciones": [
-        "Si,siemprequeno serecorranmas de15metros.",
-        "Si,cuando se sigan las indicacionesdeotrapersona.",
+        "Sí, siempre que no se recorran más de 15 metros.",
+        "Sí, cuando se sigan las indicaciones de otra persona.",
         "No."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Para un conductor novel, durante el primer ano esta prohibido...",
+      "texto": "Para un conductor novel, durante el primer año está prohibido...",
       "opciones": [
         "obtener otro permiso.",
         "circular por las autopistas.",
-        "circularsinllevarlaplacaL"
+        "circular sin llevar la placa L."
       ],
+      "correcta": 2,
       "imagen": "../img/test_040_p05.jpg"
     },
     {
-      "texto": "¿Que indica la senal?",
+      "texto": "¿Qué indica la señal?",
       "opciones": [
-        "Proximoaparcamientoenbateriaalaizquierda.",
-        "Proxima calzada sin salida a la izquierda.",
-        "Proxima estacion de servicio a la izquierda."
+        "Próximo aparcamiento en batería a la izquierda.",
+        "Próxima calzada sin salida a la izquierda.",
+        "Próxima estación de servicio a la izquierda."
       ],
+      "correcta": 1,
       "imagen": "../img/test_040_p06.jpg"
     },
     {
-      "texto": "¿Que esta indicando este conductor con el brazo?",
+      "texto": "¿Qué está indicando este conductor con el brazo?",
       "opciones": [
-        "Que va a ir marcha atras.",
+        "Que va a ir marcha atrás.",
         "Que va a empezar a circular.",
         "Que va a girar a la izquierda."
       ],
+      "correcta": 0,
       "imagen": "../img/test_040_p07.jpg"
     },
     {
-      "texto": "En un accidente, ¿icuando es obligatorio ayudar?",
+      "texto": "En un accidente, ¿cuándo es obligatorio ayudar?",
       "opciones": [
         "Solamente cuando yo estoy implicado en el accidente.",
-        "Cuando vea que aun no han sido atendidos los heridos.",
-        "No es obligatorio en ningun caso."
-      ]
+        "Cuando vea que aún no han sido atendidos los heridos.",
+        "No es obligatorio en ningún caso."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Para evitar ruidos excesivos e innecesarios en la conduccion, se debe...",
+      "texto": "Para evitar ruidos excesivos e innecesarios en la conducción, se debe...",
       "opciones": [
-        "cuidar de que el tubo de escape y el silenciador del vehiculo esten siempre en buen estado.",
-        "utilizar el claxonfrecuentemente pero sin producir ruidos estridentes o notas musicales.",
+        "cuidar de que el tubo de escape y el silenciador del vehículo estén siempre en buen estado.",
+        "utilizar el claxon frecuentemente pero sin producir ruidos estridentes o notas musicales.",
         "circular con el tubo de escape libre."
       ],
+      "correcta": 0,
       "imagen": "../img/test_040_p09.jpg"
     },
     {
-      "texto": "El campo visual de los ninos es limitado debido a...",
+      "texto": "El campo visual de los niños es limitado debido a...",
       "opciones": [
-        "subajaestatura.",
-        "su falta de atencion.",
+        "su baja estatura.",
+        "su falta de atención.",
         "el escaso desarrollo del sentido de la vista, principalmente."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Un vehiculo circula por el carril izquierdo, ¿zesta permitido adelantarle por la derecha?",
+      "texto": "Un vehículo circula por el carril izquierdo, ¿está permitido adelantarle por la derecha?",
       "opciones": [
-        "No, el adelantamiento siempre se realizara por la izquierda.",
-        "Si, siempre que haya varios carriles en el mismo sentido.",
-        "Si, cuando los carriles estan delimitados y la via esta dentro de poblado."
+        "No, el adelantamiento siempre se realizará por la izquierda.",
+        "Sí, siempre que haya varios carriles en el mismo sentido.",
+        "Sí, cuando los carriles están delimitados y la vía está dentro de poblado."
       ],
+      "correcta": 2,
       "imagen": "../img/test_040_p11.jpg"
     },
     {
-      "texto": "Los efectos que provoca el LsD en el comportamiento del conductor...",
+      "texto": "Los efectos que provoca el LSD en el comportamiento del conductor...",
       "opciones": [
-        "proporcionanun estadoderelajacion.",
-        "pueden llegar a prolongarsede10a12 horas desdesu consumo.",
-        "sonmuybreves,peropuedenreaparecerporsorpresaalguntiempodespues."
-      ]
+        "proporcionan un estado de relajación.",
+        "pueden llegar a prolongarse de 10 a 12 horas desde su consumo.",
+        "son muy breves, pero pueden reaparecer por sorpresa algún tiempo después."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Si no lleva colocado correctamente el cinturon de seguridad, ¿puede influir en las consecuencias de un accidente?",
+      "texto": "Si no lleva colocado correctamente el cinturón de seguridad, ¿puede influir en las consecuencias de un accidente?",
       "opciones": [
-        "No, el cinturon es efectivo siempre.",
-        "No, cuando el vehiculo tenga ademas instalado airbag.",
-        "Si, ya que puede sufrir lesiones graves."
-      ]
+        "No, el cinturón es efectivo siempre.",
+        "No, cuando el vehículo tenga además instalado airbag.",
+        "Sí, ya que puede sufrir lesiones graves."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En general, el sueno aparece con mayor frecuencia...",
+      "texto": "En general, el sueño aparece con mayor frecuencia...",
       "opciones": [
-        "en las primeras horas de la manana y al final de la tarde.",
+        "en las primeras horas de la mañana y al final de la tarde.",
         "durante la madrugada y en las primeras horas de la tarde.",
-        "durante las horas centralesde la manana y en las primeras horas de la tarde."
-      ]
+        "durante las horas centrales de la mañana y en las primeras horas de la tarde."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Pueden realizarle una prueba para detectar el consumo de drogas en un control de trafico?",
+      "texto": "¿Pueden realizarle una prueba para detectar el consumo de drogas en un control de tráfico?",
       "opciones": [
-        "No,si no muestra signos dehaber consumido drogas.",
-        "No,porque no existen pruebas para detectar el consumo de drogas. b) No, porque no existen pruebas para detectar el consumo de drogas.",
-        "Si, en las mismas condiciones que en las pruebas de deteccion de la alcoholemia."
-      ]
+        "No, si no muestra signos de haber consumido drogas.",
+        "No, porque no existen pruebas para detectar el consumo de drogas.",
+        "Sí, en las mismas condiciones que en las pruebas de detección de la alcoholemia."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Subida defuerte pendiente.",
+        "Subida de fuerte pendiente.",
         "Bajada de fuerte pendiente.",
         "Pendiente deslizante."
       ],
+      "correcta": 1,
       "imagen": "../img/test_040_p16.jpg"
     },
     {
-      "texto": "En una entrada de garaje, ¿zesta permitido estacionar el vehiculo?",
+      "texto": "En una entrada de garaje, ¿está permitido estacionar el vehículo?",
       "opciones": [
         "Sí.",
-        "Si., pero debo encender la luz de emergencia.",
+        "Sí, pero debo encender la luz de emergencia.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_040_p17.jpg"
     },
     {
-      "texto": "Comer y beber cuando se conduce, ¿ipuede provocar que el conductor se distraiga?",
+      "texto": "Comer y beber cuando se conduce, ¿puede provocar que el conductor se distraiga?",
       "opciones": [
-        "Comer si, beber no.",
-        "Si.",
+        "Comer sí, beber no.",
+        "Sí.",
         "No."
       ],
+      "correcta": 1,
       "imagen": "../img/test_040_p18.jpg"
     },
     {
-      "texto": "El vehiculo azul quiere girar a la derecha, ¿za que le obliga la senal de SToP?",
+      "texto": "El vehículo azul quiere girar a la derecha, ¿a qué le obliga la señal de STOP?",
       "opciones": [
-        "A detenerse, cediendo el paso a los vehiculos que circulan por la via transversal.",
+        "A detenerse, cediendo el paso a los vehículos que circulan por la vía transversal.",
         "No le obliga a nada.",
-        "Adetenersesiempre."
+        "A detenerse siempre."
       ],
+      "correcta": 0,
       "imagen": "../img/test_040_p19.jpg"
     },
     {
-      "texto": "Circulando con fuerte nevada, ¿zque luz antiniebla se debe utilizar?",
+      "texto": "Circulando con fuerte nevada, ¿qué luz antiniebla se debe utilizar?",
       "opciones": [
-        "La luz antiniebla delantera",
-        "Obligatoriamente la antiniebla delantera y si se dispone de ella la trasera.",
-        "La luz antiniebla trasera y si se dispone de ella tambien la antiniebla delantera."
+        "La luz antiniebla delantera.",
+        "Obligatoriamente la antiniebla delantera y, si se dispone de ella, la trasera.",
+        "La luz antiniebla trasera y, si se dispone de ella, también la antiniebla delantera."
       ],
+      "correcta": 2,
       "imagen": "../img/test_040_p20.jpg"
     },
     {
-      "texto": "Los accidentes de trafico son una de las principales causas de...",
+      "texto": "Los accidentes de tráfico son una de las principales causas de...",
       "opciones": [
         "mortalidad y lesiones.",
-        "mortalidad, unicamente.",
-        "lesiones,solamente."
-      ]
+        "mortalidad, únicamente.",
+        "lesiones, solamente."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Los accidentes demotocicletas...",
+      "texto": "Los accidentes de motocicletas...",
       "opciones": [
-        "producen lesiones demenor gravedad para sus ocupantes quelos de otros vehiculos.",
-        "son siempre de menor importancia que los de otros vehiculos.",
-        "resultanfacilmentemortalespara sus ocupantes."
+        "producen lesiones de menor gravedad para sus ocupantes que los de otros vehículos.",
+        "son siempre de menor importancia que los de otros vehículos.",
+        "resultan fácilmente mortales para sus ocupantes."
       ],
+      "correcta": 2,
       "imagen": "../img/test_040_p22.jpg"
     },
     {
-      "texto": "En una autopista, a partir de esta senal...",
+      "texto": "En una autopista, a partir de esta señal...",
       "opciones": [
-        "finalizan todas las prohibiciones anteriores, incluida la prohibicion de superar la velocidad de 7o kilometros por hora.",
-        "la velocidad maxima recomendada es de 70kilometros por hora.",
-        "finaliza la prohibicion de superar la velocidad de 70 kilometros por hora."
+        "finalizan todas las prohibiciones anteriores, incluida la prohibición de superar la velocidad de 70 kilómetros por hora.",
+        "la velocidad máxima recomendada es de 70 kilómetros por hora.",
+        "finaliza la prohibición de superar la velocidad de 70 kilómetros por hora."
       ],
+      "correcta": 2,
       "imagen": "../img/test_040_p23.jpg"
     },
     {
-      "texto": "¿Esta permitido circular en poblado con la luz de largo alcance?",
+      "texto": "¿Está permitido circular en poblado con la luz de largo alcance?",
       "opciones": [
         "No.",
-        "Si, siempre que no se deslumbre a ningun usuario.",
-        "Si,cuando la via este insuficientemente iluminada."
-      ]
+        "Sí, siempre que no se deslumbre a ningún usuario.",
+        "Sí, cuando la vía esté insuficientemente iluminada."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Por que lado de la senal es obligatorio pasar?",
+      "texto": "¿Por qué lado de la señal es obligatorio pasar?",
       "opciones": [
         "Por la derecha o por la izquierda.",
         "Por la derecha.",
         "Por la izquierda."
       ],
+      "correcta": 1,
       "imagen": "../img/test_040_p25.jpg"
     },
     {
-      "texto": "En un cambio de rasante, ¿iesta prohibido parar y estacionar?",
+      "texto": "En un cambio de rasante, ¿está prohibido parar y estacionar?",
       "opciones": [
         "No, salvo en los de visibilidad reducida.",
-        "Si.",
-        "Pararno,pero estacionar si."
+        "Sí.",
+        "Parar no, pero estacionar sí."
       ],
+      "correcta": 0,
       "imagen": "../img/test_040_p26.jpg"
     },
     {
-      "texto": "Los conductores de bicicletas, ¿ipueden circular por los arcenes de las autopistas?",
+      "texto": "Los conductores de bicicletas, ¿pueden circular por los arcenes de las autopistas?",
       "opciones": [
-        "No, en ningun caso.",
-        "Si, cuando seanmayores de 14 anos.",
-        "Si, siempre."
+        "No, en ningún caso.",
+        "Sí, cuando sean mayores de 14 años.",
+        "Sí, siempre."
       ],
+      "correcta": 0,
       "imagen": "../img/test_040_p27.jpg"
     },
     {
-      "texto": "El exceso de velocidad, ¿zafecta a nuestra capacidad de anticipacion?",
+      "texto": "El exceso de velocidad, ¿afecta a nuestra capacidad de anticipación?",
       "opciones": [
-        "No,soloafecta a nuestra capacidad de reaccion.",
-        "Si, disminuyendola.",
-        "Si, aumentandola."
-      ]
+        "No, solo afecta a nuestra capacidad de reacción.",
+        "Sí, disminuyéndola.",
+        "Sí, aumentándola."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "El turismo blanco, ¿ztiene alguna obligacion?",
+      "texto": "El turismo blanco, ¿tiene alguna obligación?",
       "opciones": [
-        "si, debera detenerse para que el vehiculo rojo pueda incorporarse.",
-        "Si, debera facilitar,en la medida de lo posible, la incorporacion del vehiculo rojo.",
-        "No tiene ninguna obligacion."
+        "Sí, deberá detenerse para que el vehículo rojo pueda incorporarse.",
+        "Sí, deberá facilitar, en la medida de lo posible, la incorporación del vehículo rojo.",
+        "No tiene ninguna obligación."
       ],
+      "correcta": 1,
       "imagen": "../img/test_040_p29.jpg"
     },
     {
-      "texto": "Los agentes de la autoridad encargados de la vigilancia del trafico podran inmovilizar un vehiculo cuando ..",
+      "texto": "Los agentes de la autoridad encargados de la vigilancia del tráfico podrán inmovilizar un vehículo cuando...",
       "opciones": [
-        "el conductor nollevaba consigo el permiso de circulacion.",
-        "supere los niveles de gases, humos y ruidos permitidosreglamentariamente.",
-        "su conductor sea sancionadodosvecesen elmismo dia."
-      ]
+        "el conductor no llevaba consigo el permiso de circulación.",
+        "supere los niveles de gases, humos y ruidos permitidos reglamentariamente.",
+        "su conductor sea sancionado dos veces en el mismo día."
+      ],
+      "correcta": 1
     }
   ]
 }

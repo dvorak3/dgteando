@@ -1,251 +1,289 @@
 {
   "test_id": 36,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "¿Cual es la velocidad maxima a la que puede circular un ciclomotor?",
+      "texto": "¿Cuál es la velocidad máxima a la que puede circular un ciclomotor?",
       "opciones": [
-        "45km/hpudiendosuperarla en20km/hpara adelantar.",
-        "45km/h.",
+        "45 km/h pudiendo superarla en 20 km/h para adelantar.",
+        "45 km/h.",
         "70 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_036_p01.jpg"
     },
     {
-      "texto": "Un ciclista ha consumido estupefacientes, ¿ipuede circular?",
+      "texto": "Un ciclista ha consumido estupefacientes, ¿puede circular?",
       "opciones": [
-        "Si,si haconsumidopocacantidad.",
+        "Sí, si ha consumido poca cantidad.",
         "No.",
-        "Si, porque la bicicleta no es un vehiculo a motor."
-      ]
+        "Sí, porque la bicicleta no es un vehículo a motor."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "La senal indica...",
+      "texto": "La señal indica...",
       "opciones": [
-        "una zona o area de descanso.",
-        "un area de servicio en una autopista o autovia.",
-        "un area de servicio en una carretera convencional."
+        "una zona o área de descanso.",
+        "un área de servicio en una autopista o autovía.",
+        "un área de servicio en una carretera convencional."
       ],
+      "correcta": 1,
       "imagen": "../img/test_036_p03.jpg"
     },
     {
-      "texto": "Un turismo transporta una carga que sobresale por detras, ¿zesta obligado a senalizarla?",
+      "texto": "Un turismo transporta una carga que sobresale por detrás, ¿está obligado a señalizarla?",
       "opciones": [
-        "Si, con un trapo rojo.",
-        "No,soloes obligatoriopara los camiones.",
-        "Si, con un panel reglamentario."
+        "Sí, con un trapo rojo.",
+        "No, solo es obligatorio para los camiones.",
+        "Sí, con un panel reglamentario."
       ],
+      "correcta": 2,
       "imagen": "../img/test_036_p04.jpg"
     },
     {
-      "texto": "Con los analgesicos o antihistaminicos es conveniente..",
+      "texto": "Con los analgésicos o antihistamínicos es conveniente...",
       "opciones": [
-        "tener presenteque pueden producir efectos secundarios que afecten a la conduccion.",
-        "no conducir en ningun caso durante el tiempo que dure el tratamiento.",
+        "tener presente que pueden producir efectos secundarios que afecten a la conducción.",
+        "no conducir en ningún caso durante el tiempo que dure el tratamiento.",
         "conducir con normalidad."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El consumo de alcohol, ¿zcomo altera el comportamiento del conductor?",
+      "texto": "El consumo de alcohol, ¿cómo altera el comportamiento del conductor?",
       "opciones": [
         "Haciendo que infravalore sus capacidades al volante.",
-        "Dandole una falsa seguridad en simismo,porloque asumemas riesgos.",
-        "Disminuyendosutiempodereaccion."
-      ]
+        "Dándole una falsa seguridad en sí mismo, por lo que asume más riesgos.",
+        "Disminuyendo su tiempo de reacción."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Con niebla que reduce sensiblemente la visibilidad, ¿zesta permitido conducir uinicamente con los alumbrados de posicion y corto alcance?",
+      "texto": "Con niebla que reduce sensiblemente la visibilidad, ¿está permitido conducir únicamente con los alumbrados de posición y corto alcance?",
       "opciones": [
-        "Si, cuando el vehiculo no dispone de luces delanteras de niebla.",
+        "Sí, cuando el vehículo no dispone de luces delanteras de niebla.",
         "No, debe encender obligatoriamente el alumbrado delantero y trasero de niebla.",
         "No, debe llevar las luces delanteras de niebla en todos los casos."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Debe abstenerse de realizar un cambio de direccion cuando...",
+      "texto": "Debe abstenerse de realizar un cambio de dirección cuando...",
       "opciones": [
         "no tenga prioridad.",
-        "la velocidad y distancia de los vehiculos del sentido contrario no permitan efectuar la maniobra con seguridad.",
-        "laviaseadesentidounico."
-      ]
+        "la velocidad y distancia de los vehículos del sentido contrario no permitan efectuar la maniobra con seguridad.",
+        "la vía sea de sentido único."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "La senal advierte peligro por...",
+      "texto": "La señal advierte peligro por...",
       "opciones": [
         "desprendimientos.",
         "calzada deslizante.",
-        "proyeccion de gravilla."
+        "proyección de gravilla."
       ],
+      "correcta": 0,
       "imagen": "../img/test_036_p09.jpg"
     },
     {
       "texto": "El aquaplaning produce...",
       "opciones": [
-        "una perdida de visibilidad en caso de lluvia.",
-        "unaumentodeadherencia encaso de lluvia.",
-        "una perdida de adherencia en caso de lluvia."
-      ]
+        "una pérdida de visibilidad en caso de lluvia.",
+        "un aumento de adherencia en caso de lluvia.",
+        "una pérdida de adherencia en caso de lluvia."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "No se tendran en cuenta, a efectos de la normal utilizacion, los carriles...",
+      "texto": "No se tendrán en cuenta, a efectos de la normal utilización, los carriles...",
       "opciones": [
         "reversibles.",
-        "reservados a determinados vehiculos.",
+        "reservados a determinados vehículos.",
         "especiales."
-      ]
-    },
-    {
-      "texto": "La vigencia del permiso de conduccion, ¿zesta condicionada a que su titular no haya perdido su asignacion total de puntos?",
-      "opciones": [
-        "Si.",
-        "No, los puntos solo afectan a las sanciones impuestas.",
-        "No, su vigencia solo esta limitada en el tiempo."
-      ]
-    },
-    {
-      "texto": "Al aproximarse a un paso a nivel o a un puente movil debe...",
-      "opciones": [
-        "circular a la velocidad maxima para pasar lo antes posible.",
-        "detenerseentodocaso.",
-        "extremar la precaucion y circulara una velocidadmoderada."
       ],
+      "correcta": 1
+    },
+    {
+      "texto": "La vigencia del permiso de conducción, ¿está condicionada a que su titular no haya perdido su asignación total de puntos?",
+      "opciones": [
+        "Sí.",
+        "No, los puntos solo afectan a las sanciones impuestas.",
+        "No, su vigencia solo está limitada en el tiempo."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "Al aproximarse a un paso a nivel o a un puente móvil debe...",
+      "opciones": [
+        "circular a la velocidad máxima para pasar lo antes posible.",
+        "detenerse en todo caso.",
+        "extremar la precaución y circular a una velocidad moderada."
+      ],
+      "correcta": 2,
       "imagen": "../img/test_036_p13.jpg"
     },
     {
-      "texto": "¿Un conductor ise puede distraer si come o bebe mientras conduce?",
+      "texto": "¿Un conductor se puede distraer si come o bebe mientras conduce?",
       "opciones": [
         "No.",
-        "Comer si puede provocarque el conductor se distraiga, pero beberno.",
-        "Si."
-      ]
-    },
-    {
-      "texto": "¿Para que sirven los indicadores de direccion?",
-      "opciones": [
-        "Parasenalizarlamaniobradenochesolamente.",
-        "Para ser visto durante la noche",
-        "Para senializar la maniobra tanto de dia como de noche."
-      ]
-    },
-    {
-      "texto": "Como norma general, ¿zdonde esta prohibido adelantar?",
-      "opciones": [
-        "En las vias de un carril para cada sentido.",
-        "Enlospasosparapeatonesycercadeellos.",
-        "En las vias de menos de 6 metros de anchura."
-      ]
-    },
-    {
-      "texto": "En esta interseccion, ¿ique senal debe obedecer el vehiculo azul para girar a la derecha?",
-      "opciones": [
-        "La senal de ceda el paso.",
-        "La senal de stop, por estar situada a la izquierda.",
-        "La senal de stop,por ser la mas restrictiva."
+        "Comer sí puede provocar que el conductor se distraiga, pero beber no.",
+        "Sí."
       ],
+      "correcta": 2
+    },
+    {
+      "texto": "¿Para qué sirven los indicadores de dirección?",
+      "opciones": [
+        "Para señalizar la maniobra de noche solamente.",
+        "Para ser visto durante la noche.",
+        "Para señalizar la maniobra tanto de día como de noche."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "Como norma general, ¿dónde está prohibido adelantar?",
+      "opciones": [
+        "En las vías de un carril para cada sentido.",
+        "En los pasos para peatones y cerca de ellos.",
+        "En las vías de menos de 6 metros de anchura."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "En esta intersección, ¿qué señal debe obedecer el vehículo azul para girar a la derecha?",
+      "opciones": [
+        "La señal de ceda el paso.",
+        "La señal de stop, por estar situada a la izquierda.",
+        "La señal de stop, por ser la más restrictiva."
+      ],
+      "correcta": 0,
       "imagen": "../img/test_036_p17.jpg"
     },
     {
-      "texto": "En caso de reventon, ¿zes correcto frenar bruscamente?",
+      "texto": "En caso de reventón, ¿es correcto frenar bruscamente?",
       "opciones": [
         "Sí.",
         "No."
       ],
+      "correcta": 1,
       "imagen": "../img/test_036_p18.jpg"
     },
     {
-      "texto": "¿Es recomendable regular y adaptar los reposacabezas del vehiculo a la constitucion fisica de los ocupantes?",
+      "texto": "¿Es recomendable regular y adaptar los reposacabezas del vehículo a la constitución física de los ocupantes?",
       "opciones": [
-        "Si, porque es un elemento de seguridad que puede evitar lesiones en la zona cervical.",
+        "Sí, porque es un elemento de seguridad que puede evitar lesiones en la zona cervical.",
         "No es necesario porque es solo un elemento de confort.",
-        "Si, pero solo en vias urbanas."
+        "Sí, pero solo en vías urbanas."
       ],
+      "correcta": 0,
       "imagen": "../img/test_036_p19.jpg"
     },
     {
-      "texto": "¿Que circunstancias del conductor favorecen la aparicion de la fatiga?",
+      "texto": "¿Qué circunstancias del conductor favorecen la aparición de la fatiga?",
       "opciones": [
-        "Mantener una velocidad adecuada durante mucho tiempo,ya que requieremucha concentracion.",
+        "Mantener una velocidad adecuada durante mucho tiempo, ya que requiere mucha concentración.",
         "Conducir durante largos periodos sin parar o haciendo descansos inadecuados.",
-        "Conducir manteniendo los habitos normales de conduccion."
-      ]
+        "Conducir manteniendo los hábitos normales de conducción."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Esta senal obliga a circular dentro del tunel con el alumbrado de...",
+      "texto": "Esta señal obliga a circular dentro del túnel con el alumbrado de...",
       "opciones": [
-        "cortoalcance,almenos.",
+        "corto alcance, al menos.",
         "largo alcance.",
-        "corto y largo alcance, segun la iluminacion del tramo."
+        "corto y largo alcance, según la iluminación del tramo."
       ],
+      "correcta": 0,
       "imagen": "../img/test_036_p21.jpg"
     },
     {
-      "texto": "¿A que vehiculos prohibe el adelantamiento esta senal?",
+      "texto": "¿A qué vehículos prohíbe el adelantamiento esta señal?",
       "opciones": [
-        "A todos los camiones de menos de 3.500 Kg. de M.M.A.",
-        "A los camiones de mas de 3.500 kg de M.M.A.",
-        "Atodos los vehiculos de motor, incluidos camiones."
+        "A todos los camiones de menos de 3.500 kg de MMA.",
+        "A los camiones de más de 3.500 kg de MMA.",
+        "A todos los vehículos de motor, incluidos camiones."
       ],
+      "correcta": 1,
       "imagen": "../img/test_036_p22.jpg"
     },
     {
-      "texto": "¿Que es la velocidad inadecuada?",
+      "texto": "¿Qué es la velocidad inadecuada?",
       "opciones": [
-        "La velocidad que no se adapta a las condiciones del trafico, de la via o del conductor.",
-        "La velocidadpermitida enla via.",
-        "La que no rebasa el limite maximo develocidad para la via."
-      ]
+        "La velocidad que no se adapta a las condiciones del tráfico, de la vía o del conductor.",
+        "La velocidad permitida en la vía.",
+        "La que no rebasa el límite máximo de velocidad para la vía."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "La mayor parte de los accidentes de circulacion tienen lugar...",
+      "texto": "La mayor parte de los accidentes de circulación tienen lugar...",
       "opciones": [
         "en los cambios de rasante.",
         "en las curvas.",
         "en las rectas."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Un turismo circula por una carretera convencional, ¿zcuando consideraremos su velocidad anormalmente reducida?",
+      "texto": "Un turismo circula por una carretera convencional, ¿cuándo consideraremos su velocidad anormalmente reducida?",
       "opciones": [
-        "Cuandoseamenorde60km/h.",
-        "Cuandoseamenorde40km/h.",
-        "Cuando sea menor de 45km/h."
+        "Cuando sea menor de 60 km/h.",
+        "Cuando sea menor de 40 km/h.",
+        "Cuando sea menor de 45 km/h."
       ],
+      "correcta": 2,
       "imagen": "../img/test_036_p25.jpg"
     },
     {
-      "texto": "En una interseccion en la que es previsible quedarse detenido, ¿ique debe hacer si tiene prioridad de paso?",
+      "texto": "En una intersección en la que es previsible quedarse detenido, ¿qué debe hacer si tiene prioridad de paso?",
       "opciones": [
         "Pasar porque tiene prioridad de paso.",
-        "Pasar y apartarse a un lado si obstaculiza la circulacion.",
-        "No entraren la interseccion."
+        "Pasar y apartarse a un lado si obstaculiza la circulación.",
+        "No entrar en la intersección."
       ],
+      "correcta": 2,
       "imagen": "../img/test_036_p26.jpg"
     },
     {
-      "texto": "Fumar al volante, ¿icomo afecta a la conduccion?",
+      "texto": "Fumar al volante, ¿cómo afecta a la conducción?",
       "opciones": [
-        "Provocasomnolencia.",
-        "Aumenta la capacidad de atencion.",
-        "Inutiliza una de las manos y genera problemas de vision a causa del humo."
-      ]
+        "Provoca somnolencia.",
+        "Aumenta la capacidad de atención.",
+        "Inutiliza una de las manos y genera problemas de visión a causa del humo."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Si circula y tiene dudas sobre las condiciones de luminosidad, ¿ique debe hacer?",
+      "texto": "Si circula y tiene dudas sobre las condiciones de luminosidad, ¿qué debe hacer?",
       "opciones": [
-        "Anteladuda,encender las luces de cruce.",
+        "Ante la duda, encender las luces de cruce.",
         "Ante la duda, apagar las luces para no provocar deslumbramientos.",
         "Ante la duda, encender las luces de carretera."
       ],
+      "correcta": 0,
       "imagen": "../img/test_036_p28.jpg"
     },
     {
-      "texto": "Entre las conductas de riesgo mas comunes que cometen los peatones esta...",
+      "texto": "Entre las conductas de riesgo más comunes que cometen los peatones está...",
       "opciones": [
-        "respetarlossemaforosperonolospasosparapeatones.",
-        "nosituarse enlas calzadas o enlos arcenes correctamente.",
-        "cruzarla viade manera reglamentaria. 30o. Los farmacos hipnoticos hacen que.. Oa)aumente el tiempo dereaccion."
+        "respetar los semáforos pero no los pasos para peatones.",
+        "no situarse en las calzadas o en los arcenes correctamente.",
+        "cruzar la vía de manera reglamentaria."
       ],
+      "correcta": 1,
       "imagen": "../img/test_036_p29.jpg"
+    },
+    {
+      "texto": "Los fármacos hipnóticos hacen que...",
+      "opciones": [
+        "aumente el tiempo de reacción.",
+        "disminuya el tiempo de reacción.",
+        "aumente la capacidad de atención."
+      ],
+      "correcta": 0
     }
   ]
 }
