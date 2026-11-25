@@ -1,15 +1,16 @@
 {
   "test_id": 29,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
       "texto": "Un vehiculo tiene el silenciador del escape estropeado. ¿Esta permitido circular asi?",
       "opciones": [
-        "No,porla contaminacion acusticaqueproduce.",
-        "Si,solamente encarretera.",
+        "No, por la contaminación acústica que produce.",
+        "Sí, solamente en carretera.",
         "No, pero las motos y ciclomotores pueden circular sin el."
       ],
-      "imagen": "../img/test_029_p01.jpg"
+      "imagen": "../img/test_029_p01.jpg",
+      "correcta": 0
     },
     {
       "texto": "¿Que indica esta marca de color blanco?",
@@ -18,126 +19,141 @@
         "Indica el comienzo de un carril reservado para determinados vehiculos.",
         "Indica el final de un carril reservado para determinados vehiculos."
       ],
-      "imagen": "../img/test_029_p02.jpg"
+      "imagen": "../img/test_029_p02.jpg",
+      "correcta": 1
     },
     {
-      "texto": "En una carretera de tres carriles en cada sentido, ¿icuando se puede circular por el carril izquierdo?",
+      "texto": "En una carretera de tres carriles en cada sentido, ¿cuando se puede circular por el carril izquierdo?",
       "opciones": [
         "Solamente para adelantar.",
         "Nunca.",
-        "Cuando los otros carriles esten ocupados yno obstaculice a losvehiculos que circulan detras."
+        "Cuando los otros carriles estén ocupados y no obstaculice a los vehículos que circulan detrás."
       ],
-      "imagen": "../img/test_029_p03.jpg"
+      "imagen": "../img/test_029_p03.jpg",
+      "correcta": 2
     },
     {
       "texto": "¿Cuando debe iniciar las advertencias para realizar una maniobra?",
       "opciones": [
-        "Justoantesdeiniciarlamaniobra.",
-        "Cuandohaya iniciadolamaniobra.",
-        "Con antelacion suficiente a la iniciacion de lamaniobra."
-      ]
+        "Justo antes de iniciar la maniobra.",
+        "Cuando haya iniciado la maniobra.",
+        "Con antelación suficiente a la iniciación de la maniobra."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "El nivel de aceite del motor, ¿zcomo se debe comprobar?",
+      "texto": "El nivel de aceite del motor, ¿como se debe comprobar?",
       "opciones": [
-        "Con el motorfuncionando.",
-        "Con el motor apagadoy frio.",
+        "Con el motor funcionando.",
+        "Con el motor apagado y frío.",
         "Con el motor caliente."
       ],
-      "imagen": "../img/test_029_p05.jpg"
+      "imagen": "../img/test_029_p05.jpg",
+      "correcta": 1
     },
     {
       "texto": "Circular en motocicleta bajo una lluvia intensa, obliga a...",
       "opciones": [
         "encender la luz de largo alcance incluso circulando dentro de poblado.",
-        "moderar la velocidad,llegando a detenerse si fuera preciso."
-      ]
+        "moderar la velocidad, llegando a detenerse si fuera preciso."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En las isletas de canalizacion del trafico situadas en la calzada, ¿ise puede parar o estacionar?",
+      "texto": "En las isletas de canalizacion del trafico situadas en la calzada, ¿se puede parar o estacionar?",
       "opciones": [
         "Ni parar ni estacionar.",
         "Solo parar.",
         "Solo estacionar."
       ],
-      "imagen": "../img/test_029_p07.jpg"
+      "imagen": "../img/test_029_p07.jpg",
+      "correcta": 0
     },
     {
       "texto": "Muchos atropellos a peatones se producen...",
       "opciones": [
-        "durantela noche.",
-        "cuando losvehiculos circulan marchaatras.",
-        "enautopistas."
-      ]
+        "durante la noche.",
+        "cuando los vehículos circulan marcha atrás.",
+        "en autopistas."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En una via sin pavimentar, ¿ia que velocidad maxima puede circular un turismo?",
+      "texto": "En una via sin pavimentar, ¿a que velocidad maxima puede circular un turismo?",
       "opciones": [
         "A 90 km/h.",
         "A 50 km/h.",
         "A 30 km/h."
       ],
-      "imagen": "../img/test_029_p09.jpg"
+      "imagen": "../img/test_029_p09.jpg",
+      "correcta": 2
     },
     {
-      "texto": "El sistema avanzado de ayuda a la conduccion conocido como \"StartStop\", ¿zen que momento apaga el motor del vehiculo?",
+      "texto": "El sistema avanzado de ayuda a la conduccion conocido como \"StartStop\", ¿en que momento apaga el motor del vehiculo?",
       "opciones": [
-        "Cuandoel motoresta al ralenti.",
+        "Cuando el motor está al ralentí.",
         "Cuando se pisa el embrague.",
-        "Cuando el motor esta muyrevolucionado."
-      ]
+        "Cuando el motor está muy revolucionado."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Un conductor que senaliza un cambio de carril, ¿ztiene preferencia sobre los conductores de los vehiculos que circulan por el carril al que se pretende desplazar?",
+      "texto": "Un conductor que senaliza un cambio de carril, ¿tiene preferencia sobre los conductores de los vehiculos que circulan por el carril al que se pretende desplazar?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "Solo si va adelantar a un vehiculo de grandes dimensiones.",
         "No."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Si encuentra esta senal a la entrada de una via debe saber que...",
+      "texto": "Sí encuentra esta senal a la entrada de una via debe saber que...",
       "opciones": [
-        "estaprohibida lacirculaciondeciclomotores.",
-        "estaprohibida suutilizacionparatodos aquellos usuarios queno seanconductoresde ciclomotores.",
-        "esunaviareservadaparaciclosyciclomotores."
+        "está prohibida la circulación de ciclomotores.",
+        "está prohibida su utilización para todos aquellos usuarios que no sean conductores de ciclomotores.",
+        "es una vía reservada para ciclos y ciclomotores."
       ],
-      "imagen": "../img/test_029_p12.jpg"
+      "imagen": "../img/test_029_p12.jpg",
+      "correcta": 2
     },
     {
       "texto": "Las senales de la fotografia, indican...",
       "opciones": [
         "obras a 300 metros.",
-        "curvas einterseccionaladerecha.",
-        "curvasyestrechamientoporobras."
+        "curvas e intersección a la derecha.",
+        "curvas y estrechamiento por obras."
       ],
-      "imagen": "../img/test_029_p13.jpg"
+      "imagen": "../img/test_029_p13.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Va a girar a la derecha, y lo senaliza con el indicador luminoso correspondiente, ¿zhasta cuando es necesario mantenerlo encendido?",
+      "texto": "Va a girar a la derecha, y lo senaliza con el indicador luminoso correspondiente, ¿hasta cuando es necesario mantenerlo encendido?",
       "opciones": [
-        "Hasta que sepa con seguridad que el que me sigue ha visto la indicacion. a) Hasta que sepa con seguridad que el que me sigue ha visto la indicacion.",
+        "Hasta que sepa con seguridad que el que me sigue ha visto la indicacion.",
         "Hasta que finalice la maniobra.",
         "El menor tiempo posible."
-      ]
+      ],
+      "correcta": 1
     },
     {
       "texto": "La lluvia...",
       "opciones": [
-        "exigeal conductortomarmas precaucionespor lafaltade adherencia de los neumaticos.",
-        "es un fenomeno atmosferico queno influye enla conduccion.",
+        "exige al conductor tomar más precauciones por la falta de adherencia de los neumaticos.",
+        "es un fenómeno atmosférico que no influye en la conducción.",
         "mejora la visibilidad porque limpia el parabrisas."
       ],
-      "imagen": "../img/test_029_p15.jpg"
+      "imagen": "../img/test_029_p15.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Los costes por primeros auxilios, atencion y tratamiento a los heridos, rehabilitacion y adaptaciones, ¿zcomo se llaman?",
+      "texto": "Los costes por primeros auxilios, atencion y tratamiento a los heridos, rehabilitacion y adaptaciones, ¿como se llaman?",
       "opciones": [
         "Costes sanitarios.",
-        "Costesmateriales.",
-        "Costesadministrativos."
+        "Costes materiales.",
+        "Costes administrativos."
       ],
-      "imagen": "../img/test_029_p16.jpg"
+      "imagen": "../img/test_029_p16.jpg",
+      "correcta": 0
     },
     {
       "texto": "Circular por una autopista a 120 km/h con lluvia intensa, es circular a una velocidad...",
@@ -145,7 +161,8 @@
         "inadecuada.",
         "prohibida.",
         "adecuada."
-      ]
+      ],
+      "correcta": 0
     },
     {
       "texto": "¿Como advertira el proposito de efectuar una parada en el carril derecho a los conductores de los vehiculos que circulan por detras del suyo?",
@@ -153,110 +170,123 @@
         "Utilizando la senal de emergencia.",
         "Utilizando el intermitente derecho.",
         "Utilizando el intermitente izquierdo."
-      ]
+      ],
+      "correcta": 1
     },
     {
       "texto": "¿Quien tiene preferencia de paso en esta interseccion?",
       "opciones": [
-        "EI tranvia.",
+        "El tranvia.",
         "El automovil.",
         "El que circule por la via principal."
       ],
-      "imagen": "../img/test_029_p19.jpg"
+      "imagen": "../img/test_029_p19.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Si no hay niebla espesa, ¿zen que otra circunstancia puede emplear la luz antiniebla delantera?",
+      "texto": "Sí no hay niebla espesa, ¿en que otra circunstancia puede emplear la luz antiniebla delantera?",
       "opciones": [
         "En cualquier circunstancia en que disminuya la visibilidad.",
-        "Solopuede encender la luz antiniebladelantera conniebla espesa."
+        "Solopuede encender la luz antiniebla delantera conniebla espesa."
       ],
-      "imagen": "../img/test_029_p20.jpg"
+      "imagen": "../img/test_029_p20.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Si por emergencia queda inmovilizado con su vehiculo dentro de un tuinel, debera...",
+      "texto": "Sí por emergencia queda inmovilizado con su vehiculo dentro de un túnel, debera...",
       "opciones": [
-        "conectarla senal de emergenciaymantener encendidas las luces de cruce.",
-        "apagarelmotor,conectar la senal de emergencia ymantenerencendidas lasluces de posicion.",
-        "conectar la senal de emergencia yhacer sonar el claxon."
+        "conectar la señal de emergencia y mantener encendidas las luces de cruce.",
+        "apagar el motor, conectar la señal de emergencia y mantener encendidas las luces de posición.",
+        "conectar la señal de emergencia y hacer sonar el claxon."
       ],
-      "imagen": "../img/test_029_p21.jpg"
+      "imagen": "../img/test_029_p21.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Las materias que produzcan polvo o puedan caer, es obligatorio transportarlas ..",
+      "texto": "Las materias que produzcan polvo o puedan caer, es obligatorio transportarlas ...",
       "opciones": [
         "cubriendolas total y eficazmente.",
-        "envehiculostotalmentecerrados.",
-        "encontenedoresdepequenotamano."
+        "en vehículos totalmente cerrados.",
+        "en contenedores de pequeño tamaño."
       ],
-      "imagen": "../img/test_029_p22.jpg"
+      "imagen": "../img/test_029_p22.jpg",
+      "correcta": 0
     },
     {
       "texto": "El sistema de alumbrado de los vehiculos...",
       "opciones": [
         "sirve para ver bien de noche.",
         "sirve para que el conductor vea bien la carretera.",
-        "sirvepara que el conductorvea bien la carretera,y su vehiculo sea visto por los demas conductores."
-      ]
+        "sirve para que el conductor vea bien la carretera y su vehículo sea visto por los demás conductores."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Los psicofarmacos, ¿ipueden alterarlas capacidades para conducir con seguridad?",
+      "texto": "Los psicofármacos, ¿pueden alterar las capacidades para conducir con seguridad?",
       "opciones": [
-        "No,excepto que ademas se ingiera alcohol.",
-        "Si,gravemente.",
-        "No,porque no tienen influencia sobre la conduccion."
-      ]
+        "No, excepto que ademas se ingiera alcohol.",
+        "Sí, gravemente.",
+        "No, porque no tienen influencia sobre la conduccion."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Un agente circula en una moto portando una bandera verde, ¿ique indica?",
+      "texto": "Un agente circula en una moto portando una bandera verde, ¿que indica?",
       "opciones": [
         "La calzada esta abierta pero hay que extremar la atencion.",
         "En la calzada se esta desarrollando una actividad deportiva.",
         "La calzada queda de nuevo abierta al trafico a partir de su paso."
       ],
-      "imagen": "../img/test_029_p25.jpg"
+      "imagen": "../img/test_029_p25.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Si inmoviliza el vehiculo junto al borde de esta calzada, ¿zincumple alguna norma de circulacion?",
+      "texto": "Sí inmoviliza el vehiculo junto al borde de esta calzada, ¿incumple alguna norma de circulacion?",
       "opciones": [
-        "No, si espara efectuar una parada.",
-        "No,ya que estamarca vial no prohibeparar ni estacionar.",
-        "Si, porque es una zona de carga y descarga y esta prohibido cualquier tipo de inmovilizacion."
+        "No, si es para efectuar una parada.",
+        "No, ya que esta marca vial no prohíbe parar ni estacionar.",
+        "Sí, porque es una zona de carga y descarga y esta prohibido cualquier tipo de inmovilizacion."
       ],
-      "imagen": "../img/test_029_p26.jpg"
+      "imagen": "../img/test_029_p26.jpg",
+      "correcta": 0
     },
     {
       "texto": "Para regular correctamente el apoyacabezas, la distancia de este con la cabeza debe ser...",
       "opciones": [
-        "superiora4cm.",
-        "la minima posible ynunca superiora 4 cm.",
-        "la que resultemas comoda para el conductor."
+        "superior a 4 cm.",
+        "la mínima posible y nunca superior a 4 cm.",
+        "la que resulte más cómoda para el conductor."
       ],
-      "imagen": "../img/test_029_p27.jpg"
+      "imagen": "../img/test_029_p27.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Como debe advertir su presencia en la via este conjunto de vehiculos?",
       "opciones": [
         "Utilizando la senalizacion de emergencia.",
         "Empleando tanto de dia como de noche una luz rotativa de color amarillo.",
-        "Conuna luz intermitenteamarilla."
+        "Con una luz intermitente amarilla."
       ],
-      "imagen": "../img/test_029_p28.jpg"
+      "imagen": "../img/test_029_p28.jpg",
+      "correcta": 1
     },
     {
-      "texto": "En un tramo de via con la senal \"tunel\", ¿zesta permitido hacer un cambio de sentido?",
+      "texto": "En un tramo de via con la senal \"tunel\", ¿esta permitido hacer un cambio de sentido?",
       "opciones": [
         "No.",
-        "Si."
+        "Sí."
       ],
-      "imagen": "../img/test_029_p29.jpg"
+      "imagen": "../img/test_029_p29.jpg",
+      "correcta": 0
     },
     {
       "texto": "Uno de los efectos que algunas drogas pueden producir en el conductor es...",
       "opciones": [
         "la ampliacion del campo visual.",
         "la disminucion de la distancia de detencion.",
-        "la incorrectapercepciondel tiempo ydel espacio."
-      ]
+        "la incorrecta percepción del tiempo y del espacio."
+      ],
+      "correcta": 2
     }
   ]
 }

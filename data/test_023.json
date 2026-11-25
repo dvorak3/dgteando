@@ -1,75 +1,83 @@
 {
   "test_id": 23,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
       "texto": "Los sistemas de seguridad activa incluyen...",
       "opciones": [
         "frenos, neumaticos, carroceria, airbags y cinturones de seguridad.",
         "alumbrado, neumaticos, frenos, suspension y direccion.",
-        "chasis,carroceria,cinturonesde seguridad, airbags,reposacabezas y casco."
-      ]
+        "chasis, carroceria, cinturonesde seguridad, airbags, reposacabezas y casco."
+      ],
+      "correcta": 1
     },
     {
       "texto": "La senal indica...",
       "opciones": [
-        "peligroporproximidad dezona frecuentada poraeronaves.",
+        "peligro por proximidad de zona frecuentada por aeronaves.",
         "peligro por proximidad de zona balizada.",
         "peligro por proximidad de zona donde puede soplar fuerte viento lateral."
       ],
-      "imagen": "../img/test_023_p02.jpg"
+      "imagen": "../img/test_023_p02.jpg",
+      "correcta": 2
     },
     {
-      "texto": "El estilo de conduccion de una motocicleta, ¿ipuede influir en el consumo de combustible?",
+      "texto": "El estilo de conduccion de una motocicleta, ¿puede influir en el consumo de combustible?",
       "opciones": [
         "No, si se adopta una postura aerodinamica.",
         "No, solo depende de la cilindrada de la motocicleta.",
-        "Si."
+        "Sí."
       ],
-      "imagen": "../img/test_023_p03.jpg"
+      "imagen": "../img/test_023_p03.jpg",
+      "correcta": 2
     },
     {
-      "texto": "El conductor de un vehiculo de reparto de mercancias, ¿icuando puede conducir sin cinturon?",
+      "texto": "El conductor de un vehiculo de reparto de mercancias, ¿cuando puede conducir sin cinturon?",
       "opciones": [
-        "En los supuestos generales de exencion, como al efectuar la maniobrademarcha atras o de estacionamiento, o si tiene una exencion medica justificada.",
-        "Cuando circulando en poblado tenga rutas de repartomuy proximas entre si.",
-        "Siemprepuede conducir sin cinturon."
+        "En los supuestos generales de exencion, como al efectuar la maniobra de marcha atrás o de estacionamiento, o si tiene una exencion medica justificada.",
+        "Cuando circulando en poblado tenga rutas de reparto muy próximas entre sí.",
+        "Siempre puede conducir sin cinturón."
       ],
-      "imagen": "../img/test_023_p04.jpg"
+      "imagen": "../img/test_023_p04.jpg",
+      "correcta": 0
     },
     {
       "texto": "Esta adelantando y ve que hay peligro. ¿Que debe hacer?",
       "opciones": [
         "Reducir la velocidad, senalizar y volver a mi carril.",
-        "Aumentarla velocidad yadelantar rapidamente.",
+        "Aumentar la velocidad y adelantar rápidamente.",
         "Pedir ayuda al vehiculo que estoy adelantando."
       ],
-      "imagen": "../img/test_023_p05.jpg"
+      "imagen": "../img/test_023_p05.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Si se ve en la necesidad de transportar en su vehiculo a un herido, ¿iesta obligado a respetar las normas de circulacion?",
+      "texto": "Sí se ve en la necesidad de transportar en su vehiculo a un herido, ¿esta obligado a respetar las normas de circulacion?",
       "opciones": [
-        "Si,pero solo enlas intersecciones.",
-        "Si, en todo caso.",
+        "Sí, pero solo en las intersecciones.",
+        "Sí, en todo caso.",
         "No."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Para comprobar que no hay ningun vehiculo en el angulo muerto de su retrovisor, ¿ique debe hacer?",
+      "texto": "Para comprobar que no hay ningun vehiculo en el angulo muerto de su retrovisor, ¿que debe hacer?",
       "opciones": [
-        "Girarla cabeza brevementepara mirara traves de las ventanillas laterales.",
-        "Instalarun retrovisor interior panoramico.",
+        "Girar la cabeza brevemente para mirar a través de las ventanillas laterales.",
+        "Instalar un retrovisor interior panorámico.",
         "Reglar adecuadamente los retrovisores."
       ],
-      "imagen": "../img/test_023_p07.jpg"
+      "imagen": "../img/test_023_p07.jpg",
+      "correcta": 0
     },
     {
       "texto": "Entre los costes humanos derivados de los accidentes de trafico se encuentran...",
       "opciones": [
-        "elaumentode lacapacidadproductiva.",
+        "el aumento de la capacidad productiva.",
         "la alta capacidad de rehabilitaciones.",
         "la perdida de capacidad productiva."
-      ]
+      ],
+      "correcta": 2
     },
     {
       "texto": "La luz antiniebla trasera debera utilizarse en caso de...",
@@ -78,68 +86,76 @@
         "heladas nocturnas.",
         "nubes densas de humo."
       ],
-      "imagen": "../img/test_023_p09.jpg"
+      "imagen": "../img/test_023_p09.jpg",
+      "correcta": 2
     },
     {
-      "texto": "En caso de duda sobre las indicaciones del navegador GPs...",
+      "texto": "En caso de duda sobre las indicaciones del navegador GPS...",
       "opciones": [
         "hay que volver a introducir la ruta.",
         "es mejor reiniciar el GPS.",
-        "debeprevalecerlaopiniondel conductor."
+        "debe prevalecer la opinión del conductor."
       ],
-      "imagen": "../img/test_023_p10.jpg"
+      "imagen": "../img/test_023_p10.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Cuando nieva, ¿ies recomendable circular sobre las marcas de otros vehiculos?",
+      "texto": "Cuando nieva, ¿es recomendable circular sobre las marcas de otros vehiculos?",
       "opciones": [
-        "Si,puesto que facilitara la adherencia.",
-        "No,porque perjudicara la adherencia.",
-        "Es indiferente,puesto que no influye en la adherencia."
+        "Sí, puesto que facilitará la adherencia.",
+        "No, porque perjudicará la adherencia.",
+        "Es indiferente, puesto que no influye en la adherencia."
       ],
-      "imagen": "../img/test_023_p11.jpg"
+      "imagen": "../img/test_023_p11.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Que protege un casco integral?",
       "opciones": [
         "Unicamente la parte trasera del craneo.",
         "La cara y la cabeza.",
-        "Solo lapartesuperiordelcraneo."
+        "Solo la parte superior del cráneo."
       ],
-      "imagen": "../img/test_023_p12.jpg"
+      "imagen": "../img/test_023_p12.jpg",
+      "correcta": 1
     },
     {
       "texto": "Delante de un vado, esta senal prohibe...",
       "opciones": [
-        "solamenteel estacionamiento.",
+        "solamente el estacionamiento.",
         "unicamente la parada.",
-        "laparada yel estacionamiento."
+        "la parada y el estacionamiento."
       ],
-      "imagen": "../img/test_023_p13.jpg"
+      "imagen": "../img/test_023_p13.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Si en un vehiculo se realiza una reforma tecnica de importancia, ¿ies obligatorio pasar una inspeccion?",
+      "texto": "Sí en un vehiculo se realiza una reforma tecnica de importancia, ¿es obligatorio pasar una inspeccion?",
       "opciones": [
-        "Si, en una estacion ITV.",
+        "Sí, en una estacion ITV.",
         "No es necesario.",
-        "Si, en un taller autorizado."
-      ]
+        "Sí, en un taller autorizado."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Entre otros lugares, ¿idonde esta prohibido estacionar en zona urbana?",
+      "texto": "Entre otros lugares, ¿donde esta prohibido estacionar en zona urbana?",
       "opciones": [
-        "enviascalificadasdeatencionpreferente.",
-        "encurvasycambiosderasante. b) en curvas y cambios de rasante.",
+        "en vías calificadas de atención preferente.",
+        "en curvas y cambios de rasante.",
         "sobre las aceras y paseos."
-      ]
+      ],
+      "correcta": 2
     },
     {
       "texto": "La presion de inflado del neumatico...",
       "opciones": [
-        "debecomprobarse,comominimo,dos vecesal ano.",
-        "debe comprobarsecada tresmeses.",
+        "debe comprobarse, como mínimo, dos veces al año.",
+        "debe comprobarse cada tres meses.",
         "debe comprobarse con frecuencia, y siempre antes de iniciar un viaje largo."
       ],
-      "imagen": "../img/test_023_p16.jpg"
+      "imagen": "../img/test_023_p16.jpg",
+      "correcta": 2
     },
     {
       "texto": "La tasa maxima de alcohol para los conductores de vehiculos que transportan mercancias peligrosas...",
@@ -148,119 +164,133 @@
         "es de 0,15 miligramos por litro en aire espirado.",
         "depende de la masa maxima autorizada del vehiculo con el que se realice el transporte."
       ],
-      "imagen": "../img/test_023_p17.jpg"
+      "imagen": "../img/test_023_p17.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Esta senal indica..",
+      "texto": "Esta senal indica...",
       "opciones": [
         "el final de una autopista.",
         "el principio de una autovia.",
         "el principio de una autopista."
       ],
-      "imagen": "../img/test_023_p18.jpg"
+      "imagen": "../img/test_023_p18.jpg",
+      "correcta": 2
     },
     {
-      "texto": "A la vista del grafico, ¿zes obligatorio adelantar al tranvia por la derecha?",
+      "texto": "A la vista del grafico, ¿es obligatorio adelantar al tranvia por la derecha?",
       "opciones": [
-        "Si, en todo caso.",
-        "No, se lepuede adelantar por la derecha o por la izquierda.",
+        "Sí, en todo caso.",
+        "No, se le puede adelantar por la derecha o por la izquierda.",
         "No, se le debe adelantar por la izquierda."
       ],
-      "imagen": "../img/test_023_p19.jpg"
+      "imagen": "../img/test_023_p19.jpg",
+      "correcta": 1
     },
     {
-      "texto": "¿Hay una marca longitudinal continua adosada a otra discontinua, zcual de las dos se debe tener en cuenta?",
+      "texto": "¿Hay una marca longitudinal continua adosada a otra discontinua, ¿cual de las dos se debe tener en cuenta?",
       "opciones": [
         "La marca situada en el lado contrario por el que se circula.",
         "La marca situada en el lado por el que se circula.",
-        "Ningunadelasdos."
+        "Ninguna de las dos."
       ],
-      "imagen": "../img/test_023_p20.jpg"
+      "imagen": "../img/test_023_p20.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Este vehiculo circula por un carril habilitado en sentido contrario al habitual, ¿zpuede desplazarse al carril normal de circulacion?",
+      "texto": "Este vehiculo circula por un carril habilitado en sentido contrario al habitual, ¿puede desplazarse al carril normal de circulacion?",
       "opciones": [
-        "Si, siempre que al hacerlo, no derribe los conos que delimitan ese carril.",
+        "Sí, siempre que al hacerlo, no derribe los conos que delimitan ese carril.",
         "No, ni siquiera para adelantar.",
-        "Si,pero solo para adelantar."
+        "Sí, pero solo para adelantar."
       ],
-      "imagen": "../img/test_023_p21.jpg"
+      "imagen": "../img/test_023_p21.jpg",
+      "correcta": 1
     },
     {
       "texto": "El accidente de motocicleta mas frecuente es...",
       "opciones": [
-        "la colision por alcance devehiculos que van a mas velocidad.",
+        "la colisión por alcance de vehículos que van a mas velocidad.",
         "la colision frontal o frontolateral con otro vehiculo.",
         "la colision frontal con otras motocicletas."
-      ]
+      ],
+      "correcta": 1
     },
     {
       "texto": "Las operaciones de carga y descarga se deben realizar...",
       "opciones": [
         "depositando la mercancia en la calzada para agilizar el trabajo.",
-        "respetandosiemprelasnormasdeparadayestacionamiento.",
-        "unicamentepor el lado derechode la calzada."
-      ]
+        "respetando siempre las normas de parada y estacionamiento.",
+        "únicamente por el lado derecho de la calzada."
+      ],
+      "correcta": 1
     },
     {
       "texto": "¿Se pueden sufrir mas distracciones por los efectos del alcohol?",
       "opciones": [
         "No.",
-        "Si,especialmenteen situaciones complejas.",
+        "Sí, especialmente en situaciones complejas.",
         "No, si la tasa de alcoholemia es inferior a la maxima permitida."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Una motocicleta, ¿ipuede disponer de senal de emergencia?",
+      "texto": "Una motocicleta, ¿puede disponer de senal de emergencia?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "No.",
-        "Si, solocuandoesdemasde125centimetroscubicos."
+        "Sí, solo cuando es de más de 125 centímetros cúbicos."
       ],
-      "imagen": "../img/test_023_p25.jpg"
+      "imagen": "../img/test_023_p25.jpg",
+      "correcta": 0
     },
     {
       "texto": "La senal...",
       "opciones": [
-        "reitera la informacion dada por otra senal depeligro anterior.",
+        "reitera la información dada por otra señal de peligro anterior.",
         "indica la proximidad de un peligro distinto de los advertidos por otras senales.",
         "indica la proximidad de un tramo con trafico denso."
       ],
-      "imagen": "../img/test_023_p26.jpg"
+      "imagen": "../img/test_023_p26.jpg",
+      "correcta": 1
     },
     {
-      "texto": "¿El sistema ADAS conocido con el nombrede\"Informacionde angulo muerto\",ipuede intervenir en la conduccion del vehiculo?",
+      "texto": "¿El sistema ADAS conocido con el nombre de \"Información de ángulo muerto\", ipuede intervenir en la conduccion del vehiculo?",
       "opciones": [
-        "No,este sistema unicamente emite avisos al conductor demanera sonora.",
-        "Si, siempre puede intervenir para evitar una posible colision o roce.",
+        "No, este sistema únicamente emite avisos al conductor de manera sonora.",
+        "Sí, siempre puede intervenir para evitar una posible colision o roce.",
         "En ningun caso, ya que el conductor tiene el control absoluto del vehiculo en todo momento."
       ],
-      "imagen": "../img/test_023_p27.jpg"
+      "imagen": "../img/test_023_p27.jpg",
+      "correcta": 2
     },
     {
-      "texto": "La distancia que recorre el vehiculo desde que se percibe un estimulo hasta que se responde al mismo se llama..",
+      "texto": "La distancia que recorre el vehiculo desde que se percibe un estimulo hasta que se responde al mismo se llama...",
       "opciones": [
         "distancia de reaccion.",
         "distancia de frenado.",
-        "distancia dedetencion."
-      ]
+        "distancia de detención."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Un ciclomotor de dos ruedas esta obligado a Ilevar..",
+      "texto": "Un ciclomotor de dos ruedas esta obligado a llevar...",
       "opciones": [
         "solo el retrovisor derecho.",
         "solo el retrovisor izquierdo.",
         "dos retrovisores, uno en cada lado."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En un tuinel con mas de un carril en el sentido de la marcha, ¿zesta permitido adelantar?",
+      "texto": "En un túnel con mas de un carril en el sentido de la marcha, ¿esta permitido adelantar?",
       "opciones": [
-        "No,en los tuneles no esta permitidoadelantar.",
-        "Si.",
-        "Si,perosoloacamionesyautobuses."
+        "No, en los túneles no está permitido adelantar.",
+        "Sí.",
+        "Sí, pero solo a camiones y autobuses."
       ],
-      "imagen": "../img/test_023_p30.jpg"
+      "imagen": "../img/test_023_p30.jpg",
+      "correcta": 1
     }
   ]
 }

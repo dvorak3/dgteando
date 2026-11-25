@@ -1,6 +1,6 @@
 {
   "test_id": 28,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
       "texto": "Cuando las cintas del cinturon no estan bien estiradas aunque este abrochado...",
@@ -8,33 +8,37 @@
         "resultara incomodo pero el cinturon no perdera eficacia.",
         "el cinturon perdera eficacia y puede provocar lesiones durante el accidente.",
         "el cinturon no perdera eficacia pero hay que cambiarlo."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Al circular con lluvia intensa, ¿zes obligatorio utilizar algun alumbrado?",
+      "texto": "Al circular con lluvia intensa, ¿es obligatorio utilizar algun alumbrado?",
       "opciones": [
         "No, cuando es de dia.",
-        "si.",
+        "Sí.",
         "Solo durante la noche."
       ],
-      "imagen": "../img/test_028_p02.jpg"
+      "imagen": "../img/test_028_p02.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Quien tiene la responsabilidad por las infracciones cometidas sobre las normas de circulacion?",
       "opciones": [
-        "El conductor y,si es menor de edad, sus padres o tutores legales.",
-        "Siempre el conductor causante dela infraccion cometida.",
+        "El conductor y, si es menor de edad, sus padres o tutores legales.",
+        "Siempre el conductor causante de la infracción cometida.",
         "El titular del vehiculo."
-      ]
+      ],
+      "correcta": 0
     },
     {
       "texto": "Cuando se adelante a vehiculos de traccion animal, la separacion lateral...",
       "opciones": [
-        "no debe ser inferior a 1,5 metros,al adelantar tanto dentro como fuera de poblado.",
+        "no debe ser inferior a 1,5 metros, al adelantar tanto dentro como fuera de poblado.",
         "debe ser, al menos, de 1,5 metros al adelantar solamente fuera de poblado.",
         "debe ser siempre proporcional a la anchura y caracteristicas dela via."
       ],
-      "imagen": "../img/test_028_p04.jpg"
+      "imagen": "../img/test_028_p04.jpg",
+      "correcta": 0
     },
     {
       "texto": "Cuando se acerque un vehiculo prioritario en servicio urgente, los demas conductores deben...",
@@ -43,66 +47,74 @@
         "detener su vehiculo.",
         "apartarse siempre a su derecha."
       ],
-      "imagen": "../img/test_028_p05.jpg"
+      "imagen": "../img/test_028_p05.jpg",
+      "correcta": 0
     },
     {
       "texto": "La maniobra de marcha atras esta totalmente prohibida en...",
       "opciones": [
-        "autopistas yautovias.",
+        "autopistas y autovías.",
         "la calzada de cualquier via.",
-        "lasviasreservadasparaautomoviles."
-      ]
+        "las vías reservadas para automóviles."
+      ],
+      "correcta": 0
     },
     {
       "texto": "Para evitar que el vehiculo en caso de lluvia planee sobre el agua...",
       "opciones": [
         "debe usar cadenas.",
         "debe disminuir la velocidad.",
-        "debeaumentarlavelocidad."
+        "debe aumentar la velocidad."
       ],
-      "imagen": "../img/test_028_p07.jpg"
+      "imagen": "../img/test_028_p07.jpg",
+      "correcta": 1
     },
     {
       "texto": "El conductor de un vehiculo detenido en un paso inferior por un tiempo superior a dos minutos esta obligado a...",
       "opciones": [
         "conservar encendido el motor y poner la luz de posicion.",
         "apagar el motor y conservar encendido el alumbrado de posicion.",
-        "conservarencendidoelmotoryponerlaluzcorta."
-      ]
+        "conservar encendido el motor y poner la luz corta."
+      ],
+      "correcta": 1
     },
     {
       "texto": "Al circular marcha atras debe tener en cuenta que...",
       "opciones": [
         "debe hacerlo con toda precaucion, ya que pueden pasar personas por detras del vehiculo.",
-        "tieneprioridad sobre lospeatones.",
+        "tiene prioridad sobre los peatones.",
         "no debe recorrer mas de 10 metros."
-      ]
+      ],
+      "correcta": 0
     },
     {
       "texto": "La velocidad maxima, con caracter general, para un vehiculo especial es de...",
       "opciones": [
-        "45kilometrospor hora.",
-        "60kilometrosporhora.",
+        "45 kilómetros por hora.",
+        "60 kilómetros por hora.",
         "40 kilometros por hora."
       ],
-      "imagen": "../img/test_028_p10.jpg"
+      "imagen": "../img/test_028_p10.jpg",
+      "correcta": 2
     },
     {
-      "texto": "¿En que situacion avisa al conductor el sistema avanzado de ayuda a la conduccion conocido como \"LDw\"?",
+      "texto": "¿En que situacion avisa al conductor el sistema avanzado de ayuda a la conduccion conocido como \"LDW\"?",
       "opciones": [
         "En un desplazamiento lateral indicado con el intermitente.",
         "En un cambio involuntario de direccion.",
         "En un cambio involuntario de carril."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Si se ve obligado a inmovilizar su vehiculo en una autopista, ¿ipuede hacerlo en la mediana?",
+      "texto": "Sí se ve obligado a inmovilizar su vehiculo en una autopista, ¿puede hacerlo en la mediana?",
       "opciones": [
-        "No,solo es posiblehacerlo en el lado derecho,aunqueocupepartedela calzada.",
-        "Si, cuando no haya otra posibilidad.",
-        "No,hayquecontinuar hasta el area dedescansomas proxima."
+        "No, solo es posible hacerlo en el lado derecho, aunque ocupe parte de la calzada.",
+        "Sí, cuando no haya otra posibilidad.",
+        "No, hay que continuar hasta el área de descanso más próxima."
       ],
-      "imagen": "../img/test_028_p12.jpg"
+      "imagen": "../img/test_028_p12.jpg",
+      "correcta": 0
     },
     {
       "texto": "¿Que indica esta senal?",
@@ -111,25 +123,28 @@
         "Prohibicion de pasar sin detenerse.",
         "Entrada prohibida."
       ],
-      "imagen": "../img/test_028_p13.jpg"
+      "imagen": "../img/test_028_p13.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Los frenos, ¿ison un dispositivo de seguridad activa?",
+      "texto": "Los frenos, ¿son un dispositivo de seguridad activa?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "No, son un elemento de seguridad pasiva.",
-        "No,esunsistemamecanico del vehiculo."
+        "No, es un sistema mecánico del vehículo."
       ],
-      "imagen": "../img/test_028_p14.jpg"
+      "imagen": "../img/test_028_p14.jpg",
+      "correcta": 0
     },
     {
       "texto": "Circulando con niebla espesa, enciende el alumbrado de corto alcance y las luces antiniebla. ¿Es correcto?",
       "opciones": [
-        "No,porque debe encender las luces de largo alcance.",
-        "No,porque las luces antiniebla delanteras deben utilizarse sin las de corto alcance.",
-        "Si."
+        "No, porque debe encender las luces de largo alcance.",
+        "No, porque las luces antiniebla delanteras deben utilizarse sin las de corto alcance.",
+        "Sí."
       ],
-      "imagen": "../img/test_028_p15.jpg"
+      "imagen": "../img/test_028_p15.jpg",
+      "correcta": 2
     },
     {
       "texto": "¿Como hay que colocarse el cinturon de seguridad?",
@@ -138,7 +153,8 @@
         "Mas bien flojo, para poder llegar facilmente a todo el habitaculo del vehiculo.",
         "Ajustado al cuerpo, ni muy apretado ni muy flojo, y bien abrochado."
       ],
-      "imagen": "../img/test_028_p16.jpg"
+      "imagen": "../img/test_028_p16.jpg",
+      "correcta": 2
     },
     {
       "texto": "Un vehiculo circula a velocidad inadecuada cuando...",
@@ -146,117 +162,131 @@
         "no se adapta a las circunstancias ni del trafico ni dela via.",
         "se adapta a las condiciones de la via pero supera los limites establecidos.",
         "circula por debajo dela velocidad maxima y por encima de la minima."
-      ]
-    },
-    {
-      "texto": "Para los conductores y pasajeros de motocicletas, ¿ztiene importancia el vestuario a utilizar?",
-      "opciones": [
-        "Si, esfundamentalporque el cuerpo esta directamente expuesto a las inclemencias del tiempo.",
-        "No, es indiferente siempre que lleven el casco.",
-        "No,porque no aporta nada a la seguridad."
       ],
-      "imagen": "../img/test_028_p18.jpg"
+      "correcta": 0
     },
     {
-      "texto": "Concentrar la atencion en una conversacion o discutir con un acompanante, ¿ipuede favorecer la distraccion?",
+      "texto": "Para los conductores y pasajeros de motocicletas, ¿tiene importancia el vestuario a utilizar?",
       "opciones": [
-        "No,conversarcon elacompanantenofavorece la distraccion.",
-        "Si,perosoloen trayectos largos.",
-        "Si."
-      ]
+        "Sí, es fundamental porque el cuerpo está directamente expuesto a las inclemencias del tiempo.",
+        "No, es indiferente siempre que lleven el casco.",
+        "No, porque no aporta nada a la seguridad."
+      ],
+      "imagen": "../img/test_028_p18.jpg",
+      "correcta": 0
+    },
+    {
+      "texto": "Concentrar la atencion en una conversacion o discutir con un acompanante, ¿puede favorecer la distraccion?",
+      "opciones": [
+        "No, conversar con el acompañante no favorece la distracción.",
+        "Sí, pero solo en trayectos largos.",
+        "Sí."
+      ],
+      "correcta": 2
     },
     {
       "texto": "¿Que vehiculos deben tener un seguro obligatorio de responsabilidad civil?",
       "opciones": [
         "Los automoviles solamente.",
-        "Cualquiervehiculo",
-        "Los vehiculos de motor, ciclomotores,ciclos demotor y remolques o semirremolques."
-      ]
+        "Cualquier vehículo.",
+        "Los vehículos de motor, ciclomotores, ciclos de motor y remolques o semirremolques."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Una enfermedad respiratoria sin el debido tratamiento, ¿ique puede causar en el conductor?",
+      "texto": "Una enfermedad respiratoria sin el debido tratamiento, ¿que puede causar en el conductor?",
       "opciones": [
-        "Perdidade atencionyde concentracion.",
-        "Aumentode la concentracion.",
+        "Pérdida de atención y de concentración.",
+        "Aumento de la concentración.",
         "Aumento de la atencion."
-      ]
+      ],
+      "correcta": 0
     },
     {
       "texto": "Esta senal indica la proximidad de...",
       "opciones": [
         "una curva peligrosa hacia la izquierda.",
         "una sucesion de curvas peligrosas, la primera a la izquierda.",
-        "dos curvaspeligrosas seguidas."
+        "dos curvas peligrosas seguidas."
       ],
-      "imagen": "../img/test_028_p22.jpg"
+      "imagen": "../img/test_028_p22.jpg",
+      "correcta": 1
     },
     {
       "texto": "Las advertencias acuisticas se pueden utilizar...",
       "opciones": [
-        "para advertir el propositode adelantarunicamentedentro de poblado.",
-        "enviasestrechasconmuchascurvas.",
-        "enviasanchasconpocascurvas."
-      ]
+        "para advertir el propósito de adelantar únicamente dentro de poblado.",
+        "en vías estrechas con muchas curvas.",
+        "en vías anchas con pocas curvas."
+      ],
+      "correcta": 1
     },
     {
       "texto": "En un tramo de la via muy estrecho sin senalizar en el que sea imposible el paso simultaneo de dos vehiculos, tendra preferencia...",
       "opciones": [
         "el que tenga mas dificultades de maniobra.",
         "el que tenga que retroceder mayor distancia.",
-        "el quehaya entradoprimero en el estrechamiento."
-      ]
+        "el que haya entrado primero en el estrechamiento."
+      ],
+      "correcta": 2
     },
     {
       "texto": "¿Esta permitido estacionar el dia 16 a las ocho de la manana en el lado de la calzada en que este situada esta senal?",
       "opciones": [
         "No.",
-        "Si,porque la senal solo prohibela parada.",
-        "Si,porque solo prohibe estacionar hasta el dia 15."
+        "Sí, porque la señal solo prohíbe la parada.",
+        "Sí, porque solo prohibe estacionar hasta el dia 15."
       ],
-      "imagen": "../img/test_028_p25.jpg"
+      "imagen": "../img/test_028_p25.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Si circula en esta via con trafico denso,no puedecambiar de carril para ...",
+      "texto": "Sí circula en esta vía con tráfico denso, no puede cambiar de carril para...",
       "opciones": [
         "salir de la calzada.",
         "adelantar.",
         "girar a la derecha."
       ],
-      "imagen": "../img/test_028_p26.jpg"
+      "imagen": "../img/test_028_p26.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Qué efectos tiene el LSD en la conduccion?",
       "opciones": [
-        "Sesobrevaloranlascapacidades.",
-        "Aumentalasensaciondefatigaysueno.",
-        "Sepuedensufriralucinacionesyalteraciones emocionales."
-      ]
+        "Se sobrevaloran las capacidades.",
+        "Aumenta la sensación de fatiga y sueño.",
+        "Se pueden sufrir alucinaciones y alteraciones emocionales."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿En esta interseccion zquien debe pasar primero?",
+      "texto": "¿En esta interseccion ¿quien debe pasar primero?",
       "opciones": [
-        "El turismo amarillo,porque se incorpora a la via preferente.",
-        "El camion,porqueseaproximapor laderecha.",
+        "El turismo amarillo, porque se incorpora a la via preferente.",
+        "El camión, porque se aproxima por la derecha.",
         "El turismo naranja, porque tiene preferencia sobre el resto de vehiculos."
       ],
-      "imagen": "../img/test_028_p28.jpg"
+      "imagen": "../img/test_028_p28.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Que documento acredita la matriculacion de un turismo y autoriza la circulacion del mismo por las vias publicas?",
       "opciones": [
         "El certificado del seguro obligatorio.",
         "El permiso de circulacion.",
-        "La tarjeta de inspecciontecnica."
-      ]
+        "La tarjeta de inspección técnica."
+      ],
+      "correcta": 1
     },
     {
       "texto": "¿Es peligroso mandar un mensaje con el telefono movil mientras se conduce?",
       "opciones": [
-        "Si, porque puede provocar la distraccion del conductor.",
-        "No,porqueel conductorestara mas atento a la conduccion.",
-        "No,si se circula despacio."
+        "Sí, porque puede provocar la distraccion del conductor.",
+        "No, porque el conductor estará más atento a la conducción.",
+        "No, si se circula despacio."
       ],
-      "imagen": "../img/test_028_p30.jpg"
+      "imagen": "../img/test_028_p30.jpg",
+      "correcta": 0
     }
   ]
 }

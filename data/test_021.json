@@ -1,92 +1,102 @@
 {
   "test_id": 21,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En esta interseccion con los semaforos en amarillo intermitente, ¿ique debe hacer?",
+      "texto": "En esta interseccion con los semaforos en amarillo intermitente, ¿que debe hacer?",
       "opciones": [
         "Continuar con precaucion, el semaforo en amarillo intermitente exime de cumplir la senal vertical.",
         "Extremar la precaucion y, en su caso, ceder el paso a ambos lados.",
         "Detener el vehiculo."
       ],
-      "imagen": "../img/test_021_p01.jpg"
+      "imagen": "../img/test_021_p01.jpg",
+      "correcta": 1
     },
     {
-      "texto": "En el ambito del trafico, ¿za que se llama grupos vulnerables?",
+      "texto": "En el ambito del trafico, ¿a que se llama grupos vulnerables?",
       "opciones": [
         "A los pasajeros que resultan heridos en un accidente de automovil.",
-        "A los grupos depoblacionmas propensos a sufrirun accidente",
-        "A los jovenes menores de30 anos que resultanheridos en accidente."
-      ]
+        "A los grupos de población más propensos a sufrir un accidente",
+        "A los jovenes menores de 30 años que resultan heridos en accidente."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En un vehiculo de anchura inferior a un metro, ¿ipuede sobresalir la carga por delante o por detras?",
+      "texto": "En un vehiculo de anchura inferior a un metro, ¿puede sobresalir la carga por delante o por detras?",
       "opciones": [
-        "Si,hasta 25 centimetros,por delante ypor detras.",
+        "Sí, hasta 25 centímetros, por delante y por detrás.",
         "No, en ningun caso.",
-        "Solopordetrashasta25centimetros."
+        "Solo por detrás hasta 25 centímetros."
       ],
-      "imagen": "../img/test_021_p03.jpg"
+      "imagen": "../img/test_021_p03.jpg",
+      "correcta": 0
     },
     {
       "texto": "Esta anocheciendo y no hay niebla. ¿Es correcto encender las luces antiniebla delanteras?",
       "opciones": [
         "No.",
-        "Si."
-      ]
+        "Sí."
+      ],
+      "correcta": 0
     },
     {
       "texto": "Para disminuir la probabilidad de somnolencia debe evitar conducir...",
       "opciones": [
-        "durante las horas delamadrugada.",
+        "durante las horas de la madrugada.",
         "durante las ultimas horas de la tarde.",
-        "durantelas primeras horas de lamanana."
-      ]
+        "durante las primeras horas de la mañana."
+      ],
+      "correcta": 0
     },
     {
       "texto": "Para abandonar una autopista debe incorporarse al carril de deceleracion...",
       "opciones": [
-        "en cualquierlugardel mismo.",
+        "en cualquier lugar del mismo.",
         "al final del mismo.",
         "lo antes posible."
       ],
-      "imagen": "../img/test_021_p06.jpg"
+      "imagen": "../img/test_021_p06.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Cuando el autobus, que circula por el carril bus, circula mas rapido que el resto de los vehiculos, ¿ise considera adelantamiento?",
+      "texto": "Cuando el autobus, que circula por el carril bus, circula mas rapido que el resto de los vehiculos, ¿se considera adelantamiento?",
       "opciones": [
         "No.",
-        "Si.",
-        "Si, porque en via urbana esta permitido adelantar por la derecha. c) Si, porque en via urbana esta permitido adelantar por la derecha."
+        "Sí.",
+        "Sí, porque en via urbana esta permitido adelantar por la derecha."
       ],
-      "imagen": "../img/test_021_p07.jpg"
+      "imagen": "../img/test_021_p07.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Al cruzar un arcen por el que transitan peatones, ¿ique debe hacer?",
+      "texto": "Al cruzar un arcen por el que transitan peatones, ¿que debe hacer?",
       "opciones": [
-        "Cederles elpaso si no disponen dezona peatonal.",
+        "Cederles el paso si no disponen de zona peatonal.",
         "Avisarles con las senales acusticas para que se aparten.",
         "Cederles el paso solamente cuando formen un grupo."
       ],
-      "imagen": "../img/test_021_p08.jpg"
+      "imagen": "../img/test_021_p08.jpg",
+      "correcta": 0
     },
     {
       "texto": "El conductor de un cuadriciclo ligero que dispone de cinturon de seguridad esta obligado a utilizarlo...",
       "opciones": [
         "solo en vias interurbanas.",
-        "soloen vias urbanas.",
-        "tanto envias urbanas e interurbanas."
+        "solo en vías urbanas.",
+        "tanto en vías urbanas e interurbanas."
       ],
-      "imagen": "../img/test_021_p09.jpg"
+      "imagen": "../img/test_021_p09.jpg",
+      "correcta": 2
     },
     {
-      "texto": "¿En una calzada con dos sentidos hay un refugio en el centro.zPor que lado esta permitido circular?",
+      "texto": "¿En una calzada con dos sentidos hay un refugio en el centro. ¿Por que lado esta permitido circular?",
       "opciones": [
         "Por el lado derecho del refugio.",
         "Por cualquiera de ellos, indistintamente.",
         "Por el lado izquierdo del refugio."
       ],
-      "imagen": "../img/test_021_p10.jpg"
+      "imagen": "../img/test_021_p10.jpg",
+      "correcta": 0
     },
     {
       "texto": "Cuando circula adaptando la velocidad a las circunstancias del trafico, lo hace a velocidad...",
@@ -94,102 +104,114 @@
         "excesiva.",
         "reducida.",
         "adecuada."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Un camion, ¿zpuede entrar en una via con esta senal?",
+      "texto": "Un camion, ¿puede entrar en una via con esta senal?",
       "opciones": [
-        "Si, en cualquier caso.",
+        "Sí, en cualquier caso.",
         "No, tiene siempre prohibido el paso.",
-        "Si,siemprequenosuperelos5.500kilogramosdemasamaximaautorizada."
+        "Sí, siempre que no supere los 5.500 kilogramos de masa máxima autorizada."
       ],
-      "imagen": "../img/test_021_p12.jpg"
+      "imagen": "../img/test_021_p12.jpg",
+      "correcta": 2
     },
     {
       "texto": "Los sintomas de las alergias respiratorias pueden producir...",
       "opciones": [
         "un retraso en la aparicion del sueno.",
-        "una menorcapacidadpara mantener la concentracion en el trafico.",
+        "una menor capacidad para mantener la concentración en el trafico.",
         "una disminucion del tiempo de reaccion."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En un turismo de 9 plazas incluido el conductor, ¿ipueden viajar 9 ninos?",
+      "texto": "En un turismo de 9 plazas incluido el conductor, ¿pueden viajar 9 ninos?",
       "opciones": [
-        "No,porque se supera el numero de plazas autorizado.",
-        "Si,cuandovanal cargo deun adulto.",
-        "Si, cuando los ninos tienen edades comprendidas entre los 2 y los 12 anos de edad."
-      ]
+        "No, porque se supera el número de plazas autorizado.",
+        "Sí, cuando van al cargo de un adulto.",
+        "Sí, cuando los ninos tienen edades comprendidas entre los 2 y los 12 anos de edad."
+      ],
+      "correcta": 0
     },
     {
       "texto": "Entre los costes por danos materiales causados por los accidentes de trafico se encuentran los danos producidos...",
       "opciones": [
         "en vehiculos, unicamente.",
         "a los pasajeros de los vehiculos.",
-        "en losvehiculos,laviayelmedioambiente."
-      ]
+        "en los vehículos, la vía y el medio ambiente."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En una autopista, ¿iesta permitido utilizar los pasos que hay en la mediana para hacer un cambio de sentido de la marcha?",
+      "texto": "En una autopista, ¿esta permitido utilizar los pasos que hay en la mediana para hacer un cambio de sentido de la marcha?",
       "opciones": [
-        "No,porque esta prohibido.",
-        "Si, cuando esten abiertos.",
-        "Si, salvo que este expresamente prohibido por una senal."
+        "No, porque está prohibido.",
+        "Sí, cuando esten abiertos.",
+        "Sí, salvo que este expresamente prohibido por una senal."
       ],
-      "imagen": "../img/test_021_p16.jpg"
+      "imagen": "../img/test_021_p16.jpg",
+      "correcta": 0
     },
     {
       "texto": "En una situacion incierta, podra ganar unos metros vitales para evitar un accidente si coloca el pie...",
       "opciones": [
-        "encima del pedal del freno,presionandolo levemente.",
+        "encima del pedal del freno, presionándolo levemente.",
         "frente al pedal del freno sin llegar a presionar.",
         "frente al pedal del embrague."
       ],
-      "imagen": "../img/test_021_p17.jpg"
+      "imagen": "../img/test_021_p17.jpg",
+      "correcta": 1
     },
     {
       "texto": "Las ordenes de los agentes de trafico...",
       "opciones": [
-        "solamente hayque cumplirlas cuando exista una situacion de peligro.",
+        "solamente hay que cumplirlas cuando exista una situacion de peligro.",
         "hay que cumplirlas siempre.",
-        "solodeben cumplirse enlas intersecciones."
+        "solo deben cumplirse en las intersecciones."
       ],
-      "imagen": "../img/test_021_p18.jpg"
+      "imagen": "../img/test_021_p18.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Puede circular conduciendo un ciclomotor por una via interurbana sin arcen?",
       "opciones": [
-        "Si, por la derecha, ocupando la parte imprescindible de la calzada.",
-        "No, en este caso no sepuede circular.",
-        "Si, por el centro del carril derecho."
+        "Sí, por la derecha, ocupando la parte imprescindible de la calzada.",
+        "No, en este caso no se puede circular.",
+        "Sí, por el centro del carril derecho."
       ],
-      "imagen": "../img/test_021_p19.jpg"
+      "imagen": "../img/test_021_p19.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Una linea longitudinal discontinua con los trazos muy juntos, ¿zque indica?",
+      "texto": "Una linea longitudinal discontinua con los trazos muy juntos, ¿que indica?",
       "opciones": [
-        "Un tramopeligroso.",
+        "Un tramo peligroso.",
         "Un carril especial.",
-        "El iniciode la linea discontinua"
+        "El inicio de la línea discontinua."
       ],
-      "imagen": "../img/test_021_p20.jpg"
+      "imagen": "../img/test_021_p20.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Para recordar las pautas basicas de actuacion en un accidente se utiliza la regla PAs. Estas siglas significan...",
+      "texto": "Para recordar las pautas basicas de actuacion en un accidente se utiliza la regla PAS. Estas siglas significan...",
       "opciones": [
-        "proteger,alertary socorrer.",
+        "proteger, alertar y socorrer.",
         "prevenir, atender y servir.",
         "precaucion, atencion y seguridad."
-      ]
+      ],
+      "correcta": 0
     },
     {
       "texto": "Un turismo, ¿Podra superar en 20 km/h la velocidad maxima generica para adelantar?",
       "opciones": [
         "No.",
-        "Si, en carreteras convencionales queno discurran porsuelo urbano.",
-        "entodas lasvias,siemprequeno loprohiba la senalizacion."
+        "Sí, en carreteras convencionales que no discurran por suelo urbano.",
+        "en todas las vías, siempre que no lo prohíba la señalización."
       ],
-      "imagen": "../img/test_021_p22.jpg"
+      "imagen": "../img/test_021_p22.jpg",
+      "correcta": 0
     },
     {
       "texto": "¿Que indica esta senal?",
@@ -198,33 +220,37 @@
         "Peligro por la proximidad de un tramo cuyo pavimento puede resultar muy deslizante a causa del hielo o la nieve.",
         "Peligro por la proximidad de una zona de la calzada cuyo pavimento puede resultar muy deslizante."
       ],
-      "imagen": "../img/test_021_p23.jpg"
+      "imagen": "../img/test_021_p23.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Una carga sobresale por la parte trasera de un turismo, ¿zdebe ir senalizada?",
+      "texto": "Una carga sobresale por la parte trasera de un turismo, ¿debe ir senalizada?",
       "opciones": [
-        "Si,tantodediacomo denoche.",
-        "Si,pero solo denoche o cuando existan condiciones meteorologicas que disminuyan sensiblemente la visibilidad.",
-        "No,porque no es un vehiculo destinado exclusivamente al transporte de mercancias."
+        "Sí, tanto de día como de noche.",
+        "Sí, pero solo de noche o cuando existan condiciones meteorologicas que disminuyan sensiblemente la visibilidad.",
+        "No, porque no es un vehículo destinado exclusivamente al transporte de mercancias."
       ],
-      "imagen": "../img/test_021_p24.jpg"
+      "imagen": "../img/test_021_p24.jpg",
+      "correcta": 0
     },
     {
       "texto": "¿Que situaciones de trafico favorecen la aparicion de la somnolencia?",
       "opciones": [
         "Las monotonas.",
-        "Las que tienencambios en el entorno con mucha frecuencia.",
-        "La conduccion en zonaurbana conbastantetrafico."
-      ]
+        "Las que tienen cambios en el entorno con mucha frecuencia.",
+        "La conducción en zona urbana con bastante tráfico."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Esta senal zpermite entrar a un turismo en la via en la que este colocada?",
+      "texto": "¿Esta senal ¿permite entrar a un turismo en la via en la que este colocada?",
       "opciones": [
-        "Si, siempre.",
+        "Sí, siempre.",
         "No.",
-        "Si,soloafectaamotocicletasyciclomotores."
+        "Sí, solo afecta a motocicletas y ciclomotores."
       ],
-      "imagen": "../img/test_021_p26.jpg"
+      "imagen": "../img/test_021_p26.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Por que las personas mayores corren mas peligro en el trafico?",
@@ -233,34 +259,38 @@
         "Porque son menos agiles, aunque suelen reaccionar mas rapidamente",
         "Porque suelen ver y oir peor."
       ],
-      "imagen": "../img/test_021_p27.jpg"
+      "imagen": "../img/test_021_p27.jpg",
+      "correcta": 2
     },
     {
       "texto": "El sistema ADAS conocido como \"EBD\" ayuda a detectar cuando el vehiculo que circula por delante...",
       "opciones": [
-        "Se dispone a realizarun cambio de direccion en la proxima interseccion.",
+        "Se dispone a realizar un cambio de direccion en la proxima interseccion.",
         "Circula a una velocidad inferior a la minima establecida en la via.",
-        "Esta realizando unafrenadade emergencia."
+        "Está realizando una frenada de emergencia."
       ],
-      "imagen": "../img/test_021_p28.jpg"
+      "imagen": "../img/test_021_p28.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Durante la marcha, parte de la carga de su vehiculo cae a la calzada, ¿idebe pararse a senalizarlo?",
+      "texto": "Durante la marcha, parte de la carga de su vehiculo cae a la calzada, ¿debe pararse a senalizarlo?",
       "opciones": [
         "No, no es necesario si puede retirar la carga de inmediato.",
-        "Si, empleando el dispositivo de presenalizacion de peligro.",
+        "Sí, empleando el dispositivo de presenalizacion de peligro.",
         "No."
       ],
-      "imagen": "../img/test_021_p29.jpg"
+      "imagen": "../img/test_021_p29.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Que indica la senal?",
       "opciones": [
         "Precaucion, tunel o tramo de escasa visibilidad.",
         "Fin de obligacion de alumbrado de corto alcance.",
-        "Alumbradode corto alcance obligatorio."
+        "Alumbrado de corto alcance obligatorio."
       ],
-      "imagen": "../img/test_021_p30.jpg"
+      "imagen": "../img/test_021_p30.jpg",
+      "correcta": 2
     }
   ]
 }

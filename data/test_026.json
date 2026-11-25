@@ -1,58 +1,64 @@
 {
   "test_id": 26,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Las personas provistas de un certificado medico de exencion, ¿zestan obligadas a abrocharse el cinturon de seguridad?",
+      "texto": "Las personas provistas de un certificado medico de exencion, ¿estan obligadas a abrocharse el cinturon de seguridad?",
       "opciones": [
-        "Unicamentefueradepoblado.",
+        "Únicamente fuera de poblado.",
         "No.",
-        "Si."
+        "Sí."
       ],
-      "imagen": "../img/test_026_p01.jpg"
+      "imagen": "../img/test_026_p01.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Sobre los railes de tranvia, ¿zque esta prohibido?",
+      "texto": "Sobre los railes de tranvia, ¿que esta prohibido?",
       "opciones": [
-        "Pararyestacionar.",
-        "Estacionar,solamente.",
+        "Parar y estacionar.",
+        "Estacionar, solamente.",
         "Circular."
       ],
-      "imagen": "../img/test_026_p02.jpg"
+      "imagen": "../img/test_026_p02.jpg",
+      "correcta": 0
     },
     {
       "texto": "¿Tienen permitido las bicicletas circular en posicion paralela?",
       "opciones": [
-        "Si,aproximandosetodoloposiblea la partederecha de la via,exceptoen lostramos sin visibilidad y cuando formen aglomeraciones de trafico.",
-        "Si, manteniendo entre ellas una distancia minima de 1,5 metros.",
+        "Sí, aproximándose todo lo posible a la parte derecha de la vía, excepto en los tramos sin visibilidad y cuando formen aglomeraciones de trafico.",
+        "Sí, manteniendo entre ellas una distancia minima de 1,5 metros.",
         "No, en ningun caso."
       ],
-      "imagen": "../img/test_026_p03.jpg"
+      "imagen": "../img/test_026_p03.jpg",
+      "correcta": 0
     },
     {
       "texto": "Los Agentes inmovilizan su vehiculo porque tiene una tasa de alcohol mayor de la permitida. ¿Cuando puede volver a conducir?",
       "opciones": [
-        "No podre conducir ese dia, tengo quebuscar otro conductor.",
-        "Cuandosemarcheel agente.",
-        "Cuandola tasade alcoholbajeal nivel permitido"
+        "No podré conducir ese día, tengo que buscar otro conductor.",
+        "Cuando se marche el agente.",
+        "Cuando la tasa de alcohol baje al nivel permitido."
       ],
-      "imagen": "../img/test_026_p04.jpg"
+      "imagen": "../img/test_026_p04.jpg",
+      "correcta": 2
     },
     {
       "texto": "¿Debe senalizar de alguna manera la carga cuando ésta caiga a la via?",
       "opciones": [
         "No.",
         "No, solo se senaliza el vehiculo cuando esta averiado.",
-        "Si,con el dispositivo de presenalizacion depeligro."
-      ]
+        "Sí, con el dispositivo de presenalizacion depeligro."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Los agentes de trafico, ¿ipueden hacer senales opticas y acusticas?",
+      "texto": "Los agentes de trafico, ¿pueden hacer senales opticas y acusticas?",
       "opciones": [
-        "No,solopuedenhacersenales acusticas.",
-        "No,solopuedenhacersenalesopticas.",
-        "Si,pueden hacer senales opticasyacusticas."
-      ]
+        "No, solo pueden hacer señales acústicas.",
+        "No, solo pueden hacer señales ópticas.",
+        "Sí, pueden hacer señales ópticas y acústicas."
+      ],
+      "correcta": 2
     },
     {
       "texto": "¿Que permiso es necesario para conducir un vehiculo especial agricola que pueda superar los 45 km/h?",
@@ -61,15 +67,17 @@
         "La licencia de vehiculos agricolas.",
         "El permiso de conduccion de la clase B."
       ],
-      "imagen": "../img/test_026_p07.jpg"
+      "imagen": "../img/test_026_p07.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Los accidentes de trafico, ¿isuponen un enorme impacto economico para la poblacion?",
+      "texto": "Los accidentes de trafico, ¿suponen un enorme impacto economico para la poblacion?",
       "opciones": [
-        "Si.",
-        "No,pero suponen un enorme impacto social.",
-        "No,ya que el coste sanitario es minimo."
-      ]
+        "Sí.",
+        "No, pero suponen un enorme impacto social.",
+        "No, ya que el coste sanitario es mínimo."
+      ],
+      "correcta": 0
     },
     {
       "texto": "En esta via, deben obedecer solo a las indicaciones situadas a su izquierda los que pretendan...",
@@ -78,15 +86,17 @@
         "girar a la izquierda o seguir de frente.",
         "girar a la izquierda solamente"
       ],
-      "imagen": "../img/test_026_p09.jpg"
+      "imagen": "../img/test_026_p09.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Los menores de edad, ¿zpueden viajar en los asientos delanteros de un turismo?",
+      "texto": "Los menores de edad, ¿pueden viajar en los asientos delanteros de un turismo?",
       "opciones": [
-        "Si, sisuestaturaessuperiora135centimetros.",
+        "Sí, si su estatura es superior a 135 centímetros.",
         "No, nunca.",
-        "Si, cuando suedad sea superiora los12anos."
-      ]
+        "Sí, cuando su edad sea superior a los 12 años."
+      ],
+      "correcta": 0
     },
     {
       "texto": "La distancia necesaria para frenar con seguridad depende...",
@@ -94,95 +104,106 @@
         "del buen estado del pedal del embrague.",
         "del buen estado de los neumaticos.",
         "del buen estado del freno de mano."
-      ]
+      ],
+      "correcta": 1
     },
     {
       "texto": "El mantenimiento preventivo del vehiculo es fundamental...",
       "opciones": [
-        "parapreveniraccidentesporfallomecanico.",
-        "paramejorarla aerodinamica del vehiculo.",
-        "parainstalaraccesorios."
-      ]
+        "para prevenir accidentes por fallo mecánico.",
+        "para mejorar la aerodinámica del vehículo.",
+        "para instalar accesorios."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En caso de atropello, ¿ison los ninos especialmente vulnerables?",
+      "texto": "En caso de atropello, ¿son los ninos especialmente vulnerables?",
       "opciones": [
         "No.",
-        "Si, debido a su baja estatura.",
-        "Si, porque el vehiculo suele ir a mayor velocidad."
+        "Sí, debido a su baja estatura.",
+        "Sí, porque el vehiculo suele ir a mayor velocidad."
       ],
-      "imagen": "../img/test_026_p13.jpg"
+      "imagen": "../img/test_026_p13.jpg",
+      "correcta": 1
     },
     {
-      "texto": "En este tramo de via, ¿icual es la velocidad maxima?",
+      "texto": "En este tramo de via, ¿cual es la velocidad maxima?",
       "opciones": [
         "La que indica la senalizacion.",
-        "La que indica la senalizacion,mas 20 km/h para adelantar.",
-        "La maximagenerica de90km/h, para adelantar."
+        "La que indica la senalizacion, mas 20 km/h para adelantar.",
+        "La máxima genérica de 90 km/h, para adelantar."
       ],
-      "imagen": "../img/test_026_p14.jpg"
+      "imagen": "../img/test_026_p14.jpg",
+      "correcta": 0
     },
     {
       "texto": "¿Puede circular cualquier vehiculo por esta calzada?",
       "opciones": [
-        "Si.",
-        "No,porque es una via exclusivapara automoviles.",
-        "Si,exceptomotocicletasde dos ruedas sin sidecar."
+        "Sí.",
+        "No, porque es una vía exclusiva para automóviles.",
+        "Sí, excepto motocicletas de dos ruedas sin sidecar."
       ],
-      "imagen": "../img/test_026_p15.jpg"
+      "imagen": "../img/test_026_p15.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Tiene permitido circular una motocicleta por un carril habilitado en sentido contrario al habitual?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "No.",
-        "Si, pero solo si se trata de una motocicleta de dos ruedas sin sidecar"
+        "Sí, pero solo si se trata de una motocicleta de dos ruedas sin sidecar"
       ],
-      "imagen": "../img/test_026_p16.jpg"
+      "imagen": "../img/test_026_p16.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Esta senal, ¿zque indica?",
+      "texto": "Esta senal, ¿que indica?",
       "opciones": [
         "Las direcciones de las distintas salidas en la proxima glorieta.",
         "El lugar a partir del cual rigen las normas de las autopistas.",
         "Que hay una via que tiene cuatro carreteras."
       ],
-      "imagen": "../img/test_026_p17.jpg"
+      "imagen": "../img/test_026_p17.jpg",
+      "correcta": 0
     },
     {
       "texto": "Esta senal indica la proximidad de...",
       "opciones": [
         "un paso a nivel sin barrera con mas de una via ferrea.",
-        "unpuentemovil con barreras.",
-        "unpasoanivel conbarreras."
+        "un puente móvil con barreras.",
+        "un paso a nivel con barreras."
       ],
-      "imagen": "../img/test_026_p18.jpg"
+      "imagen": "../img/test_026_p18.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Excepcionalmente, y en condiciones de seguridad, en vias que no sean autopistas o autovias, ¿ise permite el arrastre de un vehiculo por otro no destinado a este fin?",
+      "texto": "Excepcionalmente, y en condiciones de seguridad, en vias que no sean autopistas o autovias, ¿se permite el arrastre de un vehiculo por otro no destinado a este fin?",
       "opciones": [
-        "Si,hastaeltallermasproximo",
+        "Sí, hasta el taller más próximo.",
         "No.",
-        "Si, siempre que no serecorranmas de 10 kilometros."
-      ]
+        "Sí, siempre que no se recorran más de 10 kilómetros."
+      ],
+      "correcta": 0
     },
     {
       "texto": "Fumar durante la conduccion...",
       "opciones": [
         "proporciona tranquilidad.",
-        "estaprohibido.",
+        "está prohibido.",
         "puede disminuir el nivel de atencion."
       ],
-      "imagen": "../img/test_026_p20.jpg"
+      "imagen": "../img/test_026_p20.jpg",
+      "correcta": 2
     },
     {
       "texto": "El autobus se incorpora desde la parada. ¿Es obligatorio facilitarle el paso?",
       "opciones": [
         "Solo si se dedica al transporte escolar.",
         "No.",
-        "Si."
+        "Sí."
       ],
-      "imagen": "../img/test_026_p21.jpg"
+      "imagen": "../img/test_026_p21.jpg",
+      "correcta": 2
     },
     {
       "texto": "La velocidad maxima generica para una motocicleta en una carretera convencional es de...",
@@ -190,71 +211,80 @@
         "110 km/h.",
         "100 km/h.",
         "90 km/h."
-      ]
-    },
-    {
-      "texto": "En esta interseccion, ¿zse puede adelantar?",
-      "opciones": [
-        "No,esta prohibido.",
-        "Si, si las circunstancias del trafico lo permiten.",
-        "Si, pero solo a un vehiculo de dos ruedas."
       ],
-      "imagen": "../img/test_026_p23.jpg"
+      "correcta": 2
     },
     {
-      "texto": "En una interseccion en la que no funciona el semaforo, ¿ique debe hacer?",
+      "texto": "En esta interseccion, ¿se puede adelantar?",
       "opciones": [
-        "Pasar porque se entiendeque el semaforo esta en verde.",
-        "Detenerseporqueestaprohibidoelpaso."
-      ]
+        "No, está prohibido.",
+        "Sí, si las circunstancias del trafico lo permiten.",
+        "Sí, pero solo a un vehiculo de dos ruedas."
+      ],
+      "imagen": "../img/test_026_p23.jpg",
+      "correcta": 0
     },
     {
-      "texto": "¿Circula con su turismo por el arcen detras del tractor para facilitar el adelantamiento a un camion.zEs correcto?",
+      "texto": "En una interseccion en la que no funciona el semaforo, ¿que debe hacer?",
       "opciones": [
-        "Si, si el arcen fuera mas ancho.",
+        "Pasar porque se entiende que el semáforo está en verde.",
+        "Detenerse porque está prohibido el paso."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "¿Circula con su turismo por el arcen detras del tractor para facilitar el adelantamiento a un camion. ¿Es correcto?",
+      "opciones": [
+        "Sí, si el arcen fuera mas ancho.",
         "No."
       ],
-      "imagen": "../img/test_026_p25.jpg"
+      "imagen": "../img/test_026_p25.jpg",
+      "correcta": 1
     },
     {
       "texto": "Circula de noche con las luces largas encendidas. Ve peatones en el arcen. ¿Esta obligado a cambiar la luz larga por la corta?",
       "opciones": [
         "No es necesario.",
-        "Si, pero solamente en los tramos rectos.",
-        "Si, para no deslumbrar"
-      ]
+        "Sí, pero solamente en los tramos rectos.",
+        "Sí, para no deslumbrar"
+      ],
+      "correcta": 2
     },
     {
       "texto": "Quiere girar a la derecha. ¿Como debe avisar a los demas conductores?",
       "opciones": [
         "Con el brazo o con el claxon.",
-        "Conlaslucesoconelclaxon.",
-        "Conlos intermitentesoconelbrazo."
-      ]
+        "Con las luces o con el claxon.",
+        "Con los intermitentes o con el brazo."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Si conduce una motocicleta y hay niebla ligera, ¿ique alumbrado debe utilizar?",
+      "texto": "Sí conduce una motocicleta y hay niebla ligera, ¿que alumbrado debe utilizar?",
       "opciones": [
         "El de posicion, el de cruce y el delantero de niebla si lo tiene instalado.",
         "El de posicion, el de cruce y el delantero y trasero de niebla si los tiene instalados.",
         "El de posicion y el de cruce, siendo optativo el de largo alcance."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Cuando se hacen cambios importantes en las caracteristicas tecnicas del vehiculo, ¿ise debe hacer inmediatamente la inspeccion tecnica del vehiculo?",
+      "texto": "Cuando se hacen cambios importantes en las caracteristicas tecnicas del vehiculo, ¿se debe hacer inmediatamente la inspeccion tecnica del vehiculo?",
       "opciones": [
-        "Si,entodocaso.",
-        "Se puede esperar hasta la que corresponda por razon de la antigiuedad del vehiculo.",
+        "Sí, en todo caso.",
+        "Se puede esperar hasta la que corresponda por razon de la antigüedad del vehiculo.",
         "No."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Una enfermedad leve, ¿zimpide la conduccion?",
+      "texto": "Una enfermedad leve, ¿impide la conduccion?",
       "opciones": [
         "No, al ser leve no hay que tomar ningun tipo de precauciones.",
-        "Si, siempre influye.",
-        "No,pero durante el tiempo que dure se deben tomar las precauciones indicadas por el medico."
-      ]
+        "Sí, siempre influye.",
+        "No, pero durante el tiempo que dure se deben tomar las precauciones indicadas por el medico."
+      ],
+      "correcta": 2
     }
   ]
 }

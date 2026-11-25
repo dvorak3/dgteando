@@ -1,99 +1,110 @@
 {
   "test_id": 27,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
       "texto": "En los carriles reservados para bicicletas esta prohibido...",
       "opciones": [
-        "estacionar,solamente.",
+        "estacionar, solamente.",
         "parar y estacionar.",
         "parar, unicamente."
       ],
-      "imagen": "../img/test_027_p01.jpg"
+      "imagen": "../img/test_027_p01.jpg",
+      "correcta": 1
     },
     {
       "texto": "Un ciclomotor de dos ruedas es un vehiculo con un motor de cilindrada...",
       "opciones": [
-        "no superiora 50 centimetros cubicos y una velocidad maximano superiora 45km/h.",
+        "no superior a 50 centímetros cúbicos y una velocidad máxima no superior a 45 km/h.",
         "inferior a 50 centimetros cubicos.",
-        "superiora50 centimetros cubicos si esde combustion interna."
+        "superior a 50 centímetros cúbicos si es de combustión interna."
       ],
-      "imagen": "../img/test_027_p02.jpg"
+      "imagen": "../img/test_027_p02.jpg",
+      "correcta": 0
     },
     {
       "texto": "Un turismo debe llevar las herramientas indispensables para...",
       "opciones": [
-        "elcambiode larueda derepuesto.",
-        "efectuarpequenasreparaciones.",
-        "el cambiodemanguitos,correas ybujias."
-      ]
+        "el cambio de la rueda de repuesto.",
+        "efectuar pequeñas reparaciones.",
+        "el cambio de manguitos, correas y bujías."
+      ],
+      "correcta": 0
     },
     {
       "texto": "¿Cuando esta bien colocado en el asiento para conducir?",
       "opciones": [
-        "Cuando llevo laspiernasdobladas y el cuerpo haciaadelante.",
-        "Cuandollevo laspiernas unpocodobladasy el cuerporecto.",
+        "Cuando llevo las piernas dobladas y el cuerpo hacia adelante.",
+        "Cuando llevo las piernas un poco dobladas y el cuerpo recto.",
         "Cuando llevo las piernas rectas y el cuerpo hacia atras."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Los paneles de mensaje variable, ¿ipueden utilizarse para dar instrucciones de obligado cumplimiento?",
+      "texto": "Los paneles de mensaje variable, ¿pueden utilizarse para dar instrucciones de obligado cumplimiento?",
       "opciones": [
-        "No,sonmeramente informativos.",
+        "No, son meramente informativos.",
         "No, solo pueden usarse para advertir de posibles peligros.",
-        "Si, entre otros usos."
+        "Sí, entre otros usos."
       ],
-      "imagen": "../img/test_027_p05.jpg"
+      "imagen": "../img/test_027_p05.jpg",
+      "correcta": 2
     },
     {
       "texto": "Los accidentes de trafico son una de las principales causas de mortalidad en nuestro pais, especialmente entre...",
       "opciones": [
-        "los jovenes entre15y29anos.",
-        "losninosy lagentemayorde70 anos.",
-        "lagentemayorde70anos."
+        "los jóvenes entre 15 y 29 años.",
+        "los niños y la gente mayor de 70 años.",
+        "la gente mayor de 70 años."
       ],
-      "imagen": "../img/test_027_p06.jpg"
+      "imagen": "../img/test_027_p06.jpg",
+      "correcta": 0
     },
     {
       "texto": "Se prohibe circular por autopistas a los...",
       "opciones": [
-        "vehiculos quetransporten mercancias peligrosas.",
-        "vehiculoscon remolque.",
-        "vehiculosquenoseancapacesdealcanzaren llano60km/h."
+        "vehículos que transporten mercancías peligrosas.",
+        "vehículos con remolque.",
+        "vehículos que no sean capaces de alcanzar en llano 60 km/h."
       ],
-      "imagen": "../img/test_027_p07.jpg"
+      "imagen": "../img/test_027_p07.jpg",
+      "correcta": 2
     },
     {
-      "texto": "La velocidad, ¿zinfluye en el campo visual del conductor?",
+      "texto": "La velocidad, ¿influye en el campo visual del conductor?",
       "opciones": [
-        "Dependede las condicionesdel vehiculo.",
-        "Si, el campo visual disminuye al aumentar la velocidad.",
-        "No. c) No."
-      ]
+        "Depende de las condiciones del vehículo.",
+        "Sí, el campo visual disminuye al aumentar la velocidad.",
+        "No."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Si se consume alcohol, ¿zcuando aumenta el riesgo de accidente?",
+      "texto": "Sí se consume alcohol, ¿cuando aumenta el riesgo de accidente?",
       "opciones": [
         "Cuando se ha superado el limite legal de alcoholemia.",
         "Antes de superar el limite legal.",
-        "El riesgo no dependede la cantidad consumida."
-      ]
+        "El riesgo no depende de la cantidad consumida."
+      ],
+      "correcta": 1
     },
     {
       "texto": "En caso de accidente, cuando el cinturon tiene holguras a pesar de estar abrochado...",
       "opciones": [
-        "se recorrera una mayordistanciay esposible impactarcontra el volanteo el parabrisas.",
-        "nopasara nada,puestoque lo importante es llevarlo abrochado.",
+        "se recorrerá una mayor distancia y es posible impactar contra el volante o el parabrisas.",
+        "no pasará nada, puesto que lo importante es llevarlo abrochado.",
         "no influira en su eficacia si se coloca correctamente"
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Hace un ano que ha obtenido el permiso de la clase A2 y obtiene un permiso de la clase B, ¿icual sera la tasa maxima de alcohol permitida?",
+      "texto": "Hace un ano que ha obtenido el permiso de la clase A2 y obtiene un permiso de la clase B, ¿cual sera la tasa maxima de alcohol permitida?",
       "opciones": [
         "0,3 gramos por litro en sangre, durante dos anos.",
         "Una tasa que no supere los 0,5 gramos por litro en sangre.",
         "0,3 gramos por litro en sangre, durante un ano."
-      ]
+      ],
+      "correcta": 1
     },
     {
       "texto": "Que funcion tienen las guias sonoras situadas en el borde derecho de la calzada, ¿ubicadas normalmente en el arcen coincidiendo con la marca vial que delimita el carril derecho?",
@@ -102,7 +113,8 @@
         "Alertar al conductor en caso de que se desvie de la trayectoria de su carril.",
         "Indicar la existencia de un carril especial o reservado a determinados vehiculos."
       ],
-      "imagen": "../img/test_027_p12.jpg"
+      "imagen": "../img/test_027_p12.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Que debe hacer en esta situacion?",
@@ -111,134 +123,150 @@
         "Circular con precaucion.",
         "Utilizar el carril que esta libre."
       ],
-      "imagen": "../img/test_027_p13.jpg"
+      "imagen": "../img/test_027_p13.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Utilizar el movil con un sistema \"manos libres\" mientras se conduce, ¿ipuede influir en la capacidad de atencion del conductor?",
+      "texto": "Utilizar el movil con un sistema \"manos libres\" mientras se conduce, ¿puede influir en la capacidad de atencion del conductor?",
       "opciones": [
         "No, el uso del movil no influye para nada en la capacidad de atencion.",
-        "Si, resulta dificil mantener una atencion adecuada mientras se utiliza el telefono.",
-        "Si, resulta mas facil mantener la atencion en la conduccion."
-      ]
+        "Sí, resulta dificil mantener una atencion adecuada mientras se utiliza el telefono.",
+        "Sí, resulta mas facil mantener la atencion en la conduccion."
+      ],
+      "correcta": 1
     },
     {
       "texto": "¿Que indican estas senales?",
       "opciones": [
-        "Limitede velocidad a 40kilometros por hora para los vehiculos quevan a girar a la derecha.",
+        "Límite de velocidad a 40 kilómetros por hora para los vehículos que van a girar a la derecha.",
         "El limite de velocidad a 40 kilometros por hora en una travesia.",
         "El limite de velocidad en un tramo frecuentado por ninos."
       ],
-      "imagen": "../img/test_027_p15.jpg"
+      "imagen": "../img/test_027_p15.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Un vehiculo mixto en el que solo viaja el conductor, zpuede, en algun caso, ¿circular por un carril para VAo?",
+      "texto": "Un vehiculo mixto en el que solo viaja el conductor, ¿puede, en algun caso, ¿circular por un carril para VAO?",
       "opciones": [
-        "No,porque debe estar ocupado por el numerominimo depersonas que sefije.",
-        "Si, si el conductor es novel.",
-        "Si, si el vehiculo ostenta la senal dediscapacitados."
-      ]
+        "No, porque debe estar ocupado por el número mínimo de personas que se fije.",
+        "Sí, si el conductor es novel.",
+        "Sí, si el vehículo ostenta la señal de discapacitados."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Para que el vehiculo se agarre bien a la calzada, ¿zque debe hacer?",
+      "texto": "Para que el vehiculo se agarre bien a la calzada, ¿que debe hacer?",
       "opciones": [
         "Utilizar neumaticos radiales en las ruedas delanteras y diagonales en las traseras.",
         "Cuidar que la profundidad del dibujo del neumatico nunca sea inferior a 1,6 mm.",
-        "Inflarmaslosneumaticos."
-      ]
+        "Inflar más los neumáticos."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En caso de emitir un aviso y no recibir respuesta por parte del conductor, ¿ique acciones Ileva a cabo el sistema ADAs \"Mantenimiento de carril o LKs\"?",
+      "texto": "En caso de emitir un aviso y no recibir respuesta por parte del conductor, ¿que acciones lleva a cabo el sistema ADAS \"Mantenimiento de carril o LKS\"?",
       "opciones": [
         "Detiene el vehiculo y enciende las luces de emergencia para evitar un accidente.",
         "Detiene el vehiculo ante la presencia de un obstaculo.",
         "Realiza una correccion en la direccion o en el sistema de frenos para que el vehiculo retorne hacia el centro del carril."
       ],
-      "imagen": "../img/test_027_p18.jpg"
+      "imagen": "../img/test_027_p18.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Circula por un carril y sobre el encuentra un semaforo con una luz roja en forma de aspa, ¿ique significa?",
+      "texto": "Circula por un carril y sobre el encuentra un semaforo con una luz roja en forma de aspa, ¿que significa?",
       "opciones": [
-        "Quedebe abandonarlo lo antes posible porque esta prohibido ocupar esecarril.",
+        "Que debe abandonarlo lo antes posible porque está prohibido ocupar ese carril.",
         "Que tiene que frenar a su altura como si fuera un semaforo con una luz roja circular.",
-        "Quedebe moderar la velocidad por circunstancias especiales de la circulacion."
+        "Que debe moderar la velocidad por circunstancias especiales de la circulación."
       ],
-      "imagen": "../img/test_027_p19.jpg"
+      "imagen": "../img/test_027_p19.jpg",
+      "correcta": 0
     },
     {
       "texto": "Cuando se incorpore a la circulacion, debe...",
       "opciones": [
-        "cederelpasoaotrosvehiculos",
+        "ceder el paso a otros vehículos.",
         "hacerlo lo mas rapido posible.",
         "evitar hacerlo sin el alumbrado de posicion encendido."
       ],
-      "imagen": "../img/test_027_p20.jpg"
+      "imagen": "../img/test_027_p20.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Segun las normas de circulacion, ¿zdonde se establece expresamente la obligacion de moderar la velocidad al aproximarse a un vehiculo inmovilizado en la calzada?",
+      "texto": "Segun las normas de circulacion, ¿donde se establece expresamente la obligacion de moderar la velocidad al aproximarse a un vehiculo inmovilizado en la calzada?",
       "opciones": [
-        "Fueradepoblado.",
+        "Fuera de poblado.",
         "En cualquier tipo de via, independientemente de las circunstancias.",
         "Unicamente en autopistas y autovias."
       ],
-      "imagen": "../img/test_027_p21.jpg"
+      "imagen": "../img/test_027_p21.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Al descargar mercancias de un vehiculo, ¿zesta permitido depositarlas en la acera?",
+      "texto": "Al descargar mercancias de un vehiculo, ¿esta permitido depositarlas en la acera?",
       "opciones": [
         "No.",
-        "Si,siemprequenopasenpeatones.",
-        "No,salvo que se senalice el lugar para evitar el peligro para lospeatones."
-      ]
+        "Sí, siempre que no pasen peatones.",
+        "No, salvo que se señalice el lugar para evitar el peligro para los peatones."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Los limites de velocidad que se establecen para una via, ¿zde que dependen?",
+      "texto": "Los limites de velocidad que se establecen para una via, ¿de que dependen?",
       "opciones": [
         "De criterios economicos, fundamentalmente.",
         "De su trazado y del trafico que vaya a soportar.",
         "De su trazado y del numero de curvas."
       ],
-      "imagen": "../img/test_027_p23.jpg"
+      "imagen": "../img/test_027_p23.jpg",
+      "correcta": 1
     },
     {
       "texto": "Las senales de obras ...",
       "opciones": [
         "tienen el mismo significado que las usadas en tramos sin obras.",
-        "tienen distinto simboloytamanoquelas usadas en tramos sin obras.",
-        "establecen para los tramos de obras unareduccion de la velocidad maxima en 10km/h."
+        "tienen distinto símbolo y tamaño que las usadas en tramos sin obras.",
+        "establecen para los tramos de obras una reducción de la velocidad máxima en 10 km/h."
       ],
-      "imagen": "../img/test_027_p24.jpg"
+      "imagen": "../img/test_027_p24.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Un turismo, ¿ipuede llevar solo el espejo exterior izquierdo y el interior?",
+      "texto": "Un turismo, ¿puede llevar solo el espejo exterior izquierdo y el interior?",
       "opciones": [
         "No, solo son obligatorios el espejo interior y el exterior derecho.",
-        "Si.",
-        "No,tambien debellevar el espejo exterior derecho."
-      ]
+        "Sí.",
+        "No, también debe llevar el espejo exterior derecho."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "De los siguientes, ¿icual es un sintoma caracteristico de la aparicion de la fatiga en el conductor?",
+      "texto": "De los siguientes, ¿cual es un sintoma caracteristico de la aparicion de la fatiga en el conductor?",
       "opciones": [
-        "Movimientosmasrapidos,precisosyeficaces.",
-        "Conduccionmasautomaticaymenosactiva.",
+        "Movimientos más rápidos, precisos y eficaces.",
+        "Conducción más automática y menos activa.",
         "Disminuye el numero de parpadeos y son de menos duracion."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Los conductores de turismos deben utilizar el chaleco reflectante de alta visibilidad..",
+      "texto": "Los conductores de turismos deben utilizar el chaleco reflectante de alta visibilidad...",
       "opciones": [
         "siempre que salgan del vehiculo.",
         "cuando salgan del vehiculo y ocupen la calzada o el arcen de una via interurbana."
       ],
-      "imagen": "../img/test_027_p27.jpg"
+      "imagen": "../img/test_027_p27.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Que debe hacer un conductor que esta tomando medicamentos?",
       "opciones": [
-        "Conducircontotal normalidad",
-        "Renunciara conducir en cualquier caso.",
-        "Consultara sumedico sobre losposibles efectos negativospara laconduccion."
-      ]
+        "Conducir con total normalidad.",
+        "Renunciar a conducir en cualquier caso.",
+        "Consultar a su médico sobre los posibles efectos negativos para la conducción."
+      ],
+      "correcta": 2
     },
     {
       "texto": "¿Qué indica la senal?",
@@ -247,7 +275,8 @@
         "Telepeaje o peaje dinamico.",
         "Prohibido pasar sin detenerse."
       ],
-      "imagen": "../img/test_027_p29.jpg"
+      "imagen": "../img/test_027_p29.jpg",
+      "correcta": 1
     },
     {
       "texto": "En esta via, deben obedecer solo a las indicaciones situadas a su izquierda los que pretendan...",
@@ -256,7 +285,8 @@
         "girar a la izquierda solamente.",
         "girar a la izquierda o seguir de frente."
       ],
-      "imagen": "../img/test_027_p30.jpg"
+      "imagen": "../img/test_027_p30.jpg",
+      "correcta": 1
     }
   ]
 }

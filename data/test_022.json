@@ -1,32 +1,35 @@
 {
   "test_id": 22,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "El conductor de un turismo, ¿idebe llevar el cinturon de seguridad si el trayecto es corto?",
+      "texto": "El conductor de un turismo, ¿debe llevar el cinturon de seguridad si el trayecto es corto?",
       "opciones": [
-        "Si, siempre.",
-        "No,si circula en vias urbanas.",
+        "Sí, siempre.",
+        "No, si circula en vías urbanas.",
         "No, si realiza operaciones de carga y descarga a corta distancia."
-      ]
+      ],
+      "correcta": 0
     },
     {
       "texto": "La colocacion de los dispositivos de retencion infantil resulta mas segura en...",
       "opciones": [
-        "elasiento trasero central, ya que resulta menos afectado por los impactos laterales.",
+        "el asiento trasero central, ya que resulta menos afectado por los impactos laterales.",
         "cualquiera de los asientos traseros laterales.",
-        "el asiento delantero,para que el conductor pueda vigilar al nino."
+        "el asiento delantero, para que el conductor pueda vigilar al nino."
       ],
-      "imagen": "../img/test_022_p02.jpg"
+      "imagen": "../img/test_022_p02.jpg",
+      "correcta": 0
     },
     {
-      "texto": "El color del casco, ¿zinfluye en la seguridad del motorista?",
+      "texto": "El color del casco, ¿influye en la seguridad del motorista?",
       "opciones": [
-        "Si, los mas seguros son los de colores claros.",
-        "Si,sonmas seguros los coloresoscuros.",
+        "Sí, los más seguros son los de colores claros.",
+        "Sí, son más seguros los colores oscuros.",
         "No, el color del casco no influye en la seguridad."
       ],
-      "imagen": "../img/test_022_p03.jpg"
+      "imagen": "../img/test_022_p03.jpg",
+      "correcta": 0
     },
     {
       "texto": "La senal indica...",
@@ -35,33 +38,37 @@
         "peligro por desbordamiento de un rio.",
         "peligro debido a que la via desemboca en un muelle o en una corriente de agua."
       ],
-      "imagen": "../img/test_022_p04.jpg"
+      "imagen": "../img/test_022_p04.jpg",
+      "correcta": 2
     },
     {
       "texto": "Antes de abrir las puertas para bajar de un vehiculo, debe cerciorarse...",
       "opciones": [
-        "dequeno se ocasiona peligro a otros usuarios.",
-        "unicamentedequeno seacercanpeatones.",
+        "de que no se ocasiona peligro a otros usuarios.",
+        "únicamente de que no se acercan peatones.",
         "solo de que no se acercan vehiculos."
       ],
-      "imagen": "../img/test_022_p05.jpg"
+      "imagen": "../img/test_022_p05.jpg",
+      "correcta": 0
     },
     {
       "texto": "¿La senal permite realizar la maniobra de adelantamiento a un vehiculo de motor?",
       "opciones": [
-        "No,salvo que no se invada el sentido contrario.",
+        "No, salvo que no se invada el sentido contrario.",
         "No, en ningun caso.",
-        "No,salvo que seadelantea unturismo."
+        "No, salvo que se adelante a un turismo."
       ],
-      "imagen": "../img/test_022_p06.jpg"
+      "imagen": "../img/test_022_p06.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿Esta permitido estacionar en una interseccion?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "No, cuando se impida el giro a otros vehiculos.",
-        "Si, si utiliza la senal de emergencia."
-      ]
+        "Sí, si utiliza la senal de emergencia."
+      ],
+      "correcta": 1
     },
     {
       "texto": "¿Cuantos espejos retrovisores debe de llevar este cuatriciclo?",
@@ -70,103 +77,115 @@
         "Dos, el interior y el exterior izquierdo.",
         "Solo el exterior izquierdo"
       ],
-      "imagen": "../img/test_022_p08.jpg"
+      "imagen": "../img/test_022_p08.jpg",
+      "correcta": 2
     },
     {
       "texto": "¿Cual es la principal causa de los accidentes por alcance?",
       "opciones": [
-        "Las velocidades anormalmentereducidas.",
+        "Las velocidades anormalmente reducidas.",
         "No guardar la distancia de seguridad con el vehiculo que circula delante.",
-        "Las velocidades superiores a 100km por hora."
+        "Las velocidades superiores a 100 km por hora."
       ],
-      "imagen": "../img/test_022_p09.jpg"
+      "imagen": "../img/test_022_p09.jpg",
+      "correcta": 1
     },
     {
       "texto": "¿De que forma responde el sistema avanzado de ayuda a la conduccion conocido como \"LDW o Mantenimiento de carril\" cuando el conductor realiza una maniobra de direccion evasiva?",
       "opciones": [
         "Calcula la trayectoria mas favorable del vehiculo y corrige la maniobra del conductor.",
-        "Permanecedesactivado.",
+        "Permanece desactivado.",
         "Activa el sistema “e-Call o Aviso a los servicios de emergencia\" como medida preventiva de accidente."
       ],
-      "imagen": "../img/test_022_p10.jpg"
+      "imagen": "../img/test_022_p10.jpg",
+      "correcta": 1
     },
     {
       "texto": "Ante esta situacion:",
       "opciones": [
-        "debe obligatoriamente detenersehasta que todos los animales hayan pasado.",
-        "debe separarsede los animales y ocupar,al menos, una partedel carril contrario.",
+        "debe obligatoriamente detenerse hasta que todos los animales hayan pasado.",
+        "debe separarse de los animales y ocupar, al menos, una parte del carril contrario.",
         "si preve que los animales pueden irrumpir en la via, debe moderar la velocidad, llegando a detener el vehiculo si fuera preciso."
       ],
-      "imagen": "../img/test_022_p11.jpg"
+      "imagen": "../img/test_022_p11.jpg",
+      "correcta": 2
     },
     {
       "texto": "Esta senal indica que...",
       "opciones": [
         "hay una salida a traves de la cual podra hacerse un cambio de sentido a distinto nivel.",
-        "existeuntunel.",
+        "existe un túnel.",
         "proximamente existe una entrada a una autopista."
       ],
-      "imagen": "../img/test_022_p12.jpg"
+      "imagen": "../img/test_022_p12.jpg",
+      "correcta": 0
     },
     {
       "texto": "En una calzada con un sentido de circulacion, en el centro hay una isleta. ¿Por donde se puede circular?",
       "opciones": [
-        "Porla derecha opor la izquierda,indistintamente.",
-        "Solamente por la partederecha del refugio.",
+        "Por la derecha o por la izquierda, indistintamente.",
+        "Solamente por la parte derecha del refugio.",
         "Solamente por la parte izquierda del refugio."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El triangulo blanco pintado en la calzada, ¿zque significa?",
+      "texto": "El triangulo blanco pintado en la calzada, ¿que significa?",
       "opciones": [
         "Que los conductores tienen preferencia de paso al cambiar de carril.",
-        "Que es obligatorio ceder el paso a los vehiculosque se aproximenpor el carril derecho cuando cambie de carril.",
+        "Que es obligatorio ceder el paso a los vehículos que se aproximen por el carril derecho cuando cambie de carril.",
         "Que el conductor esta obligadoa detener el vehiculo en todo caso."
       ],
-      "imagen": "../img/test_022_p14.jpg"
+      "imagen": "../img/test_022_p14.jpg",
+      "correcta": 1
     },
     {
-      "texto": "A la vista de esta situacion, ¿zque vehiculo pasara primero?",
+      "texto": "A la vista de esta situacion, ¿que vehiculo pasara primero?",
       "opciones": [
         "El vehiculo amarillo.",
         "El vehiculo rojo.",
         "Los conductores tendran que ponerse de acuerdo."
       ],
-      "imagen": "../img/test_022_p15.jpg"
+      "imagen": "../img/test_022_p15.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Preferentemente, ¿idonde debe colocar la carga en su turismo?",
+      "texto": "Preferentemente, ¿donde debe colocar la carga en su turismo?",
       "opciones": [
         "En el interior del vehiculo.",
         "En el maletero.",
         "En la baca, correctamente senalizada."
       ],
-      "imagen": "../img/test_022_p16.jpg"
+      "imagen": "../img/test_022_p16.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Si padece una enfermedad cronica, ¿ique debe hacer?",
+      "texto": "Sí padece una enfermedad cronica, ¿que debe hacer?",
       "opciones": [
         "Consultar al medico los posibles riesgos para la conduccion.",
-        "Conducir solo cuandotomamedicamentos.",
+        "Conducir solo cuando toma medicamentos.",
         "No conducir en ningun caso."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Si a un conductor se le detecta una tasa de 0,3 miligramos por litro en aire espirado, ¿ipuede solicitar una segunda prueba?",
+      "texto": "Sí a un conductor se le detecta una tasa de 0,3 miligramos por litro en aire espirado, ¿puede solicitar una segunda prueba?",
       "opciones": [
-        "Si,pasado unminimo de10minutos.",
-        "Si, pero esta segunda prueba solo podra realizarse mediante un analisis de sangre.",
-        "No y,ademas, los agentes procederan a inmovilizar el vehiculo."
-      ]
+        "Sí, pasado un mínimo de 10 minutos.",
+        "Sí, pero esta segunda prueba solo podra realizarse mediante un analisis de sangre.",
+        "No y, además, los agentes procederan a inmovilizar el vehiculo."
+      ],
+      "correcta": 0
     },
     {
       "texto": "¿Cual es la velocidad maxima en una via urbana con un unico carril por sentido de circulacion?",
       "opciones": [
-        "20kilometros porhora.",
-        "3okilometrosporhora.",
+        "20 kilómetros por hora.",
+        "30 kilómetros por hora.",
         "50 kilometros por hora."
       ],
-      "imagen": "../img/test_022_p19.jpg"
+      "imagen": "../img/test_022_p19.jpg",
+      "correcta": 1
     },
     {
       "texto": "El conductor de un vehiculo que observa que va a ser adelantado, debe...",
@@ -175,25 +194,28 @@
         "aumentar la velocidad.",
         "encender el indicador de direccion derecho para mostrar que va a permitir la maniobra."
       ],
-      "imagen": "../img/test_022_p20.jpg"
+      "imagen": "../img/test_022_p20.jpg",
+      "correcta": 0
     },
     {
-      "texto": "¿Esta permitido que las motocicletas circulen por un carril VAo?",
+      "texto": "¿Esta permitido que las motocicletas circulen por un carril VAO?",
       "opciones": [
         "No, porque las motocicletas no se consideran vehiculos de alta ocupacion.",
-        "No,porquepor estos carriles solo pueden circular autobuses y turismos.",
-        "Si, las motocicletas y turismos pueden utilizar este carril."
+        "No, porque por estos carriles solo pueden circular autobuses y turismos.",
+        "Sí, las motocicletas y turismos pueden utilizar este carril."
       ],
-      "imagen": "../img/test_022_p21.jpg"
+      "imagen": "../img/test_022_p21.jpg",
+      "correcta": 2
     },
     {
       "texto": "Cuando se conduce, poner una toalla sobre el asiento...",
       "opciones": [
         "puede favorecer el efecto submarino.",
-        "esrecomendable,sobretodo en verano,para proteger el asiento.",
+        "es recomendable, sobre todo en verano, para proteger el asiento.",
         "no representa ningun peligro."
       ],
-      "imagen": "../img/test_022_p22.jpg"
+      "imagen": "../img/test_022_p22.jpg",
+      "correcta": 0
     },
     {
       "texto": "Este panel, colocado bajo la senal de ceda el paso, indica la distancia...",
@@ -202,41 +224,46 @@
         "a la que se encuentra la senal de ceda el paso de la proxima interseccion.",
         "a la que se encuentra la senal de detencion obligatoria o stop de la proxima interseccion."
       ],
-      "imagen": "../img/test_022_p23.jpg"
+      "imagen": "../img/test_022_p23.jpg",
+      "correcta": 1
     },
     {
       "texto": "En los vehiculos de anchura inferior a un metro la carga no debe sobresalir lateralmente mas de...",
       "opciones": [
         "0,50 metros a cada lado del eje longitudinal del vehiculo.",
         "0,50 metros a cada lado del vehiculo.",
-        "0,40metrosacadaladodel vehiculo."
-      ]
+        "0,40 metros a cada lado del vehículo."
+      ],
+      "correcta": 0
     },
     {
       "texto": "¿Puede tener un accidente debido al sueno sin haberse quedado totalmente dormido?",
       "opciones": [
-        "Si, pero solo por la noche.",
+        "Sí, pero solo por la noche.",
         "No.",
-        "Si, losprimeros sintomas de somnolencia ya afectana la conduccion."
-      ]
+        "Sí, los primeros síntomas de somnolencia ya afectan a la conducción."
+      ],
+      "correcta": 2
     },
     {
       "texto": "Al incorporarse a la autopista por el carril de aceleracion, debe...",
       "opciones": [
         "acelerar hasta alcanzar la velocidad adecuada al final del carril.",
         "disminuir la velocidad y detenerse al final del carril, obligatoriamente.",
-        "acelerar hastaalcanzar obligatoriamente120km/halfinal del carril."
+        "acelerar hasta alcanzar obligatoriamente 120 km/h al final del carril."
       ],
-      "imagen": "../img/test_022_p26.jpg"
+      "imagen": "../img/test_022_p26.jpg",
+      "correcta": 0
     },
     {
       "texto": "Esta senal indica...",
       "opciones": [
         "prioridad respecto al sentido contrario.",
-        "que nosepuedepasarcuando seobligue a losvehiculos quevengan en sentido contrario a detenerse.",
-        "quehayquedetenersesiempre"
+        "que no se puede pasar cuando se obligue a los vehículos que vengan en sentido contrario a detenerse.",
+        "que hay que detenerse siempre."
       ],
-      "imagen": "../img/test_022_p27.jpg"
+      "imagen": "../img/test_022_p27.jpg",
+      "correcta": 1
     },
     {
       "texto": "Al aproximarnos a un autobus con esta senal en su parte posterior y que se encuentra parado recogiendo pasajeros, se debera:",
@@ -245,24 +272,27 @@
         "Avisar de nuestra presencia con rafagas de luz .",
         "Siempre, parar detras del vehiculo hasta que reanude la marcha."
       ],
-      "imagen": "../img/test_022_p28.jpg"
+      "imagen": "../img/test_022_p28.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Las pruebas de deteccion de sustancias estupefacientes, ¿zson obligatorias?",
+      "texto": "Las pruebas de deteccion de sustancias estupefacientes, ¿son obligatorias?",
       "opciones": [
-        "Si, pero solo cuando el conductor este implicado en un accidente.",
-        "Si, igual que las pruebas de investigacion de alcoholemia.",
+        "Sí, pero solo cuando el conductor este implicado en un accidente.",
+        "Sí, igual que las pruebas de investigacion de alcoholemia.",
         "No, las unicas pruebas obligatorias son las de alcoholemia."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En este tramo de via de visibilidad reducida, ¿iesta permitido realizar un cambio de sentido?",
+      "texto": "En este tramo de via de visibilidad reducida, ¿esta permitido realizar un cambio de sentido?",
       "opciones": [
-        "Si, cuando no hay circulacion en sentido contrario.",
-        "Si,senalizandolamaniobra convenientemente.",
+        "Sí, cuando no hay circulacion en sentido contrario.",
+        "Sí, señalizando la maniobra convenientemente.",
         "No, esta prohibido."
       ],
-      "imagen": "../img/test_022_p30.jpg"
+      "imagen": "../img/test_022_p30.jpg",
+      "correcta": 2
     }
   ]
 }

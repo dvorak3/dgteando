@@ -1,206 +1,229 @@
 {
   "test_id": 30,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
       "texto": "El vehiculo rojo circula por el carril reversible que esta abierto. ¿Puede atravesar la linea doble discontinua de su izquierda para adelantar?",
       "opciones": [
-        "Si, porque el carril de la izquierda esta libre.",
+        "Sí, porque el carril de la izquierda esta libre.",
         "No.",
-        "Si, porque la linea es discontinua."
+        "Sí, porque la linea es discontinua."
       ],
-      "imagen": "../img/test_030_p01.jpg"
+      "imagen": "../img/test_030_p01.jpg",
+      "correcta": 1
     },
     {
       "texto": "Los accidentes debidos al sueno suceden...",
       "opciones": [
-        "siempreporlanoche.",
-        "tambien antes deque elconductorse quedetotalmentedormido.",
+        "siempre por la noche.",
+        "también antes de que el conductor se quede totalmente dormido.",
         "unicamente cuando el conductor se queda totalmente dormido."
-      ]
+      ],
+      "correcta": 1
     },
     {
       "texto": "¿Es conveniente colocar el soporte de un GPS cerca de un airbag?",
       "opciones": [
-        "No,si puede obstaculizarsuapertura.",
-        "Si.",
+        "No, si puede obstaculizar su apertura.",
+        "Sí.",
         "No, en ningun caso."
       ],
-      "imagen": "../img/test_030_p03.jpg"
+      "imagen": "../img/test_030_p03.jpg",
+      "correcta": 0
     },
     {
       "texto": "Esta senal indica...",
       "opciones": [
-        "el lugar reservadoparaparada de autobuses.",
-        "un carril reservadoa la circulacion de autobuses y taxis.",
+        "el lugar reservado para parada de autobuses.",
+        "un carril reservado a la circulación de autobuses y taxis.",
         "un carril reservado exclusivamente a la circulacion de autobuses."
       ],
-      "imagen": "../img/test_030_p04.jpg"
+      "imagen": "../img/test_030_p04.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Una autocaravana de 3600 kg de MMA, ¿ia que velocidad maxima puede circular por esta carretera convencional?",
+      "texto": "Una autocaravana de 3600 kg de MMA, ¿a que velocidad maxima puede circular por esta carretera convencional?",
       "opciones": [
-        "A100km/h.",
+        "A 100 km/h.",
         "A 80 km/h.",
         "A 90 km/h."
       ],
-      "imagen": "../img/test_030_p05.jpg"
+      "imagen": "../img/test_030_p05.jpg",
+      "correcta": 1
     },
     {
       "texto": "Un peaton circula por su izquierda en una via interurbana. ¿Circula correctamente?",
       "opciones": [
         "Sí.",
-        "No,porquedebe circular siempre por el lado de la calzada donde el arcen sea transitable.",
-        "No,porque debe circular por la derecha de la calzada en el sentido de su marcha."
+        "No, porque debe circular siempre por el lado de la calzada donde el arcen sea transitable.",
+        "No, porque debe circular por la derecha de la calzada en el sentido de su marcha."
       ],
-      "imagen": "../img/test_030_p06.jpg"
+      "imagen": "../img/test_030_p06.jpg",
+      "correcta": 0
     },
     {
-      "texto": "En esta via, ¿ipor donde debe circular un ciclomotor?",
+      "texto": "En esta via, ¿por donde debe circular un ciclomotor?",
       "opciones": [
         "Por el centro del carril derecho para que los demas usuarios de la via puedan verle.",
         "Como no tiene arcen, los ciclomotores no pueden circular.",
-        "Por la calzada, lomas cerca posible del borde derecho."
+        "Por la calzada, lo más cerca posible del borde derecho."
       ],
-      "imagen": "../img/test_030_p07.jpg"
+      "imagen": "../img/test_030_p07.jpg",
+      "correcta": 2
     },
     {
-      "texto": "En una parada de transporte publico urbano, ¿zesta permitido parar o estacionar?",
+      "texto": "En una parada de transporte publico urbano, ¿esta permitido parar o estacionar?",
       "opciones": [
         "No, en ningun caso.",
-        "Si, unicamentepara subir obajarpasajeros.",
-        "Si,esta permitidoparar,pero no estacionar."
+        "Sí, únicamente para subir o bajar pasajeros.",
+        "Sí, está permitido parar, pero no estacionar."
       ],
-      "imagen": "../img/test_030_p08.jpg"
+      "imagen": "../img/test_030_p08.jpg",
+      "correcta": 0
     },
     {
-      "texto": "En caso de accidente, el seguro obligatorio de un vehiculo, ¿icubre los danos producidos a la parte contraria?",
+      "texto": "En caso de accidente, el seguro obligatorio de un vehiculo, ¿cubre los danos producidos a la parte contraria?",
       "opciones": [
-        "Si, siempre, pues asi se contempla en la poliza del seguro obligatorio.",
-        "Si, cuando su conductor resulta civilmente responsable del accidente.",
-        "Si, en todo caso, si los gastos no superan los limites establecidos en la poliza."
-      ]
+        "Sí, siempre, pues asi se contempla en la poliza del seguro obligatorio.",
+        "Sí, cuando su conductor resulta civilmente responsable del accidente.",
+        "Sí, en todo caso, si los gastos no superan los limites establecidos en la poliza."
+      ],
+      "correcta": 1
     },
     {
       "texto": "Se denomina tiempo de reaccion...",
       "opciones": [
-        "El tiempo que transcurre desde que el conductor ve unpeligro hasta que responde al mismo.",
+        "El tiempo que transcurre desde que el conductor ve un peligro hasta que responde al mismo.",
         "el tiempo que tarda en detenerse el vehiculo con el freno accionado.",
-        "El tiempo que transcurre desdeque el conductorobserva un peligro hasta que se detiene el vehiculo."
+        "El tiempo que transcurre desde que el conductor observa un peligro hasta que se detiene el vehiculo."
       ],
-      "imagen": "../img/test_030_p10.jpg"
+      "imagen": "../img/test_030_p10.jpg",
+      "correcta": 0
     },
     {
       "texto": "Esta senal indica...",
       "opciones": [
-        "unaviareservadaaturismos.",
-        "laprohibiciondeentradaaautomoviles.",
+        "una vía reservada a turismos.",
+        "la prohibición de entrada a automóviles.",
         "el fin de una via reservada para automoviles."
       ],
-      "imagen": "../img/test_030_p11.jpg"
+      "imagen": "../img/test_030_p11.jpg",
+      "correcta": 2
     },
     {
-      "texto": "Advertir a otros usuarios de que se va a realizar una maniobra, ¿ies obligatorio?",
+      "texto": "Advertir a otros usuarios de que se va a realizar una maniobra, ¿es obligatorio?",
       "opciones": [
         "No, solo es obligatorio advertir a los conductores.",
-        "No,pero es siempre muy aconsejable.",
-        "Si, siempre."
+        "No, pero es siempre muy aconsejable.",
+        "Sí, siempre."
       ],
-      "imagen": "../img/test_030_p12.jpg"
+      "imagen": "../img/test_030_p12.jpg",
+      "correcta": 2
     },
     {
-      "texto": "El vehiculo de la imagen quiere cambiar de direccion a la derecha, ¿iesta obligado a detenerse?",
+      "texto": "El vehiculo de la imagen quiere cambiar de direccion a la derecha, ¿esta obligado a detenerse?",
       "opciones": [
         "No, las indicaciones del semaforo solo le afectan si pretende seguir de frente.",
-        "No,puede continuarla marcha con precaucion.",
-        "Si, debe obedecer las indicaciones del semaforo."
+        "No, puede continuar la marcha con precaución.",
+        "Sí, debe obedecer las indicaciones del semaforo."
       ],
-      "imagen": "../img/test_030_p13.jpg"
+      "imagen": "../img/test_030_p13.jpg",
+      "correcta": 2
     },
     {
-      "texto": "En esta situacion, ¿zel vehiculo rojo puede rebasar al vehiculo inmovilizado?",
+      "texto": "En esta situacion, ¿el vehiculo rojo puede rebasar al vehiculo inmovilizado?",
       "opciones": [
-        "Si, siempre.",
-        "Si, despues de asegurarse de que puede realizarse sin peligro.",
+        "Sí, siempre.",
+        "Sí, despues de asegurarse de que puede realizarse sin peligro.",
         "No, porque la marca longitudinal lo prohibe."
       ],
-      "imagen": "../img/test_030_p14.jpg"
+      "imagen": "../img/test_030_p14.jpg",
+      "correcta": 1
     },
     {
-      "texto": "A la vista de esta imagen, ¿ique debe hacer el conductor del vehiculo?",
+      "texto": "A la vista de esta imagen, ¿que debe hacer el conductor del vehiculo?",
       "opciones": [
         "Respetar la senal del agente.",
-        "Pasarporque el semaforolepermite elpaso con prioridad. b) Pasar porque el semaforo le permite el paso con prioridad.",
-        "Respetarla senal de stop."
+        "Pasar porque el semáforo le permite el paso con prioridad.",
+        "Respetar la señal de stop."
       ],
-      "imagen": "../img/test_030_p15.jpg"
+      "imagen": "../img/test_030_p15.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Un turismo con remolque, ¿ipuede circular por un carril abierto a la circulacion en sentido contrario al normal?",
+      "texto": "Un turismo con remolque, ¿puede circular por un carril abierto a la circulacion en sentido contrario al normal?",
       "opciones": [
-        "Si, siempre.",
-        "Si, cuando haya sido abierto por razones de fluidez de la circulacion.",
-        "Si, cuando haya sido abierto por obras en la calzada."
+        "Sí, siempre.",
+        "Sí, cuando haya sido abierto por razones de fluidez de la circulacion.",
+        "Sí, cuando haya sido abierto por obras en la calzada."
       ],
-      "imagen": "../img/test_030_p16.jpg"
+      "imagen": "../img/test_030_p16.jpg",
+      "correcta": 2
     },
     {
       "texto": "¿Que problemas de las personas mayores pueden afectarles en la conduccion?",
       "opciones": [
-        "El desconocimientodelas normasde trafico.",
+        "El desconocimiento de las normas de tráfico.",
         "Los problemas de vision, audicion y el consumo de medicamentos.",
-        "La lentitud en los reflejos,principalmente."
-      ]
+        "La lentitud en los reflejos, principalmente."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Los chalecos reflectantes de alta visibilidad, ¿zdeben estar homologados?",
+      "texto": "Los chalecos reflectantes de alta visibilidad, ¿deben estar homologados?",
       "opciones": [
-        "No es obligatorio,pero si recomendable.",
-        "Si.",
-        "Solo si son de color naranja, los amarillos no necesitan estarhomologados."
-      ]
+        "No es obligatorio, pero si recomendable.",
+        "Sí.",
+        "Solo si son de color naranja, los amarillos no necesitan estar homologados."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Las anfetaminas, ¿ison peligrosas para conducir?",
+      "texto": "Las anfetaminas, ¿son peligrosas para conducir?",
       "opciones": [
-        "Si.",
-        "No,porque son tranquilizantes.",
-        "No,porque retrasan la aparicion de sueno."
-      ]
+        "Sí.",
+        "No, porque son tranquilizantes.",
+        "No, porque retrasan la aparicion de sueno."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿&Como se puede ahorrar combustible?",
+      "texto": "¿Como se puede ahorrar combustible?",
       "opciones": [
         "Cambiando a una marcha inferior lo antes posible.",
-        "Cambiandoauna marcha superior loantesposible.",
-        "Circulando,confrecuencia,aaltas revoluciones."
+        "Cambiando a una marcha superior lo antes posible.",
+        "Circulando, con frecuencia, a altas revoluciones."
       ],
-      "imagen": "../img/test_030_p20.jpg"
+      "imagen": "../img/test_030_p20.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Para estacionar, ¿zesta permitido circular marcha atras atravesando una interseccion?",
+      "texto": "Para estacionar, ¿esta permitido circular marcha atras atravesando una interseccion?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "No."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Por un tuinel insuficientemente iluminado, se debe circular con las luces de...",
+      "texto": "Por un túnel insuficientemente iluminado, se debe circular con las luces de...",
       "opciones": [
         "posicion solamente.",
-        "posicionylas de corto alcance.",
+        "posición y las de corto alcance.",
         "posicion y antiniebla delantera."
       ],
-      "imagen": "../img/test_030_p22.jpg"
+      "imagen": "../img/test_030_p22.jpg",
+      "correcta": 1
     },
     {
-      "texto": "Ante esta senal, ¿ique se debe hacer?",
+      "texto": "Ante esta senal, ¿que se debe hacer?",
       "opciones": [
-        "Detenerse solo si seaproximan vehiculos porla derecha.",
+        "Detenerse solo si se aproximan vehículos por la derecha.",
         "Detenerse obligatoriamente y ceder el paso a los vehiculos que circulen por la via transversal.",
         "Pasar sin detenerse cuando no circulan vehiculos por la via transversal."
       ],
-      "imagen": "../img/test_030_p23.jpg"
+      "imagen": "../img/test_030_p23.jpg",
+      "correcta": 1
     },
     {
       "texto": "Esta senal prohibe la entrada a...",
@@ -209,59 +232,66 @@
         "Ciclos.",
         "Cualquier vehiculo de dos ruedas."
       ],
-      "imagen": "../img/test_030_p24.jpg"
+      "imagen": "../img/test_030_p24.jpg",
+      "correcta": 0
     },
     {
-      "texto": "La influencia del factor de riesgo vehiculo, ¿icomo se puede disminuir?",
+      "texto": "La influencia del factor de riesgo vehiculo, ¿como se puede disminuir?",
       "opciones": [
         "Revisando y manteniendo el vehiculo.",
         "Manteniendo limpio el motor.",
         "Regulando bien la posicion del asiento de conductor."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Transportar un nino situado entre el manillar y el conductor en una motocicleta, ¿zesta permitido?",
+      "texto": "Transportar un nino situado entre el manillar y el conductor en una motocicleta, ¿esta permitido?",
       "opciones": [
         "No.",
-        "Si, pero solo cuando el conductor sea el padre, la madre o una persona autorizada.",
-        "Si, con el correspondiente casco adecuado a sutalla."
+        "Sí, pero solo cuando el conductor sea el padre, la madre o una persona autorizada.",
+        "Sí, con el correspondiente casco adecuado a sutalla."
       ],
-      "imagen": "../img/test_030_p26.jpg"
+      "imagen": "../img/test_030_p26.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Cuando la separacion entre los trazos de una linea discontinua es sensiblemente mas corta que en el caso general, ¿zque puede anunciar?",
+      "texto": "Cuando la separacion entre los trazos de una linea discontinua es sensiblemente mas corta que en el caso general, ¿que puede anunciar?",
       "opciones": [
         "La proximidad de un tramo de via que presenta un riesgo especial.",
         "La proximidad de una travesia.",
         "La proximidad de un carril especial."
       ],
-      "imagen": "../img/test_030_p27.jpg"
+      "imagen": "../img/test_030_p27.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Despues de iniciar el adelantamiento comprueba que se acerca un vehiculo de frente, ¿ique debe hacer?",
+      "texto": "Despues de iniciar el adelantamiento comprueba que se acerca un vehiculo de frente, ¿que debe hacer?",
       "opciones": [
         "Reducir la marcha y volver a su carril, si no puede terminar la maniobra con seguridad.",
-        "Mantenerseenel centro delacalzada.",
+        "Mantenerse en el centro de la calzada.",
         "Tocar el claxon y encender las luces para que el otro vehiculo aminore su velocidad."
       ],
-      "imagen": "../img/test_030_p28.jpg"
+      "imagen": "../img/test_030_p28.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Las motocicletas sin sidecar, ¿icuantas luces de corto alcance deben Ilevar instaladas?",
+      "texto": "Las motocicletas sin sidecar, ¿cuantas luces de corto alcance deben llevar instaladas?",
       "opciones": [
         "Una o dos delante.",
         "Solo una delante.",
-        "Dos, obligatoriamente, una delante yotra detras."
+        "Dos, obligatoriamente, una delante y otra detrás."
       ],
-      "imagen": "../img/test_030_p29.jpg"
+      "imagen": "../img/test_030_p29.jpg",
+      "correcta": 0
     },
     {
-      "texto": "Para rebasar un obstaculo, ¿ipuede desplazarse al carril contiguo?",
+      "texto": "Para rebasar un obstaculo, ¿puede desplazarse al carril contiguo?",
       "opciones": [
-        "Si, siempre que no este ocupado dicho carril.",
+        "Sí, siempre que no este ocupado dicho carril.",
         "No, en ningun caso.",
-        "Si, este o no ocupado el otro carril."
-      ]
+        "Sí, este o no ocupado el otro carril."
+      ],
+      "correcta": 0
     }
   ]
 }
