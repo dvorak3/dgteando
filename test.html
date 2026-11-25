@@ -2,19 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#f3f2ee">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Test · dgt-eando</title>
-
-  <!-- Marca el modo repaso antes del primer pintado para evitar parpadeos del layout de test -->
-  <script>
-    if (new URLSearchParams(location.search).get('modo') === 'repaso') {
-      document.documentElement.classList.add('modo-repaso');
-    }
-  </script>
-
-  <!-- test.css incluye ahora también todos los estilos del modo repaso (ya no hace falta repaso.css aquí) -->
-  <link rel="stylesheet" href="css/test.css?v=5">
+  <link rel="stylesheet" href="css/test.css">
+  <link rel="stylesheet" href="css/repaso.css?v=3">
 </head>
 <body>
 
@@ -27,7 +18,7 @@
     <!-- Avisos (falta id, JSON no encontrado, etc.) -->
     <div id="avisoTest" role="alert" style="display:none;"></div>
 
-    <!-- Modo repaso Anki (test.html?modo=repaso): el motor pinta aquí la barra superior y las tarjetas -->
+    <!-- Modo repaso Anki (test.html?modo=repaso): el motor pinta aquí las tarjetas -->
     <div id="repasoContainer" class="repaso-app" style="display:none;"></div>
 
     <form id="formTest" onsubmit="return false;">
@@ -46,7 +37,7 @@
   <noscript>Este test necesita JavaScript. <a href="index.html">Volver a la lista</a></noscript>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/storage.js?v=7"></script>
-  <script src="js/test_engine.js?v=5"></script>
+  <script src="js/storage.js?v=10"></script>
+  <script src="js/test_engine.js?v=7"></script>
 </body>
 </html>

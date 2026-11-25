@@ -321,6 +321,107 @@
 .repaso-btn-secundario { background: #f4f3ef; color: var(--rp-text); border: 1px solid var(--rp-border); }
 .repaso-btn-secundario:hover { background: #ecebe5; }
 
+/* ---------- Cronómetro por tarjeta ---------- */
+.repaso-timer {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: #ecebe5;
+  color: var(--rp-muted);
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  vertical-align: middle;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.repaso-timer.es-ambar { background: var(--rp-amber-soft); color: var(--rp-amber); }   /* > 25 s */
+.repaso-timer.es-rojo  { background: var(--rp-red-soft);   color: var(--rp-red); }     /* > 45 s */
+.repaso-timer.congelado { box-shadow: inset 0 0 0 1px currentColor; }
+
+/* ---------- Sugerencia de confianza ---------- */
+.repaso-sugerencia {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  margin: -2px 0 10px;
+  font-size: 12.5px;
+  color: var(--rp-muted);
+}
+.repaso-sugerencia-tag {
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  background: #e5e7eb;
+  color: #374151;
+}
+.repaso-sugerencia.nivel-easy .repaso-sugerencia-tag   { background: var(--rp-green-soft); color: var(--rp-green); }
+.repaso-sugerencia.nivel-medium .repaso-sugerencia-tag { background: var(--rp-blue-soft);  color: var(--rp-blue); }
+.repaso-sugerencia.nivel-hard .repaso-sugerencia-tag   { background: var(--rp-amber-soft); color: var(--rp-amber); }
+.repaso-sugerencia.nivel-again .repaso-sugerencia-tag  { background: var(--rp-red-soft);   color: var(--rp-red); }
+
+/* Botón sugerido: anillo del color de cada nivel (again ya lo tenía arriba) */
+.btn-hard.sugerido   { box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.28); }
+.btn-medium.sugerido { box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.25); }
+.btn-easy.sugerido   { box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.30); }
+
+.repaso-btn-fecha {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.75;
+  text-transform: capitalize;
+}
+
+/* ---------- Resumen de tiempos de la sesión ---------- */
+.repaso-tiempos {
+  max-width: 440px;
+  margin: 16px auto 4px;
+}
+.repaso-tiempos-fila {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.repaso-tiempo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 6px;
+  border-radius: 12px;
+  background: #f4f3ef;
+  border: 1px solid var(--rp-border);
+}
+.repaso-tiempo-item strong {
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.repaso-tiempo-item span { font-size: 11.5px; font-weight: 600; color: var(--rp-muted); }
+.repaso-tiempo-item.limite strong { color: var(--rp-muted); }
+.repaso-tiempos-barra {
+  height: 6px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: #ecebe5;
+  overflow: hidden;
+}
+.repaso-tiempos-relleno { height: 100%; border-radius: 999px; background: var(--rp-green); }
+.repaso-tiempos-nota { margin-top: 8px; font-size: 12px; color: var(--rp-muted); }
+.repaso-tiempos-mejora {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #f4f3ef;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--rp-muted);
+}
+.repaso-tiempos-mejora.hay-mejora { background: var(--rp-green-soft); color: var(--rp-green); }
+
 /* ---------- Móvil ---------- */
 @media (max-width: 640px) {
   .repaso-tarjeta { padding: 16px; }
@@ -330,4 +431,6 @@
   .repaso-btn-confianza { flex: 1 1 calc(50% - 10px); }
   .btn-again { margin-left: 0; }
   .repaso-resumen { grid-template-columns: repeat(2, 1fr); }
+  .repaso-tiempo-item strong { font-size: 17px; }
+  .repaso-sugerencia { margin-top: 0; }
 }
