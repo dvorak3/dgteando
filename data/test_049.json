@@ -1,263 +1,293 @@
 {
   "test_id": 49,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Fumar mientras se conduce, ¿ipuede producir distracciones?",
+      "texto": "Fumar mientras se conduce, ¿puede producir distracciones?",
       "opciones": [
         "Sí.",
         "No, si se tiene cuidado.",
-        "No, en ningun caso."
+        "No, en ningún caso."
       ],
+      "correcta": 0,
       "imagen": "../img/test_049_p01.jpg"
     },
     {
-      "texto": "¿Puede circular con su vehiculo si emite un ruido que supera los limites autorizados?",
+      "texto": "¿Puede circular con su vehículo si emite un ruido que supera los límites autorizados?",
       "opciones": [
-        "Si, ya que el ruido no supone ningun peligro.",
-        "Si, mientras que no se tratede una averia.",
-        "No,esta prohibido"
-      ]
+        "Sí, ya que el ruido no supone ningún peligro.",
+        "Sí, mientras que no se trate de una avería.",
+        "No, está prohibido."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "En caso de accidente, ¿iquien tiene mayor probabilidad de morir o de sufrir lesiones?",
+      "texto": "En caso de accidente, ¿quién tiene mayor probabilidad de morir o de sufrir lesiones?",
       "opciones": [
-        "Los conductores de vehiculospesados.",
-        "Los conductores demotocicletas,ciclomotores y bicicletas.",
+        "Los conductores de vehículos pesados.",
+        "Los conductores de motocicletas, ciclomotores y bicicletas.",
         "Los conductores de turismos."
       ],
+      "correcta": 1,
       "imagen": "../img/test_049_p03.jpg"
     },
     {
-      "texto": "¿Puede circular por una via interurbana con el alumbrado de largo alcance en caso de lluvia intensa o niebla densa?",
+      "texto": "¿Puede circular por una vía interurbana con el alumbrado de largo alcance en caso de lluvia intensa o niebla densa?",
       "opciones": [
-        "Si, pero no es recomendable porque el reflejo en la niebla o lalluvia le puede deslumbrar.",
-        "No, esta prohibido.",
-        "Si,porque eneste caso la via esta insuficientemente iluminada."
-      ]
+        "Sí, pero no es recomendable porque el reflejo en la niebla o la lluvia le puede deslumbrar.",
+        "No, está prohibido.",
+        "Sí, porque en este caso la vía está insuficientemente iluminada."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "A la vista de la senal, ¿ipuede circular un turismo a mas de 70 km/h por el carril de la derecha?",
+      "texto": "A la vista de la señal, ¿puede circular un turismo a más de 70 km/h por el carril de la derecha?",
       "opciones": [
-        "No,porque el carril derecho es para circulacion lenta.",
-        "Si, porque debo circular por la derecha siempre que sea posible.",
-        "Si,porque los carriles de la izquierda son para los vehiculos que circulana menos de 70 km/h."
+        "No, porque el carril derecho es para circulación lenta.",
+        "Sí, porque debo circular por la derecha siempre que sea posible.",
+        "Sí, porque los carriles de la izquierda son para los vehículos que circulan a menos de 70 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_049_p05.jpg"
     },
     {
-      "texto": "Al estacionar un vehiculo provisto de caja de cambios manual en una pendiente descendente, ¿ique velocidad dejara colocada?",
+      "texto": "Al estacionar un vehículo provisto de caja de cambios manual en una pendiente descendente, ¿qué velocidad dejará colocada?",
       "opciones": [
-        "Laprimeravelocidad.",
+        "La primera velocidad.",
         "Punto muerto.",
-        "La marcha atras."
+        "La marcha atrás."
       ],
+      "correcta": 2,
       "imagen": "../img/test_049_p06.jpg"
     },
     {
-      "texto": "¿Puede usar el telefono movil mientras conduce con cualquier dispositivo de manos libres?",
+      "texto": "¿Puede usar el teléfono móvil mientras conduce con cualquier dispositivo de manos libres?",
       "opciones": [
-        "No, nunca se puede utilizar el telefono movil conduciendo, ni siquiera con el dispositivo manos libres.",
-        "Si, mientras se pueda hacer sin emplear las manos, ni usar cascos o auriculares.",
-        "No,soloconaquellosqueestenhomologados."
-      ]
+        "No, nunca se puede utilizar el teléfono móvil conduciendo, ni siquiera con el dispositivo manos libres.",
+        "Sí, mientras se pueda hacer sin emplear las manos, ni usar cascos o auriculares.",
+        "No, solo con aquellos que estén homologados."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Cuando termina la limitacion de velocidad que impone esta senal?",
+      "texto": "¿Cuándo termina la limitación de velocidad que impone esta señal?",
       "opciones": [
-        "Cuandosalgadelatravesia.",
-        "Cuando encuentre una senial de fin de prohibiciones.",
+        "Cuando salga de la travesía.",
+        "Cuando encuentre una señal de fin de prohibiciones.",
         "Al rebasar el siguiente cruce."
       ],
+      "correcta": 0,
       "imagen": "../img/test_049_p08.jpg"
     },
     {
-      "texto": "Un conductor que revisa periodicamente los neumaticos puede...",
+      "texto": "Un conductor que revisa periódicamente los neumáticos puede...",
       "opciones": [
-        "evitar los fallos mecanicos del vehiculo.",
+        "evitar los fallos mecánicos del vehículo.",
         "pasar la ITV con total seguridad.",
-        "detectar a tiempo un deterioro y prevenir un reventon."
+        "detectar a tiempo un deterioro y prevenir un reventón."
       ],
+      "correcta": 2,
       "imagen": "../img/test_049_p09.jpg"
     },
     {
-      "texto": "Al elegir un casco para conducir una motocicleta, ¿ique debe tener en cuenta?",
+      "texto": "Al elegir un casco para conducir una motocicleta, ¿qué debe tener en cuenta?",
       "opciones": [
-        "Que se pueda sujetar sin tener quellevarlo abrochado.",
-        "Queproteja convenientementede los ruidos.",
-        "Quetengabuena ventilacionpara queno se empane."
+        "Que se pueda sujetar sin tener que llevarlo abrochado.",
+        "Que proteja convenientemente de los ruidos.",
+        "Que tenga buena ventilación para que no se empañe."
       ],
+      "correcta": 2,
       "imagen": "../img/test_049_p10.jpg"
     },
     {
-      "texto": "Este turismo, ¿ique espejos retrovisores debe llevar obligatoriamente?",
+      "texto": "Este turismo, ¿qué espejos retrovisores debe llevar obligatoriamente?",
       "opciones": [
         "El espejo interior y el exterior derecho.",
         "Los exteriores izquierdo y derecho, porque por el espejo interior no tiene suficiente visibilidad.",
         "Solo el espejo interior y el exterior izquierdo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_049_p11.jpg"
     },
     {
-      "texto": "Bajo los efectos del sueno...",
+      "texto": "Bajo los efectos del sueño...",
       "opciones": [
-        "se tarda mas tiempo en tomar decisiones y se cometen mas errores.",
-        "es mas dificil sufrir una distraccion.",
-        "losmovimientossonmasrapidos."
-      ]
+        "se tarda más tiempo en tomar decisiones y se cometen más errores.",
+        "es más difícil sufrir una distracción.",
+        "los movimientos son más rápidos."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Esta permitido realizar un cambio de sentido en esta interseccion?",
+      "texto": "¿Está permitido realizar un cambio de sentido en esta intersección?",
       "opciones": [
-        "Si, si no recorre mas de 15 metros.",
+        "Sí, si no recorre más de 15 metros.",
         "No.",
-        "Si,con lasdebidasprecauciones."
+        "Sí, con las debidas precauciones."
       ],
+      "correcta": 1,
       "imagen": "../img/test_049_p13.jpg"
     },
     {
-      "texto": "El consumo de éxtasis, ¿icomo afecta en el comportamiento del conductor?",
+      "texto": "El consumo de éxtasis, ¿cómo afecta en el comportamiento del conductor?",
       "opciones": [
-        "Disminuye su capacidad de concentracion.",
-        "Reduce su sensibilidadal deslumbramiento.",
-        "Provoca un agotamientofisicoymental mientrasqueestanpresenteslossintomas."
-      ]
+        "Disminuye su capacidad de concentración.",
+        "Reduce su sensibilidad al deslumbramiento.",
+        "Provoca un agotamiento físico y mental mientras que están presentes los síntomas."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Es obligatorio llevar en un turismo un chaleco reflectante para el acompanante?",
+      "texto": "¿Es obligatorio llevar en un turismo un chaleco reflectante para el acompañante?",
       "opciones": [
-        "No,el chaleco reflectante no es obligatorio para los turismos.",
-        "No. b) No.",
-        "Si, ya que debera ponerselo si sale del vehiculo y ocupa la calzada en una via interurbana."
-      ]
+        "No, el chaleco reflectante no es obligatorio para los turismos.",
+        "No.",
+        "Sí, ya que deberá ponérselo si sale del vehículo y ocupa la calzada en una vía interurbana."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Puede el conductor reducir la probabilidad de accidente debida al \"factor via\"?",
+      "texto": "¿Puede el conductor reducir la probabilidad de accidente debida al 'factor vía'?",
       "opciones": [
-        "Si,adaptando su conduccionalas condiciones del medio.",
-        "Si, si su vehiculo cuenta con los ultimos avances de seguridad.",
-        "No,porque no puede actuar sobre la via ni sobre el entorno."
-      ]
+        "Sí, adaptando su conducción a las condiciones del medio.",
+        "Sí, si su vehículo cuenta con los últimos avances de seguridad.",
+        "No, porque no puede actuar sobre la vía ni sobre el entorno."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En una carretera convencional, ¿za que velocidad maxima puede adelantar un camion?",
+      "texto": "En una carretera convencional, ¿a qué velocidad máxima puede adelantar un camión?",
       "opciones": [
         "A 80 km/h.",
         "A 100 km/h.",
-        "A120 km/h."
+        "A 120 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_049_p17.jpg"
     },
     {
       "texto": "¿Puede conducir una motocicleta con el permiso de la clase B?",
       "opciones": [
-        "Si, si es de una cilindrada menor de 250 centimetros cubicos.",
-        "Si, solo en Espana, con una cilindrada maxima de 125 centimetros cubicos, y con una antiguedad del permiso superior a tres anos.",
-        "Si, siemprequeno supere los25kw depotencia."
-      ]
+        "Sí, si es de una cilindrada menor de 250 centímetros cúbicos.",
+        "Sí, solo en España, con una cilindrada máxima de 125 centímetros cúbicos, y con una antigüedad del permiso superior a tres años.",
+        "Sí, siempre que no supere los 25 kW de potencia."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "La depresion, ¿zinfluye en la somnolencia y la fatiga?",
+      "texto": "La depresión, ¿influye en la somnolencia y la fatiga?",
       "opciones": [
         "No, no tiene ninguna influencia.",
-        "Enlasomnolenciasiperoenlafatigano",
-        "Si, siendo aconsejableno conducir de noche."
-      ]
+        "En la somnolencia sí pero en la fatiga no.",
+        "Sí, siendo aconsejable no conducir de noche."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Si observa que un vehiculo quiere incorporarse por el carril de aceleracion, ¿ique debe hacer?",
+      "texto": "Si observa que un vehículo quiere incorporarse por el carril de aceleración, ¿qué debe hacer?",
       "opciones": [
-        "Nada,porquetengo preferencia.",
-        "Facilitarla incorporacion cuando sea posible.",
+        "Nada, porque tengo preferencia.",
+        "Facilitar la incorporación cuando sea posible.",
         "Cederle el paso."
       ],
+      "correcta": 1,
       "imagen": "../img/test_049_p20.jpg"
     },
     {
-      "texto": "Esta senal ..",
+      "texto": "Esta señal...",
       "opciones": [
-        "prohibe a los camiones adelantar salvo a motocicletas de dos ruedas.",
-        "prohibea todoslos camiones adelantara cualquier vehiculo.",
-        "prohibe a los camiones de mas de 3.500 Kg de M.M.A adelantar a los vehiculos a motor que circulen por la calzada."
+        "prohíbe a los camiones adelantar salvo a motocicletas de dos ruedas.",
+        "prohíbe a todos los camiones adelantar a cualquier vehículo.",
+        "prohíbe a los camiones de más de 3.500 kg de MMA adelantar a los vehículos a motor que circulen por la calzada."
       ],
+      "correcta": 2,
       "imagen": "../img/test_049_p21.jpg"
     },
     {
-      "texto": "Las tecnicas de conduccion eficiente...",
+      "texto": "Las técnicas de conducción eficiente...",
       "opciones": [
-        "son complementariasa lastecnicasdeconduccionpreventiva.",
-        "sonmas eficacesquelastecnicasdeconduccionpreventiva.",
-        "son lomismo que lastecnicasdeconduccionpreventiva."
-      ]
+        "son complementarias a las técnicas de conducción preventiva.",
+        "son más eficaces que las técnicas de conducción preventiva.",
+        "son lo mismo que las técnicas de conducción preventiva."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El cinturon de seguridad...",
+      "texto": "El cinturón de seguridad...",
       "opciones": [
-        "se puede sustituir por algun sistema de seguridad, como el airbag.",
-        "no se puede sustituir por ningun sistema de seguridad.",
-        "es incompatiblecon el airbag."
-      ]
+        "se puede sustituir por algún sistema de seguridad, como el airbag.",
+        "no se puede sustituir por ningún sistema de seguridad.",
+        "es incompatible con el airbag."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Son evitables los accidentes de circulacion?",
+      "texto": "¿Son evitables los accidentes de circulación?",
       "opciones": [
-        "Si, en general, son sucesos predecibles.",
-        "No,sedan al azar.",
-        "Solomejorandoel estadodelasvias."
-      ]
+        "Sí, en general, son sucesos predecibles.",
+        "No, se dan al azar.",
+        "Solo mejorando el estado de las vías."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En general, ¿za quienes afecta mas el alcohol?",
+      "texto": "En general, ¿a quiénes afecta más el alcohol?",
       "opciones": [
         "A los hombres.",
-        "Alas mujeres.",
+        "A las mujeres.",
         "Los efectos del alcohol no dependen del sexo de la persona."
       ],
+      "correcta": 1,
       "imagen": "../img/test_049_p25.jpg"
     },
     {
-      "texto": "Cuando el casco no tiene visera, ¿ies conveniente ponerse unas gafas de seguridad?",
+      "texto": "Cuando el casco no tiene visera, ¿es conveniente ponerse unas gafas de seguridad?",
       "opciones": [
         "No.",
-        "Si,porquees obligatorio.",
-        "Si,paraproteger los ojos."
+        "Sí, porque es obligatorio.",
+        "Sí, para proteger los ojos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_049_p26.jpg"
     },
     {
-      "texto": "En una bajada, ¿ique hay que hacer para que no se calienten los frenos?",
+      "texto": "En una bajada, ¿qué hay que hacer para que no se calienten los frenos?",
       "opciones": [
-        "Poner una velocidad mas larga.",
-        "Ponerunavelocidadmascorta.",
+        "Poner una velocidad más larga.",
+        "Poner una velocidad más corta.",
         "Poner el freno de mano."
       ],
+      "correcta": 1,
       "imagen": "../img/test_049_p27.jpg"
     },
     {
-      "texto": "En una autopista, ¿zesta permitido circular a una velocidad anormalmente reducida con niebla espesa?",
+      "texto": "En una autopista, ¿está permitido circular a una velocidad anormalmente reducida con niebla espesa?",
       "opciones": [
-        "No,porque es una autopista yes una via de gran seguridad.",
-        "Si.",
-        "Si,sila circulacionesescasa,perono,si esdensa."
+        "No, porque es una autopista y es una vía de gran seguridad.",
+        "Sí.",
+        "Sí, si la circulación es escasa, pero no si es densa."
       ],
+      "correcta": 1,
       "imagen": "../img/test_049_p28.jpg"
     },
     {
-      "texto": "Esta senal indica la proximidad de una interseccion...",
+      "texto": "Esta señal indica la proximidad de una intersección...",
       "opciones": [
         "sin prioridad de paso.",
         "con prioridad de paso.",
-        "con prioridad depaso a la derecha."
+        "con prioridad de paso a la derecha."
       ],
+      "correcta": 1,
       "imagen": "../img/test_049_p29.jpg"
     },
     {
       "texto": "Como norma general, las maniobras deben advertirse utilizando...",
       "opciones": [
         "preferentemente el brazo.",
-        "preferentemente la senalizacion luminosadel vehiculo.",
-        "indistintamente el brazo o las senales luminosas."
+        "preferentemente la señalización luminosa del vehículo.",
+        "indistintamente el brazo o las señales luminosas."
       ],
+      "correcta": 1,
       "imagen": "../img/test_049_p30.jpg"
     }
   ]

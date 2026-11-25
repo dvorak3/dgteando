@@ -1,142 +1,158 @@
 {
   "test_id": 43,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Todas las enfermedades, ¿ison igual de peligrosas para la conduccion?",
+      "texto": "Todas las enfermedades, ¿son igual de peligrosas para la conducción?",
       "opciones": [
-        "No,las enfermedades cronicas no sonpeligrosas.",
-        "Si,todas las enfermedades son igual de peligrosas.",
-        "No,algunostrastornosneurologicosyenfermedades mentales sonmaspeligrosas."
-      ]
+        "No, las enfermedades crónicas no son peligrosas.",
+        "Sí, todas las enfermedades son igual de peligrosas.",
+        "No, algunos trastornos neurológicos y enfermedades mentales son más peligrosas."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Un botiquin de primeros auxilios, ¿ise encuentra entre la dotacion obligatoria de los vehiculos de mas de nueveplazas?",
+      "texto": "Un botiquín de primeros auxilios, ¿se encuentra entre la dotación obligatoria de los vehículos de más de nueve plazas?",
       "opciones": [
-        "No,unbotiquines solamente recomendable.",
-        "Es obligatoriodependiendo del numerode pasajeros transportados.",
-        "Si, es obligatorio."
+        "No, un botiquín es solamente recomendable.",
+        "Es obligatorio dependiendo del número de pasajeros transportados.",
+        "Sí, es obligatorio."
       ],
+      "correcta": 2,
       "imagen": "../img/test_043_p02.jpg"
     },
     {
-      "texto": "¿En que caso puede el conductor de una motocicleta circular sin casco?",
+      "texto": "¿En qué caso puede el conductor de una motocicleta circular sin casco?",
       "opciones": [
-        "Cuando la motocicleta tenga estructura de autoproteccion, cinturon de seguridad yasi conste en sutarjeta ITV.",
-        "En ningun caso ya que el casco siempre es obligatorio.",
-        "Cuando circule en vias urbanas a velocidad reducida."
+        "Cuando la motocicleta tenga estructura de autoprotección, cinturón de seguridad y así conste en su tarjeta ITV.",
+        "En ningún caso ya que el casco siempre es obligatorio.",
+        "Cuando circule en vías urbanas a velocidad reducida."
       ],
+      "correcta": 0,
       "imagen": "../img/test_043_p03.jpg"
     },
     {
       "texto": "Conducir de forma temeraria...",
       "opciones": [
-        "es una infraccion muy grave que conlleva perdida de puntos.",
-        "esuna infraccion muygrave aunque no conlleva perdida depuntos.",
-        "es recomendableen algunas situaciones de emergencia."
+        "es una infracción muy grave que conlleva pérdida de puntos.",
+        "es una infracción muy grave aunque no conlleva pérdida de puntos.",
+        "es recomendable en algunas situaciones de emergencia."
       ],
+      "correcta": 0,
       "imagen": "../img/test_043_p04.jpg"
     },
     {
       "texto": "¿Qué indica este agente?",
       "opciones": [
-        "Detencion para todos los usuarios que se acerquen defrente.",
-        "Detencion para los vehiculos que se acerquen de frente al agente.",
-        "Detencion para todos los usuarios que se acerquen al agente."
+        "Detención para todos los usuarios que se acerquen de frente.",
+        "Detención para los vehículos que se acerquen de frente al agente.",
+        "Detención para todos los usuarios que se acerquen al agente."
       ],
+      "correcta": 2,
       "imagen": "../img/test_043_p05.jpg"
     },
     {
-      "texto": "Al circular por una carretera con pavimento deslizante por lluvia, ¿idebe moderarse la velocidad?",
+      "texto": "Al circular por una carretera con pavimento deslizante por lluvia, ¿debe moderarse la velocidad?",
       "opciones": [
-        "Si, siempre.",
-        "No,cuandohayapocotrafico",
-        "Solamente al cruzarse con otro vehiculo que circula de frente."
-      ]
+        "Sí, siempre.",
+        "No, cuando haya poco tráfico.",
+        "Solamente al cruzarse con otro vehículo que circula de frente."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Conducir cansado, ¿zes peligroso?",
+      "texto": "Conducir cansado, ¿es peligroso?",
       "opciones": [
-        "Si, porque se tarda mas en reaccionar.",
-        "No hay peligro,porque cansado se circula mas despacio.",
+        "Sí, porque se tarda más en reaccionar.",
+        "No hay peligro, porque cansado se circula más despacio.",
         "No hay peligro, porque el cansancio relaja."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "El permiso de circulacion es obligatorio para los remolques y semirremolques...",
+      "texto": "El permiso de circulación es obligatorio para los remolques y semirremolques...",
       "opciones": [
         "que tengan una MMA no superior a 750 kg.",
         "cualquiera que sea su MMA.",
         "que tengan una MMA superior a 750 kg."
       ],
+      "correcta": 2,
       "imagen": "../img/test_043_p08.jpg"
     },
     {
-      "texto": "La mayoria de los accidentes son...",
+      "texto": "La mayoría de los accidentes son...",
       "opciones": [
         "inevitables, aunque se prevengan los factores de riesgo.",
         "evitables, si se previenen los factores de riesgo.",
-        "inevitables,porquesiempreestapresenteelfactorhumano."
+        "inevitables, porque siempre está presente el factor humano."
       ],
+      "correcta": 1,
       "imagen": "../img/test_043_p09.jpg"
     },
     {
-      "texto": "Circula a 70 km/h, ¿zpor que carril es obligatorio circular?",
+      "texto": "Circula a 70 km/h, ¿por qué carril es obligatorio circular?",
       "opciones": [
         "Por el del centro.",
         "Por el de la derecha.",
         "Por el que mejor convenga a mi destino."
       ],
+      "correcta": 1,
       "imagen": "../img/test_043_p10.jpg"
     },
     {
-      "texto": "Como norma general, ¿icuando es mayor el efecto del alcohol?",
+      "texto": "Como norma general, ¿cuándo es mayor el efecto del alcohol?",
       "opciones": [
-        "Inmediatamentedespuesdetomarlo.",
-        "Una horadespuesdetomarlo.",
-        "Tres horas despues detomarlo."
-      ]
+        "Inmediatamente después de tomarlo.",
+        "Una hora después de tomarlo.",
+        "Tres horas después de tomarlo."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Cuantos chalecos reflectantes debe llevar obligatoriamente en un turismo?",
+      "texto": "¿Cuántos chalecos reflectantes debe llevar obligatoriamente en un turismo?",
       "opciones": [
         "Dos.",
-        "Uno,aunque esrecomendable llevar dos.",
+        "Uno, aunque es recomendable llevar dos.",
         "Ninguno, ya que no es obligatorio."
       ],
+      "correcta": 1,
       "imagen": "../img/test_043_p12.jpg"
     },
     {
-      "texto": "¿En que caso el estacionamiento perturba gravemente la circulacion?",
+      "texto": "¿En qué caso el estacionamiento perturba gravemente la circulación?",
       "opciones": [
-        "Cuando la distancia entre el vehiculo y el borde opuesto de la calzada sea inferior a 5 metros.",
-        "Cuando se efectua en las medianas, separadores, isletas u otros elementos de canalizacion del trafico.",
-        "En una zona reservada a carga y descarga, fuera de las horas de utilizacion."
-      ]
+        "Cuando la distancia entre el vehículo y el borde opuesto de la calzada sea inferior a 5 metros.",
+        "Cuando se efectúa en las medianas, separadores, isletas u otros elementos de canalización del tráfico.",
+        "En una zona reservada a carga y descarga, fuera de las horas de utilización."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "¿Cuando debe aumentarse la distancia de seguridad?",
+      "texto": "¿Cuándo debe aumentarse la distancia de seguridad?",
       "opciones": [
-        "Cuandoaumenta la velocidadde los vehiculos.",
+        "Cuando aumenta la velocidad de los vehículos.",
         "Cuando quiero adelantar.",
-        "Cuando disminuye la velocidad de los vehiculos."
-      ]
+        "Cuando disminuye la velocidad de los vehículos."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En caso de padecer una enfermedad, ¿zhay que preguntar al medico sobre las precauciones que se deben tomar para conducir?",
+      "texto": "En caso de padecer una enfermedad, ¿hay que preguntar al médico sobre las precauciones que se deben tomar para conducir?",
       "opciones": [
         "No.",
-        "Si.",
-        "Solo cuando la enfermedad es cronica."
-      ]
+        "Sí.",
+        "Solo cuando la enfermedad es crónica."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Si la via esta acondicionada con una raqueta u otro elemento similar, ¿idebe utilizar dicho elemento para realizar un giro?",
+      "texto": "Si la vía está acondicionada con una raqueta u otro elemento similar, ¿debe utilizar dicho elemento para realizar un giro?",
       "opciones": [
         "No, es indiferente.",
-        "Si, aunque no haya senal que lo indique.",
-        "Si, pero solo si lo indica una senal."
+        "Sí, aunque no haya señal que lo indique.",
+        "Sí, pero solo si lo indica una señal."
       ],
+      "correcta": 1,
       "imagen": "../img/test_043_p16.jpg"
     },
     {
@@ -144,121 +160,135 @@
       "opciones": [
         "Sistema de control de seguridad.",
         "Sistema de frenado antibloqueo.",
-        "Sistemadecierrecentralizado."
-      ]
+        "Sistema de cierre centralizado."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En una interseccion no senalizada, ¿ique vehiculos tendran prioridad sobre los demas usuarios?",
+      "texto": "En una intersección no señalizada, ¿qué vehículos tendrán prioridad sobre los demás usuarios?",
       "opciones": [
-        "Losque circulansobre railes.",
-        "Los trenes,pero no los tranvias.",
+        "Los que circulan sobre raíles.",
+        "Los trenes, pero no los tranvías.",
         "Los que tengan la izquierda libre."
       ],
+      "correcta": 0,
       "imagen": "../img/test_043_p18.jpg"
     },
     {
-      "texto": "En un paso de peatones, ¿zhay que hacer senales a los peatones para que crucen la calzada?",
+      "texto": "En un paso de peatones, ¿hay que hacer señales a los peatones para que crucen la calzada?",
       "opciones": [
-        "Si, pero solo si van a cruzar por el.",
-        "No,porquelosdemas conductorespuedennohabersedado cuentade supresencia."
+        "Sí, pero solo si van a cruzar por él.",
+        "No, porque los demás conductores pueden no haberse dado cuenta de su presencia."
       ],
+      "correcta": 1,
       "imagen": "../img/test_043_p19.jpg"
     },
     {
-      "texto": "¿&Cual es la tasa maxima de alcohol permitida para un conductor de un vehiculo de transporte escolar?",
+      "texto": "¿Cuál es la tasa máxima de alcohol permitida para un conductor de un vehículo de transporte escolar?",
       "opciones": [
         "0,15 miligramos por litro de aire espirado.",
         "0,25 miligramos por litro de aire espirado.",
         "0,3 miligramos por litro de aire espirado."
       ],
+      "correcta": 0,
       "imagen": "../img/test_043_p20.jpg"
     },
     {
-      "texto": "Estas marcas viales, ¿zque indican?",
+      "texto": "Estas marcas viales, ¿qué indican?",
       "opciones": [
         "Un paso para peatones y ciclistas.",
-        "Unpasoparaciclistas.",
-        "Unpasoobligatorioparavehiculosdedos ruedas."
+        "Un paso para ciclistas.",
+        "Un paso obligatorio para vehículos de dos ruedas."
       ],
+      "correcta": 1,
       "imagen": "../img/test_043_p21.jpg"
     },
     {
       "texto": "Cuando se circula con niebla, el conductor debe...",
       "opciones": [
-        "acercarse todo lo posible al vehiculo que circula delante para poderverlo mejor.",
-        "adaptar la velocidad a las condiciones atmosfericas de visibilidad.",
-        "parar en la calzada,hasta quedesaparezca la niebla."
+        "acercarse todo lo posible al vehículo que circula delante para poder verlo mejor.",
+        "adaptar la velocidad a las condiciones atmosféricas de visibilidad.",
+        "parar en la calzada, hasta que desaparezca la niebla."
       ],
+      "correcta": 1,
       "imagen": "../img/test_043_p22.jpg"
     },
     {
-      "texto": "Como norma general, ¿zesta permitido adelantar en los pasos para peatones?",
+      "texto": "Como norma general, ¿está permitido adelantar en los pasos para peatones?",
       "opciones": [
-        "Si, si se hace a velocidad muy reducida.",
-        "Si, pero unicamente en vias urbanas.",
+        "Sí, si se hace a velocidad muy reducida.",
+        "Sí, pero únicamente en vías urbanas.",
         "No."
-      ]
+      ],
+      "correcta": 2
     },
     {
       "texto": "Los animales tienen preferencia de paso en el lugar indicado con...",
       "opciones": [
-        "la senal A.",
-        "la senal C.",
-        "la senal B."
+        "la señal A.",
+        "la señal C.",
+        "la señal B."
       ],
+      "correcta": 1,
       "imagen": "../img/test_043_p24.jpg"
     },
     {
       "texto": "La distancia de frenado es...",
       "opciones": [
-        "el espacio recorrido desde que el conductor acciona el freno hasta que vehiculo se detiene.",
-        "el espacio recorrido desde que el conductor ve el obstaculo hasta que detiene el vehiculo.",
-        "el espacio recorrido desdeque el conductor ve el obstaculohastaque acciona el freno."
-      ]
+        "el espacio recorrido desde que el conductor acciona el freno hasta que el vehículo se detiene.",
+        "el espacio recorrido desde que el conductor ve el obstáculo hasta que detiene el vehículo.",
+        "el espacio recorrido desde que el conductor ve el obstáculo hasta que acciona el freno."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En un puesto de peaje, ¿ique se debe hacer?",
+      "texto": "En un puesto de peaje, ¿qué se debe hacer?",
       "opciones": [
-        "Pasar sin detenerseporque la flecha esta verde.",
+        "Pasar sin detenerse porque la flecha está verde.",
         "Pasar sin detenerse porque no hay barrera.",
-        "Detenerse en el puesto de control porque lo indica la senal."
+        "Detenerse en el puesto de control porque lo indica la señal."
       ],
+      "correcta": 2,
       "imagen": "../img/test_043_p26.jpg"
     },
     {
-      "texto": "Al aproximarse a un puente movil, ¿ique estan obligados a hacer los conductores?",
+      "texto": "Al aproximarse a un puente móvil, ¿qué están obligados a hacer los conductores?",
       "opciones": [
-        "Aumentar la velocidad para cruzar el pasoloantesposible.",
-        "Extremar la prudencia y reducir la velocidad por debajo de la maxima permitida.",
+        "Aumentar la velocidad para cruzar el paso lo antes posible.",
+        "Extremar la prudencia y reducir la velocidad por debajo de la máxima permitida.",
         "Detenerse siempre antes de cruzarlo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_043_p27.jpg"
     },
     {
       "texto": "¿Es recomendable parar y descansar durante los viajes?",
       "opciones": [
-        "Si,2030minutos cada2horasdeconduccion o cada 200kilometros.",
+        "Sí, 20 o 30 minutos cada 2 horas de conducción o cada 200 kilómetros.",
         "No, porque se alarga el tiempo de viaje y aumenta la fatiga.",
-        "No,si el viaje es por vias interurbanas."
+        "No, si el viaje es por vías interurbanas."
       ],
+      "correcta": 0,
       "imagen": "../img/test_043_p28.jpg"
     },
     {
-      "texto": "A la hora de determinar la distancia de seguridad con el vehiculo que circula delante...",
+      "texto": "A la hora de determinar la distancia de seguridad con el vehículo que circula delante...",
       "opciones": [
         "debe tener en cuenta la velocidad, la visibilidad y el estado de la calzada.",
-        "debe tener en cuenta las caracteristicas del vehiculo que circula delante.",
-        "debetener en cuenta la velocidad, exclusivamente. c) debe tener en cuenta la velocidad, exclusivamente."
+        "debe tener en cuenta las características del vehículo que circula delante.",
+        "debe tener en cuenta la velocidad, exclusivamente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_043_p29.jpg"
     },
     {
-      "texto": "¿Quien es el responsable de las infracciones cometidas durante la conduccion?",
+      "texto": "¿Quién es el responsable de las infracciones cometidas durante la conducción?",
       "opciones": [
-        "El titular del vehiculo.",
-        "Entodos los casosel conductor.",
-        "El conductor, excepto si esmenor de18anos,en cuyo casolo son suspadres o tutores."
+        "El titular del vehículo.",
+        "En todos los casos el conductor.",
+        "El conductor, excepto si es menor de 18 años, en cuyo caso lo son sus padres o tutores."
       ],
+      "correcta": 1,
       "imagen": "../img/test_043_p30.jpg"
     }
   ]

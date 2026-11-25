@@ -1,267 +1,297 @@
 {
   "test_id": 44,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Los accidentes de trafico producen, entre otras consecuencias...",
+      "texto": "Los accidentes de tráfico producen, entre otras consecuencias...",
       "opciones": [
-        "solo danosmateriales a los vehiculos.",
-        "solo gastos en atencion y tratamiento de los heridos.",
-        "danos a la via y el entorno."
+        "solo daños materiales a los vehículos.",
+        "solo gastos en atención y tratamiento de los heridos.",
+        "daños a la vía y el entorno."
       ],
+      "correcta": 2,
       "imagen": "../img/test_044_p01.jpg"
     },
     {
-      "texto": "Mientras se reposta carburante en una motocicleta, ¿zes obligatorio apagar el alumbrado?",
+      "texto": "Mientras se reposta carburante en una motocicleta, ¿es obligatorio apagar el alumbrado?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "No, se debe dejar encendida la luz de cruce.",
-        "No, se debe dejar encendida la luz de posicion."
+        "No, se debe dejar encendida la luz de posición."
       ],
+      "correcta": 0,
       "imagen": "../img/test_044_p02.jpg"
     },
     {
-      "texto": "Si una motocicleta acaba de pasar la primera revision ITV, debe pasar la siguiente dentro de..",
+      "texto": "Si una motocicleta acaba de pasar la primera revisión ITV, debe pasar la siguiente dentro de...",
       "opciones": [
-        "4 anos.",
-        "2 anos.",
+        "4 años.",
+        "2 años.",
         "6 meses."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Un peaton que empuja un carrito, ¿ipor donde puede circular?",
+      "texto": "Un peatón que empuja un carrito, ¿por dónde puede circular?",
       "opciones": [
-        "Soloporlazonapeatonal.",
-        "Por la zona peatonal, o por el arcen o la calzada si pudiera obstaculizar el paso.",
-        "Solopor la calzada."
+        "Solo por la zona peatonal.",
+        "Por la zona peatonal, o por el arcén o la calzada si pudiera obstaculizar el paso.",
+        "Solo por la calzada."
       ],
+      "correcta": 1,
       "imagen": "../img/test_044_p04.jpg"
     },
     {
-      "texto": "El accidente mas frecuente por el uso del telefono movil, mientras se conduce, es...",
+      "texto": "El accidente más frecuente por el uso del teléfono móvil, mientras se conduce, es...",
       "opciones": [
-        "la salida de la via.",
+        "la salida de la vía.",
         "el alcance.",
         "el choque frontolateral."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En vias interurbanas y en calzadas con mas de un carril para el mismo sentido de marcha, ¿ipor donde circulara normalmente un automovil?",
+      "texto": "En vías interurbanas y en calzadas con más de un carril para el mismo sentido de marcha, ¿por dónde circulará normalmente un automóvil?",
       "opciones": [
         "Por el carril central.",
         "Por el carril derecho.",
-        "Por el que mas convenga a su destino."
+        "Por el que más convenga a su destino."
       ],
+      "correcta": 1,
       "imagen": "../img/test_044_p06.jpg"
     },
     {
-      "texto": "Esta senal prohibe la entrada a..",
+      "texto": "Esta señal prohíbe la entrada a...",
       "opciones": [
-        "camiones yfurgones.",
-        "todos los vehiculos destinados al transporte de mercancias.",
-        "todos los vehiculos destinados al transportedemercancias peligrosas. c)todos los vehiculos destinados al transporte de mercancias peligrosas."
+        "camiones y furgones.",
+        "todos los vehículos destinados al transporte de mercancías.",
+        "todos los vehículos destinados al transporte de mercancías peligrosas."
       ],
+      "correcta": 2,
       "imagen": "../img/test_044_p07.jpg"
     },
     {
-      "texto": "Para evitar la fatiga en la conduccion, conviene descansar...",
+      "texto": "Para evitar la fatiga en la conducción, conviene descansar...",
       "opciones": [
-        "cada3horasocada400kilometros.",
-        "cuando el conductor compruebeque ha perdido totalmente la capacidad de reaccionar.",
-        "cada2horasocada200kilometros."
-      ]
+        "cada 3 horas o cada 400 kilómetros.",
+        "cuando el conductor compruebe que ha perdido totalmente la capacidad de reaccionar.",
+        "cada 2 horas o cada 200 kilómetros."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Si se encuentra un accidente de trafico, ¿idebe detenerse para auxiliar y prestar ayuda a las victimas?",
+      "texto": "Si se encuentra un accidente de tráfico, ¿debe detenerse para auxiliar y prestar ayuda a las víctimas?",
       "opciones": [
         "Solamente si lo solicita alguna autoridad presente.",
-        "Si, salvo que la ayuda este ya organizada.",
+        "Sí, salvo que la ayuda esté ya organizada.",
         "No, ya que al no estar implicado, no tiene ninguna responsabilidad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_044_p09.jpg"
     },
     {
-      "texto": "En un turismo. ¿Quien esta obligado a llevar puesto el cinturon de seguridad?",
+      "texto": "En un turismo, ¿quién está obligado a llevar puesto el cinturón de seguridad?",
       "opciones": [
-        "Solo los quevanenlosasientosdelanteros.",
+        "Solo los que van en los asientos delanteros.",
         "Solo los que van en los asientos traseros.",
-        "Todos los ocupantesdel vehiculo."
+        "Todos los ocupantes del vehículo."
       ],
+      "correcta": 2,
       "imagen": "../img/test_044_p10.jpg"
     },
     {
-      "texto": "En un conductor el consumo de anfetaminas...",
+      "texto": "En un conductor, el consumo de anfetaminas...",
       "opciones": [
-        "favorece la fatiga y el sueno.",
-        "proporciona un estado de relajacion.",
-        "genera comportamientos impacienteso impulsivos."
-      ]
+        "favorece la fatiga y el sueño.",
+        "proporciona un estado de relajación.",
+        "genera comportamientos impacientes o impulsivos."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Qué senaldebeobedecer?",
+      "texto": "¿Qué señal debe obedecer?",
       "opciones": [
-        "La queprohibe estacionar,porserla mas restrictiva.",
-        "La que prohibe parar y estacionar, por ser mas restrictiva.",
-        "Laqueprohibe estacionar,por ser la menos restrictiva."
+        "La que prohíbe estacionar, por ser la más restrictiva.",
+        "La que prohíbe parar y estacionar, por ser más restrictiva.",
+        "La que prohíbe estacionar, por ser la menos restrictiva."
       ],
+      "correcta": 1,
       "imagen": "../img/test_044_p12.jpg"
     },
     {
       "texto": "Las distracciones pueden estar originadas...",
       "opciones": [
-        "inicamente por elementos internos del vehiculo.",
-        "tantopor elementos externos al vehiculo comopor elementos internos.",
-        "solo por elementos externos al vehiculo."
+        "únicamente por elementos internos del vehículo.",
+        "tanto por elementos externos al vehículo como por elementos internos.",
+        "solo por elementos externos al vehículo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_044_p13.jpg"
     },
     {
-      "texto": "Los medicamentos para el resfriado, ¿zinfluyen en la conduccion?",
+      "texto": "Los medicamentos para el resfriado, ¿influyen en la conducción?",
       "opciones": [
-        "No,los medicamentos noafectan en ningun caso.",
-        "Si,porquepueden producir somnolencia.",
-        "Si, sonbeneficiosos,porque estimulan."
+        "No, los medicamentos no afectan en ningún caso.",
+        "Sí, porque pueden producir somnolencia.",
+        "Sí, son beneficiosos, porque estimulan."
       ],
+      "correcta": 1,
       "imagen": "../img/test_044_p14.jpg"
     },
     {
-      "texto": "Estan obligados a utilizar casco...",
+      "texto": "Están obligados a utilizar casco...",
       "opciones": [
         "los conductores y pasajeros de las motocicletas de dos ruedas, con o sin sidecar.",
-        "solamente los conductores de las motocicletas dedos ruedas sin sidecar.",
+        "solamente los conductores de las motocicletas de dos ruedas sin sidecar.",
         "solamente los pasajeros de las motocicletas de dos ruedas sin sidecar."
       ],
+      "correcta": 0,
       "imagen": "../img/test_044_p15.jpg"
     },
     {
-      "texto": "¿&Cual es el credito inicial de puntos asignados a un conductor que obtiene su primer permiso de conduccion?",
+      "texto": "¿Cuál es el crédito inicial de puntos asignados a un conductor que obtiene su primer permiso de conducción?",
       "opciones": [
         "De 16 puntos.",
         "De 8 puntos.",
-        "De12puntos."
+        "De 12 puntos."
       ],
+      "correcta": 1,
       "imagen": "../img/test_044_p16.jpg"
     },
     {
-      "texto": "Una de las consecuencias de la velocidad es que segun aumenta ésta...",
+      "texto": "Una de las consecuencias de la velocidad es que según aumenta esta...",
       "opciones": [
-        "sereduce el tiempo dereaccion.",
+        "se reduce el tiempo de reacción.",
         "mayor es la gravedad de las lesiones en un accidente.",
-        "sepierdecoordinaciondemovimientos."
-      ]
-    },
-    {
-      "texto": "La perdida de vidas, de capacidad productiva y el sufrimiento fisico y psicologico, ¿icomo se llaman?",
-      "opciones": [
-        "Costes sanitarios",
-        "Costeshumanos.",
-        "Costes materiales"
-      ]
-    },
-    {
-      "texto": "Cuando se incorporen a la circulacion, es obligatorio facilitar la maniobra a...",
-      "opciones": [
-        "lostaxis,peronicamenteenpoblado.",
-        "todos los vehiculos.",
-        "los vehiculos de transporte publico de viajeros, unicamente."
+        "se pierde coordinación de movimientos."
       ],
+      "correcta": 1
+    },
+    {
+      "texto": "La pérdida de vidas, de capacidad productiva y el sufrimiento físico y psicológico, ¿cómo se llaman?",
+      "opciones": [
+        "Costes sanitarios.",
+        "Costes humanos.",
+        "Costes materiales."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Cuando se incorporen a la circulación, es obligatorio facilitar la maniobra a...",
+      "opciones": [
+        "los taxis, pero únicamente en poblado.",
+        "todos los vehículos.",
+        "los vehículos de transporte público de viajeros, únicamente."
+      ],
+      "correcta": 2,
       "imagen": "../img/test_044_p19.jpg"
     },
     {
-      "texto": "El semaforo cuadrado de cada carril obliga...",
+      "texto": "El semáforo cuadrado de cada carril obliga...",
       "opciones": [
-        "a los vehiculos de tres y cuatro ruedas solamente.",
-        "a los vehiculos que circulan por el carril donde esta el semaforo.",
-        "atodoslosvehiculosquecirculanporlacalzada."
+        "a los vehículos de tres y cuatro ruedas solamente.",
+        "a los vehículos que circulan por el carril donde está el semáforo.",
+        "a todos los vehículos que circulan por la calzada."
       ],
+      "correcta": 1,
       "imagen": "../img/test_044_p20.jpg"
     },
     {
-      "texto": "¿Cuales son los principales grupos vulnerables en el trafico?",
+      "texto": "¿Cuáles son los principales grupos vulnerables en el tráfico?",
       "opciones": [
         "Los ciclistas.",
-        "Los ninos, los jovenes ylaspersonasmayores.",
-        "Sololosninosylaspersonasmayores."
-      ]
+        "Los niños, los jóvenes y las personas mayores.",
+        "Solo los niños y las personas mayores."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Montar neumaticos con un codigo de velocidad distinto al que recomienda el fabricante, ¿zesta permitido?",
+      "texto": "Montar neumáticos con un código de velocidad distinto al que recomienda el fabricante, ¿está permitido?",
       "opciones": [
-        "Si, siempre que sea superior al recomendado.",
-        "Si, en cualquier caso.",
-        "No, esta prohibido."
+        "Sí, siempre que sea superior al recomendado.",
+        "Sí, en cualquier caso.",
+        "No, está prohibido."
       ],
+      "correcta": 0,
       "imagen": "../img/test_044_p22.jpg"
     },
     {
-      "texto": "icomo debe realizar la operacion de carga y descarga, ¿ya sea de personas o de mercancias?",
+      "texto": "¿Cómo debe realizar la operación de carga y descarga, ya sea de personas o de mercancías?",
       "opciones": [
-        "Rapidamente,pero solo en las zonas donde este permitido.",
-        "Sin ocasionar peligros y, si es posible, por el lado del vehiculo mas proximo al borde de la calzada.",
-        "Senalizando correctamente, pudiendo realizarla por cualquier lado del vehiculo."
+        "Rápidamente, pero solo en las zonas donde esté permitido.",
+        "Sin ocasionar peligros y, si es posible, por el lado del vehículo más próximo al borde de la calzada.",
+        "Señalizando correctamente, pudiendo realizarla por cualquier lado del vehículo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_044_p23.jpg"
     },
     {
-      "texto": "¿Hay mucha niebla. Que luces deben llevar encendidas los vehiculos?",
+      "texto": "Hay mucha niebla. ¿Qué luces deben llevar encendidas los vehículos?",
       "opciones": [
         "Las luces antiniebla junto con las luces cortas.",
         "Las luces antiniebla junto con las luces de emergencia.",
-        "Laslucesdeposicionsolamente."
+        "Las luces de posición solamente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_044_p24.jpg"
     },
     {
-      "texto": "En el borde izquierdo de una calzada, ¿ise puede parar con caracter general?",
+      "texto": "En el borde izquierdo de una calzada, ¿se puede parar con carácter general?",
       "opciones": [
-        "Si, siempre que no obstaculice la circulacion.",
-        "No, en ningun caso.",
-        "Si, en vias urbanas desentido unico."
+        "Sí, siempre que no obstaculice la circulación.",
+        "No, en ningún caso.",
+        "Sí, en vías urbanas de sentido único."
       ],
+      "correcta": 2,
       "imagen": "../img/test_044_p25.jpg"
     },
     {
-      "texto": "Este turismo con remolque, ¿ia que velocidad puede circular como maximo en una autovia?",
+      "texto": "Este turismo con remolque, ¿a qué velocidad puede circular como máximo en una autovía?",
       "opciones": [
         "A 100 km/h.",
         "A 90 km/h.",
-        "A120km/h."
+        "A 120 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_044_p26.jpg"
     },
     {
-      "texto": "La senal obliga...",
+      "texto": "La señal obliga...",
       "opciones": [
         "a circular por el lado del refugio que indica.",
-        "agirarala derechaen laproxima interseccion.",
+        "a girar a la derecha en la próxima intersección.",
         "a seguir el movimiento giratorio que indica."
       ],
+      "correcta": 0,
       "imagen": "../img/test_044_p27.jpg"
     },
     {
-      "texto": "Circulando en un dia de calor...",
+      "texto": "Circulando en un día de calor...",
       "opciones": [
-        "sedebenhacermasdescansos,yaquelafatigaaparecemasfacilmente.",
-        "hay querealizar los mismos descansos que si la temperatura es normal.",
-        "se debenhacermenos descansos,para llegaral destino cuanto antes."
-      ]
+        "se deben hacer más descansos, ya que la fatiga aparece más fácilmente.",
+        "hay que realizar los mismos descansos que si la temperatura es normal.",
+        "se deben hacer menos descansos, para llegar al destino cuanto antes."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Le esta permitido parar su motocicleta en la parte transitable del arcen de una via interurbana?",
+      "texto": "¿Le está permitido parar su motocicleta en la parte transitable del arcén de una vía interurbana?",
       "opciones": [
-        "Si, pero solo por tiempo inferior a dos minutos.",
-        "Si, siempre que sea para tomar o dejar a una persona.",
+        "Sí, pero solo por tiempo inferior a dos minutos.",
+        "Sí, siempre que sea para tomar o dejar a una persona.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_044_p29.jpg"
     },
     {
-      "texto": "En una interseccion en la que debe ceder el paso, ¿zcuando podra reanudar la marcha?",
+      "texto": "En una intersección en la que debe ceder el paso, ¿cuándo podrá reanudar la marcha?",
       "opciones": [
-        "Inmediatamente despues de que pase el vehiculo al que cedo el paso.",
-        "Cuando exista espacio suficientepara incorporarse.",
-        "Cuando este seguro de que no obliga al que tiene la prioridad a cambiar su trayectoria o velocidad."
+        "Inmediatamente después de que pase el vehículo al que cedo el paso.",
+        "Cuando exista espacio suficiente para incorporarse.",
+        "Cuando esté seguro de que no obliga al que tiene la prioridad a cambiar su trayectoria o velocidad."
       ],
+      "correcta": 2,
       "imagen": "../img/test_044_p30.jpg"
     }
   ]

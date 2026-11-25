@@ -1,264 +1,294 @@
 {
   "test_id": 47,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Si circula por un tunel suficientemente iluminado, ¿ique alumbrado debe utilizar?",
+      "texto": "Si circula por un túnel suficientemente iluminado, ¿qué alumbrado debe utilizar?",
       "opciones": [
-        "El alumbrado de posicion y el de corto alcance.",
-        "Solamente el alumbrado de posicion.",
-        "El alumbradode largo alcance."
+        "El alumbrado de posición y el de corto alcance.",
+        "Solamente el alumbrado de posición.",
+        "El alumbrado de largo alcance."
       ],
+      "correcta": 0,
       "imagen": "../img/test_047_p01.jpg"
     },
     {
-      "texto": "Cuando prevea que va a quedar detenido dentro del tinel mas de dos minutos, ¿ique debe hacer?",
+      "texto": "Cuando prevea que va a quedar detenido dentro del túnel más de dos minutos, ¿qué debe hacer?",
       "opciones": [
         "Dar media vuelta con cuidado.",
         "Apagar el motor.",
-        "Apagarlas luces."
-      ]
-    },
-    {
-      "texto": "Los ocupantes que viajen en su vehiculo, ¿icomo deben descender del mismo?",
-      "opciones": [
-        "Por cualquier lado, siempreque se haga con rapidez.",
-        "Por el lado mas proximo al borde de la via, si es posible, y siempre con el vehiculo inmovilizado.",
-        "Con el vehiculo inmovilizado si es posible, y por cualquiera de los dos lados."
-      ]
-    },
-    {
-      "texto": "Antes de cambiar de carril, ¿zcomo debe avisar?",
-      "opciones": [
-        "Con los indicadores de direccion.",
-        "Con el claxon.",
-        "Conlaslucesdefrenado"
+        "Apagar las luces."
       ],
+      "correcta": 1
+    },
+    {
+      "texto": "Los ocupantes que viajen en su vehículo, ¿cómo deben descender del mismo?",
+      "opciones": [
+        "Por cualquier lado, siempre que se haga con rapidez.",
+        "Por el lado más próximo al borde de la vía, si es posible, y siempre con el vehículo inmovilizado.",
+        "Con el vehículo inmovilizado si es posible, y por cualquiera de los dos lados."
+      ],
+      "correcta": 1
+    },
+    {
+      "texto": "Antes de cambiar de carril, ¿cómo debe avisar?",
+      "opciones": [
+        "Con los indicadores de dirección.",
+        "Con el claxon.",
+        "Con las luces de frenado."
+      ],
+      "correcta": 0,
       "imagen": "../img/test_047_p04.jpg"
     },
     {
-      "texto": "Cuando tomo medicinas que afectan al sistema nervioso, ¿ique debo hacer para conducir?",
+      "texto": "Cuando tomo medicinas que afectan al sistema nervioso, ¿qué debo hacer para conducir?",
       "opciones": [
-        "Nodebo conducir hasta dos horas despuesde tomarlas.",
-        "Consultar al medico y obedecer sus indicaciones.",
+        "No debo conducir hasta dos horas después de tomarlas.",
+        "Consultar al médico y obedecer sus indicaciones.",
         "Nada, porque mejoran mis capacidades."
-      ]
+      ],
+      "correcta": 1
     },
     {
       "texto": "Este ciclista...",
       "opciones": [
-        "deberia circular lo mas cerca posible del eje central de la calzada.",
-        "no deberia circular por esa via, pues no tiene arcen.",
+        "debería circular lo más cerca posible del eje central de la calzada.",
+        "no debería circular por esa vía, pues no tiene arcén.",
         "circula correctamente."
       ],
+      "correcta": 2,
       "imagen": "../img/test_047_p06.jpg"
     },
     {
-      "texto": "Los ciclomotores, ¿ipueden circular por el arcen en columna de a dos?",
+      "texto": "Los ciclomotores, ¿pueden circular por el arcén en columna de a dos?",
       "opciones": [
         "No.",
-        "Si,de forma excepcional cuando el arcen sea transitable y suficiente.",
-        "Si, siempre."
-      ]
+        "Sí, de forma excepcional cuando el arcén sea transitable y suficiente.",
+        "Sí, siempre."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "La Organizacion Mundial de la Salud (oMs) considera que la siniestralidad vial...",
+      "texto": "La Organización Mundial de la Salud (OMS) considera que la siniestralidad vial...",
       "opciones": [
-        "no es un problema de salud publica sino de educacion, unicamente.",
-        "es un problema secundario de salud publica.",
-        "es un problema prioritario de salud publica en todo el mundo."
-      ]
+        "no es un problema de salud pública sino de educación, únicamente.",
+        "es un problema secundario de salud pública.",
+        "es un problema prioritario de salud pública en todo el mundo."
+      ],
+      "correcta": 2
     },
     {
       "texto": "La tasa de alcoholemia realmente segura para conducir es...",
       "opciones": [
-        "o,o gramos de alcohol por litro de sangre.",
+        "0,0 gramos de alcohol por litro de sangre.",
         "0,10 gramos de alcohol por litro de sangre.",
         "0,15 gramos de alcohol por litro de sangre."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "La senal prohibe circular a mas de 40 km/h. ¿Hasta donde esta prohibido?",
+      "texto": "La señal prohíbe circular a más de 40 km/h. ¿Hasta dónde está prohibido?",
       "opciones": [
-        "Hasta que encuentre una senal de fin de prohibido adelantar.",
+        "Hasta que encuentre una señal de fin de prohibido adelantar.",
         "Hasta que finalice el tramo de curvas.",
-        "Hasta quefinalice la linea longitudinal continua."
+        "Hasta que finalice la línea longitudinal continua."
       ],
+      "correcta": 1,
       "imagen": "../img/test_047_p10.jpg"
     },
     {
-      "texto": "Esta senal indica...",
+      "texto": "Esta señal indica...",
       "opciones": [
-        "peligro por la proximidad de una interseccion con prioridad sobre la via a la izquierda.",
+        "peligro por la proximidad de una intersección con prioridad sobre la vía a la izquierda.",
         "prohibido girar a la izquierda, debiendo continuar de frente.",
-        "la existencia a la izquierda de una via sin salida."
+        "la existencia a la izquierda de una vía sin salida."
       ],
+      "correcta": 2,
       "imagen": "../img/test_047_p11.jpg"
     },
     {
-      "texto": "En los pasos para peatones no regulados por semaforo o agente, ¿ztienen preferencia los peatones?",
+      "texto": "En los pasos para peatones no regulados por semáforo o agente, ¿tienen preferencia los peatones?",
       "opciones": [
-        "No,aunquepor cortesia selespuedecederel paso.",
-        "Si,encualquiercaso.",
-        "Si,solamenteenviasurbanas."
+        "No, aunque por cortesía se les puede ceder el paso.",
+        "Sí, en cualquier caso.",
+        "Sí, solamente en vías urbanas."
       ],
+      "correcta": 1,
       "imagen": "../img/test_047_p12.jpg"
     },
     {
       "texto": "¿Qué indica este agente?",
       "opciones": [
-        "Indica que a partir de su paso, la calzada queda de nuevo abierta al trafico.",
-        "Indica al resto de los conductores yusuarios la necesidad de extremar la precaucion.",
-        "Indica que la calzada por la que circula queda temporalmente cerrada al trafico."
+        "Indica que a partir de su paso, la calzada queda de nuevo abierta al tráfico.",
+        "Indica al resto de los conductores y usuarios la necesidad de extremar la precaución.",
+        "Indica que la calzada por la que circula queda temporalmente cerrada al tráfico."
       ],
+      "correcta": 2,
       "imagen": "../img/test_047_p13.jpg"
     },
     {
-      "texto": "¿Como debe colocar el navegador GPS portatil en el vehiculo?",
+      "texto": "¿Cómo debe colocar el navegador GPS portátil en el vehículo?",
       "opciones": [
-        "Donde no entorpezca ni la vision ni el despliegue del airbag.",
+        "Donde no entorpezca ni la visión ni el despliegue del airbag.",
         "Debajo del volante, tan cerca del suelo como sea posible.",
-        "Justo detras del volante, a la altura de los ojos del conductor."
+        "Justo detrás del volante, a la altura de los ojos del conductor."
       ],
+      "correcta": 0,
       "imagen": "../img/test_047_p14.jpg"
     },
     {
-      "texto": "Los cinturones de seguridad, ¿ison eficaces para prevenir lesiones?",
+      "texto": "Los cinturones de seguridad, ¿son eficaces para prevenir lesiones?",
       "opciones": [
-        "Si.",
+        "Sí.",
         "No.",
-        "Si,pero solo cuando seconduce a pocavelocidad."
+        "Sí, pero solo cuando se conduce a poca velocidad."
       ],
+      "correcta": 0,
       "imagen": "../img/test_047_p15.jpg"
     },
     {
-      "texto": "En un tuinel, si circula sin intencion de adelantar, debe mantener con el vehiculo que circula delante una distancia...",
+      "texto": "En un túnel, si circula sin intención de adelantar, debe mantener con el vehículo que circula delante una distancia...",
       "opciones": [
-        "que permita al que circule detras adelantar con seguridad.",
-        "de,almenos,100metros.",
-        "suficientepara no colisionar con el en casode frenado brusco."
+        "que permita al que circule detrás adelantar con seguridad.",
+        "de, al menos, 100 metros.",
+        "suficiente para no colisionar con él en caso de frenado brusco."
       ],
+      "correcta": 1,
       "imagen": "../img/test_047_p16.jpg"
     },
     {
-      "texto": "Cuando se estropea el tubo de escape, ¿ique sucede?",
+      "texto": "Cuando se estropea el tubo de escape, ¿qué sucede?",
       "opciones": [
-        "Elvehiculohacemasruido.",
+        "El vehículo hace más ruido.",
         "Disminuye el ruido.",
-        "El vehiculo consumemas combustible."
+        "El vehículo consume más combustible."
       ],
+      "correcta": 0,
       "imagen": "../img/test_047_p17.jpg"
     },
     {
-      "texto": "Cuando para realizar un cambio de sentido obstaculiza la marcha de los vehiculos que circulan detras, debera...",
+      "texto": "Cuando para realizar un cambio de sentido obstaculiza la marcha de los vehículos que circulan detrás, deberá...",
       "opciones": [
         "abstenerse de realizarlo y continuar su marcha.",
-        "salir dela calzada porla derecha,y esperarhastaquelas condiciones permitan hacerla maniobra.",
-        "hacersenales con la luz de freno para advertir sumaniobra."
+        "salir de la calzada por la derecha, y esperar hasta que las condiciones permitan hacer la maniobra.",
+        "hacer señales con la luz de freno para advertir su maniobra."
       ],
+      "correcta": 1,
       "imagen": "../img/test_047_p18.jpg"
     },
     {
       "texto": "¿Pueden algunas motocicletas llevar sistemas de estabilidad de frenado o airbag?",
       "opciones": [
-        "No,estos sistemas solo estan disponibles para los turismos.",
-        "No, esta prohibido.",
-        "Si,para evitaraccidentesoreducir la gravedad delas lesiones."
-      ]
+        "No, estos sistemas solo están disponibles para los turismos.",
+        "No, está prohibido.",
+        "Sí, para evitar accidentes o reducir la gravedad de las lesiones."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Esta senal indica la velocidad...",
+      "texto": "Esta señal indica la velocidad...",
       "opciones": [
-        "maximapermitida.",
-        "maximaaconsejada.",
-        "minima obligatoria."
+        "máxima permitida.",
+        "máxima aconsejada.",
+        "mínima obligatoria."
       ],
+      "correcta": 1,
       "imagen": "../img/test_047_p20.jpg"
     },
     {
-      "texto": "El turismo blanco sale de una gasolinera para incorporarse a la circulacion, en caso necesario, ¿zcuando tiene que ceder el paso?",
+      "texto": "El turismo blanco sale de una gasolinera para incorporarse a la circulación; en caso necesario, ¿cuándo tiene que ceder el paso?",
       "opciones": [
-        "Cuando se incorporapor la derecha.",
+        "Cuando se incorpora por la derecha.",
         "Cuando se incorpora por la izquierda.",
         "Cuando se incorpore por la derecha o por la izquierda."
       ],
+      "correcta": 2,
       "imagen": "../img/test_047_p21.jpg"
     },
     {
-      "texto": "En esta via con tres calzadas separadas, ¿ipor que calzada debe circular?",
+      "texto": "En esta vía con tres calzadas separadas, ¿por qué calzada debe circular?",
       "opciones": [
         "Solo por la calzada de la derecha.",
-        "Por la calzada de la derecha y por la central cuando haya senales que asime lo permitan.",
-        "Soloporlacalzadacentral."
+        "Por la calzada de la derecha y por la central cuando haya señales que así me lo permitan.",
+        "Solo por la calzada central."
       ],
+      "correcta": 1,
       "imagen": "../img/test_047_p22.jpg"
     },
     {
-      "texto": "En via urbana, las personas que empujen un ciclomotor por la calzada o el arcen estan obligadas a circular...",
+      "texto": "En vía urbana, las personas que empujen un ciclomotor por la calzada o el arcén están obligadas a circular...",
       "opciones": [
         "por el lado derecho.",
         "indistintamente, por cualquiera de los dos lados.",
         "por el lado izquierdo."
-      ]
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Esta senal indica...",
+      "texto": "Esta señal indica...",
       "opciones": [
         "la proximidad de un cambio de sentido.",
-        "quelaproximasalidaestaa300metros.",
-        "laproximidad de una salida en carretera convencional."
+        "que la próxima salida está a 300 metros.",
+        "la proximidad de una salida en carretera convencional."
       ],
+      "correcta": 1,
       "imagen": "../img/test_047_p24.jpg"
     },
     {
-      "texto": "Cuando el titular de un permiso de conducir pierda parte de su asignacion total de puntos, ¿ipuede recuperarlos?",
+      "texto": "Cuando el titular de un permiso de conducir pierda parte de su asignación total de puntos, ¿puede recuperarlos?",
       "opciones": [
         "No, una vez perdidos no es posible recuperarlos.",
-        "Si, obteniendo de nuevo el permiso de conduccion.",
-        "Si, realizando un curso de sensibilizacion y reeducacion vial."
-      ]
+        "Sí, obteniendo de nuevo el permiso de conducción.",
+        "Sí, realizando un curso de sensibilización y reeducación vial."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "La velocidad del vehiculo se puede reducir...",
+      "texto": "La velocidad del vehículo se puede reducir...",
       "opciones": [
         "solo con el motor.",
-        "con los frenosy con el motor.",
+        "con los frenos y con el motor.",
         "solo con los frenos."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Los medicamentos naturales, ¿ipueden tener efectos negativos para la conduccion?",
+      "texto": "Los medicamentos naturales, ¿pueden tener efectos negativos para la conducción?",
       "opciones": [
-        "Si, todos.",
-        "Si, en algunos casos.",
-        "No,son siempre inofensivos."
+        "Sí, todos.",
+        "Sí, en algunos casos.",
+        "No, son siempre inofensivos."
       ],
+      "correcta": 1,
       "imagen": "../img/test_047_p27.jpg"
     },
     {
-      "texto": "Un vehiculo especial que carece de senalizacion de frenado no debe rebasar la velocidad maxima de...",
+      "texto": "Un vehículo especial que carece de señalización de frenado no debe rebasar la velocidad máxima de...",
       "opciones": [
         "70 km/h.",
         "40 km/h.",
         "25 km/h."
       ],
+      "correcta": 2,
       "imagen": "../img/test_047_p28.jpg"
     },
     {
-      "texto": "Si estaciona en una travesia insuficientemente iluminada, ¿ique luces debe dejar encendidas?",
+      "texto": "Si estaciona en una travesía insuficientemente iluminada, ¿qué luces debe dejar encendidas?",
       "opciones": [
-        "Las deposicion y las de corto alcance.",
+        "Las de posición y las de corto alcance.",
         "Ninguna.",
-        "Las de posicion,pudiendo sustituirlas por las deestacionamiento si el vehiculo esta estacionado en linea."
-      ]
+        "Las de posición, pudiendo sustituirlas por las de estacionamiento si el vehículo está estacionado en línea."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Una linea discontinua con trazos muy juntos, ¿ique indica?",
+      "texto": "Una línea discontinua con trazos muy juntos, ¿qué indica?",
       "opciones": [
-        "La proximidad de un carril para trafico lento.",
+        "La proximidad de un carril para tráfico lento.",
         "La proximidad de un tramo peligroso.",
         "Un carril especial."
       ],
+      "correcta": 1,
       "imagen": "../img/test_047_p30.jpg"
     }
   ]

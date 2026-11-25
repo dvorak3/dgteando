@@ -1,265 +1,295 @@
 {
   "test_id": 50,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "Desde un vehiculo policial un agente hace senales al vehiculo que circula delante para que se detenga, ¿ique debe hacer su conductor?",
+      "texto": "Desde un vehículo policial un agente hace señales al vehículo que circula delante para que se detenga, ¿qué debe hacer su conductor?",
       "opciones": [
-        "Inmovilizar su vehiculo inmediatamente.",
-        "Senalizar la inmovilizacion con las luces de emergencia y detener el vehiculo inmediatamente.",
-        "Detenerse y permanecer en el interior del vehiculo."
+        "Inmovilizar su vehículo inmediatamente.",
+        "Señalizar la inmovilización con las luces de emergencia y detener el vehículo inmediatamente.",
+        "Detenerse y permanecer en el interior del vehículo."
       ],
+      "correcta": 2,
       "imagen": "../img/test_050_p01.jpg"
     },
     {
-      "texto": "Cuando se circula marcha atras para estacionar...",
+      "texto": "Cuando se circula marcha atrás para estacionar...",
       "opciones": [
-        "debe conectar la senal de emergencia.",
-        "no esta permitido recorrer mas de 15 metros ni invadir un cruce de vias.",
-        "la maniobra no puededurarmas de15 segundos."
-      ]
+        "debe conectar la señal de emergencia.",
+        "no está permitido recorrer más de 15 metros ni invadir un cruce de vías.",
+        "la maniobra no puede durar más de 15 segundos."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "Cual es la tasa maxima de alcohol permitida para poder conducir cualquier vehiculo, ¿con caracter general?",
+      "texto": "¿Cuál es la tasa máxima de alcohol permitida para poder conducir cualquier vehículo, con carácter general?",
       "opciones": [
         "0,10 miligramos de alcohol por litro de aire espirado.",
         "0,50 miligramos de alcohol por litro de aire espirado.",
         "0,25 miligramos de alcohol por litro de aire espirado."
-      ]
-    },
-    {
-      "texto": "Cuando llueve, ¿zhay que prestar especial atencion a alguna zona de la via en particular?",
-      "opciones": [
-        "Si, a los badenes yalas zonas en las que sepueden producir charcos.",
-        "No,puestoque circular con lluvia es muypeligroso en todas partes.",
-        "No,unicamente hay queprestar atencion cuandohayninos en las proximidades."
-      ]
-    },
-    {
-      "texto": "Con el permiso B, ¿zesta permitido conducir un taxi?",
-      "opciones": [
-        "En vias urbanas si, en vias interurbanas no.",
-        "Si, en todo tipo de vias.",
-        "No,es necesario el permiso dela clase C1."
       ],
+      "correcta": 2
+    },
+    {
+      "texto": "Cuando llueve, ¿hay que prestar especial atención a alguna zona de la vía en particular?",
+      "opciones": [
+        "Sí, a los badenes y a las zonas en las que se pueden producir charcos.",
+        "No, puesto que circular con lluvia es muy peligroso en todas partes.",
+        "No, únicamente hay que prestar atención cuando hay niños en las proximidades."
+      ],
+      "correcta": 0
+    },
+    {
+      "texto": "Con el permiso B, ¿está permitido conducir un taxi?",
+      "opciones": [
+        "En vías urbanas sí, en vías interurbanas no.",
+        "Sí, en todo tipo de vías.",
+        "No, es necesario el permiso de la clase C1."
+      ],
+      "correcta": 1,
       "imagen": "../img/test_050_p05.jpg"
     },
     {
-      "texto": "¿Que circunstancias favorecen la aparicion de la fatiga?",
+      "texto": "¿Qué circunstancias favorecen la aparición de la fatiga?",
       "opciones": [
-        "Que el recorrido sea por una via muy conocida.",
-        "Conducir con pocotrafico,porqueexigemayor concentracion.",
-        "Mantener en el interior del vehiculo una temperatura elevada,porque puede afectar al estado psicofisico."
-      ]
+        "Que el recorrido sea por una vía muy conocida.",
+        "Conducir con poco tráfico, porque exige mayor concentración.",
+        "Mantener en el interior del vehículo una temperatura elevada, porque puede afectar al estado psicofísico."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "¿Que debe hacer si durante la marcha su vehiculo no puede alcanzar la velocidad minima exigida y existe peligro de alcance?",
+      "texto": "¿Qué debe hacer si durante la marcha su vehículo no puede alcanzar la velocidad mínima exigida y existe peligro de alcance?",
       "opciones": [
-        "Utilizar la senal de emergencia.",
+        "Utilizar la señal de emergencia.",
         "Pisar de forma intermitente el freno para advertir con las luces de frenado que va a reducir la marcha.",
         "Realizar destellos con las luces de largo alcance."
       ],
+      "correcta": 0,
       "imagen": "../img/test_050_p07.jpg"
     },
     {
-      "texto": "En un carril bus, ¿iesta permitido realizar una parada?",
+      "texto": "En un carril bus, ¿está permitido realizar una parada?",
       "opciones": [
         "No.",
-        "Si, si no entorpezco el paso deautobuses ytaxis.",
-        "Si, en todo caso."
+        "Sí, si no entorpezco el paso de autobuses y taxis.",
+        "Sí, en todo caso."
       ],
+      "correcta": 0,
       "imagen": "../img/test_050_p08.jpg"
     },
     {
-      "texto": "¿Que debe hacer si esta en estado de estres?",
+      "texto": "¿Qué debe hacer si está en estado de estrés?",
       "opciones": [
-        "Tomarunansioliticoantesdeconducir.",
-        "Tomarunestimulante.",
+        "Tomar un ansiolítico antes de conducir.",
+        "Tomar un estimulante.",
         "Evitar conducir."
       ],
+      "correcta": 2,
       "imagen": "../img/test_050_p09.jpg"
     },
     {
-      "texto": "La senal, ¿zque indica?",
+      "texto": "La señal, ¿qué indica?",
       "opciones": [
         "Peligro por hielo o nieve.",
-        "Peligro por hielo unicamente.",
-        "Peligro por nieve unicamente."
+        "Peligro por hielo únicamente.",
+        "Peligro por nieve únicamente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_050_p10.jpg"
     },
     {
-      "texto": "Los accidentes debidos al sueno, ¿isuceden tambien durante el dia?",
+      "texto": "Los accidentes debidos al sueño, ¿suceden también durante el día?",
       "opciones": [
-        "Si.",
-        "No,solosucedenpor lasnoches.",
-        "Si,pero unicamente a las primeras horasde la tarde."
+        "Sí.",
+        "No, solo suceden por las noches.",
+        "Sí, pero únicamente a las primeras horas de la tarde."
       ],
+      "correcta": 0,
       "imagen": "../img/test_050_p11.jpg"
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Una salida en autopista o autovia.",
-        "Una zona defrenado de emergencia.",
-        "Unazonapararealizaracampadas."
+        "Una salida en autopista o autovía.",
+        "Una zona de frenado de emergencia.",
+        "Una zona para realizar acampadas."
       ],
+      "correcta": 1,
       "imagen": "../img/test_050_p12.jpg"
     },
     {
-      "texto": "Acompanara las victimas de un accidente, ¿ies importante?",
+      "texto": "Acompañar a las víctimas de un accidente, ¿es importante?",
       "opciones": [
         "No, si su estado no reviste gravedad.",
         "No, es preferible dejarlas solas.",
-        "Si,para transmitirles tranquilidad"
+        "Sí, para transmitirles tranquilidad."
       ],
+      "correcta": 2,
       "imagen": "../img/test_050_p13.jpg"
     },
     {
-      "texto": "En un tunel con un carril para cada sentido de circulacion, ¿zesta permitido adelantar?",
+      "texto": "En un túnel con un carril para cada sentido de circulación, ¿está permitido adelantar?",
       "opciones": [
-        "Si, cuando no haya senales quelo prohiban.",
+        "Sí, cuando no haya señales que lo prohíban.",
         "No.",
-        "Si, si hay suficiente visibilidad."
+        "Sí, si hay suficiente visibilidad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_050_p14.jpg"
     },
     {
-      "texto": "Un vehiculo de dos ruedas provisto de un motor de combustion interna podra ser catalogado como motocicleta siempre que ...",
+      "texto": "Un vehículo de dos ruedas provisto de un motor de combustión interna podrá ser catalogado como motocicleta siempre que...",
       "opciones": [
         "disponga de al menos dos plazas, incluida la del conductor.",
-        "pueda alcanzaruna velocidad maxima superiora 40km/h.",
-        "su cilindrada sea superior a 50 centimetros cubicos."
-      ]
+        "pueda alcanzar una velocidad máxima superior a 40 km/h.",
+        "su cilindrada sea superior a 50 centímetros cúbicos."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "La senal prohibe...",
+      "texto": "La señal prohíbe...",
       "opciones": [
         "girar a la derecha.",
-        "cambiar el sentidodela marcha.",
+        "cambiar el sentido de la marcha.",
         "girar a la izquierda."
       ],
+      "correcta": 1,
       "imagen": "../img/test_050_p16.jpg"
     },
     {
-      "texto": "En un vehiculo con motor diesel, una vez arrancado el motor es conveniente...",
+      "texto": "En un vehículo con motor diésel, una vez arrancado el motor es conveniente...",
       "opciones": [
-        "acelerar enpunto muertopara que el motor se caliente.",
+        "acelerar en punto muerto para que el motor se caliente.",
         "esperar unos segundos antes de iniciar la marcha.",
-        "iniciar lamarcha inmediatamente."
-      ]
+        "iniciar la marcha inmediatamente."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "La tasa maxima de alcoholemia permitida en aire espirado en los conductores durante el segundo ano de su primer permiso es de...",
+      "texto": "La tasa máxima de alcoholemia permitida en aire espirado en los conductores durante el segundo año de su primer permiso es de...",
       "opciones": [
-        "0,25miligramosporlitro.",
+        "0,25 miligramos por litro.",
         "0,20 miligramos por litro.",
         "0,15 miligramos por litro."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "El riesgo de accidente cuando se usa el telefono movil es...",
+      "texto": "El riesgo de accidente cuando se usa el teléfono móvil es...",
       "opciones": [
         "igual que si no se utiliza.",
-        "casi inexistente cuando seusa manos libres porque no hayperdidade concentracion.",
+        "casi inexistente cuando se usa manos libres porque no hay pérdida de concentración.",
         "mayor que si no se utiliza."
       ],
+      "correcta": 2,
       "imagen": "../img/test_050_p19.jpg"
     },
     {
-      "texto": "Las personas mayores suelen tener mas accidentes...",
+      "texto": "Las personas mayores suelen tener más accidentes...",
       "opciones": [
-        "cuando van acompanando a ninos.",
-        "cuandovan solas.",
-        "cuandovanacompanadasporotrosadultos."
+        "cuando van acompañando a niños.",
+        "cuando van solas.",
+        "cuando van acompañadas por otros adultos."
       ],
+      "correcta": 1,
       "imagen": "../img/test_050_p20.jpg"
     },
     {
-      "texto": "Si circula de noche por una via urbana, ¿ique alumbrado debe utilizar?",
+      "texto": "Si circula de noche por una vía urbana, ¿qué alumbrado debe utilizar?",
       "opciones": [
         "El de largo alcance.",
-        "Solo el de posicion.",
+        "Solo el de posición.",
         "El de corto alcance."
       ],
+      "correcta": 2,
       "imagen": "../img/test_050_p21.jpg"
     },
     {
-      "texto": "El lavaparabrisas del vehiculo...",
+      "texto": "El lavaparabrisas del vehículo...",
       "opciones": [
-        "necesita que se vigile el nivel de agua de su propio deposito.",
-        "necesita que se vigile el nivel del circuito de refrigeracion de donde toma el agua.",
-        "nonecesita ningunmantenimiento."
+        "necesita que se vigile el nivel de agua de su propio depósito.",
+        "necesita que se vigile el nivel del circuito de refrigeración de donde toma el agua.",
+        "no necesita ningún mantenimiento."
       ],
+      "correcta": 0,
       "imagen": "../img/test_050_p22.jpg"
     },
     {
-      "texto": "Esta prohibido parar...",
+      "texto": "Está prohibido parar...",
       "opciones": [
-        "donde se ocasione riesgo u obstaculo a la circulacion.",
-        "enlas proximidades delos pasos para peatones.",
-        "enlas proximidades delas intersecciones."
+        "donde se ocasione riesgo u obstáculo a la circulación.",
+        "en las proximidades de los pasos para peatones.",
+        "en las proximidades de las intersecciones."
       ],
+      "correcta": 0,
       "imagen": "../img/test_050_p23.jpg"
     },
     {
-      "texto": "Si padece una enfermedad cronica, ¿idebe adoptar alguna precaucion?",
+      "texto": "Si padece una enfermedad crónica, ¿debe adoptar alguna precaución?",
       "opciones": [
-        "Si, no debe conducir.",
-        "No,cuandotomalamedicacionadecuada.",
-        "Si, preguntar al medico si tiene efectos sobre la conduccion y seguir su consejo."
-      ]
+        "Sí, no debe conducir.",
+        "No, cuando toma la medicación adecuada.",
+        "Sí, preguntar al médico si tiene efectos sobre la conducción y seguir su consejo."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Las lesiones mas graves en los ciclistas, cuando son victimas de un atropello, se localizan en...",
+      "texto": "Las lesiones más graves en los ciclistas, cuando son víctimas de un atropello, se localizan en...",
       "opciones": [
         "todo el cuerpo.",
         "la cabeza.",
         "las extremidades."
       ],
+      "correcta": 1,
       "imagen": "../img/test_050_p25.jpg"
     },
     {
-      "texto": "Las tecnicas de conduccion eficiente, ¿iaumentan la seguridad vial?",
+      "texto": "Las técnicas de conducción eficiente, ¿aumentan la seguridad vial?",
       "opciones": [
-        "No, unicamentereducen la contaminacion ambiental.",
-        "No, solo mejoran el confort de la conduccion."
-      ]
+        "No, únicamente reducen la contaminación ambiental.",
+        "No, solo mejoran el confort de la conducción."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "Encender el intermitente, ¿zda preferencia siempre para hacer maniobras?",
+      "texto": "Encender el intermitente, ¿da preferencia siempre para hacer maniobras?",
       "opciones": [
-        "Si,perodebohacer la maniobra rapidamente.",
+        "Sí, pero debo hacer la maniobra rápidamente.",
         "No.",
-        "Si, porque he avisado."
+        "Sí, porque he avisado."
       ],
+      "correcta": 1,
       "imagen": "../img/test_050_p27.jpg"
     },
     {
-      "texto": "En una zona senalizada para carga y descarga, ¿iesta permitido estacionar como norma general?",
+      "texto": "En una zona señalizada para carga y descarga, ¿está permitido estacionar como norma general?",
       "opciones": [
-        "Si,encualquiercaso.",
-        "Si, siempre que permanezca dentro vehiculo.",
+        "Sí, en cualquier caso.",
+        "Sí, siempre que permanezca dentro del vehículo.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_050_p28.jpg"
     },
     {
-      "texto": "Si existen semaforos con indicaciones distintas a la derecha y a la izquierda, ¿ia cual obedeceran los que pretendan seguirde frente?",
+      "texto": "Si existen semáforos con indicaciones distintas a la derecha y a la izquierda, ¿a cuál obedecerán los que pretendan seguir de frente?",
       "opciones": [
         "Al situado inmediatamente a su izquierda.",
         "Al situado a su derecha.",
-        "Al que se encuentre mas cerca del vehiculo."
+        "Al que se encuentre más cerca del vehículo."
       ],
+      "correcta": 0,
       "imagen": "../img/test_050_p29.jpg"
     },
     {
-      "texto": "Fuera de poblado donde no exista zona peatonal, ¿zpor donde estan obligados a circular los peatones como norma general?",
+      "texto": "Fuera de poblado donde no exista zona peatonal, ¿por dónde están obligados a circular los peatones como norma general?",
       "opciones": [
         "Es indiferente.",
         "Por su derecha.",
         "Por su izquierda."
       ],
+      "correcta": 2,
       "imagen": "../img/test_050_p30.jpg"
     }
   ]

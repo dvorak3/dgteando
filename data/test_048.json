@@ -1,268 +1,298 @@
 {
   "test_id": 48,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En los accidentes de motocicletas, ¿ique tipo es el mas frecuente?",
+      "texto": "En los accidentes de motocicletas, ¿qué tipo es el más frecuente?",
       "opciones": [
-        "Salida de la via.",
-        "Colision con otro vehiculo.",
+        "Salida de la vía.",
+        "Colisión con otro vehículo.",
         "Atropello."
       ],
+      "correcta": 1,
       "imagen": "../img/test_048_p01.jpg"
     },
     {
-      "texto": "Es obligatorio que las obras que dificulten la circulacion esten senalizadas...",
+      "texto": "Es obligatorio que las obras que dificulten la circulación estén señalizadas...",
       "opciones": [
-        "tanto dedia como de noche.",
+        "tanto de día como de noche.",
         "solo de noche.",
-        "solo de dia."
+        "solo de día."
       ],
+      "correcta": 0,
       "imagen": "../img/test_048_p02.jpg"
     },
     {
-      "texto": "Circular por una via con mucho trafico...",
+      "texto": "Circular por una vía con mucho tráfico...",
       "opciones": [
-        "favorece la aparicion dela fatiga.",
-        "retrasa la aparicion de la fatiga.",
+        "favorece la aparición de la fatiga.",
+        "retrasa la aparición de la fatiga.",
         "no es una circunstancia que afecte a la fatiga."
       ],
+      "correcta": 0,
       "imagen": "../img/test_048_p03.jpg"
     },
     {
-      "texto": "¿Debe moversea los heridos?",
+      "texto": "¿Debe moverse a los heridos?",
       "opciones": [
-        "No, salvo que sea imprescindiblepor su seguridad.",
-        "No, en ningun caso.",
-        "Si,cuandosus lesiones no songraves."
-      ]
+        "No, salvo que sea imprescindible por su seguridad.",
+        "No, en ningún caso.",
+        "Sí, cuando sus lesiones no son graves."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "¿Esta permitido advertir con el brazo que va a efectuar una maniobra?",
+      "texto": "¿Está permitido advertir con el brazo que va a efectuar una maniobra?",
       "opciones": [
         "No, porque no se deben sacar los brazos fuera del turismo.",
-        "No, debe advertirlo tambien con los intermitentes.",
-        "Si, cuando la senal sea perceptible para los demas usuarios."
+        "No, debe advertirlo también con los intermitentes.",
+        "Sí, cuando la señal sea perceptible para los demás usuarios."
       ],
+      "correcta": 2,
       "imagen": "../img/test_048_p05.jpg"
     },
     {
       "texto": "Cuando un conductor circula a velocidad adecuada...",
       "opciones": [
-        "hace que la circulacion sea lenta y peligrosa.",
-        "estorbaaotrosconductoresypuedecausarunaccidente.",
-        "puede detectar las intenciones de otros usuarios y reaccionar a tiempo para evitarun accidente."
-      ]
+        "hace que la circulación sea lenta y peligrosa.",
+        "estorba a otros conductores y puede causar un accidente.",
+        "puede detectar las intenciones de otros usuarios y reaccionar a tiempo para evitar un accidente."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Este panel, debajo de una senal vertical...",
+      "texto": "Este panel, debajo de una señal vertical...",
       "opciones": [
-        "adviertede lapresencia deuna senalizacion.",
-        "es complementario de la senal vertical e indica niebla.",
-        "advierte al conductor de condiciones adversas como nieve, niebla olluvia."
+        "advierte de la presencia de una señalización.",
+        "es complementario de la señal vertical e indica niebla.",
+        "advierte al conductor de condiciones adversas como nieve, niebla o lluvia."
       ],
+      "correcta": 1,
       "imagen": "../img/test_048_p07.jpg"
     },
     {
-      "texto": "Los paneles direccionales, ¿ique indican?",
+      "texto": "Los paneles direccionales, ¿qué indican?",
       "opciones": [
-        "Prohiben el paso e informan del sentido de la circulacion.",
-        "Queesuncarrilreversible.",
-        "Que la calzada esta cerrada permanentemente."
+        "Prohíben el paso e informan del sentido de la circulación.",
+        "Que es un carril reversible.",
+        "Que la calzada está cerrada permanentemente."
       ],
+      "correcta": 0,
       "imagen": "../img/test_048_p08.jpg"
     },
     {
-      "texto": "Si se encuentra un motorista accidentado, ¿zdebe quitarle el casco?",
+      "texto": "Si se encuentra un motorista accidentado, ¿debe quitarle el casco?",
       "opciones": [
-        "Si, se ledebe quitar lo antes posible para evitar que se asfixie.",
-        "Si, siempre que el herido este consciente.",
+        "Sí, se le debe quitar lo antes posible para evitar que se asfixie.",
+        "Sí, siempre que el herido esté consciente.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_048_p09.jpg"
     },
     {
       "texto": "Si circulando se le pincha una rueda debe...",
       "opciones": [
-        "abandonar inmediatamente el vehiculo,cualquiera que sea el lugar en que se encuentre.",
-        "inmovilizar rapidamente el vehiculo fuera de la calzada, o en lugar seguro.",
-        "continuar el viajehasta el tallermasproximo."
+        "abandonar inmediatamente el vehículo, cualquiera que sea el lugar en que se encuentre.",
+        "inmovilizar rápidamente el vehículo fuera de la calzada, o en lugar seguro.",
+        "continuar el viaje hasta el taller más próximo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_048_p10.jpg"
     },
     {
-      "texto": "¿Podra ser utilizado normalmente un carril VAo por un ciclomotor ocupado por dos personas?",
+      "texto": "¿Podrá ser utilizado normalmente un carril VAO por un ciclomotor ocupado por dos personas?",
       "opciones": [
         "No.",
-        "Si,porquevandospersonas.",
-        "Si, si circula por el arcen."
-      ]
+        "Sí, porque van dos personas.",
+        "Sí, si circula por el arcén."
+      ],
+      "correcta": 0
     },
     {
-      "texto": "En esta via de doble sentido, ¿zdonde se colocara con su turismo para cambiar de direccion a la izquierda?",
+      "texto": "En esta vía de doble sentido, ¿dónde se colocará con su turismo para cambiar de dirección a la izquierda?",
       "opciones": [
-        "Cerca del bordederecho de la calzada.",
-        "Junto al borde izquierdo dela calzada.",
+        "Cerca del borde derecho de la calzada.",
+        "Junto al borde izquierdo de la calzada.",
         "Junto a la marca longitudinal que separa los sentidos."
       ],
+      "correcta": 2,
       "imagen": "../img/test_048_p12.jpg"
     },
     {
-      "texto": "En un tunel, el conductor de una motocicleta, ¿zque distancia debe dejar con el vehiculo de delante en caso de que no pretenda adelantarlo?",
+      "texto": "En un túnel, el conductor de una motocicleta, ¿qué distancia debe dejar con el vehículo de delante en caso de que no pretenda adelantarlo?",
       "opciones": [
         "150 metros.",
         "50 metros.",
         "100 metros."
       ],
+      "correcta": 2,
       "imagen": "../img/test_048_p13.jpg"
     },
     {
       "texto": "¿Puede encender la luz de largo alcance cuando hay niebla de noche?",
       "opciones": [
-        "Si, en sustitucion de la luz antiniebla.",
-        "No, esta prohibido.",
-        "Si, aunque no es recomendableporque puede deslumbrar."
-      ]
+        "Sí, en sustitución de la luz antiniebla.",
+        "No, está prohibido.",
+        "Sí, aunque no es recomendable porque puede deslumbrar."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Un turismo en esta via, ¿ia que velocidad maxima puede adelantar?",
+      "texto": "Un turismo en esta vía, ¿a qué velocidad máxima puede adelantar?",
       "opciones": [
-        "A 90 km/h",
+        "A 90 km/h.",
         "A 110 km/h.",
         "A 120 km/h."
       ],
+      "correcta": 0,
       "imagen": "../img/test_048_p15.jpg"
     },
     {
-      "texto": "Para auxiliar a un herido en accidente de circulacion. ¿Que debe hacer?",
+      "texto": "Para auxiliar a un herido en accidente de circulación, ¿qué debe hacer?",
       "opciones": [
-        "Pedir ayuda y controlar su respiracion.",
+        "Pedir ayuda y controlar su respiración.",
         "Pedir ayuda cuando sea necesaria y sentar al herido.",
         "Pedir ayuda y dar al herido una bebida para animarle."
       ],
+      "correcta": 0,
       "imagen": "../img/test_048_p16.jpg"
     },
     {
-      "texto": "Estaciona su vehiculo en pendiente descendente (en bajada). ¿Que velocidad debe dejar puesta?",
+      "texto": "Estaciona su vehículo en pendiente descendente (en bajada). ¿Qué velocidad debe dejar puesta?",
       "opciones": [
         "Ninguna, el freno de mano solamente.",
-        "La marcha atras.",
+        "La marcha atrás.",
         "La primera velocidad."
       ],
+      "correcta": 1,
       "imagen": "../img/test_048_p17.jpg"
     },
     {
-      "texto": "En esta via urbana, ¿donde hay dos carriles para el mismo sentido icual sera la velocidad maxima a la que podemos circular?",
+      "texto": "En esta vía urbana, donde hay dos carriles para el mismo sentido, ¿cuál será la velocidad máxima a la que podemos circular?",
       "opciones": [
         "A 30 km/h.",
         "A 50 km/h.",
         "A 20 km/h."
       ],
+      "correcta": 1,
       "imagen": "../img/test_048_p18.jpg"
     },
     {
-      "texto": "Un conductor novel, ¿zque tasa maxima de alcoholemia tiene permitida en aire espirado para circular?",
+      "texto": "Un conductor novel, ¿qué tasa máxima de alcoholemia tiene permitida en aire espirado para circular?",
       "opciones": [
         "0,50 miligramos por litro.",
         "0,25 miligramos por litro.",
         "0,15 miligramos por litro."
-      ]
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Un vehiculo no prioritario que circule en servicio de urgencia, ¿ztiene permitido utilizar las senales acusticas?",
+      "texto": "Un vehículo no prioritario que circule en servicio de urgencia, ¿tiene permitido utilizar las señales acústicas?",
       "opciones": [
-        "Si,perounicamenteenpoblado",
-        "Si,para avisar de su presencia a los demas usuarios.",
-        "No, solo puede utilizar la senalizacion optica."
+        "Sí, pero únicamente en poblado.",
+        "Sí, para avisar de su presencia a los demás usuarios.",
+        "No, solo puede utilizar la señalización óptica."
       ],
+      "correcta": 1,
       "imagen": "../img/test_048_p20.jpg"
     },
     {
-      "texto": "El enorme impacto economico de los accidentes de trafico..",
+      "texto": "El enorme impacto económico de los accidentes de tráfico...",
       "opciones": [
         "nos afecta a todos.",
         "afecta solo a los conductores.",
-        "afecta solo a los propietarios de vehiculos."
+        "afecta solo a los propietarios de vehículos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_048_p21.jpg"
     },
     {
-      "texto": "Si el equipaje disminuye la visibilidad por el espejo interior, ¿za que esta obligado?",
+      "texto": "Si el equipaje disminuye la visibilidad por el espejo interior, ¿a qué está obligado?",
       "opciones": [
-        "En ningun caso la carga puede disminuir la visibilidad.",
+        "En ningún caso la carga puede disminuir la visibilidad.",
         "A tener instalados el espejo retrovisor interior y el exterior izquierdo.",
-        "A tener instalados dos espejos retrovisores exteriores, uno a cada lado del vehiculo."
-      ]
+        "A tener instalados dos espejos retrovisores exteriores, uno a cada lado del vehículo."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "Cuando en el interior de un tunel se produce una detencion motivada por una emergencia, es obligatorio...",
+      "texto": "Cuando en el interior de un túnel se produce una detención motivada por una emergencia, es obligatorio...",
       "opciones": [
         "dejar el motor encendido y la llave puesta.",
-        "que todos los ocupantes permanezcan siempre en el vehiculo.",
-        "apagar el motor, conectar la senal de emergencia y mantener encendidas las luces de posicion."
+        "que todos los ocupantes permanezcan siempre en el vehículo.",
+        "apagar el motor, conectar la señal de emergencia y mantener encendidas las luces de posición."
       ],
+      "correcta": 2,
       "imagen": "../img/test_048_p23.jpg"
     },
     {
-      "texto": "¿Es correcto que el conductor de un turismo utilice un cojin en su asiento?",
+      "texto": "¿Es correcto que el conductor de un turismo utilice un cojín en su asiento?",
       "opciones": [
-        "Si, porque la altura mejora el campo de vision del conductor.",
-        "No, porque puede limitar la eficacia del cinturon de seguridad.",
-        "Si,porqueelconductorvamascomodo."
+        "Sí, porque la altura mejora el campo de visión del conductor.",
+        "No, porque puede limitar la eficacia del cinturón de seguridad.",
+        "Sí, porque el conductor va más cómodo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_048_p24.jpg"
     },
     {
-      "texto": "En un paso para peatones, ¿esta permitido cambiar el sentido de la marcha?",
+      "texto": "En un paso para peatones, ¿está permitido cambiar el sentido de la marcha?",
       "opciones": [
         "No, ni siquiera en sus proximidades.",
-        "Si.",
-        "No,perosiensusproximidades."
+        "Sí.",
+        "No, pero sí en sus proximidades."
       ],
+      "correcta": 0,
       "imagen": "../img/test_048_p25.jpg"
     },
     {
-      "texto": "¿Que indica esta senal?",
+      "texto": "¿Qué indica esta señal?",
       "opciones": [
-        "Que el carril de la derecha se desvia hacia ese mismo lado.",
-        "Una bifurcacion hacia la derecha para vehiculos especiales.",
-        "El inicio de un carril reservado para vehiculos lentos."
+        "Que el carril de la derecha se desvía hacia ese mismo lado.",
+        "Una bifurcación hacia la derecha para vehículos especiales.",
+        "El inicio de un carril reservado para vehículos lentos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_048_p26.jpg"
     },
     {
-      "texto": "La senal de la derecha indica...",
+      "texto": "La señal de la derecha indica...",
       "opciones": [
-        "peligro por la proximidad de una via en obras.",
-        "la proximidad de un peligro distinto de los advertidos por otras senales.",
+        "peligro por la proximidad de una vía en obras.",
+        "la proximidad de un peligro distinto de los advertidos por otras señales.",
         "peligro por la proximidad de un estrechamiento de la calzada."
       ],
+      "correcta": 1,
       "imagen": "../img/test_048_p27.jpg"
     },
     {
-      "texto": "Un vehiculo debe llevar la luz de galibo si mide..",
+      "texto": "Un vehículo debe llevar la luz de gálibo si mide...",
       "opciones": [
-        "masde2,10metrosdeancho",
-        "mas de 4 metros de alto.",
-        "2 o masmetros de ancho y 6 o mas metros de largo."
-      ]
+        "más de 2,10 metros de ancho.",
+        "más de 4 metros de alto.",
+        "2 o más metros de ancho y 6 o más metros de largo."
+      ],
+      "correcta": 0
     },
     {
       "texto": "Este agente con los brazos extendidos obliga a detenerse...",
       "opciones": [
-        "unicamentea los conductores de vehiculosque se acerquen por detras.",
-        "a todos los usuarios que se acerquen al agente desde cualquier direccion que corte la indicadaporlos brazos.",
+        "únicamente a los conductores de vehículos que se acerquen por detrás.",
+        "a todos los usuarios que se acerquen al agente desde cualquier dirección que corte la indicada por los brazos.",
         "solo a los conductores que se aproximen de frente."
       ],
+      "correcta": 1,
       "imagen": "../img/test_048_p29.jpg"
     },
     {
-      "texto": "Un turismo, ¿ique documentos debe llevar?",
+      "texto": "Un turismo, ¿qué documentos debe llevar?",
       "opciones": [
-        "El permiso de conduccion y la licencia de conduccion.",
-        "El permiso de circulacion, la tarjeta de inspeccion tecnica y el permiso de conduccion.",
-        "El recibo del impuesto de circulacion y certificado de garantia."
-      ]
+        "El permiso de conducción y la licencia de conducción.",
+        "El permiso de circulación, la tarjeta de inspección técnica y el permiso de conducción.",
+        "El recibo del impuesto de circulacion y certificado de garantía."
+      ],
+      "correcta": 1
     }
   ]
 }

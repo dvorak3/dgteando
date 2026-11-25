@@ -1,145 +1,161 @@
 {
   "test_id": 45,
-  "respuestas_verificadas": false,
+  "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "En las glorietas, ¿iesta prohibido adelantar?",
+      "texto": "En las glorietas, ¿está prohibido adelantar?",
       "opciones": [
-        "Si,porque son intersecciones.",
-        "Si,en vias interurbanas solamente.",
+        "Sí, porque son intersecciones.",
+        "Sí, en vías interurbanas solamente.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_045_p01.jpg"
     },
     {
-      "texto": "En una autopista, ¿zse puede circular por el carril de aceleracion a mayor velocidad que los vehiculos que circulan por el carril normal?",
+      "texto": "En una autopista, ¿se puede circular por el carril de aceleración a mayor velocidad que los vehículos que circulan por el carril normal?",
       "opciones": [
-        "No,se estariarealizando un adelantamientopor la derecha.",
+        "No, se estaría realizando un adelantamiento por la derecha.",
         "No, salvo las motocicletas.",
-        "Si."
+        "Sí."
       ],
+      "correcta": 2,
       "imagen": "../img/test_045_p02.jpg"
     },
     {
-      "texto": "¿Es obligatorio que los conductores de motocicletas lleven guantes de proteccion cuando circulen por vias interurbanas?",
+      "texto": "¿Es obligatorio que los conductores de motocicletas lleven guantes de protección cuando circulen por vías interurbanas?",
       "opciones": [
-        "Si, es obligatorio al circular en vias interurbanas.",
-        "Si, siempre en cualquier tipo de via.",
-        "Soloal circularenvias urbanas."
+        "Sí, es obligatorio al circular en vías interurbanas.",
+        "Sí, siempre en cualquier tipo de vía.",
+        "Solo al circular en vías urbanas."
       ],
+      "correcta": 0,
       "imagen": "../img/test_045_p03.jpg"
     },
     {
       "texto": "Por la noche, la agudeza visual...",
       "opciones": [
         "aumenta.",
-        "no varia.",
+        "no varía.",
         "se reduce."
       ],
+      "correcta": 2,
       "imagen": "../img/test_045_p04.jpg"
     },
     {
-      "texto": "Una de las tecnicas de vision en la conduccion preventiva consiste en...",
+      "texto": "Una de las técnicas de visión en la conducción preventiva consiste en...",
       "opciones": [
         "mirar a lo lejos, a los lados y por los retrovisores.",
-        "instalar espejos panoramicos.",
-        "acostumbrarsealos deslumbramientos."
+        "instalar espejos panorámicos.",
+        "acostumbrarse a los deslumbramientos."
       ],
+      "correcta": 0,
       "imagen": "../img/test_045_p05.jpg"
     },
     {
-      "texto": "Cuando encuentre estas senales, ¿ique debe hacer?",
+      "texto": "Cuando encuentre estas señales, ¿qué debe hacer?",
       "opciones": [
-        "Circular por el lado que indica la flecha,pudiendo pasar por el lado izquierdo si observa que no se aproxima ningun vehiculo en sentido contrario.",
-        "Obedecerlasenalmasrestrictiva.",
-        "Pasar obligatoriamente por el lado que indica la flecha, porque hacia el lado izquierdo la entrada esta prohibida."
+        "Circular por el lado que indica la flecha, pudiendo pasar por el lado izquierdo si observa que no se aproxima ningún vehículo en sentido contrario.",
+        "Obedecer la señal más restrictiva.",
+        "Pasar obligatoriamente por el lado que indica la flecha, porque hacia el lado izquierdo la entrada está prohibida."
       ],
+      "correcta": 2,
       "imagen": "../img/test_045_p06.jpg"
     },
     {
-      "texto": "Este panel con esta senal indica que esta prohibido...",
+      "texto": "Este panel con esta señal indica que está prohibido...",
       "opciones": [
-        "el giroa la derechaatodos losvehiculos.",
-        "quecirculenvehiculos conremolque.",
-        "el giro a la derecha a vehiculos con remolque."
+        "el giro a la derecha a todos los vehículos.",
+        "que circulen vehículos con remolque.",
+        "el giro a la derecha a vehículos con remolque."
       ],
+      "correcta": 2,
       "imagen": "../img/test_045_p07.jpg"
     },
     {
-      "texto": "El conductor de un camion, ¿zesta obligado a llevar un chaleco reflectante en su vehiculo?",
+      "texto": "El conductor de un camión, ¿está obligado a llevar un chaleco reflectante en su vehículo?",
       "opciones": [
         "No.",
-        "Si.",
-        "No,pero lo puede llevar cuando circule por via interurbana."
-      ]
-    },
-    {
-      "texto": "El consumo de alcohol, ¿zfavorece las distracciones en la conduccion?",
-      "opciones": [
-        "No, en ningun caso.",
-        "No,salvo en situaciones detrafico complejas.",
-        "Si."
-      ]
-    },
-    {
-      "texto": "¿En que epocas del ano se producen mas accidentes de circulacion?",
-      "opciones": [
-        "Fuerade losperiodos vacacionales.",
-        "Es indiferente.",
-        "Durante losperiodosdevacaciones."
-      ]
-    },
-    {
-      "texto": "Un turismo quiere cruzar esta zona. ¿Debera ceder el paso?",
-      "opciones": [
-        "Si, a los ciclistas que circulan por el carril bici.",
-        "No, porque el turismo tiene prioridad.",
-        "Si, pero solo si el ciclista no puede frenar a tiempo."
+        "Sí.",
+        "No, pero lo puede llevar cuando circule por vía interurbana."
       ],
+      "correcta": 1
+    },
+    {
+      "texto": "El consumo de alcohol, ¿favorece las distracciones en la conducción?",
+      "opciones": [
+        "No, en ningún caso.",
+        "No, salvo en situaciones de tráfico complejas.",
+        "Sí."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "¿En qué épocas del año se producen más accidentes de circulación?",
+      "opciones": [
+        "Fuera de los períodos vacacionales.",
+        "Es indiferente.",
+        "Durante los períodos de vacaciones."
+      ],
+      "correcta": 2
+    },
+    {
+      "texto": "Un turismo quiere cruzar esta zona. ¿Deberá ceder el paso?",
+      "opciones": [
+        "Sí, a los ciclistas que circulan por el carril bici.",
+        "No, porque el turismo tiene prioridad.",
+        "Sí, pero solo si el ciclista no puede frenar a tiempo."
+      ],
+      "correcta": 0,
       "imagen": "../img/test_045_p11.jpg"
     },
     {
-      "texto": "Debe senalizar toda maniobra que suponga realizar...",
+      "texto": "Debe señalizar toda maniobra que suponga realizar...",
       "opciones": [
-        "desplazamientoslaterales o inmovilizarelvehiculo,unicamente",
-        "un desplazamiento lateral omarcha atras, inmovilizar el vehiculo o frenar la marcha.",
-        "desplazamientoslaterales,unicamente."
-      ]
+        "desplazamientos laterales o inmovilizar el vehículo, únicamente.",
+        "un desplazamiento lateral o marcha atrás, inmovilizar el vehículo o frenar la marcha.",
+        "desplazamientos laterales, únicamente."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En esta interseccion, ¿zque vehiculos estan obligados a detenerse?",
+      "texto": "En esta intersección, ¿qué vehículos están obligados a detenerse?",
       "opciones": [
         "Todos.",
         "El verde y el rojo.",
         "El rojo y el azul."
       ],
+      "correcta": 2,
       "imagen": "../img/test_045_p13.jpg"
     },
     {
-      "texto": "En una via de doble sentido un vehiculo va a girar a la izquierda, ¿idebe facilitar el adelantamientoporladerechaa los demas vehiculos?",
+      "texto": "En una vía de doble sentido un vehículo va a girar a la izquierda, ¿debe facilitar el adelantamiento por la derecha a los demás vehículos?",
       "opciones": [
-        "Si, arrimandose todo lo posible al lado izquierdo de la calzada.",
+        "Sí, arrimándose todo lo posible al lado izquierdo de la calzada.",
         "No, ya que deben adelantar por la izquierda.",
-        "Si, arrimandose a la izquierda de su carril todo lo posible, pero sin obstaculizar a los vehiculos que circulen en sentido contrario."
+        "Sí, arrimándose a la izquierda de su carril todo lo posible, pero sin obstaculizar a los vehículos que circulen en sentido contrario."
       ],
+      "correcta": 2,
       "imagen": "../img/test_045_p14.jpg"
     },
     {
-      "texto": "Al incorporarse a una autopista, los conductores deberan...",
+      "texto": "Al incorporarse a una autopista, los conductores deberán...",
       "opciones": [
         "detenerse siempre al final del carril.",
-        "aumentar la velocidad para incorporarse rapidamente,no siendo obligatorio ceder el b) aumentar la velocidad para incorporarse rapidamente,no siendo obligatorio ceder el paso a los vehiculos que circulen por la autopista.",
-        "tener en cuenta la posicion, trayectoria y velocidad de los vehiculos que puedan aproximarse."
+        "aumentar la velocidad para incorporarse rápidamente, no siendo obligatorio ceder el paso a los vehículos que circulen por la autopista.",
+        "tener en cuenta la posición, trayectoria y velocidad de los vehículos que puedan aproximarse."
       ],
+      "correcta": 2,
       "imagen": "../img/test_045_p15.jpg"
     },
     {
-      "texto": "Si ha cambiado de domicilio, ¿ztiene obligacion de comunicarlo a la Jefatura de Trafico?",
+      "texto": "Si ha cambiado de domicilio, ¿tiene obligación de comunicarlo a la Jefatura de Tráfico?",
       "opciones": [
-        "Si, pero esperare a comunicarlo cuando me caduque la validez del permiso de conduccion.",
+        "Sí, pero esperaré a comunicarlo cuando me caduque la validez del permiso de conducción.",
         "No.",
-        "Si, debo comunicarmi nuevo domicilio en el plazo de 15 dias."
-      ]
+        "Sí, debo comunicar mi nuevo domicilio en el plazo de 15 días."
+      ],
+      "correcta": 2
     },
     {
       "texto": "Para pagar en un puesto de peaje, debe pasar...",
@@ -148,118 +164,132 @@
         "por cualquier carril, indistintamente.",
         "por el carril que indica el aspa roja."
       ],
+      "correcta": 0,
       "imagen": "../img/test_045_p17.jpg"
     },
     {
-      "texto": "Circulando a 100 km/h se rompe el freno de pie. ¿Como se puede detener el vehiculo?",
+      "texto": "Circulando a 100 km/h se rompe el freno de pie. ¿Cómo se puede detener el vehículo?",
       "opciones": [
-        "Con el frenodemano solamente.",
-        "Poniendo velocidades mas cortas y al final con el freno de mano.",
+        "Con el freno de mano solamente.",
+        "Poniendo velocidades más cortas y al final con el freno de mano.",
         "Pisando varias veces el pedal del embrague y el pedal del freno."
       ],
+      "correcta": 1,
       "imagen": "../img/test_045_p18.jpg"
     },
     {
-      "texto": "Para estacionar, ¿icuantos metros puede recorrer marcha atras?",
+      "texto": "Para estacionar, ¿cuántos metros puede recorrer marcha atrás?",
       "opciones": [
-        "Los que sean necesarios, sin limite, en via urbana.",
-        "Losminimos indispensables,ycomomaximo15metros.",
-        "Siempre que no invada un cruce de vias, los que sean necesarios."
+        "Los que sean necesarios, sin límite, en vía urbana.",
+        "Los mínimos indispensables, y como máximo 15 metros.",
+        "Siempre que no invada un cruce de vías, los que sean necesarios."
       ],
+      "correcta": 1,
       "imagen": "../img/test_045_p19.jpg"
     },
     {
-      "texto": "En una autovia hay una persona haciendo autostop, ¿iesta permitido recogerla?",
+      "texto": "En una autovía hay una persona haciendo autostop, ¿está permitido recogerla?",
       "opciones": [
-        "Si.",
-        "Si, siestatransitandoporel arcendela derecha.",
+        "Sí.",
+        "Sí, si está transitando por el arcén de la derecha.",
         "No."
       ],
+      "correcta": 2,
       "imagen": "../img/test_045_p20.jpg"
     },
     {
       "texto": "En un turismo, ¿es obligatorio utilizar los cinturones de seguridad?",
       "opciones": [
-        "Si, excepto para el conductor cuando efectuie una maniobra de marcha atras o de estacionamiento.",
-        "No, cuando el uso del cinturon moleste o reste libertad de movimientos.",
-        "Si,excepto enlostaxis."
+        "Sí, excepto para el conductor cuando efectúe una maniobra de marcha atrás o de estacionamiento.",
+        "No, cuando el uso del cinturón moleste o reste libertad de movimientos.",
+        "Sí, excepto en los taxis."
       ],
+      "correcta": 0,
       "imagen": "../img/test_045_p21.jpg"
     },
     {
-      "texto": "¿Esta permitido adelantar en este cambio de rasante?",
+      "texto": "¿Está permitido adelantar en este cambio de rasante?",
       "opciones": [
         "No, porque es un cambio de rasante de visibilidad reducida.",
-        "Si, en el tiempo mas breve posible.",
-        "Si, porque la linea longitudinal discontinua lo permite."
+        "Sí, en el tiempo más breve posible.",
+        "Sí, porque la línea longitudinal discontinua lo permite."
       ],
+      "correcta": 0,
       "imagen": "../img/test_045_p22.jpg"
     },
     {
-      "texto": "La tasa maxima de alcohol permitida en aire espirado a un conductor novel es...",
+      "texto": "La tasa máxima de alcohol permitida en aire espirado a un conductor novel es...",
       "opciones": [
-        "0,30 miligramos por litro durante los dos primeros anos.",
-        "0,25 miligramos por litro durante el primer anio.",
-        "0,15 miligramos por litro durante los dos primeros anos."
-      ]
+        "0,30 miligramos por litro durante los dos primeros años.",
+        "0,25 miligramos por litro durante el primer año.",
+        "0,15 miligramos por litro durante los dos primeros años."
+      ],
+      "correcta": 2
     },
     {
       "texto": "Los animales pueden circular...",
       "opciones": [
-        "unicamenteporvias interurbanas.",
-        "portodas lasvias,exceptoporautopistasyautovias.",
-        "portodas lasvias sin excepcion."
+        "únicamente por vías interurbanas.",
+        "por todas las vías, excepto por autopistas y autovías.",
+        "por todas las vías sin excepción."
       ],
+      "correcta": 1,
       "imagen": "../img/test_045_p24.jpg"
     },
     {
-      "texto": "Si su turismo ha pasado favorablemente la primera ITV, ¿zcuando tiene que pasar la proxima inspeccion?",
+      "texto": "Si su turismo ha pasado favorablemente la primera ITV, ¿cuándo tiene que pasar la próxima inspección?",
       "opciones": [
-        "Dentro de 4 anos.",
-        "Dentro de 2 anos.",
-        "Al ano siguiente."
-      ]
+        "Dentro de 4 años.",
+        "Dentro de 2 años.",
+        "Al año siguiente."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "En un paso a nivel, una semibarrera movil en movimiento...",
+      "texto": "En un paso a nivel, una semibarrera móvil en movimiento...",
       "opciones": [
         "obliga a detenerse.",
-        "unicamenteprohibe el pasomientras se encuentra enposicion transversal a la calzada, siesta subiendopuedecontinuar.",
-        "obliga a extremar la precaucion,y solopuede cruzarlo si no se aproxima ningun vehiculo."
+        "únicamente prohíbe el paso mientras se encuentra en posición transversal a la calzada; si está subiendo puede continuar.",
+        "obliga a extremar la precaución, y solo puede cruzarlo si no se aproxima ningún vehículo."
       ],
+      "correcta": 0,
       "imagen": "../img/test_045_p26.jpg"
     },
     {
       "texto": "El consumo de LSD produce en el conductor...",
       "opciones": [
-        "estabilidademocional.",
-        "alucinaciones y distorsiones en la percepcion.",
+        "estabilidad emocional.",
+        "alucinaciones y distorsiones en la percepción.",
         "fatiga."
-      ]
+      ],
+      "correcta": 1
     },
     {
-      "texto": "El estres, ¿ique efectos puede tener sobre el conductor?",
+      "texto": "El estrés, ¿qué efectos puede tener sobre el conductor?",
       "opciones": [
-        "Quetomedecisiones mas lentasycometamenos errores.",
-        "Quetome decisionesmasrapidas y cometamenos errores.",
-        "Queaparezcanmasdistraccionesal volante."
-      ]
+        "Que tome decisiones más lentas y cometa menos errores.",
+        "Que tome decisiones más rápidas y cometa menos errores.",
+        "Que aparezcan más distracciones al volante."
+      ],
+      "correcta": 2
     },
     {
-      "texto": "El estado y comportamiento del conductor, ¿ipuede producir distracciones?",
+      "texto": "El estado y comportamiento del conductor, ¿puede producir distracciones?",
       "opciones": [
         "No.",
-        "Si.",
-        "Si,aunque solo cuando seconducepor autopista o autovia."
-      ]
+        "Sí.",
+        "Sí, aunque solo cuando se conduce por autopista o autovía."
+      ],
+      "correcta": 1
     },
     {
-      "texto": "El hielo, la nieve, la calzada mojada y las obras, ¿ide que factor de riesgo forman parte?",
+      "texto": "El hielo, la nieve, la calzada mojada y las obras, ¿de qué factor de riesgo forman parte?",
       "opciones": [
         "Del factor humano.",
-        "Del factor via y entorno.",
-        "Del factor vehiculo."
+        "Del factor vía y entorno.",
+        "Del factor vehículo."
       ],
+      "correcta": 1,
       "imagen": "../img/test_045_p30.jpg"
     }
   ]
