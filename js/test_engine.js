@@ -29,17 +29,17 @@
   function mostrarAviso(html) {
     form.style.display = 'none';
     aviso.style.cssText = 'display:block;padding:18px 20px;margin:24px 0;border-radius:14px;' +
-      'background:#fef3c7;border:1px solid #fcd34d;color:#92400e;line-height:1.5;';
+      'background:var(--color-aviso-fondo);border:1px solid var(--color-aviso-borde);color:var(--color-aviso-texto);line-height:1.5;';
     aviso.innerHTML = html + '<p style="margin:12px 0 0;"><a href="index.html">← Volver a la lista de tests</a></p>';
   }
 
   function mostrarEstadoGuardado(tipo, texto) {
     const colores = {
-      guardando: '#6b7280',
-      ok: '#15803d',
-      aviso: '#b45309'
+      guardando: 'var(--texto-suave)',
+      ok: 'var(--color-primario)',
+      aviso: 'var(--color-aviso-oscuro)'
     };
-    estadoGuardado.style.cssText = `margin-top:12px;font-size:14px;font-weight:600;color:${colores[tipo] || '#6b7280'};`;
+    estadoGuardado.style.cssText = `margin-top:12px;font-size:14px;font-weight:600;color:${colores[tipo] || 'var(--texto-suave)'};`;
     estadoGuardado.textContent = texto;
   }
 
@@ -755,3 +755,4 @@
     }
   })();
 })();
+```[cite: 1, 2]

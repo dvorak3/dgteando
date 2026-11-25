@@ -13,7 +13,15 @@
     }
   </script>
 
-  <!-- test.css incluye ahora también todos los estilos del modo repaso (ya no hace falta repaso.css aquí) -->
+  <!-- 1) Paleta de colores: SIEMPRE antes que el resto de hojas de estilo -->
+  <link rel="stylesheet" href="css/variables.css?v=1">
+
+  <!-- 2) Fuente (antes era un @import dentro de test.css) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+
+  <!-- 3) test.css incluye también todos los estilos del modo repaso (no hace falta repaso.css aquí) -->
   <link rel="stylesheet" href="css/test.css?v=7">
 </head>
 <body>
@@ -47,6 +55,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/storage.js?v=10"></script>
-  <script src="js/test_engine.js?v=8"></script>
+  <script src="js/test_engine.js?v=9"></script>
 </body>
 </html>
+```[cite: 3, 4]

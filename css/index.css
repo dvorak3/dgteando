@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap');
-
+/* Colores: todos vienen de variables.css (enlazarlo ANTES que esta hoja) */
 @font-face {
   font-family: "Bricolage Grotesque Fallback";
   src: local("Arial"), local("Helvetica Neue"), local("Helvetica");
@@ -7,19 +6,6 @@
   ascent-override: 96%;
   descent-override: 24%;
   line-gap-override: 0%;
-}
-
-:root {
-  --bg-crema: #f8f7f3;
-  --card-bg: #ffffff;
-  --border-soft: #e5e5e0;
-  --text-main: #1f2421;
-  --text-muted: #6b706c;
-  --green-primary: #15803d;
-  --green-soft: #dcfce7;
-  --orange-accent: #ea580c;
-  --orange-soft: #ffedd5;
-  --shadow-card: 0 4px 20px -2px rgba(24, 24, 21, 0.04), 0 1px 3px rgba(24, 24, 21, 0.03);
 }
 
 * {
@@ -30,8 +16,8 @@
 }
 
 body {
-  background-color: var(--bg-crema);
-  color: var(--text-main);
+  background-color: var(--bg-pagina);
+  color: var(--texto-principal);
   padding: 24px 18px 48px;
   min-height: 100vh;
 }
@@ -56,20 +42,20 @@ body {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--text-main);
+  color: var(--texto-principal);
 }
 
 .brand-icon {
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  background-color: var(--green-soft);
-  color: var(--green-primary);
+  background-color: var(--color-primario-suave);
+  color: var(--color-primario);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid rgba(21, 128, 61, 0.14);
+  border: 1px solid var(--verde-a14);
 }
 
 .brand-icon svg {
@@ -89,13 +75,13 @@ body {
   font-size: 20px;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--text-main);
+  color: var(--texto-principal);
   line-height: 1.1;
 }
 
 .brand-sub {
   font-size: 12px;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
   font-weight: 500;
   margin-top: 2px;
 }
@@ -111,22 +97,22 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--card-bg);
-  border: 1px solid var(--border-soft);
-  color: #444744;
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--borde-suave);
+  color: var(--texto-boton);
   font-size: 12.5px;
   font-weight: 600;
   padding: 7px 14px;
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.16s ease;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 1px 2px var(--negro-a02);
 }
 
 .btn-json:hover {
-  background: #f1f0eb;
-  border-color: #d5d4cd;
-  color: var(--text-main);
+  background: var(--bg-hover-suave);
+  border-color: var(--borde-boton-hover);
+  color: var(--texto-principal);
 }
 
 .btn-json svg {
@@ -146,10 +132,10 @@ body {
 }
 
 .card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-soft);
+  background-color: var(--bg-tarjeta);
+  border: 1px solid var(--borde-suave);
   border-radius: 16px;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--sombra-tarjeta);
 }
 
 /* ================= COLUMNA IZQUIERDA (TESTS) ================= */
@@ -170,7 +156,7 @@ body {
 .tests-heading {
   font-size: 16px;
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--texto-principal);
   letter-spacing: -0.01em;
 }
 
@@ -178,12 +164,12 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--bg-crema);
-  border: 1px solid var(--border-soft);
+  background-color: var(--bg-pagina);
+  border: 1px solid var(--borde-suave);
   padding: 4px 10px 4px 12px;
   border-radius: 999px;
   font-size: 13px;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
 }
 
 .modo-label-texto {
@@ -200,25 +186,25 @@ body {
   padding: 4px 10px;
   border-radius: 999px;
   font-weight: 600;
-  color: #4b504c;
+  color: var(--texto-etiqueta);
   transition: all 0.15s ease;
 }
 
 .radio-label:has(input:checked) {
-  background-color: #ffffff;
-  color: var(--text-main);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  background-color: var(--bg-tarjeta);
+  color: var(--texto-principal);
+  box-shadow: 0 1px 3px var(--negro-a08);
 }
 
 .radio-custom {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  border: 1.5px solid #b5b5b0;
+  border: 1.5px solid var(--borde-radio);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: var(--bg-tarjeta);
 }
 
 .radio-label input {
@@ -226,7 +212,7 @@ body {
 }
 
 .radio-label input:checked + .radio-custom {
-  border-color: #e67e22;
+  border-color: var(--color-acento-medio);
 }
 
 .radio-label input:checked + .radio-custom::after {
@@ -234,7 +220,7 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #e67e22;
+  background-color: var(--color-acento-medio);
 }
 
 .ayuda-link {
@@ -244,8 +230,8 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #ffedd5;
-  color: #e67e22;
+  background-color: var(--color-acento-suave);
+  color: var(--color-acento-medio);
   font-size: 11px;
   font-weight: 700;
   text-decoration: none;
@@ -254,7 +240,7 @@ body {
 
 /* Tabla de tests refinada dentro de la tarjeta */
 .tabla-wrapper {
-  border: 1px solid var(--border-soft);
+  border: 1px solid var(--borde-suave);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -262,8 +248,8 @@ body {
 .tabla-header {
   display: grid;
   grid-template-columns: 140px 42px 1fr 1fr 1.2fr 36px;
-  background-color: #367cb8;
-  color: #ffffff;
+  background-color: var(--color-info);
+  color: var(--texto-sobre-color);
   font-size: 13px;
   font-weight: 600;
   height: 38px;
@@ -283,10 +269,10 @@ body {
   align-items: center;
   text-align: center;
   text-decoration: none;
-  color: #4b5563;
+  color: var(--texto-fila);
   font-size: 13.5px;
-  border-bottom: 1px solid #efefea;
-  background-color: #ffffff;
+  border-bottom: 1px solid var(--borde-fila);
+  background-color: var(--bg-tarjeta);
   transition: background-color 0.12s;
 }
 
@@ -295,16 +281,16 @@ body {
 }
 
 .fila-test:hover {
-  background-color: #f8fafc;
+  background-color: var(--bg-hover-fila);
 }
 
 .fila-test:hover .celda-num {
-  background-color: #4b5563;
+  background-color: var(--texto-fila);
 }
 
 .celda-num {
-  background-color: #5c6066;
-  color: #ffffff;
+  background-color: var(--bg-celda-num);
+  color: var(--texto-sobre-color);
   height: 100%;
   display: flex;
   align-items: center;
@@ -329,15 +315,15 @@ body {
 }
 
 .estado-aprobado {
-  background-color: #c6e56e;
+  background-color: var(--estado-aprobado);
 }
 
 .estado-suspenso {
-  background-color: #f66e6e;
+  background-color: var(--estado-suspenso);
 }
 
 .estado-pendiente {
-  background-color: #e5e7eb;
+  background-color: var(--bg-neutro);
 }
 
 /* Celda de fallos clickable cuando hay datos */
@@ -356,8 +342,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  border-bottom: 1.5px dotted #367cb8;
-  color: #2c4a6e;
+  border-bottom: 1.5px dotted var(--color-info);
+  color: var(--color-info-oscuro);
   font-weight: 700;
   padding: 2px 6px;
   border-radius: 5px;
@@ -365,14 +351,14 @@ body {
 }
 
 .celda-fallos.clickable:hover .fallos-valor {
-  background-color: #e8f1fa;
-  color: #1d4ed8;
+  background-color: var(--color-info-tenue);
+  color: var(--color-info-intenso);
 }
 
 .icono-grafica {
   width: 12px;
   height: 12px;
-  stroke: #367cb8;
+  stroke: var(--color-info);
   stroke-width: 2.2;
   fill: none;
   flex-shrink: 0;
@@ -382,13 +368,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2c4a6e;
+  color: var(--color-info-oscuro);
 }
 
 .celda-flecha svg {
   width: 14px;
   height: 14px;
-  stroke: #64748b;
+  stroke: var(--texto-gris-azulado);
   stroke-width: 2;
   fill: none;
 }
@@ -400,9 +386,9 @@ body {
 }
 
 .btn-borrar {
-  background-color: #f4f3ef;
-  border: 1px solid var(--border-soft);
-  color: #6b706c;
+  background-color: var(--bg-boton-suave);
+  border: 1px solid var(--borde-suave);
+  color: var(--texto-secundario);
   font-size: 12.5px;
   font-weight: 600;
   padding: 7px 14px;
@@ -412,9 +398,9 @@ body {
 }
 
 .btn-borrar:hover {
-  background-color: #fee2e2;
-  border-color: #fecaca;
-  color: #b91c1c;
+  background-color: var(--color-fallo-fondo);
+  border-color: var(--color-fallo-borde-suave);
+  color: var(--color-fallo-oscuro);
 }
 
 /* ================= COLUMNA DERECHA (SIDEBAR STICKY) ================= */
@@ -437,7 +423,7 @@ body {
 }
 
 .card-examen:hover {
-  border-color: #cbd5c0;
+  border-color: var(--borde-card-hover);
 }
 
 .widget-top {
@@ -458,8 +444,8 @@ body {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background-color: var(--green-soft);
-  color: var(--green-primary);
+  background-color: var(--color-primario-suave);
+  color: var(--color-primario);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -479,13 +465,13 @@ body {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
 }
 
 .btn-editar-fecha {
-  background-color: var(--bg-crema);
-  border: 1px solid var(--border-soft);
-  color: #4b5563;
+  background-color: var(--bg-pagina);
+  border: 1px solid var(--borde-suave);
+  color: var(--texto-fila);
   font-size: 11.5px;
   font-weight: 600;
   padding: 4px 10px;
@@ -495,9 +481,9 @@ body {
 }
 
 .btn-editar-fecha:hover {
-  background-color: var(--green-soft);
-  border-color: #bbf7d0;
-  color: var(--green-primary);
+  background-color: var(--color-primario-suave);
+  border-color: var(--color-primario-claro);
+  color: var(--color-primario);
 }
 
 .examen-main {
@@ -511,20 +497,20 @@ body {
   font-size: 38px;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--text-main);
+  color: var(--texto-principal);
   line-height: 1;
 }
 
 .examen-dias-texto {
   font-size: 15px;
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
 }
 
 .examen-estado-especial {
   font-size: 20px;
   font-weight: 800;
-  color: var(--green-primary);
+  color: var(--color-primario);
   line-height: 1.2;
 }
 
@@ -532,7 +518,7 @@ body {
   margin-top: 8px;
   font-size: 13px;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -542,7 +528,7 @@ body {
   display: none;
   margin-top: 14px;
   padding-top: 14px;
-  border-top: 1px solid var(--border-soft);
+  border-top: 1px solid var(--borde-suave);
   gap: 8px;
   align-items: center;
 }
@@ -554,22 +540,22 @@ body {
 .input-fecha-dgt {
   flex: 1;
   padding: 7px 10px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--borde-input-fecha);
   border-radius: 10px;
   font-size: 13px;
-  color: var(--text-main);
-  background-color: var(--bg-crema);
+  color: var(--texto-principal);
+  background-color: var(--bg-pagina);
   outline: none;
 }
 
 .input-fecha-dgt:focus {
-  border-color: var(--green-primary);
-  background-color: #ffffff;
+  border-color: var(--color-primario);
+  background-color: var(--bg-tarjeta);
 }
 
 .btn-guardar-fecha {
-  background-color: var(--green-primary);
-  color: #ffffff;
+  background-color: var(--color-primario);
+  color: var(--texto-sobre-color);
   border: none;
   border-radius: 10px;
   padding: 8px 12px;
@@ -580,7 +566,7 @@ body {
 }
 
 .btn-guardar-fecha:hover {
-  background-color: #166534;
+  background-color: var(--color-primario-hover);
 }
 
 /* Tarjeta 2: Racha de estudio */
@@ -588,8 +574,8 @@ body {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background-color: var(--orange-soft);
-  color: var(--orange-accent);
+  background-color: var(--color-acento-suave);
+  color: var(--color-acento);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -612,7 +598,7 @@ body {
   font-size: 34px;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--text-main);
+  color: var(--texto-principal);
   line-height: 1;
 }
 
@@ -620,7 +606,7 @@ body {
   margin-top: 8px;
   font-size: 13px;
   line-height: 1.4;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
   font-weight: 500;
 }
 
@@ -631,13 +617,13 @@ body {
   font-weight: 600;
   padding: 3px 9px;
   border-radius: 999px;
-  background-color: var(--orange-soft);
-  color: var(--orange-accent);
+  background-color: var(--color-acento-suave);
+  color: var(--color-acento);
 }
 
 .racha-badge-hoy.completado {
-  background-color: var(--green-soft);
-  color: var(--green-primary);
+  background-color: var(--color-primario-suave);
+  color: var(--color-primario);
 }
 
 /* Tarjeta 3: Repaso Inteligente (Anki) */
@@ -652,21 +638,21 @@ body {
   font-size: 34px;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--text-main);
+  color: var(--texto-principal);
   line-height: 1;
 }
 
 .anki-texto {
   font-size: 15px;
   font-weight: 600;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
 }
 
 .anki-sub {
   margin-top: 8px;
   font-size: 13px;
   line-height: 1.4;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
   font-weight: 500;
 }
 
@@ -676,8 +662,8 @@ body {
   justify-content: center;
   width: 100%;
   margin-top: 14px;
-  background-color: var(--green-primary);
-  color: #ffffff;
+  background-color: var(--color-primario);
+  color: var(--texto-sobre-color);
   text-decoration: none;
   font-size: 13px;
   font-weight: 700;
@@ -689,7 +675,7 @@ body {
 }
 
 .btn-repaso-anki:hover {
-  background-color: #166534;
+  background-color: var(--color-primario-hover);
 }
 
 /* ================= RESPONSIVE (< 860px) ================= */
@@ -746,7 +732,7 @@ body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(17, 24, 39, 0.55);
+  background-color: var(--velo-modal);
   display: none;
   align-items: center;
   justify-content: center;
@@ -760,12 +746,12 @@ body {
 }
 
 .modal-contenido {
-  background-color: #ffffff;
-  border: 1px solid var(--border-soft);
+  background-color: var(--bg-tarjeta);
+  border: 1px solid var(--borde-suave);
   width: 100%;
   max-width: 540px;
   border-radius: 16px;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 16px 36px var(--negro-a18);
   padding: 20px 22px 24px;
   position: relative;
   animation: modalEntrada 0.18s ease-out;
@@ -788,13 +774,13 @@ body {
   align-items: center;
   margin-bottom: 14px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--bg-neutro);
 }
 
 .modal-titulo {
   font-size: 16px;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--texto-oscuro);
 }
 
 .modal-cerrar {
@@ -802,7 +788,7 @@ body {
   border: none;
   font-size: 24px;
   line-height: 1;
-  color: #6b7280;
+  color: var(--texto-suave);
   cursor: pointer;
   padding: 2px 6px;
   border-radius: 6px;
@@ -810,8 +796,8 @@ body {
 }
 
 .modal-cerrar:hover {
-  background-color: #f3f4f6;
-  color: #111827;
+  background-color: var(--bg-hover-icono);
+  color: var(--texto-titulo);
 }
 
 .modal-leyenda {
@@ -820,7 +806,7 @@ body {
   justify-content: flex-end;
   gap: 14px;
   font-size: 12px;
-  color: #6b7280;
+  color: var(--texto-suave);
   margin-bottom: 10px;
   flex-wrap: wrap;
 }
@@ -841,7 +827,7 @@ body {
 .leyenda-linea {
   width: 16px;
   height: 0;
-  border-top: 2px dashed #9ca3af;
+  border-top: 2px dashed var(--texto-gris-claro);
   display: inline-block;
 }
 
@@ -891,13 +877,13 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: #fffefb;
+  background-color: var(--bg-modal-anki);
 }
 
 .modal-anki .modal-header {
   margin: 0;
   padding: 18px 22px 14px;
-  background-color: #ffffff;
+  background-color: var(--bg-tarjeta);
 }
 
 .anki-cfg-cuerpo {
@@ -908,7 +894,7 @@ body {
 
 .anki-cfg-seccion {
   padding: 16px 0;
-  border-bottom: 1px solid #efeee8;
+  border-bottom: 1px solid var(--borde-seccion);
 }
 
 .anki-cfg-seccion:last-child {
@@ -921,7 +907,7 @@ body {
   gap: 8px;
   font-size: 13.5px;
   font-weight: 700;
-  color: var(--text-main);
+  color: var(--texto-principal);
   margin-bottom: 10px;
 }
 
@@ -929,8 +915,8 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: var(--green-soft);
-  color: var(--green-primary);
+  background-color: var(--color-primario-suave);
+  color: var(--color-primario);
   font-size: 11px;
   font-weight: 800;
   display: inline-flex;
@@ -944,14 +930,14 @@ body {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
 }
 
 .anki-cfg-ayuda {
   margin-top: 10px;
   font-size: 12px;
   line-height: 1.4;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
 }
 
 /* Píldoras tipo radio */
@@ -976,35 +962,35 @@ body {
   display: inline-block;
   padding: 7px 13px;
   border-radius: 999px;
-  border: 1px solid var(--border-soft);
-  background-color: var(--bg-crema);
-  color: #4b504c;
+  border: 1px solid var(--borde-suave);
+  background-color: var(--bg-pagina);
+  color: var(--texto-etiqueta);
   font-size: 12.5px;
   font-weight: 600;
   transition: all 0.15s ease;
 }
 
 .pill-opcion:hover span {
-  border-color: #cfd6c8;
+  border-color: var(--borde-pill-hover);
 }
 
 .pill-opcion input:checked + span {
-  background-color: var(--green-soft);
-  border-color: #86efac;
-  color: var(--green-primary);
+  background-color: var(--color-primario-suave);
+  border-color: var(--color-primario-borde);
+  color: var(--color-primario);
 }
 
 .pill-opcion input:focus-visible + span {
-  outline: 2px solid var(--green-primary);
+  outline: 2px solid var(--color-primario);
   outline-offset: 2px;
 }
 
 .anki-cfg-extra {
   margin-top: 12px;
   padding: 12px;
-  border: 1px solid var(--border-soft);
+  border: 1px solid var(--borde-suave);
   border-radius: 12px;
-  background-color: var(--bg-crema);
+  background-color: var(--bg-pagina);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1024,36 +1010,36 @@ body {
 .anki-cfg-label {
   font-size: 13px;
   font-weight: 600;
-  color: #4b504c;
+  color: var(--texto-etiqueta);
 }
 
 .input-numero {
   width: 92px;
   padding: 8px 10px;
-  border: 1px solid #d9d9d2;
+  border: 1px solid var(--borde-input);
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: var(--bg-tarjeta);
   font-size: 14px;
   font-weight: 600;
-  color: var(--text-main);
+  color: var(--texto-principal);
   outline: none;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .input-numero:focus {
-  border-color: var(--green-primary);
-  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.12);
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px var(--verde-a12);
 }
 
 .input-numero:disabled {
-  background-color: #f1f0eb;
-  color: #a3a7a3;
+  background-color: var(--bg-hover-suave);
+  color: var(--texto-deshabilitado);
   cursor: not-allowed;
 }
 
 .input-numero.invalido {
-  border-color: #dc2626;
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+  border-color: var(--color-fallo);
+  box-shadow: 0 0 0 3px var(--rojo-a10);
 }
 
 .check-simple {
@@ -1062,7 +1048,7 @@ body {
   gap: 8px;
   font-size: 12.5px;
   font-weight: 500;
-  color: #4b504c;
+  color: var(--texto-etiqueta);
   cursor: pointer;
   user-select: none;
 }
@@ -1070,7 +1056,7 @@ body {
 .check-simple input {
   width: 16px;
   height: 16px;
-  accent-color: var(--green-primary);
+  accent-color: var(--color-primario);
   cursor: pointer;
   flex-shrink: 0;
 }
@@ -1078,16 +1064,17 @@ body {
 .select-anki {
   width: 100%;
   padding: 9px 36px 9px 12px;
-  border: 1px solid #d9d9d2;
+  border: 1px solid var(--borde-input);
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: var(--bg-tarjeta);
   font-size: 13px;
   font-weight: 600;
-  color: var(--text-main);
+  color: var(--texto-principal);
   outline: none;
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
+  /* Flecha del select: el color del trazo (%236b706c = --texto-secundario) va dentro del SVG y no admite var(); si cambias --texto-secundario, cambia también aquí */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b706c' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
@@ -1096,8 +1083,8 @@ body {
 }
 
 .select-anki:focus {
-  border-color: var(--green-primary);
-  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.12);
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px var(--verde-a12);
 }
 
 /* Interruptor */
@@ -1112,7 +1099,7 @@ body {
 .switch-texto {
   font-size: 13px;
   font-weight: 600;
-  color: var(--text-main);
+  color: var(--texto-principal);
   line-height: 1.35;
 }
 
@@ -1121,7 +1108,7 @@ body {
   margin-top: 2px;
   font-size: 11.5px;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
 }
 
 .switch {
@@ -1146,7 +1133,7 @@ body {
   position: absolute;
   inset: 0;
   border-radius: 999px;
-  background-color: #d4d4cc;
+  background-color: var(--bg-switch-apagado);
   transition: background-color 0.18s ease;
 }
 
@@ -1158,13 +1145,13 @@ body {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  background-color: var(--bg-tarjeta);
+  box-shadow: 0 1px 3px var(--negro-a25);
   transition: transform 0.18s ease;
 }
 
 .switch input:checked + .switch-pista {
-  background-color: var(--green-primary);
+  background-color: var(--color-primario);
 }
 
 .switch input:checked + .switch-pista::after {
@@ -1172,7 +1159,7 @@ body {
 }
 
 .switch input:focus-visible + .switch-pista {
-  outline: 2px solid var(--green-primary);
+  outline: 2px solid var(--color-primario);
   outline-offset: 2px;
 }
 
@@ -1186,9 +1173,9 @@ body {
 }
 
 .btn-secundario {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-soft);
-  color: #444744;
+  background-color: var(--bg-tarjeta);
+  border: 1px solid var(--borde-suave);
+  color: var(--texto-boton);
   font-size: 12.5px;
   font-weight: 600;
   padding: 7px 14px;
@@ -1198,14 +1185,14 @@ body {
 }
 
 .btn-secundario:hover:not(:disabled) {
-  background-color: #f1f0eb;
-  border-color: #d5d4cd;
+  background-color: var(--bg-hover-suave);
+  border-color: var(--borde-boton-hover);
 }
 
 .btn-texto-rojo {
   background: transparent;
   border: none;
-  color: #b91c1c;
+  color: var(--color-fallo-oscuro);
   font-size: 12.5px;
   font-weight: 600;
   padding: 7px 8px;
@@ -1215,7 +1202,7 @@ body {
 }
 
 .btn-texto-rojo:hover:not(:disabled) {
-  background-color: #fee2e2;
+  background-color: var(--color-fallo-fondo);
 }
 
 .btn-secundario:disabled,
@@ -1229,17 +1216,17 @@ body {
   min-height: 16px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--texto-secundario);
 }
 
-.anki-mant-msg.ok { color: var(--green-primary); }
-.anki-mant-msg.error { color: #b91c1c; }
+.anki-mant-msg.ok { color: var(--color-primario); }
+.anki-mant-msg.error { color: var(--color-fallo-oscuro); }
 
 /* Pie */
 .anki-cfg-pie {
   padding: 14px 22px 18px;
-  border-top: 1px solid var(--border-soft);
-  background-color: #ffffff;
+  border-top: 1px solid var(--borde-suave);
+  background-color: var(--bg-tarjeta);
 }
 
 .anki-estado-guardado {
@@ -1247,7 +1234,7 @@ body {
   margin-bottom: 8px;
   font-size: 12px;
   font-weight: 600;
-  color: #b45309;
+  color: var(--color-aviso-oscuro);
 }
 
 .anki-estado-guardado:empty {
@@ -1261,9 +1248,9 @@ body {
 }
 
 .btn-cancelar-anki {
-  background-color: #f4f3ef;
-  border: 1px solid var(--border-soft);
-  color: #4b504c;
+  background-color: var(--bg-boton-suave);
+  border: 1px solid var(--borde-suave);
+  color: var(--texto-etiqueta);
   font-size: 13px;
   font-weight: 600;
   padding: 9px 16px;
@@ -1273,13 +1260,13 @@ body {
 }
 
 .btn-cancelar-anki:hover {
-  background-color: #eceae3;
+  background-color: var(--bg-boton-suave-hover);
 }
 
 .btn-guardar-anki {
-  background-color: #15803d;
+  background-color: var(--color-primario);
   border: none;
-  color: #ffffff;
+  color: var(--texto-sobre-color);
   font-size: 13px;
   font-weight: 700;
   padding: 9px 18px;
@@ -1289,7 +1276,7 @@ body {
 }
 
 .btn-guardar-anki:hover:not(:disabled) {
-  background-color: #166534;
+  background-color: var(--color-primario-hover);
 }
 
 .btn-guardar-anki:disabled {

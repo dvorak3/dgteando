@@ -1,37 +1,26 @@
+/* Colores: todos vienen de variables.css (enlazarlo ANTES que esta hoja) */
 /* ===================================================================
    Repaso inteligente (Anki) · test.html?modo=repaso
    Estilos propios (no dependen de test.css)
    =================================================================== */
 .repaso-app {
-  --rp-bg: #ffffff;
-  --rp-border: #e5e5e0;
-  --rp-text: #1f2421;
-  --rp-muted: #6b706c;
-  --rp-green: #15803d;
-  --rp-green-soft: #dcfce7;
-  --rp-red: #b91c1c;
-  --rp-red-soft: #fee2e2;
-  --rp-amber: #b45309;
-  --rp-amber-soft: #fef3c7;
-  --rp-blue: #1d4ed8;
-  --rp-blue-soft: #dbeafe;
   max-width: 760px;
   margin: 0 auto;
-  color: var(--rp-text);
+  color: var(--texto-principal);
 }
 
 .repaso-app kbd {
   display: inline-block;
   min-width: 20px;
   padding: 1px 6px;
-  border: 1px solid #cfcfc8;
+  border: 1px solid var(--borde-tecla);
   border-bottom-width: 2px;
   border-radius: 6px;
-  background: #f8f7f3;
+  background: var(--bg-pagina);
   font-size: 12px;
   font-weight: 700;
   text-align: center;
-  color: #4b504c;
+  color: var(--texto-etiqueta);
 }
 
 /* ---------- Cabecera de sesión ---------- */
@@ -47,15 +36,15 @@
 .repaso-salir {
   font-size: 13px;
   font-weight: 600;
-  color: var(--rp-muted);
+  color: var(--texto-secundario);
   text-decoration: none;
 }
-.repaso-salir:hover { color: var(--rp-text); }
+.repaso-salir:hover { color: var(--texto-principal); }
 
 .repaso-contador {
   font-size: 14px;
   font-weight: 700;
-  color: var(--rp-text);
+  color: var(--texto-principal);
 }
 
 .repaso-repeticion {
@@ -64,7 +53,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--rp-red);
+  color: var(--color-fallo-oscuro);
 }
 
 .repaso-badge {
@@ -72,25 +61,25 @@
   font-weight: 700;
   padding: 3px 10px;
   border-radius: 999px;
-  background: #e5e7eb;
-  color: #374151;
+  background: var(--bg-neutro);
+  color: var(--texto-badge);
 }
-.repaso-badge.madurez-nueva       { background: var(--rp-blue-soft);  color: var(--rp-blue); }
-.repaso-badge.madurez-aprendiendo { background: var(--rp-amber-soft); color: var(--rp-amber); }
-.repaso-badge.madurez-joven       { background: var(--rp-green-soft); color: var(--rp-green); }
-.repaso-badge.madurez-madura      { background: var(--rp-green); color: #ffffff; }
+.repaso-badge.madurez-nueva       { background: var(--color-info-pastel);  color: var(--color-info-intenso); }
+.repaso-badge.madurez-aprendiendo { background: var(--color-aviso-fondo); color: var(--color-aviso-oscuro); }
+.repaso-badge.madurez-joven       { background: var(--color-primario-suave); color: var(--color-primario); }
+.repaso-badge.madurez-madura      { background: var(--color-primario); color: var(--texto-sobre-color); }
 
 .repaso-progreso {
   height: 8px;
   border-radius: 999px;
-  background: #ecebe5;
+  background: var(--bg-barra-vacia);
   overflow: hidden;
   margin-bottom: 16px;
 }
 .repaso-progreso-barra {
   height: 100%;
   border-radius: 999px;
-  background: var(--rp-green);
+  background: var(--color-primario);
   transition: width 0.25s ease;
 }
 
@@ -99,11 +88,11 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  background: var(--rp-bg);
-  border: 1px solid var(--rp-border);
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--borde-suave);
   border-radius: 16px;
   padding: 20px;
-  box-shadow: 0 4px 20px -2px rgba(24, 24, 21, 0.05);
+  box-shadow: 0 4px 20px -2px var(--asfalto-a05);
 }
 .repaso-tarjeta.con-imagen { grid-template-columns: 1fr 190px; }
 
@@ -129,19 +118,19 @@
   font: inherit;
   font-size: 15px;
   line-height: 1.4;
-  color: var(--rp-text);
-  background: #ffffff;
-  border: 1.5px solid var(--rp-border);
+  color: var(--texto-principal);
+  background: var(--bg-tarjeta);
+  border: 1.5px solid var(--borde-suave);
   border-radius: 12px;
   padding: 12px 14px;
   cursor: pointer;
   transition: border-color 0.12s, background-color 0.12s;
 }
-.repaso-opcion:hover:not(.bloqueada) { border-color: #b9c7b0; background: #fafcf8; }
-.repaso-opcion:focus-visible { outline: 2px solid var(--rp-green); outline-offset: 2px; }
+.repaso-opcion:hover:not(.bloqueada) { border-color: var(--borde-opcion-hover); background: var(--bg-hover-opcion-verde); }
+.repaso-opcion:focus-visible { outline: 2px solid var(--color-primario); outline-offset: 2px; }
 .repaso-opcion.bloqueada { cursor: default; }
-.repaso-opcion.es-correcta { border-color: var(--rp-green); background: var(--rp-green-soft); }
-.repaso-opcion.es-fallo    { border-color: #dc2626; background: var(--rp-red-soft); }
+.repaso-opcion.es-correcta { border-color: var(--color-primario); background: var(--color-primario-suave); }
+.repaso-opcion.es-fallo    { border-color: var(--color-fallo); background: var(--color-fallo-fondo); }
 
 .repaso-opcion-texto .opcion-letra { font-weight: 700; margin-right: 2px; }
 
@@ -153,20 +142,20 @@
   min-width: 22px;
   height: 22px;
   padding: 0 6px;
-  border: 1px solid #cfcfc8;
+  border: 1px solid var(--borde-tecla);
   border-bottom-width: 2px;
   border-radius: 6px;
-  background: #f8f7f3;
+  background: var(--bg-pagina);
   font-size: 12px;
   font-weight: 700;
-  color: #4b504c;
+  color: var(--texto-etiqueta);
 }
 
 .repaso-media img {
   display: block;
   width: 100%;
   height: auto;
-  border: 1px solid var(--rp-border);
+  border: 1px solid var(--borde-suave);
   border-radius: 10px;
 }
 
@@ -178,7 +167,7 @@
   margin-bottom: 10px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--rp-muted);
+  color: var(--texto-secundario);
 }
 
 .repaso-confianza-botones {
@@ -203,33 +192,33 @@
 }
 .repaso-btn-confianza:hover:not(:disabled) { filter: brightness(0.97); transform: translateY(-1px); }
 .repaso-btn-confianza:disabled { opacity: 0.6; cursor: default; }
-.repaso-btn-confianza:focus-visible { outline: 2px solid var(--rp-text); outline-offset: 2px; }
+.repaso-btn-confianza:focus-visible { outline: 2px solid var(--texto-principal); outline-offset: 2px; }
 
 .repaso-btn-linea { font-size: 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
 .repaso-btn-dias  { font-size: 12px; font-weight: 600; opacity: 0.85; }
 
-.repaso-btn-confianza .repaso-tecla { background: rgba(255, 255, 255, 0.7); border-color: rgba(0, 0, 0, 0.15); color: inherit; }
+.repaso-btn-confianza .repaso-tecla { background: var(--blanco-a70); border-color: var(--negro-a15); color: inherit; }
 
-.btn-hard   { background: var(--rp-amber-soft); color: var(--rp-amber); border-color: #fcd9a0; }
-.btn-medium { background: var(--rp-blue-soft);  color: var(--rp-blue);  border-color: #bcd3fb; }
-.btn-easy   { background: var(--rp-green);      color: #ffffff;         border-color: var(--rp-green); }
-.btn-easy .repaso-tecla { background: rgba(255, 255, 255, 0.22); border-color: rgba(255, 255, 255, 0.45); color: #ffffff; }
-.btn-again  { background: var(--rp-red-soft);   color: var(--rp-red);   border-color: #fecaca; margin-left: auto; }
-.btn-again.sugerido { box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.25); }
+.btn-hard   { background: var(--color-aviso-fondo); color: var(--color-aviso-oscuro); border-color: var(--color-aviso-borde-suave); }
+.btn-medium { background: var(--color-info-pastel);  color: var(--color-info-intenso);  border-color: var(--color-info-pastel-borde); }
+.btn-easy   { background: var(--color-primario);      color: var(--texto-sobre-color);         border-color: var(--color-primario); }
+.btn-easy .repaso-tecla { background: var(--blanco-a22); border-color: var(--blanco-a45); color: var(--texto-sobre-color); }
+.btn-again  { background: var(--color-fallo-fondo);   color: var(--color-fallo-oscuro);   border-color: var(--color-fallo-borde-suave); margin-left: auto; }
+.btn-again.sugerido { box-shadow: 0 0 0 3px var(--rojo-a25); }
 
 .repaso-ayuda {
   margin-top: 14px;
   text-align: center;
   font-size: 12.5px;
-  color: var(--rp-muted);
+  color: var(--texto-secundario);
 }
 
 .repaso-aviso-nube {
   margin-top: 10px;
   padding: 8px 12px;
   border-radius: 10px;
-  background: var(--rp-amber-soft);
-  color: var(--rp-amber);
+  background: var(--color-aviso-fondo);
+  color: var(--color-aviso-oscuro);
   font-size: 12.5px;
   font-weight: 600;
 }
@@ -242,14 +231,14 @@
   align-items: center;
   gap: 14px;
   padding: 60px 0;
-  color: var(--rp-muted);
+  color: var(--texto-secundario);
   font-weight: 600;
 }
 .repaso-spinner {
   width: 28px;
   height: 28px;
-  border: 3px solid #e5e5e0;
-  border-top-color: var(--rp-green);
+  border: 3px solid var(--borde-suave);
+  border-top-color: var(--color-primario);
   border-radius: 50%;
   animation: repasoGiro 0.8s linear infinite;
 }
@@ -258,11 +247,11 @@
 /* ---------- Pantalla final ---------- */
 .repaso-final {
   text-align: center;
-  background: var(--rp-bg);
-  border: 1px solid var(--rp-border);
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--borde-suave);
   border-radius: 16px;
   padding: 32px 22px;
-  box-shadow: 0 4px 20px -2px rgba(24, 24, 21, 0.05);
+  box-shadow: 0 4px 20px -2px var(--asfalto-a05);
 }
 .repaso-final-icono {
   width: 56px;
@@ -272,13 +261,13 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: var(--rp-green-soft);
-  color: var(--rp-green);
+  background: var(--color-primario-suave);
+  color: var(--color-primario);
   font-size: 28px;
   font-weight: 800;
 }
 .repaso-final h2 { font-size: 22px; margin-bottom: 8px; }
-.repaso-final-sub { color: var(--rp-muted); font-size: 14px; margin: 8px 0; }
+.repaso-final-sub { color: var(--texto-secundario); font-size: 14px; margin: 8px 0; }
 
 .repaso-resumen {
   display: grid;
@@ -292,15 +281,15 @@
   gap: 2px;
   padding: 12px 6px;
   border-radius: 12px;
-  background: #e5e7eb;
-  color: #374151;
+  background: var(--bg-neutro);
+  color: var(--texto-badge);
 }
 .repaso-resumen-item strong { font-size: 24px; line-height: 1.1; }
 .repaso-resumen-item span { font-size: 12px; font-weight: 600; }
-.repaso-resumen-item.madurez-nueva       { background: var(--rp-blue-soft);  color: var(--rp-blue); }
-.repaso-resumen-item.madurez-aprendiendo { background: var(--rp-amber-soft); color: var(--rp-amber); }
-.repaso-resumen-item.madurez-joven       { background: var(--rp-green-soft); color: var(--rp-green); }
-.repaso-resumen-item.madurez-madura      { background: var(--rp-green);      color: #ffffff; }
+.repaso-resumen-item.madurez-nueva       { background: var(--color-info-pastel);  color: var(--color-info-intenso); }
+.repaso-resumen-item.madurez-aprendiendo { background: var(--color-aviso-fondo); color: var(--color-aviso-oscuro); }
+.repaso-resumen-item.madurez-joven       { background: var(--color-primario-suave); color: var(--color-primario); }
+.repaso-resumen-item.madurez-madura      { background: var(--color-primario);      color: var(--texto-sobre-color); }
 
 .repaso-btn-volver,
 .repaso-btn-secundario {
@@ -315,11 +304,11 @@
   font-weight: 700;
   text-decoration: none;
 }
-.repaso-btn-volver { background: var(--rp-green); color: #ffffff; }
-.repaso-btn-volver:hover { background: #166534; }
-.repaso-btn-volver kbd { background: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.45); color: #ffffff; }
-.repaso-btn-secundario { background: #f4f3ef; color: var(--rp-text); border: 1px solid var(--rp-border); }
-.repaso-btn-secundario:hover { background: #ecebe5; }
+.repaso-btn-volver { background: var(--color-primario); color: var(--texto-sobre-color); }
+.repaso-btn-volver:hover { background: var(--color-primario-hover); }
+.repaso-btn-volver kbd { background: var(--blanco-a20); border-color: var(--blanco-a45); color: var(--texto-sobre-color); }
+.repaso-btn-secundario { background: var(--bg-boton-suave); color: var(--texto-principal); border: 1px solid var(--borde-suave); }
+.repaso-btn-secundario:hover { background: var(--bg-barra-vacia); }
 
 /* ---------- Móvil ---------- */
 @media (max-width: 640px) {

@@ -1,0 +1,143 @@
+/* =====================================================================
+   variables.css · Paleta única de dgt-eando
+   Cambia aquí cualquier color y se actualiza en toda la web.
+   Enlázalo SIEMPRE antes que el resto de hojas de estilo:
+   <link rel="stylesheet" href="css/variables.css">
+   ===================================================================== */
+:root {
+
+  /* ===== MARCA ===== */
+  /* Verde señalética (primario) */
+  --color-primario: #15803d;  /* Acciones primarias, aciertos, barra de progreso */
+  --color-primario-hover: #166534;  /* Hover de botones primarios / texto de acierto */
+  --color-primario-profundo: #14532d;  /* Fondo de la madurez «Madura» */
+  --color-primario-vivo: #22c55e;  /* Final del degradado de la barra de progreso */
+  --color-primario-suave: #dcfce7;  /* Fondos suaves verdes (acierto, píldoras, iconos) */
+  --color-primario-claro: #bbf7d0;  /* Tecla de acierto / hover del botón editar fecha */
+  --color-primario-borde: #86efac;  /* Bordes verdes suaves */
+  --color-primario-tenue: #f0fdf4;  /* Fondo verde casi blanco (opción marcada / hover) */
+  /* Naranja (acento) */
+  --color-acento: #ea580c;  /* Acento naranja (widget racha, destacados) */
+  --color-acento-medio: #e67e22;  /* Radio marcado y enlace de ayuda */
+  --color-acento-suave: #ffedd5;  /* Fondo suave naranja */
+  /* Azul (información) */
+  --color-info: #367cb8;  /* Cabecera de tabla, enlaces e icono de gráfica */
+  --color-info-oscuro: #2c4a6e;  /* Texto azul oscuro (fallos / flecha) */
+  --color-info-tenue: #e8f1fa;  /* Hover azul muy suave */
+  --color-info-intenso: #1d4ed8;  /* Azul intenso (hover fallos, botón Medium antiguo) */
+  --color-info-pastel: #dbeafe;  /* Fondo azul pastel (madurez «Nueva», Medium antiguo) */
+  --color-info-pastel-borde: #bcd3fb;  /* Borde azul pastel */
+  --color-cielo-fondo: #e0f2fe;  /* Fondo azul cielo (Medium, madurez «Nueva») */
+  --color-cielo-borde: #7dd3fc;  /* Borde azul cielo */
+  --color-cielo-texto: #075985;  /* Texto azul cielo oscuro */
+
+  /* ===== ESTADOS DE TEST ===== */
+  /* Resultado de la lista */
+  --estado-aprobado: #c6e56e;  /* Insignia de test aprobado */
+  --estado-suspenso: #f66e6e;  /* Insignia de test suspenso */
+  /* Fallo (rojo señal) */
+  --color-fallo: #dc2626;  /* Borde de error / opción fallada / campo inválido */
+  --color-fallo-oscuro: #b91c1c;  /* Texto de error y acciones destructivas */
+  --color-fallo-fondo: #fee2e2;  /* Fondo de error */
+  --color-fallo-borde: #fca5a5;  /* Borde de error suave */
+  --color-fallo-borde-suave: #fecaca;  /* Borde / tecla de error más suave */
+  /* Ámbar vial (avisos y dificultad) */
+  --color-aviso: #f59e0b;  /* Ámbar vial (foco, destacados) */
+  --color-aviso-fondo: #fef3c7;  /* Fondo de aviso / botón Hard / madurez «Aprendiendo» */
+  --color-aviso-borde: #fcd34d;  /* Borde de aviso */
+  --color-aviso-borde-suave: #fcd9a0;  /* Borde del botón Hard antiguo */
+  --color-aviso-texto: #92400e;  /* Texto sobre fondo de aviso */
+  --color-aviso-oscuro: #b45309;  /* Texto ámbar (racha, estado de guardado) */
+  /* Racha */
+  --color-racha-fondo: #fffbeb;  /* Fondo del combo / racha activa */
+  --color-racha-borde: #fde68a;  /* Borde del combo / racha activa */
+
+  /* ===== FONDOS ===== */
+  /* Página y superficies */
+  --bg-pagina: #f8f7f3;  /* Fondo crema de la página (index) y de las teclas */
+  --bg-pagina-gris: #f3f2ee;  /* Fondo gris cálido de la página de test */
+  --bg-tarjeta: #ffffff;  /* Tarjetas, modales, inputs, filas */
+  --bg-modal-anki: #fffefb;  /* Fondo del modal de configuración Anki */
+  --bg-neutro: #e5e7eb;  /* Gris neutro (estado pendiente, badges, cabecera modal) */
+  /* Hover, botones y detalles */
+  --bg-hover-fila: #f8fafc;  /* Hover de fila de la tabla */
+  --bg-hover-opcion: #fafaf7;  /* Hover de opciones y botón volver */
+  --bg-hover-opcion-verde: #fafcf8;  /* Hover de opción (repaso antiguo) */
+  --bg-hover-suave: #f1f0eb;  /* Hover de botones secundarios / input deshabilitado */
+  --bg-boton-suave: #f4f3ef;  /* Botones secundarios (borrar, cancelar) */
+  --bg-boton-suave-hover: #eceae3;  /* Hover de botón cancelar */
+  --bg-barra-vacia: #ecebe5;  /* Pista vacía de la barra de progreso (repaso antiguo) */
+  --bg-chip-suave: #f6f5f1;  /* Chips de tiempos del repaso */
+  --bg-pista-suave: #e8e6df;  /* Pista de la barra de tiempos */
+  --bg-etiqueta: #eceae4;  /* Etiqueta de sugerencia */
+  --bg-hover-icono: #f3f4f6;  /* Hover del botón cerrar del modal */
+  --bg-celda-num: #5c6066;  /* Celda con el número de test */
+  --bg-switch-apagado: #d4d4cc;  /* Interruptor apagado */
+
+  /* ===== BORDES ===== */
+  --borde-suave: #e5e5e0;  /* Borde estándar de tarjetas (index y repaso) */
+  --borde-pagina: #e4e3dd;  /* Borde estándar de la página de test */
+  --borde-fuerte: #c9c8c0;  /* Borde reforzado (hover de opciones) */
+  --borde-fila: #efefea;  /* Separador de filas de tabla */
+  --borde-seccion: #efeee8;  /* Separador de secciones del modal Anki */
+  --borde-input: #d9d9d2;  /* Inputs numéricos y selects */
+  --borde-input-fecha: #d1d5db;  /* Input de fecha del examen */
+  --borde-boton-hover: #d5d4cd;  /* Borde de botones secundarios al pasar el ratón */
+  --borde-tecla: #cfcfc8;  /* Borde de teclas (kbd) */
+  --borde-radio: #b5b5b0;  /* Borde del radio personalizado */
+  --borde-card-hover: #cbd5c0;  /* Borde de tarjeta de examen en hover */
+  --borde-pill-hover: #cfd6c8;  /* Borde de píldora en hover */
+  --borde-opcion-hover: #b9c7b0;  /* Borde de opción en hover (repaso antiguo) */
+
+  /* ===== TEXTOS ===== */
+  --texto-principal: #1f2421;  /* Texto principal (index y repaso) */
+  --texto-secundario: #6b706c;  /* Texto atenuado (index y repaso) */
+  --texto-titulo: #111827;  /* Títulos y texto en hover del modal */
+  --texto-oscuro: #1f2937;  /* Texto principal de la página de test y títulos de modal */
+  --texto-suave: #6b7280;  /* Texto atenuado de la página de test y modal */
+  --texto-etiqueta: #4b504c;  /* Etiquetas, radios, kbd */
+  --texto-boton: #444744;  /* Texto de botones secundarios */
+  --texto-fila: #4b5563;  /* Texto de filas y hover de la celda de número */
+  --texto-badge: #374151;  /* Texto de badges neutros */
+  --texto-deshabilitado: #a3a7a3;  /* Texto de inputs deshabilitados */
+  --texto-gris-claro: #9ca3af;  /* Combo apagado y línea de leyenda */
+  --texto-gris-azulado: #64748b;  /* Flecha de las filas */
+  --texto-sobre-color: #ffffff;  /* Texto/iconos sobre fondos de color */
+
+  /* ===== TRANSPARENCIAS ===== */
+  /* Negro */
+  --negro-a02: rgba(0, 0, 0, 0.02);  /* Sombra mínima de botón */
+  --negro-a08: rgba(0, 0, 0, 0.08);  /* Sombra de radio marcado / borde de tecla */
+  --negro-a15: rgba(0, 0, 0, 0.15);  /* Borde de tecla (repaso antiguo) */
+  --negro-a18: rgba(0, 0, 0, 0.18);  /* Sombra del modal */
+  --negro-a25: rgba(0, 0, 0, 0.25);  /* Sombra del interruptor */
+  /* Blanco */
+  --blanco-a20: rgba(255, 255, 255, 0.2);  /* Tecla sobre botón Easy / kbd sobre verde */
+  --blanco-a22: rgba(255, 255, 255, 0.22);  /* Tecla sobre botón Easy (repaso antiguo) */
+  --blanco-a35: rgba(255, 255, 255, 0.35);  /* Borde de tecla sobre botón Easy */
+  --blanco-a45: rgba(255, 255, 255, 0.45);  /* Borde de tecla sobre verde (repaso antiguo) */
+  --blanco-a65: rgba(255, 255, 255, 0.65);  /* Tecla sobre botones de confianza */
+  --blanco-a70: rgba(255, 255, 255, 0.7);  /* Tecla sobre botones de confianza (repaso antiguo) */
+  /* Colores de marca */
+  --velo-modal: rgba(17, 24, 39, 0.55);  /* Fondo oscuro detrás de los modales */
+  --bg-topbar: rgba(243, 242, 238, 0.92);  /* Barra superior del repaso (con blur) */
+  --verde-a12: rgba(21, 128, 61, 0.12);  /* Anillo de foco verde */
+  --verde-a14: rgba(21, 128, 61, 0.14);  /* Borde del logo */
+  --verde-a32: rgba(21, 128, 61, 0.32);  /* Anillo sugerido botón Easy */
+  --rojo-a10: rgba(220, 38, 38, 0.1);  /* Anillo de input inválido */
+  --rojo-a22: rgba(220, 38, 38, 0.22);  /* Anillo sugerido botón Again */
+  --rojo-a25: rgba(220, 38, 38, 0.25);  /* Anillo sugerido botón Again (repaso antiguo) */
+  --ambar-a32: rgba(245, 158, 11, 0.32);  /* Anillo sugerido botón Hard */
+  --cielo-a30: rgba(14, 165, 233, 0.30);  /* Anillo sugerido botón Medium */
+  /* Sombras de tarjeta */
+  --asfalto-a03: rgba(24, 24, 21, 0.03);  /* Sombra de tarjeta (capa fina) */
+  --asfalto-a04: rgba(24, 24, 21, 0.04);  /* Sombra de tarjeta (capa amplia) */
+  --asfalto-a05: rgba(24, 24, 21, 0.05);  /* Sombra de tarjeta repaso antiguo */
+  --pizarra-a05: rgba(31, 41, 55, 0.05);  /* Sombra de tarjeta (test) */
+  --pizarra-a07: rgba(31, 41, 55, 0.07);  /* Sombra elevada (test) */
+
+  /* ===== SOMBRAS COMPUESTAS (usan las transparencias de arriba) ===== */
+  --sombra-tarjeta: 0 4px 20px -2px var(--asfalto-a04), 0 1px 3px var(--asfalto-a03);  /* Sombra de tarjetas del panel (index) */
+  --sombra-elevada: 0 1px 2px var(--pizarra-a05), 0 8px 24px var(--pizarra-a07);  /* Sombra elevada de tarjetas de test / repaso */
+  --sombra-suave: 0 1px 2px var(--pizarra-a05), 0 2px 8px var(--pizarra-a05);  /* Sombra suave de tarjetas de test / repaso */
+}
