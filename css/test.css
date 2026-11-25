@@ -1256,3 +1256,118 @@ html.modo-repaso .test-column {
     display: none;
   }
 }
+
+
+/* =====================================================================
+   Repaso · sugerencia de confianza por tiempo, fecha de repaso y resumen de tiempos
+   (no hay ningún contador de tiempo visible durante la tarjeta)
+   ===================================================================== */
+.repaso-sugerencia {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin: -4px 0 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.repaso-sugerencia-tag {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  background: #eceae4;
+  color: var(--texto);
+}
+
+.repaso-sugerencia.nivel-easy .repaso-sugerencia-tag   { background: var(--verde-fondo); color: var(--verde-osc); }
+.repaso-sugerencia.nivel-medium .repaso-sugerencia-tag { background: var(--azul-fondo);  color: var(--azul-texto); }
+.repaso-sugerencia.nivel-hard .repaso-sugerencia-tag   { background: var(--ambar-fondo); color: var(--ambar-texto); }
+.repaso-sugerencia.nivel-again .repaso-sugerencia-tag  { background: var(--rojo-fondo);  color: var(--rojo-osc); }
+
+/* Anillo del botón sugerido con el color de su nivel (again conserva el rojo de arriba) */
+.repaso-btn-confianza.btn-hard.sugerido   { box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.32); }
+.repaso-btn-confianza.btn-medium.sugerido { box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.30); }
+.repaso-btn-confianza.btn-easy.sugerido   { box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.32); }
+
+.repaso-btn-fecha {
+  font-size: 0.7rem;
+  font-weight: 600;
+  opacity: 0.7;
+  text-transform: capitalize;
+}
+
+/* Resumen final de tiempos */
+.repaso-tiempos {
+  max-width: 440px;
+  margin: 16px auto 6px;
+}
+
+.repaso-tiempos-fila {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.repaso-tiempo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 11px 6px;
+  border-radius: 14px;
+  background: #f6f5f1;
+  border: 1px solid var(--borde);
+}
+
+.repaso-tiempo-item strong {
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--texto-titulo);
+  font-variant-numeric: tabular-nums;
+}
+
+.repaso-tiempo-item span {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.repaso-tiempo-item.limite strong { color: var(--texto-suave); }
+
+.repaso-tiempos-barra {
+  height: 6px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: #e8e6df;
+  overflow: hidden;
+}
+
+.repaso-tiempos-relleno {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--verde);
+}
+
+.repaso-tiempos-mejora {
+  margin-top: 12px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: #f6f5f1;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--texto-suave);
+}
+
+.repaso-tiempos-mejora.hay-mejora {
+  background: var(--verde-fondo);
+  color: var(--verde-osc);
+}
+
+.repaso-tiempos-nota {
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: var(--texto-suave);
+}

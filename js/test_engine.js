@@ -221,6 +221,7 @@
     { nivel: 'again', tecla: '4', etiqueta: 'Again' }
   ];
   const ETIQUETA_MADUREZ = { nueva: 'Nueva', aprendiendo: 'Aprendiendo', joven: 'Joven', madura: 'Madura' };
+  const ETIQUETA_NIVEL = { hard: 'Hard', medium: 'Medium', easy: 'Easy', again: 'Again' };
   const PUESTOS_REENCOLAR = 4; // "again": la tarjeta vuelve a salir unos puestos más adelante
   const MS_SALIDA = 180;       // duración de la animación de salida de la tarjeta
 
@@ -246,6 +247,16 @@
     let bloqueoHasta = 0;
     let correctaVisual = -1;               // posición (0-based) de la correcta tal y como se ve en pantalla
 
+    // --- Medición de tiempo (silenciosa: no se muestra ningún contador) ---
+    const TOPE_TIEMPO_SEG = 60;            // tope por pregunta (= límite oficial DGT: 1 min/pregunta)
+    const REFERENCIA_INICIAL_SEG = 10;     // mediana "neutral" mientras haya < 3 respuestas
+    const MIN_RESPUESTAS_MEDIANA = 3;
+    const tiemposSesion = [];              // segundos (tope 60) de las preguntas respondidas en esta sesión
+    let inicioTarjeta = null;              // performance.now() al mostrar la tarjeta
+    let tiempoActual = 0;                  // tiempo congelado de la tarjeta actual (1 decimal)
+    let nivelSugerido = '';                // 'hard' | 'medium' | 'easy' | 'again'
+    let aciertoActual = false;             // si la respuesta de la tarjeta actual fue correcta
+
     const el = (id) => document.getElementById(id);
     const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
     const reducirMovimiento = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -257,6 +268,68 @@
         [arr[i], arr[j]] = [arr[j], arr[i]];
       }
       return arr;
+    }
+
+    function calcularMediana(valores) {
+      if (!valores.length) return 0;
+      const orden = [...valores].sort((a, b) => a - b);
+      const mitad = Math.floor(orden.length / 2);
+      return orden.length % 2 ? orden[mitad] : (orden[mitad - 1] + orden[mitad]) / 2;
+    }
+
+    const fmtSeg = (s) => `${(Math.round(s * 10) / 10).toFixed(1)}s`;
+
+    function fechaCortaISO(iso) {
+      const [y, m, d] = iso.split('-').map(Number);
+      return new Date(y, m - 1, d)
+        .toLocaleDateString('es-ES', { weekday: 'short', day: 'numeric', month: 'short' })
+        .replace(/\./g, '');
+    }
+
+    // Cronómetro silencioso: solo guarda el instante de inicio; no pinta nada en pantalla
+    function iniciarCronometro() {
+      inicioTarjeta = performance.now();
+    }
+
+    // Congela el tiempo exacto al responder (tope 60 s, 1 decimal) en tiempoActual
+    function detenerCronometro() {
+      if (inicioTarjeta === null) return;
+      const seg = Math.min(TOPE_TIEMPO_SEG, (performance.now() - inicioTarjeta) / 1000);
+      inicioTarjeta = null;
+      tiempoActual = Math.round(seg * 10) / 10;
+    }
+
+    // Tiempo esperado para ESTA tarjeta:
+    //   con historial (tiempoMedioSeg > 0): 65 % su tiempo medio histórico + 35 % mediana de hoy
+    //   sin historial: la mediana de hoy (10 s de referencia neutral mientras haya < 3 respuestas)
+    function calcularReferencia(tiemposPrevios, tiempoMedioTarjeta) {
+      const real = tiemposPrevios.length >= MIN_RESPUESTAS_MEDIANA;
+      const medianaHoy = real ? calcularMediana(tiemposPrevios) : REFERENCIA_INICIAL_SEG;
+      const hist = Number(tiempoMedioTarjeta) > 0;
+      const esperado = hist ? (0.65 * Number(tiempoMedioTarjeta)) + (0.35 * medianaHoy) : medianaHoy;
+      return { real, medianaHoy, hist, esperado };
+    }
+
+    // La sugerencia solo destaca un botón: la calificación final la elige siempre el usuario.
+    function sugerirConfianza(acierto, tiempo, tiemposPrevios, tiempoMedioTarjeta) {
+      const r = calcularReferencia(tiemposPrevios, tiempoMedioTarjeta);
+      const esp = fmtSeg(r.esperado);
+      const t = fmtSeg(tiempo);
+
+      if (!acierto) return { nivel: 'again', texto: `Incorrecta (${t})` };
+
+      if (tiempo <= r.esperado * 0.85) {
+        let texto;
+        if (r.hist) {
+          const pct = Math.round((tiempo / r.esperado - 1) * 100);
+          texto = `¡Más rápida! ${t} vs esperado ${esp} (${pct > 0 ? '+' : ''}${pct}%)`;
+        } else {
+          texto = r.real ? `Rápida hoy (${t} vs ${esp})` : `Rápida (${t} vs referencia ${esp})`;
+        }
+        return { nivel: 'easy', texto };
+      }
+      if (tiempo <= r.esperado * 1.30) return { nivel: 'medium', texto: `Ritmo esperado (${t} vs ${esp})` };
+      return { nivel: 'hard', texto: `Más lenta de lo esperado (${t} vs ${esp})` };
     }
 
     function pintarCarga(texto) {
@@ -397,12 +470,14 @@
       });
 
       window.scrollTo(0, 0);
+      iniciarCronometro();
     }
 
     /* ---------- Fase 1: elegir respuesta ---------- */
     function seleccionarOpcion(i) {
       if (fase !== 'pregunta' || i < 0 || i >= numOpciones) return;
       fase = 'confianza';
+      detenerCronometro();               // congela el tiempo exacto al instante
       bloqueoHasta = Date.now() + 200;   // evita que una doble pulsación salte la fase de confianza
 
       const correcta = correctaVisual;   // índice visual de la correcta (ya contempla el barajado)
@@ -433,20 +508,45 @@
         pintarCombo(habiaRacha ? 'cae' : null);
       }
 
+      // Sugerencia de confianza según tiempo esperado (65 % histórico de la tarjeta + 35 % mediana de hoy)
+      const tarjetaAntes = obtenerTarjetas()[claveActual] || {};
+      aciertoActual = acierto;
+      const sug = sugerirConfianza(acierto, tiempoActual, tiemposSesion, tarjetaAntes.tiempoMedioSeg);
+      nivelSugerido = sug.nivel;
+      tiemposSesion.push(tiempoActual);  // entra en la mediana a partir de la SIGUIENTE pregunta
+
+      // Mejora vs. el anterior repaso: solo la 1.ª vez que sale la tarjeta en la sesión y si hay tiempo previo
+      if (!sesion.vistas.has(claveActual)) {
+        sesion.vistas.add(claveActual);
+        if (Number(tarjetaAntes.ultimoTiempoSeg) > 0) {
+          sesion.comparables.add(claveActual);
+          if (acierto && tiempoActual < Number(tarjetaAntes.ultimoTiempoSeg)) sesion.mejoradas.add(claveActual);
+        }
+      }
+
       const intervalos = previsualizarIntervalosTarjeta(claveActual) || {};
       const panel = el('repasoConfianza');
-      const sugerido = acierto ? '' : 'again';
-      const botonHTML = (n) => `
-        <button type="button" class="repaso-btn-confianza btn-${n.nivel} ${sugerido === n.nivel ? 'sugerido' : ''}" data-nivel="${n.nivel}">
+      const hoyStr = hoyISO();
+      const botonHTML = (n) => {
+        const dias = intervalos[n.nivel];
+        const fecha = n.nivel !== 'again' && dias > 0 ? fechaCortaISO(sumarDiasISO(hoyStr, dias)) : '';
+        return `
+        <button type="button" class="repaso-btn-confianza btn-${n.nivel} ${sug.nivel === n.nivel ? 'sugerido' : ''}" data-nivel="${n.nivel}">
           <span class="repaso-btn-linea"><span class="repaso-tecla">${n.tecla}</span> ${n.etiqueta}</span>
-          <span class="repaso-btn-dias">${etiquetaIntervalo(n.nivel, intervalos[n.nivel])}</span>
+          <span class="repaso-btn-dias">${etiquetaIntervalo(n.nivel, dias)}</span>
+          ${fecha ? `<span class="repaso-btn-fecha">${esc(fecha)}</span>` : ''}
         </button>`;
+      };
 
       panel.innerHTML = `
         <div class="repaso-confianza-cab">
           <span class="repaso-confianza-titulo">Calibrar confianza</span>
           <span class="repaso-resultado ${acierto ? 'ok' : 'ko'}">${acierto ? '¡Correcto!' : 'Incorrecta'}</span>
         </div>
+        <p class="repaso-sugerencia nivel-${sug.nivel}">
+          <span class="repaso-sugerencia-tag">Sugerida: ${esc(ETIQUETA_NIVEL[sug.nivel])}</span>
+          <span class="repaso-sugerencia-texto">${esc(sug.texto)}</span>
+        </p>
         <div class="repaso-confianza-botones">
           ${NIVELES.filter((n) => n.nivel !== 'again').map(botonHTML).join('')}
           <span class="repaso-confianza-sep" aria-hidden="true"></span>
@@ -459,7 +559,7 @@
       });
 
       const ayuda = el('repasoAyuda');
-      if (ayuda) ayuda.innerHTML = 'Pulsa <kbd>1</kbd> Hard · <kbd>2</kbd> Medium · <kbd>3</kbd> Easy · <kbd>4</kbd> Again';
+      if (ayuda) ayuda.innerHTML = 'Pulsa <kbd>1</kbd> Hard · <kbd>2</kbd> Medium · <kbd>3</kbd> Easy · <kbd>4</kbd> Again · <kbd>Espacio</kbd>/<kbd>Enter</kbd> acepta la sugerida y pasa a la siguiente';
 
       // En pantallas pequeñas asegura que el panel de confianza quede a la vista
       requestAnimationFrame(() => {
@@ -476,7 +576,7 @@
       cont.querySelectorAll('.repaso-btn-confianza').forEach((b) => { b.disabled = true; });
 
       try {
-        await calificarTarjetaAnki(claveActual, nivel);
+        await calificarTarjetaAnki(claveActual, nivel, tiempoActual, aciertoActual);   // el botón elegido manda; el tiempo solo es estadística
       } catch (err) {
         console.error('Error calificando la tarjeta:', err);
       }
@@ -515,6 +615,32 @@
       const rachaMax = sesion ? sesion.rachaMax : 0;
       const hayMas = e.colaHoy.length > 0;
 
+      // Resumen de tiempos de la sesión vs. límite oficial del examen (60 s/pregunta)
+      let bloqueTiempos = '';
+      if (tiemposSesion.length) {
+        const nMejoradas = sesion ? sesion.mejoradas.size : 0;
+        const nComparables = sesion ? sesion.comparables.size : 0;
+        const textoMejora = nComparables === 0
+          ? 'Aún no hay tiempos previos con los que comparar: en tu próximo repaso verás cuánto mejoras.'
+          : nMejoradas > 0
+            ? `⚡ ${nMejoradas} ${nMejoradas === 1 ? 'tarjeta respondida' : 'tarjetas respondidas'} más rápido que en tu anterior repaso (de ${nComparables} con historial)`
+            : `Ninguna tarjeta más rápida que en tu anterior repaso (${nComparables} con historial)`;
+        const mediana = calcularMediana(tiemposSesion);
+        const media = tiemposSesion.reduce((a, b) => a + b, 0) / tiemposSesion.length;
+        const pct = Math.min(100, Math.round((media / TOPE_TIEMPO_SEG) * 100));
+        bloqueTiempos = `
+          <div class="repaso-tiempos">
+            <div class="repaso-tiempos-fila">
+              <div class="repaso-tiempo-item"><strong>${fmtSeg(mediana)}</strong><span>Mediana de hoy</span></div>
+              <div class="repaso-tiempo-item"><strong>${fmtSeg(media)}</strong><span>Media por pregunta</span></div>
+              <div class="repaso-tiempo-item limite"><strong>${TOPE_TIEMPO_SEG}s</strong><span>Límite DGT</span></div>
+            </div>
+            <div class="repaso-tiempos-barra" aria-hidden="true"><div class="repaso-tiempos-relleno" style="width:${pct}%"></div></div>
+            <p class="repaso-tiempos-mejora ${nMejoradas > 0 ? 'hay-mejora' : ''}">${textoMejora}</p>
+            <p class="repaso-tiempos-nota">Usas de media el ${pct} % del tiempo por pregunta del examen (${tiemposSesion.length} ${tiemposSesion.length === 1 ? 'respuesta' : 'respuestas'} cronometradas).</p>
+          </div>`;
+      }
+
       cont.innerHTML = `
         <div class="repaso-final">
           <div class="repaso-final-icono" aria-hidden="true">✓</div>
@@ -529,6 +655,7 @@
             <div class="repaso-resumen-item madurez-joven"><strong>${e.jovenes}</strong><span>Jóvenes</span></div>
             <div class="repaso-resumen-item madurez-madura"><strong>${e.maduras}</strong><span>Maduras</span></div>
           </div>
+          ${bloqueTiempos}
           <p class="repaso-final-sub">${e.totalMazo} preguntas en seguimiento · examen en ${e.diasRestantes} ${e.diasRestantes === 1 ? 'día' : 'días'}</p>
           ${hayMas ? `<a class="repaso-btn-secundario" href="test.html?modo=repaso">Seguir con ${e.colaHoy.length} ${e.colaHoy.length === 1 ? 'tarjeta más' : 'tarjetas más'}</a>` : ''}
           <a class="repaso-btn-volver" href="index.html">Volver al panel <kbd>Enter</kbd></a>
@@ -546,6 +673,7 @@
       } else if (fase === 'confianza') {
         const nivel = TECLA_A_NIVEL[e.key];
         if (nivel) { e.preventDefault(); calificar(nivel); }
+        else if ((e.key === ' ' || e.key === 'Enter') && nivelSugerido) { e.preventDefault(); calificar(nivelSugerido); }
       } else if (fase === 'final' && e.key === 'Enter') {
         window.location.href = 'index.html';
       }
@@ -559,6 +687,9 @@
         if (necesitaInicializarMazo()) {
           pintarCarga('Preparando mazo Anki...');
           await inicializarMazoAnkiDesdeTests();
+        } else {
+          pintarCarga('Buscando tests nuevos...');
+          await sincronizarTestsSiToca();
         }
       } catch (err) {
         console.error('Error preparando el mazo:', err);
@@ -576,7 +707,8 @@
         pendientes: [], total: 0, hechas: 0,
         contadores: { hard: 0, medium: 0, easy: 0, again: 0 },
         repetidas: new Set(),
-        racha: 0, rachaMax: 0
+        racha: 0, rachaMax: 0,
+        vistas: new Set(), comparables: new Set(), mejoradas: new Set()
       };
       if (!estado.colaHoy.length) { mostrarFinal(); return; }
 

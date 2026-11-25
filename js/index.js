@@ -547,6 +547,7 @@ async function buscarNuevosTestsAnki() {
       const t = r.testsNuevos === 1 ? '1 test nuevo' : `${r.testsNuevos} tests nuevos`;
       mostrarMensajeMant(
         `Se añadieron ${r.anadidas} ${r.anadidas === 1 ? 'tarjeta nueva' : 'tarjetas nuevas'} (${t}). Mazo: ${r.totalMazo} tarjetas.` +
+        (r.omitidas > 0 ? ` ${r.omitidas} preguntas omitidas por no tener "correcta".` : '') +
         (r.sincronizado === false ? ' Guardado solo en este dispositivo (sin conexión con la nube).' : ''),
         r.sincronizado === false ? 'error' : 'ok'
       );
@@ -634,4 +635,6 @@ document.getElementById('inputJson').addEventListener('change', (e) => {
 
 // Pinta al instante con lo local y luego actualiza desde Supabase
 renderDashboard();
-sincronizarDesdeNube().then(() => renderDashboard());
+sincronizarDesdeNube()
+  .then(() => { renderDashboard(); return sincronizarTestsSiToca(); })
+  .then((r) => { if (r && r.anadidas > 0) renderDashboard(); });

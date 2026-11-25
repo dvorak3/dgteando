@@ -315,17 +315,14 @@ async function inicializarMazoAnkiDesdeTests() {
   return { testsCargados, anadidas, totalMazo: Object.keys(progreso._tarjetas).length };
 }
 
-// Busca en data/ tests que aún no tienen ninguna tarjeta en el mazo y los añade como "nueva".
-// No toca las tarjetas ya existentes (ni su progreso). Devuelve { anadidas, testsNuevos, totalMazo, sincronizado }.
+// Recorre TODOS los tests de data/ (1..ANKI_MAX_TEST) y añade como "nueva" cada pregunta cuya clave aún no está
+// en el mazo (tests nuevos o preguntas nuevas en tests ya existentes). No toca las tarjetas existentes.
+// Devuelve { anadidas, testsNuevos, omitidas, totalMazo, sincronizado }; "omitidas" = preguntas sin "correcta" numérica.
 async function sincronizarNuevosTestsAlMazo() {
-  const testsConTarjetas = new Set(Object.values(obtenerTarjetas()).map((t) => Number(t.testId)));
-  const candidatos = [];
-  for (let n = 1; n <= ANKI_MAX_TEST; n++) {
-    if (!testsConTarjetas.has(n)) candidatos.push(n);
-  }
-
   const cargas = await Promise.all(
-    candidatos.map((n) => cargarDatosTest(n).then((data) => ({ n, data })))
+    Array.from({ length: ANKI_MAX_TEST }, (_, i) =>
+      cargarDatosTest(i + 1).then((data) => ({ n: i + 1, data }))
+    )
   );
 
   // Se lee el progreso DESPUÉS de las descargas para no pisar cambios hechos mientras tanto
@@ -336,13 +333,14 @@ async function sincronizarNuevosTestsAlMazo() {
   const hoy = hoyISO();
   let anadidas = 0;
   let testsNuevos = 0;
+  let omitidas = 0;
 
   cargas.forEach(({ n, data }) => {
     const preguntas = preguntasDeDatosTest(data);
     if (!preguntas) return;
     let anadidasTest = 0;
     preguntas.forEach((p, idx) => {
-      if (!p || typeof p.correcta !== "number") return;
+      if (!p || typeof p.correcta !== "number") { omitidas++; return; }
       const clave = claveTarjeta(n, idx);
       if (!progreso._tarjetas[clave]) {
         progreso._tarjetas[clave] = crearTarjeta(n, idx, hoy);
@@ -359,7 +357,21 @@ async function sincronizarNuevosTestsAlMazo() {
   let sincronizado = true;
   if (anadidas > 0 || marcarInicializado) sincronizado = await guardarProgreso(progreso);
 
-  return { anadidas, testsNuevos, totalMazo: Object.keys(progreso._tarjetas).length, sincronizado };
+  return { anadidas, testsNuevos, omitidas, totalMazo: Object.keys(progreso._tarjetas).length, sincronizado };
+}
+
+// Sincronización automática: una vez por pestaña/sesión (el botón del modal la fuerza siempre).
+// Solo actúa si el mazo ya existe; si no, lo crea el primer repaso. Devuelve el resultado o null si no hizo nada.
+async function sincronizarTestsSiToca() {
+  try {
+    if (necesitaInicializarMazo()) return null;
+    if (sessionStorage.getItem("anki_sync_tests") === "1") return null;
+    sessionStorage.setItem("anki_sync_tests", "1");
+    return await sincronizarNuevosTestsAlMazo();
+  } catch (err) {
+    console.error("Error sincronizando nuevos tests:", err);
+    return null;
+  }
 }
 
 // Vacía el mazo Anki (mantiene resultados de tests, fecha de examen y configuración) y lo vuelve a crear desde data/
@@ -439,13 +451,51 @@ function previsualizarIntervalosTarjeta(clave) {
   return resultado;
 }
 
-// Califica una tarjeta ("again" | "hard" | "medium" | "easy"), la guarda y devuelve su nuevo estado
-async function calificarTarjetaAnki(clave, nivelConfianza) {
+const ANKI_TOPE_TIEMPO_SEG = 60; // tope para estadísticas (ausencias, pausas...)
+
+// Tiempo válido (segundos, con tope y 1 decimal) o null si no es un número utilizable
+function normalizarTiempoSeg(tiempoSegundos) {
+  const t = Number(tiempoSegundos);
+  if (tiempoSegundos === null || tiempoSegundos === undefined || !Number.isFinite(t) || t < 0) return null;
+  return Math.round(Math.min(ANKI_TOPE_TIEMPO_SEG, t) * 10) / 10;
+}
+
+// Califica una tarjeta ("again" | "hard" | "medium" | "easy"), la guarda y devuelve su nuevo estado.
+// El botón elegido manda al 100 % sobre intervalo y madurez: el tiempo solo alimenta estadísticas.
+// "acierto" (opcional): si la respuesta fue correcta; sirve para el récord mejorTiempoSeg
+// (si no se pasa, se considera acierto todo lo que no sea "again").
+async function calificarTarjetaAnki(clave, nivelConfianza, tiempoSegundos, acierto) {
   const progreso = obtenerProgreso();
   const tarjeta = progreso._tarjetas && progreso._tarjetas[clave];
   if (!tarjeta) throw new Error(`La tarjeta ${clave} no existe en el mazo`);
 
   const nueva = calcularNuevoEstadoTarjeta(tarjeta, nivelConfianza, calcularDiasHastaExamen(), hoyISO());
+
+  // Contador total de revisiones de la tarjeta
+  const revisionesPrevias = Number(tarjeta.revisiones) || 0;
+  nueva.revisiones = revisionesPrevias + 1;
+
+  const t = normalizarTiempoSeg(tiempoSegundos);
+  if (t !== null) {
+    const mediaPrevia = Number(tarjeta.tiempoMedioSeg);
+    // Nº de revisiones con tiempo medido (coincide con "revisiones" mientras todas se hayan cronometrado)
+    const nPrevias = Number(tarjeta.nTiempos) || (mediaPrevia > 0 ? revisionesPrevias : 0);
+
+    nueva.ultimoTiempoSeg = t;
+    // (tiempoMedioSeg * revisionesPrevias + tiempoActual) / (revisionesPrevias + 1)
+    nueva.tiempoMedioSeg = nPrevias > 0 && mediaPrevia > 0
+      ? Math.round(((mediaPrevia * nPrevias + t) / (nPrevias + 1)) * 100) / 100
+      : t;
+    nueva.nTiempos = nPrevias + 1;
+
+    // Récord: menor tiempo con respuesta acertada
+    const fueAcierto = acierto === undefined ? nivelConfianza !== "again" : acierto === true;
+    if (fueAcierto) {
+      const mejorPrevio = Number(tarjeta.mejorTiempoSeg);
+      nueva.mejorTiempoSeg = mejorPrevio > 0 ? Math.min(mejorPrevio, t) : t;
+    }
+  }
+
   progreso._tarjetas[clave] = nueva;
   await guardarProgreso(progreso);
   return nueva;
