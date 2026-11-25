@@ -181,7 +181,7 @@
     try {
       await sincronizacionInicial;                       // parte del progreso más reciente de la nube
       const clave = `test_${String(window.TEST_ID).padStart(3, '0')}`;  // misma clave que usa index.js
-      const resultado = await guardarResultadoTest(clave, aciertos, fallos, total, indicesFallados);
+      const resultado = await guardarResultadoTest(clave, aciertos, fallos, total, indicesFallados, PREGUNTAS);
       if (resultado === false) guardadoNube = false;     // storage.js devuelve false si Supabase falló
 
       const guardado = obtenerProgreso()[clave];
@@ -428,6 +428,9 @@
       const repeticion = sesion.repetidas.has(claveActual) ? '<span class="repaso-repeticion">Repetición</span>' : '';
       const refTest = String(tarjeta.testId).padStart(3, '0');
       const refPregunta = String((Number(tarjeta.preguntaIdx) || 0) + 1).padStart(2, '0');
+      // Categoría DGT: la guardada en la tarjeta o, si aún no se ha migrado, la calculada al vuelo
+      const categoria = tarjeta.categoria
+        || (typeof categoriaDePregunta === 'function' ? categoriaDePregunta(pregActual) : '');
 
       // Orden visual: posición en pantalla -> índice original en el JSON.
       // Si "barajarOpciones" está activo se mezcla en cada aparición; el rastreo de la correcta se mantiene
@@ -448,7 +451,10 @@
       stage.innerHTML = `
         <article class="repaso-tarjeta ${imagenSrc ? 'con-imagen' : ''}" id="repasoTarjeta">
           <div class="repaso-contexto">
-            <span>Test ${esc(refTest)} · Pregunta ${esc(refPregunta)}</span>
+            <span class="repaso-contexto-izq">
+              <span>Test ${esc(refTest)} · Pregunta ${esc(refPregunta)}</span>
+              ${categoria ? `<span class="repaso-categoria">${esc(categoria)}</span>` : ''}
+            </span>
             <span class="repaso-contexto-der">
               ${repeticion}
               <span class="repaso-badge madurez-${esc(tarjeta.madurez)}">${ETIQUETA_MADUREZ[tarjeta.madurez] || esc(tarjeta.madurez)}</span>
@@ -615,6 +621,24 @@
       const rachaMax = sesion ? sesion.rachaMax : 0;
       const hayMas = e.colaHoy.length > 0;
 
+      // Categorías más flojas según el historial real (mayor % de fallos)
+      const debiles = typeof obtenerCategoriasDebiles === 'function' ? obtenerCategoriasDebiles(3) : [];
+      const bloqueDebiles = debiles.length ? `
+        <div class="repaso-debiles">
+          <h3 class="repaso-debiles-titulo">Categorías a reforzar</h3>
+          <ul class="repaso-debiles-lista">
+            ${debiles.map((c) => {
+              const pct = Math.round(c.tasaFallo * 100);
+              return `
+              <li class="repaso-debil-item">
+                <span class="repaso-debil-nombre">${esc(c.categoria)}</span>
+                <span class="repaso-debil-barra" aria-hidden="true"><span style="width:${pct}%"></span></span>
+                <span class="repaso-debil-pct">${pct} % de fallos</span>
+              </li>`;
+            }).join('')}
+          </ul>
+        </div>` : '';
+
       // Resumen de tiempos de la sesión vs. límite oficial del examen (60 s/pregunta)
       let bloqueTiempos = '';
       if (tiemposSesion.length) {
@@ -656,6 +680,7 @@
             <div class="repaso-resumen-item madurez-madura"><strong>${e.maduras}</strong><span>Maduras</span></div>
           </div>
           ${bloqueTiempos}
+          ${bloqueDebiles}
           <p class="repaso-final-sub">${e.totalMazo} preguntas en seguimiento · examen en ${e.diasRestantes} ${e.diasRestantes === 1 ? 'día' : 'días'}</p>
           ${hayMas ? `<a class="repaso-btn-secundario" href="test.html?modo=repaso">Seguir con ${e.colaHoy.length} ${e.colaHoy.length === 1 ? 'tarjeta más' : 'tarjetas más'}</a>` : ''}
           <a class="repaso-btn-volver" href="index.html">Volver al panel <kbd>Enter</kbd></a>

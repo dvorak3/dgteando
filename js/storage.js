@@ -250,8 +250,105 @@ function claveTarjeta(testId, preguntaIdx) {
   return `${String(testId).padStart(3, "0")}_${String(preguntaIdx + 1).padStart(2, "0")}`;
 }
 
-function crearTarjeta(testId, preguntaIdx, hoy = hoyISO()) {
-  return {
+/* =====================================================================
+ *  CATEGORÍAS DGT (clasificación automática por palabras clave)
+ * ===================================================================== */
+
+const SIN_CATEGORIA = "Sin clasificar";
+const CATEGORIA_POR_DEFECTO = "Otras normas";
+
+// El orden importa: en caso de empate gana la categoría que aparece antes.
+// Los patrones se aplican sobre texto en minúsculas y SIN tildes ni ñ (ver normalizarTextoDGT).
+const CATEGORIAS_DGT = [
+  { nombre: "Señales y marcas viales", patrones: [
+    /\bsenal(es|izacion|izada|izadas)?\b/, /\bmarcas? viales?\b/, /\blineas? (blanca|amarilla|continua|discontinua|longitudinal|transversal|de detencion)/,
+    /\bsemaforos?\b/, /\bpaneles?\b/, /\bagentes?\b/, /\bcebreado/, /\bbaden\b/, /\bresalto/, /\bcarriles? (bus|reversible|especial|vao)/,
+    /\bpaso de peatones\b/, /\bdelimit/, /\bbalizamiento/, /\bmarcas? (longitudinales|transversales|blancas|amarillas)/, /\bpictograma/
+  ]},
+  { nombre: "Velocidad", patrones: [
+    /\bvelocidad/, /\bkm\/h\b/, /\bdistancias? de (seguridad|separacion|detencion|frenado|reaccion)/, /\bdistancia\b/, /\bfrenado\b/,
+    /\btiempo de reaccion/, /\bradar/, /\bacelera/
+  ]},
+  { nombre: "Prioridad y cruces", patrones: [
+    /\bprioridad/, /\bced(er|a)( el)? paso\b/, /\binterseccion/, /\bcruces?\b/, /\bglorieta/, /\brotonda/, /\bpreferencia/, /\bstop\b/,
+    /\bpaso a nivel\b/, /\bbifurcacion/, /\bvehiculos? (prioritario|de servicio)/, /\bpuente estrecho/, /\bestrechamiento/
+  ]},
+  { nombre: "Maniobras", patrones: [
+    /\badelant/, /\bcambio de sentido\b/, /\bmarcha atras\b/, /\bgir(o|a|ar|e|ando)\b/, /\bincorpor/, /\bestacion/, /\bparadas?\b/,
+    /\bcambio de (carril|direccion)\b/, /\bcambiar de carril\b/, /\bmaniobra/, /\bcarril\b/, /\bretroceder/, /\bdar la vuelta\b/,
+    /\b(entrar|entrada|salir|salida) (en|de) (una |la )?(autopista|autovia)/, /\bsentido contrario\b/, /\bdetenerse\b/, /\bdetencion\b/
+  ]},
+  { nombre: "Alumbrado y visibilidad", patrones: [
+    /\bluz\b/, /\bluces\b/, /\balumbrado/, /\bniebla/, /\bvisibilidad/, /\bdeslumbr/, /\bfaros?\b/, /\bintermitentes?\b/, /\bantiniebla/,
+    /\bnoche\b/, /\bnocturn/, /\banochecer|amanecer|puesta de(l)? sol|salida de(l)? sol\b/, /\bchaleco/, /\bcatadioptric/, /\bpilotos?\b/, /\bcondiciones de (luz|visibilidad)/
+  ]},
+  { nombre: "Alcohol, drogas y fatiga", patrones: [
+    /\balcohol/, /\bdrogas?\b/, /\bestupefaciente/, /\bfatiga/, /\bcansancio/, /\bsomnolencia/, /\bsueno\b/, /\bmedicamento/, /\bmedicina/,
+    /\bembriaguez/, /\bdescans(o|ar)/, /\balcoholemia/, /\bsustancias\b/, /\bbebidas\b/
+  ]},
+  { nombre: "Seguridad y sistemas", patrones: [
+    /\bcinturon/, /\bcasco\b/, /\bairbag/, /\badas\b/, /\bsistemas? (avanzados|de (retencion|seguridad|ayuda|asistencia|frenado))/, /\bretencion/,
+    /\bnin(o|a|os|as)\b/, /\babs\b/, /\besp\b/, /\bestabilidad\b/, /\bposicion\b/, /\bapoyacabezas|reposacabezas/, /\bchanclas|calzado/,
+    /\bseguridad (activa|pasiva|vial)/, /\bsubmarino/, /\bdistraccion/, /\bmovil\b/, /\btelefono/, /\bauriculares/, /\bmanos libres\b/,
+    /\bconduccion (segura|defensiva)/, /\bsri\b/, /\bvehiculos? (autonomo|conectado)/
+  ]},
+  { nombre: "Accidentes y primeros auxilios", patrones: [
+    /\baccidente/, /\bherid(o|os|a|as)\b/, /\bprimeros auxilios\b/, /\bsocorro/, /\bauxilio/, /\bextintor/, /\bincendio/, /\barder\b/, /\bfuego/,
+    /\baveri/, /\bv-?16\b/, /\btriangulos?\b/, /\bpresenaliz/, /\bambulancia/, /\bevacuar/, /\bhemorragia/, /\breanimacion/, /\binmovilizado\b/, /\bp\.?a\.?s\b/
+  ]},
+  { nombre: "Documentación y normativa", patrones: [
+    /\bpermiso/, /\blicencia/, /\bseguro (obligatorio|del vehiculo)/, /\bitv\b/, /\binspeccion tecnica/, /\bdocumentacion/, /\bsancion/, /\bmultas?\b/,
+    /\bpuntos? (del|de) (permiso|carnet|conducir)/, /\binfraccion/, /\bmatricula/, /\breglamento|normativa|\bley\b/, /\bautorizacion/,
+    /\bdistintivo ambiental/, /\btarjeta\b/, /\bcarne\b|\bcarnet\b/, /\bnovel\b/, /\bautoescuela/, /\bprofesor/, /\balumno/, /\bresponsab/,
+    /\bdenuncia/, /\bretirada\b/, /\bzonas? de bajas emisiones\b|\bzbe\b/, /\bvao\b/, /\bantecedentes/
+  ]},
+  { nombre: "Mecánica y mantenimiento", patrones: [
+    /\bneumatic/, /\baceite/, /\bbateria/, /\bmotor\b/, /\bliquido/, /\bfrenos?\b/, /\bamortiguador/, /\brefrigerante/, /\bdesgaste/, /\bpresion\b/,
+    /\bcombustible/, /\bconsumo\b/, /\bmantenimiento/, /\bremolque/, /\bespejos?\b/, /\bretrovisor/, /\bparabrisas/, /\bescape\b|\bcatalizador|\bemisiones\b/,
+    /\bembrague/, /\bcaja de cambios\b/, /\bsuspension/, /\btestigo/, /\bcadenas\b/, /\bfiltro\b/, /\bcarga\b/, /\bmecanic/
+  ]}
+];
+
+function normalizarTextoDGT(texto) {
+  return String(texto === null || texto === undefined ? "" : texto)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")            // quita tildes (la ñ pasa a n)
+    .replace(/\bluces? de cruce\b/g, "luz corta") // evita confundir "luz de cruce" con "cruce" de calles
+    .replace(/\s+/g, " ");
+}
+
+// Asigna una categoría DGT analizando el enunciado (peso 3) y, si se pasan, las opciones (peso 1).
+// Devuelve siempre un texto: la categoría con más coincidencias o "Otras normas" si no hay ninguna.
+function clasificarCategoriaDGT(enunciado, opciones = null) {
+  const textoEnunciado = normalizarTextoDGT(enunciado);
+  const textoOpciones = Array.isArray(opciones) ? normalizarTextoDGT(opciones.join(" . ")) : "";
+
+  let mejor = CATEGORIA_POR_DEFECTO;
+  let mejorPuntos = 0;
+  CATEGORIAS_DGT.forEach((cat) => {
+    let puntos = 0;
+    cat.patrones.forEach((re) => {
+      if (re.test(textoEnunciado)) puntos += 3;
+      if (textoOpciones && re.test(textoOpciones)) puntos += 1;
+    });
+    if (puntos > mejorPuntos) { // estrictamente mayor: en empate gana la categoría que va antes
+      mejorPuntos = puntos;
+      mejor = cat.nombre;
+    }
+  });
+  return mejor;
+}
+
+// Si el JSON de la pregunta ya trae "categoria" se respeta; si no, se calcula
+function categoriaDePregunta(pregunta) {
+  if (!pregunta || typeof pregunta !== "object") return CATEGORIA_POR_DEFECTO;
+  if (typeof pregunta.categoria === "string" && pregunta.categoria.trim()) return pregunta.categoria.trim();
+  return clasificarCategoriaDGT(pregunta.texto, pregunta.opciones);
+}
+
+function crearTarjeta(testId, preguntaIdx, hoy = hoyISO(), categoria = null) {
+  const tarjeta = {
     testId: Number(testId),
     preguntaIdx: Number(preguntaIdx),
     madurez: "nueva",
@@ -260,6 +357,8 @@ function crearTarjeta(testId, preguntaIdx, hoy = hoyISO()) {
     intervaloDias: 0,
     proximaRevision: hoy
   };
+  if (categoria) tarjeta.categoria = categoria;
+  return tarjeta;
 }
 
 function obtenerTarjetas() {
@@ -275,99 +374,104 @@ function necesitaInicializarMazo() {
   return !hayTarjetas || !inicializado;
 }
 
-// Carga todos los tests disponibles en data/ e incorpora sus preguntas al mazo como "nueva".
-// Es idempotente: no toca las tarjetas que ya existen. Solo entran preguntas con "correcta" conocida.
-async function inicializarMazoAnkiDesdeTests() {
-  const cargas = await Promise.all(
+// Descarga en paralelo todos los tests de data/ (1..ANKI_MAX_TEST)
+function descargarTodosLosTests() {
+  return Promise.all(
     Array.from({ length: ANKI_MAX_TEST }, (_, i) =>
       cargarDatosTest(i + 1).then((data) => ({ n: i + 1, data }))
     )
   );
+}
+
+// Incorpora al mazo (en el objeto progreso, sin guardar) las preguntas que aún no tienen tarjeta
+// y rellena "categoria" en las tarjetas existentes que no la tengan (migración silenciosa).
+// Nunca toca el estado de estudio de las tarjetas existentes.
+function incorporarPreguntasAlMazo(progreso, cargas, hoy) {
+  const r = { testsCargados: 0, anadidas: 0, testsNuevos: 0, omitidas: 0, categorizadas: 0 };
+
+  cargas.forEach(({ n, data }) => {
+    const preguntas = preguntasDeDatosTest(data);
+    if (!preguntas) return;
+    r.testsCargados++;
+    let anadidasTest = 0;
+    preguntas.forEach((p, idx) => {
+      if (!p || typeof p.correcta !== "number") { r.omitidas++; return; } // sin respuesta correcta no se puede repasar
+      const clave = claveTarjeta(n, idx);
+      const existente = progreso._tarjetas[clave];
+      if (!existente) {
+        progreso._tarjetas[clave] = crearTarjeta(n, idx, hoy, categoriaDePregunta(p));
+        anadidasTest++;
+      } else if (!existente.categoria) {
+        existente.categoria = categoriaDePregunta(p);
+        r.categorizadas++;
+      }
+    });
+    if (anadidasTest > 0) r.testsNuevos++;
+    r.anadidas += anadidasTest;
+  });
+  return r;
+}
+
+// Carga todos los tests disponibles en data/ e incorpora sus preguntas al mazo como "nueva" (con su categoría).
+// Es idempotente: no toca las tarjetas que ya existen (solo completa su categoría si faltaba).
+async function inicializarMazoAnkiDesdeTests() {
+  const cargas = await descargarTodosLosTests();
 
   // Se lee el progreso DESPUÉS de las descargas para no pisar cambios hechos mientras tanto
   const progreso = obtenerProgreso();
   if (!progreso._tarjetas || typeof progreso._tarjetas !== "object") progreso._tarjetas = {};
   if (!progreso._meta || typeof progreso._meta !== "object") progreso._meta = {};
 
-  const hoy = hoyISO();
-  let testsCargados = 0;
-  let anadidas = 0;
-
-  cargas.forEach(({ n, data }) => {
-    const preguntas = preguntasDeDatosTest(data);
-    if (!preguntas) return;
-    testsCargados++;
-    preguntas.forEach((p, idx) => {
-      if (!p || typeof p.correcta !== "number") return; // sin respuesta correcta no se puede repasar
-      const clave = claveTarjeta(n, idx);
-      if (!progreso._tarjetas[clave]) {
-        progreso._tarjetas[clave] = crearTarjeta(n, idx, hoy);
-        anadidas++;
-      }
-    });
-  });
+  const r = incorporarPreguntasAlMazo(progreso, cargas, hoyISO());
 
   if (Object.keys(progreso._tarjetas).length > 0) {
     progreso._meta.ankiInicializado = true;
   }
 
   await guardarProgreso(progreso);
-  return { testsCargados, anadidas, totalMazo: Object.keys(progreso._tarjetas).length };
+  return { testsCargados: r.testsCargados, anadidas: r.anadidas, categorizadas: r.categorizadas, totalMazo: Object.keys(progreso._tarjetas).length };
 }
 
 // Recorre TODOS los tests de data/ (1..ANKI_MAX_TEST) y añade como "nueva" cada pregunta cuya clave aún no está
-// en el mazo (tests nuevos o preguntas nuevas en tests ya existentes). No toca las tarjetas existentes.
-// Devuelve { anadidas, testsNuevos, omitidas, totalMazo, sincronizado }; "omitidas" = preguntas sin "correcta" numérica.
+// en el mazo (tests nuevos o preguntas nuevas en tests ya existentes). No toca las tarjetas existentes,
+// salvo para rellenar su "categoria" si aún no la tenían.
+// Devuelve { anadidas, testsNuevos, omitidas, categorizadas, totalMazo, sincronizado }; "omitidas" = preguntas sin "correcta" numérica.
 async function sincronizarNuevosTestsAlMazo() {
-  const cargas = await Promise.all(
-    Array.from({ length: ANKI_MAX_TEST }, (_, i) =>
-      cargarDatosTest(i + 1).then((data) => ({ n: i + 1, data }))
-    )
-  );
+  const cargas = await descargarTodosLosTests();
 
   // Se lee el progreso DESPUÉS de las descargas para no pisar cambios hechos mientras tanto
   const progreso = obtenerProgreso();
   if (!progreso._tarjetas || typeof progreso._tarjetas !== "object") progreso._tarjetas = {};
   if (!progreso._meta || typeof progreso._meta !== "object") progreso._meta = {};
 
-  const hoy = hoyISO();
-  let anadidas = 0;
-  let testsNuevos = 0;
-  let omitidas = 0;
-
-  cargas.forEach(({ n, data }) => {
-    const preguntas = preguntasDeDatosTest(data);
-    if (!preguntas) return;
-    let anadidasTest = 0;
-    preguntas.forEach((p, idx) => {
-      if (!p || typeof p.correcta !== "number") { omitidas++; return; }
-      const clave = claveTarjeta(n, idx);
-      if (!progreso._tarjetas[clave]) {
-        progreso._tarjetas[clave] = crearTarjeta(n, idx, hoy);
-        anadidasTest++;
-      }
-    });
-    if (anadidasTest > 0) testsNuevos++;
-    anadidas += anadidasTest;
-  });
+  const r = incorporarPreguntasAlMazo(progreso, cargas, hoyISO());
 
   const marcarInicializado = Object.keys(progreso._tarjetas).length > 0 && !progreso._meta.ankiInicializado;
   if (marcarInicializado) progreso._meta.ankiInicializado = true;
 
   let sincronizado = true;
-  if (anadidas > 0 || marcarInicializado) sincronizado = await guardarProgreso(progreso);
+  if (r.anadidas > 0 || r.categorizadas > 0 || marcarInicializado) sincronizado = await guardarProgreso(progreso);
 
-  return { anadidas, testsNuevos, omitidas, totalMazo: Object.keys(progreso._tarjetas).length, sincronizado };
+  return {
+    anadidas: r.anadidas,
+    testsNuevos: r.testsNuevos,
+    omitidas: r.omitidas,
+    categorizadas: r.categorizadas,
+    totalMazo: Object.keys(progreso._tarjetas).length,
+    sincronizado
+  };
 }
 
 // Sincronización automática: una vez por pestaña/sesión (el botón del modal la fuerza siempre).
+// Además de buscar tests nuevos, completa en silencio la "categoria" de las tarjetas antiguas.
 // Solo actúa si el mazo ya existe; si no, lo crea el primer repaso. Devuelve el resultado o null si no hizo nada.
 async function sincronizarTestsSiToca() {
   try {
     if (necesitaInicializarMazo()) return null;
     if (sessionStorage.getItem("anki_sync_tests") === "1") return null;
-    sessionStorage.setItem("anki_sync_tests", "1");
-    return await sincronizarNuevosTestsAlMazo();
+    const resultado = await sincronizarNuevosTestsAlMazo();
+    sessionStorage.setItem("anki_sync_tests", "1"); // solo se marca si terminó (si se cierra la página a medias, se reintenta)
+    return resultado;
   } catch (err) {
     console.error("Error sincronizando nuevos tests:", err);
     return null;
@@ -502,7 +606,8 @@ async function calificarTarjetaAnki(clave, nivelConfianza, tiempoSegundos, acier
 }
 
 // Registra (en el objeto progreso, sin guardar) las preguntas falladas de un test como "again"
-function registrarFallosEnMazo(progreso, testId, indicesFallados) {
+// "preguntas" (opcional): array de preguntas del test, para guardar su categoría en las tarjetas.
+function registrarFallosEnMazo(progreso, testId, indicesFallados, preguntas = null) {
   if (!indicesFallados || !indicesFallados.length) return;
   if (!progreso._tarjetas || typeof progreso._tarjetas !== "object") progreso._tarjetas = {};
 
@@ -510,42 +615,116 @@ function registrarFallosEnMazo(progreso, testId, indicesFallados) {
   const dias = calcularDiasHastaExamen();
   indicesFallados.forEach((idx) => {
     const clave = claveTarjeta(testId, idx);
-    const tarjeta = progreso._tarjetas[clave] || crearTarjeta(testId, idx, hoy);
+    const pregunta = Array.isArray(preguntas) ? preguntas[idx] : null;
+    const tarjeta = progreso._tarjetas[clave] || crearTarjeta(testId, idx, hoy, pregunta ? categoriaDePregunta(pregunta) : null);
+    if (!tarjeta.categoria && pregunta) tarjeta.categoria = categoriaDePregunta(pregunta);
     progreso._tarjetas[clave] = calcularNuevoEstadoTarjeta(tarjeta, "again", dias, hoy);
   });
 }
 
-// Hash determinista (FNV-1a): da un orden "aleatorio" estable durante todo el día
-function hashDeterminista(texto) {
-  let h = 2166136261;
-  for (let i = 0; i < texto.length; i++) {
-    h ^= texto.charCodeAt(i);
-    h = Math.imul(h, 16777619);
-  }
-  return h >>> 0;
+/* =====================================================================
+ *  ESTADÍSTICAS POR CATEGORÍA Y SELECCIÓN VARIADA DE LA COLA
+ * ===================================================================== */
+
+// Revisiones de una tarjeta (con estimación para tarjetas antiguas sin el campo "revisiones")
+function revisionesDeTarjeta(t) {
+  const fallos = Number(t.fallos) || 0;
+  const rev = Number(t.revisiones);
+  if (rev > 0) return Math.max(rev, fallos);
+  return Math.max(fallos + (Number(t.aciertosSeguidos) || 0), fallos, t.madurez !== "nueva" ? 1 : 0);
 }
 
-// Ordena la cola según config.orden: "prioridad" | "aleatorio" | "nuevas_primero"
-function ordenarColaAnki(cola, orden, hoy) {
-  const copia = [...cola];
-  if (orden === "aleatorio") {
-    return copia.sort((a, b) =>
-      hashDeterminista(hoy + a.clave) - hashDeterminista(hoy + b.clave) || a.clave.localeCompare(b.clave)
-    );
-  }
-  const rangos = orden === "nuevas_primero"
-    ? { nueva: 0, aprendiendo: 1, joven: 2, madura: 3 }
-    : { aprendiendo: 0, nueva: 1, joven: 2, madura: 3 };
-  const rango = (t) => (rangos[t.madurez] !== undefined ? rangos[t.madurez] : 9);
-  return copia.sort((a, b) =>
-    rango(a) - rango(b) ||
-    a.proximaRevision.localeCompare(b.proximaRevision) ||
-    (b.fallos || 0) - (a.fallos || 0) ||
-    a.clave.localeCompare(b.clave)
-  );
+// { "Velocidad": { categoria, tarjetas, fallos, revisiones, tasaFallo }, ... }
+// tasaFallo = fallos / max(1, revisiones), acotada a [0, 1]
+function calcularEstadisticasCategorias(tarjetas) {
+  const lista = Array.isArray(tarjetas) ? tarjetas : Object.values(obtenerTarjetas());
+  const stats = {};
+  lista.forEach((t) => {
+    const nombre = t.categoria || SIN_CATEGORIA;
+    if (!stats[nombre]) stats[nombre] = { categoria: nombre, tarjetas: 0, fallos: 0, revisiones: 0, tasaFallo: 0 };
+    stats[nombre].tarjetas++;
+    stats[nombre].fallos += Number(t.fallos) || 0;
+    stats[nombre].revisiones += revisionesDeTarjeta(t);
+  });
+  Object.values(stats).forEach((c) => {
+    c.tasaFallo = Math.min(1, Math.max(0, c.fallos / Math.max(1, c.revisiones)));
+  });
+  return stats;
 }
 
-// Cola de repaso de hoy y estadísticas del mazo (respeta obtenerConfigAnki())
+// Las categorías más flojas según el historial real (mayor tasa de fallo).
+// Solo cuentan categorías con datos suficientes (minRevisiones) y al menos un fallo.
+function obtenerCategoriasDebiles(max = 3, minRevisiones = 3) {
+  return Object.values(calcularEstadisticasCategorias())
+    .filter((c) => c.categoria !== SIN_CATEGORIA && c.revisiones >= minRevisiones && c.fallos > 0)
+    .sort((a, b) => b.tasaFallo - a.tasaFallo || b.fallos - a.fallos || b.revisiones - a.revisiones)
+    .slice(0, max);
+}
+
+// Fisher–Yates (modifica y devuelve el array)
+function barajarListaAnki(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Baraja evitando (si hay variedad) dos tarjetas seguidas del mismo test
+function barajarEvitandoMismoTest(lista, testPrevio = null) {
+  const resto = barajarListaAnki([...lista]);
+  const salida = [];
+  let previo = testPrevio;
+  while (resto.length) {
+    let idx = resto.findIndex((t) => t.testId !== previo);
+    if (idx === -1) idx = 0;
+    const [t] = resto.splice(idx, 1);
+    salida.push(t);
+    previo = t.testId;
+  }
+  return salida;
+}
+
+// Sorteo ponderado SIN reemplazo. peso = pesoBase(t) + 0.25 si es de un test distinto al de la tarjeta anterior.
+// maxNuevas limita cuántas tarjetas "nueva" pueden salir (Infinity = sin tope).
+function muestrearPonderado(candidatas, cantidad, pesoBase, testPrevio, maxNuevas) {
+  const pool = [...candidatas];
+  const elegidas = [];
+  let previo = testPrevio;
+  let nuevasUsadas = 0;
+
+  while (elegidas.length < cantidad && pool.length) {
+    const pesos = new Array(pool.length);
+    let total = 0;
+    for (let i = 0; i < pool.length; i++) {
+      const t = pool[i];
+      if (t.madurez === "nueva" && nuevasUsadas >= maxNuevas) { pesos[i] = 0; continue; }
+      pesos[i] = pesoBase(t) + (t.testId !== previo ? 0.25 : 0);
+      total += pesos[i];
+    }
+    if (total <= 0) break;
+
+    let r = Math.random() * total;
+    let k = -1;
+    for (let i = 0; i < pool.length; i++) {
+      if (pesos[i] <= 0) continue;
+      k = i;
+      r -= pesos[i];
+      if (r <= 0) break;
+    }
+    const [t] = pool.splice(k, 1);
+    elegidas.push(t);
+    previo = t.testId;
+    if (t.madurez === "nueva") nuevasUsadas++;
+  }
+  return elegidas;
+}
+
+// Cola de repaso de hoy y estadísticas del mazo (respeta obtenerConfigAnki()).
+// Construcción (nunca por orden de testId):
+//   1) "aprendiendo" vencidas, barajadas evitando repetir test seguido, y los repasos con retraso (siempre entran)
+//   2) hasta completar la cuota: sorteo ponderado entre "nueva" y "joven"/"madura" que vencen hoy,
+//      con peso = 1 + tasaFalloCategoria * 3 (+0.25 si el test es distinto al de la tarjeta anterior)
 function obtenerColaRepasoHoy() {
   const hoy = hoyISO();
   const diasRestantes = calcularDiasHastaExamen();
@@ -560,38 +739,62 @@ function obtenerColaRepasoHoy() {
   const noMaduras = entradas.filter((t) => t.madurez !== "madura");
   const cuotaBase = Math.ceil(noMaduras.length / Math.max(1, diasRestantes));
 
-  const vencidas = entradas.filter((t) => t.madurez !== "nueva" && t.proximaRevision <= hoy);
+  const estadisticas = calcularEstadisticasCategorias(entradas);
+  const pesoBase = (t) => {
+    const c = estadisticas[t.categoria || SIN_CATEGORIA];
+    return 1 + (c ? c.tasaFallo : 0) * 3;
+  };
+
+  const vencidasNoNuevas = entradas.filter((t) => t.madurez !== "nueva" && t.proximaRevision <= hoy);
+  const aprendiendo = vencidasNoNuevas.filter((t) => t.madurez === "aprendiendo");
+  // Repasos (joven/madura) con retraso: entran siempre para que ninguna tarjeta quede sin revisar indefinidamente
+  const repasosConRetraso = vencidasNoNuevas.filter((t) => t.madurez !== "aprendiendo" && t.proximaRevision < hoy);
+  const repasosDeHoy = vencidasNoNuevas.filter((t) => t.madurez !== "aprendiendo" && t.proximaRevision >= hoy);
   const nuevas = entradas.filter((t) => t.madurez === "nueva" && t.proximaRevision <= hoy);
+
   const introducidasHoy = entradas.filter((t) => t.introducida === hoy);
-  const vencidasAntiguas = vencidas.filter((t) => t.introducida !== hoy);
+  const forzadasAntiguas = [...aprendiendo, ...repasosConRetraso].filter((t) => t.introducida !== hoy);
   // Tarjetas ya terminadas hoy (revisadas y programadas para otro día)
   const hechasHoy = entradas.filter((t) => t.ultimaRevision === hoy && t.proximaRevision > hoy).length;
 
-  // Qué nuevas entran primero: por clave, o mezcladas (de forma estable por día) si el orden es aleatorio
-  if (config.orden === "aleatorio") {
-    nuevas.sort((a, b) =>
-      hashDeterminista(hoy + a.clave) - hashDeterminista(hoy + b.clave) || a.clave.localeCompare(b.clave)
-    );
-  } else {
-    nuevas.sort((a, b) => a.clave.localeCompare(b.clave));
-  }
-
   // Tope de nuevas al día (0 = sin tope); las ya introducidas hoy cuentan
-  const cupoNuevasConfig = config.limiteNuevas > 0
+  const maxNuevas = config.limiteNuevas > 0
     ? Math.max(0, config.limiteNuevas - introducidasHoy.length)
     : Infinity;
 
-  // Todas las vencidas entran siempre; las nuevas rellenan lo que falta para la cuota del día
-  let nuevasElegidas;
+  // Huecos que quedan en la cuota para el sorteo ponderado
+  let huecos;
   if (config.modoLimite === "ilimitado") {
-    nuevasElegidas = nuevas.slice(0, cupoNuevasConfig);
+    huecos = Infinity;
   } else {
     const objetivo = config.modoLimite === "personalizado" ? config.limiteDiario : cuotaBase;
-    const cupoCuota = Math.max(0, objetivo - vencidasAntiguas.length - introducidasHoy.length);
-    nuevasElegidas = nuevas.slice(0, Math.min(cupoCuota, cupoNuevasConfig));
+    huecos = Math.max(0, objetivo - forzadasAntiguas.length - introducidasHoy.length);
   }
 
-  let colaHoy = ordenarColaAnki([...vencidas, ...nuevasElegidas], config.orden, hoy);
+  // 1) Urgentes primero, variados entre tests
+  const aprendiendoOrd = barajarEvitandoMismoTest(aprendiendo);
+  const testTrasAprendiendo = aprendiendoOrd.length ? aprendiendoOrd[aprendiendoOrd.length - 1].testId : null;
+  const retrasoOrd = barajarEvitandoMismoTest(repasosConRetraso, testTrasAprendiendo);
+  const ultimaForzada = retrasoOrd.length ? retrasoOrd[retrasoOrd.length - 1] : aprendiendoOrd[aprendiendoOrd.length - 1];
+
+  // 2) Sorteo ponderado por debilidad de categoría entre nuevas y repasos de hoy
+  const elegidas = muestrearPonderado(
+    [...nuevas, ...repasosDeHoy],
+    huecos,
+    pesoBase,
+    ultimaForzada ? ultimaForzada.testId : null,
+    maxNuevas
+  );
+
+  let colaHoy = [...aprendiendoOrd, ...retrasoOrd, ...elegidas];
+
+  if (config.orden === "aleatorio") {
+    colaHoy = barajarEvitandoMismoTest(colaHoy);
+  } else if (config.orden === "nuevas_primero") {
+    // reparto estable: nuevas → aprendiendo → resto (se conserva la variedad dentro de cada bloque)
+    const rango = (t) => (t.madurez === "nueva" ? 0 : t.madurez === "aprendiendo" ? 1 : 2);
+    colaHoy = colaHoy.map((t, i) => ({ t, i })).sort((a, b) => rango(a.t) - rango(b.t) || a.i - b.i).map((x) => x.t);
+  }
 
   // Personalizado + límite estricto: se corta exactamente en el límite (descontando lo ya hecho hoy)
   if (config.modoLimite === "personalizado" && config.limiteEstricto) {
@@ -617,7 +820,8 @@ function obtenerColaRepasoHoy() {
 // Guarda el resultado de un test individual (para cuando acabes un test).
 // indicesFallados (opcional): índices 0-based de las preguntas falladas; pasan al mazo Anki como "again".
 // Devuelve true si todo quedó guardado también en la nube.
-async function guardarResultadoTest(claveTest, aciertos, fallos, total = 30, indicesFallados = null) {
+// preguntas (opcional): array de preguntas del test para guardar su categoría en el mazo.
+async function guardarResultadoTest(claveTest, aciertos, fallos, total = 30, indicesFallados = null, preguntas = null) {
   const progreso = obtenerProgreso();
   const anterior = progreso[claveTest] || { intentos: 0 };
 
@@ -655,7 +859,7 @@ async function guardarResultadoTest(claveTest, aciertos, fallos, total = 30, ind
   };
 
   const testId = parseInt(String(claveTest).replace(/\D/g, ""), 10);
-  if (Number.isFinite(testId)) registrarFallosEnMazo(progreso, testId, indicesFallados);
+  if (Number.isFinite(testId)) registrarFallosEnMazo(progreso, testId, indicesFallados, preguntas);
 
   return await guardarProgreso(progreso);
 }

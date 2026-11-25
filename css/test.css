@@ -1341,3 +1341,92 @@ html.modo-repaso .test-column {
   font-size: var(--text-rem-78);
   color: var(--texto-secundario);
 }
+
+/* =====================================================================
+   Repaso · categoría DGT de la pregunta y categorías a reforzar
+   ===================================================================== */
+.repaso-contexto-izq {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  min-width: 0;
+}
+
+.repaso-categoria {
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: var(--bg-etiqueta);
+  color: var(--texto-secundario);
+  font-size: var(--text-rem-70);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+.repaso-debiles {
+  max-width: 440px;
+  margin: 14px auto 6px;
+  text-align: left;
+}
+
+.repaso-debiles-titulo {
+  margin-bottom: 8px;
+  font-size: var(--text-rem-78);
+  font-weight: var(--weight-extrabold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--texto-secundario);
+}
+
+.repaso-debiles-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.repaso-debil-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 84px auto;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: var(--radius-xl);
+  background: var(--bg-boton-suave);
+  border: 1px solid var(--borde-suave);
+  font-size: var(--text-rem-85);
+}
+
+.repaso-debil-nombre {
+  font-weight: var(--weight-bold);
+  color: var(--texto-titulo);
+}
+
+.repaso-debil-barra {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--bg-pista-suave);
+  overflow: hidden;
+}
+
+.repaso-debil-barra > span {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--color-fallo-oscuro);
+}
+
+.repaso-debil-pct {
+  font-size: var(--text-rem-75);
+  font-weight: var(--weight-bold);
+  color: var(--color-fallo-oscuro);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .repaso-debil-item { grid-template-columns: minmax(0, 1fr) auto; }
+  .repaso-debil-barra { display: none; }
+}
