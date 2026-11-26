@@ -16,7 +16,7 @@ jobs:
   aplicar-flags:
     runs-on: ubuntu-latest
     env:
-      FLAGS_APPLIED_IDS_FILE: ${{ runner.temp }}/flags-${{ github.run_id }}-${{ github.run_attempt }}.json
+      FLAGS_APPLIED_IDS_FILE: ${{ github.workspace }}/.flags-${{ github.run_id }}-${{ github.run_attempt }}.json
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
