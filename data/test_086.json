@@ -166,7 +166,8 @@
         "No, porque corto el paso a los peatones."
       ],
       "correcta": 2,
-      "imagen": "../img/test_086_p17.jpg"
+      "imagen": "../img/test_086_p17.jpg",
+      "corregida": true
     },
     {
       "texto": "Al entrar en una glorieta que no dispone de señalización que regule la preferencia de paso, debe...",
@@ -186,7 +187,8 @@
         "la vía sin pavimentar."
       ],
       "correcta": 0,
-      "imagen": "../img/test_086_p19.jpg"
+      "imagen": "../img/test_086_p19.jpg",
+      "corregida": true
     },
     {
       "texto": "¿Tiene permitido circular una motocicleta por un carril habilitado en sentido contrario al habitual?",
