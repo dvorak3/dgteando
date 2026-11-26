@@ -6,6 +6,7 @@
   const BANDERA_VISIBLE = ['repaso', 'falladas'].includes(modoParam);
 
   let PREGUNTAS = [];
+  let BANDERA_TEST_VISIBLE = false;
   window.TEST_ID = null;
 
   function escaparHTML(valor) {
@@ -232,47 +233,96 @@
     contenedor.innerHTML = '';
 
     PREGUNTAS.forEach((preg, idx) => {
-      const imagenSrc = normalizarImagen(preg.imagen);
-      const tieneImg = Boolean(imagenSrc);
-      const article = document.createElement('article');
-      article.className = `pregunta-item ${tieneImg ? '' : 'sin-imagen'}`;
-      article.id = `pregunta-${idx}`;
+      contenedor.appendChild(crearTarjetaPregunta(preg, idx));
+    });
+  }
 
-      const opcionesHTML = preg.opciones.map((textoOp, opIdx) => `
-        <label class="opcion-label" id="lbl-${idx}-${opIdx}">
-          <input type="radio" name="p_${idx}" value="${opIdx}">
-          <span><span class="opcion-letra">${letras[opIdx]})</span> ${escaparHTML(textoOp)}</span>
-        </label>
-      `).join('');
+  function crearTarjetaPregunta(preg, idx) {
+    const imagenSrc = normalizarImagen(preg.imagen);
+    const tieneImg = Boolean(imagenSrc);
+    const article = document.createElement('article');
+    article.className = `pregunta-item ${tieneImg ? '' : 'sin-imagen'}`;
+    article.id = `pregunta-${idx}`;
 
-      const imagenHTML = tieneImg
-        ? `<div class="pregunta-media"><img src="${imagenSrc}" alt="Imagen pregunta ${idx + 1}"></div>`
-        : '';
+    const opcionesHTML = preg.opciones.map((textoOp, opIdx) => `
+      <label class="opcion-label" id="lbl-${idx}-${opIdx}">
+        <input type="radio" name="p_${idx}" value="${opIdx}">
+        <span><span class="opcion-letra">${letras[opIdx]})</span> ${escaparHTML(textoOp)}</span>
+      </label>
+    `).join('');
 
-      article.innerHTML = `
-        <div class="pregunta-cuerpo">
-          <div class="pregunta-enunciado">
-            <span class="p-num">${idx + 1}.</span> ${escaparHTML(preg.texto)}
-          </div>
-          <div class="opciones-lista">
-            ${opcionesHTML}
-          </div>
+    const imagenHTML = tieneImg
+      ? `<div class="pregunta-media"><img src="${imagenSrc}" alt="Imagen pregunta ${idx + 1}"></div>`
+      : '';
+    const parche = BANDERA_TEST_VISIBLE && typeof obtenerParchePregunta === 'function'
+      ? obtenerParchePregunta(window.TEST_ID, idx)
+      : null;
+    const banderaHTML = BANDERA_TEST_VISIBLE
+      ? `<button type="button" class="btn-bandera btn-bandera-test${parche ? ' corregida' : ''}" data-pregunta-idx="${idx}" title="${parche ? 'Editar corrección guardada' : 'Reportar o corregir esta pregunta'}" aria-label="Reportar o corregir pregunta ${idx + 1}">${ICONO_BANDERA}</button>`
+      : '';
+
+    article.innerHTML = `
+      ${banderaHTML}
+      <div class="pregunta-cuerpo">
+        <div class="pregunta-enunciado">
+          <span class="p-num">${idx + 1}.</span> ${escaparHTML(preg.texto)}
         </div>
-        ${imagenHTML}
-      `;
+        <div class="opciones-lista">
+          ${opcionesHTML}
+        </div>
+      </div>
+      ${imagenHTML}
+    `;
 
-      contenedor.appendChild(article);
-
-      // En modo estudio corrige inmediatamente al pulsar una opción
-      if (MODO === 'estudio') {
-        article.querySelectorAll('input[type="radio"]').forEach(radio => {
-          radio.addEventListener('change', (e) => {
-            marcarCorreccionPregunta(idx, Number(e.target.value));
-          });
+    if (MODO === 'estudio') {
+      article.querySelectorAll('input[type="radio"]').forEach((radio) => {
+        radio.addEventListener('change', (event) => {
+          marcarCorreccionPregunta(idx, Number(event.target.value));
         });
+      });
+    }
+
+    return article;
+  }
+
+  function abrirCorreccionTest(preguntaIdx) {
+    const pregunta = PREGUNTAS[preguntaIdx];
+    if (!BANDERA_TEST_VISIBLE || !pregunta) return;
+
+    const tarjeta = document.getElementById(`pregunta-${preguntaIdx}`);
+    abrirModalCorreccion({
+      testId: Number(window.TEST_ID),
+      preguntaIdx,
+      pregunta,
+      alGuardar: (parche) => {
+        const seleccionada = tarjeta.querySelector(`input[name="p_${preguntaIdx}"]:checked`);
+        const respuesta = seleccionada ? Number(seleccionada.value) : null;
+        const estabanBloqueadas = tarjeta.querySelector('input[type="radio"]')?.disabled === true;
+        aplicarParcheAPregunta(pregunta, parche);
+        const actualizada = crearTarjetaPregunta(pregunta, preguntaIdx);
+
+        actualizada.querySelectorAll('input[type="radio"]').forEach((radio) => {
+          radio.disabled = estabanBloqueadas;
+          if (respuesta !== null && Number(radio.value) === respuesta) radio.checked = true;
+        });
+        tarjeta.replaceWith(actualizada);
+        if (respuesta !== null && MODO === 'estudio') {
+          marcarCorreccionPregunta(preguntaIdx, respuesta);
+        }
+      },
+      alCerrar: () => {
+        const boton = document.querySelector(`#pregunta-${preguntaIdx} .btn-bandera-test`);
+        if (boton) boton.focus();
       }
     });
   }
+
+  contenedor.addEventListener('click', (event) => {
+    const boton = event.target.closest && event.target.closest('.btn-bandera-test');
+    if (!boton) return;
+    event.preventDefault();
+    abrirCorreccionTest(Number(boton.dataset.preguntaIdx));
+  });
 
   function marcarCorreccionPregunta(idx, seleccion) {
     const correcta = PREGUNTAS[idx].correcta;
@@ -389,7 +439,7 @@
   const ETIQUETA_NIVEL = { hard: 'Hard', medium: 'Medium', easy: 'Easy', again: 'Again' };
   const PUESTOS_REENCOLAR = 4; // "again": la tarjeta vuelve a salir unos puestos más adelante
   const TAMANO_BLOQUE_REPASO = 10;
-  const MS_SALIDA = 144;       // duración de la animación de salida de la tarjeta (debe coincidir con .repaso-stage.saliendo en test.css)
+  const MS_SALIDA = 120;       // duración de la animación de salida de la tarjeta (debe coincidir con .repaso-stage.saliendo en test.css)
 
   const SVG_ATTRS = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
   const ICONO_CHECK = `<svg ${SVG_ATTRS}><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>`;
@@ -994,6 +1044,13 @@
     async function mostrarFinal() {
       fase = 'finalizando';
       let falloSincronizacionFlags = false;
+      let falloSincronizacionProgreso = false;
+      try {
+        falloSincronizacionProgreso = !(await esperarGuardadoProgreso());
+      } catch (err) {
+        console.error('Error esperando la sincronización del progreso:', err);
+        falloSincronizacionProgreso = true;
+      }
       try {
         const resultado = await sincronizarFlagsSesion();
         falloSincronizacionFlags = !resultado.ok;
@@ -1071,6 +1128,7 @@
           </div>
           ${bloqueTiempos}
           ${bloqueDebiles}
+          ${falloSincronizacionProgreso ? '<p class="repaso-aviso-nube" role="status">⚠ No se pudo sincronizar todo el progreso; sigue guardado en este dispositivo.</p>' : ''}
           ${falloSincronizacionFlags ? '<p class="repaso-aviso-nube" role="status">⚠ No se pudieron enviar todas las correcciones; siguen guardadas en este dispositivo.</p>' : ''}
           <p class="repaso-final-sub">${e.totalMazo} preguntas en seguimiento · examen en ${e.diasRestantes} ${e.diasRestantes === 1 ? 'día' : 'días'}</p>
           ${hayMas ? `<a class="btn btn--contorno btn--lg" href="test.html?modo=repaso">Seguir con ${e.colaHoy.length} ${e.colaHoy.length === 1 ? 'tarjeta más' : 'tarjetas más'}</a>` : ''}
@@ -1096,8 +1154,13 @@
       if (salir) {
         event.preventDefault();
         salir.setAttribute('aria-disabled', 'true');
-        sincronizarFlagsSesion().catch((err) => {
-          console.error('Error sincronizando correcciones al salir:', err);
+        Promise.all([
+          sincronizarFlagsSesion(),
+          esperarGuardadoProgreso().then((ok) => {
+            if (!ok) console.error('El progreso más reciente sigue guardado solo en este dispositivo.');
+          })
+        ]).catch((err) => {
+          console.error('Error guardando el progreso al salir:', err);
         }).finally(() => {
           window.location.assign(salir.href);
         });
@@ -1197,6 +1260,7 @@
       aplicarParchesATest(n, data);
       PREGUNTAS = preguntasDeDatosTest(data) || [];
       if (!PREGUNTAS.length) throw new Error('El JSON no contiene preguntas');
+      BANDERA_TEST_VISIBLE = PREGUNTAS.length === 30;
       renderPreguntas();
     } catch (err) {
       console.error('Error cargando el test:', err);

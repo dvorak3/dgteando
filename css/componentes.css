@@ -735,6 +735,7 @@
 /* ===== Componentes de test y repaso (test.html) ===== */
 
 .pregunta-item {
+  position: relative;
   background: var(--bg-tarjeta);
   border: 1px solid var(--borde);
   border-radius: var(--radius-4xl);
@@ -1067,7 +1068,7 @@
   background: var(--acierto-fondo);
   border-color: var(--primario);
   color: var(--primario-hover);
-  animation: pulseOk 380ms var(--ease);
+  animation: pulseOk 480ms var(--ease);
 }
 
 .repaso-opcion.es-correcta .opcion-letra {
@@ -1083,7 +1084,7 @@
 .repaso-opcion.es-correcta .repaso-opcion-icono {
   background: var(--primario);
   color: var(--texto-inverso);
-  animation: iconPop 420ms var(--ease) 80ms forwards;
+  animation: iconPop 500ms var(--ease) 80ms forwards;
 }
 
 /* Cuando se falla, la correcta se ilumina un instante después */
@@ -1105,7 +1106,7 @@
   background: var(--fallo-fondo);
   border-color: var(--fallo);
   color: var(--fallo);
-  animation: shake 360ms ease-in-out;
+  animation: shake 460ms ease-in-out;
 }
 
 .repaso-opcion.es-fallo .opcion-letra {
@@ -1121,7 +1122,7 @@
 .repaso-opcion.es-fallo .repaso-opcion-icono {
   background: var(--fallo);
   color: var(--texto-inverso);
-  animation: iconPop 420ms var(--ease) 80ms forwards;
+  animation: iconPop 500ms var(--ease) 80ms forwards;
 }
 
 /* ---------- Panel de confianza ---------- */
@@ -1665,6 +1666,43 @@
   color: var(--bandera-texto);
   cursor: pointer;
   transition: background-color 0.15s, border-color 0.15s;
+}
+
+.btn-bandera-test {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: var(--bg-suave);
+  border-color: var(--borde);
+  color: var(--texto-tenue);
+  opacity: 0.82;
+}
+
+.btn-bandera-test:hover {
+  background: var(--borde);
+  border-color: var(--borde-fuerte);
+  color: var(--texto-secundario);
+  opacity: 1;
+}
+
+.btn-bandera-test:focus-visible {
+  box-shadow: var(--anillo-foco-verde);
+}
+
+.btn-bandera-test svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 1.8;
+}
+
+.btn-bandera-test.corregida::after {
+  width: 7px;
+  height: 7px;
+  background: var(--texto-secundario);
+  border-color: var(--bg-tarjeta);
 }
 
 .btn-bandera:hover {

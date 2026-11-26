@@ -9,6 +9,7 @@ const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // Resultado de la última subida a Supabase (la UI lo consulta para avisar si solo quedó guardado en local)
 let ultimaSincronizacionOk = true;
+let ultimaOperacionGuardarProgreso = Promise.resolve(true);
 
 // Lee el progreso local (usado por index.html y los tests)
 function obtenerProgreso() {
@@ -19,32 +20,42 @@ function obtenerProgreso() {
   }
 }
 
-// Guarda en localStorage Y sube a Supabase. Devuelve true si la subida a la nube fue bien.
-async function guardarProgreso(progreso) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(progreso));
+// Guarda en localStorage inmediatamente y encola la sincronización remota ordenada.
+function guardarProgreso(progreso) {
+  const serializado = JSON.stringify(progreso);
+  localStorage.setItem(STORAGE_KEY, serializado);
+  const datosNube = JSON.parse(serializado);
 
-  try {
-    const { error } = await supabaseClient
-      .from("progreso")
-      .upsert({
-        id: USER_ROW_ID,
-        datos: progreso,
-        updated_at: new Date().toISOString()
-      });
+  const operacion = ultimaOperacionGuardarProgreso.then(async () => {
+    try {
+      const { error } = await supabaseClient
+        .from("progreso")
+        .upsert({
+          id: USER_ROW_ID,
+          datos: datosNube,
+          updated_at: new Date().toISOString()
+        });
 
-    if (error) {
-      console.error("Error guardando en Supabase:", error);
+      if (error) {
+        console.error("Error guardando en Supabase:", error);
+        ultimaSincronizacionOk = false;
+        return false;
+      }
+    } catch (err) {
+      console.error("Error guardando en Supabase:", err);
       ultimaSincronizacionOk = false;
       return false;
     }
-  } catch (err) {
-    console.error("Error guardando en Supabase:", err);
-    ultimaSincronizacionOk = false;
-    return false;
-  }
 
-  ultimaSincronizacionOk = true;
-  return true;
+    ultimaSincronizacionOk = true;
+    return true;
+  });
+  ultimaOperacionGuardarProgreso = operacion;
+  return operacion;
+}
+
+function esperarGuardadoProgreso() {
+  return ultimaOperacionGuardarProgreso;
 }
 
 // Descarga el progreso desde Supabase al abrir la web
@@ -778,7 +789,7 @@ function normalizarTiempoSeg(tiempoSegundos) {
 // El botón elegido manda al 100 % sobre intervalo y madurez: el tiempo solo alimenta estadísticas.
 // "acierto" (opcional): si la respuesta fue correcta; sirve para el récord mejorTiempoSeg
 // (si no se pasa, se considera acierto todo lo que no sea "again").
-async function calificarTarjetaAnki(clave, nivelConfianza, tiempoSegundos, acierto) {
+function calificarTarjetaAnki(clave, nivelConfianza, tiempoSegundos, acierto) {
   const progreso = obtenerProgreso();
   const tarjeta = progreso._tarjetas && progreso._tarjetas[clave];
   if (!tarjeta) throw new Error(`La tarjeta ${clave} no existe en el mazo`);
@@ -811,7 +822,7 @@ async function calificarTarjetaAnki(clave, nivelConfianza, tiempoSegundos, acier
   }
 
   progreso._tarjetas[clave] = nueva;
-  await guardarProgreso(progreso);
+  guardarProgreso(progreso);
   return nueva;
 }
 

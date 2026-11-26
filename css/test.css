@@ -188,7 +188,7 @@ html.modo-falladas .test-column {
 }
 
 .repaso-stage.saliendo {
-  animation: slideOutLeft 144ms ease-in forwards;
+  animation: slideOutLeft 120ms ease-in forwards;
 }
 
 .repaso-contexto {
