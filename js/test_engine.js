@@ -339,7 +339,7 @@
 
     function pintarAviso(html) {
       fase = 'final';
-      cont.innerHTML = `<div class="repaso-final"><p class="repaso-final-sub">${html}</p><a class="repaso-btn-volver" href="index.html">Volver al panel</a></div>`;
+      cont.innerHTML = `<div class="repaso-final"><p class="repaso-final-sub">${html}</p><a class="btn btn--primario btn--lg" href="index.html">Volver al panel</a></div>`;
     }
 
     function preguntaDeClave(clave) {
@@ -425,7 +425,7 @@
       pintarCombo(null);
 
       const imagenSrc = normalizarImagen(pregActual.imagen);
-      const repeticion = sesion.repetidas.has(claveActual) ? '<span class="repaso-repeticion">Repetición</span>' : '';
+      const repeticion = sesion.repetidas.has(claveActual) ? '<span class="badge badge--aviso badge--mayus badge--sm">Repetición</span>' : '';
       const refTest = String(tarjeta.testId).padStart(3, '0');
       const refPregunta = String((Number(tarjeta.preguntaIdx) || 0) + 1).padStart(2, '0');
       // Categoría DGT: la guardada en la tarjeta o, si aún no se ha migrado, la calculada al vuelo
@@ -453,11 +453,11 @@
           <div class="repaso-contexto">
             <span class="repaso-contexto-izq">
               <span>Test ${esc(refTest)} · Pregunta ${esc(refPregunta)}</span>
-              ${categoria ? `<span class="repaso-categoria">${esc(categoria)}</span>` : ''}
+              ${categoria ? `<span class="badge badge--neutro badge--sm">${esc(categoria)}</span>` : ''}
             </span>
             <span class="repaso-contexto-der">
               ${repeticion}
-              <span class="repaso-badge madurez-${esc(tarjeta.madurez)}">${ETIQUETA_MADUREZ[tarjeta.madurez] || esc(tarjeta.madurez)}</span>
+              <span class="badge badge--mayus madurez-${esc(tarjeta.madurez)}">${ETIQUETA_MADUREZ[tarjeta.madurez] || esc(tarjeta.madurez)}</span>
             </span>
           </div>
           <div class="repaso-cuerpo">
@@ -547,7 +547,7 @@
       panel.innerHTML = `
         <div class="repaso-confianza-cab">
           <span class="repaso-confianza-titulo">Calibrar confianza</span>
-          <span class="repaso-resultado ${acierto ? 'ok' : 'ko'}">${acierto ? '¡Correcto!' : 'Incorrecta'}</span>
+          <span class="badge ${acierto ? 'badge--acierto' : 'badge--fallo'}">${acierto ? '¡Correcto!' : 'Incorrecta'}</span>
         </div>
         <p class="repaso-sugerencia nivel-${sug.nivel}">
           <span class="repaso-sugerencia-tag">Sugerida: ${esc(ETIQUETA_NIVEL[sug.nivel])}</span>
@@ -672,7 +672,7 @@
           <p class="repaso-final-sub">${repasadas
             ? `Has repasado ${repasadas} ${repasadas === 1 ? 'tarjeta' : 'tarjetas'} (${c.again} ${c.again === 1 ? 'repetición' : 'repeticiones'} por «Again»).`
             : 'No tienes tarjetas pendientes para hoy.'}</p>
-          ${rachaMax > 0 ? `<div class="repaso-racha-final">🔥 Mejor racha: ${rachaMax}</div>` : ''}
+          ${rachaMax > 0 ? `<div class="badge badge--aviso badge--lg repaso-racha-final">🔥 Mejor racha: ${rachaMax}</div>` : ''}
           <div class="repaso-resumen">
             <div class="repaso-resumen-item madurez-nueva"><strong>${e.nuevas}</strong><span>Nuevas</span></div>
             <div class="repaso-resumen-item madurez-aprendiendo"><strong>${e.aprendiendo}</strong><span>Aprendiendo</span></div>
@@ -682,8 +682,8 @@
           ${bloqueTiempos}
           ${bloqueDebiles}
           <p class="repaso-final-sub">${e.totalMazo} preguntas en seguimiento · examen en ${e.diasRestantes} ${e.diasRestantes === 1 ? 'día' : 'días'}</p>
-          ${hayMas ? `<a class="repaso-btn-secundario" href="test.html?modo=repaso">Seguir con ${e.colaHoy.length} ${e.colaHoy.length === 1 ? 'tarjeta más' : 'tarjetas más'}</a>` : ''}
-          <a class="repaso-btn-volver" href="index.html">Volver al panel <kbd>Enter</kbd></a>
+          ${hayMas ? `<a class="btn btn--contorno btn--lg" href="test.html?modo=repaso">Seguir con ${e.colaHoy.length} ${e.colaHoy.length === 1 ? 'tarjeta más' : 'tarjetas más'}</a>` : ''}
+          <a class="btn btn--primario btn--lg" href="index.html">Volver al panel <kbd>Enter</kbd></a>
         </div>
       `;
     }

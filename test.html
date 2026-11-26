@@ -17,8 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/variables.css?v=3">
-  <link rel="stylesheet" href="css/componentes.css?v=1">
-  <link rel="stylesheet" href="css/test.css?v=8">
+  <link rel="stylesheet" href="css/componentes.css?v=2">
+  <link rel="stylesheet" href="css/test.css?v=9">
   <!-- Fuente (ya no hay @import dentro de los CSS) -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
 </head>
@@ -27,7 +27,7 @@
   <main class="test-column">
     <div class="test-title-row">
       <h1 class="test-title">test <span class="num" id="testNum">nº …</span></h1>
-      <span class="modo-badge" id="lblModo">Modo examen</span>
+      <span class="badge badge--contorno" id="lblModo">Modo examen</span>
     </div>
 
     <!-- Avisos (falta id, JSON no encontrado, etc.) -->
@@ -40,8 +40,8 @@
       <div id="preguntasContainer"></div>
 
       <div class="corregir-box">
-        <button type="button" class="btn-corregir" id="btnCorregir" onclick="corregirTest()">Corregir el test</button>
-        <a href="index.html" class="btn-volver" id="btnVolver">Volver a la lista</a>
+        <button type="button" class="btn btn--primario btn--lg" id="btnCorregir" onclick="corregirTest()">Corregir el test</button>
+        <a href="index.html" class="btn btn--secundario btn--lg" id="btnVolver">Volver a la lista</a>
       </div>
 
       <div class="resultado-panel" id="resultadoPanel"></div>
@@ -54,6 +54,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/categorias.js?v=1"></script>
   <script src="js/storage.js?v=12"></script>
-  <script src="js/test_engine.js?v=9"></script>
+  <script src="js/test_engine.js?v=10"></script>
 </body>
 </html>

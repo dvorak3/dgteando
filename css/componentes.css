@@ -15,34 +15,219 @@
 
 /* ===== Componentes del panel (index.html) ===== */
 
-.btn-json {
+/* ===== Botón: .btn + variante + tamaño ===== */
+/* Variantes: --primario · --secundario · --suave · --peligro · --texto-peligro · --contorno */
+/* Tamaños: (md por defecto) · --xs · --sm · --lg  ·  Formas: --pastilla · --bloque · --icono */
+.btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  background: var(--bg-tarjeta);
-  border: 1px solid var(--borde);
+  padding: 7px 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  background: transparent;
   color: var(--texto-principal);
   font-size: var(--text-xs-plus);
   font-weight: var(--weight-semibold);
-  padding: 7px 14px;
-  border-radius: var(--radius-full);
+  text-decoration: none !important;
   cursor: pointer;
-  transition: all 0.16s ease;
-  box-shadow: var(--sombra-xs);
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.12s ease;
 }
 
-.btn-json:hover {
-  background: var(--bg-suave);
-  border-color: var(--borde-fuerte);
-  color: var(--texto-principal);
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
 }
 
-.btn-json svg {
+.btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.btn svg {
   width: 14px;
   height: 14px;
   stroke: currentColor;
   stroke-width: 2;
   fill: none;
+}
+
+.btn kbd {
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--tinte-claro-suave);
+  font-size: var(--text-rem-72);
+  font-weight: var(--weight-bold);
+}
+
+.btn--primario {
+  background: var(--primario);
+  border-color: var(--primario);
+  color: var(--texto-inverso);
+  font-weight: var(--weight-bold);
+}
+
+.btn--primario:hover:not(:disabled) {
+  background: var(--primario-hover);
+  border-color: var(--primario-hover);
+}
+
+.btn--secundario {
+  background: var(--bg-tarjeta);
+  border-color: var(--borde);
+  box-shadow: var(--sombra-xs);
+}
+
+.btn--secundario:hover:not(:disabled) {
+  background: var(--bg-suave);
+  border-color: var(--borde-fuerte);
+}
+
+.btn--suave {
+  background: var(--bg-pagina);
+  border-color: var(--borde);
+}
+
+.btn--suave:hover:not(:disabled) {
+  background: var(--acierto-fondo);
+  border-color: var(--acierto-fondo);
+  color: var(--primario);
+}
+
+.btn--peligro {
+  background: var(--bg-suave);
+  border-color: var(--borde);
+  color: var(--texto-secundario);
+}
+
+.btn--peligro:hover:not(:disabled) {
+  background: var(--fallo-fondo);
+  border-color: var(--fallo-fondo);
+  color: var(--fallo);
+}
+
+.btn--texto-peligro {
+  padding-inline: 8px;
+  color: var(--fallo);
+}
+
+.btn--texto-peligro:hover:not(:disabled) {
+  background: var(--fallo-fondo);
+}
+
+.btn--contorno {
+  background: var(--bg-tarjeta);
+  border-color: var(--primario);
+  color: var(--primario);
+}
+
+.btn--contorno:hover:not(:disabled) {
+  background: var(--acierto-fondo);
+}
+
+.btn--xs {
+  padding: 4px 10px;
+  font-size: var(--text-2xs-plus);
+}
+
+.btn--sm {
+  padding: 9px 16px;
+  font-size: var(--text-sm);
+}
+
+.btn--lg {
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 26px;
+  border-width: 1.5px;
+  border-radius: var(--radius-xl);
+  font-size: var(--text-rem-95);
+  font-weight: var(--weight-bold);
+}
+
+.btn--pastilla {
+  border-radius: var(--radius-full);
+}
+
+.btn--bloque {
+  display: flex;
+  width: 100%;
+}
+
+.btn--icono {
+  padding: 5px 9px;
+}
+
+.btn--icono svg {
+  width: 15px;
+  height: 15px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ===== Badge: .badge + color + tamaño ===== */
+/* Colores: --aviso · --acento · --acierto · --fallo · --neutro · --contorno  ·  Tamaños: (md) · --sm · --lg  ·  --mayus */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  line-height: 1.2;
+  border-radius: var(--radius-full);
+  font-size: var(--text-rem-74);
+  font-weight: var(--weight-extrabold);
+}
+
+.badge--sm {
+  padding: 4px 10px;
+  font-size: var(--text-rem-70);
+}
+
+.badge--lg {
+  padding: 6px 14px;
+  font-size: var(--text-rem-90);
+}
+
+.badge--mayus {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.badge--aviso {
+  background: var(--aviso-fondo);
+  color: var(--aviso);
+}
+
+.badge--acento {
+  background: var(--aviso-fondo);
+  color: var(--acento);
+}
+
+.badge--acierto {
+  background: var(--acierto-fondo);
+  color: var(--primario-hover);
+}
+
+.badge--fallo {
+  background: var(--fallo-fondo);
+  color: var(--fallo);
+}
+
+.badge--neutro {
+  background: var(--borde);
+  color: var(--texto-secundario);
+}
+
+.badge--contorno {
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--borde);
+  color: var(--texto-secundario);
+  font-weight: var(--weight-bold);
+}
+
+.badge.completado {
+  background: var(--acierto-fondo);
+  color: var(--primario);
 }
 
 .card {
@@ -132,24 +317,6 @@
   background-color: var(--borde);
 }
 
-.btn-borrar {
-  background-color: var(--bg-suave);
-  border: 1px solid var(--borde);
-  color: var(--texto-secundario);
-  font-size: var(--text-xs-plus);
-  font-weight: var(--weight-semibold);
-  padding: 7px 14px;
-  border-radius: var(--radius-lg);
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.btn-borrar:hover {
-  background-color: var(--fallo-fondo);
-  border-color: var(--fallo-fondo);
-  color: var(--fallo);
-}
-
 .widget-icon-green {
   width: 34px;
   height: 34px;
@@ -170,24 +337,6 @@
   fill: none;
 }
 
-.btn-editar-fecha {
-  background-color: var(--bg-pagina);
-  border: 1px solid var(--borde);
-  color: var(--texto-principal);
-  font-size: var(--text-2xs-plus);
-  font-weight: var(--weight-semibold);
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.btn-editar-fecha:hover {
-  background-color: var(--acierto-fondo);
-  border-color: var(--acierto-fondo);
-  color: var(--primario);
-}
-
 .input-fecha-dgt {
   flex: 1;
   padding: 7px 10px;
@@ -204,23 +353,8 @@
   background-color: var(--bg-tarjeta);
 }
 
-.btn-guardar-fecha {
-  background-color: var(--primario);
-  color: var(--texto-inverso);
-  border: none;
-  border-radius: var(--radius-lg);
-  padding: 8px 12px;
-  font-size: var(--text-xs-plus);
-  font-weight: var(--weight-semibold);
-  cursor: pointer;
-  transition: background-color 0.15s;
-}
-
-.btn-guardar-fecha:hover {
-  background-color: var(--primario-hover);
-}
-
 /* Tarjeta 2: Racha de estudio */
+
 .widget-icon-fire {
   width: 34px;
   height: 34px;
@@ -239,45 +373,8 @@
   fill: currentColor;
 }
 
-.racha-badge-hoy {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: var(--text-2xs-plus);
-  font-weight: var(--weight-semibold);
-  padding: 3px 9px;
-  border-radius: var(--radius-full);
-  background-color: var(--aviso-fondo);
-  color: var(--acento);
-}
-
-.racha-badge-hoy.completado {
-  background-color: var(--acierto-fondo);
-  color: var(--primario);
-}
-
-.btn-repaso-anki {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: 14px;
-  background-color: var(--primario);
-  color: var(--texto-inverso);
-  text-decoration: none;
-  font-size: var(--text-sm);
-  font-weight: var(--weight-bold);
-  padding: 10px 14px;
-  border-radius: var(--radius-lg);
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.12s ease;
-}
-
-.btn-repaso-anki:hover {
-  background-color: var(--primario-hover);
-}
-
 /* ================= MODAL DE EVOLUCIÓN ================= */
+
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -395,22 +492,6 @@
 }
 
 /* ================= CONFIGURACIÓN DE ANKI ================= */
-.btn-config-anki {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 9px;
-}
-
-.btn-config-anki svg {
-  width: 15px;
-  height: 15px;
-  stroke: currentColor;
-  stroke-width: 2;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
 
 .modal-anki-overlay {
   -webkit-backdrop-filter: blur(4px);
@@ -449,6 +530,7 @@
 }
 
 /* Píldoras tipo radio */
+
 .pill-grupo {
   display: flex;
   flex-wrap: wrap;
@@ -567,6 +649,7 @@
 }
 
 /* Interruptor */
+
 .switch-fila {
   display: flex;
   align-items: center;
@@ -642,82 +725,6 @@
   outline-offset: 2px;
 }
 
-.btn-secundario {
-  background-color: var(--bg-tarjeta);
-  border: 1px solid var(--borde);
-  color: var(--texto-principal);
-  font-size: var(--text-xs-plus);
-  font-weight: var(--weight-semibold);
-  padding: 7px 14px;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: all 0.15s ease;
-}
-
-.btn-secundario:hover:not(:disabled) {
-  background-color: var(--bg-suave);
-  border-color: var(--borde-fuerte);
-}
-
-.btn-texto-rojo {
-  background: transparent;
-  border: none;
-  color: var(--fallo);
-  font-size: var(--text-xs-plus);
-  font-weight: var(--weight-semibold);
-  padding: 7px 8px;
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  transition: background-color 0.15s;
-}
-
-.btn-texto-rojo:hover:not(:disabled) {
-  background-color: var(--fallo-fondo);
-}
-
-.btn-secundario:disabled,
-.btn-texto-rojo:disabled {
-  opacity: 0.55;
-  cursor: wait;
-}
-
-.btn-cancelar-anki {
-  background-color: var(--bg-suave);
-  border: 1px solid var(--borde);
-  color: var(--texto-principal);
-  font-size: var(--text-sm);
-  font-weight: var(--weight-semibold);
-  padding: 9px 16px;
-  border-radius: var(--radius-lg);
-  cursor: pointer;
-  transition: background-color 0.15s;
-}
-
-.btn-cancelar-anki:hover {
-  background-color: var(--borde);
-}
-
-.btn-guardar-anki {
-  background-color: var(--primario);
-  border: none;
-  color: var(--texto-inverso);
-  font-size: var(--text-sm);
-  font-weight: var(--weight-bold);
-  padding: 9px 18px;
-  border-radius: var(--radius-lg);
-  cursor: pointer;
-  transition: background-color 0.15s;
-}
-
-.btn-guardar-anki:hover:not(:disabled) {
-  background-color: var(--primario-hover);
-}
-
-.btn-guardar-anki:disabled {
-  opacity: 0.65;
-  cursor: wait;
-}
-
 @media (max-width: 480px) {
   .modal-anki .modal-header {
       padding-left: 16px;
@@ -726,16 +733,6 @@
 }
 
 /* ===== Componentes de test y repaso (test.html) ===== */
-
-.modo-badge {
-  font-size: var(--text-rem-75);
-  font-weight: var(--weight-bold);
-  color: var(--texto-secundario);
-  background: var(--bg-tarjeta);
-  border: 1px solid var(--borde);
-  padding: 5px 12px;
-  border-radius: var(--radius-full);
-}
 
 .pregunta-item {
   background: var(--bg-tarjeta);
@@ -790,6 +787,7 @@
 }
 
 /* Estados visuales tras corregir (o en modo estudio) */
+
 .opcion-label.es-correcta {
   background-color: var(--acierto-fondo);
   border-color: var(--primario);
@@ -803,6 +801,7 @@
 }
 
 /* ---------- Caja inferior y botón corregir ---------- */
+
 .corregir-box {
   margin-top: 18px;
   background-color: var(--bg-tarjeta);
@@ -815,50 +814,6 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-}
-
-.btn-corregir {
-  background-color: var(--primario);
-  color: var(--texto-inverso);
-  border: none;
-  border-radius: var(--radius-xl);
-  padding: 13px 44px;
-  min-height: 48px;
-  font-size: var(--text-rem-95);
-  font-weight: var(--weight-bold);
-  cursor: pointer;
-  transition: background-color 0.15s, transform 0.15s;
-}
-
-.btn-corregir:hover:not(:disabled) {
-  background-color: var(--primario-hover);
-}
-
-.btn-corregir:active:not(:disabled) {
-  transform: scale(0.98);
-}
-
-.btn-corregir:disabled {
-  opacity: 0.55;
-  cursor: default;
-}
-
-.btn-volver {
-  background-color: var(--bg-tarjeta);
-  color: var(--texto-principal);
-  border: 1.5px solid var(--borde-fuerte);
-  border-radius: var(--radius-xl);
-  padding: 12px 22px;
-  min-height: 48px;
-  align-items: center;
-  font-size: var(--text-rem-92);
-  font-weight: var(--weight-bold);
-  text-decoration: none !important;
-  display: none;
-}
-
-.btn-volver:hover {
-  background-color: var(--bg-suave);
 }
 
 .resultado-panel {
@@ -926,6 +881,7 @@
 }
 
 /* Combo / racha */
+
 .repaso-combo {
   flex: none;
   display: inline-flex;
@@ -980,26 +936,7 @@
   animation: slideInRight 256ms var(--ease) both;
 }
 
-.repaso-repeticion {
-  padding: 5px 10px;
-  border-radius: var(--radius-full);
-  background: var(--aviso-fondo);
-  color: var(--aviso);
-  font-size: var(--text-rem-70);
-  font-weight: var(--weight-extrabold);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
 /* Madurez (badge de la tarjeta y resumen final) */
-.repaso-badge {
-  padding: 5px 12px;
-  border-radius: var(--radius-full);
-  font-size: var(--text-rem-74);
-  font-weight: var(--weight-extrabold);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
 
 .madurez-nueva {
   background: var(--info-fondo);
@@ -1087,6 +1024,7 @@
 }
 
 /* Badge de tecla */
+
 .repaso-tecla {
   flex: none;
   display: inline-grid;
@@ -1106,6 +1044,7 @@
 }
 
 /* Icono de resultado (check / aspa) */
+
 .repaso-opcion-icono {
   flex: none;
   width: 28px;
@@ -1123,6 +1062,7 @@
 }
 
 /* Acierto */
+
 .repaso-opcion.es-correcta {
   background: var(--acierto-fondo);
   border-color: var(--primario);
@@ -1147,6 +1087,7 @@
 }
 
 /* Cuando se falla, la correcta se ilumina un instante después */
+
 .repaso-opcion.es-correcta.revelada {
   transition-delay: 0.18s;
   animation-delay: 0.18s;
@@ -1159,6 +1100,7 @@
 }
 
 /* Fallo */
+
 .repaso-opcion.es-fallo {
   background: var(--fallo-fondo);
   border-color: var(--fallo);
@@ -1183,6 +1125,7 @@
 }
 
 /* ---------- Panel de confianza ---------- */
+
 .repaso-confianza {
   background: var(--bg-tarjeta);
   border: 1px solid var(--borde);
@@ -1206,23 +1149,6 @@
   font-size: var(--text-rem-100);
   font-weight: var(--weight-extrabold);
   color: var(--texto-principal);
-}
-
-.repaso-resultado {
-  padding: 5px 12px;
-  border-radius: var(--radius-full);
-  font-size: var(--text-rem-80);
-  font-weight: var(--weight-extrabold);
-}
-
-.repaso-resultado.ok {
-  background: var(--acierto-fondo);
-  color: var(--primario-hover);
-}
-
-.repaso-resultado.ko {
-  background: var(--fallo-fondo);
-  color: var(--fallo);
 }
 
 .repaso-btn-confianza {
@@ -1351,6 +1277,7 @@
 }
 
 /* ---------- Pantalla final ---------- */
+
 .repaso-app > .repaso-final {
   margin: auto;
   width: calc(100% - 32px);
@@ -1392,20 +1319,6 @@
   margin: 8px 0;
 }
 
-.repaso-racha-final {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin: 6px 0 4px;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  background: var(--aviso-fondo);
-  border: 1px solid var(--aviso-fondo);
-  color: var(--aviso);
-  font-weight: var(--weight-extrabold);
-  font-size: var(--text-rem-90);
-}
-
 .repaso-resumen-item {
   display: flex;
   flex-direction: column;
@@ -1425,58 +1338,10 @@
   font-weight: var(--weight-bold);
 }
 
-.repaso-btn-volver,
-.repaso-btn-secundario {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 50px;
-  padding: 12px 26px;
-  margin-top: 14px;
-  border-radius: var(--radius-2xl);
-  font-size: var(--text-rem-95);
-  font-weight: var(--weight-extrabold);
-  text-decoration: none !important;
-  transition: background-color 0.15s, transform 0.15s;
-}
-
-.repaso-btn-volver {
-  background: var(--primario);
-  color: var(--texto-inverso);
-}
-
-.repaso-btn-volver:hover {
-  background: var(--primario-hover);
-}
-
-.repaso-btn-volver kbd {
-  padding: 2px 8px;
-  border-radius: var(--radius-sm);
-  background: var(--tinte-claro-suave);
-  font-size: var(--text-rem-72);
-  font-weight: var(--weight-bold);
-}
-
-.repaso-btn-secundario {
-  display: flex;
-  background: var(--bg-tarjeta);
-  color: var(--primario);
-  border: 1.5px solid var(--primario);
-}
-
-.repaso-btn-secundario:hover {
-  background: var(--acierto-fondo);
-}
-
-.repaso-btn-volver:active,
-.repaso-btn-secundario:active {
-  transform: scale(0.98);
-}
-
 /* =====================================================================
    ANIMACIONES
    ===================================================================== */
+
 @keyframes slideInRight {
   from { transform: translateX(24px); opacity: 0; }
   to   { transform: translateX(0);    opacity: 1; }
@@ -1543,6 +1408,7 @@
 /* =====================================================================
    RESPONSIVE
    ===================================================================== */
+
 @media (max-width: 767px) {
   .pregunta-item {
       grid-template-columns: minmax(0, 1fr);
@@ -1580,6 +1446,7 @@
    Repaso · sugerencia de confianza por tiempo, fecha de repaso y resumen de tiempos
    (no hay ningún contador de tiempo visible durante la tarjeta)
    ===================================================================== */
+
 .repaso-sugerencia {
   display: flex;
   align-items: center;
@@ -1609,6 +1476,7 @@
 .repaso-sugerencia.nivel-again .repaso-sugerencia-tag  { background: var(--fallo-fondo);  color: var(--fallo); }
 
 /* Anillo del botón sugerido con el color de su nivel (again conserva el rojo de arriba) */
+
 .repaso-btn-confianza.btn-hard.sugerido   { box-shadow: var(--anillo-hard); }
 
 .repaso-btn-confianza.btn-medium.sugerido { box-shadow: var(--anillo-medium); }
@@ -1681,17 +1549,6 @@
   margin-top: 8px;
   font-size: var(--text-rem-78);
   color: var(--texto-secundario);
-}
-
-.repaso-categoria {
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  background: var(--borde);
-  color: var(--texto-secundario);
-  font-size: var(--text-rem-70);
-  font-weight: var(--weight-bold);
-  letter-spacing: 0.06em;
-  line-height: 1.2;
 }
 
 .repaso-debil-item {

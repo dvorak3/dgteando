@@ -603,3 +603,12 @@ body {
       flex: 1;
     }
 }
+
+.racha-badge-hoy {
+  margin-top: 10px;
+  line-height: normal;
+}
+
+.btn-repaso-anki {
+  margin-top: 14px;
+}

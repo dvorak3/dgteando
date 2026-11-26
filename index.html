@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/variables.css?v=3">
-  <link rel="stylesheet" href="css/componentes.css?v=1">
-  <link rel="stylesheet" href="css/index.css?v=3">
+  <link rel="stylesheet" href="css/componentes.css?v=2">
+  <link rel="stylesheet" href="css/index.css?v=4">
   <!-- Fuente (ya no hay @import dentro de los CSS) -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap">
 </head>
@@ -36,11 +36,11 @@
       </div>
 
       <div class="barra-json">
-        <button type="button" class="btn-json" onclick="exportarJSON()">
+        <button type="button" class="btn btn--secundario btn--pastilla" onclick="exportarJSON()">
           <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Guardar progreso (.json)
         </button>
-        <label class="btn-json">
+        <label class="btn btn--secundario btn--pastilla">
           <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           Cargar progreso (.json)
           <input type="file" id="inputJson" accept=".json" hidden>
@@ -85,7 +85,7 @@
         </div>
 
         <div class="barra-borrar">
-          <button type="button" class="btn-borrar" onclick="confirmarBorrado()">Borrar resultados</button>
+          <button type="button" class="btn btn--peligro" onclick="confirmarBorrado()">Borrar resultados</button>
         </div>
       </section>
 
@@ -105,7 +105,7 @@
               </div>
               <span class="widget-label">Fecha de examen DGT</span>
             </div>
-            <button type="button" class="btn-editar-fecha" id="btnEditarFecha">Editar</button>
+            <button type="button" class="btn btn--suave btn--xs btn--pastilla" id="btnEditarFecha">Editar</button>
           </div>
 
           <div id="examenContadorVista">
@@ -118,7 +118,7 @@
 
           <div class="examen-editor-inline" id="examenEditorInline">
             <input type="date" class="input-fecha-dgt" id="inputFechaExamen">
-            <button type="button" class="btn-guardar-fecha" id="btnGuardarFecha">Guardar</button>
+            <button type="button" class="btn btn--primario" id="btnGuardarFecha">Guardar</button>
           </div>
         </div>
 
@@ -139,7 +139,7 @@
             <span class="racha-num" id="rachaDiasTexto">0 días</span>
           </div>
           <p class="racha-mensaje" id="rachaMensaje">Haz un test hoy para iniciar tu racha.</p>
-          <span class="racha-badge-hoy" id="rachaBadge">Pendiente hoy</span>
+          <span class="badge badge--acento badge--sm racha-badge-hoy" id="rachaBadge">Pendiente hoy</span>
         </div>
 
         <!-- Tarjeta 3: Repaso Inteligente (Anki) -->
@@ -153,7 +153,7 @@
               </div>
               <span class="widget-label">Repaso inteligente (Anki)</span>
             </div>
-            <button type="button" class="btn-editar-fecha btn-config-anki" id="btnConfigAnki" aria-label="Configuración de Anki" title="Configuración de Anki">
+            <button type="button" class="btn btn--suave btn--xs btn--pastilla btn--icono" id="btnConfigAnki" aria-label="Configuración de Anki" title="Configuración de Anki">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
             </button>
           </div>
@@ -165,10 +165,10 @@
           <p class="anki-sub" id="ankiTotalSeguimiento">0 preguntas en seguimiento</p>
           <p class="anki-sub" id="ankiDesglose"></p>
 
-          <a href="test.html?modo=repaso" class="btn-repaso-anki" id="btnRepasoAnki">
+          <a href="test.html?modo=repaso" class="btn btn--primario btn--sm btn--bloque btn-repaso-anki" id="btnRepasoAnki">
             Repasar 0 tarjetas hoy
           </a>
-          <span class="racha-badge-hoy completado" id="ankiBadgeAlDia" style="display: none;">
+          <span class="badge badge--acento badge--sm racha-badge-hoy completado" id="ankiBadgeAlDia" style="display: none;">
             ¡Al día! 0 tarjetas pendientes
           </span>
         </div>
@@ -275,8 +275,8 @@
         <section class="anki-cfg-seccion anki-cfg-mant">
           <h3 class="anki-cfg-titulo anki-cfg-titulo-suave">Mantenimiento del mazo</h3>
           <div class="anki-mant-botones">
-            <button type="button" class="btn-secundario" id="btnAnkiSync">Buscar nuevos tests en data/</button>
-            <button type="button" class="btn-texto-rojo" id="btnAnkiReset">Reiniciar progreso Anki</button>
+            <button type="button" class="btn btn--secundario btn--pastilla" id="btnAnkiSync">Buscar nuevos tests en data/</button>
+            <button type="button" class="btn btn--texto-peligro" id="btnAnkiReset">Reiniciar progreso Anki</button>
           </div>
           <p class="anki-mant-msg" id="ankiMantMsg" role="status" aria-live="polite"></p>
         </section>
@@ -285,8 +285,8 @@
       <div class="anki-cfg-pie">
         <p class="anki-estado-guardado" id="ankiEstadoGuardado" role="status" aria-live="polite"></p>
         <div class="anki-cfg-acciones">
-          <button type="button" class="btn-cancelar-anki" id="btnAnkiCancelar">Cancelar</button>
-          <button type="button" class="btn-guardar-anki" id="btnAnkiGuardar">Guardar cambios</button>
+          <button type="button" class="btn btn--secundario btn--sm" id="btnAnkiCancelar">Cancelar</button>
+          <button type="button" class="btn btn--primario btn--sm" id="btnAnkiGuardar">Guardar cambios</button>
         </div>
       </div>
     </div>

@@ -429,3 +429,25 @@ html.modo-repaso .test-column {
   flex-direction: column;
   gap: 8px;
 }
+
+#btnVolver {
+  display: none;
+  padding-inline: 22px;
+}
+
+#btnCorregir {
+  padding-inline: 44px;
+}
+
+.repaso-final .btn {
+  margin-top: 14px;
+}
+
+.repaso-final .btn--contorno {
+  display: flex;
+}
+
+.repaso-racha-final {
+  margin: 6px 0 4px;
+  line-height: 1.5;
+}
