@@ -61,8 +61,9 @@ async function sincronizarDesdeNube() {
   }
 
   if (data && data.datos) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data.datos));
-    return data.datos;
+    const fusionados = conservarParchesLocalesMasRecientes(data.datos);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(fusionados));
+    return fusionados;
   }
 
   return obtenerProgreso();
@@ -248,6 +249,189 @@ function preguntasDeDatosTest(data) {
 // Clave de tarjeta: "070_04" = test 70, pregunta nº 4 (preguntaIdx 3)
 function claveTarjeta(testId, preguntaIdx) {
   return `${String(testId).padStart(3, "0")}_${String(preguntaIdx + 1).padStart(2, "0")}`;
+}
+
+/* =====================================================================
+ *  PREGUNTAS DEFECTUOSAS: parches locales + flags en Supabase
+ * ===================================================================== */
+
+const TABLA_FLAGS = "flags_preguntas";
+const FLAG_CONFLICTO = "user_id,pregunta_id";
+
+function normalizarParchePregunta(crudo) {
+  if (!crudo || typeof crudo !== "object") return null;
+  const texto = (valor) => (typeof valor === "string" ? valor.trim() : "");
+  const enunciado = texto(crudo.enunciado);
+  const opciones = Array.isArray(crudo.opciones) ? crudo.opciones.map(texto) : [];
+  const { correcta, testId, preguntaIdx } = crudo;
+
+  if (!enunciado || opciones.length < 2 || opciones.length > 3 || opciones.some((opcion) => !opcion)) return null;
+  if (!Number.isInteger(correcta) || correcta < 0 || correcta >= opciones.length) return null;
+  if (!Number.isInteger(testId) || testId < 1 || !Number.isInteger(preguntaIdx) || preguntaIdx < 0) return null;
+
+  return {
+    testId,
+    preguntaIdx,
+    enunciado,
+    opciones,
+    correcta,
+    explicacion: texto(crudo.explicacion),
+    nota: texto(crudo.nota),
+    creadoEn: typeof crudo.creadoEn === "string" ? crudo.creadoEn : "",
+    actualizadoEn: typeof crudo.actualizadoEn === "string" ? crudo.actualizadoEn : "",
+    sincronizado: crudo.sincronizado === true
+  };
+}
+
+function obtenerParchesPreguntas() {
+  const crudos = obtenerProgreso()._parchesPreguntas;
+  const resultado = {};
+  if (!crudos || typeof crudos !== "object") return resultado;
+  Object.entries(crudos).forEach(([clave, crudo]) => {
+    const parche = normalizarParchePregunta(crudo);
+    if (parche) resultado[clave] = parche;
+  });
+  return resultado;
+}
+
+function obtenerParchePregunta(testId, preguntaIdx) {
+  const crudos = obtenerProgreso()._parchesPreguntas;
+  if (!crudos || typeof crudos !== "object") return null;
+  return normalizarParchePregunta(crudos[claveTarjeta(testId, preguntaIdx)]);
+}
+
+function conservarParchesLocalesMasRecientes(datosNube) {
+  const locales = obtenerProgreso()._parchesPreguntas;
+  if (!locales || typeof locales !== "object") return datosNube;
+
+  Object.entries(locales).forEach(([clave, local]) => {
+    const parcheLocal = normalizarParchePregunta(local);
+    if (!parcheLocal) return;
+    const parcheNube = normalizarParchePregunta(datosNube._parchesPreguntas && datosNube._parchesPreguntas[clave]);
+    if (!parcheNube || parcheNube.actualizadoEn < parcheLocal.actualizadoEn) {
+      if (!datosNube._parchesPreguntas || typeof datosNube._parchesPreguntas !== "object") {
+        datosNube._parchesPreguntas = {};
+      }
+      datosNube._parchesPreguntas[clave] = local;
+    }
+  });
+  return datosNube;
+}
+
+async function obtenerSesionSupabase() {
+  const { data, error } = await supabaseClient.auth.getSession();
+  if (error) {
+    console.error("Error leyendo la sesión de Supabase:", error);
+    return null;
+  }
+  return data && data.session ? data.session : null;
+}
+
+function filaFlagDesdeParche(parche, userId) {
+  return {
+    user_id: userId,
+    pregunta_id: claveTarjeta(parche.testId, parche.preguntaIdx),
+    test_id: parche.testId,
+    pregunta_idx: parche.preguntaIdx,
+    enunciado: parche.enunciado,
+    opciones: parche.opciones,
+    correcta: parche.correcta,
+    explicacion: parche.explicacion || null,
+    nota: parche.nota || null,
+    aplicado: false,
+    aplicado_at: null
+  };
+}
+
+async function guardarFlagPregunta(payload) {
+  const base = normalizarParchePregunta(payload);
+  if (!base) {
+    throw new Error("Corrección no válida: revisa el enunciado, las opciones (2 o 3) y la respuesta correcta.");
+  }
+  const clave = claveTarjeta(base.testId, base.preguntaIdx);
+  const ahora = new Date().toISOString();
+  const progreso = obtenerProgreso();
+  if (!progreso._parchesPreguntas || typeof progreso._parchesPreguntas !== "object") {
+    progreso._parchesPreguntas = {};
+  }
+  const previo = normalizarParchePregunta(progreso._parchesPreguntas[clave]);
+  const parche = {
+    ...base,
+    creadoEn: (previo && previo.creadoEn) || ahora,
+    actualizadoEn: ahora,
+    sincronizado: false
+  };
+  progreso._parchesPreguntas[clave] = parche;
+  const subidaProgreso = guardarProgreso(progreso);
+
+  let nube = "pendiente";
+  let sesion = null;
+  try {
+    sesion = await obtenerSesionSupabase();
+  } catch (err) {
+    console.error("Error comprobando la sesión de Supabase:", err);
+    nube = "error";
+  }
+  if (sesion && sesion.user) {
+    try {
+      const { error } = await supabaseClient
+        .from(TABLA_FLAGS)
+        .upsert(filaFlagDesdeParche(parche, sesion.user.id), { onConflict: FLAG_CONFLICTO });
+      if (error) console.error("Error guardando el flag en Supabase:", error);
+      nube = error ? "error" : "sincronizado";
+    } catch (err) {
+      console.error("Error guardando el flag en Supabase:", err);
+      nube = "error";
+    }
+  }
+  const progresoEnNube = await subidaProgreso;
+
+  if (nube === "sincronizado") {
+    const actual = obtenerProgreso();
+    const guardado = actual._parchesPreguntas && actual._parchesPreguntas[clave];
+    if (guardado && guardado.actualizadoEn === ahora) {
+      guardado.sincronizado = true;
+      await guardarProgreso(actual);
+      parche.sincronizado = true;
+    }
+  }
+
+  return { ok: true, parche, nube, progresoEnNube };
+}
+
+async function sincronizarFlagsPendientes() {
+  const pendientes = Object.entries(obtenerParchesPreguntas()).filter(([, parche]) => !parche.sincronizado);
+  if (!pendientes.length) return { enviados: 0, pendientes: 0, sinSesion: false };
+
+  let sesion;
+  try {
+    sesion = await obtenerSesionSupabase();
+  } catch (err) {
+    console.error("Error comprobando la sesión de Supabase:", err);
+    return { enviados: 0, pendientes: pendientes.length, sinSesion: false, error: true };
+  }
+  if (!sesion || !sesion.user) return { enviados: 0, pendientes: pendientes.length, sinSesion: true };
+
+  try {
+    const filas = pendientes.map(([, parche]) => filaFlagDesdeParche(parche, sesion.user.id));
+    const { error } = await supabaseClient.from(TABLA_FLAGS).upsert(filas, { onConflict: FLAG_CONFLICTO });
+    if (error) throw error;
+  } catch (err) {
+    console.error("Error reenviando flags pendientes:", err);
+    return { enviados: 0, pendientes: pendientes.length, sinSesion: false, error: true };
+  }
+
+  const actual = obtenerProgreso();
+  let marcados = 0;
+  pendientes.forEach(([clave, parche]) => {
+    const guardado = actual._parchesPreguntas && actual._parchesPreguntas[clave];
+    if (guardado && (guardado.actualizadoEn || "") === parche.actualizadoEn) {
+      guardado.sincronizado = true;
+      marcados++;
+    }
+  });
+  if (marcados) await guardarProgreso(actual);
+  return { enviados: marcados, pendientes: pendientes.length - marcados, sinSesion: false };
 }
 
 /* =====================================================================
@@ -838,7 +1022,7 @@ function importarJSON(archivo, callback) {
   lector.readAsText(archivo);
 }
 
-// Borra los resultados de los tests y el mazo Anki, manteniendo la fecha de examen (_meta)
+// Borra los resultados de los tests y el mazo Anki, manteniendo la fecha de examen (_meta) y las correcciones
 async function borrarProgreso() {
   const actual = obtenerProgreso();
   const nuevoEstado = {};
@@ -846,6 +1030,9 @@ async function borrarProgreso() {
     const meta = { ...actual._meta };
     delete meta.ankiInicializado;
     nuevoEstado._meta = meta;
+  }
+  if (actual._parchesPreguntas && typeof actual._parchesPreguntas === "object") {
+    nuevoEstado._parchesPreguntas = actual._parchesPreguntas;
   }
   await guardarProgreso(nuevoEstado);
 }

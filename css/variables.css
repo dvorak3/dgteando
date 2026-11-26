@@ -55,6 +55,14 @@
   --tinte-oscuro-suave: color-mix(in srgb, var(--texto-principal) 10%, transparent);  /* Borde de tecla sobre botones de color (10 %) */
   --primario-velo: color-mix(in srgb, var(--primario) 14%, transparent);  /* Borde del logo (14 %) */
 
+  /* ===== CORRECCIÓN DE PREGUNTAS (botón bandera y modal de edición) ===== */
+  --bandera-fondo: var(--aviso-fondo);
+  --bandera-texto: var(--aviso);
+  --bandera-borde: color-mix(in srgb, var(--aviso) 35%, transparent);
+  --bandera-fondo-hover: color-mix(in srgb, var(--aviso) 16%, var(--aviso-fondo));
+  --bandera-anillo-foco: 0 0 0 3px color-mix(in srgb, var(--aviso) 32%, transparent);
+  --bandera-corregida: var(--primario);
+
   /* ===== TIPOGRAFÍA ===== */
   /* Familias */
   --font-principal: "Bricolage Grotesque", "Bricolage Grotesque Fallback", sans-serif;  /* Panel principal (index.html) · 1 uso */

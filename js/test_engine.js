@@ -3,6 +3,7 @@
   const modoParam = params.get('modo');
   const MODO = (modoParam === 'estudio' || modoParam === 'repaso') ? modoParam : 'examen';
   const letras = ['a', 'b', 'c', 'd'];
+  const BANDERA_VISIBLE = modoParam === 'repaso';
 
   let PREGUNTAS = [];
   window.TEST_ID = null;
@@ -41,6 +42,163 @@
     };
     estadoGuardado.style.cssText = `margin-top:12px;font-size:var(--text-base);font-weight:var(--weight-semibold);color:${colores[tipo] || 'var(--texto-secundario)'};`;
     estadoGuardado.textContent = texto;
+  }
+
+  /* ================= PARCHES DE PREGUNTAS ================= */
+  function aplicarParcheAPregunta(pregunta, parche) {
+    if (!pregunta || !parche) return pregunta;
+    pregunta.texto = parche.enunciado;
+    pregunta.opciones = parche.opciones.slice();
+    pregunta.correcta = parche.correcta;
+    if (parche.explicacion) pregunta.explicacion = parche.explicacion;
+    pregunta.corregida = true;
+    delete pregunta.correcta_detectada;
+    return pregunta;
+  }
+
+  function aplicarParchesATest(testId, data) {
+    if (typeof obtenerParchePregunta !== 'function') return data;
+    const preguntas = preguntasDeDatosTest(data);
+    if (!preguntas) return data;
+    preguntas.forEach((pregunta, preguntaIdx) => {
+      const parche = obtenerParchePregunta(testId, preguntaIdx);
+      if (parche) aplicarParcheAPregunta(pregunta, parche);
+    });
+    return data;
+  }
+
+  /* ================= MODAL DE CORRECCIÓN ================= */
+  let modalCorreccionAbierto = false;
+  let ctxCorreccion = null;
+  let guardandoCorreccion = false;
+
+  const mc = {
+    overlay: document.getElementById('modalCorreccion'),
+    form: document.getElementById('formCorreccion'),
+    titulo: document.getElementById('corrTitulo'),
+    enunciado: document.getElementById('corrEnunciado'),
+    opciones: [0, 1, 2].map((i) => document.getElementById(`corrOpcion${i}`)),
+    radios: [0, 1, 2].map((i) => document.getElementById(`corrRadio${i}`)),
+    explicacion: document.getElementById('corrExplicacion'),
+    nota: document.getElementById('corrNota'),
+    error: document.getElementById('corrError'),
+    cerrar: document.getElementById('corrCerrar'),
+    cancelar: document.getElementById('corrCancelar'),
+    guardar: document.getElementById('corrGuardar')
+  };
+
+  function mostrarErrorCorreccion(texto, campo) {
+    mc.error.textContent = texto;
+    mc.error.hidden = !texto;
+    [mc.enunciado, ...mc.opciones].forEach((control) => control.classList.remove('invalido'));
+    if (campo) {
+      campo.classList.add('invalido');
+      campo.focus();
+    }
+  }
+
+  function sincronizarRadioC() {
+    const vacia = !mc.opciones[2].value.trim();
+    mc.radios[2].disabled = vacia;
+    if (vacia && mc.radios[2].checked) mc.radios[2].checked = false;
+  }
+
+  function abrirModalCorreccion(ctx) {
+    if (!mc.overlay || modalCorreccionAbierto || !ctx || !ctx.pregunta) return;
+    ctxCorreccion = ctx;
+    const pregunta = ctx.pregunta;
+    const parche = typeof obtenerParchePregunta === 'function'
+      ? obtenerParchePregunta(ctx.testId, ctx.preguntaIdx)
+      : null;
+
+    mc.titulo.textContent = `Corregir pregunta · Test ${String(ctx.testId).padStart(3, '0')} · Pregunta ${String(ctx.preguntaIdx + 1).padStart(2, '0')}`;
+    mc.enunciado.value = pregunta.texto || '';
+    mc.opciones.forEach((input, i) => { input.value = pregunta.opciones[i] || ''; });
+    mc.radios.forEach((radio, i) => { radio.checked = typeof pregunta.correcta === 'number' && pregunta.correcta === i; });
+    mc.explicacion.value = pregunta.explicacion || '';
+    mc.nota.value = parche ? parche.nota : '';
+    sincronizarRadioC();
+    mostrarErrorCorreccion('');
+    mc.guardar.disabled = false;
+    mc.guardar.textContent = 'Guardar corrección';
+
+    modalCorreccionAbierto = true;
+    if (typeof ctx.alAbrir === 'function') ctx.alAbrir();
+    mc.overlay.classList.add('activo');
+    mc.overlay.setAttribute('aria-hidden', 'false');
+    mc.enunciado.focus();
+  }
+
+  function cerrarModalCorreccion() {
+    if (!modalCorreccionAbierto || guardandoCorreccion) return;
+    const ctx = ctxCorreccion;
+    modalCorreccionAbierto = false;
+    ctxCorreccion = null;
+    mc.overlay.classList.remove('activo');
+    mc.overlay.setAttribute('aria-hidden', 'true');
+    if (document.activeElement && document.activeElement !== document.body) document.activeElement.blur();
+    if (ctx && typeof ctx.alCerrar === 'function') ctx.alCerrar();
+  }
+
+  async function guardarCorreccion() {
+    if (!modalCorreccionAbierto || guardandoCorreccion || !ctxCorreccion) return;
+    const ctx = ctxCorreccion;
+    const opciones = mc.opciones.map((input) => input.value.trim());
+    const enunciado = mc.enunciado.value.trim();
+    const marcada = mc.radios.findIndex((radio) => radio.checked);
+
+    if (!enunciado) return mostrarErrorCorreccion('El enunciado no puede estar vacío.', mc.enunciado);
+    if (!opciones[0]) return mostrarErrorCorreccion('La opción a) es obligatoria.', mc.opciones[0]);
+    if (!opciones[1]) return mostrarErrorCorreccion('La opción b) es obligatoria.', mc.opciones[1]);
+    const textos = opciones[2] ? opciones : opciones.slice(0, 2);
+    if (marcada < 0 || marcada >= textos.length) return mostrarErrorCorreccion('Marca cuál es la opción correcta.');
+
+    guardandoCorreccion = true;
+    mc.guardar.disabled = true;
+    mc.guardar.textContent = 'Guardando...';
+    let resultado;
+    try {
+      resultado = await guardarFlagPregunta({
+        testId: ctx.testId,
+        preguntaIdx: ctx.preguntaIdx,
+        enunciado,
+        opciones: textos,
+        correcta: marcada,
+        explicacion: mc.explicacion.value.trim(),
+        nota: mc.nota.value.trim()
+      });
+    } catch (err) {
+      guardandoCorreccion = false;
+      mc.guardar.disabled = false;
+      mc.guardar.textContent = 'Guardar corrección';
+      return mostrarErrorCorreccion(err && err.message ? err.message : 'No se pudo guardar la corrección.');
+    }
+    guardandoCorreccion = false;
+
+    if (typeof ctx.alGuardar === 'function') ctx.alGuardar(resultado.parche, resultado);
+    cerrarModalCorreccion();
+  }
+
+  if (mc.overlay) {
+    mc.form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      guardarCorreccion();
+    });
+    mc.cerrar.addEventListener('click', cerrarModalCorreccion);
+    mc.cancelar.addEventListener('click', cerrarModalCorreccion);
+    mc.opciones[2].addEventListener('input', sincronizarRadioC);
+    document.addEventListener('keydown', (event) => {
+      if (!modalCorreccionAbierto) return;
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
+        cerrarModalCorreccion();
+      } else if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
+        event.preventDefault();
+        event.stopPropagation();
+        guardarCorreccion();
+      }
+    }, true);
   }
 
   /* ================= PARÁMETROS DE URL ================= */
@@ -227,6 +385,7 @@
 
   const SVG_ATTRS = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
   const ICONO_CHECK = `<svg ${SVG_ATTRS}><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>`;
+  const ICONO_BANDERA = `<svg ${SVG_ATTRS}><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg>`;
   const ICONO_ASPA = `<svg ${SVG_ATTRS}><path d="M6 6l12 12M18 6L6 18"/></svg>`;
 
   function iniciarRepaso() {
@@ -256,6 +415,13 @@
     let tiempoActual = 0;                  // tiempo congelado de la tarjeta actual (1 decimal)
     let nivelSugerido = '';                // 'hard' | 'medium' | 'easy' | 'again'
     let aciertoActual = false;             // si la respuesta de la tarjeta actual fue correcta
+    let ordenVisual = [];
+    let seleccionVisual = -1;
+    let rachaPrevia = 0;
+    let rachaMaxPrevia = 0;
+    let tiemposPrevios = [];
+    let primeraVezActual = false;
+    let pausaCorreccion = null;
 
     const el = (id) => document.getElementById(id);
     const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -367,9 +533,12 @@
               </div>
               <div class="repaso-contador" id="repasoContador">0 / 0</div>
             </div>
-            <div class="repaso-combo" id="repasoCombo" title="Racha de aciertos seguidos" aria-live="polite">
-              <span class="repaso-combo-fuego" aria-hidden="true">🔥</span>
-              <span id="repasoComboNum">0</span>
+            <div class="repaso-topbar-acciones">
+              ${BANDERA_VISIBLE ? `<button type="button" class="btn-bandera" id="btnBandera" title="Corregir esta pregunta" aria-label="Corregir esta pregunta">${ICONO_BANDERA}</button>` : ''}
+              <div class="repaso-combo" id="repasoCombo" title="Racha de aciertos seguidos" aria-live="polite">
+                <span class="repaso-combo-fuego" aria-hidden="true">🔥</span>
+                <span id="repasoComboNum">0</span>
+              </div>
             </div>
           </div>
         </header>
@@ -414,7 +583,6 @@
         return;
       }
 
-      const tarjeta = obtenerTarjetas()[claveActual];
       numOpciones = pregActual.opciones.length;
       fase = 'pregunta';
 
@@ -424,6 +592,25 @@
       actualizarProgreso();
       pintarCombo(null);
 
+      generarOrdenVisual();
+      seleccionVisual = -1;
+      pintarTarjeta();
+      actualizarEstadoBandera();
+
+      window.scrollTo(0, 0);
+      iniciarCronometro();
+    }
+
+    function generarOrdenVisual() {
+      const barajar = typeof obtenerConfigAnki === 'function' && obtenerConfigAnki().barajarOpciones === true;
+      ordenVisual = pregActual.opciones.map((_, i) => i);
+      if (barajar) barajarArray(ordenVisual);
+      correctaVisual = ordenVisual.indexOf(pregActual.correcta);
+    }
+
+    function pintarTarjeta() {
+      const stage = el('repasoStage');
+      const tarjeta = obtenerTarjetas()[claveActual];
       const imagenSrc = normalizarImagen(pregActual.imagen);
       const repeticion = sesion.repetidas.has(claveActual) ? '<span class="badge badge--aviso badge--mayus badge--sm">Repetición</span>' : '';
       const refTest = String(tarjeta.testId).padStart(3, '0');
@@ -431,14 +618,6 @@
       // Categoría DGT: la guardada en la tarjeta o, si aún no se ha migrado, la calculada al vuelo
       const categoria = tarjeta.categoria
         || (typeof categoriaDePregunta === 'function' ? categoriaDePregunta(pregActual) : '');
-
-      // Orden visual: posición en pantalla -> índice original en el JSON.
-      // Si "barajarOpciones" está activo se mezcla en cada aparición; el rastreo de la correcta se mantiene
-      // en correctaVisual, y las teclas 1-2-3 y las letras a-b-c siguen el orden visual de arriba abajo.
-      const barajar = typeof obtenerConfigAnki === 'function' && obtenerConfigAnki().barajarOpciones === true;
-      const ordenVisual = pregActual.opciones.map((_, i) => i);
-      if (barajar) barajarArray(ordenVisual);
-      correctaVisual = ordenVisual.indexOf(pregActual.correcta);
 
       const opcionesHTML = ordenVisual.map((idxOriginal, i) => `
         <button type="button" class="repaso-opcion" data-op="${i}">
@@ -474,9 +653,16 @@
       stage.querySelectorAll('.repaso-opcion').forEach((btn) => {
         btn.addEventListener('click', () => seleccionarOpcion(Number(btn.dataset.op)));
       });
+    }
 
-      window.scrollTo(0, 0);
-      iniciarCronometro();
+    function actualizarEstadoBandera() {
+      const btn = el('btnBandera');
+      if (!btn || !claveActual) return;
+      const tarjeta = obtenerTarjetas()[claveActual];
+      const hayParche = Boolean(tarjeta && typeof obtenerParchePregunta === 'function'
+        && obtenerParchePregunta(tarjeta.testId, tarjeta.preguntaIdx));
+      btn.classList.toggle('corregida', hayParche);
+      btn.title = hayParche ? 'Pregunta ya corregida · editar de nuevo' : 'Corregir esta pregunta';
     }
 
     /* ---------- Fase 1: elegir respuesta ---------- */
@@ -485,9 +671,46 @@
       fase = 'confianza';
       detenerCronometro();               // congela el tiempo exacto al instante
       bloqueoHasta = Date.now() + 200;   // evita que una doble pulsación salte la fase de confianza
+      seleccionVisual = i;
 
-      const correcta = correctaVisual;   // índice visual de la correcta (ya contempla el barajado)
-      const acierto = i === correcta;
+      const tarjetaAntes = obtenerTarjetas()[claveActual] || {};
+      aciertoActual = i === correctaVisual;
+      rachaPrevia = sesion.racha;
+      rachaMaxPrevia = sesion.rachaMax;
+      tiemposPrevios = tiemposSesion.slice();
+      aplicarRacha(aciertoActual, true);
+      tiemposSesion.push(tiempoActual);  // entra en la mediana a partir de la SIGUIENTE pregunta
+
+      primeraVezActual = !sesion.vistas.has(claveActual);
+      if (primeraVezActual) {
+        sesion.vistas.add(claveActual);
+        if (Number(tarjetaAntes.ultimoTiempoSeg) > 0) {
+          sesion.comparables.add(claveActual);
+          if (aciertoActual && tiempoActual < Number(tarjetaAntes.ultimoTiempoSeg)) sesion.mejoradas.add(claveActual);
+        }
+      }
+
+      mostrarResultado(true);
+    }
+
+    function aplicarRacha(acierto, animar) {
+      if (acierto) {
+        sesion.racha = rachaPrevia + 1;
+        sesion.rachaMax = Math.max(sesion.rachaMax, sesion.racha);
+        pintarCombo(animar ? 'pop' : null);
+      } else {
+        sesion.racha = 0;
+        pintarCombo(animar && rachaPrevia > 0 ? 'cae' : null);
+      }
+    }
+
+    function mostrarResultado(primera) {
+      const i = seleccionVisual;
+      const correcta = correctaVisual;
+      const acierto = aciertoActual;
+      const tarjetaAntes = obtenerTarjetas()[claveActual] || {};
+      const sug = sugerirConfianza(acierto, tiempoActual, tiemposPrevios, tarjetaAntes.tiempoMedioSeg);
+      nivelSugerido = sug.nivel;
 
       cont.querySelectorAll('.repaso-opcion').forEach((btn, idx) => {
         btn.classList.add('bloqueada');
@@ -495,40 +718,13 @@
         const icono = btn.querySelector('.repaso-opcion-icono');
         if (idx === correcta) {
           btn.classList.add('es-correcta');
-          if (!acierto) btn.classList.add('revelada');   // se ilumina un instante después del fallo
+          if (!acierto) btn.classList.add('revelada');
           if (icono) icono.innerHTML = ICONO_CHECK;
         } else if (idx === i) {
           btn.classList.add('es-fallo');
           if (icono) icono.innerHTML = ICONO_ASPA;
         }
       });
-
-      // Combo de sesión: sube con cada acierto consecutivo y se reinicia al fallar
-      if (acierto) {
-        sesion.racha++;
-        sesion.rachaMax = Math.max(sesion.rachaMax, sesion.racha);
-        pintarCombo('pop');
-      } else {
-        const habiaRacha = sesion.racha > 0;
-        sesion.racha = 0;
-        pintarCombo(habiaRacha ? 'cae' : null);
-      }
-
-      // Sugerencia de confianza según tiempo esperado (65 % histórico de la tarjeta + 35 % mediana de hoy)
-      const tarjetaAntes = obtenerTarjetas()[claveActual] || {};
-      aciertoActual = acierto;
-      const sug = sugerirConfianza(acierto, tiempoActual, tiemposSesion, tarjetaAntes.tiempoMedioSeg);
-      nivelSugerido = sug.nivel;
-      tiemposSesion.push(tiempoActual);  // entra en la mediana a partir de la SIGUIENTE pregunta
-
-      // Mejora vs. el anterior repaso: solo la 1.ª vez que sale la tarjeta en la sesión y si hay tiempo previo
-      if (!sesion.vistas.has(claveActual)) {
-        sesion.vistas.add(claveActual);
-        if (Number(tarjetaAntes.ultimoTiempoSeg) > 0) {
-          sesion.comparables.add(claveActual);
-          if (acierto && tiempoActual < Number(tarjetaAntes.ultimoTiempoSeg)) sesion.mejoradas.add(claveActual);
-        }
-      }
 
       const intervalos = previsualizarIntervalosTarjeta(claveActual) || {};
       const panel = el('repasoConfianza');
@@ -568,9 +764,93 @@
       if (ayuda) ayuda.innerHTML = '<kbd>Espacio</kbd>/<kbd>Enter</kbd> acepta la sugerida y pasa a la siguiente';
 
       // En pantallas pequeñas asegura que el panel de confianza quede a la vista
-      requestAnimationFrame(() => {
-        panel.scrollIntoView({ behavior: reducirMovimiento() ? 'auto' : 'smooth', block: 'nearest' });
+      if (primera) {
+        requestAnimationFrame(() => {
+          panel.scrollIntoView({ behavior: reducirMovimiento() ? 'auto' : 'smooth', block: 'nearest' });
+        });
+      }
+    }
+
+    function abrirCorreccionActual() {
+      if (!BANDERA_VISIBLE || (fase !== 'pregunta' && fase !== 'confianza') || !pregActual) return;
+      const tarjeta = obtenerTarjetas()[claveActual];
+      if (!tarjeta) return;
+      abrirModalCorreccion({
+        testId: Number(tarjeta.testId),
+        preguntaIdx: Number(tarjeta.preguntaIdx) || 0,
+        pregunta: pregActual,
+        alAbrir: () => {
+          pausaCorreccion = fase === 'pregunta' && inicioTarjeta !== null ? performance.now() : null;
+        },
+        alGuardar: (parche, resultado) => {
+          aplicarParcheAPregunta(pregActual, parche);
+          repintarTarjetaActual();
+          actualizarEstadoBandera();
+          if (resultado && (resultado.nube === 'error' || resultado.progresoEnNube === false)) {
+            const avisoNube = el('repasoAvisoNube');
+            if (avisoNube) avisoNube.hidden = false;
+          }
+        },
+        alCerrar: () => {
+          if (pausaCorreccion !== null && inicioTarjeta !== null) {
+            inicioTarjeta += performance.now() - pausaCorreccion;
+          }
+          pausaCorreccion = null;
+        }
       });
+    }
+
+    function repintarTarjetaActual() {
+      if (!pregActual || (fase !== 'pregunta' && fase !== 'confianza')) return;
+      const originalElegida = fase === 'confianza' && seleccionVisual >= 0
+        ? ordenVisual[seleccionVisual]
+        : -1;
+      const cambioNumeroOpciones = numOpciones !== pregActual.opciones.length;
+
+      if (cambioNumeroOpciones) generarOrdenVisual();
+      else correctaVisual = ordenVisual.indexOf(pregActual.correcta);
+      pintarTarjeta();
+
+      if (fase !== 'confianza') return;
+      if (originalElegida < 0 || originalElegida >= pregActual.opciones.length || !ordenVisual.includes(originalElegida)) {
+        deshacerRespuestaActual();
+        return;
+      }
+
+      seleccionVisual = ordenVisual.indexOf(originalElegida);
+      const nuevoAcierto = seleccionVisual === correctaVisual;
+      if (nuevoAcierto !== aciertoActual) {
+        aciertoActual = nuevoAcierto;
+        sesion.rachaMax = rachaMaxPrevia;
+        aplicarRacha(nuevoAcierto, false);
+        const tarjetaAntes = obtenerTarjetas()[claveActual] || {};
+        if (sesion.comparables.has(claveActual) && primeraVezActual) {
+          if (nuevoAcierto && tiempoActual < Number(tarjetaAntes.ultimoTiempoSeg)) {
+            sesion.mejoradas.add(claveActual);
+          } else {
+            sesion.mejoradas.delete(claveActual);
+          }
+        }
+      }
+      mostrarResultado(false);
+    }
+
+    function deshacerRespuestaActual() {
+      tiemposSesion.pop();
+      sesion.racha = rachaPrevia;
+      sesion.rachaMax = rachaMaxPrevia;
+      pintarCombo(null);
+      if (primeraVezActual) {
+        sesion.vistas.delete(claveActual);
+        sesion.comparables.delete(claveActual);
+        sesion.mejoradas.delete(claveActual);
+      }
+      fase = 'pregunta';
+      seleccionVisual = -1;
+      nivelSugerido = '';
+      aciertoActual = false;
+      pausaCorreccion = null;
+      inicioTarjeta = performance.now() - (tiempoActual * 1000);
     }
 
     /* ---------- Fase 2: confianza ---------- */
@@ -688,8 +968,13 @@
       `;
     }
 
+    cont.addEventListener('click', (event) => {
+      if (event.target.closest && event.target.closest('#btnBandera')) abrirCorreccionActual();
+    });
+
     /* ---------- Teclado ---------- */
     document.addEventListener('keydown', (e) => {
+      if (modalCorreccionAbierto) return;
       if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
 
       if (fase === 'pregunta') {
@@ -709,6 +994,9 @@
       pintarCarga('Cargando tu progreso...');
       try {
         await sincronizacionInicial;
+        if (typeof sincronizarFlagsPendientes === 'function') {
+          sincronizarFlagsPendientes().catch((err) => console.error('Error sincronizando correcciones pendientes:', err));
+        }
         if (necesitaInicializarMazo()) {
           pintarCarga('Preparando mazo Anki...');
           await inicializarMazoAnkiDesdeTests();
@@ -739,7 +1027,10 @@
 
       pintarCarga(`Cargando ${estado.colaHoy.length} tarjetas...`);
       const ids = [...new Set(estado.colaHoy.map((t) => t.testId))];
-      await Promise.all(ids.map(async (id) => { cacheTests.set(id, await cargarDatosTest(id)); }));
+      await Promise.all(ids.map(async (id) => {
+        const data = await cargarDatosTest(id);
+        cacheTests.set(id, data ? aplicarParchesATest(id, data) : data);
+      }));
 
       sesion.pendientes = estado.colaHoy.map((t) => t.clave).filter((k) => preguntaDeClave(k));
       sesion.total = sesion.pendientes.length;
@@ -769,6 +1060,8 @@
 
     try {
       const data = await cargarJSONTest(n);
+      await sincronizacionInicial;
+      aplicarParchesATest(n, data);
       PREGUNTAS = preguntasDeDatosTest(data) || [];
       if (!PREGUNTAS.length) throw new Error('El JSON no contiene preguntas');
       renderPreguntas();
