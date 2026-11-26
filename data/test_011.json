@@ -104,7 +104,8 @@
         "un lugar desde el que puede realizar un cambio de sentido."
       ],
       "imagen": "../img/test_011_p11.jpg",
-      "correcta": 2
+      "correcta": 1,
+      "corregida": true
     },
     {
       "texto": "¿De que peligro advierte la señal?",
@@ -117,14 +118,15 @@
       "correcta": 1
     },
     {
-      "texto": "Un niño va sujeto con un sistema de retencion orientado hacia atrás en el asiento de lantero del vehículo. ¿Esta permitido?",
+      "texto": "Un niño va sujeto con un sistema de retencion orientado hacia atrás en el asiento delantero del vehículo. ¿Esta permitido?",
       "opciones": [
         "Sí, pero el airbag debe estar activado.",
         "No.",
         "Sí, pero el airbag debe estar desactivado."
       ],
       "imagen": "../img/test_011_p13.jpg",
-      "correcta": 2
+      "correcta": 2,
+      "corregida": true
     },
     {
       "texto": "¿Que indica la flecha pintada en la calzada?",

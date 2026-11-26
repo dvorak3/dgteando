@@ -289,10 +289,11 @@
       "opciones": [
         "No, no es necesario.",
         "Sí, para proteger los ojos.",
-        "No, porqueesobligatorioquetodos los cascos lleven pantalla."
+        "No, porque es obligatorio que todos los cascos lleven pantalla."
       ],
       "imagen": "../img/test_019_p30.jpg",
-      "correcta": 1
+      "correcta": 1,
+      "corregida": true
     }
   ]
 }

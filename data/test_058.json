@@ -191,8 +191,9 @@
         "No, en ningún caso.",
         "Sí, cuando se haga a vehículos de dos ruedas que no impidan la visibilidad."
       ],
-      "correcta": 0,
-      "imagen": "../img/test_058_p20.jpg"
+      "correcta": 1,
+      "imagen": "../img/test_058_p20.jpg",
+      "corregida": true
     },
     {
       "texto": "¿Qué indica la señal?",

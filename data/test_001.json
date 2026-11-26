@@ -3,14 +3,15 @@
   "respuestas_verificadas": true,
   "preguntas": [
     {
-      "texto": "¿Es aconsejable conducir un turismo calzado con unas chanclas?",
+      "texto": "¿Es aconsejable conducir un turismo calzado con unas chanclas? (revisión)",
       "opciones": [
         "No, porque podrían caerse y dificultar el manejo de los pedales.",
         "Sí, porque al no sujetar el pie, es más fácil ejercer la presión correcta sobre los pedales.",
         "Sí, porque permiten un manejo más rápido y seguro de los pedales."
       ],
       "correcta": 0,
-      "imagen": "../img/test_001_p01.jpg"
+      "imagen": "../img/test_001_p01.jpg",
+      "corregida": true
     },
     {
       "texto": "¿Puede realizar un cambio de sentido en un lugar donde esté prohibido adelantar?",
