@@ -277,8 +277,9 @@
         "con prioridad de paso.",
         "con prioridad de paso a la derecha."
       ],
-      "correcta": 1,
-      "imagen": "../img/test_049_p29.jpg"
+      "correcta": 2,
+      "imagen": "../img/test_049_p29.jpg",
+      "corregida": true
     },
     {
       "texto": "Como norma general, las maniobras deben advertirse utilizando...",
