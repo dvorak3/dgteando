@@ -1,16 +1,22 @@
 (function () {
   const params = new URLSearchParams(window.location.search);
   const modoParam = params.get('modo');
-  const MODO = (modoParam === 'estudio' || modoParam === 'repaso') ? modoParam : 'examen';
+  const MODO = ['estudio', 'repaso', 'falladas'].includes(modoParam) ? modoParam : 'examen';
   const letras = ['a', 'b', 'c', 'd'];
-  const BANDERA_VISIBLE = modoParam === 'repaso';
+  const BANDERA_VISIBLE = ['repaso', 'falladas'].includes(modoParam);
 
   let PREGUNTAS = [];
   window.TEST_ID = null;
 
+  function escaparHTML(valor) {
+    return String(valor).replace(/[&<>"]/g, (caracter) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'
+    }[caracter]));
+  }
+
   const lblModo = document.getElementById('lblModo');
   if (lblModo) {
-    lblModo.textContent = MODO === 'estudio' ? 'Modo estudio' : MODO === 'repaso' ? 'Repaso' : 'Modo examen';
+    lblModo.textContent = MODO === 'estudio' ? 'Modo estudio' : MODO === 'falladas' ? 'Preguntas falladas' : MODO === 'repaso' ? 'Repaso' : 'Modo examen';
   }
 
   const form = document.getElementById('formTest');
@@ -51,6 +57,7 @@
     pregunta.opciones = parche.opciones.slice();
     pregunta.correcta = parche.correcta;
     if (parche.explicacion) pregunta.explicacion = parche.explicacion;
+    else delete pregunta.explicacion;
     pregunta.corregida = true;
     delete pregunta.correcta_detectada;
     return pregunta;
@@ -234,7 +241,7 @@
       const opcionesHTML = preg.opciones.map((textoOp, opIdx) => `
         <label class="opcion-label" id="lbl-${idx}-${opIdx}">
           <input type="radio" name="p_${idx}" value="${opIdx}">
-          <span><span class="opcion-letra">${letras[opIdx]})</span> ${textoOp}</span>
+          <span><span class="opcion-letra">${letras[opIdx]})</span> ${escaparHTML(textoOp)}</span>
         </label>
       `).join('');
 
@@ -245,7 +252,7 @@
       article.innerHTML = `
         <div class="pregunta-cuerpo">
           <div class="pregunta-enunciado">
-            <span class="p-num">${idx + 1}.</span> ${preg.texto}
+            <span class="p-num">${idx + 1}.</span> ${escaparHTML(preg.texto)}
           </div>
           <div class="opciones-lista">
             ${opcionesHTML}
@@ -392,14 +399,20 @@
     const cont = document.getElementById('repasoContainer');
     if (!cont) return;
 
-    document.documentElement.classList.add('modo-repaso');
+    window.addEventListener('beforeunload', () => {
+      sincronizarFlagsSesion({ keepalive: true }).catch((err) => {
+        console.error('Error enviando correcciones al cerrar la página:', err);
+      });
+    });
+
+    document.documentElement.classList.add(`modo-${MODO}`);
     form.style.display = 'none';
     cont.style.display = 'flex';
-    document.title = 'Repaso · dgt-eando';
+    document.title = MODO === 'falladas' ? 'Repaso de falladas · dgt-eando' : 'Repaso · dgt-eando';
 
     const cacheTests = new Map();          // testId -> JSON del test
     let sesion = null;                     // { pendientes, total, hechas, contadores, racha, rachaMax, repetidas }
-    let fase = 'carga';                    // carga | pregunta | confianza | guardando | final
+    let fase = 'carga';                    // carga | pregunta | confianza | guardando | finalizando | final
     let claveActual = null;
     let pregActual = null;
     let numOpciones = 0;
@@ -526,7 +539,7 @@
       cont.innerHTML = `
         <header class="repaso-topbar">
           <div class="repaso-topbar-inner">
-            <a href="index.html" class="repaso-cerrar" aria-label="Salir del repaso" title="Salir">✕</a>
+            <a href="index.html" class="repaso-cerrar" id="repasoSalir" aria-label="Salir del repaso" title="Salir">✕</a>
             <div class="repaso-progreso-wrap">
               <div class="repaso-progreso" id="repasoProgreso" role="progressbar" aria-label="Progreso del repaso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
                 <div class="repaso-progreso-barra" id="repasoBarra"></div>
@@ -622,7 +635,7 @@
       const opcionesHTML = ordenVisual.map((idxOriginal, i) => `
         <button type="button" class="repaso-opcion" data-op="${i}">
           <span class="repaso-tecla" aria-hidden="true">${i + 1}</span>
-          <span class="repaso-opcion-texto"><span class="opcion-letra">${letras[i]})</span> ${pregActual.opciones[idxOriginal]}</span>
+          <span class="repaso-opcion-texto"><span class="opcion-letra">${letras[i]})</span> ${esc(pregActual.opciones[idxOriginal])}</span>
           <span class="repaso-opcion-icono" aria-hidden="true"></span>
         </button>
       `).join('');
@@ -640,7 +653,7 @@
             </span>
           </div>
           <div class="repaso-cuerpo">
-            <h2 class="repaso-enunciado">${pregActual.texto}</h2>
+            <h2 class="repaso-enunciado">${esc(pregActual.texto)}</h2>
             ${imagenSrc ? `<div class="repaso-media"><img src="${esc(imagenSrc)}" alt="Imagen de la pregunta"></div>` : ''}
             <div class="repaso-opciones" role="group" aria-label="Respuestas">${opcionesHTML}</div>
           </div>
@@ -893,13 +906,23 @@
     }
 
     /* ---------- Pantalla final ---------- */
-    function mostrarFinal() {
+    async function mostrarFinal() {
+      fase = 'finalizando';
+      let falloSincronizacionFlags = false;
+      try {
+        const resultado = await sincronizarFlagsSesion();
+        falloSincronizacionFlags = !resultado.ok;
+      } catch (err) {
+        console.error('Error sincronizando correcciones de la sesión:', err);
+        falloSincronizacionFlags = true;
+      }
+
       fase = 'final';
       const e = obtenerColaRepasoHoy();
       const c = sesion ? sesion.contadores : { hard: 0, medium: 0, easy: 0, again: 0 };
       const repasadas = sesion ? sesion.hechas : 0;
       const rachaMax = sesion ? sesion.rachaMax : 0;
-      const hayMas = e.colaHoy.length > 0;
+      const hayMas = MODO === 'repaso' && e.colaHoy.length > 0;
 
       // Categorías más flojas según el historial real (mayor % de fallos)
       const debiles = typeof obtenerCategoriasDebiles === 'function' ? obtenerCategoriasDebiles(3) : [];
@@ -948,10 +971,12 @@
       cont.innerHTML = `
         <div class="repaso-final">
           <div class="repaso-final-icono" aria-hidden="true">✓</div>
-          <h2>${repasadas ? '¡Repaso de hoy completado!' : '¡Estás al día!'}</h2>
+          <h2>${MODO === 'falladas'
+            ? repasadas ? '¡Repaso de falladas completado!' : 'No tienes preguntas falladas'
+            : repasadas ? '¡Repaso de hoy completado!' : '¡Estás al día!'}</h2>
           <p class="repaso-final-sub">${repasadas
             ? `Has repasado ${repasadas} ${repasadas === 1 ? 'tarjeta' : 'tarjetas'} (${c.again} ${c.again === 1 ? 'repetición' : 'repeticiones'} por «Again»).`
-            : 'No tienes tarjetas pendientes para hoy.'}</p>
+            : MODO === 'falladas' ? 'No hay preguntas con fallos anteriores en tu mazo.' : 'No tienes tarjetas pendientes para hoy.'}</p>
           ${rachaMax > 0 ? `<div class="badge badge--aviso badge--lg repaso-racha-final">🔥 Mejor racha: ${rachaMax}</div>` : ''}
           <div class="repaso-resumen">
             <div class="repaso-resumen-item madurez-nueva"><strong>${e.nuevas}</strong><span>Nuevas</span></div>
@@ -961,6 +986,7 @@
           </div>
           ${bloqueTiempos}
           ${bloqueDebiles}
+          ${falloSincronizacionFlags ? '<p class="repaso-aviso-nube" role="status">⚠ No se pudieron enviar todas las correcciones; siguen guardadas en este dispositivo.</p>' : ''}
           <p class="repaso-final-sub">${e.totalMazo} preguntas en seguimiento · examen en ${e.diasRestantes} ${e.diasRestantes === 1 ? 'día' : 'días'}</p>
           ${hayMas ? `<a class="btn btn--contorno btn--lg" href="test.html?modo=repaso">Seguir con ${e.colaHoy.length} ${e.colaHoy.length === 1 ? 'tarjeta más' : 'tarjetas más'}</a>` : ''}
           <a class="btn btn--primario btn--lg" href="index.html">Volver al panel <kbd>Enter</kbd></a>
@@ -969,7 +995,22 @@
     }
 
     cont.addEventListener('click', (event) => {
-      if (event.target.closest && event.target.closest('#btnBandera')) abrirCorreccionActual();
+      const botonBandera = event.target.closest && event.target.closest('#btnBandera');
+      if (botonBandera) {
+        abrirCorreccionActual();
+        return;
+      }
+
+      const salir = event.target.closest && event.target.closest('#repasoSalir');
+      if (salir) {
+        event.preventDefault();
+        salir.setAttribute('aria-disabled', 'true');
+        sincronizarFlagsSesion().catch((err) => {
+          console.error('Error sincronizando correcciones al salir:', err);
+        }).finally(() => {
+          window.location.assign(salir.href);
+        });
+      }
     });
 
     /* ---------- Teclado ---------- */
@@ -994,9 +1035,6 @@
       pintarCarga('Cargando tu progreso...');
       try {
         await sincronizacionInicial;
-        if (typeof sincronizarFlagsPendientes === 'function') {
-          sincronizarFlagsPendientes().catch((err) => console.error('Error sincronizando correcciones pendientes:', err));
-        }
         if (necesitaInicializarMazo()) {
           pintarCarga('Preparando mazo Anki...');
           await inicializarMazoAnkiDesdeTests();
@@ -1023,16 +1061,21 @@
         racha: 0, rachaMax: 0,
         vistas: new Set(), comparables: new Set(), mejoradas: new Set()
       };
-      if (!estado.colaHoy.length) { mostrarFinal(); return; }
+      const colaInicial = MODO === 'falladas'
+        ? Object.entries(obtenerTarjetas())
+          .filter(([, tarjeta]) => Number(tarjeta.fallos) > 0)
+          .map(([clave, tarjeta]) => ({ clave, ...tarjeta }))
+        : estado.colaHoy;
+      if (!colaInicial.length) { mostrarFinal(); return; }
 
-      pintarCarga(`Cargando ${estado.colaHoy.length} tarjetas...`);
-      const ids = [...new Set(estado.colaHoy.map((t) => t.testId))];
+      pintarCarga(`Cargando ${colaInicial.length} tarjetas...`);
+      const ids = [...new Set(colaInicial.map((t) => t.testId))];
       await Promise.all(ids.map(async (id) => {
         const data = await cargarDatosTest(id);
         cacheTests.set(id, data ? aplicarParchesATest(id, data) : data);
       }));
 
-      sesion.pendientes = estado.colaHoy.map((t) => t.clave).filter((k) => preguntaDeClave(k));
+      sesion.pendientes = colaInicial.map((t) => t.clave).filter((k) => preguntaDeClave(k));
       sesion.total = sesion.pendientes.length;
       mostrarTarjeta();
     })();
@@ -1040,7 +1083,7 @@
 
   /* ================= ARRANQUE ================= */
   (async function iniciar() {
-    if (MODO === 'repaso') {
+    if (MODO === 'repaso' || MODO === 'falladas') {
       iniciarRepaso();
       return;
     }

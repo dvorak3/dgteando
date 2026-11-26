@@ -1,5 +1,5 @@
 /* =====================================================================
-   test.css · Estructura y disposición de test.html (examen, estudio y repaso)
+   test.css · Estructura y disposición de test.html (examen, estudio y modos Anki)
    Los componentes viven en componentes.css.
    Carga: variables.css → componentes.css → test.css
    ===================================================================== */
@@ -27,7 +27,7 @@ body {
 }
 
 button, input, kbd {
-  font-family: inherit;
+  font-family: var(--font-test);
 }
 
 a {
@@ -120,11 +120,14 @@ a:hover {
    MODO REPASO (Anki) · pantalla inmersiva
    ===================================================================== */
 html.modo-repaso .test-title-row,
-html.modo-repaso #formTest {
+html.modo-repaso #formTest,
+html.modo-falladas .test-title-row,
+html.modo-falladas #formTest {
   display: none !important;
 }
 
-html.modo-repaso .test-column {
+html.modo-repaso .test-column,
+html.modo-falladas .test-column {
   max-width: none;
   padding: 0;
   margin: 0;

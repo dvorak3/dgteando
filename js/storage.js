@@ -257,6 +257,10 @@ function claveTarjeta(testId, preguntaIdx) {
 
 const TABLA_FLAGS = "flags_preguntas";
 const FLAG_CONFLICTO = "user_id,pregunta_id";
+const TABLA_LOTES_FLAGS = "flags_sesiones";
+const FLAGS_COLA_KEY = "flags_sesion_pendientes";
+let colaFlagsSesionMemoria = null;
+let sesionFlagsPromise = null;
 
 function normalizarParchePregunta(crudo) {
   if (!crudo || typeof crudo !== "object") return null;
@@ -318,15 +322,6 @@ function conservarParchesLocalesMasRecientes(datosNube) {
   return datosNube;
 }
 
-async function obtenerSesionSupabase() {
-  const { data, error } = await supabaseClient.auth.getSession();
-  if (error) {
-    console.error("Error leyendo la sesión de Supabase:", error);
-    return null;
-  }
-  return data && data.session ? data.session : null;
-}
-
 function filaFlagDesdeParche(parche, userId) {
   return {
     user_id: userId,
@@ -337,13 +332,97 @@ function filaFlagDesdeParche(parche, userId) {
     opciones: parche.opciones,
     correcta: parche.correcta,
     explicacion: parche.explicacion || null,
-    nota: parche.nota || null,
-    aplicado: false,
-    aplicado_at: null
+    nota: parche.nota || null
   };
 }
 
-async function guardarFlagPregunta(payload) {
+function nuevoIdLoteFlags() {
+  const bytes = new Uint8Array(16);
+  crypto.getRandomValues(bytes);
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const hex = [...bytes].map((byte) => byte.toString(16).padStart(2, "0")).join("");
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
+
+function leerColaFlagsSesion() {
+  if (colaFlagsSesionMemoria) return colaFlagsSesionMemoria;
+  const serializada = localStorage.getItem(FLAGS_COLA_KEY);
+  if (!serializada) return null;
+  const cola = JSON.parse(serializada);
+  if (!cola || typeof cola.id !== "string"
+      || !/^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(cola.id)
+      || !Array.isArray(cola.flags)) {
+    throw new Error("La cola local de correcciones tiene un formato no válido.");
+  }
+  const flags = cola.flags.map(normalizarParchePregunta);
+  if (flags.some((flag) => !flag)) {
+    throw new Error("La cola local contiene una corrección no válida.");
+  }
+  cola.flags = flags;
+  colaFlagsSesionMemoria = cola;
+  return cola;
+}
+
+function guardarColaFlagsSesion(cola) {
+  colaFlagsSesionMemoria = cola;
+  if (cola) localStorage.setItem(FLAGS_COLA_KEY, JSON.stringify(cola));
+  else localStorage.removeItem(FLAGS_COLA_KEY);
+}
+
+function encolarFlagSesion(payload) {
+  const parche = normalizarParchePregunta(payload);
+  if (!parche) throw new Error("No se puede encolar una corrección no válida.");
+  const clave = claveTarjeta(parche.testId, parche.preguntaIdx);
+  const cola = leerColaFlagsSesion() || { id: nuevoIdLoteFlags(), flags: [] };
+  const existentes = cola.flags.filter((flag) =>
+    claveTarjeta(flag.testId, flag.preguntaIdx) !== clave
+  );
+  existentes.push(parche);
+  cola.flags = existentes;
+  guardarColaFlagsSesion(cola);
+  return cola.id;
+}
+
+async function obtenerSesionExistente() {
+  const { data, error } = await supabaseClient.auth.getSession();
+  if (error) throw error;
+  return data && data.session ? data.session : null;
+}
+
+async function iniciarSesionAnonimaSiHaceFalta() {
+  const sesion = await obtenerSesionExistente();
+  if (sesion && sesion.user) return sesion;
+
+  const { data, error } = await supabaseClient.auth.signInAnonymously();
+  if (error) throw error;
+  if (!data || !data.session || !data.user) {
+    throw new Error("Supabase no devolvió una sesión anónima válida.");
+  }
+  return data.session;
+}
+
+function prepararSesionFlags() {
+  if (!sesionFlagsPromise) {
+    sesionFlagsPromise = iniciarSesionAnonimaSiHaceFalta();
+  }
+  const tarea = sesionFlagsPromise;
+  return tarea.finally(() => {
+    if (sesionFlagsPromise === tarea) sesionFlagsPromise = null;
+  });
+}
+
+function guardarParcheLocal(parche) {
+  const progreso = obtenerProgreso();
+  if (!progreso._parchesPreguntas || typeof progreso._parchesPreguntas !== "object") {
+    progreso._parchesPreguntas = {};
+  }
+  const clave = claveTarjeta(parche.testId, parche.preguntaIdx);
+  progreso._parchesPreguntas[clave] = parche;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(progreso));
+}
+
+function guardarFlagPregunta(payload) {
   const base = normalizarParchePregunta(payload);
   if (!base) {
     throw new Error("Corrección no válida: revisa el enunciado, las opciones (2 o 3) y la respuesta correcta.");
@@ -351,87 +430,114 @@ async function guardarFlagPregunta(payload) {
   const clave = claveTarjeta(base.testId, base.preguntaIdx);
   const ahora = new Date().toISOString();
   const progreso = obtenerProgreso();
-  if (!progreso._parchesPreguntas || typeof progreso._parchesPreguntas !== "object") {
-    progreso._parchesPreguntas = {};
-  }
-  const previo = normalizarParchePregunta(progreso._parchesPreguntas[clave]);
+  const previo = normalizarParchePregunta(progreso._parchesPreguntas && progreso._parchesPreguntas[clave]);
   const parche = {
     ...base,
     creadoEn: (previo && previo.creadoEn) || ahora,
     actualizadoEn: ahora,
     sincronizado: false
   };
-  progreso._parchesPreguntas[clave] = parche;
-  const subidaProgreso = guardarProgreso(progreso);
-
-  let nube = "pendiente";
-  let sesion = null;
-  try {
-    sesion = await obtenerSesionSupabase();
-  } catch (err) {
-    console.error("Error comprobando la sesión de Supabase:", err);
-    nube = "error";
-  }
-  if (sesion && sesion.user) {
-    try {
-      const { error } = await supabaseClient
-        .from(TABLA_FLAGS)
-        .upsert(filaFlagDesdeParche(parche, sesion.user.id), { onConflict: FLAG_CONFLICTO });
-      if (error) console.error("Error guardando el flag en Supabase:", error);
-      nube = error ? "error" : "sincronizado";
-    } catch (err) {
-      console.error("Error guardando el flag en Supabase:", err);
-      nube = "error";
-    }
-  }
-  const progresoEnNube = await subidaProgreso;
-
-  if (nube === "sincronizado") {
-    const actual = obtenerProgreso();
-    const guardado = actual._parchesPreguntas && actual._parchesPreguntas[clave];
-    if (guardado && guardado.actualizadoEn === ahora) {
-      guardado.sincronizado = true;
-      await guardarProgreso(actual);
-      parche.sincronizado = true;
-    }
-  }
-
-  return { ok: true, parche, nube, progresoEnNube };
+  guardarParcheLocal(parche);
+  const loteId = encolarFlagSesion(parche);
+  prepararSesionFlags().catch((err) => {
+    console.error("No se pudo preparar la sesión de Supabase para las correcciones:", err);
+  });
+  return { ok: true, parche, nube: "pendiente", loteId };
 }
 
-async function sincronizarFlagsPendientes() {
-  const pendientes = Object.entries(obtenerParchesPreguntas()).filter(([, parche]) => !parche.sincronizado);
-  if (!pendientes.length) return { enviados: 0, pendientes: 0, sinSesion: false };
+async function upsertFlagsConKeepalive(filas, marcador, accessToken) {
+  const headers = {
+    apikey: SUPABASE_KEY,
+    Authorization: `Bearer ${accessToken}`,
+    "Content-Type": "application/json",
+    Prefer: "resolution=merge-duplicates,return=minimal"
+  };
+  const respuestaFlags = await fetch(
+    `${SUPABASE_URL}/rest/v1/${TABLA_FLAGS}?on_conflict=${encodeURIComponent(FLAG_CONFLICTO)}`,
+    { method: "POST", headers, body: JSON.stringify(filas), keepalive: true }
+  );
+  if (!respuestaFlags.ok) {
+    throw new Error(`Error subiendo el lote de correcciones (${respuestaFlags.status}).`);
+  }
+
+  const respuestaMarcador = await fetch(
+    `${SUPABASE_URL}/rest/v1/${TABLA_LOTES_FLAGS}?on_conflict=id`,
+    {
+      method: "POST",
+      headers: { ...headers, Prefer: "resolution=ignore-duplicates,return=minimal" },
+      body: JSON.stringify(marcador),
+      keepalive: true
+    }
+  );
+  if (!respuestaMarcador.ok) {
+    throw new Error(`Error registrando el lote de correcciones (${respuestaMarcador.status}).`);
+  }
+}
+
+let sincronizacionFlagsEnCurso = null;
+
+function sincronizarFlagsSesion({ keepalive = false } = {}) {
+  if (sincronizacionFlagsEnCurso) return sincronizacionFlagsEnCurso;
+  const tarea = ejecutarSincronizacionFlagsSesion(keepalive);
+  sincronizacionFlagsEnCurso = tarea;
+  return tarea.finally(() => {
+    if (sincronizacionFlagsEnCurso === tarea) sincronizacionFlagsEnCurso = null;
+  });
+}
+
+async function ejecutarSincronizacionFlagsSesion(keepalive) {
+  const cola = leerColaFlagsSesion();
+  if (!cola || !cola.flags.length) return { ok: true, enviados: 0, sinCambios: true };
 
   let sesion;
-  try {
-    sesion = await obtenerSesionSupabase();
-  } catch (err) {
-    console.error("Error comprobando la sesión de Supabase:", err);
-    return { enviados: 0, pendientes: pendientes.length, sinSesion: false, error: true };
+  if (keepalive) {
+    sesion = sesionFlagsPromise ? await sesionFlagsPromise : await obtenerSesionExistente();
+  } else {
+    sesion = await prepararSesionFlags();
   }
-  if (!sesion || !sesion.user) return { enviados: 0, pendientes: pendientes.length, sinSesion: true };
-
-  try {
-    const filas = pendientes.map(([, parche]) => filaFlagDesdeParche(parche, sesion.user.id));
-    const { error } = await supabaseClient.from(TABLA_FLAGS).upsert(filas, { onConflict: FLAG_CONFLICTO });
-    if (error) throw error;
-  } catch (err) {
-    console.error("Error reenviando flags pendientes:", err);
-    return { enviados: 0, pendientes: pendientes.length, sinSesion: false, error: true };
+  if (!sesion || !sesion.user || !sesion.access_token) {
+    throw new Error("No hay sesión autenticada para subir las correcciones.");
   }
 
-  const actual = obtenerProgreso();
-  let marcados = 0;
-  pendientes.forEach(([clave, parche]) => {
-    const guardado = actual._parchesPreguntas && actual._parchesPreguntas[clave];
-    if (guardado && (guardado.actualizadoEn || "") === parche.actualizadoEn) {
-      guardado.sincronizado = true;
-      marcados++;
+  const enviados = cola.flags.map((parche) => filaFlagDesdeParche(parche, sesion.user.id));
+  const marcador = { id: cola.id, user_id: sesion.user.id, flags_count: enviados.length };
+  if (keepalive) {
+    await upsertFlagsConKeepalive(enviados, marcador, sesion.access_token);
+  } else {
+    const { error: errorFlags } = await supabaseClient
+      .from(TABLA_FLAGS)
+      .upsert(enviados, { onConflict: FLAG_CONFLICTO });
+    if (errorFlags) throw errorFlags;
+
+    const { error: errorMarcador } = await supabaseClient
+      .from(TABLA_LOTES_FLAGS)
+      .upsert(marcador, { onConflict: "id", ignoreDuplicates: true });
+    if (errorMarcador) throw errorMarcador;
+  }
+
+  const progreso = obtenerProgreso();
+  const actualizacionesPorClave = new Map(cola.flags.map((parche) => [
+    claveTarjeta(parche.testId, parche.preguntaIdx),
+    parche.actualizadoEn
+  ]));
+  enviados.forEach((fila) => {
+    const parche = progreso._parchesPreguntas
+      && progreso._parchesPreguntas[fila.pregunta_id];
+    if (parche && parche.actualizadoEn === actualizacionesPorClave.get(fila.pregunta_id)) {
+      parche.sincronizado = true;
     }
   });
-  if (marcados) await guardarProgreso(actual);
-  return { enviados: marcados, pendientes: pendientes.length - marcados, sinSesion: false };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(progreso));
+
+  const colaActual = leerColaFlagsSesion();
+  const clavesEnviadas = new Set(cola.flags.map((parche) =>
+    `${claveTarjeta(parche.testId, parche.preguntaIdx)}:${parche.actualizadoEn}`
+  ));
+  const restantes = colaActual.flags.filter((parche) =>
+    !clavesEnviadas.has(`${claveTarjeta(parche.testId, parche.preguntaIdx)}:${parche.actualizadoEn}`)
+  );
+  guardarColaFlagsSesion(restantes.length ? { id: nuevoIdLoteFlags(), flags: restantes } : null);
+  return { ok: true, enviados: enviados.length, loteId: cola.id };
 }
 
 /* =====================================================================

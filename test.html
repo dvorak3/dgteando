@@ -8,17 +8,18 @@
 
   <!-- Marca el modo repaso antes del primer pintado para evitar parpadeos del layout de test -->
   <script>
-    if (new URLSearchParams(location.search).get('modo') === 'repaso') {
-      document.documentElement.classList.add('modo-repaso');
+    const modo = new URLSearchParams(location.search).get('modo');
+    if (modo === 'repaso' || modo === 'falladas') {
+      document.documentElement.classList.add(`modo-${modo}`);
     }
   </script>
 
   <!-- Hojas de estilo · orden obligatorio: 1º variables.css · 2º componentes.css · 3º CSS de la página -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/variables.css?v=4">
-  <link rel="stylesheet" href="css/componentes.css?v=3">
-  <link rel="stylesheet" href="css/test.css?v=10">
+  <link rel="stylesheet" href="css/variables.css?v=5">
+  <link rel="stylesheet" href="css/componentes.css?v=4">
+  <link rel="stylesheet" href="css/test.css?v=11">
   <!-- Fuente (ya no hay @import dentro de los CSS) -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
 </head>
@@ -33,7 +34,7 @@
     <!-- Avisos (falta id, JSON no encontrado, etc.) -->
     <div id="avisoTest" role="alert" style="display:none;"></div>
 
-    <!-- Modo repaso Anki (test.html?modo=repaso): el motor pinta aquí la barra superior y las tarjetas -->
+    <!-- Modos Anki (repaso/falladas): el motor pinta aquí la barra superior y las tarjetas -->
     <div id="repasoContainer" class="repaso-app" style="display:none;"></div>
 
     <form id="formTest" onsubmit="return false;">
@@ -105,7 +106,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/categorias.js?v=1"></script>
-  <script src="js/storage.js?v=13"></script>
-  <script src="js/test_engine.js?v=11"></script>
+  <script src="js/storage.js?v=14"></script>
+  <script src="js/test_engine.js?v=12"></script>
 </body>
 </html>

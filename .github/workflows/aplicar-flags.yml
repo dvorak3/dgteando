@@ -1,0 +1,53 @@
+name: Aplicar correcciones de preguntas
+
+on:
+  repository_dispatch:
+    types: [aplicar-flags]
+  workflow_dispatch:
+
+concurrency:
+  group: aplicar-flags
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  aplicar-flags:
+    runs-on: ubuntu-latest
+    env:
+      FLAGS_APPLIED_IDS_FILE: ${{ runner.temp }}/flags-${{ github.run_id }}-${{ github.run_attempt }}.json
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Aplicar flags pendientes a los JSON
+        run: node scripts/aplicar_flags.js --defer-mark
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+      - name: Guardar y publicar los cambios de data
+        run: |
+          if git diff --quiet -- data/; then
+            echo "No hay cambios en data/."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "Actualizar preguntas corregidas"
+          git push
+
+      - name: Marcar en Supabase tras el push
+        run: node scripts/aplicar_flags.js --mark-applied
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
