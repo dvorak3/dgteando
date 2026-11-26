@@ -1319,6 +1319,61 @@
   margin: 8px 0;
 }
 
+.repaso-bloque-resumen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.repaso-bloque-resumen .repaso-final-icono svg {
+  width: 32px;
+  height: 32px;
+}
+
+.repaso-bloque-resumen > .badge {
+  margin-bottom: 2px;
+}
+
+.repaso-bloque-puntuacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4px 0;
+  color: var(--primario);
+}
+
+.repaso-bloque-puntuacion strong {
+  font-size: var(--text-rem-200);
+  font-weight: var(--weight-extrabold);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.repaso-bloque-puntuacion strong span {
+  color: var(--texto-secundario);
+  font-size: var(--text-rem-120);
+}
+
+.repaso-bloque-puntuacion > span,
+.repaso-bloque-detalle {
+  color: var(--texto-secundario);
+  font-size: var(--text-rem-85);
+  font-weight: var(--weight-semibold);
+}
+
+.repaso-bloque-resumen .btn {
+  width: min(100%, 360px);
+  margin-top: 6px;
+}
+
+.repaso-bloque-salir {
+  color: var(--texto-secundario);
+  font-size: var(--text-rem-82);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .repaso-resumen-item {
   display: flex;
   flex-direction: column;

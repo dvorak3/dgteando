@@ -388,6 +388,7 @@
   const ETIQUETA_MADUREZ = { nueva: 'Nueva', aprendiendo: 'Aprendiendo', joven: 'Joven', madura: 'Madura' };
   const ETIQUETA_NIVEL = { hard: 'Hard', medium: 'Medium', easy: 'Easy', again: 'Again' };
   const PUESTOS_REENCOLAR = 4; // "again": la tarjeta vuelve a salir unos puestos más adelante
+  const TAMANO_BLOQUE_REPASO = 10;
   const MS_SALIDA = 144;       // duración de la animación de salida de la tarjeta (debe coincidir con .repaso-stage.saliendo en test.css)
 
   const SVG_ATTRS = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
@@ -411,8 +412,8 @@
     document.title = MODO === 'falladas' ? 'Repaso de falladas · dgt-eando' : 'Repaso · dgt-eando';
 
     const cacheTests = new Map();          // testId -> JSON del test
-    let sesion = null;                     // { pendientes, total, hechas, contadores, racha, rachaMax, repetidas }
-    let fase = 'carga';                    // carga | pregunta | confianza | guardando | finalizando | final
+    let sesion = null;                     // tarjetas pendientes/futuras y resumen de la sesión
+    let fase = 'carga';                    // carga | pregunta | confianza | guardando | resumen-bloque | finalizando | final
     let claveActual = null;
     let pregActual = null;
     let numOpciones = 0;
@@ -529,6 +530,21 @@
       return p && Array.isArray(p.opciones) && typeof p.correcta === 'number' ? p : null;
     }
 
+    async function cargarSiguienteBloquePreguntas() {
+      const claves = sesion.siguientes.splice(0, TAMANO_BLOQUE_REPASO);
+      const tarjetas = obtenerTarjetas();
+      const ids = [...new Set(claves.map((clave) => tarjetas[clave].testId))]
+        .filter((id) => !cacheTests.has(id));
+      await Promise.all(ids.map(async (id) => {
+        const data = await cargarDatosTest(id);
+        cacheTests.set(id, data ? aplicarParchesATest(id, data) : data);
+      }));
+      const validas = claves.filter((clave) => preguntaDeClave(clave));
+      sesion.total -= claves.length - validas.length;
+      sesion.pendientes.push(...validas);
+      return validas.length;
+    }
+
     function etiquetaIntervalo(nivel, dias) {
       if (nivel === 'again' || !(dias > 0)) return 'Hoy';
       return dias === 1 ? '1 día' : `${dias} días`;
@@ -585,7 +601,21 @@
 
     /* ---------- Pantalla de tarjeta ---------- */
     function mostrarTarjeta() {
-      if (!sesion.pendientes.length) { mostrarFinal(); return; }
+      if (!sesion.pendientes.length) {
+        if (sesion.siguientes.length && sesion.respondidasBloque > 0) {
+          mostrarResumenBloque();
+        } else if (sesion.siguientes.length) {
+          cargarSiguienteBloquePreguntas()
+            .then((cargadas) => cargadas ? mostrarTarjeta() : mostrarFinal())
+            .catch((err) => {
+              console.error('Error cargando el siguiente bloque de preguntas:', err);
+              pintarAviso('No se pudieron cargar las siguientes preguntas. Comprueba tu conexión e inténtalo de nuevo.');
+            });
+        } else {
+          mostrarFinal();
+        }
+        return;
+      }
 
       claveActual = sesion.pendientes[0];
       pregActual = preguntaDeClave(claveActual);
@@ -881,6 +911,8 @@
       }
 
       sesion.contadores[nivel]++;
+      sesion.respondidasBloque++;
+      if (aciertoActual) sesion.correctasBloque++;
       sesion.pendientes.shift();
       if (nivel === 'again') {
         // vuelve a salir unos puestos más adelante en esta misma sesión
@@ -898,10 +930,63 @@
         await new Promise((r) => setTimeout(r, MS_SALIDA));
       }
 
+      if (sesion.respondidasBloque >= TAMANO_BLOQUE_REPASO) {
+        mostrarResumenBloque();
+        return;
+      }
+
       mostrarTarjeta();
       if (typeof ultimaSincronizacionOk !== 'undefined' && ultimaSincronizacionOk === false) {
         const av = el('repasoAvisoNube');
         if (av) av.hidden = false;
+      }
+    }
+
+    function mostrarResumenBloque() {
+      fase = 'resumen-bloque';
+      const respondidas = sesion.respondidasBloque;
+      const correctas = sesion.correctasBloque;
+      const fallos = respondidas - correctas;
+      const quedanPreguntas = sesion.pendientes.length > 0 || sesion.siguientes.length > 0;
+      const porcentaje = respondidas ? Math.round((correctas / respondidas) * 100) : 0;
+      const titulo = porcentaje >= 70 ? '¡Muy bien!' : 'Bloque completado';
+      const textoBoton = quedanPreguntas ? 'Continuar con las siguientes' : 'Ver resumen de la sesión';
+
+      cont.innerHTML = `
+        <section class="repaso-final repaso-bloque-resumen" role="status" aria-live="polite" aria-labelledby="repasoBloqueTitulo">
+          <div class="repaso-final-icono">${ICONO_CHECK}</div>
+          <p class="badge badge--acierto badge--mayus">Bloque ${sesion.numeroBloque}</p>
+          <h2 id="repasoBloqueTitulo">${titulo}</h2>
+          <p class="repaso-final-sub">Has respondido ${respondidas} ${respondidas === 1 ? 'pregunta' : 'preguntas'}.</p>
+          <div class="repaso-bloque-puntuacion" aria-label="${correctas} correctas de ${respondidas}">
+            <strong>${correctas}<span>/${respondidas}</span></strong>
+            <span>correctas</span>
+          </div>
+          <p class="repaso-bloque-detalle">
+            ${fallos} ${fallos === 1 ? 'fallo' : 'fallos'} · ${porcentaje} % de aciertos
+          </p>
+          <button type="button" class="btn btn--primario btn--lg" id="btnContinuarBloque">${textoBoton}</button>
+          <a class="repaso-bloque-salir" href="index.html">Ir al panel</a>
+        </section>`;
+      el('btnContinuarBloque').focus();
+    }
+
+    async function continuarBloque(boton) {
+      if (fase !== 'resumen-bloque') return;
+      boton.disabled = true;
+      sesion.numeroBloque++;
+      sesion.respondidasBloque = 0;
+      sesion.correctasBloque = 0;
+
+      try {
+        if (sesion.siguientes.length) {
+          pintarCarga('Cargando las siguientes preguntas...');
+          await cargarSiguienteBloquePreguntas();
+        }
+        mostrarTarjeta();
+      } catch (err) {
+        console.error('Error cargando el siguiente bloque de preguntas:', err);
+        pintarAviso('No se pudieron cargar las siguientes preguntas. Comprueba tu conexión e inténtalo de nuevo.');
       }
     }
 
@@ -1001,6 +1086,12 @@
         return;
       }
 
+      const botonContinuar = event.target.closest && event.target.closest('#btnContinuarBloque');
+      if (botonContinuar) {
+        continuarBloque(botonContinuar);
+        return;
+      }
+
       const salir = event.target.closest && event.target.closest('#repasoSalir');
       if (salir) {
         event.preventDefault();
@@ -1025,6 +1116,9 @@
         const nivel = TECLA_A_NIVEL[e.key];
         if (nivel) { e.preventDefault(); calificar(nivel); }
         else if ((e.key === ' ' || e.key === 'Enter') && nivelSugerido) { e.preventDefault(); calificar(nivelSugerido); }
+      } else if (fase === 'resumen-bloque' && e.key === 'Enter') {
+        const boton = el('btnContinuarBloque');
+        if (boton) { e.preventDefault(); continuarBloque(boton); }
       } else if (fase === 'final' && e.key === 'Enter') {
         window.location.href = 'index.html';
       }
@@ -1055,7 +1149,8 @@
       }
 
       sesion = {
-        pendientes: [], total: 0, hechas: 0,
+        pendientes: [], siguientes: [], total: 0, hechas: 0,
+        numeroBloque: 1, respondidasBloque: 0, correctasBloque: 0,
         contadores: { hard: 0, medium: 0, easy: 0, again: 0 },
         repetidas: new Set(),
         racha: 0, rachaMax: 0,
@@ -1068,15 +1163,10 @@
         : estado.colaHoy;
       if (!colaInicial.length) { mostrarFinal(); return; }
 
-      pintarCarga(`Cargando ${colaInicial.length} tarjetas...`);
-      const ids = [...new Set(colaInicial.map((t) => t.testId))];
-      await Promise.all(ids.map(async (id) => {
-        const data = await cargarDatosTest(id);
-        cacheTests.set(id, data ? aplicarParchesATest(id, data) : data);
-      }));
-
-      sesion.pendientes = colaInicial.map((t) => t.clave).filter((k) => preguntaDeClave(k));
-      sesion.total = sesion.pendientes.length;
+      sesion.siguientes = colaInicial.map((t) => t.clave);
+      sesion.total = sesion.siguientes.length;
+      pintarCarga(`Cargando las primeras ${Math.min(TAMANO_BLOQUE_REPASO, sesion.total)} preguntas...`);
+      await cargarSiguienteBloquePreguntas();
       mostrarTarjeta();
     })();
   }
