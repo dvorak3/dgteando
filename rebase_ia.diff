@@ -1,0 +1,1948 @@
+--- ./css/componentes.css	2026-11-26 11:58:50.616993505 +0000
++++ ./css/componentes.css.tmp	2026-11-26 14:38:32.309749176 +0000
+@@ -15,36 +15,29 @@
+ 
+ /* ===== Componentes del panel (index.html) ===== */
+ 
+-/* ===== Botón: .btn + variante + tamaño ===== */
+-/* Variantes: --primario · --secundario · --suave · --peligro · --texto-peligro · --contorno */
+-/* Tamaños: (md por defecto) · --xs · --sm · --lg  ·  Formas: --pastilla · --bloque · --icono */
+-.btn {
++.btn-json {
+   display: inline-flex;
+   align-items: center;
+-  justify-content: center;
+   gap: 6px;
+-  padding: 7px 14px;
+-  border: 1px solid transparent;
+-  border-radius: var(--radius-lg);
+-  background: transparent;
++  background: var(--bg-tarjeta);
++  border: 1px solid var(--borde);
+   color: var(--texto-principal);
+   font-size: var(--text-xs-plus);
+   font-weight: var(--weight-semibold);
+-  text-decoration: none !important;
++  padding: 7px 14px;
++  border-radius: var(--radius-full);
+   cursor: pointer;
+-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.12s ease;
+-}
+-
+-.btn:active:not(:disabled) {
+-  transform: scale(0.98);
++  transition: all 0.16s ease;
++  box-shadow: var(--sombra-xs);
+ }
+ 
+-.btn:disabled {
+-  opacity: 0.55;
+-  cursor: default;
++.btn-json:hover {
++  background: var(--bg-suave);
++  border-color: var(--borde-fuerte);
++  color: var(--texto-principal);
+ }
+ 
+-.btn svg {
++.btn-json svg {
+   width: 14px;
+   height: 14px;
+   stroke: currentColor;
+@@ -52,184 +45,6 @@
+   fill: none;
+ }
+ 
+-.btn kbd {
+-  padding: 2px 8px;
+-  border-radius: var(--radius-sm);
+-  background: var(--tinte-claro-suave);
+-  font-size: var(--text-rem-72);
+-  font-weight: var(--weight-bold);
+-}
+-
+-.btn--primario {
+-  background: var(--primario);
+-  border-color: var(--primario);
+-  color: var(--texto-inverso);
+-  font-weight: var(--weight-bold);
+-}
+-
+-.btn--primario:hover:not(:disabled) {
+-  background: var(--primario-hover);
+-  border-color: var(--primario-hover);
+-}
+-
+-.btn--secundario {
+-  background: var(--bg-tarjeta);
+-  border-color: var(--borde);
+-  box-shadow: var(--sombra-xs);
+-}
+-
+-.btn--secundario:hover:not(:disabled) {
+-  background: var(--bg-suave);
+-  border-color: var(--borde-fuerte);
+-}
+-
+-.btn--suave {
+-  background: var(--bg-pagina);
+-  border-color: var(--borde);
+-}
+-
+-.btn--suave:hover:not(:disabled) {
+-  background: var(--acierto-fondo);
+-  border-color: var(--acierto-fondo);
+-  color: var(--primario);
+-}
+-
+-.btn--peligro {
+-  background: var(--bg-suave);
+-  border-color: var(--borde);
+-  color: var(--texto-secundario);
+-}
+-
+-.btn--peligro:hover:not(:disabled) {
+-  background: var(--fallo-fondo);
+-  border-color: var(--fallo-fondo);
+-  color: var(--fallo);
+-}
+-
+-.btn--texto-peligro {
+-  padding-inline: 8px;
+-  color: var(--fallo);
+-}
+-
+-.btn--texto-peligro:hover:not(:disabled) {
+-  background: var(--fallo-fondo);
+-}
+-
+-.btn--contorno {
+-  background: var(--bg-tarjeta);
+-  border-color: var(--primario);
+-  color: var(--primario);
+-}
+-
+-.btn--contorno:hover:not(:disabled) {
+-  background: var(--acierto-fondo);
+-}
+-
+-.btn--xs {
+-  padding: 4px 10px;
+-  font-size: var(--text-2xs-plus);
+-}
+-
+-.btn--sm {
+-  padding: 9px 16px;
+-  font-size: var(--text-sm);
+-}
+-
+-.btn--lg {
+-  gap: 10px;
+-  min-height: 48px;
+-  padding: 12px 26px;
+-  border-width: 1.5px;
+-  border-radius: var(--radius-xl);
+-  font-size: var(--text-rem-95);
+-  font-weight: var(--weight-bold);
+-}
+-
+-.btn--pastilla {
+-  border-radius: var(--radius-full);
+-}
+-
+-.btn--bloque {
+-  display: flex;
+-  width: 100%;
+-}
+-
+-.btn--icono {
+-  padding: 5px 9px;
+-}
+-
+-.btn--icono svg {
+-  width: 15px;
+-  height: 15px;
+-  stroke-linecap: round;
+-  stroke-linejoin: round;
+-}
+-
+-/* ===== Badge: .badge + color + tamaño ===== */
+-/* Colores: --aviso · --acento · --acierto · --fallo · --neutro · --contorno  ·  Tamaños: (md) · --sm · --lg  ·  --mayus */
+-.badge {
+-  display: inline-flex;
+-  align-items: center;
+-  gap: 6px;
+-  padding: 5px 12px;
+-  line-height: 1.2;
+-  border-radius: var(--radius-full);
+-  font-size: var(--text-rem-74);
+-  font-weight: var(--weight-extrabold);
+-}
+-
+-.badge--sm {
+-  padding: 4px 10px;
+-  font-size: var(--text-rem-70);
+-}
+-
+-.badge--lg {
+-  padding: 6px 14px;
+-  font-size: var(--text-rem-90);
+-}
+-
+-.badge--mayus {
+-  text-transform: uppercase;
+-  letter-spacing: 0.06em;
+-}
+-
+-.badge--aviso {
+-  background: var(--aviso-fondo);
+-  color: var(--aviso);
+-}
+-
+-.badge--acento {
+-  background: var(--aviso-fondo);
+-  color: var(--acento);
+-}
+-
+-.badge--acierto {
+-  background: var(--acierto-fondo);
+-  color: var(--primario-hover);
+-}
+-
+-.badge--fallo {
+-  background: var(--fallo-fondo);
+-  color: var(--fallo);
+-}
+-
+-.badge--neutro {
+-  background: var(--borde);
+-  color: var(--texto-secundario);
+-}
+-
+-.badge--contorno {
+-  background: var(--bg-tarjeta);
+-  border: 1px solid var(--borde);
+-  color: var(--texto-secundario);
+-  font-weight: var(--weight-bold);
+-}
+-
+-.badge.completado {
+-  background: var(--acierto-fondo);
+-  color: var(--primario);
+-}
+-
+ .card {
+   background-color: var(--bg-tarjeta);
+   border: 1px solid var(--borde);
+@@ -317,6 +132,24 @@
+   background-color: var(--borde);
+ }
+ 
++.btn-borrar {
++  background-color: var(--bg-suave);
++  border: 1px solid var(--borde);
++  color: var(--texto-secundario);
++  font-size: var(--text-xs-plus);
++  font-weight: var(--weight-semibold);
++  padding: 7px 14px;
++  border-radius: var(--radius-lg);
++  cursor: pointer;
++  transition: all 0.15s ease;
++}
++
++.btn-borrar:hover {
++  background-color: var(--fallo-fondo);
++  border-color: var(--fallo-fondo);
++  color: var(--fallo);
++}
++
+ .widget-icon-green {
+   width: 34px;
+   height: 34px;
+@@ -337,6 +170,24 @@
+   fill: none;
+ }
+ 
++.btn-editar-fecha {
++  background-color: var(--bg-pagina);
++  border: 1px solid var(--borde);
++  color: var(--texto-principal);
++  font-size: var(--text-2xs-plus);
++  font-weight: var(--weight-semibold);
++  padding: 4px 10px;
++  border-radius: var(--radius-full);
++  cursor: pointer;
++  transition: all 0.15s ease;
++}
++
++.btn-editar-fecha:hover {
++  background-color: var(--acierto-fondo);
++  border-color: var(--acierto-fondo);
++  color: var(--primario);
++}
++
+ .input-fecha-dgt {
+   flex: 1;
+   padding: 7px 10px;
+@@ -353,8 +204,23 @@
+   background-color: var(--bg-tarjeta);
+ }
+ 
+-/* Tarjeta 2: Racha de estudio */
++.btn-guardar-fecha {
++  background-color: var(--primario);
++  color: var(--texto-inverso);
++  border: none;
++  border-radius: var(--radius-lg);
++  padding: 8px 12px;
++  font-size: var(--text-xs-plus);
++  font-weight: var(--weight-semibold);
++  cursor: pointer;
++  transition: background-color 0.15s;
++}
++
++.btn-guardar-fecha:hover {
++  background-color: var(--primario-hover);
++}
+ 
++/* Tarjeta 2: Racha de estudio */
+ .widget-icon-fire {
+   width: 34px;
+   height: 34px;
+@@ -373,8 +239,45 @@
+   fill: currentColor;
+ }
+ 
+-/* ================= MODAL DE EVOLUCIÓN ================= */
++.racha-badge-hoy {
++  display: inline-block;
++  margin-top: 10px;
++  font-size: var(--text-2xs-plus);
++  font-weight: var(--weight-semibold);
++  padding: 3px 9px;
++  border-radius: var(--radius-full);
++  background-color: var(--aviso-fondo);
++  color: var(--acento);
++}
++
++.racha-badge-hoy.completado {
++  background-color: var(--acierto-fondo);
++  color: var(--primario);
++}
++
++.btn-repaso-anki {
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  width: 100%;
++  margin-top: 14px;
++  background-color: var(--primario);
++  color: var(--texto-inverso);
++  text-decoration: none;
++  font-size: var(--text-sm);
++  font-weight: var(--weight-bold);
++  padding: 10px 14px;
++  border-radius: var(--radius-lg);
++  border: none;
++  cursor: pointer;
++  transition: background-color 0.15s ease, transform 0.12s ease;
++}
+ 
++.btn-repaso-anki:hover {
++  background-color: var(--primario-hover);
++}
++
++/* ================= MODAL DE EVOLUCIÓN ================= */
+ .modal-overlay {
+   position: fixed;
+   inset: 0;
+@@ -492,6 +395,22 @@
+ }
+ 
+ /* ================= CONFIGURACIÓN DE ANKI ================= */
++.btn-config-anki {
++  display: inline-flex;
++  align-items: center;
++  justify-content: center;
++  padding: 5px 9px;
++}
++
++.btn-config-anki svg {
++  width: 15px;
++  height: 15px;
++  stroke: currentColor;
++  stroke-width: 2;
++  fill: none;
++  stroke-linecap: round;
++  stroke-linejoin: round;
++}
+ 
+ .modal-anki-overlay {
+   -webkit-backdrop-filter: blur(4px);
+@@ -530,7 +449,6 @@
+ }
+ 
+ /* Píldoras tipo radio */
+-
+ .pill-grupo {
+   display: flex;
+   flex-wrap: wrap;
+@@ -649,7 +567,6 @@
+ }
+ 
+ /* Interruptor */
+-
+ .switch-fila {
+   display: flex;
+   align-items: center;
+@@ -725,6 +642,82 @@
+   outline-offset: 2px;
+ }
+ 
++.btn-secundario {
++  background-color: var(--bg-tarjeta);
++  border: 1px solid var(--borde);
++  color: var(--texto-principal);
++  font-size: var(--text-xs-plus);
++  font-weight: var(--weight-semibold);
++  padding: 7px 14px;
++  border-radius: var(--radius-full);
++  cursor: pointer;
++  transition: all 0.15s ease;
++}
++
++.btn-secundario:hover:not(:disabled) {
++  background-color: var(--bg-suave);
++  border-color: var(--borde-fuerte);
++}
++
++.btn-texto-rojo {
++  background: transparent;
++  border: none;
++  color: var(--fallo);
++  font-size: var(--text-xs-plus);
++  font-weight: var(--weight-semibold);
++  padding: 7px 8px;
++  border-radius: var(--radius-md);
++  cursor: pointer;
++  transition: background-color 0.15s;
++}
++
++.btn-texto-rojo:hover:not(:disabled) {
++  background-color: var(--fallo-fondo);
++}
++
++.btn-secundario:disabled,
++.btn-texto-rojo:disabled {
++  opacity: 0.55;
++  cursor: wait;
++}
++
++.btn-cancelar-anki {
++  background-color: var(--bg-suave);
++  border: 1px solid var(--borde);
++  color: var(--texto-principal);
++  font-size: var(--text-sm);
++  font-weight: var(--weight-semibold);
++  padding: 9px 16px;
++  border-radius: var(--radius-lg);
++  cursor: pointer;
++  transition: background-color 0.15s;
++}
++
++.btn-cancelar-anki:hover {
++  background-color: var(--borde);
++}
++
++.btn-guardar-anki {
++  background-color: var(--primario);
++  border: none;
++  color: var(--texto-inverso);
++  font-size: var(--text-sm);
++  font-weight: var(--weight-bold);
++  padding: 9px 18px;
++  border-radius: var(--radius-lg);
++  cursor: pointer;
++  transition: background-color 0.15s;
++}
++
++.btn-guardar-anki:hover:not(:disabled) {
++  background-color: var(--primario-hover);
++}
++
++.btn-guardar-anki:disabled {
++  opacity: 0.65;
++  cursor: wait;
++}
++
+ @media (max-width: 480px) {
+   .modal-anki .modal-header {
+       padding-left: 16px;
+@@ -734,6 +727,16 @@
+ 
+ /* ===== Componentes de test y repaso (test.html) ===== */
+ 
++.modo-badge {
++  font-size: var(--text-rem-75);
++  font-weight: var(--weight-bold);
++  color: var(--texto-secundario);
++  background: var(--bg-tarjeta);
++  border: 1px solid var(--borde);
++  padding: 5px 12px;
++  border-radius: var(--radius-full);
++}
++
+ .pregunta-item {
+   background: var(--bg-tarjeta);
+   border: 1px solid var(--borde);
+@@ -787,7 +790,6 @@
+ }
+ 
+ /* Estados visuales tras corregir (o en modo estudio) */
+-
+ .opcion-label.es-correcta {
+   background-color: var(--acierto-fondo);
+   border-color: var(--primario);
+@@ -801,7 +803,6 @@
+ }
+ 
+ /* ---------- Caja inferior y botón corregir ---------- */
+-
+ .corregir-box {
+   margin-top: 18px;
+   background-color: var(--bg-tarjeta);
+@@ -816,6 +817,50 @@
+   gap: 12px;
+ }
+ 
++.btn-corregir {
++  background-color: var(--primario);
++  color: var(--texto-inverso);
++  border: none;
++  border-radius: var(--radius-xl);
++  padding: 13px 44px;
++  min-height: 48px;
++  font-size: var(--text-rem-95);
++  font-weight: var(--weight-bold);
++  cursor: pointer;
++  transition: background-color 0.15s, transform 0.15s;
++}
++
++.btn-corregir:hover:not(:disabled) {
++  background-color: var(--primario-hover);
++}
++
++.btn-corregir:active:not(:disabled) {
++  transform: scale(0.98);
++}
++
++.btn-corregir:disabled {
++  opacity: 0.55;
++  cursor: default;
++}
++
++.btn-volver {
++  background-color: var(--bg-tarjeta);
++  color: var(--texto-principal);
++  border: 1.5px solid var(--borde-fuerte);
++  border-radius: var(--radius-xl);
++  padding: 12px 22px;
++  min-height: 48px;
++  align-items: center;
++  font-size: var(--text-rem-92);
++  font-weight: var(--weight-bold);
++  text-decoration: none !important;
++  display: none;
++}
++
++.btn-volver:hover {
++  background-color: var(--bg-suave);
++}
++
+ .resultado-panel {
+   display: none;
+   margin-top: 16px;
+@@ -881,7 +926,6 @@
+ }
+ 
+ /* Combo / racha */
+-
+ .repaso-combo {
+   flex: none;
+   display: inline-flex;
+@@ -936,7 +980,26 @@
+   animation: slideInRight 256ms var(--ease) both;
+ }
+ 
++.repaso-repeticion {
++  padding: 5px 10px;
++  border-radius: var(--radius-full);
++  background: var(--aviso-fondo);
++  color: var(--aviso);
++  font-size: var(--text-rem-70);
++  font-weight: var(--weight-extrabold);
++  letter-spacing: 0.06em;
++  text-transform: uppercase;
++}
++
+ /* Madurez (badge de la tarjeta y resumen final) */
++.repaso-badge {
++  padding: 5px 12px;
++  border-radius: var(--radius-full);
++  font-size: var(--text-rem-74);
++  font-weight: var(--weight-extrabold);
++  letter-spacing: 0.06em;
++  text-transform: uppercase;
++}
+ 
+ .madurez-nueva {
+   background: var(--info-fondo);
+@@ -1024,7 +1087,6 @@
+ }
+ 
+ /* Badge de tecla */
+-
+ .repaso-tecla {
+   flex: none;
+   display: inline-grid;
+@@ -1044,7 +1106,6 @@
+ }
+ 
+ /* Icono de resultado (check / aspa) */
+-
+ .repaso-opcion-icono {
+   flex: none;
+   width: 28px;
+@@ -1062,7 +1123,6 @@
+ }
+ 
+ /* Acierto */
+-
+ .repaso-opcion.es-correcta {
+   background: var(--acierto-fondo);
+   border-color: var(--primario);
+@@ -1087,7 +1147,6 @@
+ }
+ 
+ /* Cuando se falla, la correcta se ilumina un instante después */
+-
+ .repaso-opcion.es-correcta.revelada {
+   transition-delay: 0.18s;
+   animation-delay: 0.18s;
+@@ -1100,7 +1159,6 @@
+ }
+ 
+ /* Fallo */
+-
+ .repaso-opcion.es-fallo {
+   background: var(--fallo-fondo);
+   border-color: var(--fallo);
+@@ -1125,7 +1183,6 @@
+ }
+ 
+ /* ---------- Panel de confianza ---------- */
+-
+ .repaso-confianza {
+   background: var(--bg-tarjeta);
+   border: 1px solid var(--borde);
+@@ -1151,6 +1208,23 @@
+   color: var(--texto-principal);
+ }
+ 
++.repaso-resultado {
++  padding: 5px 12px;
++  border-radius: var(--radius-full);
++  font-size: var(--text-rem-80);
++  font-weight: var(--weight-extrabold);
++}
++
++.repaso-resultado.ok {
++  background: var(--acierto-fondo);
++  color: var(--primario-hover);
++}
++
++.repaso-resultado.ko {
++  background: var(--fallo-fondo);
++  color: var(--fallo);
++}
++
+ .repaso-btn-confianza {
+   display: flex;
+   flex-direction: column;
+@@ -1277,7 +1351,6 @@
+ }
+ 
+ /* ---------- Pantalla final ---------- */
+-
+ .repaso-app > .repaso-final {
+   margin: auto;
+   width: calc(100% - 32px);
+@@ -1319,6 +1392,20 @@
+   margin: 8px 0;
+ }
+ 
++.repaso-racha-final {
++  display: inline-flex;
++  align-items: center;
++  gap: 6px;
++  margin: 6px 0 4px;
++  padding: 6px 14px;
++  border-radius: var(--radius-full);
++  background: var(--aviso-fondo);
++  border: 1px solid var(--aviso-fondo);
++  color: var(--aviso);
++  font-weight: var(--weight-extrabold);
++  font-size: var(--text-rem-90);
++}
++
+ .repaso-resumen-item {
+   display: flex;
+   flex-direction: column;
+@@ -1338,10 +1425,58 @@
+   font-weight: var(--weight-bold);
+ }
+ 
++.repaso-btn-volver,
++.repaso-btn-secundario {
++  display: inline-flex;
++  align-items: center;
++  justify-content: center;
++  gap: 10px;
++  min-height: 50px;
++  padding: 12px 26px;
++  margin-top: 14px;
++  border-radius: var(--radius-2xl);
++  font-size: var(--text-rem-95);
++  font-weight: var(--weight-extrabold);
++  text-decoration: none !important;
++  transition: background-color 0.15s, transform 0.15s;
++}
++
++.repaso-btn-volver {
++  background: var(--primario);
++  color: var(--texto-inverso);
++}
++
++.repaso-btn-volver:hover {
++  background: var(--primario-hover);
++}
++
++.repaso-btn-volver kbd {
++  padding: 2px 8px;
++  border-radius: var(--radius-sm);
++  background: var(--tinte-claro-suave);
++  font-size: var(--text-rem-72);
++  font-weight: var(--weight-bold);
++}
++
++.repaso-btn-secundario {
++  display: flex;
++  background: var(--bg-tarjeta);
++  color: var(--primario);
++  border: 1.5px solid var(--primario);
++}
++
++.repaso-btn-secundario:hover {
++  background: var(--acierto-fondo);
++}
++
++.repaso-btn-volver:active,
++.repaso-btn-secundario:active {
++  transform: scale(0.98);
++}
++
+ /* =====================================================================
+    ANIMACIONES
+    ===================================================================== */
+-
+ @keyframes slideInRight {
+   from { transform: translateX(24px); opacity: 0; }
+   to   { transform: translateX(0);    opacity: 1; }
+@@ -1408,7 +1543,6 @@
+ /* =====================================================================
+    RESPONSIVE
+    ===================================================================== */
+-
+ @media (max-width: 767px) {
+   .pregunta-item {
+       grid-template-columns: minmax(0, 1fr);
+@@ -1446,7 +1580,6 @@
+    Repaso · sugerencia de confianza por tiempo, fecha de repaso y resumen de tiempos
+    (no hay ningún contador de tiempo visible durante la tarjeta)
+    ===================================================================== */
+-
+ .repaso-sugerencia {
+   display: flex;
+   align-items: center;
+@@ -1476,7 +1609,6 @@
+ .repaso-sugerencia.nivel-again .repaso-sugerencia-tag  { background: var(--fallo-fondo);  color: var(--fallo); }
+ 
+ /* Anillo del botón sugerido con el color de su nivel (again conserva el rojo de arriba) */
+-
+ .repaso-btn-confianza.btn-hard.sugerido   { box-shadow: var(--anillo-hard); }
+ 
+ .repaso-btn-confianza.btn-medium.sugerido { box-shadow: var(--anillo-medium); }
+@@ -1551,6 +1683,17 @@
+   color: var(--texto-secundario);
+ }
+ 
++.repaso-categoria {
++  padding: 4px 10px;
++  border-radius: var(--radius-full);
++  background: var(--borde);
++  color: var(--texto-secundario);
++  font-size: var(--text-rem-70);
++  font-weight: var(--weight-bold);
++  letter-spacing: 0.06em;
++  line-height: 1.2;
++}
++
+ .repaso-debil-item {
+   display: grid;
+   grid-template-columns: minmax(0, 1fr) 84px auto;
+@@ -1594,3 +1737,195 @@
+ 
+   .repaso-debil-barra { display: none; }
+ }
++
++/* =====================================================================
++   Corrección de preguntas · botón bandera (barra del repaso) y modal de edición
++   Solo tokens de variables.css (--bandera-*, --aviso-*, --borde-*, --radius-*, --text-*, --weight-*)
++   ===================================================================== */
++.btn-bandera {
++  position: relative;
++  flex: none;
++  width: 40px;
++  height: 40px;
++  display: inline-grid;
++  place-items: center;
++  padding: 0;
++  border-radius: var(--radius-circulo);
++  background: var(--bandera-fondo);
++  border: 1px solid var(--bandera-borde);
++  color: var(--bandera-texto);
++  cursor: pointer;
++  transition: background-color 0.15s, border-color 0.15s;
++}
++
++.btn-bandera:hover {
++  background: var(--bandera-fondo-hover);
++}
++
++.btn-bandera:focus-visible {
++  outline: none;
++  box-shadow: var(--bandera-anillo-foco);
++}
++
++.btn-bandera[hidden] {
++  display: none;
++}
++
++.btn-bandera svg {
++  width: 18px;
++  height: 18px;
++  fill: none;
++  stroke: currentColor;
++  stroke-width: 2;
++  stroke-linecap: round;
++  stroke-linejoin: round;
++}
++
++/* Pregunta con corrección local ya aplicada */
++.btn-bandera.corregida::after {
++  content: "";
++  position: absolute;
++  top: 2px;
++  right: 2px;
++  width: 9px;
++  height: 9px;
++  border-radius: var(--radius-circulo);
++  background: var(--bandera-corregida);
++  border: 2px solid var(--bg-tarjeta);
++}
++
++.modal-correccion-overlay {
++  -webkit-backdrop-filter: blur(4px);
++  backdrop-filter: blur(4px);
++}
++
++.modal-correccion {
++  max-width: 600px;
++  max-height: calc(100vh - 32px);
++  max-height: calc(100dvh - 32px);
++  overflow-y: auto;
++}
++
++.modal-correccion .modal-titulo {
++  font-size: var(--text-md);
++}
++
++.correccion-campo {
++  display: flex;
++  flex-direction: column;
++  gap: 6px;
++  margin-bottom: 14px;
++  border: none;
++  min-width: 0;
++}
++
++.campo-etiqueta {
++  font-size: var(--text-xs);
++  font-weight: var(--weight-extrabold);
++  letter-spacing: 0.06em;
++  text-transform: uppercase;
++  color: var(--texto-secundario);
++}
++
++.campo-etiqueta .opcional {
++  font-weight: var(--weight-semibold);
++  text-transform: none;
++  letter-spacing: 0;
++  color: var(--texto-tenue);
++}
++
++.input-texto,
++.textarea-texto {
++  width: 100%;
++  padding: 9px 12px;
++  border: 1px solid var(--borde-fuerte);
++  border-radius: var(--radius-lg);
++  background-color: var(--bg-tarjeta);
++  font-family: var(--font-test);
++  font-size: var(--text-base);
++  font-weight: var(--weight-medium);
++  line-height: 1.45;
++  color: var(--texto-principal);
++  outline: none;
++  transition: border-color 0.15s, box-shadow 0.15s;
++}
++
++.textarea-texto {
++  resize: vertical;
++  min-height: 72px;
++}
++
++.input-texto:focus,
++.textarea-texto:focus {
++  border-color: var(--primario);
++  box-shadow: var(--anillo-foco-verde);
++}
++
++.input-texto:disabled {
++  background-color: var(--bg-suave);
++  color: var(--texto-tenue);
++  cursor: not-allowed;
++}
++
++.input-texto.invalido,
++.textarea-texto.invalido {
++  border-color: var(--fallo);
++  box-shadow: var(--anillo-error);
++}
++
++.correccion-opcion {
++  display: grid;
++  grid-template-columns: auto auto minmax(0, 1fr);
++  align-items: center;
++  gap: 10px;
++}
++
++.correccion-radio {
++  width: 18px;
++  height: 18px;
++  margin: 0;
++  accent-color: var(--primario);
++  cursor: pointer;
++}
++
++.correccion-radio:disabled {
++  cursor: not-allowed;
++}
++
++.correccion-letra {
++  font-weight: var(--weight-extrabold);
++  color: var(--texto-secundario);
++}
++
++.correccion-ayuda {
++  font-size: var(--text-xs);
++  color: var(--texto-secundario);
++}
++
++.correccion-error {
++  margin-bottom: 12px;
++  padding: 9px 12px;
++  border-radius: var(--radius-lg);
++  background: var(--fallo-fondo);
++  color: var(--fallo);
++  font-size: var(--text-sm);
++  font-weight: var(--weight-semibold);
++}
++
++.correccion-error[hidden] {
++  display: none;
++}
++
++.correccion-acciones {
++  display: flex;
++  justify-content: flex-end;
++  gap: 10px;
++  margin-top: 6px;
++}
++
++@media (max-width: 480px) {
++  .modal-correccion {
++      padding-left: 16px;
++      padding-right: 16px;
++    }
++}
+--- ./css/test.css	2026-11-26 11:59:10.742148590 +0000
++++ ./css/test.css.tmp	2026-11-26 14:38:45.142247484 +0000
+@@ -164,6 +164,14 @@
+   min-width: 0;
+ }
+ 
++/* Acciones de la derecha: botón bandera + racha */
++.repaso-topbar-acciones {
++  flex: none;
++  display: flex;
++  align-items: center;
++  gap: 8px;
++}
++
+ /* ---------- Escenario ---------- */
+ .repaso-stage {
+   width: 100%;
+@@ -319,6 +327,10 @@
+       padding: 10px 12px;
+     }
+ 
++  .repaso-topbar-acciones {
++      gap: 6px;
++    }
++
+   .repaso-stage {
+       padding: 14px 12px calc(24px + env(safe-area-inset-bottom, 0px));
+       gap: 12px;
+@@ -429,25 +441,3 @@
+   flex-direction: column;
+   gap: 8px;
+ }
+-
+-#btnVolver {
+-  display: none;
+-  padding-inline: 22px;
+-}
+-
+-#btnCorregir {
+-  padding-inline: 44px;
+-}
+-
+-.repaso-final .btn {
+-  margin-top: 14px;
+-}
+-
+-.repaso-final .btn--contorno {
+-  display: flex;
+-}
+-
+-.repaso-racha-final {
+-  margin: 6px 0 4px;
+-  line-height: 1.5;
+-}
+--- ./css/variables.css	2026-11-25 11:47:44.027137889 +0000
++++ ./css/variables.css.tmp	2026-11-26 14:38:18.882326294 +0000
+@@ -55,6 +55,14 @@
+   --tinte-oscuro-suave: color-mix(in srgb, var(--texto-principal) 10%, transparent);  /* Borde de tecla sobre botones de color (10 %) */
+   --primario-velo: color-mix(in srgb, var(--primario) 14%, transparent);  /* Borde del logo (14 %) */
+ 
++  /* ===== CORRECCIÓN DE PREGUNTAS (botón bandera y modal de edición) · derivados de la paleta ámbar ===== */
++  --bandera-fondo: var(--aviso-fondo);  /* Botón bandera: fondo ámbar suave */
++  --bandera-texto: var(--aviso);  /* Botón bandera: icono y texto */
++  --bandera-borde: color-mix(in srgb, var(--aviso) 35%, transparent);  /* Botón bandera: borde */
++  --bandera-fondo-hover: color-mix(in srgb, var(--aviso) 16%, var(--aviso-fondo));  /* Botón bandera: hover */
++  --bandera-anillo-foco: 0 0 0 3px color-mix(in srgb, var(--aviso) 32%, transparent);  /* Botón bandera: foco de teclado */
++  --bandera-corregida: var(--primario);  /* Punto de «pregunta ya corregida» */
++
+   /* ===== TIPOGRAFÍA ===== */
+   /* Familias */
+   --font-principal: "Bricolage Grotesque", "Bricolage Grotesque Fallback", sans-serif;  /* Panel principal (index.html) · 1 uso */
+--- ./js/storage.js	2026-11-25 04:59:54.005705460 +0000
++++ ./js/storage.js.tmp	2026-11-26 14:39:14.470271242 +0000
+@@ -61,8 +61,9 @@
+   }
+ 
+   if (data && data.datos) {
+-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data.datos));
+-    return data.datos;
++    const fusionados = conservarParchesLocalesMasRecientes(data.datos);
++    localStorage.setItem(STORAGE_KEY, JSON.stringify(fusionados));
++    return fusionados;
+   }
+ 
+   return obtenerProgreso();
+@@ -251,6 +252,196 @@
+ }
+ 
+ /* =====================================================================
++ *  PREGUNTAS DEFECTUOSAS: parches locales + flags en Supabase
++ *  - Parche local: progreso._parchesPreguntas["070_04"]. La app lo aplica al instante (sin esperar al despliegue)
++ *    y viaja con el resto del progreso (localStorage + fila "progreso" de Supabase).
++ *  - Flag en la nube: tabla flags_preguntas (la lee scripts/aplicar_flags.js para corregir data/test_XXX.json).
++ *  Funciona SIN sesión: el parche queda guardado en local y el envío a flags_preguntas queda pendiente
++ *  (sincronizado: false) hasta que exista una sesión de Supabase Auth; entonces lo reenvía sincronizarFlagsPendientes().
++ *  Este bloque no toca el DOM.
++ * ===================================================================== */
++
++const TABLA_FLAGS = "flags_preguntas";
++const FLAG_CONFLICTO = "user_id,pregunta_id"; // UNIQUE (user_id, pregunta_id)
++
++// Valida y normaliza un parche (formato de la tabla: "enunciado", no "texto"). Devuelve null si no es válido.
++function normalizarParchePregunta(crudo) {
++  if (!crudo || typeof crudo !== "object") return null;
++  const texto = (v) => (typeof v === "string" ? v.trim() : "");
++  const enunciado = texto(crudo.enunciado);
++  const opciones = Array.isArray(crudo.opciones) ? crudo.opciones.map(texto) : [];
++  const correcta = Number(crudo.correcta);
++  const testId = Number(crudo.testId);
++  const preguntaIdx = Number(crudo.preguntaIdx);
++
++  if (!enunciado) return null;
++  if (opciones.length < 2 || opciones.length > 3 || opciones.some((o) => !o)) return null;
++  if (!Number.isInteger(correcta) || correcta < 0 || correcta >= opciones.length) return null;
++  if (!Number.isInteger(testId) || testId < 1 || !Number.isInteger(preguntaIdx) || preguntaIdx < 0) return null;
++
++  return {
++    testId,
++    preguntaIdx,
++    enunciado,
++    opciones,
++    correcta,
++    explicacion: texto(crudo.explicacion),
++    nota: texto(crudo.nota),
++    creadoEn: typeof crudo.creadoEn === "string" ? crudo.creadoEn : "",
++    actualizadoEn: typeof crudo.actualizadoEn === "string" ? crudo.actualizadoEn : "",
++    sincronizado: crudo.sincronizado === true
++  };
++}
++
++// Todos los parches locales válidos: { "070_04": parche, ... } (una sola lectura del progreso)
++function obtenerParchesPreguntas() {
++  const crudos = obtenerProgreso()._parchesPreguntas;
++  const resultado = {};
++  if (!crudos || typeof crudos !== "object") return resultado;
++  Object.entries(crudos).forEach(([clave, crudo]) => {
++    const parche = normalizarParchePregunta(crudo);
++    if (parche) resultado[clave] = parche;
++  });
++  return resultado;
++}
++
++// Parche local de una pregunta (testId nº de test, preguntaIdx 0-based) o null si no tiene
++function obtenerParchePregunta(testId, preguntaIdx) {
++  const crudo = obtenerProgreso()._parchesPreguntas;
++  if (!crudo || typeof crudo !== "object") return null;
++  return normalizarParchePregunta(crudo[claveTarjeta(testId, preguntaIdx)]);
++}
++
++// Al bajar el progreso de la nube no se pierden los parches locales más recientes (p. ej. guardados sin conexión)
++function conservarParchesLocalesMasRecientes(datosNube) {
++  const locales = obtenerProgreso()._parchesPreguntas;
++  if (!locales || typeof locales !== "object") return datosNube;
++
++  Object.entries(locales).forEach(([clave, local]) => {
++    const l = normalizarParchePregunta(local);
++    if (!l) return;
++    const enNube = normalizarParchePregunta(datosNube._parchesPreguntas && datosNube._parchesPreguntas[clave]);
++    if (!enNube || enNube.actualizadoEn < l.actualizadoEn) {
++      if (!datosNube._parchesPreguntas || typeof datosNube._parchesPreguntas !== "object") datosNube._parchesPreguntas = {};
++      datosNube._parchesPreguntas[clave] = local;
++    }
++  });
++  return datosNube;
++}
++
++// Sesión de Supabase Auth (o null si no hay). Lee la sesión local: no hace peticiones de red.
++async function obtenerSesionSupabase() {
++  try {
++    const { data, error } = await supabaseClient.auth.getSession();
++    if (error) return null;
++    return data && data.session ? data.session : null;
++  } catch {
++    return null;
++  }
++}
++
++// Fila de flags_preguntas a partir de un parche (aplicado: false para que scripts/aplicar_flags.js la recoja)
++function filaFlagDesdeParche(parche, userId) {
++  return {
++    user_id: userId,
++    pregunta_id: claveTarjeta(parche.testId, parche.preguntaIdx),
++    test_id: parche.testId,
++    pregunta_idx: parche.preguntaIdx,
++    enunciado: parche.enunciado,
++    opciones: parche.opciones,
++    correcta: parche.correcta,
++    explicacion: parche.explicacion || null,
++    nota: parche.nota || null,
++    aplicado: false,
++    aplicado_at: null
++  };
++}
++
++// Guarda la corrección de una pregunta.
++// payload: { testId, preguntaIdx, enunciado, opciones (2-3), correcta, explicacion?, nota? }
++//  1) parche en progreso._parchesPreguntas["XXX_YY"] (localStorage al instante + fila "progreso" de Supabase);
++//  2) .upsert() en flags_preguntas (conflicto (user_id, pregunta_id), aplicado: false) si hay sesión.
++// Devuelve { ok: true, parche, nube, progresoEnNube }; nube: "sincronizado" | "pendiente" (sin sesión) | "error".
++// Lanza Error si el payload no es válido (en ese caso no se guarda nada).
++async function guardarFlagPregunta(payload) {
++  const base = normalizarParchePregunta(payload);
++  if (!base) {
++    throw new Error("Corrección no válida: revisa el enunciado, las opciones (2 o 3) y la respuesta correcta.");
++  }
++  const clave = claveTarjeta(base.testId, base.preguntaIdx);
++  const ahora = new Date().toISOString();
++
++  // 1) Parche local (se escribe en localStorage de forma síncrona: la app lo ve al instante)
++  const progreso = obtenerProgreso();
++  if (!progreso._parchesPreguntas || typeof progreso._parchesPreguntas !== "object") progreso._parchesPreguntas = {};
++  const previo = normalizarParchePregunta(progreso._parchesPreguntas[clave]);
++  const parche = { ...base, creadoEn: (previo && previo.creadoEn) || ahora, actualizadoEn: ahora, sincronizado: false };
++  progreso._parchesPreguntas[clave] = parche;
++  const subidaProgreso = guardarProgreso(progreso);
++
++  // 2) Flag en la nube (solo con sesión; sin sesión queda pendiente y no es un error)
++  let nube = "pendiente";
++  const sesion = await obtenerSesionSupabase();
++  if (sesion && sesion.user) {
++    try {
++      const { error } = await supabaseClient
++        .from(TABLA_FLAGS)
++        .upsert(filaFlagDesdeParche(parche, sesion.user.id), { onConflict: FLAG_CONFLICTO });
++      if (error) console.error("Error guardando el flag en Supabase:", error);
++      nube = error ? "error" : "sincronizado";
++    } catch (err) {
++      console.error("Error guardando el flag en Supabase:", err);
++      nube = "error";
++    }
++  }
++  const progresoEnNube = await subidaProgreso;
++
++  // 3) Marca el parche como enviado (se relee el progreso: pudo cambiar mientras se esperaba a la red)
++  if (nube === "sincronizado") {
++    const actual = obtenerProgreso();
++    const guardado = actual._parchesPreguntas && actual._parchesPreguntas[clave];
++    if (guardado && guardado.actualizadoEn === ahora) {
++      guardado.sincronizado = true;
++      await guardarProgreso(actual);
++      parche.sincronizado = true;
++    }
++  }
++
++  return { ok: true, parche, nube, progresoEnNube };
++}
++
++// Reenvía a flags_preguntas los parches que aún no se han enviado (p. ej. guardados antes de tener sesión).
++// Devuelve { enviados, pendientes, sinSesion, error? }. Sin sesión no hace nada y no es un error.
++async function sincronizarFlagsPendientes() {
++  const pendientes = Object.entries(obtenerParchesPreguntas()).filter(([, p]) => !p.sincronizado);
++  if (!pendientes.length) return { enviados: 0, pendientes: 0, sinSesion: false };
++
++  const sesion = await obtenerSesionSupabase();
++  if (!sesion || !sesion.user) return { enviados: 0, pendientes: pendientes.length, sinSesion: true };
++
++  try {
++    const filas = pendientes.map(([, p]) => filaFlagDesdeParche(p, sesion.user.id));
++    const { error } = await supabaseClient.from(TABLA_FLAGS).upsert(filas, { onConflict: FLAG_CONFLICTO });
++    if (error) throw error;
++  } catch (err) {
++    console.error("Error reenviando flags pendientes:", err);
++    return { enviados: 0, pendientes: pendientes.length, sinSesion: false, error: true };
++  }
++
++  const actual = obtenerProgreso();
++  let marcados = 0;
++  pendientes.forEach(([clave, p]) => {
++    const guardado = actual._parchesPreguntas && actual._parchesPreguntas[clave];
++    if (guardado && (guardado.actualizadoEn || "") === p.actualizadoEn) {
++      guardado.sincronizado = true;
++      marcados++;
++    }
++  });
++  if (marcados) await guardarProgreso(actual);
++  return { enviados: marcados, pendientes: pendientes.length - marcados, sinSesion: false };
++}
++
++/* =====================================================================
+  *  CATEGORÍAS: la clasificación vive en js/categorias.js (cargar antes que este archivo)
+  * ===================================================================== */
+ 
+@@ -838,7 +1029,7 @@
+   lector.readAsText(archivo);
+ }
+ 
+-// Borra los resultados de los tests y el mazo Anki, manteniendo la fecha de examen (_meta)
++// Borra los resultados de los tests y el mazo Anki, manteniendo la fecha de examen (_meta) y las correcciones de preguntas
+ async function borrarProgreso() {
+   const actual = obtenerProgreso();
+   const nuevoEstado = {};
+@@ -847,5 +1038,9 @@
+     delete meta.ankiInicializado;
+     nuevoEstado._meta = meta;
+   }
++  // Las correcciones de preguntas no son progreso: se conservan
++  if (actual._parchesPreguntas && typeof actual._parchesPreguntas === "object") {
++    nuevoEstado._parchesPreguntas = actual._parchesPreguntas;
++  }
+   await guardarProgreso(nuevoEstado);
+ }
+--- ./js/test_engine.js	2026-11-26 11:59:51.612741457 +0000
++++ ./js/test_engine.js.tmp	2026-11-26 14:39:26.284940350 +0000
+@@ -4,6 +4,11 @@
+   const MODO = (modoParam === 'estudio' || modoParam === 'repaso') ? modoParam : 'examen';
+   const letras = ['a', 'b', 'c', 'd'];
+ 
++  // Botón bandera (corregir pregunta): solo en modos Anki. 'falladas' aún no existe en el motor:
++  // cuando se añada, bastará con pintar #btnBandera en su barra superior y llamar a abrirModalCorreccion().
++  const MODOS_BANDERA = ['repaso', 'falladas'];
++  const BANDERA_VISIBLE = MODOS_BANDERA.includes(modoParam);
++
+   let PREGUNTAS = [];
+   window.TEST_ID = null;
+ 
+@@ -43,6 +48,154 @@
+     estadoGuardado.textContent = texto;
+   }
+ 
++  /* ================= PARCHES DE PREGUNTAS (correcciones locales) ================= */
++  // Aplica un parche sobre el objeto pregunta (en sitio). Formato de test: texto / opciones / correcta / explicacion
++  function aplicarParcheAPregunta(pregunta, parche) {
++    if (!pregunta || !parche) return pregunta;
++    pregunta.texto = parche.enunciado;
++    pregunta.opciones = parche.opciones.slice();
++    pregunta.correcta = parche.correcta;
++    if (parche.explicacion) pregunta.explicacion = parche.explicacion;
++    pregunta.corregida = true;
++    delete pregunta.correcta_detectada;
++    return pregunta;
++  }
++
++  // Aplica todos los parches locales del test n al JSON cargado (antes de renderizar)
++  function aplicarParchesATest(n, data) {
++    if (typeof obtenerParchePregunta !== 'function') return data;
++    const preguntas = preguntasDeDatosTest(data);
++    if (!preguntas) return data;
++    preguntas.forEach((preg, idx) => {
++      const parche = obtenerParchePregunta(n, idx);
++      if (parche) aplicarParcheAPregunta(preg, parche);
++    });
++    return data;
++  }
++
++  /* ================= MODAL DE CORRECCIÓN ================= */
++  // Mientras está abierto los atajos globales (1-3, 1-4, Espacio, Enter) no actúan: ver keydown del repaso.
++  let modalCorreccionAbierto = false;
++  let ctxCorreccion = null;   // { testId, preguntaIdx, pregunta, alAbrir, alCerrar, alGuardar }
++  let guardandoCorreccion = false;
++
++  const mc = {
++    overlay: document.getElementById('modalCorreccion'),
++    form: document.getElementById('formCorreccion'),
++    titulo: document.getElementById('corrTitulo'),
++    enunciado: document.getElementById('corrEnunciado'),
++    opciones: [0, 1, 2].map((i) => document.getElementById(`corrOpcion${i}`)),
++    radios: [0, 1, 2].map((i) => document.getElementById(`corrRadio${i}`)),
++    explicacion: document.getElementById('corrExplicacion'),
++    nota: document.getElementById('corrNota'),
++    error: document.getElementById('corrError'),
++    cerrar: document.getElementById('corrCerrar'),
++    cancelar: document.getElementById('corrCancelar'),
++    guardar: document.getElementById('corrGuardar')
++  };
++
++  function mostrarErrorCorreccion(texto, campo) {
++    mc.error.textContent = texto;
++    mc.error.hidden = !texto;
++    [mc.enunciado, ...mc.opciones].forEach((c) => c.classList.remove('invalido'));
++    if (campo) { campo.classList.add('invalido'); campo.focus(); }
++  }
++
++  // La opción c es opcional: sin texto no puede ser la correcta
++  function sincronizarRadioC() {
++    const vacia = !mc.opciones[2].value.trim();
++    mc.radios[2].disabled = vacia;
++    if (vacia && mc.radios[2].checked) mc.radios[2].checked = false;
++  }
++
++  function abrirModalCorreccion(ctx) {
++    if (!mc.overlay || modalCorreccionAbierto || !ctx || !ctx.pregunta) return;
++    ctxCorreccion = ctx;
++    const p = ctx.pregunta;
++    const parche = typeof obtenerParchePregunta === 'function' ? obtenerParchePregunta(ctx.testId, ctx.preguntaIdx) : null;
++
++    mc.titulo.textContent = `Corregir pregunta · Test ${String(ctx.testId).padStart(3, '0')} · Pregunta ${String(ctx.preguntaIdx + 1).padStart(2, '0')}`;
++    mc.enunciado.value = p.texto || '';
++    mc.opciones.forEach((inp, i) => { inp.value = p.opciones[i] || ''; });
++    mc.radios.forEach((r, i) => { r.checked = typeof p.correcta === 'number' && p.correcta === i; });
++    mc.explicacion.value = p.explicacion || '';
++    mc.nota.value = parche ? parche.nota : '';
++    sincronizarRadioC();
++    mostrarErrorCorreccion('');
++    mc.guardar.disabled = false;
++    mc.guardar.textContent = 'Guardar corrección';
++
++    modalCorreccionAbierto = true;        // antes de nada: a partir de aquí los atajos globales se ignoran
++    if (typeof ctx.alAbrir === 'function') ctx.alAbrir();
++    mc.overlay.classList.add('activo');
++    mc.overlay.setAttribute('aria-hidden', 'false');
++    mc.enunciado.focus();
++  }
++
++  function cerrarModalCorreccion() {
++    if (!modalCorreccionAbierto || guardandoCorreccion) return;
++    const ctx = ctxCorreccion;
++    modalCorreccionAbierto = false;
++    ctxCorreccion = null;
++    mc.overlay.classList.remove('activo');
++    mc.overlay.setAttribute('aria-hidden', 'true');
++    // Quita el foco del control activo para que Espacio/Enter no vuelvan a pulsar el botón bandera
++    if (document.activeElement && document.activeElement !== document.body) document.activeElement.blur();
++    if (ctx && typeof ctx.alCerrar === 'function') ctx.alCerrar();
++  }
++
++  async function guardarCorreccion() {
++    if (!modalCorreccionAbierto || guardandoCorreccion || !ctxCorreccion) return;
++    const ctx = ctxCorreccion;
++    const opciones = mc.opciones.map((i) => i.value.trim());
++    const enunciado = mc.enunciado.value.trim();
++    const marcada = mc.radios.findIndex((r) => r.checked);
++
++    if (!enunciado) return mostrarErrorCorreccion('El enunciado no puede estar vacío.', mc.enunciado);
++    if (!opciones[0]) return mostrarErrorCorreccion('La opción a) es obligatoria.', mc.opciones[0]);
++    if (!opciones[1]) return mostrarErrorCorreccion('La opción b) es obligatoria.', mc.opciones[1]);
++    const textos = opciones[2] ? opciones : opciones.slice(0, 2);
++    if (marcada < 0 || marcada >= textos.length) return mostrarErrorCorreccion('Marca cuál es la opción correcta.');
++
++    guardandoCorreccion = true;
++    mc.guardar.disabled = true;
++    mc.guardar.textContent = 'Guardando...';
++    let resultado = null;
++    try {
++      resultado = await guardarFlagPregunta({
++        testId: ctx.testId,
++        preguntaIdx: ctx.preguntaIdx,
++        enunciado,
++        opciones: textos,
++        correcta: marcada,
++        explicacion: mc.explicacion.value.trim(),
++        nota: mc.nota.value.trim()
++      });
++    } catch (err) {
++      guardandoCorreccion = false;
++      mc.guardar.disabled = false;
++      mc.guardar.textContent = 'Guardar corrección';
++      return mostrarErrorCorreccion(err && err.message ? err.message : 'No se pudo guardar la corrección.');
++    }
++    guardandoCorreccion = false;
++
++    if (typeof ctx.alGuardar === 'function') ctx.alGuardar(resultado.parche, resultado);
++    cerrarModalCorreccion();
++  }
++
++  if (mc.overlay) {
++    mc.form.addEventListener('submit', (e) => { e.preventDefault(); guardarCorreccion(); });
++    mc.cerrar.addEventListener('click', cerrarModalCorreccion);
++    mc.cancelar.addEventListener('click', cerrarModalCorreccion);
++    mc.opciones[2].addEventListener('input', sincronizarRadioC);
++    // Escape cierra; Ctrl/Cmd+Enter guarda. En captura y parando la propagación para que nada más reaccione.
++    document.addEventListener('keydown', (e) => {
++      if (!modalCorreccionAbierto) return;
++      if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); cerrarModalCorreccion(); }
++      else if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); e.stopPropagation(); guardarCorreccion(); }
++    }, true);
++  }
++
+   /* ================= PARÁMETROS DE URL ================= */
+   function obtenerIdTest() {
+     const raw = (params.get('id') || '').trim();
+@@ -227,6 +380,7 @@
+ 
+   const SVG_ATTRS = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
+   const ICONO_CHECK = `<svg ${SVG_ATTRS}><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>`;
++  const ICONO_BANDERA = `<svg ${SVG_ATTRS}><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg>`;
+   const ICONO_ASPA = `<svg ${SVG_ATTRS}><path d="M6 6l12 12M18 6L6 18"/></svg>`;
+ 
+   function iniciarRepaso() {
+@@ -256,6 +410,12 @@
+     let tiempoActual = 0;                  // tiempo congelado de la tarjeta actual (1 decimal)
+     let nivelSugerido = '';                // 'hard' | 'medium' | 'easy' | 'again'
+     let aciertoActual = false;             // si la respuesta de la tarjeta actual fue correcta
++    let ordenVisual = [];                  // posición en pantalla -> índice original de la opción
++    let seleccionVisual = -1;              // posición (visual) elegida por el usuario en la tarjeta actual
++    let rachaPrevia = 0;                   // racha antes de responder la tarjeta actual
++    let tiemposPrevios = [];               // tiemposSesion antes de añadir el de la tarjeta actual
++    let primeraVezActual = false;          // la respuesta actual fue la 1.ª de esta tarjeta en la sesión
++    let pausaCorreccion = null;            // performance.now() al abrir el modal con el cronómetro en marcha
+ 
+     const el = (id) => document.getElementById(id);
+     const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+@@ -339,7 +499,7 @@
+ 
+     function pintarAviso(html) {
+       fase = 'final';
+-      cont.innerHTML = `<div class="repaso-final"><p class="repaso-final-sub">${html}</p><a class="btn btn--primario btn--lg" href="index.html">Volver al panel</a></div>`;
++      cont.innerHTML = `<div class="repaso-final"><p class="repaso-final-sub">${html}</p><a class="repaso-btn-volver" href="index.html">Volver al panel</a></div>`;
+     }
+ 
+     function preguntaDeClave(clave) {
+@@ -367,9 +527,12 @@
+               </div>
+               <div class="repaso-contador" id="repasoContador">0 / 0</div>
+             </div>
+-            <div class="repaso-combo" id="repasoCombo" title="Racha de aciertos seguidos" aria-live="polite">
+-              <span class="repaso-combo-fuego" aria-hidden="true">🔥</span>
+-              <span id="repasoComboNum">0</span>
++            <div class="repaso-topbar-acciones">
++              ${BANDERA_VISIBLE ? `<button type="button" class="btn-bandera" id="btnBandera" title="Corregir esta pregunta" aria-label="Corregir esta pregunta">${ICONO_BANDERA}</button>` : ''}
++              <div class="repaso-combo" id="repasoCombo" title="Racha de aciertos seguidos" aria-live="polite">
++                <span class="repaso-combo-fuego" aria-hidden="true">🔥</span>
++                <span id="repasoComboNum">0</span>
++              </div>
+             </div>
+           </div>
+         </header>
+@@ -414,7 +577,6 @@
+         return;
+       }
+ 
+-      const tarjeta = obtenerTarjetas()[claveActual];
+       numOpciones = pregActual.opciones.length;
+       fase = 'pregunta';
+ 
+@@ -424,22 +586,38 @@
+       actualizarProgreso();
+       pintarCombo(null);
+ 
++      generarOrdenVisual();
++      seleccionVisual = -1;
++      pintarTarjeta();
++      actualizarEstadoBandera();
++
++      window.scrollTo(0, 0);
++      iniciarCronometro();
++    }
++
++    // Orden visual: posición en pantalla -> índice original en el JSON.
++    // Si "barajarOpciones" está activo se mezcla en cada aparición; el rastreo de la correcta se mantiene
++    // en correctaVisual, y las teclas 1-2-3 y las letras a-b-c siguen el orden visual de arriba abajo.
++    function generarOrdenVisual() {
++      const barajar = typeof obtenerConfigAnki === 'function' && obtenerConfigAnki().barajarOpciones === true;
++      ordenVisual = pregActual.opciones.map((_, i) => i);
++      if (barajar) barajarArray(ordenVisual);
++      correctaVisual = ordenVisual.indexOf(pregActual.correcta);
++    }
++
++    // Pinta la tarjeta de la pregunta actual (sin tocar cronómetro ni scroll: sirve también para repintar en vivo)
++    function pintarTarjeta() {
++      const stage = el('repasoStage');
++      const tarjeta = obtenerTarjetas()[claveActual];
++      numOpciones = pregActual.opciones.length;
+       const imagenSrc = normalizarImagen(pregActual.imagen);
+-      const repeticion = sesion.repetidas.has(claveActual) ? '<span class="badge badge--aviso badge--mayus badge--sm">Repetición</span>' : '';
++      const repeticion = sesion.repetidas.has(claveActual) ? '<span class="repaso-repeticion">Repetición</span>' : '';
+       const refTest = String(tarjeta.testId).padStart(3, '0');
+       const refPregunta = String((Number(tarjeta.preguntaIdx) || 0) + 1).padStart(2, '0');
+       // Categoría DGT: la guardada en la tarjeta o, si aún no se ha migrado, la calculada al vuelo
+       const categoria = tarjeta.categoria
+         || (typeof categoriaDePregunta === 'function' ? categoriaDePregunta(pregActual) : '');
+ 
+-      // Orden visual: posición en pantalla -> índice original en el JSON.
+-      // Si "barajarOpciones" está activo se mezcla en cada aparición; el rastreo de la correcta se mantiene
+-      // en correctaVisual, y las teclas 1-2-3 y las letras a-b-c siguen el orden visual de arriba abajo.
+-      const barajar = typeof obtenerConfigAnki === 'function' && obtenerConfigAnki().barajarOpciones === true;
+-      const ordenVisual = pregActual.opciones.map((_, i) => i);
+-      if (barajar) barajarArray(ordenVisual);
+-      correctaVisual = ordenVisual.indexOf(pregActual.correcta);
+-
+       const opcionesHTML = ordenVisual.map((idxOriginal, i) => `
+         <button type="button" class="repaso-opcion" data-op="${i}">
+           <span class="repaso-tecla" aria-hidden="true">${i + 1}</span>
+@@ -453,11 +631,11 @@
+           <div class="repaso-contexto">
+             <span class="repaso-contexto-izq">
+               <span>Test ${esc(refTest)} · Pregunta ${esc(refPregunta)}</span>
+-              ${categoria ? `<span class="badge badge--neutro badge--sm">${esc(categoria)}</span>` : ''}
++              ${categoria ? `<span class="repaso-categoria">${esc(categoria)}</span>` : ''}
+             </span>
+             <span class="repaso-contexto-der">
+               ${repeticion}
+-              <span class="badge badge--mayus madurez-${esc(tarjeta.madurez)}">${ETIQUETA_MADUREZ[tarjeta.madurez] || esc(tarjeta.madurez)}</span>
++              <span class="repaso-badge madurez-${esc(tarjeta.madurez)}">${ETIQUETA_MADUREZ[tarjeta.madurez] || esc(tarjeta.madurez)}</span>
+             </span>
+           </div>
+           <div class="repaso-cuerpo">
+@@ -474,9 +652,6 @@
+       stage.querySelectorAll('.repaso-opcion').forEach((btn) => {
+         btn.addEventListener('click', () => seleccionarOpcion(Number(btn.dataset.op)));
+       });
+-
+-      window.scrollTo(0, 0);
+-      iniciarCronometro();
+     }
+ 
+     /* ---------- Fase 1: elegir respuesta ---------- */
+@@ -485,9 +660,49 @@
+       fase = 'confianza';
+       detenerCronometro();               // congela el tiempo exacto al instante
+       bloqueoHasta = Date.now() + 200;   // evita que una doble pulsación salte la fase de confianza
++      seleccionVisual = i;
++
++      const acierto = i === correctaVisual;   // correctaVisual ya contempla el barajado
++      aciertoActual = acierto;
++
++      // Contabilidad de sesión (una sola vez por respuesta)
++      rachaPrevia = sesion.racha;
++      tiemposPrevios = tiemposSesion.slice();
++      aplicarRacha(acierto, true);
++      tiemposSesion.push(tiempoActual);  // entra en la mediana a partir de la SIGUIENTE pregunta
+ 
+-      const correcta = correctaVisual;   // índice visual de la correcta (ya contempla el barajado)
+-      const acierto = i === correcta;
++      // Mejora vs. el anterior repaso: solo la 1.ª vez que sale la tarjeta en la sesión y si hay tiempo previo
++      const tarjetaAntes = obtenerTarjetas()[claveActual] || {};
++      primeraVezActual = !sesion.vistas.has(claveActual);
++      if (primeraVezActual) {
++        sesion.vistas.add(claveActual);
++        if (Number(tarjetaAntes.ultimoTiempoSeg) > 0) {
++          sesion.comparables.add(claveActual);
++          if (acierto && tiempoActual < Number(tarjetaAntes.ultimoTiempoSeg)) sesion.mejoradas.add(claveActual);
++        }
++      }
++
++      mostrarResultado(true);
++    }
++
++    // Racha de sesión: sube con cada acierto consecutivo y se reinicia al fallar. Parte siempre de rachaPrevia.
++    function aplicarRacha(acierto, animar) {
++      if (acierto) {
++        sesion.racha = rachaPrevia + 1;
++        sesion.rachaMax = Math.max(sesion.rachaMax, sesion.racha);
++        pintarCombo(animar ? 'pop' : null);
++      } else {
++        sesion.racha = 0;
++        pintarCombo(animar && rachaPrevia > 0 ? 'cae' : null);
++      }
++    }
++
++    // Pinta el resultado (opciones, sugerencia y panel de confianza) para la selección actual.
++    // Idempotente: también se usa al repintar en vivo tras corregir la pregunta.
++    function mostrarResultado(primera) {
++      const i = seleccionVisual;
++      const correcta = correctaVisual;
++      const acierto = aciertoActual;
+ 
+       cont.querySelectorAll('.repaso-opcion').forEach((btn, idx) => {
+         btn.classList.add('bloqueada');
+@@ -503,32 +718,10 @@
+         }
+       });
+ 
+-      // Combo de sesión: sube con cada acierto consecutivo y se reinicia al fallar
+-      if (acierto) {
+-        sesion.racha++;
+-        sesion.rachaMax = Math.max(sesion.rachaMax, sesion.racha);
+-        pintarCombo('pop');
+-      } else {
+-        const habiaRacha = sesion.racha > 0;
+-        sesion.racha = 0;
+-        pintarCombo(habiaRacha ? 'cae' : null);
+-      }
+-
+       // Sugerencia de confianza según tiempo esperado (65 % histórico de la tarjeta + 35 % mediana de hoy)
+       const tarjetaAntes = obtenerTarjetas()[claveActual] || {};
+-      aciertoActual = acierto;
+-      const sug = sugerirConfianza(acierto, tiempoActual, tiemposSesion, tarjetaAntes.tiempoMedioSeg);
++      const sug = sugerirConfianza(acierto, tiempoActual, tiemposPrevios, tarjetaAntes.tiempoMedioSeg);
+       nivelSugerido = sug.nivel;
+-      tiemposSesion.push(tiempoActual);  // entra en la mediana a partir de la SIGUIENTE pregunta
+-
+-      // Mejora vs. el anterior repaso: solo la 1.ª vez que sale la tarjeta en la sesión y si hay tiempo previo
+-      if (!sesion.vistas.has(claveActual)) {
+-        sesion.vistas.add(claveActual);
+-        if (Number(tarjetaAntes.ultimoTiempoSeg) > 0) {
+-          sesion.comparables.add(claveActual);
+-          if (acierto && tiempoActual < Number(tarjetaAntes.ultimoTiempoSeg)) sesion.mejoradas.add(claveActual);
+-        }
+-      }
+ 
+       const intervalos = previsualizarIntervalosTarjeta(claveActual) || {};
+       const panel = el('repasoConfianza');
+@@ -547,7 +740,7 @@
+       panel.innerHTML = `
+         <div class="repaso-confianza-cab">
+           <span class="repaso-confianza-titulo">Calibrar confianza</span>
+-          <span class="badge ${acierto ? 'badge--acierto' : 'badge--fallo'}">${acierto ? '¡Correcto!' : 'Incorrecta'}</span>
++          <span class="repaso-resultado ${acierto ? 'ok' : 'ko'}">${acierto ? '¡Correcto!' : 'Incorrecta'}</span>
+         </div>
+         <p class="repaso-sugerencia nivel-${sug.nivel}">
+           <span class="repaso-sugerencia-tag">Sugerida: ${esc(ETIQUETA_NIVEL[sug.nivel])}</span>
+@@ -568,11 +761,99 @@
+       if (ayuda) ayuda.innerHTML = '<kbd>Espacio</kbd>/<kbd>Enter</kbd> acepta la sugerida y pasa a la siguiente';
+ 
+       // En pantallas pequeñas asegura que el panel de confianza quede a la vista
+-      requestAnimationFrame(() => {
+-        panel.scrollIntoView({ behavior: reducirMovimiento() ? 'auto' : 'smooth', block: 'nearest' });
++      if (primera) {
++        requestAnimationFrame(() => {
++          panel.scrollIntoView({ behavior: reducirMovimiento() ? 'auto' : 'smooth', block: 'nearest' });
++        });
++      }
++    }
++
++    /* ---------- Corrección de la pregunta actual (botón bandera) ---------- */
++    function actualizarEstadoBandera() {
++      const btn = el('btnBandera');
++      if (!btn || !claveActual) return;
++      const t = obtenerTarjetas()[claveActual];
++      const hay = Boolean(t && typeof obtenerParchePregunta === 'function' && obtenerParchePregunta(t.testId, t.preguntaIdx));
++      btn.classList.toggle('corregida', hay);
++      btn.title = hay ? 'Pregunta ya corregida · editar de nuevo' : 'Corregir esta pregunta';
++    }
++
++    function abrirCorreccionActual() {
++      if (!BANDERA_VISIBLE || (fase !== 'pregunta' && fase !== 'confianza') || !pregActual) return;
++      const t = obtenerTarjetas()[claveActual];
++      if (!t) return;
++      abrirModalCorreccion({
++        testId: Number(t.testId),
++        preguntaIdx: Number(t.preguntaIdx) || 0,
++        pregunta: pregActual,
++        // El cronómetro se pausa mientras se edita (el tiempo de edición no cuenta como tiempo de respuesta)
++        alAbrir: () => { pausaCorreccion = (fase === 'pregunta' && inicioTarjeta !== null) ? performance.now() : null; },
++        alGuardar: (parche, resultado) => {
++          aplicarParcheAPregunta(pregActual, parche);
++          repintarTarjetaActual();
++          actualizarEstadoBandera();
++          if (resultado && resultado.nube === 'error') {
++            const av = el('repasoAvisoNube');
++            if (av) av.hidden = false;
++          }
++        },
++        alCerrar: () => {
++          if (pausaCorreccion !== null && inicioTarjeta !== null) inicioTarjeta += performance.now() - pausaCorreccion;
++          pausaCorreccion = null;
++        }
+       });
+     }
+ 
++    // Repinta la tarjeta con la pregunta ya corregida, conservando la fase y la respuesta dada
++    function repintarTarjetaActual() {
++      if (!pregActual || (fase !== 'pregunta' && fase !== 'confianza')) return;
++      const originalElegida = fase === 'confianza' && seleccionVisual >= 0 ? ordenVisual[seleccionVisual] : -1;
++      const habiaOpcionesIguales = numOpciones === pregActual.opciones.length;
++
++      if (!habiaOpcionesIguales) generarOrdenVisual();
++      else correctaVisual = ordenVisual.indexOf(pregActual.correcta);
++      pintarTarjeta();
++
++      if (fase !== 'confianza') return;
++
++      // La opción elegida ya no existe (p. ej. se quitó la c): se anula la respuesta y se vuelve a preguntar
++      if (originalElegida < 0 || originalElegida >= pregActual.opciones.length || !ordenVisual.includes(originalElegida)) {
++        deshacerRespuestaActual();
++        return;
++      }
++
++      seleccionVisual = ordenVisual.indexOf(originalElegida);
++      const nuevoAcierto = seleccionVisual === correctaVisual;
++      if (nuevoAcierto !== aciertoActual) {
++        aciertoActual = nuevoAcierto;
++        aplicarRacha(nuevoAcierto, false);
++        const tarjetaAntes = obtenerTarjetas()[claveActual] || {};
++        if (sesion.comparables.has(claveActual) && primeraVezActual) {
++          if (nuevoAcierto && tiempoActual < Number(tarjetaAntes.ultimoTiempoSeg)) sesion.mejoradas.add(claveActual);
++          else sesion.mejoradas.delete(claveActual);
++        }
++      }
++      mostrarResultado(false);
++    }
++
++    // Revierte la contabilidad de la respuesta actual y reabre la tarjeta sin resolver (cronómetro retomado)
++    function deshacerRespuestaActual() {
++      tiemposSesion.pop();
++      sesion.racha = rachaPrevia;
++      pintarCombo(null);
++      if (primeraVezActual) {
++        sesion.vistas.delete(claveActual);
++        sesion.comparables.delete(claveActual);
++        sesion.mejoradas.delete(claveActual);
++      }
++      fase = 'pregunta';
++      seleccionVisual = -1;
++      nivelSugerido = '';
++      aciertoActual = false;
++      pausaCorreccion = null;
++      inicioTarjeta = performance.now() - (tiempoActual * 1000);
++    }
++
+     /* ---------- Fase 2: confianza ---------- */
+     async function calificar(nivel) {
+       if (fase !== 'confianza' || Date.now() < bloqueoHasta) return;
+@@ -672,7 +953,7 @@
+           <p class="repaso-final-sub">${repasadas
+             ? `Has repasado ${repasadas} ${repasadas === 1 ? 'tarjeta' : 'tarjetas'} (${c.again} ${c.again === 1 ? 'repetición' : 'repeticiones'} por «Again»).`
+             : 'No tienes tarjetas pendientes para hoy.'}</p>
+-          ${rachaMax > 0 ? `<div class="badge badge--aviso badge--lg repaso-racha-final">🔥 Mejor racha: ${rachaMax}</div>` : ''}
++          ${rachaMax > 0 ? `<div class="repaso-racha-final">🔥 Mejor racha: ${rachaMax}</div>` : ''}
+           <div class="repaso-resumen">
+             <div class="repaso-resumen-item madurez-nueva"><strong>${e.nuevas}</strong><span>Nuevas</span></div>
+             <div class="repaso-resumen-item madurez-aprendiendo"><strong>${e.aprendiendo}</strong><span>Aprendiendo</span></div>
+@@ -682,14 +963,20 @@
+           ${bloqueTiempos}
+           ${bloqueDebiles}
+           <p class="repaso-final-sub">${e.totalMazo} preguntas en seguimiento · examen en ${e.diasRestantes} ${e.diasRestantes === 1 ? 'día' : 'días'}</p>
+-          ${hayMas ? `<a class="btn btn--contorno btn--lg" href="test.html?modo=repaso">Seguir con ${e.colaHoy.length} ${e.colaHoy.length === 1 ? 'tarjeta más' : 'tarjetas más'}</a>` : ''}
+-          <a class="btn btn--primario btn--lg" href="index.html">Volver al panel <kbd>Enter</kbd></a>
++          ${hayMas ? `<a class="repaso-btn-secundario" href="test.html?modo=repaso">Seguir con ${e.colaHoy.length} ${e.colaHoy.length === 1 ? 'tarjeta más' : 'tarjetas más'}</a>` : ''}
++          <a class="repaso-btn-volver" href="index.html">Volver al panel <kbd>Enter</kbd></a>
+         </div>
+       `;
+     }
+ 
++    // Delegado: la barra se vuelve a montar con montarShell()
++    cont.addEventListener('click', (e) => {
++      if (e.target.closest && e.target.closest('#btnBandera')) abrirCorreccionActual();
++    });
++
+     /* ---------- Teclado ---------- */
+     document.addEventListener('keydown', (e) => {
++      if (modalCorreccionAbierto) return;   // con el modal abierto no actúa ningún atajo (1-4, Espacio, Enter)
+       if (e.ctrlKey || e.metaKey || e.altKey || e.repeat) return;
+ 
+       if (fase === 'pregunta') {
+@@ -709,6 +996,8 @@
+       pintarCarga('Cargando tu progreso...');
+       try {
+         await sincronizacionInicial;
++        // Reenvía en segundo plano las correcciones guardadas sin sesión (no hace nada si aún no hay Auth)
++        if (typeof sincronizarFlagsPendientes === 'function') sincronizarFlagsPendientes().catch(() => {});
+         if (necesitaInicializarMazo()) {
+           pintarCarga('Preparando mazo Anki...');
+           await inicializarMazoAnkiDesdeTests();
+@@ -739,7 +1028,10 @@
+ 
+       pintarCarga(`Cargando ${estado.colaHoy.length} tarjetas...`);
+       const ids = [...new Set(estado.colaHoy.map((t) => t.testId))];
+-      await Promise.all(ids.map(async (id) => { cacheTests.set(id, await cargarDatosTest(id)); }));
++      await Promise.all(ids.map(async (id) => {
++        const data = await cargarDatosTest(id);
++        cacheTests.set(id, data ? aplicarParchesATest(id, data) : data);   // correcciones locales aplicadas al instante
++      }));
+ 
+       sesion.pendientes = estado.colaHoy.map((t) => t.clave).filter((k) => preguntaDeClave(k));
+       sesion.total = sesion.pendientes.length;
+@@ -769,6 +1061,7 @@
+ 
+     try {
+       const data = await cargarJSONTest(n);
++      aplicarParchesATest(n, data);   // correcciones locales (no espera a la sincronización con la nube)
+       PREGUNTAS = preguntasDeDatosTest(data) || [];
+       if (!PREGUNTAS.length) throw new Error('El JSON no contiene preguntas');
+       renderPreguntas();
+--- ./test.html	2026-11-26 11:59:30.312341590 +0000
++++ ./test.html.tmp	2026-11-26 14:38:57.345813422 +0000
+@@ -16,7 +16,7 @@
+   <!-- Hojas de estilo · orden obligatorio: 1º variables.css · 2º componentes.css · 3º CSS de la página -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+-  <link rel="stylesheet" href="css/variables.css?v=3">
++  <link rel="stylesheet" href="css/variables.css?v=4">
+   <link rel="stylesheet" href="css/componentes.css?v=2">
+   <link rel="stylesheet" href="css/test.css?v=9">
+   <!-- Fuente (ya no hay @import dentro de los CSS) -->
+@@ -27,7 +27,7 @@
+   <main class="test-column">
+     <div class="test-title-row">
+       <h1 class="test-title">test <span class="num" id="testNum">nº …</span></h1>
+-      <span class="badge badge--contorno" id="lblModo">Modo examen</span>
++      <span class="modo-badge" id="lblModo">Modo examen</span>
+     </div>
+ 
+     <!-- Avisos (falta id, JSON no encontrado, etc.) -->
+@@ -40,8 +40,8 @@
+       <div id="preguntasContainer"></div>
+ 
+       <div class="corregir-box">
+-        <button type="button" class="btn btn--primario btn--lg" id="btnCorregir" onclick="corregirTest()">Corregir el test</button>
+-        <a href="index.html" class="btn btn--secundario btn--lg" id="btnVolver">Volver a la lista</a>
++        <button type="button" class="btn-corregir" id="btnCorregir" onclick="corregirTest()">Corregir el test</button>
++        <a href="index.html" class="btn-volver" id="btnVolver">Volver a la lista</a>
+       </div>
+ 
+       <div class="resultado-panel" id="resultadoPanel"></div>
+@@ -49,11 +49,63 @@
+     </form>
+   </main>
+ 
++  <!-- Modal de corrección de pregunta (solo se abre desde el botón bandera del repaso) -->
++  <div class="modal-overlay modal-correccion-overlay" id="modalCorreccion" aria-hidden="true">
++    <form class="modal-contenido modal-correccion" id="formCorreccion" role="dialog" aria-modal="true" aria-labelledby="corrTitulo" novalidate>
++      <div class="modal-header">
++        <h2 class="modal-titulo" id="corrTitulo">Corregir pregunta</h2>
++        <button type="button" class="modal-cerrar" id="corrCerrar" aria-label="Cerrar">×</button>
++      </div>
++
++      <div class="correccion-campo">
++        <label class="campo-etiqueta" for="corrEnunciado">Enunciado</label>
++        <textarea class="textarea-texto" id="corrEnunciado" rows="3"></textarea>
++      </div>
++
++      <fieldset class="correccion-campo">
++        <legend class="campo-etiqueta">Opciones · marca la correcta</legend>
++        <div class="correccion-opcion">
++          <input type="radio" class="correccion-radio" name="corrCorrecta" id="corrRadio0" value="0" aria-label="Opción a correcta">
++          <span class="correccion-letra" aria-hidden="true">a)</span>
++          <input type="text" class="input-texto" id="corrOpcion0" aria-label="Opción a">
++        </div>
++        <div class="correccion-opcion">
++          <input type="radio" class="correccion-radio" name="corrCorrecta" id="corrRadio1" value="1" aria-label="Opción b correcta">
++          <span class="correccion-letra" aria-hidden="true">b)</span>
++          <input type="text" class="input-texto" id="corrOpcion1" aria-label="Opción b">
++        </div>
++        <div class="correccion-opcion">
++          <input type="radio" class="correccion-radio" name="corrCorrecta" id="corrRadio2" value="2" aria-label="Opción c correcta">
++          <span class="correccion-letra" aria-hidden="true">c)</span>
++          <input type="text" class="input-texto" id="corrOpcion2" aria-label="Opción c (opcional)">
++        </div>
++        <span class="correccion-ayuda">La opción c es opcional: déjala vacía si la pregunta solo tiene dos.</span>
++      </fieldset>
++
++      <div class="correccion-campo">
++        <label class="campo-etiqueta" for="corrExplicacion">Explicación <span class="opcional">(opcional)</span></label>
++        <textarea class="textarea-texto" id="corrExplicacion" rows="2"></textarea>
++      </div>
++
++      <div class="correccion-campo">
++        <label class="campo-etiqueta" for="corrNota">Nota / motivo <span class="opcional">(opcional)</span></label>
++        <input type="text" class="input-texto" id="corrNota" placeholder="Ej.: el OCR cortó el enunciado">
++      </div>
++
++      <p class="correccion-error" id="corrError" role="alert" hidden></p>
++
++      <div class="correccion-acciones">
++        <button type="button" class="btn-cancelar-anki" id="corrCancelar">Cancelar</button>
++        <button type="submit" class="btn-guardar-anki" id="corrGuardar">Guardar corrección</button>
++      </div>
++    </form>
++  </div>
++
+   <noscript>Este test necesita JavaScript. <a href="index.html">Volver a la lista</a></noscript>
+ 
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+   <script src="js/categorias.js?v=1"></script>
+-  <script src="js/storage.js?v=12"></script>
++  <script src="js/storage.js?v=13"></script>
+   <script src="js/test_engine.js?v=10"></script>
+ </body>
+ </html>

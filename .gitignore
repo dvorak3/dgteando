@@ -1,7 +1,6 @@
 capturas_largas/
 __pycache__/
 *.pyc
-*.tmp
 *.latest*
 CEREBRO_DGTEANDO.md
 *.old
