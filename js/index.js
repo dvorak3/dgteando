@@ -83,10 +83,9 @@ function formatearFechaEspanol(fechaISO) {
   const partes = fechaISO.split('-');
   if (partes.length !== 3) return fechaISO;
   const meses = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
-  const anio = partes[0];
   const mesIdx = parseInt(partes[1], 10) - 1;
   const dia = parseInt(partes[2], 10);
-  return `${dia} ${meses[mesIdx] || partes[1]} ${anio}`;
+  return `${dia} ${meses[mesIdx] || partes[1]}`;
 }
 
 /**
@@ -112,20 +111,18 @@ function renderContadorExamen() {
 
   const contenedorMain = document.getElementById('examenMainTexto');
   const subFecha = document.getElementById('examenFechaFormateada');
+  const btnFecha = document.getElementById('btnFechaExamen');
 
   if (diffDias > 0) {
-    const etiqueta = diffDias === 1 ? 'día restante' : 'días restantes';
-    contenedorMain.innerHTML = `
-      <span class="examen-dias-num">${diffDias}</span>
-      <span class="examen-dias-texto">${etiqueta}</span>
-    `;
+    contenedorMain.textContent = `${diffDias} día${diffDias === 1 ? '' : 's'}`;
   } else if (diffDias === 0) {
-    contenedorMain.innerHTML = `<span class="examen-estado-especial">¡Hoy es el examen!</span>`;
+    contenedorMain.textContent = '¡Hoy!';
   } else {
-    contenedorMain.innerHTML = `<span class="examen-estado-especial" style="color:#6b706c;">Examen finalizado</span>`;
+    contenedorMain.textContent = 'Examen finalizado';
   }
 
   subFecha.textContent = formatearFechaEspanol(fechaISO);
+  btnFecha.setAttribute('aria-label', `Cambiar fecha del examen: ${subFecha.textContent}`);
 }
 
 /**
@@ -136,24 +133,13 @@ function renderRachaEstudio() {
   /** @type {ResumenRachaEstudio} */
   const { dias, practicoHoy } = calcularRachaEstudio();
   const rachaTexto = document.getElementById('rachaDiasTexto');
-  const rachaMensaje = document.getElementById('rachaMensaje');
-  const rachaBadge = document.getElementById('rachaBadge');
-
-  rachaTexto.textContent = dias === 1 ? '1 día' : `${dias} días`;
-
-  if (dias === 0) {
-    rachaMensaje.textContent = 'Completa un test hoy para encender tu racha diaria.';
-    rachaBadge.textContent = 'Sin racha activa';
-    rachaBadge.classList.remove('completado');
-  } else if (practicoHoy) {
-    rachaMensaje.textContent = '¡Gran ritmo! Ya has sumado práctica en el día de hoy.';
-    rachaBadge.textContent = 'Objetivo de hoy cumplido';
-    rachaBadge.classList.add('completado');
-  } else {
-    rachaMensaje.textContent = 'Haz al menos un test hoy para no perder tu racha.';
-    rachaBadge.textContent = 'Pendiente hoy';
-    rachaBadge.classList.remove('completado');
-  }
+  const rachaContexto = document.getElementById('rachaContexto');
+  rachaTexto.textContent = dias;
+  const descripcion = dias === 0
+    ? 'Sin racha activa'
+    : `${dias} ${dias === 1 ? 'día' : 'días'} de racha${practicoHoy ? ', con práctica hoy' : ''}`;
+  rachaContexto.setAttribute('aria-label', descripcion);
+  rachaContexto.title = descripcion;
 }
 
 /* ================= REPASO INTELIGENTE (ANKI) ================= */
@@ -171,35 +157,37 @@ function renderAnki() {
   const etiqueta = document.getElementById('ankiCuotaEtiqueta');
   const total = document.getElementById('ankiTotalSeguimiento');
   const desglose = document.getElementById('ankiDesglose');
+  const btnDetalle = document.getElementById('btnVerDetalle');
   const btn = document.getElementById('btnRepasoAnki');
   const badge = document.getElementById('ankiBadgeAlDia');
-  if (!num || !btn || !badge) return;
+  if (!num || !etiqueta || !total || !desglose || !btnDetalle || !btn || !badge) return;
 
   const n = estado.cuotaDiaria;
   num.textContent = n;
   etiqueta.textContent = n === 1 ? 'tarjeta para hoy' : 'tarjetas para hoy';
   total.textContent = estado.totalMazo === 1
-    ? '1 pregunta en seguimiento'
-    : `${estado.totalMazo} preguntas en seguimiento`;
+    ? '1 en seguimiento'
+    : `${estado.totalMazo} en seguimiento`;
   desglose.textContent = estado.totalMazo
     ? `${estado.nuevas} nuevas · ${estado.aprendiendo} aprendiendo · ${estado.jovenes} jóvenes · ${estado.maduras} maduras`
     : '';
+  btnDetalle.hidden = estado.totalMazo === 0;
 
   btn.href = 'test.html?modo=repaso';
 
   if (estado.totalMazo === 0 || necesitaInicializarMazo()) {
     // Mazo sin crear: el primer repaso carga los tests de data/ y lo inicializa
     btn.textContent = 'Iniciar mazo Anki (cargar tests)';
-    btn.style.display = '';
-    badge.style.display = 'none';
+    btn.hidden = false;
+    badge.hidden = true;
   } else if (n > 0) {
     btn.textContent = `Repasar ${n} ${n === 1 ? 'tarjeta' : 'tarjetas'} hoy`;
-    btn.style.display = '';
-    badge.style.display = 'none';
+    btn.hidden = false;
+    badge.hidden = true;
   } else {
-    btn.style.display = 'none';
+    btn.hidden = true;
     badge.textContent = '¡Al día! 0 tarjetas pendientes';
-    badge.style.display = 'inline-block';
+    badge.hidden = false;
   }
 }
 
@@ -318,11 +306,23 @@ btnAbrirTemas.addEventListener('click', () => {
   if (!cargaTemasEnCurso || estadoTemas.textContent) renderTemas();
 });
 btnVolverPanel.addEventListener('click', () => cambiarVistaTemas(false));
+document.querySelectorAll('.practica-chip').forEach((chip) => {
+  chip.addEventListener('click', () => btnAbrirTemas.click());
+});
+
+const btnVerDetalle = document.getElementById('btnVerDetalle');
+const ankiDetalleWrap = document.getElementById('ankiDetalleWrap');
+btnVerDetalle.addEventListener('click', () => {
+  const expandido = btnVerDetalle.getAttribute('aria-expanded') !== 'true';
+  btnVerDetalle.setAttribute('aria-expanded', String(expandido));
+  btnVerDetalle.textContent = expandido ? 'Ocultar detalle' : 'Ver detalle';
+  ankiDetalleWrap.setAttribute('aria-hidden', String(!expandido));
+  ankiDetalleWrap.classList.toggle('abierto', expandido);
+});
 
 /* ================= INTERACCIÓN EDITOR FECHA EXAMEN ================= */
-const cardExamen = document.getElementById('cardExamenDGT');
 const editorInline = document.getElementById('examenEditorInline');
-const btnEditarFecha = document.getElementById('btnEditarFecha');
+const btnFechaExamen = document.getElementById('btnFechaExamen');
 const btnGuardarFecha = document.getElementById('btnGuardarFecha');
 const inputFechaExamen = document.getElementById('inputFechaExamen');
 
@@ -339,20 +339,15 @@ function toggleEditorFecha(forzarEstado) {
   if (abrir) {
     inputFechaExamen.value = obtenerFechaExamen();
     editorInline.classList.add('abierto');
-    btnEditarFecha.textContent = 'Cerrar';
+    btnFechaExamen.setAttribute('aria-expanded', 'true');
     setTimeout(() => inputFechaExamen.focus(), 30);
   } else {
     editorInline.classList.remove('abierto');
-    btnEditarFecha.textContent = 'Editar';
+    btnFechaExamen.setAttribute('aria-expanded', 'false');
   }
 }
 
-cardExamen.addEventListener('click', (e) => {
-  if (e.target.closest('#examenEditorInline') || e.target.closest('#btnEditarFecha')) return;
-  toggleEditorFecha();
-});
-
-btnEditarFecha.addEventListener('click', (e) => {
+btnFechaExamen.addEventListener('click', (e) => {
   e.stopPropagation();
   toggleEditorFecha();
 });

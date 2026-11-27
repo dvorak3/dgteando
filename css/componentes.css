@@ -353,26 +353,6 @@
   background-color: var(--bg-tarjeta);
 }
 
-/* Tarjeta 2: Racha de estudio */
-
-.widget-icon-fire {
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius-lg);
-  background-color: var(--aviso-fondo);
-  color: var(--acento);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.widget-icon-fire svg {
-  width: 19px;
-  height: 19px;
-  fill: currentColor;
-}
-
 /* ================= MODAL DE EVOLUCIÓN ================= */
 
 .modal-overlay {

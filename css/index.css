@@ -275,21 +275,12 @@ body {
   flex-direction: column;
   gap: 18px;
   position: sticky;
-  top: 20px;
+  top: 96px;
 }
 
 .widget-card {
   padding: 20px;
   transition: border-color 0.18s ease, box-shadow 0.18s ease;
-}
-
-/* Tarjeta 1: Contador Examen DGT */
-.card-examen {
-  cursor: pointer;
-}
-
-.card-examen:hover {
-  border-color: var(--borde-fuerte);
 }
 
 .widget-top {
@@ -306,56 +297,104 @@ body {
   gap: 10px;
 }
 
-.widget-label {
-  font-size: var(--text-2xs);
+.widget-title-hoy {
+  margin: 0;
+  font-size: var(--text-base);
   font-weight: var(--weight-bold);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--texto-secundario);
-}
-
-.examen-main {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.examen-dias-num {
-  font-size: var(--text-5xl);
-  font-weight: var(--weight-extrabold);
-  letter-spacing: -0.03em;
   color: var(--texto-principal);
-  line-height: 1;
 }
 
-.examen-dias-texto {
-  font-size: var(--text-md);
-  font-weight: var(--weight-semibold);
-  color: var(--texto-secundario);
-}
-
-.examen-estado-especial {
-  font-size: var(--text-xl);
-  font-weight: var(--weight-extrabold);
-  color: var(--primario);
-  line-height: 1.2;
-}
-
-.examen-fecha-sub {
-  margin-top: 8px;
+.widget-title-practica {
+  margin: 0;
   font-size: var(--text-sm);
-  font-weight: var(--weight-medium);
-  color: var(--texto-secundario);
+  font-weight: var(--weight-semibold);
+  color: var(--texto-principal);
+}
+
+.widget-card-hoy .widget-top {
+  margin-bottom: 10px;
+}
+
+.hoy-contexto {
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--texto-secundario);
+  font-size: var(--text-2xs);
+  white-space: nowrap;
+}
+
+.hoy-fecha {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--texto-secundario);
+  font-size: var(--text-2xs);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.hoy-fecha:hover,
+.hoy-fecha:focus-visible {
+  color: var(--texto-principal);
+}
+
+.hoy-fecha:focus-visible,
+.sidebar-widgets .btn:focus-visible {
+  outline: 2px solid var(--primario);
+  outline-offset: 2px;
+}
+
+.hoy-contexto-icono,
+.hoy-fecha-lapiz {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.hoy-fecha-lapiz {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.hoy-fecha:hover .hoy-fecha-lapiz,
+.hoy-fecha:focus-visible .hoy-fecha-lapiz {
+  opacity: 1;
+}
+
+.hoy-contexto-racha {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: var(--texto-secundario);
+  font-size: var(--text-2xs);
+}
+
+.hoy-contexto-racha svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+.hoy-separador {
+  margin: 12px 0;
+  border-top: 1px solid var(--borde);
 }
 
 .examen-editor-inline {
   display: none;
-  margin-top: 14px;
-  padding-top: 14px;
+  margin-top: 12px;
+  padding-top: 12px;
   border-top: 1px solid var(--borde);
   gap: 8px;
   align-items: center;
@@ -365,38 +404,15 @@ body {
   display: flex;
 }
 
-.racha-main {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-}
-
-.racha-num {
-  font-size: var(--text-4xl);
-  font-weight: var(--weight-extrabold);
-  letter-spacing: -0.03em;
-  color: var(--texto-principal);
-  line-height: 1;
-}
-
-.racha-mensaje {
-  margin-top: 8px;
-  font-size: var(--text-sm);
-  line-height: 1.4;
-  color: var(--texto-secundario);
-  font-weight: var(--weight-medium);
-}
-
-/* Tarjeta 3: Repaso Inteligente (Anki) */
 .anki-main {
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
 }
 
 .anki-num {
-  font-size: var(--text-4xl);
+  font-size: var(--text-5xl);
   font-weight: var(--weight-extrabold);
   letter-spacing: -0.03em;
   color: var(--texto-principal);
@@ -404,8 +420,8 @@ body {
 }
 
 .anki-texto {
-  font-size: var(--text-md);
-  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
   color: var(--texto-secundario);
 }
 
@@ -417,43 +433,123 @@ body {
   font-weight: var(--weight-medium);
 }
 
+.anki-seguimiento {
+  margin-top: 4px;
+  font-size: var(--text-xs);
+}
+
+.anki-detalle-toggle {
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--texto-secundario);
+  font-size: var(--text-2xs);
+  cursor: pointer;
+}
+
+.anki-detalle-toggle:hover {
+  text-decoration: underline;
+}
+
+.anki-detalle-toggle:focus-visible {
+  outline: 2px solid var(--primario);
+  outline-offset: 2px;
+}
+
+.anki-detalle-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows var(--duracion-vista) var(--ease),
+    opacity var(--duracion-vista) var(--ease);
+}
+
+.anki-detalle-wrap.abierto {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.anki-desglose {
+  min-height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding-top: var(--espaciado-tema-detalle);
+  color: var(--texto-secundario);
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-medium);
+  line-height: 1.4;
+}
+
+.btn-repaso-anki {
+  margin-top: 12px;
+}
+
+#btnRepasoAnki[hidden],
+#btnVerDetalle[hidden],
+#ankiBadgeAlDia[hidden] {
+  display: none;
+}
+
+.anki-al-dia {
+  margin: 12px 0 0;
+  color: var(--texto-secundario);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  text-align: center;
+}
+
+.widget-card-temas .widget-top {
+  margin-bottom: 8px;
+}
+
+.practica-descripcion {
+  margin-top: 0;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+}
+
+.practica-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.practica-chip {
+  white-space: nowrap;
+}
+
+.btn-explorar-temas {
+  border-width: 1.5px;
+}
+
+.sidebar-widgets .btn:focus-visible {
+  border-radius: var(--radius-lg);
+}
+
 /* ================= RESPONSIVE (< 860px) ================= */
 @media (max-width: 860px) {
   .dashboard-grid {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
+  }
 
-/* Colocar widgets arriba en móvil */
+  /* Colocar las dos tarjetas en vertical sobre la tabla */
   .sidebar-widgets {
-      order: -1;
-      position: static;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-  .widget-card-anki {
-      grid-column: 1 / -1;
-    }
+    order: -1;
+    position: static;
+    gap: 12px;
+  }
 
   .widget-card {
-      padding: 16px;
-    }
-
-  .examen-dias-num,
-  .racha-num,
-  .anki-num {
-      font-size: var(--text-3xl);
-    }
+    padding: 16px;
+  }
 }
 
 @media (max-width: 540px) {
   body {
       padding: 16px 12px 36px;
-    }
-
-  .sidebar-widgets {
-      grid-template-columns: 1fr;
     }
 
   .card-tests {
@@ -609,15 +705,6 @@ body {
     }
 }
 
-.racha-badge-hoy {
-  margin-top: 10px;
-  line-height: normal;
-}
-
-.btn-repaso-anki {
-  margin-top: 14px;
-}
-
 /* Transición entre el Dashboard y el catálogo de temas */
 .dashboard-grid,
 .vista-temas {
@@ -637,6 +724,12 @@ body {
 .dashboard-grid[hidden],
 .vista-temas[hidden] {
   display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anki-detalle-wrap {
+    transition: none;
+  }
 }
 
 .vista-temas {
