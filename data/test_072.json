@@ -161,8 +161,9 @@
         "No, debería circular por la derecha.",
         "Sí."
       ],
-      "correcta": 0,
-      "imagen": "../img/test_072_p18.jpg"
+      "correcta": 1,
+      "imagen": "../img/test_072_p18.jpg",
+      "corregida": true
     },
     {
       "texto": "Los sistemas de seguridad pasiva incluyen...",
