@@ -1,14 +1,27 @@
 /* =====================================================================
  *  dgt-eando · categorías DGT
  *  Clasificación automática de preguntas por palabras clave.
- *  Script clásico (sin módulos): expone sus funciones y constantes en el ámbito global.
- *  Cargar ANTES que js/storage.js.
+ *  Módulo ES: sus funciones y constantes se importan de forma explícita.
  * ===================================================================== */
 
+/**
+ * @module
+ * @remarks
+ * Clasifica preguntas de conducción en categorías mediante
+ * patrones de palabras clave normalizados.
+ * Script clásico: publica el catálogo y sus funciones en el ámbito global
+ * y debe cargarse antes de `js/storage.js`.
+ * @typedef {Object} CategoriaDGT
+ * @property {string} nombre Nombre visible de la categoría.
+ * @property {RegExp[]} patrones Patrones que permiten reconocerla en un texto.
+ */
+
+/** @type {string} Categoría devuelta cuando no hay coincidencias. */
 const CATEGORIA_POR_DEFECTO = "Otras normas";
 
 // El orden importa: en caso de empate gana la categoría que aparece antes.
 // Los patrones se aplican sobre texto en minúsculas y SIN tildes ni ñ (ver normalizarTextoDGT).
+/** @type {CategoriaDGT[]} Catálogo de categorías ordenado por prioridad. */
 const CATEGORIAS_DGT = [
   { nombre: "Señales y marcas viales", patrones: [
     /\bsenal(es|izacion|izada|izadas)?\b/, /\bmarcas? viales?\b/, /\blineas? (blanca|amarilla|continua|discontinua|longitudinal|transversal|de detencion)/,
@@ -59,6 +72,12 @@ const CATEGORIAS_DGT = [
   ]}
 ];
 
+/**
+ * Convierte un valor a texto en minúsculas, elimina diacríticos y normaliza
+ * espacios para compararlo con los patrones de categorías.
+ * @param {*} texto Valor que se desea normalizar.
+ * @returns {string} Texto normalizado.
+ */
 function normalizarTextoDGT(texto) {
   return String(texto === null || texto === undefined ? "" : texto)
     .toLowerCase()
@@ -72,6 +91,15 @@ function normalizarTextoDGT(texto) {
 //  - categoriaExplicita: si viene informada, se devuelve tal cual.
 //  - si no, analiza el enunciado (peso 3) y, si se pasan, las opciones (peso 1).
 // Devuelve siempre un texto: la categoría con más coincidencias o CATEGORIA_POR_DEFECTO si no hay ninguna.
+/**
+ * Asigna una categoría a una pregunta según su categoría explícita o sus textos.
+ * El enunciado tiene más peso que las opciones; los empates respetan el orden
+ * del catálogo.
+ * @param {*} enunciado Texto del enunciado de la pregunta.
+ * @param {string|null} [categoriaExplicita=null] Categoría ya asignada, si existe.
+ * @param {Array<*>|null} [opciones=null] Opciones de respuesta de la pregunta.
+ * @returns {string} Categoría seleccionada o la categoría predeterminada.
+ */
 function clasificarCategoriaDGT(enunciado, categoriaExplicita = null, opciones = null) {
   // Si la pregunta ya trae su categoría (campo "categoria" del JSON) se respeta tal cual
   if (typeof categoriaExplicita === "string" && categoriaExplicita.trim()) return categoriaExplicita.trim();
@@ -96,6 +124,18 @@ function clasificarCategoriaDGT(enunciado, categoriaExplicita = null, opciones =
 }
 
 // Catálogo de categorías disponibles (en orden de prioridad) + la de por defecto
+/**
+ * Devuelve los nombres de las categorías disponibles en orden de prioridad.
+ * @returns {string[]} Nombres del catálogo seguidos de la categoría predeterminada.
+ */
 function obtenerCategoriasDGT() {
   return [...CATEGORIAS_DGT.map((c) => c.nombre), CATEGORIA_POR_DEFECTO];
 }
+
+export {
+  CATEGORIA_POR_DEFECTO,
+  CATEGORIAS_DGT,
+  normalizarTextoDGT,
+  clasificarCategoriaDGT,
+  obtenerCategoriasDGT
+};

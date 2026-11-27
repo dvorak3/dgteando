@@ -37,11 +37,11 @@
     <!-- Modos Anki (repaso/falladas): el motor pinta aquí la barra superior y las tarjetas -->
     <div id="repasoContainer" class="repaso-app" style="display:none;"></div>
 
-    <form id="formTest" onsubmit="return false;">
+    <form id="formTest">
       <div id="preguntasContainer"></div>
 
       <div class="corregir-box">
-        <button type="button" class="btn btn--primario btn--lg" id="btnCorregir" onclick="corregirTest()">Corregir el test</button>
+        <button type="button" class="btn btn--primario btn--lg" id="btnCorregir">Corregir el test</button>
         <a href="index.html" class="btn btn--secundario btn--lg" id="btnVolver">Volver a la lista</a>
       </div>
 
@@ -125,8 +125,6 @@
   <noscript>Este test necesita JavaScript. <a href="index.html">Volver a la lista</a></noscript>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/categorias.js?v=1"></script>
-  <script src="js/storage.js?v=17"></script>
-  <script src="js/test_engine.js?v=21"></script>
+  <script type="module" src="js/test_engine.js?v=22"></script>
 </body>
 </html>

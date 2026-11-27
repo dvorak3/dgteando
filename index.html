@@ -36,7 +36,7 @@
       </div>
 
       <div class="barra-json">
-        <button type="button" class="btn btn--secundario btn--pastilla" onclick="exportarJSON()">
+        <button type="button" class="btn btn--secundario btn--pastilla" id="btnExportarJSON">
           <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Guardar progreso (.json)
         </button>
@@ -58,12 +58,12 @@
           <div class="modo-selector">
             <span class="modo-label-texto">Test modo:</span>
             <label class="radio-label">
-              <input type="radio" name="modo" value="estudio" onchange="actualizarEnlaces()">
+              <input type="radio" name="modo" value="estudio">
               <span class="radio-custom"></span>
               <span>estudio</span>
             </label>
             <label class="radio-label">
-              <input type="radio" name="modo" value="examen" checked onchange="actualizarEnlaces()">
+              <input type="radio" name="modo" value="examen" checked>
               <span class="radio-custom"></span>
               <span>examen</span>
             </label>
@@ -85,7 +85,7 @@
         </div>
 
         <div class="barra-borrar">
-          <button type="button" class="btn btn--peligro" onclick="confirmarBorrado()">Borrar resultados</button>
+          <button type="button" class="btn btn--peligro" id="btnBorrarResultados">Borrar resultados</button>
         </div>
       </section>
 
@@ -293,9 +293,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="js/categorias.js?v=1"></script>
-  <script src="js/storage.js?v=16"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/index.js?v=6"></script>
+  <script type="module" src="js/index.js?v=7"></script>
 </body>
 </html>

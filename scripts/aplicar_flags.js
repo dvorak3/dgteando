@@ -1,9 +1,69 @@
 #!/usr/bin/env node
+/**
+ * @module
+ * @remarks
+ * Aplica correcciones de Supabase a los JSON de tests y sus imágenes.
+ *
+ * Permite procesar las correcciones pendientes, aplazar el marcado de IDs o
+ * marcar posteriormente los IDs guardados en un archivo.
+ */
 'use strict';
 
-const fs = require('node:fs/promises');
-const path = require('node:path');
-const crypto = require('node:crypto');
+/**
+ * Fila de corrección pendiente de la tabla de flags.
+ * @typedef {Object} FlagPregunta
+ * @property {string} id Identificador de la fila.
+ * @property {string} pregunta_id Identificador de la pregunta.
+ * @property {number} test_id Identificador del test.
+ * @property {number} pregunta_idx Índice de la pregunta en el JSON.
+ * @property {string} enunciado Texto corregido de la pregunta.
+ * @property {string[]} opciones Opciones corregidas.
+ * @property {number} correcta Índice de la respuesta correcta.
+ * @property {string} [explicacion] Explicación opcional de la respuesta.
+ * @property {string} [nota] Nota opcional asociada a la corrección.
+ * @property {boolean} [es_nueva] Indica si la fila añade una pregunta nueva.
+ * @property {string} [imagen_storage_path] Ruta de la imagen en Storage.
+ * @property {string} updated_at Fecha de última actualización.
+ */
+
+/**
+ * Pregunta serializada en un archivo de test.
+ * @typedef {Object} PreguntaJSON
+ * @property {string} [id] Identificador de la pregunta.
+ * @property {string} [texto] Enunciado de la pregunta.
+ * @property {string[]} [opciones] Opciones de respuesta.
+ * @property {number} [correcta] Índice de la respuesta correcta.
+ * @property {string} [explicacion] Explicación de la respuesta.
+ * @property {string} [imagen] Ruta relativa a la imagen de la pregunta.
+ * @property {boolean} [corregida] Indica si la pregunta ha sido corregida.
+ * @property {*} [correcta_detectada] Respuesta detectada previamente.
+ */
+
+/**
+ * Estructura admitida para el JSON de un test.
+ * @typedef {PreguntaJSON[]|{preguntas: PreguntaJSON[], respuestas_verificadas?: boolean}} TestJSON
+ */
+
+/**
+ * Imagen obtenida del almacenamiento de Supabase.
+ * @typedef {Object} ImagenDescargada
+ * @property {string} tipo Tipo MIME de la imagen.
+ * @property {Buffer} contenido Contenido binario de la imagen.
+ */
+
+/**
+ * Corrección ganadora para una pregunta y los IDs de las filas agrupadas.
+ * @typedef {Object} CorreccionAgrupada
+ * @property {FlagPregunta} ganadora Corrección más reciente.
+ * @property {string[]} ids IDs de todas las filas de esa pregunta.
+ */
+
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const TABLA = 'flags_preguntas';
 const BUCKET_IMAGENES = 'preguntas-pendientes';
@@ -55,6 +115,13 @@ const cabeceras = {
   'Content-Type': 'application/json'
 };
 
+/**
+ * Envía una solicitud a la API REST de Supabase.
+ * @param {string} ruta Ruta relativa del recurso REST.
+ * @param {RequestInit} [opciones={}] Opciones de la solicitud HTTP.
+ * @returns {Promise<Response>} Respuesta HTTP de Supabase.
+ * @throws {Error} Si la solicitud falla o Supabase responde con un estado no satisfactorio.
+ */
 async function pedir(ruta, opciones = {}) {
   const respuesta = await fetch(`${SUPABASE_URL}/rest/v1/${ruta}`, {
     ...opciones,
@@ -66,6 +133,11 @@ async function pedir(ruta, opciones = {}) {
   return respuesta;
 }
 
+/**
+ * Descarga todas las correcciones todavía no aplicadas.
+ * @returns {Promise<FlagPregunta[]>} Filas pendientes ordenadas por fecha de actualización.
+ * @throws {Error} Si falla una solicitud o la respuesta no puede interpretarse como JSON.
+ */
 async function descargarPendientes() {
   const filas = [];
   for (let offset = 0; ; offset += TAMANO_PAGINA) {
@@ -82,10 +154,24 @@ async function descargarPendientes() {
   }
 }
 
+/**
+ * Determina si la fila representa una pregunta nueva al final de la lista.
+ * @param {FlagPregunta} fila Corrección que se evalúa.
+ * @param {PreguntaJSON|undefined|null} pregunta Pregunta que ocupa el índice indicado.
+ * @param {number} cantidadPreguntas Número actual de preguntas del test.
+ * @returns {boolean} {@code true} si la fila corresponde a una pregunta nueva.
+ */
 function esPreguntaNueva(fila, pregunta, cantidadPreguntas) {
   return fila.es_nueva === true || (!pregunta && fila.pregunta_idx === cantidadPreguntas);
 }
 
+/**
+ * Valida una corrección y su destino, incluyendo el caso de preguntas nuevas.
+ * @param {FlagPregunta} fila Corrección que se va a validar.
+ * @param {PreguntaJSON|undefined|null} pregunta Pregunta en el índice indicado, si existe.
+ * @param {number} cantidadPreguntas Número actual de preguntas del test.
+ * @returns {string|null} Motivo de rechazo, o {@code null} si la fila es válida.
+ */
 function validar(fila, pregunta, cantidadPreguntas) {
   if (esPreguntaNueva(fila, pregunta, cantidadPreguntas)) {
     const yaAplicada = pregunta && String(pregunta.id) === String(fila.pregunta_id);
@@ -112,12 +198,26 @@ function validar(fila, pregunta, cantidadPreguntas) {
   return null;
 }
 
+/**
+ * Genera un nombre de archivo estable para la imagen de una pregunta.
+ * @param {number|string} testId Identificador del test.
+ * @param {number} preguntaIdx Índice de la pregunta.
+ * @param {string} storagePath Ruta de origen de la imagen en Storage.
+ * @param {string} tipo Tipo MIME de la imagen.
+ * @returns {string} Nombre de archivo con extensión y hash de la ruta.
+ */
 function nombreImagen(testId, preguntaIdx, storagePath, tipo) {
   const hash = crypto.createHash('sha256').update(storagePath).digest('hex').slice(0, 12);
   const extension = tipo === 'image/jpeg' ? 'jpg' : tipo.split('/')[1];
   return `test_${String(testId).padStart(3, '0')}_pregunta_${preguntaIdx + 1}_${hash}.${extension}`;
 }
 
+/**
+ * Descarga y valida una imagen almacenada en Supabase.
+ * @param {string} storagePath Ruta relativa de la imagen en Storage.
+ * @returns {Promise<ImagenDescargada>} Tipo MIME y contenido binario de la imagen.
+ * @throws {Error} Si la ruta, respuesta, tipo MIME o tamaño de la imagen no es válido.
+ */
 async function descargarImagen(storagePath) {
   const segmentos = storagePath.split('/');
   if (!storagePath || segmentos.some((segmento) => !segmento || segmento === '.' || segmento === '..')) {
@@ -140,6 +240,13 @@ async function descargarImagen(storagePath) {
   return { tipo, contenido };
 }
 
+/**
+ * Escribe una imagen mediante un archivo temporal y renombrado atómico.
+ * @param {string} destino Ruta final de la imagen.
+ * @param {Buffer} contenido Datos binarios que se escribirán.
+ * @returns {Promise<void>} Se resuelve cuando la imagen queda guardada.
+ * @throws {Error} Si falla la creación del directorio, escritura o renombrado.
+ */
 async function escribirImagen(destino, contenido) {
   await fs.mkdir(path.dirname(destino), { recursive: true });
   const temporal = `${destino}.tmp-${process.pid}`;
@@ -152,6 +259,12 @@ async function escribirImagen(destino, contenido) {
   }
 }
 
+/**
+ * Busca el archivo JSON de un test, probando su identificador con y sin relleno.
+ * @param {number|string} testId Identificador del test.
+ * @returns {Promise<string|null>} Ruta encontrada o {@code null} si no existe.
+ * @throws {Error} Si ocurre un error de acceso distinto a que el archivo no exista.
+ */
 async function localizarJSON(testId) {
   for (const nombre of new Set([String(testId).padStart(3, '0'), String(testId)])) {
     const ruta = path.join(DIRECTORIO_DATA, `test_${nombre}.json`);
@@ -165,6 +278,14 @@ async function localizarJSON(testId) {
   return null;
 }
 
+/**
+ * Escribe el contenido en un temporal y lo renombra sobre el archivo de destino.
+ * El temporal se elimina si la escritura o el renombrado falla.
+ * @param {string} ruta Ruta del archivo que se actualizará.
+ * @param {string} texto Contenido que se escribirá en UTF-8.
+ * @returns {Promise<void>} Se resuelve cuando el reemplazo termina.
+ * @throws {Error} Si falla la escritura o el renombrado.
+ */
 async function escribirAtomico(ruta, texto) {
   const temporal = `${ruta}.tmp-${process.pid}`;
   try {
@@ -176,6 +297,11 @@ async function escribirAtomico(ruta, texto) {
   }
 }
 
+/**
+ * Agrupa filas por pregunta y selecciona la corrección más reciente de cada grupo.
+ * @param {FlagPregunta[]} filas Filas de correcciones pendientes.
+ * @returns {CorreccionAgrupada[]} Correcciones ganadoras junto con todos sus IDs.
+ */
 function elegirUltimaCorreccion(filas) {
   const porPregunta = new Map();
   for (const fila of filas) {
@@ -188,6 +314,12 @@ function elegirUltimaCorreccion(filas) {
   });
 }
 
+/**
+ * Marca como aplicadas las filas indicadas, en lotes configurados de IDs.
+ * @param {string[]} ids Identificadores de las filas que se actualizarán.
+ * @returns {Promise<void>} Se resuelve cuando todos los lotes se han enviado.
+ * @throws {Error} Si falla alguna solicitud de actualización.
+ */
 async function marcarAplicadas(ids) {
   for (let inicio = 0; inicio < ids.length; inicio += TAMANO_LOTE_PATCH) {
     const lote = ids.slice(inicio, inicio + TAMANO_LOTE_PATCH);
@@ -203,6 +335,11 @@ async function marcarAplicadas(ids) {
   }
 }
 
+/**
+ * Lee el archivo de IDs aplazados, los marca en Supabase y elimina el archivo.
+ * @returns {Promise<void>} Se resuelve al procesar el archivo, o si no existe.
+ * @throws {Error} Si el contenido no es una lista de UUIDs válida o falla una operación.
+ */
 async function marcarDesdeArchivo() {
   let ids;
   try {
@@ -222,6 +359,11 @@ async function marcarDesdeArchivo() {
   console.log(`Marcadas ${ids.length} fila(s) como aplicadas en Supabase.`);
 }
 
+/**
+ * Descarga y aplica las correcciones pendientes a JSON e imágenes de tests.
+ * @returns {Promise<void>} Se resuelve al finalizar el procesamiento.
+ * @throws {Error} Si falla una operación de red, lectura o escritura no recuperable.
+ */
 async function aplicarPendientes() {
   const filas = await descargarPendientes();
   if (!filas.length) {
@@ -337,6 +479,11 @@ async function aplicarPendientes() {
   console.log(`Resumen: ${aplicadas} aplicadas, ${omitidas} omitidas.`);
 }
 
+/**
+ * Ejecuta el modo de marcado de IDs o el procesamiento normal de correcciones.
+ * @returns {Promise<void>} Se resuelve cuando termina el modo seleccionado.
+ * @throws {Error} Si falla la operación delegada.
+ */
 async function main() {
   if (MODO_MARCAR) {
     await marcarDesdeArchivo();

@@ -1,17 +1,81 @@
+/**
+ * @module
+ * @remarks
+ * Renderiza el panel principal de tests y las interfaces de seguimiento del examen y configuración de repaso Anki.
+ * Importa explícitamente sus dependencias de storage.js.
+ *
+ * @typedef {Object} ResumenRachaEstudio
+ * @property {number} dias Días consecutivos de actividad.
+ * @property {boolean} practicoHoy Indica si se ha practicado durante el día actual.
+ * @typedef {Object} ResumenColaAnki
+ * @property {number} cuotaDiaria Tarjetas pendientes para la sesión de hoy.
+ * @property {number} totalMazo Total de preguntas incluidas en el mazo.
+ * @property {number} nuevas Tarjetas nuevas del mazo.
+ * @property {number} aprendiendo Tarjetas en fase de aprendizaje.
+ * @property {number} jovenes Tarjetas con intervalos de repaso cortos.
+ * @property {number} maduras Tarjetas con intervalos de repaso largos.
+ * @typedef {Object} HistorialIntentoTest
+ * @property {number} [intento] Número de intento registrado.
+ * @property {string} [fecha] Fecha legible del intento.
+ * @property {number|string} fallos Número de fallos del intento.
+ * @typedef {Object} ConfiguracionAnkiFormulario
+ * @property {string} modoLimite Modo de cálculo del límite diario.
+ * @property {number} limiteDiario Máximo de tarjetas diarias.
+ * @property {number} limiteNuevas Máximo de tarjetas nuevas; cero significa sin límite.
+ * @property {string} orden Criterio de orden de las tarjetas.
+ * @property {boolean} barajarOpciones Indica si se barajan las opciones.
+ * @property {boolean} limiteEstricto Indica si se aplica estrictamente el límite diario.
+ */
+
+import {
+  borrarProgreso,
+  calcularRachaEstudio,
+  exportarJSON,
+  guardarConfigAnki,
+  guardarFechaExamen,
+  importarJSON,
+  necesitaInicializarMazo,
+  obtenerColaRepasoHoy,
+  obtenerConfigAnki,
+  obtenerFechaExamen,
+  obtenerHistorialTest,
+  obtenerProgreso,
+  reiniciarProgresoAnki,
+  sincronizarDesdeNube,
+  sincronizarNuevosTestsAlMazo,
+  sincronizarTestsSiToca
+} from './storage.js';
+
+/** @type {number} Número total de tests mostrados en el panel. */
 const TOTAL_TESTS = 90;
+/** @type {Chart|null} Instancia activa de la gráfica de evolución de fallos. */
 let chartInstancia = null;
 
+/**
+ * Formatea el número de veces que se ha realizado un test.
+ * @param {number} n Número de intentos.
+ * @returns {string} Número con su unidad, o un guion si no hay intentos.
+ */
 function formatearVeces(n) {
   if (!n || n <= 0) return '-';
   return n === 1 ? '1 vez' : `${n} veces`;
 }
 
+/**
+ * Lee el modo seleccionado en el formulario de la página.
+ * @returns {string} Modo seleccionado o `examen` si no hay ninguna opción marcada.
+ */
 function obtenerModoSeleccionado() {
   const sel = document.querySelector('input[name="modo"]:checked');
   return sel ? sel.value : 'examen';
 }
 
 /* ================= RENDER DE WIDGETS LATERALES ================= */
+/**
+ * Convierte una fecha ISO `AAAA-MM-DD` a una fecha abreviada en español.
+ * @param {string} fechaISO Fecha con formato ISO.
+ * @returns {string} Fecha formateada; si el formato no es válido, devuelve la entrada.
+ */
 function formatearFechaEspanol(fechaISO) {
   const partes = fechaISO.split('-');
   if (partes.length !== 3) return fechaISO;
@@ -22,6 +86,10 @@ function formatearFechaEspanol(fechaISO) {
   return `${dia} ${meses[mesIdx] || partes[1]} ${anio}`;
 }
 
+/**
+ * Actualiza el contador y la fecha del examen en el panel.
+ * @returns {void}
+ */
 function renderContadorExamen() {
   const fechaISO = obtenerFechaExamen();
   const inputFecha = document.getElementById('inputFechaExamen');
@@ -57,7 +125,12 @@ function renderContadorExamen() {
   subFecha.textContent = formatearFechaEspanol(fechaISO);
 }
 
+/**
+ * Actualiza el indicador de días consecutivos de estudio.
+ * @returns {void}
+ */
 function renderRachaEstudio() {
+  /** @type {ResumenRachaEstudio} */
   const { dias, practicoHoy } = calcularRachaEstudio();
   const rachaTexto = document.getElementById('rachaDiasTexto');
   const rachaMensaje = document.getElementById('rachaMensaje');
@@ -81,9 +154,15 @@ function renderRachaEstudio() {
 }
 
 /* ================= REPASO INTELIGENTE (ANKI) ================= */
+/**
+ * Actualiza el resumen del mazo Anki y el acceso al repaso de hoy.
+ * No realiza cambios si el almacenamiento Anki no está disponible en la página.
+ * @returns {void}
+ */
 function renderAnki() {
   if (typeof obtenerColaRepasoHoy !== 'function') return;
 
+  /** @type {ResumenColaAnki} */
   const estado = obtenerColaRepasoHoy();
   const num = document.getElementById('ankiCuotaNum');
   const etiqueta = document.getElementById('ankiCuotaEtiqueta');
@@ -121,6 +200,10 @@ function renderAnki() {
   }
 }
 
+/**
+ * Renderiza todos los componentes principales del panel.
+ * @returns {void}
+ */
 function renderDashboard() {
   renderTabla();
   renderContadorExamen();
@@ -135,6 +218,11 @@ const btnEditarFecha = document.getElementById('btnEditarFecha');
 const btnGuardarFecha = document.getElementById('btnGuardarFecha');
 const inputFechaExamen = document.getElementById('inputFechaExamen');
 
+/**
+ * Abre o cierra el editor de la fecha del examen.
+ * @param {boolean} [forzarEstado] Si se proporciona, fuerza la apertura (`true`) o el cierre (`false`).
+ * @returns {void}
+ */
 function toggleEditorFecha(forzarEstado) {
   const abrir = typeof forzarEstado === 'boolean'
     ? forzarEstado
@@ -171,6 +259,10 @@ btnGuardarFecha.addEventListener('click', async (e) => {
 });
 
 /* ================= RENDER DE LA TABLA DE TESTS ================= */
+/**
+ * Construye la lista de tests con su estado, resultados y enlace al modo actual.
+ * @returns {void}
+ */
 function renderTabla() {
   const progreso = obtenerProgreso();
   const modo = obtenerModoSeleccionado();
@@ -232,6 +324,10 @@ function renderTabla() {
   }
 }
 
+/**
+ * Actualiza los enlaces de cada test para que reflejen el modo seleccionado.
+ * @returns {void}
+ */
 function actualizarEnlaces() {
   const modo = obtenerModoSeleccionado();
   document.querySelectorAll('.fila-test').forEach(a => {
@@ -240,8 +336,14 @@ function actualizarEnlaces() {
 }
 
 /* ================= MODAL Y CHART.JS ================= */
+/** @type {Object} Plugin que dibuja el umbral de aprobado. */
 const lineaLimitePlugin = {
   id: 'lineaLimiteAprobado',
+  /**
+   * Dibuja en la gráfica la línea horizontal que marca el máximo de fallos aprobado.
+   * @param {import('chart.js').Chart} chart Instancia de Chart.js que se está dibujando.
+   * @returns {void}
+   */
   beforeDatasetsDraw(chart) {
     const { ctx, chartArea: { left, right }, scales: { y } } = chart;
     if (!y) return;
@@ -259,8 +361,14 @@ const lineaLimitePlugin = {
   }
 };
 
+/**
+ * Abre la gráfica de evolución de fallos de un test.
+ * @param {string} numStr Número de test con el formato usado en sus claves de progreso.
+ * @returns {void}
+ */
 function abrirGraficaTest(numStr) {
   const clave = `test_${numStr}`;
+  /** @type {HistorialIntentoTest[]} */
   const historial = typeof obtenerHistorialTest === 'function' ? obtenerHistorialTest(clave) : [];
 
   document.getElementById('modalTitulo').textContent = `Evolución Test ${numStr}`;
@@ -328,9 +436,19 @@ function abrirGraficaTest(numStr) {
           cornerRadius: 6,
           displayColors: true,
           callbacks: {
+            /**
+             * Obtiene el título del tooltip a partir de la etiqueta del punto.
+             * @param {Array<{label: string}>} context Elementos de contexto del tooltip.
+             * @returns {string} Etiqueta del punto seleccionado.
+             */
             title(context) {
               return context[0].label;
             },
+            /**
+             * Describe los fallos y el resultado del punto del tooltip.
+             * @param {{parsed: {y: number}}} context Contexto del punto del tooltip.
+             * @returns {string} Texto con el número de fallos y el estado del test.
+             */
             label(context) {
               const val = context.parsed.y;
               const estado = val <= 3 ? 'Aprobado' : 'Suspenso';
@@ -370,6 +488,10 @@ function abrirGraficaTest(numStr) {
   });
 }
 
+/**
+ * Cierra el modal de evolución de la gráfica.
+ * @returns {void}
+ */
 function cerrarModalGrafica() {
   document.getElementById('modalGrafica').classList.remove('activo');
 }
@@ -407,19 +529,29 @@ const btnAnkiCancelar = document.getElementById('btnAnkiCancelar');
 const btnAnkiSync = document.getElementById('btnAnkiSync');
 const btnAnkiReset = document.getElementById('btnAnkiReset');
 
+/** @type {Object<string, string>} Textos de ayuda para los modos de límite Anki. */
 const AYUDA_MODO_ANKI = {
   auto: 'Reparte el mazo para llegar al examen con todo repasado.',
   personalizado: 'Fijas tú cuántas tarjetas quieres cada día.',
   ilimitado: 'Hoy entran todas las tarjetas vencidas y todas las nuevas (salvo el tope de nuevas).'
 };
 
+/** @type {boolean} Evita solapar o cerrar acciones de mantenimiento en curso. */
 let ankiOcupado = false; // evita cerrar/lanzar acciones solapadas mientras se guarda o se mantiene el mazo
 
+/**
+ * Lee el modo de límite Anki seleccionado.
+ * @returns {string} Modo marcado o `auto` si no hay selección.
+ */
 function modoAnkiSeleccionado() {
   const sel = document.querySelector('input[name="ankiModoLimite"]:checked');
   return sel ? sel.value : 'auto';
 }
 
+/**
+ * Sincroniza los campos visibles y habilitados con el modo Anki seleccionado.
+ * @returns {void}
+ */
 function actualizarCamposAnki() {
   const modo = modoAnkiSeleccionado();
   ankiCampoPersonalizado.hidden = modo !== 'personalizado';
@@ -427,11 +559,21 @@ function actualizarCamposAnki() {
   ankiInputNuevas.disabled = ankiChkSinLimiteNuevas.checked;
 }
 
+/**
+ * Muestra un mensaje de resultado en el panel de mantenimiento del mazo.
+ * @param {string} texto Texto del mensaje.
+ * @param {string} [tipo] Clase de estado opcional, por ejemplo `ok` o `error`.
+ * @returns {void}
+ */
 function mostrarMensajeMant(texto, tipo) {
   ankiMantMsg.textContent = texto || '';
   ankiMantMsg.className = 'anki-mant-msg' + (tipo ? ` ${tipo}` : '');
 }
 
+/**
+ * Carga en el formulario los valores de la configuración Anki guardada.
+ * @returns {void}
+ */
 function rellenarFormularioAnki() {
   const cfg = obtenerConfigAnki();
   ankiRadiosModo.forEach(r => { r.checked = r.value === cfg.modoLimite; });
@@ -448,6 +590,10 @@ function rellenarFormularioAnki() {
   actualizarCamposAnki();
 }
 
+/**
+ * Prepara y muestra el modal de configuración Anki.
+ * @returns {void}
+ */
 function abrirModalAnki() {
   rellenarFormularioAnki();
   modalAnki.classList.add('activo');
@@ -457,18 +603,33 @@ function abrirModalAnki() {
   }, 30);
 }
 
+/**
+ * Cierra el modal de configuración si no hay una operación en curso.
+ * @returns {void}
+ */
 function cerrarModalAnki() {
   if (ankiOcupado) return;
   modalAnki.classList.remove('activo');
 }
 
+/**
+ * Valida y convierte un valor en un entero positivo dentro del rango admitido.
+ * @param {string|number} valor Valor que se desea convertir.
+ * @returns {number|null} Entero entre 1 y 999, o `null` si no es válido.
+ */
 function enteroPositivo(valor) {
   const n = Number(valor);
   return Number.isInteger(n) && n >= 1 && n <= 999 ? n : null;
 }
 
+/**
+ * Valida y guarda los cambios del formulario de configuración Anki.
+ * Mantiene abierto el modal si la validación o la sincronización no se completan.
+ * @returns {Promise<void>}
+ */
 async function guardarCambiosAnki() {
   if (ankiOcupado) return;
+  /** @type {ConfiguracionAnkiFormulario} */
   const previa = obtenerConfigAnki();
   const modo = modoAnkiSeleccionado();
   ankiInputLimiteDiario.classList.remove('invalido');
@@ -501,6 +662,7 @@ async function guardarCambiosAnki() {
     limiteNuevas = n;
   }
 
+  /** @type {ConfiguracionAnkiFormulario} */
   const nuevaConfig = {
     modoLimite: modo,
     limiteDiario,
@@ -533,6 +695,10 @@ async function guardarCambiosAnki() {
   cerrarModalAnki();
 }
 
+/**
+ * Busca tests nuevos y añade sus preguntas al mazo Anki.
+ * @returns {Promise<void>}
+ */
 async function buscarNuevosTestsAnki() {
   if (ankiOcupado) return;
   ankiOcupado = true;
@@ -565,6 +731,10 @@ async function buscarNuevosTestsAnki() {
   ankiOcupado = false;
 }
 
+/**
+ * Solicita confirmación y reinicia el progreso de las tarjetas Anki.
+ * @returns {Promise<void>}
+ */
 async function reiniciarAnki() {
   if (ankiOcupado) return;
   if (!confirm('¿Seguro que quieres reiniciar TODO el progreso de Anki?\n\nSe borrará el estado de las tarjetas (fallos, intervalos y madurez) y el mazo volverá a empezar con todas las preguntas como nuevas. Tus resultados de tests y tu configuración no se tocan.')) {
@@ -620,12 +790,23 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+/**
+ * Solicita confirmación y borra todos los resultados guardados.
+ * @returns {Promise<void>}
+ * @throws {Error} Si la operación de borrado rechaza su promesa.
+ */
 async function confirmarBorrado() {
   if (confirm('¿Seguro que quieres borrar todos tus resultados guardados?')) {
     await borrarProgreso();
     renderDashboard();
   }
 }
+
+document.getElementById('btnExportarJSON').addEventListener('click', exportarJSON);
+document.querySelectorAll('input[name="modo"]').forEach((radio) => {
+  radio.addEventListener('change', actualizarEnlaces);
+});
+document.getElementById('btnBorrarResultados').addEventListener('click', confirmarBorrado);
 
 document.getElementById('inputJson').addEventListener('change', (e) => {
   if (e.target.files[0]) {

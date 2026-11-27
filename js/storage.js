@@ -1,3 +1,55 @@
+/**
+ * @module
+ * @remarks
+ * Persistencia local y remota del progreso, las correcciones y el mazo Anki.
+ * Este módulo expone funciones compartidas con index.js y test_engine.js.
+ */
+
+/**
+ * @typedef {Object} PreguntaDatos Pregunta de un archivo data/test_XXX.json.
+ * @property {string} [texto] Enunciado.
+ * @property {string[]} [opciones] Respuestas disponibles.
+ * @property {number} [correcta] Índice de la respuesta válida.
+ * @property {string} [categoria] Categoría explícita.
+ * @property {string} [imagen] Ruta de imagen.
+ */
+
+/**
+ * @typedef {Object} ParchePregunta Corrección local pendiente o enviada a Supabase.
+ * @property {number} testId Número del test.
+ * @property {number} preguntaIdx Índice de la pregunta desde cero.
+ * @property {string} enunciado Enunciado corregido.
+ * @property {string[]} opciones Opciones corregidas.
+ * @property {number} correcta Índice correcto.
+ * @property {boolean} esNueva Si el parche añade una pregunta.
+ * @property {string} [explicacion] Explicación revisada.
+ * @property {string} [nota] Motivo de la corrección.
+ * @property {string} [imagen] URL pública de una imagen.
+ * @property {string} [imagenStoragePath] Ruta de la imagen en Storage.
+ * @property {string} [creadoEn] Fecha de creación ISO.
+ * @property {string} [actualizadoEn] Última actualización ISO.
+ * @property {boolean} [sincronizado] Si se confirmó la persistencia en la nube.
+ */
+
+/**
+ * @typedef {Object} TarjetaAnki Estado de repetición de una pregunta.
+ * @property {number} testId Test de origen.
+ * @property {number} preguntaIdx Índice de pregunta desde cero.
+ * @property {'nueva'|'aprendiendo'|'joven'|'madura'} madurez Nivel actual.
+ * @property {number} fallos Número acumulado de fallos.
+ * @property {number} aciertosSeguidos Número de aciertos consecutivos.
+ * @property {number} intervaloDias Intervalo actual en días.
+ * @property {string} proximaRevision Fecha ISO de próxima revisión.
+ * @property {string} [categoria] Categoría DGT.
+ */
+
+/**
+ * Progreso serializable guardado en localStorage y sincronizado como JSON en Supabase.
+ * @typedef {Object<string, *>} ProgresoUsuario
+ */
+
+import { clasificarCategoriaDGT } from "./categorias.js";
+
 const SUPABASE_URL = "https://ypjqxvkqsuyouoriddsk.supabase.co";
 const SUPABASE_KEY = "sb_publishable_Abw6VRU3DRyyZImLyg0w-A_94w0qIND";
 const STORAGE_KEY = "progreso_tests";
@@ -12,7 +64,10 @@ const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 let ultimaSincronizacionOk = true;
 let ultimaOperacionGuardarProgreso = Promise.resolve(true);
 
-// Lee el progreso local (usado por index.html y los tests)
+/**
+ * Lee y decodifica el progreso guardado localmente.
+ * @returns {ProgresoUsuario} Progreso local o un objeto vacío si no existe o no se puede leer.
+ */
 function obtenerProgreso() {
   try {
     return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
@@ -21,7 +76,11 @@ function obtenerProgreso() {
   }
 }
 
-// Guarda en localStorage inmediatamente y encola la sincronización remota ordenada.
+/**
+ * Persiste el progreso local de inmediato y encola una subida ordenada a Supabase.
+ * @param {ProgresoUsuario} progreso Estado completo a guardar.
+ * @returns {Promise<boolean>} true si Supabase confirmó la escritura.
+ */
 function guardarProgreso(progreso) {
   const serializado = JSON.stringify(progreso);
   localStorage.setItem(STORAGE_KEY, serializado);
@@ -55,11 +114,18 @@ function guardarProgreso(progreso) {
   return operacion;
 }
 
+/**
+ * Devuelve la promesa de la última escritura remota encolada.
+ * @returns {Promise<boolean>} Resultado de la última sincronización.
+ */
 function esperarGuardadoProgreso() {
   return ultimaOperacionGuardarProgreso;
 }
 
-// Descarga el progreso desde Supabase al abrir la web
+/**
+ * Descarga el progreso remoto y lo fusiona con los parches locales más recientes.
+ * @returns {Promise<ProgresoUsuario>} Progreso remoto fusionado o el local si falla la lectura.
+ */
 async function sincronizarDesdeNube() {
   const { data, error } = await supabaseClient
     .from("progreso")
@@ -81,7 +147,10 @@ async function sincronizarDesdeNube() {
   return obtenerProgreso();
 }
 
-// Obtiene la fecha de examen DGT configurada o la fecha por defecto
+/**
+ * Obtiene la fecha de examen configurada, validándola como AAAA-MM-DD.
+ * @returns {string} Fecha ISO guardada o la fecha por defecto.
+ */
 function obtenerFechaExamen() {
   const progreso = obtenerProgreso();
   if (progreso._meta && typeof progreso._meta.fechaExamen === "string" && /^\d{4}-\d{2}-\d{2}$/.test(progreso._meta.fechaExamen)) {
@@ -90,7 +159,11 @@ function obtenerFechaExamen() {
   return FECHA_EXAMEN_DEFECTO;
 }
 
-// Guarda la fecha de examen DGT dentro de _meta y sincroniza
+/**
+ * Actualiza la fecha de examen en los metadatos y sincroniza el progreso.
+ * @param {string} nuevaFechaISO Fecha de examen con formato AAAA-MM-DD.
+ * @returns {Promise<void>}
+ */
 async function guardarFechaExamen(nuevaFechaISO) {
   const progreso = obtenerProgreso();
   if (!progreso._meta || typeof progreso._meta !== "object") {
@@ -115,10 +188,22 @@ const ANKI_CONFIG_DEFECTO = Object.freeze({
 const ANKI_MODOS_LIMITE = ["auto", "personalizado", "ilimitado"];
 const ANKI_ORDENES = ["prioridad", "aleatorio", "nuevas_primero"];
 
-// Valida y completa una configuración (valores desconocidos o corruptos vuelven al defecto)
+/**
+ * Valida y completa una configuración Anki usando los valores predeterminados.
+ * @param {*} cruda Configuración posiblemente incompleta o corrupta.
+ * @returns {Object} Configuración normalizada para el mazo.
+ */
 function normalizarConfigAnki(cruda) {
   const c = cruda && typeof cruda === "object" ? cruda : {};
   const D = ANKI_CONFIG_DEFECTO;
+  /**
+   * Normaliza un valor entero acotándolo al rango permitido.
+   * @param {*} v Valor de entrada.
+   * @param {number} def Valor por defecto.
+   * @param {number} min Límite inferior.
+   * @param {number} max Límite superior.
+   * @returns {number} Valor entero validado.
+   */
   const entero = (v, def, min, max) => {
     if (v === null || v === undefined || v === "") return def;
     const n = Math.floor(Number(v));
@@ -134,13 +219,21 @@ function normalizarConfigAnki(cruda) {
   };
 }
 
+/**
+ * Lee la configuración del mazo y devuelve su forma normalizada.
+ * @returns {Object} Configuración Anki válida.
+ */
 function obtenerConfigAnki() {
   const progreso = obtenerProgreso();
   const guardada = progreso._meta && typeof progreso._meta === "object" ? progreso._meta.ankiConfig : null;
   return normalizarConfigAnki(guardada);
 }
 
-// Guarda (fusionando con la actual) en _meta.ankiConfig y sincroniza. Devuelve true si llegó a la nube.
+/**
+ * Fusiona y guarda la configuración Anki en los metadatos y la sincroniza.
+ * @param {Object} nuevaConfig Valores de configuración a actualizar.
+ * @returns {Promise<boolean>} true si se guardó también en la nube.
+ */
 async function guardarConfigAnki(nuevaConfig) {
   const progreso = obtenerProgreso();
   if (!progreso._meta || typeof progreso._meta !== "object") progreso._meta = {};
@@ -148,7 +241,10 @@ async function guardarConfigAnki(nuevaConfig) {
   return await guardarProgreso(progreso);
 }
 
-// Calcula la racha actual de días seguidos practicando
+/**
+ * Calcula la racha diaria actual a partir de los intentos guardados.
+ * @returns {{dias: number, practicoHoy: boolean}} Longitud de la racha y actividad de hoy.
+ */
 function calcularRachaEstudio() {
   const progreso = obtenerProgreso();
   const fechasUnicas = new Set();
@@ -171,6 +267,11 @@ function calcularRachaEstudio() {
     }
   });
 
+  /**
+   * Formatea una fecha local como clave DD/MM/AAAA para comparar días de actividad.
+   * @param {Date} dateObj Fecha local.
+   * @returns {string} Fecha normalizada.
+   */
   const formatearClaveFecha = (dateObj) => {
     const d = String(dateObj.getDate()).padStart(2, "0");
     const m = String(dateObj.getMonth() + 1).padStart(2, "0");
@@ -210,6 +311,11 @@ function calcularRachaEstudio() {
  * ===================================================================== */
 
 // Fecha local en formato "YYYY-MM-DD"
+/**
+ * Formatea una fecha local como AAAA-MM-DD sin convertirla a UTC.
+ * @param {Date} d Fecha local.
+ * @returns {string} Fecha ISO local.
+ */
 function fechaISOLocal(d) {
   const y = d.getFullYear();
   const m = String(d.getMonth() + 1).padStart(2, "0");
@@ -217,16 +323,32 @@ function fechaISOLocal(d) {
   return `${y}-${m}-${dia}`;
 }
 
+/**
+ * Obtiene la fecha local actual con formato AAAA-MM-DD.
+ * @returns {string} Fecha actual.
+ */
 function hoyISO() {
   return fechaISOLocal(new Date());
 }
 
+/**
+ * Suma días de calendario a una fecha ISO.
+ * @param {string} iso Fecha inicial AAAA-MM-DD.
+ * @param {number} dias Cantidad de días que sumar.
+ * @returns {string} Nueva fecha AAAA-MM-DD.
+ */
 function sumarDiasISO(iso, dias) {
   const [y, m, d] = iso.split("-").map(Number);
   return fechaISOLocal(new Date(y, m - 1, d + dias));
 }
 
 // Días de "desde" a "hasta" (ambas "YYYY-MM-DD"); negativo si hasta es anterior
+/**
+ * Calcula la diferencia entre dos fechas ISO en días de calendario.
+ * @param {string} desde Fecha inicial.
+ * @param {string} hasta Fecha final.
+ * @returns {number} Días de diferencia; puede ser negativo.
+ */
 function diasEntreISO(desde, hasta) {
   const [y1, m1, d1] = desde.split("-").map(Number);
   const [y2, m2, d2] = hasta.split("-").map(Number);
@@ -234,11 +356,20 @@ function diasEntreISO(desde, hasta) {
 }
 
 // Días que faltan para el examen (mínimo 1)
+/**
+ * Calcula los días restantes hasta el examen, con mínimo de un día.
+ * @returns {number} Días restantes.
+ */
 function calcularDiasHastaExamen() {
   return Math.max(1, diasEntreISO(hoyISO(), obtenerFechaExamen()));
 }
 
 // Carga data/test_XXX.json (con fallback sin cero inicial: test_73.json). Devuelve null si no existe.
+/**
+ * Descarga un test probando nombres con y sin ceros iniciales.
+ * @param {number|string} n Número identificador del test.
+ * @returns {Promise<*|null>} JSON del test o null si no se pudo cargar.
+ */
 async function cargarDatosTest(n) {
   const nombres = [...new Set([String(n).padStart(3, "0"), String(n)])];
   for (const nombre of nombres) {
@@ -253,12 +384,23 @@ async function cargarDatosTest(n) {
   return null;
 }
 
+/**
+ * Extrae el array de preguntas tanto de JSON en array como de objetos con propiedad preguntas.
+ * @param {*} data JSON decodificado del test.
+ * @returns {PreguntaDatos[]|null} Preguntas del test o null si la forma no es válida.
+ */
 function preguntasDeDatosTest(data) {
   if (Array.isArray(data)) return data;
   return data && Array.isArray(data.preguntas) ? data.preguntas : null;
 }
 
 // Clave de tarjeta: "070_04" = test 70, pregunta nº 4 (preguntaIdx 3)
+/**
+ * Construye la clave estable de una tarjeta a partir de sus índices.
+ * @param {number|string} testId Identificador del test.
+ * @param {number} preguntaIdx Índice de pregunta desde cero.
+ * @returns {string} Clave normalizada, por ejemplo 070_04.
+ */
 function claveTarjeta(testId, preguntaIdx) {
   return `${String(testId).padStart(3, "0")}_${String(preguntaIdx + 1).padStart(2, "0")}`;
 }
@@ -281,8 +423,18 @@ const TIPOS_IMAGEN_FLAG = Object.freeze({
 let colaFlagsSesionMemoria = null;
 let sesionFlagsPromise = null;
 
+/**
+ * Valida y normaliza una corrección procedente del almacenamiento local o remoto.
+ * @param {*} crudo Datos sin validar.
+ * @returns {ParchePregunta|null} Parche normalizado o null si el contenido es inválido.
+ */
 function normalizarParchePregunta(crudo) {
   if (!crudo || typeof crudo !== "object") return null;
+  /**
+   * Convierte un valor textual a cadena recortada o a cadena vacía.
+   * @param {*} valor Valor que se normaliza.
+   * @returns {string} Texto limpio.
+   */
   const texto = (valor) => (typeof valor === "string" ? valor.trim() : "");
   const enunciado = texto(crudo.enunciado);
   const opciones = Array.isArray(crudo.opciones) ? crudo.opciones.map(texto) : [];
@@ -309,6 +461,10 @@ function normalizarParchePregunta(crudo) {
   };
 }
 
+/**
+ * Devuelve los parches locales válidos indexados por clave de tarjeta.
+ * @returns {Object<string, ParchePregunta>} Mapa de preguntas corregidas.
+ */
 function obtenerParchesPreguntas() {
   const crudos = obtenerProgreso()._parchesPreguntas;
   const resultado = {};
@@ -320,12 +476,23 @@ function obtenerParchesPreguntas() {
   return resultado;
 }
 
+/**
+ * Obtiene el parche local de una pregunta concreta.
+ * @param {number} testId Número del test.
+ * @param {number} preguntaIdx Índice de pregunta desde cero.
+ * @returns {ParchePregunta|null} Parche normalizado, si existe.
+ */
 function obtenerParchePregunta(testId, preguntaIdx) {
   const crudos = obtenerProgreso()._parchesPreguntas;
   if (!crudos || typeof crudos !== "object") return null;
   return normalizarParchePregunta(crudos[claveTarjeta(testId, preguntaIdx)]);
 }
 
+/**
+ * Fusiona los parches locales que sean más recientes que sus equivalentes de la nube.
+ * @param {ProgresoUsuario} datosNube Progreso descargado para mutar y devolver.
+ * @returns {ProgresoUsuario} Progreso con parches locales preservados.
+ */
 function conservarParchesLocalesMasRecientes(datosNube) {
   const locales = obtenerProgreso()._parchesPreguntas;
   if (!locales || typeof locales !== "object") return datosNube;
@@ -344,6 +511,12 @@ function conservarParchesLocalesMasRecientes(datosNube) {
   return datosNube;
 }
 
+/**
+ * Convierte un parche normalizado en la fila que acepta la tabla flags_preguntas.
+ * @param {ParchePregunta} parche Corrección a serializar.
+ * @param {string} userId ID del usuario autenticado.
+ * @returns {Object} Fila Supabase con nombres de columna de la tabla.
+ */
 function filaFlagDesdeParche(parche, userId) {
   return {
     user_id: userId,
@@ -360,6 +533,10 @@ function filaFlagDesdeParche(parche, userId) {
   };
 }
 
+/**
+ * Genera un UUID v4 para identificar de forma idempotente un lote de flags.
+ * @returns {string} Identificador UUID.
+ */
 function nuevoIdLoteFlags() {
   const bytes = new Uint8Array(16);
   crypto.getRandomValues(bytes);
@@ -369,6 +546,11 @@ function nuevoIdLoteFlags() {
   return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
 }
 
+/**
+ * Lee y valida la cola de flags desde memoria o localStorage.
+ * @returns {{id: string, flags: ParchePregunta[]}|null} Lote pendiente o null si está vacío.
+ * @throws {Error} Si la cola persistida tiene formato inválido.
+ */
 function leerColaFlagsSesion() {
   if (colaFlagsSesionMemoria) return colaFlagsSesionMemoria;
   const serializada = localStorage.getItem(FLAGS_COLA_KEY);
@@ -388,12 +570,23 @@ function leerColaFlagsSesion() {
   return cola;
 }
 
+/**
+ * Actualiza la cola en memoria y la persiste o elimina de localStorage.
+ * @param {{id: string, flags: ParchePregunta[]}|null} cola Cola pendiente o null para vaciarla.
+ * @returns {void}
+ */
 function guardarColaFlagsSesion(cola) {
   colaFlagsSesionMemoria = cola;
   if (cola) localStorage.setItem(FLAGS_COLA_KEY, JSON.stringify(cola));
   else localStorage.removeItem(FLAGS_COLA_KEY);
 }
 
+/**
+ * Añade o reemplaza una corrección en el lote activo de la sesión.
+ * @param {*} payload Datos de la corrección que se validarán.
+ * @returns {string} ID del lote que contiene la corrección.
+ * @throws {Error} Si los datos no forman un parche válido.
+ */
 function encolarFlagSesion(payload) {
   const parche = normalizarParchePregunta(payload);
   if (!parche) throw new Error("No se puede encolar una corrección no válida.");
@@ -408,12 +601,22 @@ function encolarFlagSesion(payload) {
   return cola.id;
 }
 
+/**
+ * Obtiene la sesión Supabase activa sin crear una nueva.
+ * @returns {Promise<Object|null>} Sesión autenticada o null.
+ * @throws {Error} Si Supabase devuelve un error.
+ */
 async function obtenerSesionExistente() {
   const { data, error } = await supabaseClient.auth.getSession();
   if (error) throw error;
   return data && data.session ? data.session : null;
 }
 
+/**
+ * Reutiliza una sesión existente o crea una sesión anónima para sincronizar flags.
+ * @returns {Promise<Object>} Sesión Supabase con usuario.
+ * @throws {Error} Si no se puede crear u obtener una sesión válida.
+ */
 async function iniciarSesionAnonimaSiHaceFalta() {
   const sesion = await obtenerSesionExistente();
   if (sesion && sesion.user) return sesion;
@@ -426,6 +629,10 @@ async function iniciarSesionAnonimaSiHaceFalta() {
   return data.session;
 }
 
+/**
+ * Comparte la promesa de preparación de sesión para evitar inicios simultáneos.
+ * @returns {Promise<Object>} Sesión autenticada que se utilizará para los flags.
+ */
 function prepararSesionFlags() {
   if (!sesionFlagsPromise) {
     sesionFlagsPromise = iniciarSesionAnonimaSiHaceFalta();
@@ -436,6 +643,11 @@ function prepararSesionFlags() {
   });
 }
 
+/**
+ * Persiste un parche de pregunta en la propiedad _parchesPreguntas de localStorage.
+ * @param {ParchePregunta} parche Corrección ya normalizada.
+ * @returns {void}
+ */
 function guardarParcheLocal(parche) {
   const progreso = obtenerProgreso();
   if (!progreso._parchesPreguntas || typeof progreso._parchesPreguntas !== "object") {
@@ -446,11 +658,38 @@ function guardarParcheLocal(parche) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(progreso));
 }
 
+/**
+ * Guarda una corrección local, la añade al lote de sesión y opcionalmente sube su imagen.
+ * @param {Object} payload Datos de la corrección, incluyendo imagenArchivo opcional.
+ * @returns {Object|Promise<Object>} Resultado local inmediato o promesa si se sube una imagen.
+ * @throws {Error} Si la corrección o la imagen no es válida.
+ * @mermaid
+ * ```mermaid
+ * sequenceDiagram
+ *   participant UI as Modal de corrección
+ *   participant Local as localStorage
+ *   participant Queue as Cola de sesión
+ *   participant Auth as Supabase Auth
+ *   UI->>Local: validar y guardar parche
+ *   Local->>Queue: encolar corrección
+ *   opt Imagen adjunta
+ *     Queue->>Auth: preparar sesión
+ *     Auth-->>Queue: sesión anónima o existente
+ *     Queue->>Queue: subir imagen a Storage
+ *   end
+ *   Queue-->>UI: parche guardado localmente
+ * ```
+ */
 function guardarFlagPregunta(payload) {
   const base = normalizarParchePregunta(payload);
   if (!base) {
     throw new Error("Corrección no válida: revisa el enunciado, las opciones (2 o 3) y la respuesta correcta.");
   }
+  /**
+   * Completa el guardado local con la URL de imagen si se subió.
+   * @param {{url: string, path: string}|null} [imagenSubida=null] Datos de imagen remota.
+   * @returns {{ok: true, parche: ParchePregunta, nube: string, loteId: string}} Resultado guardado.
+   */
   const guardar = (imagenSubida = null) => {
     const clave = claveTarjeta(base.testId, base.preguntaIdx);
     const ahora = new Date().toISOString();
@@ -499,6 +738,14 @@ function guardarFlagPregunta(payload) {
   });
 }
 
+/**
+ * Envía filas y marcador de lote con fetch keepalive para cierres de página.
+ * @param {Object[]} filas Filas de flags_preguntas.
+ * @param {Object} marcador Registro idempotente del lote.
+ * @param {string} accessToken Token de sesión Supabase.
+ * @returns {Promise<void>}
+ * @throws {Error} Si cualquiera de las peticiones HTTP falla.
+ */
 async function upsertFlagsConKeepalive(filas, marcador, accessToken) {
   const headers = {
     apikey: SUPABASE_KEY,
@@ -528,6 +775,21 @@ async function upsertFlagsConKeepalive(filas, marcador, accessToken) {
   }
 }
 
+/**
+ * Inicia una sola sincronización concurrente del lote activo de flags.
+ * @param {{keepalive?: boolean}} [opciones] Usa fetch keepalive para beforeunload.
+ * @returns {Promise<{ok: boolean, enviados: number, sinCambios?: boolean, loteId?: string}>} Resultado.
+ * @mermaid
+ * ```mermaid
+ * flowchart TD
+ *   A[Solicitar sincronización] --> B{¿Hay una petición en curso?}
+ *   B -- Sí --> C[Reutilizar promesa activa]
+ *   B -- No --> D[Ejecutar envío del lote]
+ *   D --> E[Upsert de flags y marcador]
+ *   E --> F[Marcar parches locales sincronizados]
+ *   F --> G[Retirar solo las correcciones enviadas]
+ * ```
+ */
 function sincronizarFlagsSesion({ keepalive = false } = {}) {
   if (sincronizacionFlagsEnCurso) return sincronizacionFlagsEnCurso;
   const tarea = ejecutarSincronizacionFlagsSesion(keepalive);
@@ -537,6 +799,12 @@ function sincronizarFlagsSesion({ keepalive = false } = {}) {
   });
 }
 
+/**
+ * Sube el lote completo, marca sus parches sincronizados y conserva cambios nuevos concurrentes.
+ * @param {boolean} keepalive Indica si la página se está cerrando.
+ * @returns {Promise<{ok: boolean, enviados: number, sinCambios?: boolean, loteId?: string}>} Resultado.
+ * @throws {Error} Si no hay sesión o Supabase rechaza la sincronización.
+ */
 async function ejecutarSincronizacionFlagsSesion(keepalive) {
   const cola = leerColaFlagsSesion();
   if (!cola || !cola.flags.length) return { ok: true, enviados: 0, sinCambios: true };
@@ -600,6 +868,11 @@ const SIN_CATEGORIA = "Sin clasificar";
 const CATEGORIA_FALLBACK = "Normativa general"; // solo si categorias.js no estuviera cargado
 
 // Categoría de una pregunta del JSON: respeta su campo "categoria" y, si no, la calcula
+/**
+ * Obtiene la categoría explícita o calculada de una pregunta.
+ * @param {PreguntaDatos} pregunta Pregunta de origen.
+ * @returns {string} Categoría clasificada o valor de respaldo.
+ */
 function categoriaDePregunta(pregunta) {
   if (!pregunta || typeof pregunta !== "object") return CATEGORIA_FALLBACK;
   const explicita = typeof pregunta.categoria === "string" ? pregunta.categoria.trim() : "";
@@ -609,6 +882,14 @@ function categoriaDePregunta(pregunta) {
   return explicita || CATEGORIA_FALLBACK;
 }
 
+/**
+ * Crea el estado inicial de una tarjeta Anki.
+ * @param {number|string} testId Test de origen.
+ * @param {number} preguntaIdx Índice de pregunta desde cero.
+ * @param {string} [hoy] Fecha ISO que se usará como próxima revisión.
+ * @param {?string} [categoria] Categoría opcional.
+ * @returns {TarjetaAnki} Tarjeta nueva, aún no estudiada.
+ */
 function crearTarjeta(testId, preguntaIdx, hoy = hoyISO(), categoria = null) {
   const tarjeta = {
     testId: Number(testId),
@@ -623,12 +904,20 @@ function crearTarjeta(testId, preguntaIdx, hoy = hoyISO(), categoria = null) {
   return tarjeta;
 }
 
+/**
+ * Devuelve el mapa de tarjetas Anki guardado en el progreso.
+ * @returns {Object<string, TarjetaAnki>} Tarjetas indexadas por clave.
+ */
 function obtenerTarjetas() {
   const progreso = obtenerProgreso();
   return progreso._tarjetas && typeof progreso._tarjetas === "object" ? progreso._tarjetas : {};
 }
 
 // True si hay que (re)cargar el mazo desde los tests: no hay tarjetas o nunca se inicializó
+/**
+ * Indica si el mazo debe inicializarse o reconstruirse desde los tests disponibles.
+ * @returns {boolean} true si faltan tarjetas o el indicador de inicialización.
+ */
 function necesitaInicializarMazo() {
   const progreso = obtenerProgreso();
   const hayTarjetas = progreso._tarjetas && Object.keys(progreso._tarjetas).length > 0;
@@ -637,6 +926,10 @@ function necesitaInicializarMazo() {
 }
 
 // Descarga en paralelo todos los tests de data/ (1..ANKI_MAX_TEST)
+/**
+ * Descarga en paralelo los tests configurados para alimentar el mazo.
+ * @returns {Promise<Array<{n: number, data: *}>>} Pares de ID de test y contenido descargado.
+ */
 function descargarTodosLosTests() {
   return Promise.all(
     Array.from({ length: ANKI_MAX_TEST }, (_, i) =>
@@ -648,6 +941,13 @@ function descargarTodosLosTests() {
 // Incorpora al mazo (en el objeto progreso, sin guardar) las preguntas que aún no tienen tarjeta
 // y rellena "categoria" en las tarjetas existentes que no la tengan (migración silenciosa).
 // Nunca toca el estado de estudio de las tarjetas existentes.
+/**
+ * Añade tarjetas ausentes y completa categorías sin cambiar su historial de estudio.
+ * @param {ProgresoUsuario} progreso Estado que se modifica en memoria.
+ * @param {Array<{n: number, data: *}>} cargas Tests descargados.
+ * @param {string} hoy Fecha de referencia AAAA-MM-DD.
+ * @returns {{testsCargados: number, anadidas: number, testsNuevos: number, omitidas: number, categorizadas: number}} Resumen de cambios.
+ */
 function incorporarPreguntasAlMazo(progreso, cargas, hoy) {
   const r = { testsCargados: 0, anadidas: 0, testsNuevos: 0, omitidas: 0, categorizadas: 0 };
 
@@ -676,6 +976,10 @@ function incorporarPreguntasAlMazo(progreso, cargas, hoy) {
 
 // Carga todos los tests disponibles en data/ e incorpora sus preguntas al mazo como "nueva" (con su categoría).
 // Es idempotente: no toca las tarjetas que ya existen (solo completa su categoría si faltaba).
+/**
+ * Inicializa el mazo con todas las preguntas que incluyen respuesta correcta.
+ * @returns {Promise<{testsCargados: number, anadidas: number, categorizadas: number, totalMazo: number}>} Resumen.
+ */
 async function inicializarMazoAnkiDesdeTests() {
   const cargas = await descargarTodosLosTests();
 
@@ -698,6 +1002,10 @@ async function inicializarMazoAnkiDesdeTests() {
 // en el mazo (tests nuevos o preguntas nuevas en tests ya existentes). No toca las tarjetas existentes,
 // salvo para rellenar su "categoria" si aún no la tenían.
 // Devuelve { anadidas, testsNuevos, omitidas, categorizadas, totalMazo, sincronizado }; "omitidas" = preguntas sin "correcta" numérica.
+/**
+ * Busca tests y preguntas nuevas y las incorpora sin reiniciar tarjetas existentes.
+ * @returns {Promise<{anadidas: number, testsNuevos: number, omitidas: number, categorizadas: number, totalMazo: number, sincronizado: boolean}>} Resumen de incorporación.
+ */
 async function sincronizarNuevosTestsAlMazo() {
   const cargas = await descargarTodosLosTests();
 
@@ -727,6 +1035,10 @@ async function sincronizarNuevosTestsAlMazo() {
 // Sincronización automática: una vez por pestaña/sesión (el botón del modal la fuerza siempre).
 // Además de buscar tests nuevos, completa en silencio la "categoria" de las tarjetas antiguas.
 // Solo actúa si el mazo ya existe; si no, lo crea el primer repaso. Devuelve el resultado o null si no hizo nada.
+/**
+ * Sincroniza los tests nuevos como máximo una vez por pestaña, omitiendo fallos reintentables.
+ * @returns {Promise<Object|null>} Resumen de sincronización o null si no se ejecutó.
+ */
 async function sincronizarTestsSiToca() {
   try {
     if (necesitaInicializarMazo()) return null;
@@ -741,6 +1053,10 @@ async function sincronizarTestsSiToca() {
 }
 
 // Vacía el mazo Anki (mantiene resultados de tests, fecha de examen y configuración) y lo vuelve a crear desde data/
+/**
+ * Borra el estado del mazo y lo inicializa de nuevo con los datos actuales.
+ * @returns {Promise<Object>} Resumen del mazo recién creado.
+ */
 async function reiniciarProgresoAnki() {
   const progreso = obtenerProgreso();
   progreso._tarjetas = {};
@@ -750,6 +1066,12 @@ async function reiniciarProgresoAnki() {
 }
 
 // Intervalo en días según confianza, acotado para no programar más allá del examen
+/**
+ * Calcula el intervalo nominal para una calificación antes de limitarlo al examen.
+ * @param {'hard'|'medium'|'easy'|'again'} nivel Nivel de confianza.
+ * @param {number} diasRestantes Días que faltan para el examen.
+ * @returns {number} Intervalo nominal en días.
+ */
 function intervaloPorConfianza(nivel, diasRestantes) {
   if (nivel === "medium") {
     return Math.min(3, Math.max(2, Math.floor(diasRestantes / 3)));
@@ -761,6 +1083,15 @@ function intervaloPorConfianza(nivel, diasRestantes) {
 }
 
 // Función pura: devuelve el nuevo estado de la tarjeta sin modificar la original
+/**
+ * Calcula el próximo estado de una tarjeta sin mutar el objeto original.
+ * @param {TarjetaAnki} tarjeta Estado actual.
+ * @param {'again'|'hard'|'medium'|'easy'} nivelConfianza Calificación elegida.
+ * @param {number} diasRestantes Días que faltan para el examen.
+ * @param {string} hoy Fecha de referencia AAAA-MM-DD.
+ * @returns {TarjetaAnki} Copia actualizada de la tarjeta.
+ * @throws {Error} Si el nivel de confianza no está admitido.
+ */
 function calcularNuevoEstadoTarjeta(tarjeta, nivelConfianza, diasRestantes, hoy) {
   const asi = Number(tarjeta.aciertosSeguidos) || 0;
   const nueva = { ...tarjeta };
@@ -805,6 +1136,11 @@ function calcularNuevoEstadoTarjeta(tarjeta, nivelConfianza, diasRestantes, hoy)
 }
 
 // Días hasta el próximo repaso para cada botón (para mostrarlos en la interfaz)
+/**
+ * Calcula los intervalos que mostrarían los botones de confianza para una tarjeta.
+ * @param {string} clave Clave de tarjeta.
+ * @returns {Object<string, number>|null} Intervalos por nivel o null si no existe.
+ */
 function previsualizarIntervalosTarjeta(clave) {
   const tarjeta = obtenerTarjetas()[clave];
   if (!tarjeta) return null;
@@ -820,6 +1156,11 @@ function previsualizarIntervalosTarjeta(clave) {
 const ANKI_TOPE_TIEMPO_SEG = 60; // tope para estadísticas (ausencias, pausas...)
 
 // Tiempo válido (segundos, con tope y 1 decimal) o null si no es un número utilizable
+/**
+ * Valida y limita un tiempo de respuesta para estadísticas.
+ * @param {*} tiempoSegundos Valor recibido.
+ * @returns {?number} Tiempo normalizado o null si no es utilizable.
+ */
 function normalizarTiempoSeg(tiempoSegundos) {
   const t = Number(tiempoSegundos);
   if (tiempoSegundos === null || tiempoSegundos === undefined || !Number.isFinite(t) || t < 0) return null;
@@ -830,6 +1171,15 @@ function normalizarTiempoSeg(tiempoSegundos) {
 // El botón elegido manda al 100 % sobre intervalo y madurez: el tiempo solo alimenta estadísticas.
 // "acierto" (opcional): si la respuesta fue correcta; sirve para el récord mejorTiempoSeg
 // (si no se pasa, se considera acierto todo lo que no sea "again").
+/**
+ * Aplica la calificación Anki, actualiza sus estadísticas y encola el guardado del progreso.
+ * @param {string} clave Clave de tarjeta.
+ * @param {'again'|'hard'|'medium'|'easy'} nivelConfianza Nivel elegido.
+ * @param {*} tiempoSegundos Duración de la respuesta en segundos.
+ * @param {boolean} [acierto] Si la respuesta fue correcta, para el récord de tiempo.
+ * @returns {TarjetaAnki} Estado actualizado.
+ * @throws {Error} Si la tarjeta no existe o el nivel no es válido.
+ */
 function calificarTarjetaAnki(clave, nivelConfianza, tiempoSegundos, acierto) {
   const progreso = obtenerProgreso();
   const tarjeta = progreso._tarjetas && progreso._tarjetas[clave];
@@ -869,6 +1219,14 @@ function calificarTarjetaAnki(clave, nivelConfianza, tiempoSegundos, acierto) {
 
 // Registra (en el objeto progreso, sin guardar) las preguntas falladas de un test como "again"
 // "preguntas" (opcional): array de preguntas del test, para guardar su categoría en las tarjetas.
+/**
+ * Marca como «again» las preguntas falladas de un test dentro del progreso en memoria.
+ * @param {ProgresoUsuario} progreso Progreso que se modifica sin persistir.
+ * @param {number} testId Identificador del test.
+ * @param {number[]} indicesFallados Índices de preguntas falladas desde cero.
+ * @param {PreguntaDatos[]|null} [preguntas] Preguntas para asignar la categoría.
+ * @returns {void}
+ */
 function registrarFallosEnMazo(progreso, testId, indicesFallados, preguntas = null) {
   if (!indicesFallados || !indicesFallados.length) return;
   if (!progreso._tarjetas || typeof progreso._tarjetas !== "object") progreso._tarjetas = {};
@@ -889,6 +1247,11 @@ function registrarFallosEnMazo(progreso, testId, indicesFallados, preguntas = nu
  * ===================================================================== */
 
 // Revisiones de una tarjeta (con estimación para tarjetas antiguas sin el campo "revisiones")
+/**
+ * Obtiene el número de revisiones, estimándolo para tarjetas de versiones antiguas.
+ * @param {TarjetaAnki} t Tarjeta que se consulta.
+ * @returns {number} Revisiones estimadas o almacenadas.
+ */
 function revisionesDeTarjeta(t) {
   const fallos = Number(t.fallos) || 0;
   const rev = Number(t.revisiones);
@@ -898,6 +1261,11 @@ function revisionesDeTarjeta(t) {
 
 // { "Velocidad": { categoria, tarjetas, fallos, revisiones, tasaFallo }, ... }
 // tasaFallo = fallos / max(1, revisiones), acotada a [0, 1]
+/**
+ * Agrupa fallos, tarjetas y revisiones por categoría.
+ * @param {TarjetaAnki[]|null} tarjetas Lista opcional; por defecto usa todo el mazo.
+ * @returns {Object<string, {categoria: string, tarjetas: number, fallos: number, revisiones: number, tasaFallo: number}>} Estadísticas por categoría.
+ */
 function calcularEstadisticasCategorias(tarjetas) {
   const lista = Array.isArray(tarjetas) ? tarjetas : Object.values(obtenerTarjetas());
   const stats = {};
@@ -916,6 +1284,12 @@ function calcularEstadisticasCategorias(tarjetas) {
 
 // Las categorías más flojas según el historial real (mayor tasa de fallo).
 // Solo cuentan categorías con datos suficientes (minRevisiones) y al menos un fallo.
+/**
+ * Devuelve las categorías con mayor tasa de fallos que cumplen el mínimo de datos.
+ * @param {number} [max=3] Cantidad máxima de categorías.
+ * @param {number} [minRevisiones=3] Revisiones mínimas para incluir una categoría.
+ * @returns {Array<{categoria: string, tarjetas: number, fallos: number, revisiones: number, tasaFallo: number}>} Categorías ordenadas por debilidad.
+ */
 function obtenerCategoriasDebiles(max = 3, minRevisiones = 3) {
   return Object.values(calcularEstadisticasCategorias())
     .filter((c) => c.categoria !== SIN_CATEGORIA && c.revisiones >= minRevisiones && c.fallos > 0)
@@ -924,6 +1298,12 @@ function obtenerCategoriasDebiles(max = 3, minRevisiones = 3) {
 }
 
 // Fisher–Yates (modifica y devuelve el array)
+/**
+ * Baraja una lista in situ mediante Fisher–Yates.
+ * @template T
+ * @param {T[]} arr Elementos que se mezclarán.
+ * @returns {T[]} La misma lista ya barajada.
+ */
 function barajarListaAnki(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -933,6 +1313,12 @@ function barajarListaAnki(arr) {
 }
 
 // Baraja evitando (si hay variedad) dos tarjetas seguidas del mismo test
+/**
+ * Baraja tarjetas procurando alternar tests consecutivos cuando hay variedad.
+ * @param {TarjetaAnki[]} lista Tarjetas a ordenar.
+ * @param {?number} [testPrevio=null] Test de la tarjeta anterior a la secuencia.
+ * @returns {TarjetaAnki[]} Copia barajada con variedad de tests.
+ */
 function barajarEvitandoMismoTest(lista, testPrevio = null) {
   const resto = barajarListaAnki([...lista]);
   const salida = [];
@@ -949,6 +1335,15 @@ function barajarEvitandoMismoTest(lista, testPrevio = null) {
 
 // Sorteo ponderado SIN reemplazo. peso = pesoBase(t) + 0.25 si es de un test distinto al de la tarjeta anterior.
 // maxNuevas limita cuántas tarjetas "nueva" pueden salir (Infinity = sin tope).
+/**
+ * Selecciona tarjetas aleatoriamente sin reemplazo, ponderando cada candidata.
+ * @param {TarjetaAnki[]} candidatas Tarjetas candidatas.
+ * @param {number} cantidad Máximo de tarjetas que seleccionar.
+ * @param {(tarjeta: TarjetaAnki) => number} pesoBase Peso específico de cada tarjeta.
+ * @param {?number} testPrevio Test de la última tarjeta anterior a la muestra.
+ * @param {number} maxNuevas Máximo de tarjetas nuevas; Infinity no limita.
+ * @returns {TarjetaAnki[]} Tarjetas elegidas.
+ */
 function muestrearPonderado(candidatas, cantidad, pesoBase, testPrevio, maxNuevas) {
   const pool = [...candidatas];
   const elegidas = [];
@@ -987,6 +1382,19 @@ function muestrearPonderado(candidatas, cantidad, pesoBase, testPrevio, maxNueva
 //   1) "aprendiendo" vencidas, barajadas evitando repetir test seguido, y los repasos con retraso (siempre entran)
 //   2) hasta completar la cuota: sorteo ponderado entre "nueva" y "joven"/"madura" que vencen hoy,
 //      con peso = 1 + tasaFalloCategoria * 3 (+0.25 si el test es distinto al de la tarjeta anterior)
+/**
+ * Construye la cola de hoy considerando vencimientos, configuración, cuotas y categorías débiles.
+ * @returns {Object} Cola de tarjetas y resumen de madurez, cuota y días hasta el examen.
+ * @mermaid
+ * ```mermaid
+ * flowchart TD
+ *   A[Leer mazo y configuración] --> B[Separar vencidas y nuevas]
+ *   B --> C[Incluir tarjetas urgentes]
+ *   C --> D[Muestrear por categoría y prioridad]
+ *   D --> E[Aplicar orden y límite diario]
+ *   E --> F[Devolver cola y estadísticas]
+ * ```
+ */
 function obtenerColaRepasoHoy() {
   const hoy = hoyISO();
   const diasRestantes = calcularDiasHastaExamen();
@@ -1002,6 +1410,11 @@ function obtenerColaRepasoHoy() {
   const cuotaBase = Math.ceil(noMaduras.length / Math.max(1, diasRestantes));
 
   const estadisticas = calcularEstadisticasCategorias(entradas);
+  /**
+   * Asigna mayor peso a tarjetas de categorías con una tasa de fallos más alta.
+   * @param {TarjetaAnki} t Tarjeta candidata.
+   * @returns {number} Peso base para el muestreo ponderado.
+   */
   const pesoBase = (t) => {
     const c = estadisticas[t.categoria || SIN_CATEGORIA];
     return 1 + (c ? c.tasaFallo : 0) * 3;
@@ -1054,6 +1467,11 @@ function obtenerColaRepasoHoy() {
     colaHoy = barajarEvitandoMismoTest(colaHoy);
   } else if (config.orden === "nuevas_primero") {
     // reparto estable: nuevas → aprendiendo → resto (se conserva la variedad dentro de cada bloque)
+    /**
+     * Define el orden de los grupos de madurez en el modo nuevas primero.
+     * @param {TarjetaAnki} t Tarjeta evaluada.
+     * @returns {number} Prioridad de orden.
+     */
     const rango = (t) => (t.madurez === "nueva" ? 0 : t.madurez === "aprendiendo" ? 1 : 2);
     colaHoy = colaHoy.map((t, i) => ({ t, i })).sort((a, b) => rango(a.t) - rango(b.t) || a.i - b.i).map((x) => x.t);
   }
@@ -1083,6 +1501,16 @@ function obtenerColaRepasoHoy() {
 // indicesFallados (opcional): índices 0-based de las preguntas falladas; pasan al mazo Anki como "again".
 // Devuelve true si todo quedó guardado también en la nube.
 // preguntas (opcional): array de preguntas del test para guardar su categoría en el mazo.
+/**
+ * Guarda el resultado de un test, agrega historial y registra sus fallos en el mazo.
+ * @param {string} claveTest Clave del test en progreso, por ejemplo test_070.
+ * @param {number} aciertos Cantidad de respuestas correctas.
+ * @param {number} fallos Cantidad de respuestas incorrectas.
+ * @param {number} [total=30] Preguntas totales.
+ * @param {number[]|null} [indicesFallados=null] Índices 0-based de preguntas incorrectas.
+ * @param {PreguntaDatos[]|null} [preguntas=null] Preguntas para registrar su categoría.
+ * @returns {Promise<boolean>} true si se sincronizó con Supabase.
+ */
 async function guardarResultadoTest(claveTest, aciertos, fallos, total = 30, indicesFallados = null, preguntas = null) {
   const progreso = obtenerProgreso();
   const anterior = progreso[claveTest] || { intentos: 0 };
@@ -1127,6 +1555,11 @@ async function guardarResultadoTest(claveTest, aciertos, fallos, total = 30, ind
 }
 
 // Devuelve el historial de fallos de un test concreto con retrocompatibilidad
+/**
+ * Obtiene el historial de intentos, convirtiendo el formato antiguo cuando sea necesario.
+ * @param {string} claveTest Clave del test.
+ * @returns {Array<{fecha: string, fallos: number}>} Historial de fallos.
+ */
 function obtenerHistorialTest(claveTest) {
   const progreso = obtenerProgreso();
   const datos = progreso[claveTest];
@@ -1152,6 +1585,10 @@ function obtenerHistorialTest(claveTest) {
 }
 
 // Exporta a archivo .json
+/**
+ * Descarga un archivo JSON con el progreso local completo.
+ * @returns {void}
+ */
 function exportarJSON() {
   const datos = JSON.stringify(obtenerProgreso(), null, 2);
   const blob = new Blob([datos], { type: "application/json" });
@@ -1164,6 +1601,12 @@ function exportarJSON() {
 }
 
 // Importa desde archivo .json y lo sube directo a Supabase
+/**
+ * Lee un archivo JSON de progreso, lo guarda y ejecuta el callback de refresco.
+ * @param {File} archivo Archivo JSON elegido por el usuario.
+ * @param {() => void} [callback] Callback tras guardar correctamente.
+ * @returns {void}
+ */
 function importarJSON(archivo, callback) {
   const lector = new FileReader();
   lector.onload = async (e) => {
@@ -1181,6 +1624,10 @@ function importarJSON(archivo, callback) {
 }
 
 // Borra los resultados de los tests y el mazo Anki, manteniendo la fecha de examen (_meta) y las correcciones
+/**
+ * Borra resultados y tarjetas conservando metadatos y correcciones de preguntas.
+ * @returns {Promise<void>}
+ */
 async function borrarProgreso() {
   const actual = obtenerProgreso();
   const nuevoEstado = {};
@@ -1194,3 +1641,70 @@ async function borrarProgreso() {
   }
   await guardarProgreso(nuevoEstado);
 }
+
+export {
+  ultimaSincronizacionOk,
+  obtenerProgreso,
+  guardarProgreso,
+  esperarGuardadoProgreso,
+  sincronizarDesdeNube,
+  obtenerFechaExamen,
+  guardarFechaExamen,
+  normalizarConfigAnki,
+  obtenerConfigAnki,
+  guardarConfigAnki,
+  calcularRachaEstudio,
+  fechaISOLocal,
+  hoyISO,
+  sumarDiasISO,
+  diasEntreISO,
+  calcularDiasHastaExamen,
+  cargarDatosTest,
+  preguntasDeDatosTest,
+  claveTarjeta,
+  normalizarParchePregunta,
+  obtenerParchesPreguntas,
+  obtenerParchePregunta,
+  conservarParchesLocalesMasRecientes,
+  filaFlagDesdeParche,
+  nuevoIdLoteFlags,
+  leerColaFlagsSesion,
+  guardarColaFlagsSesion,
+  encolarFlagSesion,
+  obtenerSesionExistente,
+  iniciarSesionAnonimaSiHaceFalta,
+  prepararSesionFlags,
+  guardarParcheLocal,
+  guardarFlagPregunta,
+  upsertFlagsConKeepalive,
+  sincronizarFlagsSesion,
+  ejecutarSincronizacionFlagsSesion,
+  categoriaDePregunta,
+  crearTarjeta,
+  obtenerTarjetas,
+  necesitaInicializarMazo,
+  descargarTodosLosTests,
+  incorporarPreguntasAlMazo,
+  inicializarMazoAnkiDesdeTests,
+  sincronizarNuevosTestsAlMazo,
+  sincronizarTestsSiToca,
+  reiniciarProgresoAnki,
+  intervaloPorConfianza,
+  calcularNuevoEstadoTarjeta,
+  previsualizarIntervalosTarjeta,
+  normalizarTiempoSeg,
+  calificarTarjetaAnki,
+  registrarFallosEnMazo,
+  revisionesDeTarjeta,
+  calcularEstadisticasCategorias,
+  obtenerCategoriasDebiles,
+  barajarListaAnki,
+  barajarEvitandoMismoTest,
+  muestrearPonderado,
+  obtenerColaRepasoHoy,
+  guardarResultadoTest,
+  obtenerHistorialTest,
+  exportarJSON,
+  importarJSON,
+  borrarProgreso
+};

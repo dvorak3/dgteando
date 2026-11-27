@@ -1,0 +1,28 @@
+{
+  "name": "dgteando",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "npm run docs:api && npm run docs:graph",
+    "docs:api": "typedoc --options typedoc.config.mjs",
+    "docs:graph": "madge --extensions js --image docs/dependency-graph.svg js scripts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvorak3/dgteando.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvorak3/dgteando/issues"
+  },
+  "homepage": "https://github.com/dvorak3/dgteando#readme",
+  "devDependencies": {
+    "madge": "^8.0.0",
+    "typedoc": "^0.28.20"
+  }
+}

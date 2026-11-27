@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 /**
+ * @module
+ * @remarks
+ * Aplica correcciones pendientes de Supabase a los JSON de tests.
+ *
  * aplicar_flags.js · aplica en lote las correcciones de preguntas guardadas en Supabase
  * sobre data/test_XXX.json y las marca como aplicadas.
  *
@@ -13,8 +17,42 @@
  */
 'use strict';
 
-const fs = require('node:fs/promises');
-const path = require('node:path');
+/**
+ * Fila de corrección pendiente de la tabla de flags.
+ * @typedef {Object} FlagPregunta
+ * @property {string|number} id Identificador de la fila.
+ * @property {string} pregunta_id Identificador de la pregunta.
+ * @property {number} test_id Identificador del test.
+ * @property {number} pregunta_idx Índice de la pregunta en el JSON.
+ * @property {string} enunciado Texto corregido de la pregunta.
+ * @property {string[]} opciones Opciones corregidas.
+ * @property {number} correcta Índice de la respuesta correcta.
+ * @property {string} [explicacion] Explicación opcional de la respuesta.
+ * @property {string} [nota] Nota opcional asociada a la corrección.
+ */
+
+/**
+ * Pregunta serializada en un archivo de test.
+ * @typedef {Object} PreguntaJSON
+ * @property {string} [id] Identificador de la pregunta.
+ * @property {string} [texto] Enunciado de la pregunta.
+ * @property {string[]} [opciones] Opciones de respuesta.
+ * @property {number} [correcta] Índice de la respuesta correcta.
+ * @property {string} [explicacion] Explicación de la respuesta.
+ * @property {boolean} [corregida] Indica si la pregunta ha sido corregida.
+ * @property {*} [correcta_detectada] Respuesta detectada previamente.
+ */
+
+/**
+ * Estructura admitida para el JSON de un test.
+ * @typedef {PreguntaJSON[]|{preguntas: PreguntaJSON[], respuestas_verificadas?: boolean}} TestJSON
+ */
+
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const TABLA = 'flags_preguntas';
 const args = process.argv.slice(2);
@@ -36,6 +74,13 @@ const cabeceras = {
   'Content-Type': 'application/json'
 };
 
+/**
+ * Envía una solicitud a la API REST de Supabase.
+ * @param {string} ruta Ruta relativa del recurso REST.
+ * @param {RequestInit} [opciones={}] Opciones de la solicitud HTTP.
+ * @returns {Promise<Response>} Respuesta HTTP de Supabase.
+ * @throws {Error} Si la solicitud falla o Supabase responde con un estado no satisfactorio.
+ */
 async function pedir(ruta, opciones = {}) {
   const resp = await fetch(`${SUPABASE_URL}/rest/v1/${ruta}`, { ...opciones, headers: { ...cabeceras, ...(opciones.headers || {}) } });
   if (!resp.ok) {
@@ -45,6 +90,11 @@ async function pedir(ruta, opciones = {}) {
 }
 
 // Descarga todas las filas pendientes (paginando de 1000 en 1000)
+/**
+ * Descarga todas las correcciones todavía no aplicadas.
+ * @returns {Promise<FlagPregunta[]>} Filas pendientes ordenadas por fecha de actualización.
+ * @throws {Error} Si falla una solicitud o la respuesta no puede interpretarse como JSON.
+ */
 async function descargarPendientes() {
   const filas = [];
   const PAGINA = 1000;
@@ -58,6 +108,12 @@ async function descargarPendientes() {
 }
 
 // Valida una fila; devuelve un mensaje de error o null si es aplicable
+/**
+ * Comprueba que una fila contiene datos aplicables a una pregunta existente.
+ * @param {FlagPregunta} fila Corrección que se va a validar.
+ * @param {PreguntaJSON|undefined|null} pregunta Pregunta destino, si existe.
+ * @returns {string|null} Motivo de rechazo, o {@code null} si la fila es válida.
+ */
 function validar(fila, pregunta) {
   if (!pregunta) return `la pregunta nº ${fila.pregunta_idx + 1} no existe en el JSON`;
   const { enunciado, opciones, correcta } = fila;
@@ -68,6 +124,11 @@ function validar(fila, pregunta) {
   return null;
 }
 
+/**
+ * Busca el archivo JSON de un test, probando su identificador con y sin relleno.
+ * @param {number|string} testId Identificador del test.
+ * @returns {Promise<string|null>} Ruta encontrada o {@code null} si no existe.
+ */
 async function localizarJSON(testId) {
   for (const nombre of new Set([String(testId).padStart(3, '0'), String(testId)])) {
     const ruta = path.join(DATA_DIR, `test_${nombre}.json`);
@@ -80,12 +141,25 @@ async function localizarJSON(testId) {
 }
 
 // Escritura atómica: archivo temporal + rename
+/**
+ * Escribe el contenido en un temporal y lo renombra sobre el archivo de destino.
+ * @param {string} ruta Ruta del archivo que se actualizará.
+ * @param {string} texto Contenido que se escribirá en UTF-8.
+ * @returns {Promise<void>} Se resuelve cuando el reemplazo termina.
+ * @throws {Error} Si falla la escritura o el renombrado.
+ */
 async function escribirAtomico(ruta, texto) {
   const tmp = `${ruta}.tmp-${process.pid}`;
   await fs.writeFile(tmp, texto, 'utf8');
   await fs.rename(tmp, ruta);
 }
 
+/**
+ * Marca como aplicadas las filas indicadas, en lotes de hasta cien IDs.
+ * @param {(string|number)[]} ids Identificadores de las filas que se actualizarán.
+ * @returns {Promise<void>} Se resuelve cuando todos los lotes se han enviado.
+ * @throws {Error} Si falla alguna solicitud de actualización.
+ */
 async function marcarAplicadas(ids) {
   for (let i = 0; i < ids.length; i += 100) {
     const lote = ids.slice(i, i + 100);
@@ -97,6 +171,11 @@ async function marcarAplicadas(ids) {
   }
 }
 
+/**
+ * Descarga, valida y aplica las correcciones pendientes a los archivos de tests.
+ * @returns {Promise<void>} Se resuelve al finalizar el procesamiento.
+ * @throws {Error} Si falla una operación de red, lectura o escritura no recuperable.
+ */
 async function main() {
   const filas = await descargarPendientes();
   if (!filas.length) {

@@ -1,3 +1,78 @@
+/**
+ * @module
+ * @remarks
+ * Controla la carga, representación y corrección de los tests y del repaso Anki.
+ * Importa explícitamente de storage.js la persistencia, la cola de correcciones y las operaciones del mazo.
+ * La interfaz que controla está definida en test.html.
+ */
+
+import {
+  calificarTarjetaAnki,
+  categoriaDePregunta,
+  claveTarjeta,
+  cargarDatosTest,
+  guardarFlagPregunta,
+  guardarResultadoTest,
+  hoyISO,
+  inicializarMazoAnkiDesdeTests,
+  necesitaInicializarMazo,
+  obtenerCategoriasDebiles,
+  obtenerColaRepasoHoy,
+  obtenerConfigAnki,
+  obtenerParchePregunta,
+  obtenerParchesPreguntas,
+  obtenerProgreso,
+  obtenerTarjetas,
+  preguntasDeDatosTest,
+  previsualizarIntervalosTarjeta,
+  sincronizarDesdeNube,
+  sincronizarFlagsSesion,
+  sincronizarTestsSiToca,
+  sumarDiasISO,
+  esperarGuardadoProgreso,
+  ultimaSincronizacionOk
+} from './storage.js';
+
+/**
+ * Pregunta normalizada que consume el motor, tanto desde los JSON como desde los parches locales.
+ * @typedef {Object} PreguntaTest
+ * @property {string} texto Enunciado que se muestra.
+ * @property {string[]} opciones Respuestas posibles, en su orden original.
+ * @property {number} [correcta] Índice de la respuesta correcta; puede faltar en datos incompletos.
+ * @property {string} [explicacion] Explicación de la respuesta.
+ * @property {string} [imagen] Ruta de la imagen asociada.
+ * @property {string} [id] Identificador persistente, presente en preguntas añadidas.
+ * @property {string} [categoria] Categoría explícita de la pregunta.
+ */
+
+/**
+ * Parche validado que actualiza una pregunta existente o añade una al final del test.
+ * @typedef {Object} ParchePreguntaTest
+ * @property {number} testId Número del test.
+ * @property {number} preguntaIdx Índice de la pregunta, empezando en cero.
+ * @property {string} enunciado Enunciado corregido.
+ * @property {string[]} opciones Opciones corregidas.
+ * @property {number} correcta Índice de la opción correcta.
+ * @property {boolean} esNueva Indica si el parche añade una pregunta.
+ * @property {string} [explicacion] Explicación corregida.
+ * @property {string} [nota] Motivo opcional del reporte.
+ * @property {string} [imagen] URL o ruta de la imagen.
+ * @property {string} [imagenStoragePath] Ruta de la imagen en Supabase Storage.
+ * @property {boolean} [sincronizado] Indica si se envió a Supabase.
+ */
+
+/**
+ * Contexto de apertura y callbacks del modal de corrección.
+ * @typedef {Object} ContextoCorreccion
+ * @property {number} testId Número del test.
+ * @property {number} preguntaIdx Índice de la pregunta, empezando en cero.
+ * @property {PreguntaTest} [pregunta] Pregunta existente; si falta y esNueva es true, se crea una.
+ * @property {boolean} [esNueva] Indica que la operación añade o edita una pregunta añadida.
+ * @property {() => void} [alAbrir] Callback al abrir el modal.
+ * @property {(parche: ParchePreguntaTest, resultado: Object) => void} [alGuardar] Callback tras guardar.
+ * @property {() => void} [alCerrar] Callback al cerrar el modal.
+ */
+
 (function () {
   const params = new URLSearchParams(window.location.search);
   const modoParam = params.get('modo');
@@ -5,10 +80,17 @@
   const letras = ['a', 'b', 'c', 'd'];
   const BANDERA_VISIBLE = ['repaso', 'falladas'].includes(modoParam);
 
+  /** @type {PreguntaTest[]} Preguntas cargadas para el test tradicional actual. */
   let PREGUNTAS = [];
   let BANDERA_TEST_VISIBLE = false;
+  /** @type {?number} Identificador del test abierto, también expuesto para la interfaz. */
   window.TEST_ID = null;
 
+  /**
+   * Escapa caracteres HTML para interpolar texto de preguntas de forma segura.
+   * @param {*} valor Valor que se convertirá en texto.
+   * @returns {string} Texto con caracteres HTML escapados.
+   */
   function escaparHTML(valor) {
     return String(valor).replace(/[&<>"]/g, (caracter) => ({
       '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'
@@ -29,8 +111,12 @@
   const btnVolver = document.getElementById('btnVolver');
   const estadoGuardado = document.getElementById('estadoGuardado');
 
+  form.addEventListener('submit', (event) => event.preventDefault());
+  if (btnCorregir) btnCorregir.addEventListener('click', corregirTest);
+
   // Sincroniza con la nube en segundo plano nada más abrir: así el guardado parte del progreso
   // más reciente (evita pisar el historial de otro dispositivo si se abre el test directamente).
+  /** @type {Promise<*>} Sincronización inicial del progreso; null si la sincronización no está disponible. */
   const sincronizacionInicial = (typeof sincronizarDesdeNube === 'function')
     ? sincronizarDesdeNube().catch((e) => { console.error(e); return null; })
     : Promise.resolve(null);
@@ -70,6 +156,11 @@
   }
 
   /* ================= AVISOS ================= */
+  /**
+   * Oculta el formulario y muestra un aviso bloqueante de carga o configuración.
+   * @param {string} html Contenido HTML del aviso.
+   * @returns {void}
+   */
   function mostrarAviso(html) {
     form.style.display = 'none';
     aviso.style.cssText = 'display:block;padding:18px 20px;margin:24px 0;border-radius:var(--radius-2xl);' +
@@ -77,6 +168,12 @@
     aviso.innerHTML = html + '<p style="margin:12px 0 0;"><a href="index.html">← Volver a la lista de tests</a></p>';
   }
 
+  /**
+   * Actualiza el estado accesible de guardado del test.
+   * @param {'guardando'|'ok'|'aviso'} tipo Estado visual.
+   * @param {string} texto Mensaje que se mostrará.
+   * @returns {void}
+   */
   function mostrarEstadoGuardado(tipo, texto) {
     const colores = {
       guardando: 'var(--texto-secundario)',
@@ -87,12 +184,23 @@
     estadoGuardado.textContent = texto;
   }
 
+  /**
+   * Convierte un error de sincronización en un detalle corto para la interfaz.
+   * @param {*} err Error original.
+   * @returns {string} Sufijo legible, vacío si no hay mensaje.
+   */
   function mensajeErrorSincronizacion(err) {
     const detalle = err && typeof err.message === 'string' ? err.message.trim() : '';
     return detalle ? ` (${detalle.slice(0, 240)})` : '';
   }
 
   /* ================= PARCHES DE PREGUNTAS ================= */
+  /**
+   * Aplica en memoria los datos normalizados de una corrección.
+   * @param {PreguntaTest} pregunta Pregunta a mutar.
+   * @param {ParchePreguntaTest} parche Corrección persistida.
+   * @returns {PreguntaTest} La misma pregunta ya actualizada.
+   */
   function aplicarParcheAPregunta(pregunta, parche) {
     if (!pregunta || !parche) return pregunta;
     pregunta.texto = parche.enunciado;
@@ -107,6 +215,13 @@
     return pregunta;
   }
 
+  /**
+   * Superpone parches locales aún pendientes y agrega preguntas locales al JSON cargado.
+   * El JSON remoto prevalece frente a parches ya sincronizados que difieran de su contenido.
+   * @param {number} testId Identificador del test cargado.
+   * @param {Object|PreguntaTest[]} data Datos originales del test.
+   * @returns {Object|PreguntaTest[]} Los mismos datos, con parches aplicables incorporados.
+   */
   function aplicarParchesATest(testId, data) {
     if (typeof obtenerParchePregunta !== 'function') return data;
     const preguntas = preguntasDeDatosTest(data);
@@ -173,6 +288,12 @@
     guardar: document.getElementById('corrGuardar')
   };
 
+  /**
+   * Presenta un error de validación en el modal y enfoca el control inválido si se indica.
+   * @param {string} texto Mensaje de validación; vacío para limpiar el error.
+   * @param {HTMLElement} [campo] Campo al que se añadirá el estado inválido.
+   * @returns {void}
+   */
   function mostrarErrorCorreccion(texto, campo) {
     mc.error.textContent = texto;
     mc.error.hidden = !texto;
@@ -186,6 +307,10 @@
   let archivoImagenCorreccion = null;
   let urlVistaPreviaImagen = null;
 
+  /**
+   * Libera la URL temporal de la imagen y restablece la vista previa.
+   * @returns {void}
+   */
   function limpiarVistaPreviaImagen() {
     if (urlVistaPreviaImagen) URL.revokeObjectURL(urlVistaPreviaImagen);
     urlVistaPreviaImagen = null;
@@ -194,6 +319,13 @@
     mc.imagenNombre.textContent = '';
   }
 
+  /**
+   * Muestra una imagen seleccionada en el modal.
+   * @param {string} src URL o ruta de la imagen.
+   * @param {string} nombre Nombre que se muestra junto a la vista previa.
+   * @param {boolean} [temporal=false] Si es temporal, se revoca al limpiar la vista previa.
+   * @returns {void}
+   */
   function mostrarVistaPreviaImagen(src, nombre, temporal = false) {
     limpiarVistaPreviaImagen();
     if (!src) return;
@@ -203,6 +335,11 @@
     mc.imagenPreview.hidden = false;
   }
 
+  /**
+   * Valida el formato y tamaño de la imagen seleccionada y prepara su vista previa.
+   * @param {File} archivo Archivo de imagen seleccionado por el usuario.
+   * @returns {void}
+   */
   function seleccionarImagenCorreccion(archivo) {
     if (!archivo) return;
     if (!['image/jpeg', 'image/png', 'image/webp'].includes(archivo.type)) {
@@ -224,12 +361,21 @@
     mostrarVistaPreviaImagen(URL.createObjectURL(archivo), archivo.name, true);
   }
 
+  /**
+   * Deshabilita la selección de la opción c) cuando su texto está vacío.
+   * @returns {void}
+   */
   function sincronizarRadioC() {
     const vacia = !mc.opciones[2].value.trim();
     mc.radios[2].disabled = vacia;
     if (vacia && mc.radios[2].checked) mc.radios[2].checked = false;
   }
 
+  /**
+   * Rellena y abre el modal de corrección para una pregunta existente o nueva.
+   * @param {ContextoCorreccion} ctx Identidad de la pregunta y callbacks del flujo.
+   * @returns {void}
+   */
   function abrirModalCorreccion(ctx) {
     if (!mc.overlay || modalCorreccionAbierto || !ctx || (!ctx.pregunta && !ctx.esNueva)) return;
     ctxCorreccion = ctx;
@@ -268,6 +414,10 @@
     mc.enunciado.focus();
   }
 
+  /**
+   * Cierra el modal si no hay una corrección en curso y notifica al contexto.
+   * @returns {void}
+   */
   function cerrarModalCorreccion() {
     if (!modalCorreccionAbierto || guardandoCorreccion) return;
     const ctx = ctxCorreccion;
@@ -281,6 +431,10 @@
     if (ctx && typeof ctx.alCerrar === 'function') ctx.alCerrar();
   }
 
+  /**
+   * Valida el formulario, persiste el flag y entrega el parche a la pantalla de origen.
+   * @returns {Promise<void>}
+   */
   async function guardarCorreccion() {
     if (!modalCorreccionAbierto || guardandoCorreccion || !ctxCorreccion) return;
     const ctx = ctxCorreccion;
@@ -362,6 +516,10 @@
   }
 
   /* ================= PARÁMETROS DE URL ================= */
+  /**
+   * Lee y valida el parámetro id de la URL.
+   * @returns {?number} ID positivo del test o null si falta o no es válido.
+   */
   function obtenerIdTest() {
     const raw = (params.get('id') || '').trim();
     if (!/^\d{1,3}$/.test(raw)) return null;
@@ -370,17 +528,32 @@
   }
 
   // Usa cargarDatosTest (storage.js): prueba data/test_070.json y luego data/test_70.json
+  /**
+   * Carga el JSON de un test mediante el cargador compartido de storage.js.
+   * @param {number} n ID numérico del test.
+   * @returns {Promise<Object|PreguntaTest[]>} Datos del test.
+   * @throws {Error} Si el archivo no existe o no puede cargarse.
+   */
   async function cargarJSONTest(n) {
     const data = await cargarDatosTest(n);
     if (!data) throw new Error(`No se pudo cargar data/test_${String(n).padStart(3, '0')}.json`);
     return data;
   }
 
+  /**
+   * Normaliza las rutas heredadas de imágenes para usarlas desde test.html.
+   * @param {string} ruta Ruta recibida desde el JSON.
+   * @returns {string} Ruta normalizada o cadena vacía.
+   */
   function normalizarImagen(ruta) {
     return ruta ? String(ruta).replace(/^\.\.\//, '') : '';
   }
 
   /* ================= RENDER (modos examen / estudio) ================= */
+  /**
+   * Construye y monta todas las tarjetas del test tradicional.
+   * @returns {void}
+   */
   function renderPreguntas() {
     contenedor.innerHTML = '';
 
@@ -389,6 +562,12 @@
     });
   }
 
+  /**
+   * Crea el DOM de una tarjeta, sus opciones, imagen y controles de corrección.
+   * @param {PreguntaTest} preg Datos de la pregunta.
+   * @param {number} idx Índice de la pregunta, empezando en cero.
+   * @returns {HTMLElement} Artículo listo para insertar en el documento.
+   */
   function crearTarjetaPregunta(preg, idx) {
     const imagenSrc = normalizarImagen(preg.imagen);
     const tieneImg = Boolean(imagenSrc);
@@ -437,6 +616,11 @@
     return article;
   }
 
+  /**
+   * Abre la edición de una pregunta del test tradicional y repinta la tarjeta al guardar.
+   * @param {number} preguntaIdx Índice de la pregunta, empezando en cero.
+   * @returns {void}
+   */
   function abrirCorreccionTest(preguntaIdx) {
     const pregunta = PREGUNTAS[preguntaIdx];
     if (!BANDERA_TEST_VISIBLE || !pregunta) return;
@@ -469,6 +653,10 @@
     });
   }
 
+  /**
+   * Abre el modal para añadir una pregunta al final o editar la última pregunta local nueva.
+   * @returns {void}
+   */
   function abrirAltaPregunta() {
     if (!btnAnadirPregunta || !window.TEST_ID) return;
     const ultima = PREGUNTAS[PREGUNTAS.length - 1];
@@ -534,6 +722,12 @@
     abrirCorreccionTest(Number(boton.dataset.preguntaIdx));
   });
 
+  /**
+   * Actualiza el feedback visual de la respuesta en modo estudio o tras corregir el test.
+   * @param {number} idx Índice de la pregunta, empezando en cero.
+   * @param {number} seleccion Índice de la opción seleccionada; -1 indica pregunta sin responder.
+   * @returns {void}
+   */
   function marcarCorreccionPregunta(idx, seleccion) {
     const correcta = PREGUNTAS[idx].correcta;
     if (typeof correcta !== 'number') return; // JSON sin respuesta correcta conocida
@@ -551,7 +745,19 @@
   /* ================= CORRECCIÓN + GUARDADO ================= */
   let corrigiendo = false;
 
-  window.corregirTest = async function () {
+  /**
+   * Corrige el intento tradicional, guarda su resultado y sincroniza los flags de sesión.
+   * @returns {Promise<void>}
+   * @mermaid
+   * ```mermaid
+   * flowchart TD
+   *   A[Enviar respuestas] --> B[Calcular aciertos y fallos]
+   *   B --> C[Guardar resultado local y remoto]
+   *   C --> D[Sincronizar flags pendientes]
+   *   D --> E[Mostrar estado final]
+   * ```
+   */
+  async function corregirTest() {
     if (corrigiendo || !PREGUNTAS.length) return;
     corrigiendo = true;
     if (btnCorregir) btnCorregir.disabled = true;
@@ -663,7 +869,7 @@
     );
 
     if (btnVolver) btnVolver.style.display = 'inline-flex';
-  };
+  }
 
   /* =====================================================================
    *  MODO REPASO (Anki): una tarjeta cada vez, controlado por teclado
@@ -688,6 +894,22 @@
   const ICONO_BANDERA = `<svg ${SVG_ATTRS}><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg>`;
   const ICONO_ASPA = `<svg ${SVG_ATTRS}><path d="M6 6l12 12M18 6L6 18"/></svg>`;
 
+  /**
+   * Inicializa la experiencia de repaso Anki y coordina su sesión, tarjetas y vistas.
+   * @returns {void}
+   * @mermaid
+   * ```mermaid
+   * sequenceDiagram
+   *   participant UI as Interfaz
+   *   participant Store as storage.js
+   *   participant Tests as data/test_XXX.json
+   *   UI->>Store: sincronizar progreso y mazo
+   *   Store->>Tests: cargar preguntas del bloque
+   *   Tests-->>Store: preguntas válidas
+   *   Store-->>UI: tarjetas listas
+   *   UI->>UI: mostrar pregunta y capturar respuesta
+   * ```
+   */
   function iniciarRepaso() {
     const cont = document.getElementById('repasoContainer');
     if (!cont) return;
@@ -723,11 +945,31 @@
     let primeraVezActual = false;
     let pausaCorreccion = null;
 
+    /**
+     * Busca un elemento por su ID dentro del documento.
+     * @param {string} id ID del elemento.
+     * @returns {?HTMLElement} Elemento encontrado o null.
+     */
     const el = (id) => document.getElementById(id);
+    /**
+     * Escapa texto antes de interpolarlo en una plantilla HTML.
+     * @param {*} s Valor que se convertirá en texto.
+     * @returns {string} Texto con caracteres HTML escapados.
+     */
     const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    /**
+     * Comprueba la preferencia del usuario para reducir el movimiento.
+     * @returns {boolean} true si el sistema solicita reducir animaciones.
+     */
     const reducirMovimiento = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // Fisher–Yates (modifica y devuelve el array)
+    /**
+     * Baraja un array in situ mediante Fisher–Yates.
+     * @template T
+     * @param {T[]} arr Elementos que se mezclarán.
+     * @returns {T[]} El mismo array, ya barajado.
+     */
     function barajarArray(arr) {
       for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -736,6 +978,11 @@
       return arr;
     }
 
+    /**
+     * Calcula la mediana de una colección numérica sin modificarla.
+     * @param {number[]} valores Valores de entrada.
+     * @returns {number} Mediana o cero si no hay valores.
+     */
     function calcularMediana(valores) {
       if (!valores.length) return 0;
       const orden = [...valores].sort((a, b) => a - b);
@@ -743,8 +990,18 @@
       return orden.length % 2 ? orden[mitad] : (orden[mitad - 1] + orden[mitad]) / 2;
     }
 
+    /**
+     * Formatea segundos con una cifra decimal.
+     * @param {number} s Tiempo en segundos.
+     * @returns {string} Tiempo formateado con sufijo s.
+     */
     const fmtSeg = (s) => `${(Math.round(s * 10) / 10).toFixed(1)}s`;
 
+    /**
+     * Formatea una fecha ISO (AAAA-MM-DD) como fecha breve en español.
+     * @param {string} iso Fecha ISO.
+     * @returns {string} Fecha localizada y abreviada.
+     */
     function fechaCortaISO(iso) {
       const [y, m, d] = iso.split('-').map(Number);
       return new Date(y, m - 1, d)
@@ -753,11 +1010,19 @@
     }
 
     // Cronómetro silencioso: solo guarda el instante de inicio; no pinta nada en pantalla
+    /**
+     * Registra el instante de inicio de la tarjeta actual.
+     * @returns {void}
+     */
     function iniciarCronometro() {
       inicioTarjeta = performance.now();
     }
 
     // Congela el tiempo exacto al responder (tope 60 s, 1 decimal) en tiempoActual
+    /**
+     * Detiene el cronómetro y guarda el tiempo de respuesta con el límite configurado.
+     * @returns {void}
+     */
     function detenerCronometro() {
       if (inicioTarjeta === null) return;
       const seg = Math.min(TOPE_TIEMPO_SEG, (performance.now() - inicioTarjeta) / 1000);
@@ -768,6 +1033,12 @@
     // Tiempo esperado para ESTA tarjeta:
     //   con historial (tiempoMedioSeg > 0): 65 % su tiempo medio histórico + 35 % mediana de hoy
     //   sin historial: la mediana de hoy (10 s de referencia neutral mientras haya < 3 respuestas)
+    /**
+     * Combina el historial de la tarjeta con el ritmo reciente de la sesión.
+     * @param {number[]} tiemposPrevios Tiempos de respuesta anteriores de esta sesión.
+     * @param {number} tiempoMedioTarjeta Media histórica de la tarjeta, si existe.
+     * @returns {{real: boolean, medianaHoy: number, hist: boolean, esperado: number}} Referencia calculada.
+     */
     function calcularReferencia(tiemposPrevios, tiempoMedioTarjeta) {
       const real = tiemposPrevios.length >= MIN_RESPUESTAS_MEDIANA;
       const medianaHoy = real ? calcularMediana(tiemposPrevios) : REFERENCIA_INICIAL_SEG;
@@ -777,6 +1048,14 @@
     }
 
     // La sugerencia solo destaca un botón: la calificación final la elige siempre el usuario.
+    /**
+     * Sugiere un nivel de confianza a partir de acierto y duración, sin calificar automáticamente.
+     * @param {boolean} acierto Si la respuesta fue correcta.
+     * @param {number} tiempo Tiempo empleado en segundos.
+     * @param {number[]} tiemposPrevios Tiempos anteriores de la sesión.
+     * @param {number} tiempoMedioTarjeta Media histórica de la tarjeta.
+     * @returns {{nivel: 'hard'|'medium'|'easy'|'again', texto: string}} Nivel sugerido y explicación.
+     */
     function sugerirConfianza(acierto, tiempo, tiemposPrevios, tiempoMedioTarjeta) {
       const r = calcularReferencia(tiemposPrevios, tiempoMedioTarjeta);
       const esp = fmtSeg(r.esperado);
@@ -798,16 +1077,31 @@
       return { nivel: 'hard', texto: `Más lenta de lo esperado (${t} vs ${esp})` };
     }
 
+    /**
+     * Presenta el estado de carga del repaso.
+     * @param {string} texto Mensaje de progreso.
+     * @returns {void}
+     */
     function pintarCarga(texto) {
       fase = 'carga';
       cont.innerHTML = `<div class="repaso-carga"><div class="repaso-spinner" aria-hidden="true"></div><p>${esc(texto)}</p></div>`;
     }
 
+    /**
+     * Sustituye el escenario por un aviso final con enlace de retorno.
+     * @param {string} html Contenido HTML del aviso.
+     * @returns {void}
+     */
     function pintarAviso(html) {
       fase = 'final';
       cont.innerHTML = `<div class="repaso-final"><p class="repaso-final-sub">${html}</p><a class="btn btn--primario btn--lg" href="index.html">Volver al panel</a></div>`;
     }
 
+    /**
+     * Resuelve la pregunta válida asociada a una clave de tarjeta Anki.
+     * @param {string} clave Clave persistente de la tarjeta.
+     * @returns {?PreguntaTest} Pregunta con opciones y respuesta correcta, o null si no es válida.
+     */
     function preguntaDeClave(clave) {
       const t = obtenerTarjetas()[clave];
       if (!t) return null;
@@ -816,6 +1110,10 @@
       return p && Array.isArray(p.opciones) && typeof p.correcta === 'number' ? p : null;
     }
 
+    /**
+     * Carga hasta diez tarjetas siguientes, sus tests y las preguntas válidas para el bloque.
+     * @returns {Promise<number>} Cantidad de tarjetas cargadas correctamente.
+     */
     async function cargarSiguienteBloquePreguntas() {
       const claves = sesion.siguientes.splice(0, TAMANO_BLOQUE_REPASO);
       const tarjetas = obtenerTarjetas();
@@ -831,12 +1129,22 @@
       return validas.length;
     }
 
+    /**
+     * Convierte el intervalo de repetición en la etiqueta que se muestra en un botón.
+     * @param {'hard'|'medium'|'easy'|'again'} nivel Nivel de confianza.
+     * @param {number} dias Días hasta la siguiente repetición.
+     * @returns {string} Etiqueta localizada del intervalo.
+     */
     function etiquetaIntervalo(nivel, dias) {
       if (nivel === 'again' || !(dias > 0)) return 'Hoy';
       return dias === 1 ? '1 día' : `${dias} días`;
     }
 
     /* ---------- Barra superior (persistente entre tarjetas) ---------- */
+    /**
+     * Renderiza la cabecera persistente y el escenario de tarjetas del repaso.
+     * @returns {void}
+     */
     function montarShell() {
       cont.innerHTML = `
         <header class="repaso-topbar">
@@ -861,6 +1169,10 @@
       `;
     }
 
+    /**
+     * Actualiza la barra y el contador de avance de la sesión.
+     * @returns {void}
+     */
     function actualizarProgreso() {
       const pct = sesion.total ? Math.min(100, Math.round((sesion.hechas / sesion.total) * 100)) : 0;
       const barra = el('repasoBarra');
@@ -872,6 +1184,11 @@
     }
 
     // anim: 'pop' (acierto seguido) | 'cae' (racha reiniciada) | null (solo pintar)
+    /**
+     * Pinta la racha actual y, si corresponde, dispara su animación.
+     * @param {'pop'|'cae'|null} anim Animación de acierto o reinicio; null solo actualiza.
+     * @returns {void}
+     */
     function pintarCombo(anim) {
       const combo = el('repasoCombo');
       const num = el('repasoComboNum');
@@ -886,6 +1203,10 @@
     }
 
     /* ---------- Pantalla de tarjeta ---------- */
+    /**
+     * Decide si muestra tarjeta, resumen de bloque, carga adicional o resumen final.
+     * @returns {void}
+     */
     function mostrarTarjeta() {
       if (!sesion.pendientes.length) {
         if (sesion.siguientes.length && sesion.respondidasBloque > 0) {
@@ -930,6 +1251,10 @@
       iniciarCronometro();
     }
 
+    /**
+     * Establece el orden visible de las opciones y calcula el índice visual de la correcta.
+     * @returns {void}
+     */
     function generarOrdenVisual() {
       const barajar = typeof obtenerConfigAnki === 'function' && obtenerConfigAnki().barajarOpciones === true;
       ordenVisual = pregActual.opciones.map((_, i) => i);
@@ -937,6 +1262,10 @@
       correctaVisual = ordenVisual.indexOf(pregActual.correcta);
     }
 
+    /**
+     * Renderiza la tarjeta actual con enunciado, opciones, contexto y controles.
+     * @returns {void}
+     */
     function pintarTarjeta() {
       const stage = el('repasoStage');
       const tarjeta = obtenerTarjetas()[claveActual];
@@ -984,6 +1313,10 @@
       });
     }
 
+    /**
+     * Refleja en el botón de bandera si la pregunta ya tiene una corrección local.
+     * @returns {void}
+     */
     function actualizarEstadoBandera() {
       const btn = el('btnBandera');
       if (!btn || !claveActual) return;
@@ -995,6 +1328,11 @@
     }
 
     /* ---------- Fase 1: elegir respuesta ---------- */
+    /**
+     * Registra la opción elegida y transiciona de la fase de pregunta a la de confianza.
+     * @param {number} i Índice visible de la opción elegida.
+     * @returns {void}
+     */
     function seleccionarOpcion(i) {
       if (fase !== 'pregunta' || i < 0 || i >= numOpciones) return;
       fase = 'confianza';
@@ -1022,6 +1360,12 @@
       mostrarResultado(true);
     }
 
+    /**
+     * Actualiza la racha actual y máxima según el resultado de la tarjeta.
+     * @param {boolean} acierto Si la respuesta fue correcta.
+     * @param {boolean} animar Si se debe animar el cambio.
+     * @returns {void}
+     */
     function aplicarRacha(acierto, animar) {
       if (acierto) {
         sesion.racha = rachaPrevia + 1;
@@ -1033,6 +1377,11 @@
       }
     }
 
+    /**
+     * Revela la respuesta correcta y muestra los niveles de confianza disponibles.
+     * @param {boolean} primera Si se muestra por primera vez tras responder.
+     * @returns {void}
+     */
     function mostrarResultado(primera) {
       const i = seleccionVisual;
       const correcta = correctaVisual;
@@ -1058,6 +1407,11 @@
       const intervalos = previsualizarIntervalosTarjeta(claveActual) || {};
       const panel = el('repasoConfianza');
       const hoyStr = hoyISO();
+      /**
+       * Genera el botón de evaluación para un nivel de confianza.
+       * @param {{nivel: string, tecla: string, etiqueta: string}} n Definición del nivel.
+       * @returns {string} Fragmento HTML del botón.
+       */
       const botonHTML = (n) => {
         const dias = intervalos[n.nivel];
         const fecha = n.nivel !== 'again' && dias > 0 ? fechaCortaISO(sumarDiasISO(hoyStr, dias)) : '';
@@ -1100,6 +1454,10 @@
       }
     }
 
+    /**
+     * Abre el modal para corregir la tarjeta activa y pausa el cronómetro mientras esté abierto.
+     * @returns {void}
+     */
     function abrirCorreccionActual() {
       if (!BANDERA_VISIBLE || (fase !== 'pregunta' && fase !== 'confianza') || !pregActual) return;
       const tarjeta = obtenerTarjetas()[claveActual];
@@ -1129,6 +1487,10 @@
       });
     }
 
+    /**
+     * Vuelve a renderizar la tarjeta después de una corrección y recalcula el resultado actual.
+     * @returns {void}
+     */
     function repintarTarjetaActual() {
       if (!pregActual || (fase !== 'pregunta' && fase !== 'confianza')) return;
       const originalElegida = fase === 'confianza' && seleccionVisual >= 0
@@ -1164,6 +1526,10 @@
       mostrarResultado(false);
     }
 
+    /**
+     * Revierte la respuesta actual si una corrección hizo inválida la opción elegida.
+     * @returns {void}
+     */
     function deshacerRespuestaActual() {
       tiemposSesion.pop();
       sesion.racha = rachaPrevia;
@@ -1183,6 +1549,20 @@
     }
 
     /* ---------- Fase 2: confianza ---------- */
+    /**
+     * Persiste la calificación elegida, anima la salida y avanza la sesión.
+     * @param {'hard'|'medium'|'easy'|'again'} nivel Calificación seleccionada por el usuario.
+     * @returns {Promise<void>}
+     * @mermaid
+     * ```mermaid
+     * flowchart TD
+     *   A[Elegir confianza] --> B[Guardar tarjeta Anki]
+     *   B --> C[Actualizar contadores del bloque]
+     *   C --> D{¿Bloque completo?}
+     *   D -- Sí --> E[Mostrar resumen del bloque]
+     *   D -- No --> F[Mostrar tarjeta siguiente]
+     * ```
+     */
     async function calificar(nivel) {
       if (fase !== 'confianza' || Date.now() < bloqueoHasta) return;
       fase = 'guardando';
@@ -1228,6 +1608,10 @@
       }
     }
 
+    /**
+     * Muestra los aciertos y fallos del bloque y solicita confirmación para continuar.
+     * @returns {void}
+     */
     function mostrarResumenBloque() {
       fase = 'resumen-bloque';
       const respondidas = sesion.respondidasBloque;
@@ -1257,6 +1641,11 @@
       el('btnContinuarBloque').focus();
     }
 
+    /**
+     * Reinicia los contadores de bloque, carga las preguntas siguientes y reanuda el repaso.
+     * @param {HTMLButtonElement} boton Botón que inició la continuación.
+     * @returns {Promise<void>}
+     */
     async function continuarBloque(boton) {
       if (fase !== 'resumen-bloque') return;
       boton.disabled = true;
@@ -1277,6 +1666,20 @@
     }
 
     /* ---------- Pantalla final ---------- */
+    /**
+     * Espera la persistencia pendiente, sincroniza flags y presenta el resumen de sesión.
+     * @returns {Promise<void>}
+     * @mermaid
+     * ```mermaid
+     * sequenceDiagram
+     *   participant UI as Repaso
+     *   participant Store as storage.js
+     *   UI->>Store: esperarGuardadoProgreso()
+     *   UI->>Store: sincronizarFlagsSesion()
+     *   Store-->>UI: resultado de sincronización
+     *   UI->>UI: renderizar resumen y avisos
+     * ```
+     */
     async function mostrarFinal() {
       fase = 'finalizando';
       let falloSincronizacionFlags = false;
@@ -1430,6 +1833,10 @@
     });
 
     /* ---------- Arranque ---------- */
+    /**
+     * Prepara los datos y el mazo antes de mostrar la primera tarjeta de repaso.
+     * @returns {Promise<void>}
+     */
     (async function arrancar() {
       pintarCarga('Cargando tu progreso...');
       try {
@@ -1477,6 +1884,10 @@
   }
 
   /* ================= ARRANQUE ================= */
+  /**
+   * Selecciona el modo de ejecución y carga el test tradicional cuando corresponda.
+   * @returns {Promise<void>}
+   */
   (async function iniciar() {
     if (MODO === 'repaso' || MODO === 'falladas') {
       iniciarRepaso();

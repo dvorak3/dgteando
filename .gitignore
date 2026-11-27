@@ -5,3 +5,5 @@ __pycache__/
 CEREBRO_DGTEANDO.md
 *.old
 diff*
+docs/
+node_modules/
