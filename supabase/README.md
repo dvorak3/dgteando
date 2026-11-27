@@ -27,6 +27,14 @@ El trigger escucha únicamente `INSERT` en `public.flags_sesiones`, cuya clave U
 
 El frontend sube todos los flags pendientes de la sesión a `flags_preguntas` en un `.upsert()` y después inserta un único marcador en `flags_sesiones`. El trigger crea el dispatch solo al insertar ese marcador; reintentar la misma sesión no crea otro marcador.
 
+La función SQL también crea el bucket público `preguntas-pendientes` (JPG, PNG o WebP; máximo 5 MB) y la política que permite a cada usuario autenticado subir solo a una carpeta cuyo primer segmento sea su `auth.uid()`. El navegador no recibe ninguna clave privilegiada. Ejecuta de nuevo el SQL para aplicar de forma idempotente las columnas `es_nueva` y `imagen_storage_path`, los permisos y la política del bucket.
+
+## Añadir preguntas e imágenes
+
+En un test tradicional, **REPORTAR ERROR** abre el mismo formulario de corrección y permite añadir una pregunta al final del cuestionario, sin mover los índices que ya usa el progreso Anki. La imagen es opcional; al guardarla se carga al bucket de Supabase Storage y el flag guarda su ruta. GitHub Actions descarga esa imagen, la copia a `img/`, añade la pregunta al `data/test_XXX.json` y publica ambos en un solo commit. Los objetos de Storage se conservan como respaldo; no se borran al completar el despliegue.
+
+Si una corrección ya fue desplegada pero el paso final de marcado falló, el script reconoce la pregunta nueva por su `id` y la actualiza en lugar de duplicarla.
+
 > **Aviso de acceso:** Anonymous Sign-Ins identifica sesiones, pero no verifica a la persona. Como el workflow aplica correcciones automáticamente, cualquier visitante que pueda usar la app puede proponer contenido. Antes de habilitarlo en producción, limita el envío (por ejemplo, autenticación verificada, CAPTCHA o una etapa de moderación).
 
 ## Secretos de GitHub Actions
@@ -36,7 +44,7 @@ En **Settings → Secrets and variables → Actions** del repositorio, crea:
 - `SUPABASE_URL`: URL del proyecto Supabase.
 - `SUPABASE_SERVICE_ROLE_KEY`: clave `service_role` del proyecto. Solo se usa en Actions; nunca la publiques ni la pongas en archivos.
 
-El workflow `.github/workflows/aplicar-flags.yml` se inicia con el dispatch o manualmente. Aplica los JSON, hace push si hay cambios y solo entonces marca las filas de Supabase como aplicadas. Si falla el push, los flags permanecen pendientes.
+El workflow `.github/workflows/aplicar-flags.yml` se inicia con el dispatch o manualmente. Aplica los JSON y las imágenes, hace push si hay cambios y solo entonces marca las filas de Supabase como aplicadas. Si falla el push, los flags permanecen pendientes.
 
 ## Ejecución manual local (Node.js 20+)
 

@@ -4,6 +4,7 @@ const STORAGE_KEY = "progreso_tests";
 const USER_ROW_ID = "mi_progreso";
 const FECHA_EXAMEN_DEFECTO = "2026-12-10";
 const ANKI_MAX_TEST = 90; // se intenta cargar data/test_001.json ... data/test_090.json
+let sincronizacionFlagsEnCurso = null;
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
@@ -270,6 +271,13 @@ const TABLA_FLAGS = "flags_preguntas";
 const FLAG_CONFLICTO = "user_id,pregunta_id";
 const TABLA_LOTES_FLAGS = "flags_sesiones";
 const FLAGS_COLA_KEY = "flags_sesion_pendientes";
+const BUCKET_IMAGENES_FLAGS = "preguntas-pendientes";
+const MAX_TAMANO_IMAGEN_FLAG = 5 * 1024 * 1024;
+const TIPOS_IMAGEN_FLAG = Object.freeze({
+  "image/jpeg": "jpg",
+  "image/png": "png",
+  "image/webp": "webp"
+});
 let colaFlagsSesionMemoria = null;
 let sesionFlagsPromise = null;
 
@@ -290,8 +298,11 @@ function normalizarParchePregunta(crudo) {
     enunciado,
     opciones,
     correcta,
+    esNueva: crudo.esNueva === true,
     explicacion: texto(crudo.explicacion),
     nota: texto(crudo.nota),
+    imagen: texto(crudo.imagen),
+    imagenStoragePath: texto(crudo.imagenStoragePath),
     creadoEn: typeof crudo.creadoEn === "string" ? crudo.creadoEn : "",
     actualizadoEn: typeof crudo.actualizadoEn === "string" ? crudo.actualizadoEn : "",
     sincronizado: crudo.sincronizado === true
@@ -342,8 +353,10 @@ function filaFlagDesdeParche(parche, userId) {
     enunciado: parche.enunciado,
     opciones: parche.opciones,
     correcta: parche.correcta,
+    es_nueva: parche.esNueva,
     explicacion: parche.explicacion || null,
-    nota: parche.nota || null
+    nota: parche.nota || null,
+    imagen_storage_path: parche.imagenStoragePath || null
   };
 }
 
@@ -438,22 +451,52 @@ function guardarFlagPregunta(payload) {
   if (!base) {
     throw new Error("Corrección no válida: revisa el enunciado, las opciones (2 o 3) y la respuesta correcta.");
   }
-  const clave = claveTarjeta(base.testId, base.preguntaIdx);
-  const ahora = new Date().toISOString();
-  const progreso = obtenerProgreso();
-  const previo = normalizarParchePregunta(progreso._parchesPreguntas && progreso._parchesPreguntas[clave]);
-  const parche = {
-    ...base,
-    creadoEn: (previo && previo.creadoEn) || ahora,
-    actualizadoEn: ahora,
-    sincronizado: false
+  const guardar = (imagenSubida = null) => {
+    const clave = claveTarjeta(base.testId, base.preguntaIdx);
+    const ahora = new Date().toISOString();
+    const progreso = obtenerProgreso();
+    const previo = normalizarParchePregunta(progreso._parchesPreguntas && progreso._parchesPreguntas[clave]);
+    const parche = {
+      ...base,
+      ...(imagenSubida ? {
+        imagen: imagenSubida.url,
+        imagenStoragePath: imagenSubida.path
+      } : {}),
+      creadoEn: (previo && previo.creadoEn) || ahora,
+      actualizadoEn: ahora,
+      sincronizado: false
+    };
+    guardarParcheLocal(parche);
+    const loteId = encolarFlagSesion(parche);
+    prepararSesionFlags().catch((err) => {
+      console.error("No se pudo preparar la sesión de Supabase para las correcciones:", err);
+    });
+    return { ok: true, parche, nube: "pendiente", loteId };
   };
-  guardarParcheLocal(parche);
-  const loteId = encolarFlagSesion(parche);
-  prepararSesionFlags().catch((err) => {
-    console.error("No se pudo preparar la sesión de Supabase para las correcciones:", err);
+
+  const archivo = payload && payload.imagenArchivo;
+  if (!archivo) return guardar();
+  if (typeof archivo.arrayBuffer !== "function" || !TIPOS_IMAGEN_FLAG[archivo.type]) {
+    throw new Error("La imagen debe ser JPG, PNG o WebP.");
+  }
+  if (!Number.isFinite(archivo.size) || archivo.size <= 0 || archivo.size > MAX_TAMANO_IMAGEN_FLAG) {
+    throw new Error("La imagen debe ocupar entre 1 byte y 5 MB.");
+  }
+
+  return prepararSesionFlags().then(async (sesion) => {
+    if (!sesion || !sesion.user || !sesion.user.id) {
+      throw new Error("No hay sesión autenticada para subir la imagen.");
+    }
+    const extension = TIPOS_IMAGEN_FLAG[archivo.type];
+    const ruta = `${sesion.user.id}/${base.testId}/${base.preguntaIdx + 1}-${nuevoIdLoteFlags()}.${extension}`;
+    const { error } = await supabaseClient.storage
+      .from(BUCKET_IMAGENES_FLAGS)
+      .upload(ruta, archivo, { contentType: archivo.type, upsert: false });
+    if (error) throw new Error(`No se pudo subir la imagen: ${error.message || error}`);
+    const { data } = supabaseClient.storage.from(BUCKET_IMAGENES_FLAGS).getPublicUrl(ruta);
+    if (!data || !data.publicUrl) throw new Error("Supabase no devolvió la URL pública de la imagen.");
+    return guardar({ url: data.publicUrl, path: ruta });
   });
-  return { ok: true, parche, nube: "pendiente", loteId };
 }
 
 async function upsertFlagsConKeepalive(filas, marcador, accessToken) {
@@ -484,8 +527,6 @@ async function upsertFlagsConKeepalive(filas, marcador, accessToken) {
     throw new Error(`Error registrando el lote de correcciones (${respuestaMarcador.status}).`);
   }
 }
-
-let sincronizacionFlagsEnCurso = null;
 
 function sincronizarFlagsSesion({ keepalive = false } = {}) {
   if (sincronizacionFlagsEnCurso) return sincronizacionFlagsEnCurso;

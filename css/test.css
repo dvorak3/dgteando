@@ -80,6 +80,32 @@ a:hover {
   gap: 16px;
 }
 
+.reportar-error-box {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0;
+}
+
+.btn-reportar-error {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-reportar-error[hidden] {
+  display: none;
+}
+
+.btn-reportar-error svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .pregunta-enunciado {
   font-size: var(--text-rem-105);
   font-weight: var(--weight-bold);

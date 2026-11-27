@@ -34,16 +34,16 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
-      - name: Guardar y publicar los cambios de data
+      - name: Guardar y publicar preguntas e imágenes
         run: |
-          if git diff --quiet -- data/; then
-            echo "No hay cambios en data/."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git commit -m "Actualizar preguntas corregidas"
+          git add data/ img/
+          if git diff --cached --quiet -- data/ img/; then
+            echo "No hay cambios en data/ ni img/."
+            exit 0
+          fi
+          git commit -m "Actualizar preguntas reportadas"
           git push
 
       - name: Marcar en Supabase tras el push

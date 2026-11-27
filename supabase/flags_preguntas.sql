@@ -11,6 +11,8 @@ create table if not exists public.flags_preguntas (
   correcta smallint not null,
   explicacion text,
   nota text,
+  es_nueva boolean not null default false,
+  imagen_storage_path text,
   aplicado boolean not null default false,
   aplicado_at timestamptz,
   created_at timestamptz not null default now(),
@@ -23,6 +25,10 @@ create table if not exists public.flags_preguntas (
   constraint flags_preguntas_indice_nonnegative check (pregunta_idx >= 0)
 );
 
+alter table public.flags_preguntas
+  add column if not exists es_nueva boolean not null default false,
+  add column if not exists imagen_storage_path text;
+
 create table if not exists public.flags_sesiones (
   id uuid primary key,
   user_id uuid not null references auth.users(id) on delete cascade,
@@ -32,6 +38,27 @@ create table if not exists public.flags_sesiones (
 
 alter table public.flags_preguntas enable row level security;
 alter table public.flags_sesiones enable row level security;
+
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values (
+  'preguntas-pendientes',
+  'preguntas-pendientes',
+  true,
+  5242880,
+  array['image/jpeg', 'image/png', 'image/webp']
+)
+on conflict (id) do update
+set public = excluded.public,
+    file_size_limit = excluded.file_size_limit,
+    allowed_mime_types = excluded.allowed_mime_types;
+
+drop policy if exists "Users can upload their own pending question images" on storage.objects;
+create policy "Users can upload their own pending question images"
+  on storage.objects for insert to authenticated
+  with check (
+    bucket_id = 'preguntas-pendientes'
+    and (storage.foldername(name))[1] = (select auth.uid())::text
+  );
 
 drop policy if exists "Users can read their own question flags" on public.flags_preguntas;
 create policy "Users can read their own question flags"
@@ -58,11 +85,11 @@ revoke all on public.flags_preguntas from anon, authenticated;
 grant select on public.flags_preguntas to authenticated;
 grant insert (
   user_id, pregunta_id, test_id, pregunta_idx,
-  enunciado, opciones, correcta, explicacion, nota
+  enunciado, opciones, correcta, explicacion, nota, es_nueva, imagen_storage_path
 ) on public.flags_preguntas to authenticated;
 grant update (
   user_id, pregunta_id, test_id, pregunta_idx,
-  enunciado, opciones, correcta, explicacion, nota
+  enunciado, opciones, correcta, explicacion, nota, es_nueva, imagen_storage_path
 ) on public.flags_preguntas to authenticated;
 
 revoke all on public.flags_sesiones from anon, authenticated;
@@ -82,6 +109,8 @@ begin
     or new.correcta is distinct from old.correcta
     or new.explicacion is distinct from old.explicacion
     or new.nota is distinct from old.nota
+    or new.es_nueva is distinct from old.es_nueva
+    or new.imagen_storage_path is distinct from old.imagen_storage_path
   ) then
     new.aplicado := false;
     new.aplicado_at := null;

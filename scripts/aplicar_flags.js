@@ -3,8 +3,12 @@
 
 const fs = require('node:fs/promises');
 const path = require('node:path');
+const crypto = require('node:crypto');
 
 const TABLA = 'flags_preguntas';
+const BUCKET_IMAGENES = 'preguntas-pendientes';
+const MAX_TAMANO_IMAGEN = 5 * 1024 * 1024;
+const TIPOS_IMAGEN = new Set(['image/jpeg', 'image/png', 'image/webp']);
 const TAMANO_PAGINA = 1000;
 const TAMANO_LOTE_PATCH = 100;
 const argumentos = process.argv.slice(2);
@@ -16,6 +20,12 @@ const DIRECTORIO_DATA = path.resolve(
   indiceDirectorio >= 0 && argumentos[indiceDirectorio + 1]
     ? argumentos[indiceDirectorio + 1]
     : path.join(__dirname, '..', 'data')
+);
+const indiceDirectorioImagenes = argumentos.indexOf('--img-dir');
+const DIRECTORIO_IMAGENES = path.resolve(
+  indiceDirectorioImagenes >= 0 && argumentos[indiceDirectorioImagenes + 1]
+    ? argumentos[indiceDirectorioImagenes + 1]
+    : path.join(__dirname, '..', 'img')
 );
 
 const SUPABASE_URL = (process.env.SUPABASE_URL || '').replace(/\/+$/, '');
@@ -61,7 +71,7 @@ async function descargarPendientes() {
   for (let offset = 0; ; offset += TAMANO_PAGINA) {
     const consulta = new URLSearchParams({
       aplicado: 'eq.false',
-      select: 'id,pregunta_id,test_id,pregunta_idx,enunciado,opciones,correcta,explicacion,nota,updated_at',
+      select: 'id,pregunta_id,test_id,pregunta_idx,enunciado,opciones,correcta,explicacion,nota,es_nueva,imagen_storage_path,updated_at',
       order: 'updated_at.asc',
       limit: String(TAMANO_PAGINA),
       offset: String(offset)
@@ -72,8 +82,15 @@ async function descargarPendientes() {
   }
 }
 
-function validar(fila, pregunta) {
-  if (!pregunta) return `la pregunta nº ${fila.pregunta_idx + 1} no existe en el JSON`;
+function validar(fila, pregunta, cantidadPreguntas) {
+  if (fila.es_nueva === true) {
+    const yaAplicada = pregunta && String(pregunta.id) === String(fila.pregunta_id);
+    if (!yaAplicada && fila.pregunta_idx !== cantidadPreguntas) {
+      return `la pregunta nueva debe añadirse al final (índice esperado ${cantidadPreguntas})`;
+    }
+  } else if (!pregunta) {
+    return `la pregunta nº ${fila.pregunta_idx + 1} no existe en el JSON`;
+  }
   if (typeof fila.enunciado !== 'string' || !fila.enunciado.trim()) return 'enunciado vacío';
   if (!Array.isArray(fila.opciones) || fila.opciones.length < 2 || fila.opciones.length > 3) {
     return 'debe haber 2 o 3 opciones';
@@ -89,6 +106,46 @@ function validar(fila, pregunta) {
     return 'identificador de test o índice no válido';
   }
   return null;
+}
+
+function nombreImagen(testId, preguntaIdx, storagePath, tipo) {
+  const hash = crypto.createHash('sha256').update(storagePath).digest('hex').slice(0, 12);
+  const extension = tipo === 'image/jpeg' ? 'jpg' : tipo.split('/')[1];
+  return `test_${String(testId).padStart(3, '0')}_pregunta_${preguntaIdx + 1}_${hash}.${extension}`;
+}
+
+async function descargarImagen(storagePath) {
+  const segmentos = storagePath.split('/');
+  if (!storagePath || segmentos.some((segmento) => !segmento || segmento === '.' || segmento === '..')) {
+    throw new Error('La ruta de imagen de Storage no es válida.');
+  }
+  const ruta = segmentos.map(encodeURIComponent).join('/');
+  const respuesta = await fetch(
+    `${SUPABASE_URL}/storage/v1/object/${BUCKET_IMAGENES}/${ruta}`,
+    { headers: cabeceras }
+  );
+  if (!respuesta.ok) {
+    throw new Error(`No se pudo descargar la imagen de Storage (${respuesta.status}): ${(await respuesta.text()).slice(0, 200)}`);
+  }
+  const tipo = (respuesta.headers.get('content-type') || '').split(';')[0].trim();
+  if (!TIPOS_IMAGEN.has(tipo)) throw new Error(`Tipo de imagen no permitido en Storage: ${tipo || 'desconocido'}.`);
+  const contenido = Buffer.from(await respuesta.arrayBuffer());
+  if (!contenido.length || contenido.length > MAX_TAMANO_IMAGEN) {
+    throw new Error('La imagen descargada está vacía o supera los 5 MB.');
+  }
+  return { tipo, contenido };
+}
+
+async function escribirImagen(destino, contenido) {
+  await fs.mkdir(path.dirname(destino), { recursive: true });
+  const temporal = `${destino}.tmp-${process.pid}`;
+  try {
+    await fs.writeFile(temporal, contenido);
+    await fs.rename(temporal, destino);
+  } catch (error) {
+    await fs.rm(temporal, { force: true });
+    throw error;
+  }
 }
 
 async function localizarJSON(testId) {
@@ -209,12 +266,19 @@ async function aplicarPendientes() {
     let cambios = 0;
     for (const correccion of correcciones) {
       const { ganadora, ids } = correccion;
-      const pregunta = preguntas[ganadora.pregunta_idx];
-      const error = validar(ganadora, pregunta);
+      let pregunta = preguntas[ganadora.pregunta_idx];
+      const error = validar(ganadora, pregunta, preguntas.length);
       if (error) {
         console.warn(`${ganadora.pregunta_id}: ${error}; la corrección sigue pendiente.`);
         omitidas++;
         continue;
+      }
+
+      const esNuevaNoAplicada = ganadora.es_nueva === true
+        && (!pregunta || String(pregunta.id) !== String(ganadora.pregunta_id));
+      if (esNuevaNoAplicada) {
+        pregunta = { id: ganadora.pregunta_id };
+        preguntas.push(pregunta);
       }
 
       pregunta.texto = ganadora.enunciado.trim();
@@ -225,12 +289,29 @@ async function aplicarPendientes() {
       } else {
         delete pregunta.explicacion;
       }
+      if (ganadora.imagen_storage_path) {
+        let tipo = 'image/jpeg';
+        let contenido = null;
+        if (!DRY_RUN) {
+          const descarga = await descargarImagen(ganadora.imagen_storage_path);
+          tipo = descarga.tipo;
+          contenido = descarga.contenido;
+        } else {
+          const extension = path.extname(ganadora.imagen_storage_path).toLowerCase();
+          tipo = extension === '.png' ? 'image/png' : extension === '.webp' ? 'image/webp' : 'image/jpeg';
+        }
+        const archivo = nombreImagen(testId, ganadora.pregunta_idx, ganadora.imagen_storage_path, tipo);
+        pregunta.imagen = path.posix.join('..', 'img', archivo);
+        if (contenido) {
+          await escribirImagen(path.join(DIRECTORIO_IMAGENES, archivo), contenido);
+        }
+      }
       delete pregunta.correcta_detectada;
       pregunta.corregida = true;
       cambios++;
       aplicadas++;
       idsAplicables.push(...ids);
-      console.log(`Aplicada ${ganadora.pregunta_id}.`);
+      console.log(`${ganadora.es_nueva ? 'Añadida' : 'Aplicada'} ${ganadora.pregunta_id}.`);
     }
 
     if (cambios && !DRY_RUN) {

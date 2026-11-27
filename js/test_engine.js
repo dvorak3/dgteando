@@ -25,6 +25,7 @@
   const aviso = document.getElementById('avisoTest');
   const tituloNum = document.getElementById('testNum');
   const btnCorregir = document.getElementById('btnCorregir');
+  const btnAnadirPregunta = document.getElementById('btnAnadirPregunta');
   const estadoGuardado = document.getElementById('estadoGuardado');
 
   // Sincroniza con la nube en segundo plano nada más abrir: así el guardado parte del progreso
@@ -32,6 +33,12 @@
   const sincronizacionInicial = (typeof sincronizarDesdeNube === 'function')
     ? sincronizarDesdeNube().catch((e) => { console.error(e); return null; })
     : Promise.resolve(null);
+
+  window.addEventListener('beforeunload', () => {
+    sincronizarFlagsSesion({ keepalive: true }).catch((err) => {
+      console.error('Error enviando correcciones al cerrar la página:', err);
+    });
+  });
 
   /* ================= AVISOS ================= */
   function mostrarAviso(html) {
@@ -59,6 +66,8 @@
     pregunta.correcta = parche.correcta;
     if (parche.explicacion) pregunta.explicacion = parche.explicacion;
     else delete pregunta.explicacion;
+    if (parche.imagen) pregunta.imagen = parche.imagen;
+    if (parche.imagenStoragePath) pregunta._imagenStoragePath = parche.imagenStoragePath;
     pregunta.corregida = true;
     delete pregunta.correcta_detectada;
     return pregunta;
@@ -68,9 +77,33 @@
     if (typeof obtenerParchePregunta !== 'function') return data;
     const preguntas = preguntasDeDatosTest(data);
     if (!preguntas) return data;
-    preguntas.forEach((pregunta, preguntaIdx) => {
-      const parche = obtenerParchePregunta(testId, preguntaIdx);
-      if (parche) aplicarParcheAPregunta(pregunta, parche);
+    const parches = typeof obtenerParchesPreguntas === 'function'
+      ? Object.values(obtenerParchesPreguntas())
+      : [];
+    parches
+      .filter((parche) => parche.testId === testId)
+      .sort((a, b) => a.preguntaIdx - b.preguntaIdx)
+      .forEach((parche) => {
+        const pregunta = preguntas[parche.preguntaIdx];
+        if (parche.esNueva && !pregunta && parche.preguntaIdx === preguntas.length) {
+          const nueva = {
+            id: claveTarjeta(testId, parche.preguntaIdx),
+            texto: parche.enunciado,
+            opciones: parche.opciones.slice(),
+            correcta: parche.correcta,
+            corregida: true,
+            _localNueva: true
+          };
+          if (parche.explicacion) nueva.explicacion = parche.explicacion;
+          if (parche.imagen) nueva.imagen = parche.imagen;
+          if (parche.imagenStoragePath) nueva._imagenStoragePath = parche.imagenStoragePath;
+          preguntas.push(nueva);
+        } else if (pregunta && (
+          !parche.esNueva
+          || String(pregunta.id) === claveTarjeta(testId, parche.preguntaIdx)
+        )) {
+          aplicarParcheAPregunta(pregunta, parche);
+        }
     });
     return data;
   }
@@ -89,6 +122,13 @@
     radios: [0, 1, 2].map((i) => document.getElementById(`corrRadio${i}`)),
     explicacion: document.getElementById('corrExplicacion'),
     nota: document.getElementById('corrNota'),
+    nuevaAviso: document.getElementById('corrPreguntaNuevaAviso'),
+    imagenCampo: document.getElementById('corrImagenCampo'),
+    imagenDrop: document.getElementById('corrImagenDrop'),
+    imagenInput: document.getElementById('corrImagenArchivo'),
+    imagenPreview: document.getElementById('corrImagenPreview'),
+    imagenPreviewImg: document.getElementById('corrImagenPreviewImg'),
+    imagenNombre: document.getElementById('corrImagenNombre'),
     error: document.getElementById('corrError'),
     cerrar: document.getElementById('corrCerrar'),
     cancelar: document.getElementById('corrCancelar'),
@@ -105,6 +145,47 @@
     }
   }
 
+  let archivoImagenCorreccion = null;
+  let urlVistaPreviaImagen = null;
+
+  function limpiarVistaPreviaImagen() {
+    if (urlVistaPreviaImagen) URL.revokeObjectURL(urlVistaPreviaImagen);
+    urlVistaPreviaImagen = null;
+    mc.imagenPreview.hidden = true;
+    mc.imagenPreviewImg.removeAttribute('src');
+    mc.imagenNombre.textContent = '';
+  }
+
+  function mostrarVistaPreviaImagen(src, nombre, temporal = false) {
+    limpiarVistaPreviaImagen();
+    if (!src) return;
+    urlVistaPreviaImagen = temporal ? src : null;
+    mc.imagenPreviewImg.src = src;
+    mc.imagenNombre.textContent = nombre || 'Imagen seleccionada';
+    mc.imagenPreview.hidden = false;
+  }
+
+  function seleccionarImagenCorreccion(archivo) {
+    if (!archivo) return;
+    if (!['image/jpeg', 'image/png', 'image/webp'].includes(archivo.type)) {
+      archivoImagenCorreccion = null;
+      mc.imagenInput.value = '';
+      limpiarVistaPreviaImagen();
+      mostrarErrorCorreccion('La imagen debe ser JPG, PNG o WebP.');
+      return;
+    }
+    if (archivo.size <= 0 || archivo.size > 5 * 1024 * 1024) {
+      archivoImagenCorreccion = null;
+      mc.imagenInput.value = '';
+      limpiarVistaPreviaImagen();
+      mostrarErrorCorreccion('La imagen debe ocupar entre 1 byte y 5 MB.');
+      return;
+    }
+    archivoImagenCorreccion = archivo;
+    mostrarErrorCorreccion('');
+    mostrarVistaPreviaImagen(URL.createObjectURL(archivo), archivo.name, true);
+  }
+
   function sincronizarRadioC() {
     const vacia = !mc.opciones[2].value.trim();
     mc.radios[2].disabled = vacia;
@@ -112,23 +193,35 @@
   }
 
   function abrirModalCorreccion(ctx) {
-    if (!mc.overlay || modalCorreccionAbierto || !ctx || !ctx.pregunta) return;
+    if (!mc.overlay || modalCorreccionAbierto || !ctx || (!ctx.pregunta && !ctx.esNueva)) return;
     ctxCorreccion = ctx;
-    const pregunta = ctx.pregunta;
+    const pregunta = ctx.pregunta || { texto: '', opciones: [], correcta: -1 };
     const parche = typeof obtenerParchePregunta === 'function'
       ? obtenerParchePregunta(ctx.testId, ctx.preguntaIdx)
       : null;
 
-    mc.titulo.textContent = `Corregir pregunta · Test ${String(ctx.testId).padStart(3, '0')} · Pregunta ${String(ctx.preguntaIdx + 1).padStart(2, '0')}`;
+    const creandoNueva = ctx.esNueva && !ctx.pregunta;
+    const accion = ctx.esNueva
+      ? creandoNueva ? 'Añadir pregunta' : 'Editar pregunta añadida'
+      : 'Corregir pregunta';
+    mc.titulo.textContent = `${accion} · Test ${String(ctx.testId).padStart(3, '0')} · Pregunta ${String(ctx.preguntaIdx + 1).padStart(2, '0')}`;
+    mc.nuevaAviso.hidden = !ctx.esNueva;
+    mc.imagenCampo.hidden = !ctx.esNueva;
     mc.enunciado.value = pregunta.texto || '';
     mc.opciones.forEach((input, i) => { input.value = pregunta.opciones[i] || ''; });
     mc.radios.forEach((radio, i) => { radio.checked = typeof pregunta.correcta === 'number' && pregunta.correcta === i; });
     mc.explicacion.value = pregunta.explicacion || '';
     mc.nota.value = parche ? parche.nota : '';
+    archivoImagenCorreccion = null;
+    mc.imagenInput.value = '';
+    limpiarVistaPreviaImagen();
+    if (ctx.esNueva && pregunta.imagen) {
+      mostrarVistaPreviaImagen(normalizarImagen(pregunta.imagen), 'Imagen actual');
+    }
     sincronizarRadioC();
     mostrarErrorCorreccion('');
     mc.guardar.disabled = false;
-    mc.guardar.textContent = 'Guardar corrección';
+    mc.guardar.textContent = creandoNueva ? 'Añadir pregunta' : 'Guardar corrección';
 
     modalCorreccionAbierto = true;
     if (typeof ctx.alAbrir === 'function') ctx.alAbrir();
@@ -144,6 +237,8 @@
     ctxCorreccion = null;
     mc.overlay.classList.remove('activo');
     mc.overlay.setAttribute('aria-hidden', 'true');
+    archivoImagenCorreccion = null;
+    limpiarVistaPreviaImagen();
     if (document.activeElement && document.activeElement !== document.body) document.activeElement.blur();
     if (ctx && typeof ctx.alCerrar === 'function') ctx.alCerrar();
   }
@@ -169,16 +264,22 @@
       resultado = await guardarFlagPregunta({
         testId: ctx.testId,
         preguntaIdx: ctx.preguntaIdx,
+        esNueva: ctx.esNueva === true,
         enunciado,
         opciones: textos,
         correcta: marcada,
         explicacion: mc.explicacion.value.trim(),
-        nota: mc.nota.value.trim()
+        nota: mc.nota.value.trim(),
+        imagen: ctx.pregunta && ctx.pregunta.imagen ? ctx.pregunta.imagen : '',
+        imagenStoragePath: ctx.pregunta && ctx.pregunta._imagenStoragePath
+          ? ctx.pregunta._imagenStoragePath
+          : '',
+        imagenArchivo: archivoImagenCorreccion
       });
     } catch (err) {
       guardandoCorreccion = false;
       mc.guardar.disabled = false;
-      mc.guardar.textContent = 'Guardar corrección';
+      mc.guardar.textContent = ctx.esNueva && !ctx.pregunta ? 'Añadir pregunta' : 'Guardar corrección';
       return mostrarErrorCorreccion(err && err.message ? err.message : 'No se pudo guardar la corrección.');
     }
     guardandoCorreccion = false;
@@ -195,6 +296,17 @@
     mc.cerrar.addEventListener('click', cerrarModalCorreccion);
     mc.cancelar.addEventListener('click', cerrarModalCorreccion);
     mc.opciones[2].addEventListener('input', sincronizarRadioC);
+    mc.imagenInput.addEventListener('change', () => seleccionarImagenCorreccion(mc.imagenInput.files[0]));
+    mc.imagenDrop.addEventListener('dragover', (event) => {
+      event.preventDefault();
+      mc.imagenDrop.classList.add('arrastrando');
+    });
+    mc.imagenDrop.addEventListener('dragleave', () => mc.imagenDrop.classList.remove('arrastrando'));
+    mc.imagenDrop.addEventListener('drop', (event) => {
+      event.preventDefault();
+      mc.imagenDrop.classList.remove('arrastrando');
+      seleccionarImagenCorreccion(event.dataTransfer.files[0]);
+    });
     document.addEventListener('keydown', (event) => {
       if (!modalCorreccionAbierto) return;
       if (event.key === 'Escape') {
@@ -205,6 +317,8 @@
         event.preventDefault();
         event.stopPropagation();
         guardarCorreccion();
+      } else {
+        event.stopPropagation();
       }
     }, true);
   }
@@ -315,6 +429,64 @@
         if (boton) boton.focus();
       }
     });
+  }
+
+  function abrirAltaPregunta() {
+    if (!btnAnadirPregunta || !window.TEST_ID) return;
+    const ultima = PREGUNTAS[PREGUNTAS.length - 1];
+    if (ultima && ultima._localNueva) {
+      abrirModalCorreccion({
+        testId: Number(window.TEST_ID),
+        preguntaIdx: PREGUNTAS.length - 1,
+        pregunta: ultima,
+        esNueva: true,
+        alGuardar: (parche) => {
+          aplicarParcheAPregunta(ultima, parche);
+          const tarjeta = document.getElementById(`pregunta-${PREGUNTAS.length - 1}`);
+          const actualizada = crearTarjetaPregunta(ultima, PREGUNTAS.length - 1);
+          if (tarjeta) tarjeta.replaceWith(actualizada);
+        }
+      });
+      return;
+    }
+
+    abrirModalCorreccion({
+      testId: Number(window.TEST_ID),
+      preguntaIdx: PREGUNTAS.length,
+      esNueva: true,
+      alGuardar: (parche) => {
+        const nueva = {
+          id: claveTarjeta(window.TEST_ID, PREGUNTAS.length),
+          texto: parche.enunciado,
+          opciones: parche.opciones.slice(),
+          correcta: parche.correcta,
+          corregida: true,
+          _localNueva: true
+        };
+        if (parche.explicacion) nueva.explicacion = parche.explicacion;
+        if (parche.imagen) nueva.imagen = parche.imagen;
+        if (parche.imagenStoragePath) nueva._imagenStoragePath = parche.imagenStoragePath;
+        PREGUNTAS.push(nueva);
+        contenedor.appendChild(crearTarjetaPregunta(nueva, PREGUNTAS.length - 1));
+        if (corrigiendo) {
+          corrigiendo = false;
+          if (btnCorregir) btnCorregir.disabled = false;
+          contenedor.querySelectorAll('input[type="radio"]').forEach((radio) => { radio.disabled = false; });
+          const resultado = document.getElementById('resultadoPanel');
+          if (resultado) {
+            resultado.style.display = 'none';
+            resultado.innerHTML = '';
+          }
+          estadoGuardado.textContent = '';
+          const btnVolver = document.getElementById('btnVolver');
+          if (btnVolver) btnVolver.style.display = 'none';
+        }
+      }
+    });
+  }
+
+  if (btnAnadirPregunta) {
+    btnAnadirPregunta.addEventListener('click', abrirAltaPregunta);
   }
 
   contenedor.addEventListener('click', (event) => {
@@ -449,12 +621,6 @@
   function iniciarRepaso() {
     const cont = document.getElementById('repasoContainer');
     if (!cont) return;
-
-    window.addEventListener('beforeunload', () => {
-      sincronizarFlagsSesion({ keepalive: true }).catch((err) => {
-        console.error('Error enviando correcciones al cerrar la página:', err);
-      });
-    });
 
     document.documentElement.classList.add(`modo-${MODO}`);
     form.style.display = 'none';
@@ -1260,7 +1426,8 @@
       aplicarParchesATest(n, data);
       PREGUNTAS = preguntasDeDatosTest(data) || [];
       if (!PREGUNTAS.length) throw new Error('El JSON no contiene preguntas');
-      BANDERA_TEST_VISIBLE = PREGUNTAS.length === 30;
+      BANDERA_TEST_VISIBLE = PREGUNTAS.length >= 29;
+      if (btnAnadirPregunta) btnAnadirPregunta.hidden = false;
       renderPreguntas();
     } catch (err) {
       console.error('Error cargando el test:', err);
