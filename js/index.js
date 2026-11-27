@@ -83,9 +83,10 @@ function formatearFechaEspanol(fechaISO) {
   const partes = fechaISO.split('-');
   if (partes.length !== 3) return fechaISO;
   const meses = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+  const anio = partes[0];
   const mesIdx = parseInt(partes[1], 10) - 1;
   const dia = parseInt(partes[2], 10);
-  return `${dia} ${meses[mesIdx] || partes[1]}`;
+  return `${dia} ${meses[mesIdx] || partes[1]} ${anio}`;
 }
 
 /**
@@ -139,13 +140,29 @@ function renderRachaEstudio() {
   const rachaTexto = document.getElementById('rachaDiasTexto');
   const rachaContexto = document.getElementById('rachaContexto');
   const rachaUnidad = document.getElementById('rachaUnidad');
+  const rachaMensaje = document.getElementById('rachaMensaje');
+  const rachaBadge = document.getElementById('rachaBadge');
   rachaTexto.textContent = dias;
-  rachaUnidad.textContent = dias === 1 ? 'día de racha' : 'días de racha';
+  rachaUnidad.textContent = dias === 1 ? 'día' : 'días';
   const descripcion = dias === 0
     ? 'Sin racha activa'
     : `${dias} ${dias === 1 ? 'día' : 'días'} de racha${practicoHoy ? ', con práctica hoy' : ''}`;
   rachaContexto.setAttribute('aria-label', descripcion);
   rachaContexto.title = descripcion;
+
+  if (dias === 0) {
+    rachaMensaje.textContent = 'Completa un test hoy para encender tu racha diaria.';
+    rachaBadge.textContent = 'Sin racha activa';
+    rachaBadge.classList.remove('completado');
+  } else if (practicoHoy) {
+    rachaMensaje.textContent = '¡Gran ritmo! Ya has sumado práctica en el día de hoy.';
+    rachaBadge.textContent = 'Objetivo de hoy cumplido';
+    rachaBadge.classList.add('completado');
+  } else {
+    rachaMensaje.textContent = 'Haz al menos un test hoy para no perder tu racha.';
+    rachaBadge.textContent = 'Pendiente hoy';
+    rachaBadge.classList.remove('completado');
+  }
 }
 
 /* ================= REPASO INTELIGENTE (ANKI) ================= */

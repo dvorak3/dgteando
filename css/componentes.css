@@ -337,6 +337,24 @@
   fill: none;
 }
 
+.widget-icon-fire {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-lg);
+  background-color: var(--aviso-fondo);
+  color: var(--acento);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.widget-icon-fire svg {
+  width: 19px;
+  height: 19px;
+  fill: currentColor;
+}
+
 .input-fecha-dgt {
   flex: 1;
   padding: 7px 10px;
