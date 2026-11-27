@@ -82,8 +82,12 @@ async function descargarPendientes() {
   }
 }
 
+function esPreguntaNueva(fila, pregunta, cantidadPreguntas) {
+  return fila.es_nueva === true || (!pregunta && fila.pregunta_idx === cantidadPreguntas);
+}
+
 function validar(fila, pregunta, cantidadPreguntas) {
-  if (fila.es_nueva === true) {
+  if (esPreguntaNueva(fila, pregunta, cantidadPreguntas)) {
     const yaAplicada = pregunta && String(pregunta.id) === String(fila.pregunta_id);
     if (!yaAplicada && fila.pregunta_idx !== cantidadPreguntas) {
       return `la pregunta nueva debe añadirse al final (índice esperado ${cantidadPreguntas})`;
@@ -274,7 +278,8 @@ async function aplicarPendientes() {
         continue;
       }
 
-      const esNuevaNoAplicada = ganadora.es_nueva === true
+      const esNueva = esPreguntaNueva(ganadora, pregunta, preguntas.length);
+      const esNuevaNoAplicada = esNueva
         && (!pregunta || String(pregunta.id) !== String(ganadora.pregunta_id));
       if (esNuevaNoAplicada) {
         pregunta = { id: ganadora.pregunta_id };
@@ -311,7 +316,7 @@ async function aplicarPendientes() {
       cambios++;
       aplicadas++;
       idsAplicables.push(...ids);
-      console.log(`${ganadora.es_nueva ? 'Añadida' : 'Aplicada'} ${ganadora.pregunta_id}.`);
+      console.log(`${esNueva ? 'Añadida' : 'Aplicada'} ${ganadora.pregunta_id}.`);
     }
 
     if (cambios && !DRY_RUN) {

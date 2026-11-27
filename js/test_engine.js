@@ -26,6 +26,7 @@
   const tituloNum = document.getElementById('testNum');
   const btnCorregir = document.getElementById('btnCorregir');
   const btnAnadirPregunta = document.getElementById('btnAnadirPregunta');
+  const btnVolver = document.getElementById('btnVolver');
   const estadoGuardado = document.getElementById('estadoGuardado');
 
   // Sincroniza con la nube en segundo plano nada más abrir: así el guardado parte del progreso
@@ -39,6 +40,33 @@
       console.error('Error enviando correcciones al cerrar la página:', err);
     });
   });
+
+  if (btnVolver) {
+    btnVolver.addEventListener('click', async (event) => {
+      if (btnVolver.dataset.sincronizando === 'true') {
+        event.preventDefault();
+        return;
+      }
+      event.preventDefault();
+      btnVolver.dataset.sincronizando = 'true';
+      btnVolver.setAttribute('aria-disabled', 'true');
+      try {
+        const [flags, progresoOk] = await Promise.all([
+          sincronizarFlagsSesion(),
+          esperarGuardadoProgreso()
+        ]);
+        if (!flags.ok) throw new Error('Supabase no confirmó el envío de las correcciones.');
+        if (!progresoOk) throw new Error('El progreso pendiente no se pudo guardar en la nube.');
+        window.location.assign(btnVolver.href);
+      } catch (err) {
+        console.error('No se pudieron sincronizar las correcciones antes de salir:', err);
+        btnVolver.dataset.sincronizando = 'false';
+        btnVolver.removeAttribute('aria-disabled');
+        mostrarEstadoGuardado('aviso',
+          'No se pudieron enviar las preguntas a la nube. Siguen guardadas en este dispositivo; vuelve a pulsar «Volver a la lista» para reintentar.');
+      }
+    });
+  }
 
   /* ================= AVISOS ================= */
   function mostrarAviso(html) {
@@ -556,8 +584,16 @@
 
     const sinRespuestas = PREGUNTAS.every(p => typeof p.correcta !== 'number');
     if (sinRespuestas) {
+      let falloFlags = false;
+      try {
+        await sincronizarFlagsSesion();
+      } catch (err) {
+        console.error('Error sincronizando correcciones al terminar el test:', err);
+        falloFlags = true;
+      }
       mostrarEstadoGuardado('aviso',
-        'Este test no tiene respuestas correctas en su JSON: no se ha guardado el resultado.');
+        'Este test no tiene respuestas correctas en su JSON: no se ha guardado el resultado.' +
+        (falloFlags ? ' Las correcciones siguen guardadas en este dispositivo, pero no se pudieron enviar.' : ''));
       if (btnVolver) btnVolver.style.display = 'inline-flex';
       return;
     }
@@ -565,6 +601,8 @@
     mostrarEstadoGuardado('guardando', 'Guardando progreso...');
 
     let guardadoNube = true;
+    let falloSincronizacionFlags = false;
+    let correccionesEnviadas = 0;
     try {
       await sincronizacionInicial;                       // parte del progreso más reciente de la nube
       const clave = `test_${String(window.TEST_ID).padStart(3, '0')}`;  // misma clave que usa index.js
@@ -579,18 +617,36 @@
       guardadoNube = false;
     }
 
+    try {
+      const resultadoFlags = await sincronizarFlagsSesion();
+      falloSincronizacionFlags = !resultadoFlags.ok;
+      correccionesEnviadas = resultadoFlags.enviados || 0;
+    } catch (err) {
+      console.error('Error sincronizando correcciones al terminar el test:', err);
+      falloSincronizacionFlags = true;
+    }
+
     const nFallos = indicesFallados.length;
     const notaRepaso = nFallos
       ? ` · ${nFallos} ${nFallos === 1 ? 'fallo añadido' : 'fallos añadidos'} al repaso Anki`
       : '';
 
-    if (guardadoNube) {
-      mostrarEstadoGuardado('ok', '✓ Progreso guardado en la nube' + notaRepaso);
-    } else {
-      mostrarEstadoGuardado('aviso',
-        'No se pudo confirmar el guardado en la nube. El resultado está en este dispositivo; ' +
-        'exporta el .json desde la lista si quieres un respaldo.' + notaRepaso);
-    }
+    const mensajesEstado = [
+      guardadoNube
+        ? '✓ Progreso guardado en la nube'
+        : 'No se pudo confirmar el guardado del resultado en la nube; sigue guardado en este dispositivo.',
+      correccionesEnviadas
+        ? `${correccionesEnviadas} ${correccionesEnviadas === 1 ? 'corrección enviada' : 'correcciones enviadas'}`
+        : '',
+      falloSincronizacionFlags
+        ? 'No se pudieron enviar algunas correcciones; siguen guardadas en este dispositivo.'
+        : '',
+      notaRepaso
+    ].filter(Boolean);
+    mostrarEstadoGuardado(
+      guardadoNube && !falloSincronizacionFlags ? 'ok' : 'aviso',
+      mensajesEstado.join(' · ')
+    );
 
     if (btnVolver) btnVolver.style.display = 'inline-flex';
   };
@@ -1320,15 +1376,20 @@
       if (salir) {
         event.preventDefault();
         salir.setAttribute('aria-disabled', 'true');
-        Promise.all([
-          sincronizarFlagsSesion(),
-          esperarGuardadoProgreso().then((ok) => {
-            if (!ok) console.error('El progreso más reciente sigue guardado solo en este dispositivo.');
-          })
-        ]).catch((err) => {
-          console.error('Error guardando el progreso al salir:', err);
-        }).finally(() => {
+        Promise.all([sincronizarFlagsSesion(), esperarGuardadoProgreso()])
+        .then(([resultadoFlags, progresoOk]) => {
+          if (!resultadoFlags.ok) throw new Error('Supabase no confirmó el envío de las correcciones.');
+          if (!progresoOk) throw new Error('El progreso pendiente no se pudo guardar en la nube.');
           window.location.assign(salir.href);
+        })
+        .catch((err) => {
+          console.error('Error guardando los cambios antes de salir:', err);
+          salir.removeAttribute('aria-disabled');
+          const aviso = el('repasoAvisoNube');
+          if (aviso) {
+            aviso.textContent = 'No se pudieron enviar las correcciones a la nube. Siguen guardadas en este dispositivo; pulsa salir para reintentar.';
+            aviso.hidden = false;
+          }
         });
       }
     });
