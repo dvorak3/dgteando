@@ -204,7 +204,8 @@
         "Indica que la calzada por la que circula queda temporalmente cerrada al tráfico."
       ],
       "correcta": 0,
-      "imagen": "../img/test_079_p21.jpg"
+      "imagen": "../img/test_079_p21.jpg",
+      "corregida": true
     },
     {
       "texto": "¿Qué indica esta señal?",

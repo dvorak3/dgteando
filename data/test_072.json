@@ -222,7 +222,8 @@
         "A 120 km/h."
       ],
       "correcta": 0,
-      "imagen": "../img/test_072_p24.jpg"
+      "imagen": "../img/test_072_p24.jpg",
+      "corregida": true
     },
     {
       "texto": "El alcohol, la fatiga y la velocidad excesiva, ¿de qué factor de riesgo forman parte?",
