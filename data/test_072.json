@@ -281,6 +281,17 @@
       ],
       "correcta": 2,
       "imagen": "../img/test_072_p30.jpg"
+    },
+    {
+      "id": "072_30",
+      "texto": "Al adelantar a un peatón, es obligatorio dejar una separación lateral mínima de 1,50 metros cuando circule...",
+      "opciones": [
+        "por poblado, exclusivamente.",
+        "por cualquier vía, fuera o dentro de poblado.",
+        "en vías interurbanas, solamente."
+      ],
+      "correcta": 1,
+      "corregida": true
     }
   ]
 }
