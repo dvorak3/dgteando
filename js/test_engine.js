@@ -63,7 +63,8 @@
         btnVolver.dataset.sincronizando = 'false';
         btnVolver.removeAttribute('aria-disabled');
         mostrarEstadoGuardado('aviso',
-          'No se pudieron enviar las preguntas a la nube. Siguen guardadas en este dispositivo; vuelve a pulsar «Volver a la lista» para reintentar.');
+          'No se pudieron enviar las preguntas a la nube. Siguen guardadas en este dispositivo; vuelve a pulsar «Volver a la lista» para reintentar.' +
+          mensajeErrorSincronizacion(err));
       }
     });
   }
@@ -84,6 +85,11 @@
     };
     estadoGuardado.style.cssText = `margin-top:12px;font-size:var(--text-base);font-weight:var(--weight-semibold);color:${colores[tipo] || 'var(--texto-secundario)'};`;
     estadoGuardado.textContent = texto;
+  }
+
+  function mensajeErrorSincronizacion(err) {
+    const detalle = err && typeof err.message === 'string' ? err.message.trim() : '';
+    return detalle ? ` (${detalle.slice(0, 240)})` : '';
   }
 
   /* ================= PARCHES DE PREGUNTAS ================= */
@@ -126,11 +132,15 @@
           if (parche.imagen) nueva.imagen = parche.imagen;
           if (parche.imagenStoragePath) nueva._imagenStoragePath = parche.imagenStoragePath;
           preguntas.push(nueva);
-        } else if (pregunta && (
-          !parche.esNueva
-          || String(pregunta.id) === claveTarjeta(testId, parche.preguntaIdx)
-        )) {
-          aplicarParcheAPregunta(pregunta, parche);
+        } else if (pregunta && !parche.esNueva) {
+          const coincideConJSON = pregunta.texto === parche.enunciado
+            && pregunta.correcta === parche.correcta
+            && Array.isArray(pregunta.opciones)
+            && pregunta.opciones.length === parche.opciones.length
+            && pregunta.opciones.every((opcion, indice) => opcion === parche.opciones[indice]);
+          if (!parche.sincronizado || coincideConJSON) {
+            aplicarParcheAPregunta(pregunta, parche);
+          }
         }
     });
     return data;
@@ -585,15 +595,17 @@
     const sinRespuestas = PREGUNTAS.every(p => typeof p.correcta !== 'number');
     if (sinRespuestas) {
       let falloFlags = false;
+      let errorFlags = '';
       try {
         await sincronizarFlagsSesion();
       } catch (err) {
         console.error('Error sincronizando correcciones al terminar el test:', err);
         falloFlags = true;
+        errorFlags = mensajeErrorSincronizacion(err);
       }
       mostrarEstadoGuardado('aviso',
         'Este test no tiene respuestas correctas en su JSON: no se ha guardado el resultado.' +
-        (falloFlags ? ' Las correcciones siguen guardadas en este dispositivo, pero no se pudieron enviar.' : ''));
+        (falloFlags ? ` Las correcciones siguen guardadas en este dispositivo, pero no se pudieron enviar.${errorFlags}` : ''));
       if (btnVolver) btnVolver.style.display = 'inline-flex';
       return;
     }
@@ -603,6 +615,7 @@
     let guardadoNube = true;
     let falloSincronizacionFlags = false;
     let correccionesEnviadas = 0;
+    let errorSincronizacionFlags = '';
     try {
       await sincronizacionInicial;                       // parte del progreso más reciente de la nube
       const clave = `test_${String(window.TEST_ID).padStart(3, '0')}`;  // misma clave que usa index.js
@@ -624,6 +637,7 @@
     } catch (err) {
       console.error('Error sincronizando correcciones al terminar el test:', err);
       falloSincronizacionFlags = true;
+      errorSincronizacionFlags = mensajeErrorSincronizacion(err);
     }
 
     const nFallos = indicesFallados.length;
@@ -639,7 +653,7 @@
         ? `${correccionesEnviadas} ${correccionesEnviadas === 1 ? 'corrección enviada' : 'correcciones enviadas'}`
         : '',
       falloSincronizacionFlags
-        ? 'No se pudieron enviar algunas correcciones; siguen guardadas en este dispositivo.'
+        ? `No se pudieron enviar algunas correcciones; siguen guardadas en este dispositivo.${errorSincronizacionFlags}`
         : '',
       notaRepaso
     ].filter(Boolean);
@@ -1388,6 +1402,7 @@
           const aviso = el('repasoAvisoNube');
           if (aviso) {
             aviso.textContent = 'No se pudieron enviar las correcciones a la nube. Siguen guardadas en este dispositivo; pulsa salir para reintentar.';
+            aviso.textContent += mensajeErrorSincronizacion(err);
             aviso.hidden = false;
           }
         });

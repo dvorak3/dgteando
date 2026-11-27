@@ -353,10 +353,10 @@ function filaFlagDesdeParche(parche, userId) {
     enunciado: parche.enunciado,
     opciones: parche.opciones,
     correcta: parche.correcta,
-    es_nueva: parche.esNueva,
     explicacion: parche.explicacion || null,
     nota: parche.nota || null,
-    imagen_storage_path: parche.imagenStoragePath || null
+    ...(parche.esNueva ? { es_nueva: true } : {}),
+    ...(parche.imagenStoragePath ? { imagen_storage_path: parche.imagenStoragePath } : {})
   };
 }
 
