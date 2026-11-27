@@ -148,12 +148,20 @@ a:hover {
 html.modo-repaso .test-title-row,
 html.modo-repaso #formTest,
 html.modo-falladas .test-title-row,
-html.modo-falladas #formTest {
+html.modo-falladas #formTest,
+html.modo-tema .test-title-row,
+html.modo-tema #formTest {
   display: none !important;
 }
 
 html.modo-repaso .test-column,
 html.modo-falladas .test-column {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+html.modo-tema .test-column {
   max-width: none;
   padding: 0;
   margin: 0;

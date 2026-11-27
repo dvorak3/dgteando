@@ -529,50 +529,60 @@
   flex-shrink: 0;
 }
 
-/* Píldoras tipo radio */
+/* ===== Opciones seleccionables: base + modificadores + estados ===== */
 
-.pill-grupo {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.pill-opcion {
+.opcion-pildora {
   cursor: pointer;
   user-select: none;
 }
 
-.pill-opcion input {
+.opcion-pildora input {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
 
-.pill-opcion span {
+.opcion {
+  border: 1px solid var(--borde);
+  background-color: var(--bg-tarjeta);
+  color: var(--texto-principal);
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.opcion:hover:not(:disabled) {
+  border-color: var(--borde-fuerte);
+}
+
+.opcion--pildora {
   display: inline-block;
   padding: 7px 13px;
   border-radius: var(--radius-full);
-  border: 1px solid var(--borde);
   background-color: var(--bg-pagina);
-  color: var(--texto-principal);
   font-size: var(--text-xs-plus);
   font-weight: var(--weight-semibold);
   transition: all 0.15s ease;
 }
 
-.pill-opcion:hover span {
+.opcion-pildora:hover .opcion--pildora {
   border-color: var(--borde-fuerte);
 }
 
-.pill-opcion input:checked + span {
+.opcion-pildora input:checked + .opcion--pildora {
   background-color: var(--acierto-fondo);
   border-color: var(--primario);
   color: var(--primario);
 }
 
-.pill-opcion input:focus-visible + span {
+.opcion-pildora input:focus-visible + .opcion--pildora {
   outline: 2px solid var(--primario);
   outline-offset: 2px;
+}
+
+.pill-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 .input-numero {
@@ -751,27 +761,22 @@
   grid-template-columns: minmax(0, 1fr);
 }
 
-.opcion-label {
+.opcion--test {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  cursor: pointer;
   font-size: var(--text-rem-95);
-  color: var(--texto-principal);
   padding: 11px 14px;
   min-height: 46px;
-  border: 1.5px solid var(--borde);
+  border-width: 1.5px;
   border-radius: var(--radius-xl);
-  background: var(--bg-tarjeta);
-  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 
-.opcion-label:hover {
+.opcion--test:hover {
   background-color: var(--bg-suave);
-  border-color: var(--borde-fuerte);
 }
 
-.opcion-label input[type="radio"] {
+.opcion--test input[type="radio"] {
   margin-top: 4px;
   accent-color: var(--primario);
   cursor: pointer;
@@ -782,20 +787,23 @@
   color: var(--texto-secundario);
 }
 
-.opcion-label:has(input:checked):not(.es-correcta):not(.es-fallo) {
+.opcion--test:has(input:checked):not(.opcion--correcta):not(.opcion--fallo),
+.opcion-pildora input:checked + .opcion--pildora {
   border-color: var(--primario);
   background-color: var(--acierto-fondo);
 }
 
-/* Estados visuales tras corregir (o en modo estudio) */
+.opcion-pildora input:checked + .opcion--pildora {
+  color: var(--primario);
+}
 
-.opcion-label.es-correcta {
+.opcion--correcta {
   background-color: var(--acierto-fondo);
   border-color: var(--primario);
   color: var(--primario-hover);
 }
 
-.opcion-label.es-fallo {
+.opcion--fallo {
   background-color: var(--fallo-fondo);
   border-color: var(--fallo);
   color: var(--fallo);
@@ -959,7 +967,7 @@
   color: var(--acierto-fondo);
 }
 
-.repaso-opcion {
+.opcion--tarjeta {
   position: relative;
   display: flex;
   align-items: center;
@@ -971,11 +979,8 @@
   font-size: var(--text-rem-102);
   font-weight: var(--weight-medium);
   line-height: 1.4;
-  color: var(--texto-principal);
-  background: var(--bg-tarjeta);
-  border: 2px solid var(--borde);
+  border-width: 2px;
   border-radius: var(--radius-2xl);
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition:
     background-color 0.28s ease,
@@ -986,30 +991,28 @@
     opacity 0.28s ease;
 }
 
-.repaso-opcion:hover:not(:disabled) {
+.opcion--tarjeta:hover:not(:disabled) {
   background: var(--bg-suave);
-  border-color: var(--borde-fuerte);
   transform: translateY(-1px);
   box-shadow: var(--sombra-suave);
 }
 
-.repaso-opcion:active:not(:disabled) {
+.opcion--tarjeta:active:not(:disabled) {
   transform: scale(0.99);
 }
 
-.repaso-opcion:focus-visible,
+.opcion--tarjeta:focus-visible,
 .repaso-btn-confianza:focus-visible,
 .repaso-cerrar:focus-visible {
   outline: 3px solid var(--aviso);
   outline-offset: 2px;
 }
 
-.repaso-opcion:disabled {
+.opcion--tarjeta:disabled {
   cursor: default;
-  color: var(--texto-principal);
 }
 
-.repaso-opcion.bloqueada:not(.es-correcta):not(.es-fallo) {
+.opcion--tarjeta.opcion--bloqueada:not(.opcion--correcta):not(.opcion--fallo) {
   opacity: 0.5;
 }
 
@@ -1018,10 +1021,8 @@
   min-width: 0;
 }
 
-.opcion-letra {
-  font-weight: var(--weight-extrabold);
+.opcion--tarjeta .opcion-letra {
   margin-right: 4px;
-  color: var(--texto-secundario);
 }
 
 /* Badge de tecla */
@@ -1064,24 +1065,21 @@
 
 /* Acierto */
 
-.repaso-opcion.es-correcta {
-  background: var(--acierto-fondo);
-  border-color: var(--primario);
-  color: var(--primario-hover);
+.opcion--tarjeta.opcion--correcta {
   animation: pulseOk 480ms var(--ease);
 }
 
-.repaso-opcion.es-correcta .opcion-letra {
+.opcion--tarjeta.opcion--correcta .opcion-letra {
   color: var(--primario-hover);
 }
 
-.repaso-opcion.es-correcta .repaso-tecla {
+.opcion--tarjeta.opcion--correcta .repaso-tecla {
   background: var(--acierto-fondo);
   border-color: var(--primario);
   color: var(--primario-hover);
 }
 
-.repaso-opcion.es-correcta .repaso-opcion-icono {
+.opcion--tarjeta.opcion--correcta .repaso-opcion-icono {
   background: var(--primario);
   color: var(--texto-inverso);
   animation: iconPop 500ms var(--ease) 80ms forwards;
@@ -1089,37 +1087,34 @@
 
 /* Cuando se falla, la correcta se ilumina un instante después */
 
-.repaso-opcion.es-correcta.revelada {
+.opcion--tarjeta.opcion--correcta.opcion--revelada {
   transition-delay: 0.18s;
   animation-delay: 0.18s;
   animation-fill-mode: backwards;
 }
 
-.repaso-opcion.es-correcta.revelada .repaso-opcion-icono {
+.opcion--tarjeta.opcion--correcta.opcion--revelada .repaso-opcion-icono {
   animation-delay: 0.26s;
   opacity: 0;
 }
 
 /* Fallo */
 
-.repaso-opcion.es-fallo {
-  background: var(--fallo-fondo);
-  border-color: var(--fallo);
-  color: var(--fallo);
+.opcion--tarjeta.opcion--fallo {
   animation: shake 460ms ease-in-out;
 }
 
-.repaso-opcion.es-fallo .opcion-letra {
+.opcion--tarjeta.opcion--fallo .opcion-letra {
   color: var(--fallo);
 }
 
-.repaso-opcion.es-fallo .repaso-tecla {
+.opcion--tarjeta.opcion--fallo .repaso-tecla {
   background: var(--fallo-fondo);
   border-color: var(--fallo-fondo);
   color: var(--fallo);
 }
 
-.repaso-opcion.es-fallo .repaso-opcion-icono {
+.opcion--tarjeta.opcion--fallo .repaso-opcion-icono {
   background: var(--fallo);
   color: var(--texto-inverso);
   animation: iconPop 500ms var(--ease) 80ms forwards;
@@ -1481,7 +1476,7 @@
       border-radius: var(--radius-4xl);
     }
 
-  .repaso-opcion {
+  .opcion--tarjeta {
       padding: 12px 14px;
       font-size: var(--text-rem-100);
     }

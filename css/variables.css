@@ -137,5 +137,10 @@
 
   /* ===== ANIMACIÓN E ICONOS ===== */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);  /* Curva de las animaciones de entrada */
+  --duracion-vista: 260ms;
+  --desplazamiento-vista: 0.5rem;
+  --desplazamiento-hover-tema: -0.125rem;
+  --espaciado-temas: 1.25rem;
+  --espaciado-tema-detalle: 0.375rem;
   --icono-flecha-select: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b706c' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");  /* Flecha del select (SVG embebido: si cambias --texto-secundario, cambia aquí el stroke) */
 }

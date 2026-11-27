@@ -7,9 +7,9 @@
   <!-- Hojas de estilo · orden obligatorio: 1º variables.css · 2º componentes.css · 3º CSS de la página -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/variables.css?v=4">
-  <link rel="stylesheet" href="css/componentes.css?v=7">
-  <link rel="stylesheet" href="css/index.css?v=4">
+  <link rel="stylesheet" href="css/variables.css?v=5">
+  <link rel="stylesheet" href="css/componentes.css?v=8">
+  <link rel="stylesheet" href="css/index.css?v=5">
   <!-- Fuente (ya no hay @import dentro de los CSS) -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap">
 </head>
@@ -49,7 +49,7 @@
     </header>
 
     <!-- Grid Principal de 2 Columnas -->
-    <main class="dashboard-grid">
+    <main class="dashboard-grid es-visible" id="dashboardPrincipal" aria-hidden="false">
       <!-- Columna Izquierda: Tarjeta de los 90 Tests -->
       <section class="card card-tests">
         <div class="tests-topbar">
@@ -172,8 +172,38 @@
             ¡Al día! 0 tarjetas pendientes
           </span>
         </div>
+
+        <!-- Tarjeta 4: Práctica por temas -->
+        <div class="card widget-card widget-card-temas">
+          <div class="widget-top">
+            <div class="widget-title-group">
+              <div class="widget-icon-green" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                  <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                  <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                  <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                </svg>
+              </div>
+              <span class="widget-label">Tests por temas</span>
+            </div>
+          </div>
+          <p class="anki-sub">Practica bloques específicos del temario DGT.</p>
+          <button type="button" class="btn btn--primario btn--sm btn--bloque btn-repaso-anki" id="btnAbrirTemas">
+            Explorar temas
+          </button>
+        </div>
       </aside>
     </main>
+
+    <section class="vista-temas" id="vista-temas" aria-labelledby="temasTitulo" aria-hidden="true" hidden>
+      <div class="temas-cabecera">
+        <button type="button" class="btn btn--secundario btn--sm" id="btnVolverPanel">← Volver al panel</button>
+        <h1 class="temas-titulo" id="temasTitulo">Tests por temas</h1>
+      </div>
+      <p class="anki-sub" id="estadoTemas" role="status" aria-live="polite"></p>
+      <div class="temas-grid" id="listaTemas"></div>
+    </section>
   </div>
 
   <!-- Modal Gráfica de Evolución -->
@@ -208,17 +238,17 @@
         <section class="anki-cfg-seccion">
           <h3 class="anki-cfg-titulo"><span class="anki-cfg-num">1</span> Límite de tarjetas diarias</h3>
           <div class="pill-grupo" role="radiogroup" aria-label="Límite de tarjetas diarias">
-            <label class="pill-opcion">
+            <label class="opcion-pildora">
               <input type="radio" name="ankiModoLimite" value="auto" checked>
-              <span>Automático (según examen)</span>
+              <span class="opcion opcion--pildora">Automático (según examen)</span>
             </label>
-            <label class="pill-opcion">
+            <label class="opcion-pildora">
               <input type="radio" name="ankiModoLimite" value="personalizado">
-              <span>Personalizado</span>
+              <span class="opcion opcion--pildora">Personalizado</span>
             </label>
-            <label class="pill-opcion">
+            <label class="opcion-pildora">
               <input type="radio" name="ankiModoLimite" value="ilimitado">
-              <span>Sin límite (&infin;)</span>
+              <span class="opcion opcion--pildora">Sin límite (&infin;)</span>
             </label>
           </div>
 
@@ -294,6 +324,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script type="module" src="js/index.js?v=7"></script>
+  <script type="module" src="js/index.js?v=8"></script>
 </body>
 </html>

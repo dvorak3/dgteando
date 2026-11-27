@@ -29,6 +29,7 @@
 
 import {
   borrarProgreso,
+  asegurarCategoriasDGT,
   calcularRachaEstudio,
   exportarJSON,
   guardarConfigAnki,
@@ -36,6 +37,7 @@ import {
   importarJSON,
   necesitaInicializarMazo,
   obtenerColaRepasoHoy,
+  obtenerColaPorTema,
   obtenerConfigAnki,
   obtenerFechaExamen,
   obtenerHistorialTest,
@@ -44,7 +46,8 @@ import {
   sincronizarDesdeNube,
   sincronizarNuevosTestsAlMazo,
   sincronizarTestsSiToca
-} from './storage.js';
+} from './storage.js?v=12';
+import { TEMAS_DGT } from './categorias.js?v=1';
 
 /** @type {number} Número total de tests mostrados en el panel. */
 const TOTAL_TESTS = 90;
@@ -210,6 +213,111 @@ function renderDashboard() {
   renderRachaEstudio();
   renderAnki();
 }
+
+/* ================= VISTA DE TEMAS ================= */
+const dashboardPrincipal = document.getElementById('dashboardPrincipal');
+const vistaTemas = document.getElementById('vista-temas');
+const listaTemas = document.getElementById('listaTemas');
+const estadoTemas = document.getElementById('estadoTemas');
+const btnAbrirTemas = document.getElementById('btnAbrirTemas');
+const btnVolverPanel = document.getElementById('btnVolverPanel');
+let cargaTemasEnCurso = null;
+let secuenciaTransicionVista = 0;
+
+/**
+ * Escapa texto del catálogo antes de interpolarlo en el HTML de la vista.
+ * @param {*} valor Valor del catálogo.
+ * @returns {string} Texto seguro para HTML.
+ */
+function escaparHTML(valor) {
+  return String(valor).replace(/[&<>"']/g, (caracter) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[caracter]));
+}
+
+/**
+ * Renderiza las tarjetas temáticas y actualiza sus contadores después de migrar el mazo.
+ * @returns {Promise<void>}
+ */
+async function renderTemas() {
+  const temas = TEMAS_DGT.filter((tema) => tema.activo);
+  listaTemas.innerHTML = temas.map((tema) => `
+    <a class="card tema-card" href="test.html?modo=tema&amp;tema=${encodeURIComponent(tema.id)}" data-tema-id="${escaparHTML(tema.id)}">
+      <div class="widget-icon-green tema-card-icono" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5z"/><path d="M8 4v16M16 4v16M4 10h16M4 15h16"/></svg>
+      </div>
+      <div class="tema-card-contenido">
+        <h3 class="tema-card-titulo">${escaparHTML(tema.titulo)}</h3>
+        <p class="tema-card-descripcion">${escaparHTML(tema.descripcion)}</p>
+        <span class="badge badge--contorno tema-card-contador" data-tema-contador="${escaparHTML(tema.id)}">Cargando preguntas…</span>
+      </div>
+    </a>
+  `).join('');
+  estadoTemas.textContent = 'Actualizando categorías del mazo…';
+
+  try {
+    if (!cargaTemasEnCurso) {
+      cargaTemasEnCurso = (async () => {
+        await sincronizarDesdeNube();
+        const migracion = await asegurarCategoriasDGT();
+        if (!migracion.totalMazo) throw new Error('No se pudieron cargar preguntas para clasificar.');
+        return migracion;
+      })();
+    }
+    await cargaTemasEnCurso;
+    temas.forEach((tema) => {
+      const contador = listaTemas.querySelector(`[data-tema-contador="${tema.id}"]`);
+      if (contador) contador.textContent = `${obtenerColaPorTema(tema.id).length} preguntas disponibles`;
+    });
+    estadoTemas.textContent = '';
+  } catch (error) {
+    console.error('Error preparando el catálogo de temas:', error);
+    estadoTemas.textContent = 'No se pudieron cargar las preguntas de los temas. Vuelve a intentarlo.';
+    cargaTemasEnCurso = null;
+  }
+}
+
+/**
+ * Cambia entre el Dashboard y el catálogo de temas con una transición reversible.
+ * @param {boolean} mostrarTemas Indica si se debe mostrar el catálogo.
+ * @returns {void}
+ */
+function cambiarVistaTemas(mostrarTemas) {
+  const saliente = mostrarTemas ? dashboardPrincipal : vistaTemas;
+  const entrante = mostrarTemas ? vistaTemas : dashboardPrincipal;
+  if (entrante.hidden === false && saliente.hidden) return;
+  const secuencia = ++secuenciaTransicionVista;
+
+  entrante.hidden = false;
+  entrante.setAttribute('aria-hidden', 'false');
+  saliente.setAttribute('aria-hidden', 'true');
+  void entrante.offsetWidth;
+  requestAnimationFrame(() => {
+    if (secuencia !== secuenciaTransicionVista) return;
+    entrante.classList.add('es-visible');
+    saliente.classList.remove('es-visible');
+    (mostrarTemas ? btnVolverPanel : btnAbrirTemas).focus();
+  });
+
+  const terminar = (event) => {
+    if (event.target !== saliente || event.propertyName !== 'opacity') return;
+    saliente.removeEventListener('transitionend', terminar);
+    if (secuencia === secuenciaTransicionVista) saliente.hidden = true;
+  };
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    requestAnimationFrame(() => {
+      if (secuencia === secuenciaTransicionVista) saliente.hidden = true;
+    });
+  } else {
+    saliente.addEventListener('transitionend', terminar);
+  }
+}
+
+btnAbrirTemas.addEventListener('click', () => {
+  cambiarVistaTemas(true);
+  if (!cargaTemasEnCurso || estadoTemas.textContent) renderTemas();
+});
+btnVolverPanel.addEventListener('click', () => cambiarVistaTemas(false));
 
 /* ================= INTERACCIÓN EDITOR FECHA EXAMEN ================= */
 const cardExamen = document.getElementById('cardExamenDGT');

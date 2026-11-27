@@ -25,11 +25,16 @@ body {
 
 /* ================= TOP HEADER ================= */
 .app-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
   margin-bottom: 24px;
+  padding: 8px 0;
+  background-color: var(--bg-pagina);
   flex-wrap: wrap;
 }
 
@@ -611,4 +616,104 @@ body {
 
 .btn-repaso-anki {
   margin-top: 14px;
+}
+
+/* Transición entre el Dashboard y el catálogo de temas */
+.dashboard-grid,
+.vista-temas {
+  opacity: 0;
+  transform: translateY(var(--desplazamiento-vista));
+  transition:
+    opacity var(--duracion-vista) var(--ease),
+    transform var(--duracion-vista) var(--ease);
+}
+
+.dashboard-grid.es-visible,
+.vista-temas.es-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dashboard-grid[hidden],
+.vista-temas[hidden] {
+  display: none;
+}
+
+.vista-temas {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.temas-cabecera {
+  display: flex;
+  align-items: center;
+  gap: var(--espaciado-temas);
+  margin-bottom: var(--espaciado-temas);
+  flex-wrap: wrap;
+}
+
+.temas-titulo {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--text-xl);
+  font-weight: var(--weight-extrabold);
+  color: var(--texto-principal);
+}
+
+.temas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--espaciado-temas);
+}
+
+.tema-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--espaciado-tema-detalle);
+  padding: var(--espaciado-temas);
+  color: var(--texto-principal);
+  text-decoration: none;
+  transition: border-color var(--duracion-vista) var(--ease), transform var(--duracion-vista) var(--ease);
+}
+
+.tema-card:hover {
+  border-color: var(--borde-fuerte);
+  transform: translateY(var(--desplazamiento-hover-tema));
+  text-decoration: none;
+}
+
+.tema-card-icono {
+  flex: none;
+}
+
+.tema-card-contenido {
+  min-width: 0;
+}
+
+.tema-card-titulo {
+  margin-bottom: var(--espaciado-tema-detalle);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+}
+
+.tema-card-descripcion {
+  margin-bottom: var(--espaciado-tema-detalle);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  color: var(--texto-secundario);
+}
+
+.tema-card-contador {
+  white-space: normal;
+}
+
+#estadoTemas:empty {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-grid,
+  .vista-temas {
+    transition: none;
+  }
 }

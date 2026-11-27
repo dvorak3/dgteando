@@ -8,6 +8,7 @@
 
 import {
   calificarTarjetaAnki,
+  asegurarCategoriasDGT,
   categoriaDePregunta,
   claveTarjeta,
   cargarDatosTest,
@@ -18,6 +19,7 @@ import {
   necesitaInicializarMazo,
   obtenerCategoriasDebiles,
   obtenerColaRepasoHoy,
+  obtenerColaPorTema,
   obtenerConfigAnki,
   obtenerParchePregunta,
   obtenerParchesPreguntas,
@@ -31,7 +33,8 @@ import {
   sumarDiasISO,
   esperarGuardadoProgreso,
   ultimaSincronizacionOk
-} from './storage.js';
+} from './storage.js?v=12';
+import { obtenerTemaDGT } from './categorias.js?v=1';
 
 /**
  * Pregunta normalizada que consume el motor, tanto desde los JSON como desde los parches locales.
@@ -76,9 +79,10 @@ import {
 (function () {
   const params = new URLSearchParams(window.location.search);
   const modoParam = params.get('modo');
-  const MODO = ['estudio', 'repaso', 'falladas'].includes(modoParam) ? modoParam : 'examen';
+  const MODO = ['estudio', 'repaso', 'falladas', 'tema'].includes(modoParam) ? modoParam : 'examen';
+  const TEMA_ID = params.get('tema');
   const letras = ['a', 'b', 'c', 'd'];
-  const BANDERA_VISIBLE = ['repaso', 'falladas'].includes(modoParam);
+  const BANDERA_VISIBLE = ['repaso', 'falladas', 'tema'].includes(modoParam);
 
   /** @type {PreguntaTest[]} Preguntas cargadas para el test tradicional actual. */
   let PREGUNTAS = [];
@@ -99,7 +103,8 @@ import {
 
   const lblModo = document.getElementById('lblModo');
   if (lblModo) {
-    lblModo.textContent = MODO === 'estudio' ? 'Modo estudio' : MODO === 'falladas' ? 'Preguntas falladas' : MODO === 'repaso' ? 'Repaso' : 'Modo examen';
+    const tema = MODO === 'tema' ? obtenerTemaDGT(TEMA_ID) : null;
+    lblModo.textContent = tema ? `Tema: ${tema.titulo}` : MODO === 'estudio' ? 'Modo estudio' : MODO === 'falladas' ? 'Preguntas falladas' : MODO === 'repaso' ? 'Repaso' : MODO === 'tema' ? 'Modo por tema' : 'Modo examen';
   }
 
   const form = document.getElementById('formTest');
@@ -576,7 +581,7 @@ import {
     article.id = `pregunta-${idx}`;
 
     const opcionesHTML = preg.opciones.map((textoOp, opIdx) => `
-      <label class="opcion-label" id="lbl-${idx}-${opIdx}">
+      <label class="opcion opcion--test" id="lbl-${idx}-${opIdx}">
         <input type="radio" name="p_${idx}" value="${opIdx}">
         <span><span class="opcion-letra">${letras[opIdx]})</span> ${escaparHTML(textoOp)}</span>
       </label>
@@ -733,11 +738,11 @@ import {
     if (typeof correcta !== 'number') return; // JSON sin respuesta correcta conocida
     PREGUNTAS[idx].opciones.forEach((_, opIdx) => {
       const lbl = document.getElementById(`lbl-${idx}-${opIdx}`);
-      lbl.classList.remove('es-correcta', 'es-fallo');
+      lbl.classList.remove('opcion--correcta', 'opcion--fallo');
       if (opIdx === correcta) {
-        lbl.classList.add('es-correcta');
+        lbl.classList.add('opcion--correcta');
       } else if (seleccion === opIdx && seleccion !== correcta) {
-        lbl.classList.add('es-fallo');
+        lbl.classList.add('opcion--fallo');
       }
     });
   }
@@ -1278,7 +1283,7 @@ import {
         || (typeof categoriaDePregunta === 'function' ? categoriaDePregunta(pregActual) : '');
 
       const opcionesHTML = ordenVisual.map((idxOriginal, i) => `
-        <button type="button" class="repaso-opcion" data-op="${i}">
+        <button type="button" class="opcion opcion--tarjeta" data-op="${i}">
           <span class="repaso-tecla" aria-hidden="true">${i + 1}</span>
           <span class="repaso-opcion-texto"><span class="opcion-letra">${letras[i]})</span> ${esc(pregActual.opciones[idxOriginal])}</span>
           <span class="repaso-opcion-icono" aria-hidden="true"></span>
@@ -1308,7 +1313,7 @@ import {
         <p class="repaso-aviso-nube" id="repasoAvisoNube" hidden>⚠ No se pudo sincronizar con la nube; el avance está guardado en este dispositivo.</p>
       `;
 
-      stage.querySelectorAll('.repaso-opcion').forEach((btn) => {
+      stage.querySelectorAll('.opcion--tarjeta').forEach((btn) => {
         btn.addEventListener('click', () => seleccionarOpcion(Number(btn.dataset.op)));
       });
     }
@@ -1390,16 +1395,16 @@ import {
       const sug = sugerirConfianza(acierto, tiempoActual, tiemposPrevios, tarjetaAntes.tiempoMedioSeg);
       nivelSugerido = sug.nivel;
 
-      cont.querySelectorAll('.repaso-opcion').forEach((btn, idx) => {
-        btn.classList.add('bloqueada');
+      cont.querySelectorAll('.opcion--tarjeta').forEach((btn, idx) => {
+        btn.classList.add('opcion--bloqueada');
         btn.disabled = true;
         const icono = btn.querySelector('.repaso-opcion-icono');
         if (idx === correcta) {
-          btn.classList.add('es-correcta');
-          if (!acierto) btn.classList.add('revelada');
+          btn.classList.add('opcion--correcta');
+          if (!acierto) btn.classList.add('opcion--revelada');
           if (icono) icono.innerHTML = ICONO_CHECK;
         } else if (idx === i) {
-          btn.classList.add('es-fallo');
+          btn.classList.add('opcion--fallo');
           if (icono) icono.innerHTML = ICONO_ASPA;
         }
       });
@@ -1704,6 +1709,7 @@ import {
       const repasadas = sesion ? sesion.hechas : 0;
       const rachaMax = sesion ? sesion.rachaMax : 0;
       const hayMas = MODO === 'repaso' && e.colaHoy.length > 0;
+      const tema = MODO === 'tema' ? obtenerTemaDGT(TEMA_ID) : null;
 
       // Categorías más flojas según el historial real (mayor % de fallos)
       const debiles = typeof obtenerCategoriasDebiles === 'function' ? obtenerCategoriasDebiles(3) : [];
@@ -1752,12 +1758,15 @@ import {
       cont.innerHTML = `
         <div class="repaso-final">
           <div class="repaso-final-icono" aria-hidden="true">✓</div>
-          <h2>${MODO === 'falladas'
+          <h2>${MODO === 'tema'
+            ? repasadas ? `¡Tema ${esc(tema.titulo)} completado!` : `No hay preguntas disponibles en ${esc(tema.titulo)}`
+            : MODO === 'falladas'
             ? repasadas ? '¡Repaso de falladas completado!' : 'No tienes preguntas falladas'
             : repasadas ? '¡Repaso de hoy completado!' : '¡Estás al día!'}</h2>
           <p class="repaso-final-sub">${repasadas
             ? `Has repasado ${repasadas} ${repasadas === 1 ? 'tarjeta' : 'tarjetas'} (${c.again} ${c.again === 1 ? 'repetición' : 'repeticiones'} por «Again»).`
-            : MODO === 'falladas' ? 'No hay preguntas con fallos anteriores en tu mazo.' : 'No tienes tarjetas pendientes para hoy.'}</p>
+            : MODO === 'tema' ? `No hay preguntas clasificadas en el tema ${esc(tema.titulo)}.`
+              : MODO === 'falladas' ? 'No hay preguntas con fallos anteriores en tu mazo.' : 'No tienes tarjetas pendientes para hoy.'}</p>
           ${rachaMax > 0 ? `<div class="badge badge--aviso badge--lg repaso-racha-final">🔥 Mejor racha: ${rachaMax}</div>` : ''}
           <div class="repaso-resumen">
             <div class="repaso-resumen-item madurez-nueva"><strong>${e.nuevas}</strong><span>Nuevas</span></div>
@@ -1841,7 +1850,14 @@ import {
       pintarCarga('Cargando tu progreso...');
       try {
         await sincronizacionInicial;
-        if (necesitaInicializarMazo()) {
+        if (MODO === 'tema') {
+          if (!obtenerTemaDGT(TEMA_ID)) {
+            pintarAviso('El tema indicado no existe o no está disponible.');
+            return;
+          }
+          pintarCarga('Preparando las preguntas del tema…');
+          await asegurarCategoriasDGT();
+        } else if (necesitaInicializarMazo()) {
           pintarCarga('Preparando mazo Anki...');
           await inicializarMazoAnkiDesdeTests();
         } else {
@@ -1850,7 +1866,9 @@ import {
         }
       } catch (err) {
         console.error('Error preparando el mazo:', err);
-        pintarAviso('No se pudo preparar el mazo Anki. Comprueba tu conexión y que los tests estén en <code>data/</code>.');
+        pintarAviso(MODO === 'tema'
+          ? 'No se pudieron preparar las preguntas de este tema. Comprueba tu conexión y que los tests estén en <code>data/</code>.'
+          : 'No se pudo preparar el mazo Anki. Comprueba tu conexión y que los tests estén en <code>data/</code>.');
         return;
       }
 
@@ -1872,6 +1890,8 @@ import {
         ? Object.entries(obtenerTarjetas())
           .filter(([, tarjeta]) => Number(tarjeta.fallos) > 0)
           .map(([clave, tarjeta]) => ({ clave, ...tarjeta }))
+        : MODO === 'tema'
+          ? obtenerColaPorTema(TEMA_ID)
         : estado.colaHoy;
       if (!colaInicial.length) { mostrarFinal(); return; }
 
@@ -1889,7 +1909,7 @@ import {
    * @returns {Promise<void>}
    */
   (async function iniciar() {
-    if (MODO === 'repaso' || MODO === 'falladas') {
+    if (MODO === 'repaso' || MODO === 'falladas' || MODO === 'tema') {
       iniciarRepaso();
       return;
     }

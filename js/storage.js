@@ -48,7 +48,11 @@
  * @typedef {Object<string, *>} ProgresoUsuario
  */
 
-import { clasificarCategoriaDGT } from "./categorias.js";
+import {
+  clasificarCategoriaDGT,
+  normalizarCategoriaDGT,
+  obtenerTemaDGT
+} from "./categorias.js?v=1";
 
 const SUPABASE_URL = "https://ypjqxvkqsuyouoriddsk.supabase.co";
 const SUPABASE_KEY = "sb_publishable_Abw6VRU3DRyyZImLyg0w-A_94w0qIND";
@@ -1004,7 +1008,7 @@ async function inicializarMazoAnkiDesdeTests() {
 // Devuelve { anadidas, testsNuevos, omitidas, categorizadas, totalMazo, sincronizado }; "omitidas" = preguntas sin "correcta" numérica.
 /**
  * Busca tests y preguntas nuevas y las incorpora sin reiniciar tarjetas existentes.
- * @returns {Promise<{anadidas: number, testsNuevos: number, omitidas: number, categorizadas: number, totalMazo: number, sincronizado: boolean}>} Resumen de incorporación.
+ * @returns {Promise<{testsCargados: number, anadidas: number, testsNuevos: number, omitidas: number, categorizadas: number, totalMazo: number, sincronizado: boolean}>} Resumen de incorporación.
  */
 async function sincronizarNuevosTestsAlMazo() {
   const cargas = await descargarTodosLosTests();
@@ -1023,6 +1027,7 @@ async function sincronizarNuevosTestsAlMazo() {
   if (r.anadidas > 0 || r.categorizadas > 0 || marcarInicializado) sincronizado = await guardarProgreso(progreso);
 
   return {
+    testsCargados: r.testsCargados,
     anadidas: r.anadidas,
     testsNuevos: r.testsNuevos,
     omitidas: r.omitidas,
@@ -1030,6 +1035,31 @@ async function sincronizarNuevosTestsAlMazo() {
     totalMazo: Object.keys(progreso._tarjetas).length,
     sincronizado
   };
+}
+
+/**
+ * Inicializa el mazo si aún no existe o completa categorías y preguntas nuevas.
+ * @returns {Promise<Object>} Resumen de la migración del mazo.
+ */
+async function asegurarCategoriasDGT() {
+  if (necesitaInicializarMazo()) {
+    const resultado = await inicializarMazoAnkiDesdeTests();
+    if (!resultado.testsCargados) throw new Error("No se pudieron cargar los tests para clasificar el mazo.");
+    sessionStorage.setItem("anki_sync_tests", "1");
+    return resultado;
+  }
+
+  const tarjetas = obtenerTarjetas();
+  const hayCategoriasPendientes = Object.values(tarjetas)
+    .some((tarjeta) => !tarjeta || !tarjeta.categoria);
+  if (sessionStorage.getItem("anki_sync_tests") === "1" && !hayCategoriasPendientes) {
+    return { totalMazo: Object.keys(tarjetas).length, categorizadas: 0, anadidas: 0 };
+  }
+
+  const resultado = await sincronizarNuevosTestsAlMazo();
+  if (!resultado.testsCargados) throw new Error("No se pudieron cargar los tests para clasificar el mazo.");
+  sessionStorage.setItem("anki_sync_tests", "1");
+  return resultado;
 }
 
 // Sincronización automática: una vez por pestaña/sesión (el botón del modal la fuerza siempre).
@@ -1495,6 +1525,38 @@ function obtenerColaRepasoHoy() {
   };
 }
 
+/**
+ * Obtiene una cola temática sin modificar el progreso local.
+ * Las tarjetas vencidas o con fallos van primero; el resto se mezcla evitando
+ * agrupar preguntas del mismo test.
+ * @param {string} temaId Identificador del tema activo.
+ * @returns {Array<TarjetaAnki & {clave: string}>} Tarjetas del tema con su clave persistente.
+ * @throws {Error} Si el tema no está definido o no está activo.
+ */
+function obtenerColaPorTema(temaId) {
+  const tema = obtenerTemaDGT(temaId);
+  if (!tema) throw new Error(`El tema "${temaId}" no existe o no está activo.`);
+
+  const categoriaMatch = normalizarCategoriaDGT(tema.categoriaMatch);
+  const hoy = hoyISO();
+  const tarjetas = Object.entries(obtenerTarjetas())
+    .map(([clave, tarjeta]) => tarjeta && typeof tarjeta === "object" ? { ...tarjeta, clave } : null)
+    .filter(Boolean)
+    .filter((tarjeta) => tarjeta.categoria
+      && normalizarCategoriaDGT(tarjeta.categoria).includes(categoriaMatch));
+
+  const esVencida = (tarjeta) => tarjeta.madurez !== "nueva" && tarjeta.proximaRevision <= hoy;
+  const prioritarias = tarjetas
+    .filter((tarjeta) => esVencida(tarjeta) || Number(tarjeta.fallos) > 0)
+    .sort((a, b) =>
+      Number(esVencida(b)) - Number(esVencida(a))
+      || Number(b.fallos || 0) - Number(a.fallos || 0)
+      || String(a.proximaRevision || "").localeCompare(String(b.proximaRevision || ""))
+    );
+  const resto = tarjetas.filter((tarjeta) => !esVencida(tarjeta) && !(Number(tarjeta.fallos) > 0));
+  return [...prioritarias, ...barajarEvitandoMismoTest(resto)];
+}
+
 /* ===================================================================== */
 
 // Guarda el resultado de un test individual (para cuando acabes un test).
@@ -1687,6 +1749,7 @@ export {
   incorporarPreguntasAlMazo,
   inicializarMazoAnkiDesdeTests,
   sincronizarNuevosTestsAlMazo,
+  asegurarCategoriasDGT,
   sincronizarTestsSiToca,
   reiniciarProgresoAnki,
   intervaloPorConfianza,
@@ -1702,6 +1765,7 @@ export {
   barajarEvitandoMismoTest,
   muestrearPonderado,
   obtenerColaRepasoHoy,
+  obtenerColaPorTema,
   guardarResultadoTest,
   obtenerHistorialTest,
   exportarJSON,

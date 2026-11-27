@@ -9,8 +9,8 @@
  * @remarks
  * Clasifica preguntas de conducción en categorías mediante
  * patrones de palabras clave normalizados.
- * Script clásico: publica el catálogo y sus funciones en el ámbito global
- * y debe cargarse antes de `js/storage.js`.
+ * Expone el catálogo de categorías y los temas disponibles a los módulos
+ * que preparan el progreso y renderizan las vistas.
  * @typedef {Object} CategoriaDGT
  * @property {string} nombre Nombre visible de la categoría.
  * @property {RegExp[]} patrones Patrones que permiten reconocerla en un texto.
@@ -73,6 +73,21 @@ const CATEGORIAS_DGT = [
 ];
 
 /**
+ * Catálogo público de prácticas por tema. Se pueden añadir temas sin cambiar
+ * el motor de repaso; `categoriaMatch` se compara sin distinguir mayúsculas ni tildes.
+ * @type {Array<{id: string, titulo: string, descripcion: string, categoriaMatch: string, activo: boolean}>}
+ */
+const TEMAS_DGT = Object.freeze([
+  Object.freeze({
+    id: "senales",
+    titulo: "Señales",
+    descripcion: "Señales verticales, marcas viales, agentes y semáforos.",
+    categoriaMatch: "señales",
+    activo: true
+  })
+]);
+
+/**
  * Convierte un valor a texto en minúsculas, elimina diacríticos y normaliza
  * espacios para compararlo con los patrones de categorías.
  * @param {*} texto Valor que se desea normalizar.
@@ -85,6 +100,24 @@ function normalizarTextoDGT(texto) {
     .replace(/[\u0300-\u036f]/g, "")            // quita tildes (la ñ pasa a n)
     .replace(/\bluces? de cruce\b/g, "luz corta") // evita confundir "luz de cruce" con "cruce" de calles
     .replace(/\s+/g, " ");
+}
+
+/**
+ * Normaliza nombres de categoría para comparaciones sin tildes ni diferencias de mayúsculas.
+ * @param {*} categoria Nombre de categoría.
+ * @returns {string} Nombre normalizado.
+ */
+function normalizarCategoriaDGT(categoria) {
+  return normalizarTextoDGT(categoria).trim();
+}
+
+/**
+ * Busca un tema activo por su identificador.
+ * @param {string} temaId Identificador del tema.
+ * @returns {typeof TEMAS_DGT[number]|undefined} Tema encontrado.
+ */
+function obtenerTemaDGT(temaId) {
+  return TEMAS_DGT.find((tema) => tema.id === temaId && tema.activo);
 }
 
 // Asigna una categoría DGT.
@@ -135,7 +168,10 @@ function obtenerCategoriasDGT() {
 export {
   CATEGORIA_POR_DEFECTO,
   CATEGORIAS_DGT,
+  TEMAS_DGT,
   normalizarTextoDGT,
+  normalizarCategoriaDGT,
   clasificarCategoriaDGT,
+  obtenerTemaDGT,
   obtenerCategoriasDGT
 };
