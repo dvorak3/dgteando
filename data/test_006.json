@@ -28,7 +28,8 @@
         "Sí, cuando circulen por rampas ascendentes prolongadas.",
         "Sí, cuando las condiciones meteorológicas sean muy calurosas."
       ],
-      "correcta": 1
+      "correcta": 0,
+      "corregida": true
     },
     {
       "texto": "Un conductor que bebe con frecuencia, ¿es probable que con el tiempo acabe sufriendo un accidente?",
@@ -85,8 +86,9 @@
         "Vía reservada para automóviles.",
         "Calzada obligatoria para automóviles."
       ],
-      "correcta": 0,
-      "imagen": "../img/test_006_p09.jpg"
+      "correcta": 1,
+      "imagen": "../img/test_006_p09.jpg",
+      "corregida": true
     },
     {
       "texto": "¿Puede el conductor reducir la probabilidad de accidente debida al «factor vehículo»?",
