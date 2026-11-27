@@ -282,6 +282,17 @@
       ],
       "correcta": 0,
       "imagen": "../img/test_006_p30.jpg"
+    },
+    {
+      "id": "006_30",
+      "texto": "Conducir, con un permiso de la clase B, un turismo que arrastra un remolque ligero, ¿está permitido?",
+      "opciones": [
+        "Sí, en cualquier caso.",
+        "Sólo si la masa máxima autorizada del conjunto no supera los 3.500 kilogramos.",
+        "No, en ningún caso."
+      ],
+      "correcta": 0,
+      "corregida": true
     }
   ]
 }
