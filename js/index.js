@@ -109,16 +109,20 @@ function renderContadorExamen() {
   const diffMs = fechaObjetivo.getTime() - hoy.getTime();
   const diffDias = Math.round(diffMs / (1000 * 60 * 60 * 24));
 
-  const contenedorMain = document.getElementById('examenMainTexto');
+  const diasNum = document.getElementById('examenDiasNum');
+  const diasEtiqueta = document.getElementById('examenDiasEtiqueta');
   const subFecha = document.getElementById('examenFechaFormateada');
   const btnFecha = document.getElementById('btnFechaExamen');
 
   if (diffDias > 0) {
-    contenedorMain.textContent = `${diffDias} día${diffDias === 1 ? '' : 's'}`;
+    diasNum.textContent = diffDias;
+    diasEtiqueta.textContent = diffDias === 1 ? 'día restante' : 'días restantes';
   } else if (diffDias === 0) {
-    contenedorMain.textContent = '¡Hoy!';
+    diasNum.textContent = '¡Hoy!';
+    diasEtiqueta.textContent = 'es el examen';
   } else {
-    contenedorMain.textContent = 'Examen finalizado';
+    diasNum.textContent = 'Examen';
+    diasEtiqueta.textContent = 'finalizado';
   }
 
   subFecha.textContent = formatearFechaEspanol(fechaISO);
@@ -134,7 +138,9 @@ function renderRachaEstudio() {
   const { dias, practicoHoy } = calcularRachaEstudio();
   const rachaTexto = document.getElementById('rachaDiasTexto');
   const rachaContexto = document.getElementById('rachaContexto');
+  const rachaUnidad = document.getElementById('rachaUnidad');
   rachaTexto.textContent = dias;
+  rachaUnidad.textContent = dias === 1 ? 'día de racha' : 'días de racha';
   const descripcion = dias === 0
     ? 'Sin racha activa'
     : `${dias} ${dias === 1 ? 'día' : 'días'} de racha${practicoHoy ? ', con práctica hoy' : ''}`;

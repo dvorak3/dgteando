@@ -304,6 +304,13 @@ body {
   color: var(--texto-principal);
 }
 
+.widget-title-examen {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--texto-principal);
+}
+
 .widget-title-practica {
   margin: 0;
   font-size: var(--text-sm);
@@ -315,14 +322,25 @@ body {
   margin-bottom: 10px;
 }
 
-.hoy-contexto {
+.examen-main {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: baseline;
   gap: 8px;
+  flex-wrap: wrap;
+}
+
+.examen-dias-num {
+  font-size: var(--text-5xl);
+  font-weight: var(--weight-extrabold);
+  letter-spacing: -0.03em;
+  color: var(--texto-principal);
+  line-height: 1;
+}
+
+.examen-dias-texto {
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
   color: var(--texto-secundario);
-  font-size: var(--text-2xs);
-  white-space: nowrap;
 }
 
 .hoy-fecha {
@@ -345,13 +363,16 @@ body {
   color: var(--texto-principal);
 }
 
+.examen-fecha-btn {
+  margin-top: 8px;
+}
+
 .hoy-fecha:focus-visible,
 .sidebar-widgets .btn:focus-visible {
   outline: 2px solid var(--primario);
   outline-offset: 2px;
 }
 
-.hoy-contexto-icono,
 .hoy-fecha-lapiz {
   width: 13px;
   height: 13px;
@@ -371,24 +392,31 @@ body {
   opacity: 1;
 }
 
-.hoy-contexto-racha {
-  display: inline-flex;
+.examen-racha {
+  display: flex;
   align-items: center;
-  gap: 4px;
-  flex-shrink: 0;
-  color: var(--texto-secundario);
-  font-size: var(--text-2xs);
-}
-
-.hoy-contexto-racha svg {
-  width: 13px;
-  height: 13px;
-  fill: currentColor;
-}
-
-.hoy-separador {
-  margin: 12px 0;
+  gap: 6px;
+  margin-top: 12px;
+  padding-top: 12px;
   border-top: 1px solid var(--borde);
+  color: var(--texto-secundario);
+  font-size: var(--text-sm);
+}
+
+.examen-racha svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: var(--acento);
+}
+
+.examen-racha-num {
+  color: var(--texto-principal);
+  font-weight: var(--weight-bold);
+}
+
+.examen-racha-texto {
+  font-size: var(--text-xs);
 }
 
 .examen-editor-inline {
