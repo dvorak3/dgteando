@@ -145,7 +145,8 @@
         "No.",
         "Sí, siempre que no se recorran más de 10 kilómetros."
       ],
-      "correcta": 0
+      "correcta": 1,
+      "corregida": true
     },
     {
       "texto": "¿Qué le indica el agente que mueve el brazo alternativamente de arriba a abajo?",
@@ -210,7 +211,8 @@
         "un extintor de incendios.",
         "un calzo adecuado para el vehículo."
       ],
-      "correcta": 0
+      "correcta": 1,
+      "corregida": true
     },
     {
       "texto": "Si un vehículo nos quiere adelantar en una carretera convencional con un carril para cada sentido, ¿qué deberemos hacer?",
