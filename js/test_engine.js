@@ -33,8 +33,8 @@ import {
   sumarDiasISO,
   esperarGuardadoProgreso,
   ultimaSincronizacionOk
-} from './storage.js?v=12';
-import { obtenerTemaDGT } from './categorias.js?v=1';
+} from './storage.js?v=13';
+import { obtenerTemaDGT } from './categorias.js?v=2';
 
 /**
  * Pregunta normalizada que consume el motor, tanto desde los JSON como desde los parches locales.
@@ -1163,7 +1163,7 @@ import { obtenerTemaDGT } from './categorias.js?v=1';
             </div>
             <div class="repaso-topbar-acciones">
               ${BANDERA_VISIBLE ? `<button type="button" class="btn-bandera" id="btnBandera" title="Corregir esta pregunta" aria-label="Corregir esta pregunta">${ICONO_BANDERA}</button>` : ''}
-              <div class="repaso-combo" id="repasoCombo" title="Racha de aciertos seguidos" aria-live="polite">
+              <div class="repaso-combo optical-right" id="repasoCombo" title="Racha de aciertos seguidos" aria-live="polite">
                 <span class="repaso-combo-fuego" aria-hidden="true">🔥</span>
                 <span id="repasoComboNum">0</span>
               </div>
@@ -1299,7 +1299,7 @@ import { obtenerTemaDGT } from './categorias.js?v=1';
             </span>
             <span class="repaso-contexto-der">
               ${repeticion}
-              <span class="badge badge--mayus madurez-${esc(tarjeta.madurez)}">${ETIQUETA_MADUREZ[tarjeta.madurez] || esc(tarjeta.madurez)}</span>
+              <span class="badge badge--mayus madurez-${esc(tarjeta.madurez)} optical-right">${ETIQUETA_MADUREZ[tarjeta.madurez] || esc(tarjeta.madurez)}</span>
             </span>
           </div>
           <div class="repaso-cuerpo">
@@ -1431,10 +1431,10 @@ import { obtenerTemaDGT } from './categorias.js?v=1';
       panel.innerHTML = `
         <div class="repaso-confianza-cab">
           <span class="repaso-confianza-titulo">Calibrar confianza</span>
-          <span class="badge ${acierto ? 'badge--acierto' : 'badge--fallo'}">${acierto ? '¡Correcto!' : 'Incorrecta'}</span>
+          <span class="badge ${acierto ? 'badge--acierto' : 'badge--fallo'} optical-right">${acierto ? '¡Correcto!' : 'Incorrecta'}</span>
         </div>
         <p class="repaso-sugerencia nivel-${sug.nivel}">
-          <span class="repaso-sugerencia-tag">Sugerida: ${esc(ETIQUETA_NIVEL[sug.nivel])}</span>
+          <span class="repaso-sugerencia-tag optical-left">Sugerida: ${esc(ETIQUETA_NIVEL[sug.nivel])}</span>
           <span class="repaso-sugerencia-texto">${esc(sug.texto)}</span>
         </p>
         <div class="repaso-confianza-botones">
@@ -1890,6 +1890,7 @@ import { obtenerTemaDGT } from './categorias.js?v=1';
         ? Object.entries(obtenerTarjetas())
           .filter(([, tarjeta]) => Number(tarjeta.fallos) > 0)
           .map(([clave, tarjeta]) => ({ clave, ...tarjeta }))
+          .sort((a, b) => Number(b.fallos) - Number(a.fallos))
         : MODO === 'tema'
           ? obtenerColaPorTema(TEMA_ID)
         : estado.colaHoy;

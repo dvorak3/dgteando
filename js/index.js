@@ -42,12 +42,13 @@ import {
   obtenerFechaExamen,
   obtenerHistorialTest,
   obtenerProgreso,
+  obtenerTarjetas,
   reiniciarProgresoAnki,
   sincronizarDesdeNube,
   sincronizarNuevosTestsAlMazo,
   sincronizarTestsSiToca
-} from './storage.js?v=12';
-import { TEMAS_DGT } from './categorias.js?v=1';
+} from './storage.js?v=13';
+import { TEMAS_DGT } from './categorias.js?v=2';
 
 /** @type {number} Número total de tests mostrados en el panel. */
 const TOTAL_TESTS = 90;
@@ -230,10 +231,26 @@ const dashboardPrincipal = document.getElementById('dashboardPrincipal');
 const vistaTemas = document.getElementById('vista-temas');
 const listaTemas = document.getElementById('listaTemas');
 const estadoTemas = document.getElementById('estadoTemas');
+const tituloTemas = document.getElementById('temasTitulo');
 const btnAbrirTemas = document.getElementById('btnAbrirTemas');
 const btnVolverPanel = document.getElementById('btnVolverPanel');
 let cargaTemasEnCurso = null;
 let secuenciaTransicionVista = 0;
+let cancelarFinTransicionVista = null;
+
+const ICONOS_TEMA = Object.freeze({
+  senales: '<path d="M5 21V4"/><path d="M5 5h14l-2 3 2 3H5"/>',
+  velocidad: '<path d="M4.9 19a9 9 0 1 1 14.2 0"/><path d="m12 13 4-4"/><path d="M8 21h8"/>',
+  'prioridad-cruces': '<path d="M12 22V12"/><path d="m12 12-6-6"/><path d="m12 12 6-6"/><path d="M5 12h14"/>',
+  maniobras: '<path d="M19 21v-5a4 4 0 0 0-4-4H5"/><path d="m10 7-5 5 5 5"/>',
+  'alumbrado-visibilidad': '<path d="M9 18h6"/><path d="M10 22h4"/><path d="M8.2 14.5a6 6 0 1 1 7.6 0c-.8.6-1.3 1.5-1.3 2.5h-5c0-1-.5-1.9-1.3-2.5Z"/>',
+  'alcohol-drogas-fatiga': '<path d="M7 3h10l-1 8a4 4 0 0 1-8 0L7 3Z"/><path d="M12 15v6"/><path d="M9 21h6"/>',
+  'seguridad-sistemas': '<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/><path d="m9 12 2 2 4-4"/>',
+  'accidentes-primeros-auxilios': '<path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"/><path d="M12 8v8"/><path d="M8 12h8"/>',
+  'documentacion-normativa': '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/>',
+  'mecanica-mantenimiento': '<path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18l3 3 5.3-5.3a5 5 0 0 0 6.4-6.4L14 12l-2-2 2.7-3.7Z"/>',
+  'otras-normas': '<circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/>'
+});
 
 /**
  * Escapa texto del catálogo antes de interpolarlo en el HTML de la vista.
@@ -252,18 +269,51 @@ function escaparHTML(valor) {
  */
 async function renderTemas() {
   const temas = TEMAS_DGT.filter((tema) => tema.activo);
-  listaTemas.innerHTML = temas.map((tema) => `
-    <a class="card tema-card" href="test.html?modo=tema&amp;tema=${encodeURIComponent(tema.id)}" data-tema-id="${escaparHTML(tema.id)}">
-      <div class="widget-icon-green tema-card-icono" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5z"/><path d="M8 4v16M16 4v16M4 10h16M4 15h16"/></svg>
+  tituloTemas.textContent = `${temas.length} temas`;
+  listaTemas.innerHTML = `
+    <a class="card tema-card tema-card--fallos" href="test.html?modo=falladas" data-fallos-frecuentes aria-label="Tus fallos más frecuentes">
+      <div class="tema-card-superior">
+        <div class="widget-icon-green widget-icon-fallo tema-card-icono optical-left-soft" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="m12 3 9 16H3l9-16Z"/><path d="M12 9v4"/><circle cx="12" cy="17" r="1"/></svg>
+        </div>
+        <div class="tema-card-accesorios">
+          <svg class="tema-card-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </div>
       </div>
-      <div class="tema-card-contenido">
-        <h3 class="tema-card-titulo">${escaparHTML(tema.titulo)}</h3>
-        <p class="tema-card-descripcion">${escaparHTML(tema.descripcion)}</p>
-        <span class="badge badge--contorno tema-card-contador" data-tema-contador="${escaparHTML(tema.id)}">Cargando preguntas…</span>
+      <h3 class="tema-card-titulo">Tus fallos más frecuentes</h3>
+      <p class="tema-card-descripcion">Repasa primero las preguntas que más veces has fallado.</p>
+      <div class="tema-card-pie">
+        <div class="tema-card-metricas">
+          <span class="badge badge--contorno badge--sm tema-card-contador optical-left" data-fallos-frecuentes-contador>Cargando…</span>
+        </div>
       </div>
     </a>
-  `).join('');
+    ${temas.map((tema) => `
+    <a class="card tema-card" href="test.html?modo=tema&amp;tema=${encodeURIComponent(tema.id)}" data-tema-id="${escaparHTML(tema.id)}" aria-label="${escaparHTML(tema.titulo)}">
+      <div class="tema-card-superior">
+        <div class="widget-icon-green tema-card-icono optical-left-soft" aria-hidden="true">
+          <svg viewBox="0 0 24 24">${ICONOS_TEMA[tema.id] || ICONOS_TEMA['otras-normas']}</svg>
+        </div>
+        <div class="tema-card-accesorios">
+          <span class="badge badge--aviso badge--sm tema-card-punto-debil" data-tema-punto-debil="${escaparHTML(tema.id)}" hidden>Tu punto débil</span>
+          <svg class="tema-card-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </div>
+      </div>
+      <h3 class="tema-card-titulo">${escaparHTML(tema.titulo)}</h3>
+      <p class="tema-card-descripcion">${escaparHTML(tema.descripcion)}</p>
+      <div class="tema-card-pie">
+        <div class="tema-card-metricas">
+          <span class="badge badge--contorno badge--sm tema-card-contador optical-left" data-tema-contador="${escaparHTML(tema.id)}">Cargando…</span>
+          <span class="tema-card-fallos" data-tema-fallos="${escaparHTML(tema.id)}" hidden></span>
+        </div>
+        <div class="tema-card-progreso" data-tema-progreso="${escaparHTML(tema.id)}" hidden>
+          <progress class="tema-card-progreso-barra optical-left" data-tema-progreso-barra="${escaparHTML(tema.id)}" max="100" value="0" aria-hidden="true"></progress>
+          <span class="tema-card-progreso-valor" data-tema-progreso-valor="${escaparHTML(tema.id)}">0%</span>
+        </div>
+      </div>
+    </a>
+  `).join('')}
+  `;
   estadoTemas.textContent = 'Actualizando categorías del mazo…';
 
   try {
@@ -276,9 +326,64 @@ async function renderTemas() {
       })();
     }
     await cargaTemasEnCurso;
-    temas.forEach((tema) => {
+    const resumenes = temas.map((tema) => {
+      const tarjetas = obtenerColaPorTema(tema.id);
+      return {
+        tema,
+        total: tarjetas.length,
+        fallos: tarjetas.filter((tarjeta) =>
+          tarjeta.madurez === 'aprendiendo' && Number(tarjeta.fallos) > 0
+        ).length,
+        consolidadas: tarjetas.filter((tarjeta) =>
+          tarjeta.madurez === 'joven' || tarjeta.madurez === 'madura'
+        ).length
+      };
+    });
+    const maxFallos = Math.max(0, ...resumenes.map((resumen) => resumen.fallos));
+    const temaDebil = maxFallos > 0
+      ? resumenes.find((resumen) => resumen.fallos === maxFallos)?.tema.id
+      : null;
+    const formatoNumero = new Intl.NumberFormat('es-ES', { useGrouping: 'always' });
+    const totalFalladas = Object.values(obtenerTarjetas())
+      .filter((tarjeta) => tarjeta && Number(tarjeta.fallos) > 0)
+      .length;
+    const contadorFalladas = listaTemas.querySelector('[data-fallos-frecuentes-contador]');
+    const tarjetaFalladas = listaTemas.querySelector('[data-fallos-frecuentes]');
+    if (contadorFalladas) contadorFalladas.textContent = `${formatoNumero.format(totalFalladas)} preguntas falladas`;
+    if (tarjetaFalladas) {
+      tarjetaFalladas.setAttribute(
+        'aria-label',
+        `Tus fallos más frecuentes, ${formatoNumero.format(totalFalladas)} preguntas falladas`
+      );
+    }
+
+    resumenes.forEach(({ tema, total, fallos, consolidadas }) => {
+      const enlace = listaTemas.querySelector(`[data-tema-id="${tema.id}"]`);
       const contador = listaTemas.querySelector(`[data-tema-contador="${tema.id}"]`);
-      if (contador) contador.textContent = `${obtenerColaPorTema(tema.id).length} preguntas disponibles`;
+      const indicadorFallos = listaTemas.querySelector(`[data-tema-fallos="${tema.id}"]`);
+      const indicadorDebil = listaTemas.querySelector(`[data-tema-punto-debil="${tema.id}"]`);
+      const progreso = listaTemas.querySelector(`[data-tema-progreso="${tema.id}"]`);
+      if (contador) contador.textContent = `${formatoNumero.format(total)} preguntas`;
+      if (fallos > 0 && indicadorFallos) {
+        indicadorFallos.textContent = `${fallos} ${fallos === 1 ? 'fallo' : 'fallos'}`;
+        indicadorFallos.hidden = false;
+      }
+      if (indicadorDebil && tema.id === temaDebil) indicadorDebil.hidden = false;
+      if (total > 0 && progreso) {
+        const porcentaje = Math.round((consolidadas / total) * 100);
+        const barra = listaTemas.querySelector(`[data-tema-progreso-barra="${tema.id}"]`);
+        const valor = listaTemas.querySelector(`[data-tema-progreso-valor="${tema.id}"]`);
+        progreso.hidden = false;
+        if (barra) barra.value = porcentaje;
+        if (valor) valor.textContent = `${porcentaje}%`;
+      }
+      if (enlace) {
+        const etiqueta = [`${tema.titulo}`, `${formatoNumero.format(total)} preguntas`];
+        if (fallos > 0) {
+          etiqueta.push(fallos === 1 ? '1 fallo pendiente' : `${fallos} fallos pendientes`);
+        }
+        enlace.setAttribute('aria-label', etiqueta.join(', '));
+      }
     });
     estadoTemas.textContent = '';
   } catch (error) {
@@ -297,9 +402,12 @@ function cambiarVistaTemas(mostrarTemas) {
   const saliente = mostrarTemas ? dashboardPrincipal : vistaTemas;
   const entrante = mostrarTemas ? vistaTemas : dashboardPrincipal;
   if (entrante.hidden === false && saliente.hidden) return;
+  cancelarFinTransicionVista?.();
+  cancelarFinTransicionVista = null;
   const secuencia = ++secuenciaTransicionVista;
 
   entrante.hidden = false;
+  entrante.classList.remove('es-saliendo');
   entrante.setAttribute('aria-hidden', 'false');
   saliente.setAttribute('aria-hidden', 'true');
   void entrante.offsetWidth;
@@ -307,21 +415,45 @@ function cambiarVistaTemas(mostrarTemas) {
     if (secuencia !== secuenciaTransicionVista) return;
     entrante.classList.add('es-visible');
     saliente.classList.remove('es-visible');
+    saliente.classList.add('es-saliendo');
     (mostrarTemas ? btnVolverPanel : btnAbrirTemas).focus();
-  });
 
-  const terminar = (event) => {
-    if (event.target !== saliente || event.propertyName !== 'opacity') return;
-    saliente.removeEventListener('transitionend', terminar);
-    if (secuencia === secuenciaTransicionVista) saliente.hidden = true;
-  };
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    requestAnimationFrame(() => {
-      if (secuencia === secuenciaTransicionVista) saliente.hidden = true;
-    });
-  } else {
-    saliente.addEventListener('transitionend', terminar);
-  }
+    let temporizador;
+    const limpiar = () => {
+      clearTimeout(temporizador);
+      saliente.removeEventListener('transitionend', alTerminar);
+      if (cancelarFinTransicionVista === limpiar) cancelarFinTransicionVista = null;
+    };
+    const terminar = () => {
+      if (secuencia !== secuenciaTransicionVista) {
+        limpiar();
+        return;
+      }
+      limpiar();
+      saliente.classList.remove('es-saliendo');
+      saliente.hidden = true;
+    };
+    const alTerminar = (event) => {
+      if (event.target === saliente && event.propertyName === 'opacity') terminar();
+    };
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      terminar();
+    } else {
+      saliente.addEventListener('transitionend', alTerminar);
+      cancelarFinTransicionVista = limpiar;
+      const estilo = getComputedStyle(saliente);
+      const aMilisegundos = (valor) => valor.trim().endsWith('ms')
+        ? parseFloat(valor)
+        : parseFloat(valor) * 1000;
+      const duraciones = estilo.transitionDuration.split(',').map(aMilisegundos);
+      const retrasos = estilo.transitionDelay.split(',').map(aMilisegundos);
+      temporizador = setTimeout(
+        terminar,
+        Math.max(...duraciones) + Math.max(...retrasos) + 80
+      );
+    }
+  });
 }
 
 btnAbrirTemas.addEventListener('click', () => {
@@ -330,7 +462,13 @@ btnAbrirTemas.addEventListener('click', () => {
 });
 btnVolverPanel.addEventListener('click', () => cambiarVistaTemas(false));
 document.querySelectorAll('.practica-chip').forEach((chip) => {
-  chip.addEventListener('click', () => btnAbrirTemas.click());
+  chip.addEventListener('click', () => {
+    if (chip.dataset.practica === 'falladas') {
+      window.location.assign('test.html?modo=falladas');
+      return;
+    }
+    btnAbrirTemas.click();
+  });
 });
 
 const btnVerDetalle = document.getElementById('btnVerDetalle');

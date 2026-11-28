@@ -52,7 +52,7 @@ import {
   clasificarCategoriaDGT,
   normalizarCategoriaDGT,
   obtenerTemaDGT
-} from "./categorias.js?v=1";
+} from "./categorias.js?v=2";
 
 const SUPABASE_URL = "https://ypjqxvkqsuyouoriddsk.supabase.co";
 const SUPABASE_KEY = "sb_publishable_Abw6VRU3DRyyZImLyg0w-A_94w0qIND";

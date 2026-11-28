@@ -230,6 +230,22 @@
   color: var(--primario);
 }
 
+.optical-left {
+  margin-left: calc(-1 * var(--optical-offset-pill));
+}
+
+.optical-right {
+  margin-right: calc(-1 * var(--optical-offset-pill));
+}
+
+.optical-left-soft {
+  margin-left: calc(-1 * var(--optical-offset-soft));
+}
+
+.optical-right-soft {
+  margin-right: calc(-1 * var(--optical-offset-soft));
+}
+
 .card {
   background-color: var(--bg-tarjeta);
   border: 1px solid var(--borde);
@@ -335,6 +351,11 @@
   stroke: currentColor;
   stroke-width: 2;
   fill: none;
+}
+
+.widget-icon-green.widget-icon-fallo {
+  background-color: var(--fallo-fondo);
+  color: var(--fallo);
 }
 
 .widget-icon-fire {

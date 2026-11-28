@@ -117,6 +117,10 @@
   --radius-full: 999px;  /* Píldoras y badges · 22 usos */
   --radius-circulo: 50%;  /* Círculos · 12 usos */
 
+  /* ===== ALINEACIÓN ÓPTICA ===== */
+  --optical-offset-pill: 4px;
+  --optical-offset-soft: 2px;
+
   /* ===== SOMBRAS (de menos a más intensidad; el color sale de la paleta) ===== */
   --sombra-xs: 0 1px 2px color-mix(in srgb, var(--texto-principal) 2%, transparent);  /* Botón JSON */
   --sombra-sm: 0 1px 3px color-mix(in srgb, var(--texto-principal) 8%, transparent);  /* Radio marcado */
@@ -138,7 +142,11 @@
   /* ===== ANIMACIÓN E ICONOS ===== */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);  /* Curva de las animaciones de entrada */
   --duracion-vista: 260ms;
+  --duracion-hover-tema: 220ms;
+  --alto-progreso-tema: 4px;
   --desplazamiento-vista: 0.5rem;
+  --desplazamiento-vista-salida: -0.5rem;
+  --escala-vista-inicial: 0.985;
   --desplazamiento-hover-tema: -0.125rem;
   --espaciado-temas: 1.25rem;
   --espaciado-tema-detalle: 0.375rem;

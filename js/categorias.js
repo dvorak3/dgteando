@@ -84,6 +84,76 @@ const TEMAS_DGT = Object.freeze([
     descripcion: "Señales verticales, marcas viales, agentes y semáforos.",
     categoriaMatch: "señales",
     activo: true
+  }),
+  Object.freeze({
+    id: "velocidad",
+    titulo: "Velocidad",
+    descripcion: "Límites, distancias de seguridad y conducción a distintas velocidades.",
+    categoriaMatch: "velocidad",
+    activo: true
+  }),
+  Object.freeze({
+    id: "prioridad-cruces",
+    titulo: "Prioridad y cruces",
+    descripcion: "Prioridades de paso, intersecciones, glorietas y pasos a nivel.",
+    categoriaMatch: "prioridad y cruces",
+    activo: true
+  }),
+  Object.freeze({
+    id: "maniobras",
+    titulo: "Maniobras",
+    descripcion: "Adelantamientos, cambios de dirección, estacionamiento e incorporaciones.",
+    categoriaMatch: "maniobras",
+    activo: true
+  }),
+  Object.freeze({
+    id: "alumbrado-visibilidad",
+    titulo: "Alumbrado y visibilidad",
+    descripcion: "Luces, visibilidad, condiciones meteorológicas y conducción nocturna.",
+    categoriaMatch: "alumbrado y visibilidad",
+    activo: true
+  }),
+  Object.freeze({
+    id: "alcohol-drogas-fatiga",
+    titulo: "Alcohol, drogas y fatiga",
+    descripcion: "Efectos del alcohol, las drogas, los medicamentos y el cansancio.",
+    categoriaMatch: "alcohol, drogas y fatiga",
+    activo: true
+  }),
+  Object.freeze({
+    id: "seguridad-sistemas",
+    titulo: "Seguridad y sistemas",
+    descripcion: "Seguridad activa y pasiva, cinturón, casco y sistemas de asistencia.",
+    categoriaMatch: "seguridad y sistemas",
+    activo: true
+  }),
+  Object.freeze({
+    id: "accidentes-primeros-auxilios",
+    titulo: "Accidentes y primeros auxilios",
+    descripcion: "Actuación en accidentes, señalización de emergencias y primeros auxilios.",
+    categoriaMatch: "accidentes y primeros auxilios",
+    activo: true
+  }),
+  Object.freeze({
+    id: "documentacion-normativa",
+    titulo: "Documentación y normativa",
+    descripcion: "Permisos, documentación del vehículo, normativa y sanciones.",
+    categoriaMatch: "documentación y normativa",
+    activo: true
+  }),
+  Object.freeze({
+    id: "mecanica-mantenimiento",
+    titulo: "Mecánica y mantenimiento",
+    descripcion: "Elementos del vehículo, mantenimiento, neumáticos y averías.",
+    categoriaMatch: "mecánica y mantenimiento",
+    activo: true
+  }),
+  Object.freeze({
+    id: "otras-normas",
+    titulo: "Otras normas",
+    descripcion: "Otras normas y preguntas generales de circulación.",
+    categoriaMatch: "otras normas",
+    activo: true
   })
 ]);
 

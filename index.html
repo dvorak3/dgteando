@@ -7,9 +7,9 @@
   <!-- Hojas de estilo · orden obligatorio: 1º variables.css · 2º componentes.css · 3º CSS de la página -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/variables.css?v=5">
-  <link rel="stylesheet" href="css/componentes.css?v=10">
-  <link rel="stylesheet" href="css/index.css?v=9">
+  <link rel="stylesheet" href="css/variables.css?v=10">
+  <link rel="stylesheet" href="css/componentes.css?v=12">
+  <link rel="stylesheet" href="css/index.css?v=17">
   <!-- Fuente (ya no hay @import dentro de los CSS) -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap">
 </head>
@@ -40,7 +40,7 @@
           <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Guardar progreso (.json)
         </button>
-        <label class="btn btn--secundario btn--pastilla">
+        <label class="btn btn--secundario btn--pastilla optical-right">
           <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
           Cargar progreso (.json)
           <input type="file" id="inputJson" accept=".json" hidden>
@@ -48,14 +48,15 @@
       </div>
     </header>
 
-    <!-- Grid Principal de 2 Columnas -->
-    <main class="dashboard-grid es-visible" id="dashboardPrincipal" aria-hidden="false">
+    <div class="vistas-dashboard">
+      <!-- Grid Principal de 2 Columnas -->
+      <main class="dashboard-grid es-visible" id="dashboardPrincipal" aria-hidden="false">
       <!-- Columna Izquierda: Tarjeta de los 90 Tests -->
       <section class="card card-tests">
         <div class="tests-topbar">
           <h1 class="tests-heading">Batería de Tests (001 – 090)</h1>
 
-          <div class="modo-selector">
+          <div class="modo-selector optical-right">
             <span class="modo-label-texto">Test modo:</span>
             <label class="radio-label">
               <input type="radio" name="modo" value="estudio">
@@ -95,7 +96,7 @@
           <section class="card widget-card widget-card-examen" aria-labelledby="tituloFechaExamen">
             <div class="widget-top">
               <div class="widget-title-group">
-                <div class="widget-icon-green" aria-hidden="true">
+                <div class="widget-icon-green optical-left-soft" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                     <line x1="16" y1="2" x2="16" y2="6"></line>
@@ -119,14 +120,14 @@
             </button>
             <div class="examen-editor-inline" id="examenEditorInline">
               <input type="date" class="input-fecha-dgt" id="inputFechaExamen">
-              <button type="button" class="btn btn--secundario" id="btnGuardarFecha">Guardar</button>
+              <button type="button" class="btn btn--secundario optical-right-soft" id="btnGuardarFecha">Guardar</button>
             </div>
           </section>
 
           <section class="card widget-card widget-card-racha" aria-labelledby="tituloRacha">
             <div class="widget-top">
               <div class="widget-title-group">
-                <div class="widget-icon-fire" aria-hidden="true">
+                <div class="widget-icon-fire optical-left-soft" aria-hidden="true">
                   <svg viewBox="0 0 24 24">
                     <path d="M12 2c.5 3.2-1.2 5.3-2.9 7.2C7.4 11.1 6 12.8 6 15.3 6 18.9 8.8 22 12.5 22c3.5 0 6.5-2.8 6.5-6.6 0-3.4-2.1-6.2-4.4-8.4-.2 1.7-1.1 2.9-2.2 3.4.3-2.5-.2-5.4-.4-8.4z"/>
                   </svg>
@@ -139,14 +140,14 @@
               <span class="racha-unidad" id="rachaUnidad">días</span>
             </div>
             <p class="racha-mensaje" id="rachaMensaje">Haz un test hoy para iniciar tu racha.</p>
-            <span class="badge badge--acento badge--sm racha-badge-hoy" id="rachaBadge">Pendiente hoy</span>
+            <span class="badge badge--acento badge--sm racha-badge-hoy optical-left" id="rachaBadge">Pendiente hoy</span>
           </section>
         </div>
 
         <section class="card widget-card widget-card-hoy" aria-labelledby="tituloWidgetHoy">
           <div class="widget-top">
             <h2 class="widget-title-hoy" id="tituloWidgetHoy">Hoy</h2>
-            <button type="button" class="btn btn--suave btn--xs btn--pastilla btn--icono" id="btnConfigAnki" aria-label="Configuración de Anki" title="Configuración de Anki">
+            <button type="button" class="btn btn--suave btn--xs btn--pastilla btn--icono optical-right" id="btnConfigAnki" aria-label="Configuración de Anki" title="Configuración de Anki">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
             </button>
           </div>
@@ -170,7 +171,7 @@
         <section class="card widget-card widget-card-temas" aria-labelledby="tituloPractica">
           <div class="widget-top">
             <div class="widget-title-group">
-              <div class="widget-icon-green" aria-hidden="true">
+              <div class="widget-icon-green optical-left-soft" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <rect x="3" y="3" width="7" height="7" rx="1"></rect>
                   <rect x="14" y="3" width="7" height="7" rx="1"></rect>
@@ -183,25 +184,28 @@
           </div>
           <p class="anki-sub practica-descripcion">Elige tema, repasa tus fallos o crea un test personalizado.</p>
           <div class="practica-chips" aria-label="Opciones de práctica">
-            <button type="button" class="btn btn--secundario btn--xs btn--pastilla practica-chip">Por temas</button>
-            <button type="button" class="btn btn--secundario btn--xs btn--pastilla practica-chip">Mis fallos</button>
-            <button type="button" class="btn btn--secundario btn--xs btn--pastilla practica-chip">Personalizado</button>
+            <button type="button" class="btn btn--secundario btn--xs btn--pastilla practica-chip optical-left" data-practica="temas">Por temas</button>
+            <button type="button" class="btn btn--secundario btn--xs btn--pastilla practica-chip" data-practica="falladas">Mis fallos</button>
+            <button type="button" class="btn btn--secundario btn--xs btn--pastilla practica-chip" data-practica="personalizado">Personalizado</button>
           </div>
           <button type="button" class="btn btn--contorno btn--sm btn--bloque btn-explorar-temas" id="btnAbrirTemas">
             Explorar
           </button>
         </section>
       </aside>
-    </main>
+      </main>
 
-    <section class="vista-temas" id="vista-temas" aria-labelledby="temasTitulo" aria-hidden="true" hidden>
-      <div class="temas-cabecera">
-        <button type="button" class="btn btn--secundario btn--sm" id="btnVolverPanel">← Volver al panel</button>
-        <h1 class="temas-titulo" id="temasTitulo">Tests por temas</h1>
-      </div>
-      <p class="anki-sub" id="estadoTemas" role="status" aria-live="polite"></p>
-      <div class="temas-grid" id="listaTemas"></div>
-    </section>
+      <section class="vista-temas" id="vista-temas" aria-labelledby="temasTitulo" aria-hidden="true" hidden>
+        <div class="temas-cabecera">
+          <button type="button" class="btn btn--secundario btn--sm optical-left-soft" id="btnVolverPanel">← Volver al panel</button>
+          <div class="temas-encabezado">
+            <h1 class="temas-titulo" id="temasTitulo"></h1>
+          </div>
+        </div>
+        <p class="anki-sub" id="estadoTemas" role="status" aria-live="polite"></p>
+        <div class="temas-grid" id="listaTemas"></div>
+      </section>
+    </div>
   </div>
 
   <!-- Modal Gráfica de Evolución -->
@@ -238,7 +242,7 @@
           <div class="pill-grupo" role="radiogroup" aria-label="Límite de tarjetas diarias">
             <label class="opcion-pildora">
               <input type="radio" name="ankiModoLimite" value="auto" checked>
-              <span class="opcion opcion--pildora">Automático (según examen)</span>
+              <span class="opcion opcion--pildora optical-left">Automático (según examen)</span>
             </label>
             <label class="opcion-pildora">
               <input type="radio" name="ankiModoLimite" value="personalizado">
@@ -303,7 +307,7 @@
         <section class="anki-cfg-seccion anki-cfg-mant">
           <h3 class="anki-cfg-titulo anki-cfg-titulo-suave">Mantenimiento del mazo</h3>
           <div class="anki-mant-botones">
-            <button type="button" class="btn btn--secundario btn--pastilla" id="btnAnkiSync">Buscar nuevos tests en data/</button>
+            <button type="button" class="btn btn--secundario btn--pastilla optical-left" id="btnAnkiSync">Buscar nuevos tests en data/</button>
             <button type="button" class="btn btn--texto-peligro" id="btnAnkiReset">Reiniciar progreso Anki</button>
           </div>
           <p class="anki-mant-msg" id="ankiMantMsg" role="status" aria-live="polite"></p>
@@ -314,7 +318,7 @@
         <p class="anki-estado-guardado" id="ankiEstadoGuardado" role="status" aria-live="polite"></p>
         <div class="anki-cfg-acciones">
           <button type="button" class="btn btn--secundario btn--sm" id="btnAnkiCancelar">Cancelar</button>
-          <button type="button" class="btn btn--primario btn--sm" id="btnAnkiGuardar">Guardar cambios</button>
+          <button type="button" class="btn btn--primario btn--sm optical-right-soft" id="btnAnkiGuardar">Guardar cambios</button>
         </div>
       </div>
     </div>
@@ -322,6 +326,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script type="module" src="js/index.js?v=11"></script>
+  <script type="module" src="js/index.js?v=18"></script>
 </body>
 </html>
